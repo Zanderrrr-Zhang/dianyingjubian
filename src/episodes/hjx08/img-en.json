@@ -1,0 +1,139 @@
+{
+ "f-yy": {
+  "title": "Yi Yi",
+  "desc": "2000 film by Edward Yang",
+  "src": "https://upload.wikimedia.org/wikipedia/en/5/5c/Yiyiposter.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 274,
+  "h": 365,
+  "qid": "Q704513",
+  "dis": false
+ },
+ "f-trial": {
+  "title": "The Trial (1962 film)",
+  "desc": "1962 film by Orson Welles",
+  "src": "https://upload.wikimedia.org/wikipedia/en/7/71/Trial-Poster-France-1962.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 260,
+  "h": 354,
+  "qid": "Q822426",
+  "dis": false
+ },
+ "p-fg": {
+  "title": "Feng Gong",
+  "desc": "Chinese actor, xiangsheng performer, director, screenwriter and politician",
+  "src": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Feng_Gong_in_Shenzhen%2C_Guangdong_in_December_2019_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 759,
+  "h": 1012,
+  "qid": "Q5443378",
+  "dis": false
+ },
+ "p-wm": {
+  "title": "Wang Meng (author)",
+  "desc": "Chinese writer",
+  "src": "https://upload.wikimedia.org/wikipedia/commons/8/8e/%E7%8E%8B%E8%92%992016.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 540,
+  "h": 720,
+  "qid": "Q1151093",
+  "dis": false
+ },
+ "p-rayns": {
+  "title": "Tony Rayns",
+  "desc": "British writer (1948–2026)",
+  "src": "https://upload.wikimedia.org/wikipedia/en/a/a5/Tony_Rayns.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 199,
+  "h": 267,
+  "qid": "Q7823239",
+  "dis": false
+ },
+ "f-w05": {
+  "title": "The Wooden Man's Bride",
+  "desc": "1994 Chinese film",
+  "src": "https://upload.wikimedia.org/wikipedia/en/c/c1/Wooden_Man%27s_Bride.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 200,
+  "h": 279,
+  "qid": "Q7775725",
+  "dis": false
+ },
+ "p-hjx": {
+  "title": "Huang Jianxin",
+  "desc": "Chinese filmmaker (born 1954)",
+  "src": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Huang_Jianxin_at_the_30th_Busan_International_Film_Festival_in_2025.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 625,
+  "h": 838,
+  "qid": "Q704612",
+  "dis": false
+ },
+ "f-zxs": {
+  "title": "Mr. Zhao",
+  "desc": "1998 Chinese film",
+  "src": "https://upload.wikimedia.org/wikipedia/en/3/36/Mr_Zhao_DVDCover.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 271,
+  "h": 366,
+  "qid": "Q3866829",
+  "dis": false
+ },
+ "p-bkw": {
+  "title": "Paul G. Pickowicz",
+  "desc": "American historian (born 1945)",
+  "src": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Pickowicz1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 617,
+  "h": 682,
+  "qid": "Q11994911",
+  "dis": false
+ },
+ "p-glh": {
+  "title": "Liang Guanhua",
+  "desc": "Chinese actor (born 1964)",
+  "qid": "Q9297352",
+  "dis": false
+ },
+ "p-ws": {
+  "title": "Wang Shuo",
+  "desc": "Chinese writer",
+  "qid": "Q693778",
+  "dis": false
+ },
+ "p-zjy": {
+  "title": "Zhang Jiayi",
+  "desc": "Chinese actor (born 1970)",
+  "qid": "Q9084044",
+  "dis": false
+ },
+ "p-hsp": {
+  "title": "Han Sanping",
+  "desc": "Chinese film producer and distributor (born 1953)",
+  "qid": "Q5646675",
+  "dis": false
+ },
+ "p-wzw": {
+  "title": "Wang Zhiwen",
+  "desc": "Chinese actor",
+  "qid": "Q866794",
+  "dis": false
+ },
+ "p-ff": {
+  "title": "Fang Fang",
+  "desc": "Chinese writer (born 1955)",
+  "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Fang_Fang_(cropped).jpg?width=600",
+  "qid": "Q275139",
+  "dis": false,
+  "p18": 1
+ },
+ "p-gdl": {
+  "title": "Guo Donglin",
+  "desc": "Chinese actor and xiangsheng performer (born 1966)",
+  "qid": "Q8962096",
+  "dis": false
+ },
+ "p-wjs": {
+  "title": "Wang Jinsong",
+  "desc": "Chinese actor",
+  "qid": "Q19854918",
+  "dis": false
+ },
+ "p-fw": {
+  "title": "Fan Wei (actor)",
+  "desc": "Chinese actor",
+  "qid": "Q5433575",
+  "dis": false
+ }
+}

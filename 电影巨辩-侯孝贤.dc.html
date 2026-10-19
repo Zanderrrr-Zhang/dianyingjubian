@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  body { margin: 0; background: #d9d2c4; }
+  a { color: #8a5a34; }
+  a:hover { color: #a8703f; }
+</style>
+</helmet>
+<div style="width: 1400px; margin: 0 auto; background: #f2ede3; color: #1b1c1a; font-family: 'Noto Sans SC', sans-serif; position: relative; overflow: hidden;">
+
+  <header data-screen-label="封面" style="background: #141512; color: #e9e3d6; padding: 52px 90px 64px;">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; font-size: 14px; letter-spacing: 0.24em;">
+      <span style="color: #9dbcae;">电影巨辩 · 侯孝贤专题</span>
+      <span style="color: #a9a99c;">2:47:33 · 无说话人标注</span>
+    </div>
+    <div style="margin-top: 22px; height: 1px; background: rgba(233,227,214,0.22);"></div>
+    <div style="margin-top: 60px; display: grid; grid-template-columns: minmax(0, 1fr) 440px 170px; gap: 60px; align-items: stretch;">
+      <div style="display: flex; flex-direction: column; justify-content: space-between; gap: 40px;">
+        <div style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 48px; line-height: 1.15; color: #9dbcae;">Hou Hsiao-hsien<br>a stillness that is not emptiness</div>
+        <p style="margin: 0; font-size: 18px; line-height: 1.95; color: #c9c4b6; text-wrap: pretty;">话题起于托尼·雷恩「替侯导官宣」：他在釜山给《童年往事》的英国放映录导赏视频，说侯孝贤身体不好，不可能再拍片了。家属随后宣布退休，病因是阿兹海默症，据说已有十年以上，前两年感染新冠后明显加重。转录稿没有标注说话人——下文写明「老马」「阿吴」的观点，是根据两人互相点名、交接话题的上下文判断的；判断不了是谁说的，就写「节目认为」。</p>
+      </div>
+      <div style="position: relative; width: 440px; height: 600px; background: #24251f; outline: 1px solid rgba(233,227,214,0.3); outline-offset: 12px;">
+        <image-slot id="hhh-portrait" src="{{ pic.hhh }}" shape="rect" placeholder="侯孝贤肖像（拖入图片）" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot>
+      </div>
+      <div style="display: flex; flex-direction: row-reverse; align-items: flex-end; gap: 20px;">
+        <h1 style="margin: 0; writing-mode: vertical-rl; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 80px; line-height: 1; letter-spacing: 0.06em; color: #f2ede3;">道家的自然主义</h1>
+        <div style="flex: none; width: 66px; height: 66px; box-sizing: border-box; padding: 7px; background: #a33a2a; border-radius: 3px; box-shadow: inset 0 0 0 3px #a33a2a, inset 0 0 0 4.5px rgba(242,237,227,0.85);"><div style="writing-mode: vertical-rl; height: 52px; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 24px; line-height: 26px; color: #f2ede3; text-align: center;">侯孝贤印</div></div>
+      </div>
+    </div>
+    <div style="margin-top: 72px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 56px; align-items: start;">
+      <div style="border-top: 1px solid rgba(233,227,214,0.5); padding-top: 20px;">
+        <div style="font-size: 13px; letter-spacing: 0.2em; color: #a9a99c;">基本态度</div>
+        <p style="margin: 10px 0 0; font-size: 17px; line-height: 1.85; color: #d6d0c2;">两位主持人觉得不必遗憾：最重要的作品都拍完了，风格也已经走到头，纪念一位艺术家最好的方式就是反复看他的作品。</p>
+      </div>
+      <div style="border-top: 1px solid #9dbcae; padding-top: 20px;">
+        <div style="font-size: 13px; letter-spacing: 0.2em; color: #9dbcae;">与上期张艺谋的对比</div>
+        <p style="margin: 10px 0 0; font-size: 17px; line-height: 1.85; color: #d6d0c2;">没听说哪个外国导演说自己受张艺谋影响；而是枝裕和、贾木许、阿萨亚斯、贾樟柯、李沧东都把侯孝贤当作参照。</p>
+      </div>
+    </div>
+    <div style="margin-top: 64px; border-top: 1px solid rgba(233,227,214,0.22); padding-top: 34px; display: grid; grid-template-columns: minmax(0, 1.2fr) repeat(4, minmax(0, 1fr)); gap: 36px; align-items: end;">
+      <div style="font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 24px; line-height: 1.6; color: #f2ede3; text-wrap: pretty;">侯孝贤的「自然」来自道家，不是西方的 naturalism。</div>
+      <div><div style="display: flex; align-items: baseline; gap: 6px;"><span style="font-size: 15px; color: #a9a99c;">约</span><span style="font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 64px; line-height: 1; color: #d9a54a; font-variant-numeric: tabular-nums;">426</span><span style="font-size: 15px; color: #a9a99c;">次</span></div><div style="margin-top: 10px; font-size: 14px; line-height: 1.6; color: #c9c4b6;">侯孝贤本人被提及<br>平均每分钟约 2.5 次</div></div>
+      <div><div style="display: flex; align-items: baseline; gap: 6px;"><span style="font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 64px; line-height: 1; color: #d9a54a; font-variant-numeric: tabular-nums;">18</span><span style="font-size: 15px; color: #a9a99c;">部</span></div><div style="margin-top: 10px; font-size: 14px; line-height: 1.6; color: #c9c4b6;">节目覆盖的<br>侯孝贤长片</div></div>
+      <div><div style="display: flex; align-items: baseline; gap: 6px;"><span style="font-size: 15px; color: #a9a99c;">约</span><span style="font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 64px; line-height: 1; color: #d9a54a; font-variant-numeric: tabular-nums;">130</span><span style="font-size: 15px; color: #a9a99c;">位</span></div><div style="margin-top: 10px; font-size: 14px; line-height: 1.6; color: #c9c4b6;">节目提到的导演、作家、<br>学者和主创</div></div>
+      <div><div style="display: flex; align-items: baseline; gap: 6px;"><span style="font-size: 15px; color: #a9a99c;">约</span><span style="font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 64px; line-height: 1; color: #d9a54a; font-variant-numeric: tabular-nums;">62</span><span style="font-size: 15px; color: #a9a99c;">次</span></div><div style="margin-top: 10px; font-size: 14px; line-height: 1.6; color: #c9c4b6;">「自然主义」<br>一词出现</div></div>
+    </div>
+  </header>
+
+  <section data-screen-label="人物" style="padding: 64px 90px 0;">
+    <div style="display: flex; align-items: baseline; gap: 18px; border-bottom: 1px solid rgba(27,28,26,0.35); padding-bottom: 14px;">
+      <div style="font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 22px;">节目中反复出现的人</div>
+      <span style="margin-left: auto; font-size: 13px; color: #6a6c60;">头像与海报自维基百科取图，可拖入自己的图片替换</span>
+    </div>
+    <div style="margin-top: 26px; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 28px 18px;">
+      <sc-for list="{{ people }}" as="p" hint-placeholder-count="23">
+        <div>
+          <div style="position: relative; width: 100%; aspect-ratio: 1; border-radius: 50%; overflow: hidden; background: #e3dbca; filter: {{ portraitFilter }};"><image-slot id="{{ p.slot }}" src="{{ p.src }}" shape="circle" placeholder="{{ p.name }}" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot></div>
+          <div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 15px;">{{ p.name }}</div>
+          <div style="margin-top: 2px; font-size: 12px; line-height: 1.5; color: #6a6c60;">{{ p.note }}</div>
+        </div>
+      </sc-for>
+      <div style="display: grid; align-content: end;"><div style="font-size: 12px; line-height: 1.7; color: #6a6c60;">取图失败的格位留空，拖入图片即可补齐。</div></div>
+    </div>
+
+    <div style="margin-top: 64px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 22px; border-bottom: 1px solid rgba(27,28,26,0.35); padding-bottom: 14px;">
+      <div style="font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 22px;">侯孝贤身边的人</div>
+      <span style="font-size: 13px; color: #6a6c60;">框中框，由外到内：友人与见证者 → 摄影与声音、演员 → 编剧与理念、引路与同行</span>
+      <span style="margin-left: auto; display: flex; gap: 16px; font-size: 12px; color: #52544a;">
+        <sc-for list="{{ catLegend }}" as="c" hint-placeholder-count="4"><span style="display: flex; align-items: center; gap: 6px;"><span style="width: 9px; height: 9px; border-radius: 50%; background: {{ c.color }};"></span>{{ c.label }}</span></sc-for>
+      </span>
+    </div>
+    <div style="margin-top: 26px; border: 1px solid rgba(27,28,26,0.4); padding: 22px 26px 26px;">
+      <div style="font-size: 12px; letter-spacing: 0.22em; color: #6a6c60;">外圈 · 友人与见证者</div>
+      <div style="margin-top: 14px; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 18px 22px;">
+        <sc-for list="{{ ringOuter }}" as="p" hint-placeholder-count="5">
+          <div style="display: grid; grid-template-columns: 10px minmax(0, 1fr); gap: 8px;"><span style="width: 9px; height: 9px; margin-top: 8px; border-radius: 50%; background: {{ p.color }};"></span><div><div style="font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 16px;">{{ p.name }}</div><div style="margin-top: 3px; font-size: 13px; line-height: 1.6; color: #52544a;">{{ p.rel }}</div></div></div>
+        </sc-for>
+      </div>
+      <div style="margin-top: 26px; border: 1px solid rgba(27,28,26,0.45); background: #ece6d9; padding: 22px 26px 26px;">
+        <div style="font-size: 12px; letter-spacing: 0.22em; color: #6a6c60;">中圈 · 摄影与声音 / 演员</div>
+        <div style="margin-top: 14px; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 18px 22px;">
+          <sc-for list="{{ ringMid }}" as="p" hint-placeholder-count="10">
+            <div style="display: grid; grid-template-columns: 10px minmax(0, 1fr); gap: 8px;"><span style="width: 9px; height: 9px; margin-top: 8px; border-radius: 50%; background: {{ p.color }};"></span><div><div style="font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 16px;">{{ p.name }}<span style="margin-left: 6px; font-family: 'Noto Sans SC', sans-serif; font-weight: 400; font-size: 11px; color: #8a8c80;">{{ p.ring }}</span></div><div style="margin-top: 3px; font-size: 13px; line-height: 1.6; color: #52544a;">{{ p.rel }}</div></div></div>
+          </sc-for>
+        </div>
+        <div style="margin-top: 26px; border: 1.5px solid #1b1c1a; background: #e5ddcd; padding: 22px 26px 26px; display: grid; grid-template-columns: minmax(0, 1fr) 150px; gap: 30px; align-items: center;">
+          <div>
+            <div style="font-size: 12px; letter-spacing: 0.22em; color: #6a6c60;">内圈 · 引路与同行 / 编剧与理念</div>
+            <div style="margin-top: 14px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px 22px;">
+              <sc-for list="{{ ringInner }}" as="p" hint-placeholder-count="7">
+                <div style="display: grid; grid-template-columns: 10px minmax(0, 1fr); gap: 8px;"><span style="width: 9px; height: 9px; margin-top: 8px; border-radius: 50%; background: {{ p.color }};"></span><div><div style="font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 16px;">{{ p.name }}<span style="margin-left: 6px; font-family: 'Noto Sans SC', sans-serif; font-weight: 400; font-size: 11px; color: #8a8c80;">{{ p.ring }}</span></div><div style="margin-top: 3px; font-size: 13px; line-height: 1.6; color: #52544a;">{{ p.rel }}</div></div></div>
+              </sc-for>
+            </div>
+          </div>
+          <div style="justify-self: center; width: 112px; height: 112px; box-sizing: border-box; padding: 12px; background: #a33a2a; border-radius: 3px; box-shadow: inset 0 0 0 4px #a33a2a, inset 0 0 0 6px rgba(242,237,227,0.85);"><div style="writing-mode: vertical-rl; height: 88px; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 40px; line-height: 44px; color: #f2ede3; text-align: center;">侯孝贤印</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="壹 研究路线" style="padding: 84px 90px 0;">
+    <div style="display: flex; align-items: center; gap: 22px;">
+      <div style="flex: none; width: 52px; height: 52px; box-sizing: border-box; background: #a33a2a; color: #f2ede3; border-radius: 2px; box-shadow: inset 0 0 0 3px #a33a2a, inset 0 0 0 4.5px rgba(242,237,227,0.85); display: flex; align-items: center; justify-content: center; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 26px;">壹</div>
+      <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 46px; line-height: 1.2;">老马：已有的研究路线</h2>
+    </div>
+    <div style="margin-top: 20px; height: 1px; background: rgba(27,28,26,0.35);"></div>
+    <div style="margin-top: 40px; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 22px;">
+      <div style="display: flex; gap: 16px; border-top: 3px solid #1b1c1a; padding-top: 22px; min-height: 300px;">
+        <div style="flex: none; writing-mode: vertical-rl; font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 22px; line-height: 1.2; letter-spacing: 0.08em;">弗罗东</div>
+        <p style="margin: 0; font-size: 15px; line-height: 1.85; color: #52544a;">把侯孝贤看作好莱坞和欧洲艺术片之外的「第三条道路」。</p>
+      </div>
+      <div style="display: flex; gap: 16px; border-top: 3px solid #1b1c1a; padding-top: 22px;">
+        <div style="flex: none; writing-mode: vertical-rl; font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 22px; line-height: 1.2; letter-spacing: 0.08em;">波德威尔</div>
+        <p style="margin: 0; font-size: 15px; line-height: 1.85; color: #52544a;">形式分析：风格是在解决实际问题中形成的——业余演员演不好，就用远景长镜头来藏拙。</p>
+      </div>
+      <div style="display: flex; gap: 16px; border-top: 3px solid #1b1c1a; padding-top: 22px;">
+        <div style="flex: none; writing-mode: vertical-rl; font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 22px; line-height: 1.2; letter-spacing: 0.08em;">大陆学者</div>
+        <p style="margin: 0; font-size: 15px; line-height: 1.85; color: #52544a;">多用意境、留白、电影散文来解读。</p>
+      </div>
+      <div style="display: flex; gap: 16px; border-top: 3px solid #1b1c1a; padding-top: 22px;">
+        <div style="flex: none; writing-mode: vertical-rl; font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 22px; line-height: 1.2; letter-spacing: 0.08em;">詹姆斯·乌登《无人是孤岛》</div>
+        <p style="margin: 0; font-size: 15px; line-height: 1.85; color: #52544a;">强调台湾经验。侯导在阿萨亚斯拍的纪录片里自己回答过：文化来自大陆，社会和政治意识是台湾的。</p>
+      </div>
+      <div style="display: flex; gap: 16px; border-top: 3px solid #4a6b5f; background: #e2e3da; padding: 22px 18px 22px;">
+        <div style="flex: none; writing-mode: vertical-rl; font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 22px; line-height: 1.2; letter-spacing: 0.08em; color: #2f4a41;">谢世宗 · 抒情传统</div>
+        <p style="margin: 0; font-size: 15px; line-height: 1.85; color: #3f4a45;">把侯孝贤放进陈世骧的「抒情传统」，即中国式的「静态悲剧」。老马比较认同，但提醒：文学概念用到场面调度上要谨慎，否则容易空泛。</p>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="贰 道家自然主义" style="padding: 84px 90px 0;">
+    <div style="display: flex; align-items: center; gap: 22px;">
+      <div style="flex: none; width: 52px; height: 52px; box-sizing: border-box; background: #a33a2a; color: #f2ede3; border-radius: 2px; box-shadow: inset 0 0 0 3px #a33a2a, inset 0 0 0 4.5px rgba(242,237,227,0.85); display: flex; align-items: center; justify-content: center; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 26px;">贰</div>
+      <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 46px; line-height: 1.2;">阿吴：道家自然主义</h2>
+      <span style="margin-left: auto; font-size: 14px; letter-spacing: 0.18em; color: #6a6c60;">整期的核心论点</span>
+    </div>
+    <div style="margin-top: 20px; height: 1px; background: rgba(27,28,26,0.35);"></div>
+    <div style="margin-top: 40px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);">
+      <div style="border: 1px solid rgba(27,28,26,0.25); border-right: 0; padding: 36px 38px;">
+        <div style="font-size: 13px; letter-spacing: 0.2em; color: #a33a2a;">只是译名碰巧相同</div>
+        <div style="margin-top: 16px; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 66px; line-height: 1;">naturalism</div>
+        <p style="margin: 18px 0 0; font-size: 16px; line-height: 1.85; color: #52544a;">西方的自然主义包括左拉、日本私小说，以及德勒兹讨论的布努埃尔、施特罗海姆。</p>
+      </div>
+      <div style="background: #2f4a41; color: #e9e3d6; padding: 36px 42px;">
+        <div style="font-size: 13px; letter-spacing: 0.2em; color: #9dbcae;">侯孝贤的「自然」来自道家</div>
+        <div style="margin-top: 18px; display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 34px; align-items: start;">
+          <div style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 190px; line-height: 1; color: #f2ede3;">无</div>
+          <div>
+            <p style="margin: 0; font-size: 16px; line-height: 1.9; color: #d6dcd4;">这个「无」是一个实践概念：去掉造作和执念。固定长镜头的凝视，对应的是一个静静观看世界变化的审美主体。</p>
+            <p style="margin: 14px 0 0; font-size: 16px; line-height: 1.9; color: #d6dcd4;">侯导自己不说「自然主义」，只说「写实」，重点在「写」，还常借卡尔维诺的话说「深度在表面」。</p>
+          </div>
+        </div>
+        <div style="margin-top: 26px; padding-top: 20px; border-top: 1px solid rgba(233,227,214,0.3); font-family: 'Noto Serif SC', serif; font-size: 23px; line-height: 1.65; color: #f2ede3; text-wrap: pretty;">两人都认为他是「不自觉的艺术家」：先凭直觉拍出来，后来在杨德昌、朱家这些人的影响下，才想明白为什么这样拍。</div>
+      </div>
+    </div>
+
+    <div style="margin-top: 56px; display: grid; grid-template-columns: minmax(0, 1fr) 96px minmax(0, 1fr); align-items: stretch;">
+      <div>
+        <div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 24px;">西方 naturalism（词根 nature）</div>
+        <div style="margin-top: 18px; display: flex; flex-direction: column; gap: 10px;">
+          <sc-for list="{{ natWest }}" as="l" hint-placeholder-count="4">
+            <div style="display: grid; grid-template-columns: 30px minmax(0, 1fr); border: 1px solid rgba(27,28,26,0.28); background: #f7f3ea; padding: 14px 18px;"><span style="font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 20px; line-height: 1.4; color: #8a5a34;">{{ l.n }}</span><span style="font-size: 16px; line-height: 1.75; color: #3d3f37;">{{ l.text }}</span></div>
+          </sc-for>
+        </div>
+      </div>
+      <div style="position: relative; display: flex; justify-content: center;">
+        <div style="position: absolute; top: 0; bottom: 0; left: 50%; width: 1px; background: rgba(27,28,26,0.45);"></div>
+        <div style="position: relative; margin-top: 70px; writing-mode: vertical-rl; background: #f2ede3; padding: 16px 0; font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 20px; letter-spacing: 0.3em; color: #a33a2a;">只是中文译名相同</div>
+      </div>
+      <div>
+        <div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 24px; color: #2f4a41;">侯孝贤：道家的「自然」<span style="margin-left: 10px; font-family: 'Noto Sans SC', sans-serif; font-weight: 400; font-size: 13px; letter-spacing: 0.12em; color: #6a6c60;">阿吴</span></div>
+        <div style="margin-top: 18px; display: flex; flex-direction: column; gap: 10px;">
+          <sc-for list="{{ natHou }}" as="l" hint-placeholder-count="4">
+            <div style="display: grid; grid-template-columns: 30px minmax(0, 1fr); border: {{ l.bd }}; background: {{ l.bg }}; padding: 14px 18px;"><span style="font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 20px; line-height: 1.4; color: {{ l.nc }};">{{ l.n }}</span><span style="font-size: 16px; line-height: 1.75; font-weight: {{ l.fw }}; color: {{ l.fg }};">{{ l.text }}</span></div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 36px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0 26px; border-top: 2px solid #1b1c1a;">
+      <sc-for list="{{ neighbors }}" as="n" hint-placeholder-count="4">
+        <div style="padding: 18px {{ n.padX }} 18px; background: {{ n.bg }};"><div style="font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 20px; color: {{ n.fg }};">{{ n.name }}</div><p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #52544a;">{{ n.text }}</p></div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section data-screen-label="叁 五个阶段" style="padding: 84px 90px 0;">
+    <div style="display: flex; align-items: center; gap: 22px;">
+      <div style="flex: none; width: 52px; height: 52px; box-sizing: border-box; background: #a33a2a; color: #f2ede3; border-radius: 2px; box-shadow: inset 0 0 0 3px #a33a2a, inset 0 0 0 4.5px rgba(242,237,227,0.85); display: flex; align-items: center; justify-content: center; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 26px;">叁</div>
+      <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 46px; line-height: 1.2;">五个阶段</h2>
+      <span style="margin-left: auto; font-size: 14px; letter-spacing: 0.18em; color: #6a6c60;">阿吴的分期，节目基本按顺序逐部聊</span>
+    </div>
+    <div style="margin-top: 20px; height: 1px; background: rgba(27,28,26,0.35);"></div>
+
+    <div style="margin-top: 36px; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 22px; font-size: 13px; color: #52544a;">
+      <sc-for list="{{ evalLegend }}" as="e" hint-placeholder-count="7"><span style="display: flex; align-items: center; gap: 7px;"><span style="width: 12px; height: 12px; border-radius: 50%; background: {{ e.color }};"></span>{{ e.label }}</span></sc-for>
+      <span style="margin-left: auto; color: #6a6c60;">圆点面积 ∝ 提及次数（约数）</span>
+    </div>
+    <div style="position: relative; margin-top: 22px; height: 316px;">
+      <div style="position: absolute; left: {{ tl.beiX }}; top: 0; height: 104px; border-left: 1px solid #6B4C7A; padding-left: 8px; font-size: 13px; color: #6B4C7A; white-space: nowrap;">外界：影响最大</div>
+      <div style="position: absolute; left: {{ tl.peakX }}; top: 0; height: 104px; border-left: 1px solid #C07A12; padding-left: 8px; font-size: 13px; font-weight: 700; color: #8a560c; white-space: nowrap;">阿吴：到底了</div>
+      <div style="position: absolute; left: 0; width: 1130px; top: 216px; height: 1px; background: #1b1c1a;"></div>
+      <div style="position: absolute; left: 1130px; width: 70px; top: 216px; border-top: 1px dashed #8a8c80;"></div>
+      <sc-for list="{{ tl.ticks }}" as="t" hint-placeholder-count="36"><div style="position: absolute; left: {{ t.x }}; top: 216px; width: 1px; height: {{ t.h }}; background: #1b1c1a;"></div></sc-for>
+      <sc-for list="{{ tl.years }}" as="y" hint-placeholder-count="8"><div style="position: absolute; left: {{ y.x }}; top: 230px; transform: translateX(-50%); font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 15px; color: #52544a;">{{ y.y }}</div></sc-for>
+      <div style="position: absolute; left: 1185px; top: 230px; transform: translateX(-50%); font-size: 12px; color: #6a6c60; white-space: nowrap;">未完成</div>
+      <div style="position: absolute; left: {{ tl.gapL }}; width: {{ tl.gapW }}; top: 200px; border-top: 1px dashed #8a8c80;"></div>
+      <div style="position: absolute; left: {{ tl.gapL }}; width: {{ tl.gapW }}; top: 178px; text-align: center; font-size: 12px; letter-spacing: 0.24em; color: #6a6c60;">八年空白</div>
+      <sc-for list="{{ tl.films }}" as="f" hint-placeholder-count="19">
+        <div style="position: absolute; left: {{ f.x }}; bottom: 136px; transform: translateX(-50%); writing-mode: vertical-rl; font-family: 'Noto Serif SC', serif; font-weight: {{ f.weight }}; font-size: 15px; line-height: 1; letter-spacing: 0.02em; color: {{ f.tColor }}; white-space: nowrap;">{{ f.title }}</div>
+        <div style="position: absolute; left: {{ f.dl }}; top: {{ f.dt }}; width: {{ f.d }}; height: {{ f.d }}; box-sizing: border-box; border-radius: 50%; background: {{ f.bg }}; border: {{ f.bd }}; box-shadow: 0 0 0 2px #f2ede3;"></div>
+      </sc-for>
+      <sc-for list="{{ tl.bands }}" as="b" hint-placeholder-count="5">
+        <div style="position: absolute; left: {{ b.l }}; width: {{ b.w }}; top: 262px; height: 50px; box-sizing: border-box; padding: 7px 8px; background: {{ b.bg }}; color: {{ b.fg }}; overflow: hidden;"><div style="font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 14px; line-height: 1.3; white-space: nowrap;">{{ b.name }}</div><div style="font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 14px; white-space: nowrap;">{{ b.years }}</div></div>
+      </sc-for>
+    </div>
+    <div style="margin-top: 34px; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 24px;">
+      <sc-for list="{{ stages }}" as="s" hint-placeholder-count="5">
+        <div style="border-top: 3px solid {{ s.rule }}; padding-top: 14px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px;"><span style="font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 18px;">{{ s.name }}</span><span style="font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 15px; color: #6a6c60; white-space: nowrap;">{{ s.years }}</span></div>
+          <div style="margin-top: 6px; font-size: 13px; line-height: 1.7; color: #6a6c60;">{{ s.summary }}</div>
+          <div style="margin-top: 14px; display: flex; flex-direction: column; gap: 12px;">
+            <sc-for list="{{ s.films }}" as="f" hint-placeholder-count="4">
+              <div style="display: grid; grid-template-columns: 12px minmax(0, 1fr); gap: 8px;"><span style="width: 10px; height: 10px; margin-top: 7px; border-radius: 50%; background: {{ f.color }};"></span><div><div style="font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 15px; line-height: 1.5;">《{{ f.title }}》<span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #6a6c60;">{{ f.year }}</span></div><div style="margin-top: 2px; font-size: 13px; line-height: 1.6; color: #52544a;">{{ f.line }}</div></div></div>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="margin-top: 52px; display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 56px; align-items: end;">
+      <div>
+        <div style="font-size: 13px; letter-spacing: 0.2em; color: #8a5a34;">商业片时期</div>
+        <p style="margin: 12px 0 0; font-size: 17px; line-height: 1.9; color: #46483f; text-wrap: pretty;">前三部一般被认为没什么内容。但波德威尔指出，里面已经有景深、框中框和「隐藏与揭露」的构图，平均镜头长度是当时台湾商业片的两倍。《在那河畔青草青》让小孩即兴表演，算是自然主义的雏形。</p>
+      </div>
+      <div style="border-left: 2px solid #a33a2a; padding-left: 18px; font-size: 15px; line-height: 1.75; color: #a33a2a;">节目特别指出：小津和侯孝贤表达的东西其实相反，小津是保守主义者。</div>
+    </div>
+
+    <div style="margin-top: 40px; background: #e8e1d3; padding: 30px 32px 34px;">
+      <div style="display: flex; align-items: baseline; gap: 16px;"><div style="font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 26px;">转折的原因</div><span style="font-size: 14px; color: #6a6c60;">从商业片导演，到《风柜来的人》的导演</span></div>
+      <div style="margin-top: 18px; display: grid; grid-template-columns: minmax(0, 1fr) 84px 52px 168px; align-items: stretch;">
+        <div style="display: flex; flex-direction: column;">
+          <div style="display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 10px;">
+            <div style="writing-mode: vertical-rl; align-self: center; font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 16px; letter-spacing: 0.4em; color: #6a6c60;">外因</div>
+            <div>
+              <sc-for list="{{ inf }}" as="row" hint-placeholder-count="4">
+                <div style="display: flex; align-items: center; padding-top: 40px;">
+                  <span style="flex: none; width: 26px; font-size: 16px; color: {{ row.color }};">{{ row.n }}</span>
+                  <sc-for list="{{ row.items }}" as="it" hint-placeholder-count="4">
+                    <sc-if value="{{ it.isNode }}" hint-placeholder-val="{{ true }}"><div style="flex: none; max-width: 190px; box-sizing: border-box; background: #f7f3ea; border: 1.5px solid {{ row.color }}; padding: 8px 12px;"><div style="font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 15px; line-height: 1.45;">{{ it.text }}</div><sc-if value="{{ it.hasSub }}" hint-placeholder-val="{{ false }}"><div style="margin-top: 4px; font-size: 12px; line-height: 1.5; color: #52544a;">{{ it.sub }}</div></sc-if></div></sc-if>
+                    <sc-if value="{{ it.isEdge }}" hint-placeholder-val="{{ false }}"><div style="flex: 1; min-width: 96px; position: relative; height: 0; border-top: 2px {{ it.line }} {{ row.color }}; margin: 0 6px;"><span style="position: absolute; left: 0; right: 10px; bottom: 6px; font-size: 12px; line-height: 1.45; color: #46483f; text-align: center;">{{ it.text }}</span><span style="position: absolute; right: -4px; top: -7px; width: 0; height: 0; border-left: 10px solid {{ row.color }}; border-top: 6px solid transparent; border-bottom: 6px solid transparent;"></span></div></sc-if>
+                  </sc-for>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+          <div style="margin-top: 26px; padding-top: 22px; border-top: 1px dashed rgba(27,28,26,0.3); display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 10px;">
+            <div style="writing-mode: vertical-rl; align-self: center; font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 16px; letter-spacing: 0.4em; color: #6a6c60;">内因</div>
+            <div style="display: flex; align-items: center;">
+              <div style="flex: none; width: 560px; display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+                <sc-for list="{{ inner }}" as="t" hint-placeholder-count="4"><div style="background: #f7f3ea; border: 1px solid rgba(27,28,26,0.3); padding: 8px 12px; font-size: 14px; line-height: 1.5;">{{ t }}</div></sc-for>
+              </div>
+              <div style="flex: 1; min-width: 60px; position: relative; height: 0; border-top: 2px solid #1b1c1a; margin: 0 6px;"><span style="position: absolute; right: -4px; top: -7px; width: 0; height: 0; border-left: 10px solid #1b1c1a; border-top: 6px solid transparent; border-bottom: 6px solid transparent;"></span></div>
+            </div>
+          </div>
+        </div>
+        <div style="background: #2f4a41; display: flex; align-items: center; justify-content: center;"><div style="writing-mode: vertical-rl; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 26px; letter-spacing: 0.2em; color: #f2ede3;">侯孝贤的转折</div></div>
+        <div style="display: flex; align-items: center;"><div style="flex: 1; position: relative; height: 0; border-top: 2px solid #1b1c1a; margin: 0 8px;"><span style="position: absolute; right: -4px; top: -7px; width: 0; height: 0; border-left: 10px solid #1b1c1a; border-top: 6px solid transparent; border-bottom: 6px solid transparent;"></span></div></div>
+        <div style="align-self: center; border: 2px solid #1b1c1a; background: #f7f3ea; padding: 20px 18px; text-align: center;"><div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 20px; line-height: 1.4;">《风柜来的人》</div><div style="margin-top: 6px; font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 28px; color: #8a5a34;">1983</div></div>
+      </div>
+      <div style="margin-top: 18px; font-size: 13px; color: #6a6c60;">三条外因链路各用一色；朱西甯到朱天文的虚线是节目的推测。</div>
+    </div>
+
+    <div style="margin-top: 56px; border-top: 2px solid #8a5a34; padding-top: 24px;">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 30px;">
+        <div style="font-family: 'Noto Serif SC', serif; font-size: 30px; font-weight: 600;">成长题材：自传体原则</div>
+        <div style="font-size: 15px; color: #6a6c60; text-align: right;">几乎每部片都有真实来源——侯导不喜欢《悲情城市》，正是因为那个故事是编出来的</div>
+      </div>
+      <div style="margin-top: 28px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px;">
+        <div>
+          <div style="padding: 10px; background: #e3dbca; box-shadow: inset 0 0 0 1px rgba(27,28,26,0.12);"><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #1b1c1a;"><image-slot id="hhh-fenggui" src="{{ pic.fenggui }}" fit="{{ posterFit }}" shape="rect" placeholder="《风柜来的人》剧照" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot></div></div>
+          <div style="margin-top: 16px; font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 22px;">风柜来的人</div>
+          <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.8; color: #52544a;">被吴念真形容为「从一楼跳到八楼」。杨德昌帮忙换上的维瓦尔第《四季》配乐，两人看法不同。</p>
+        </div>
+        <div>
+          <div style="padding: 10px; background: #e3dbca; box-shadow: inset 0 0 0 1px rgba(27,28,26,0.12);"><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #1b1c1a;"><image-slot id="hhh-tongnian" src="{{ pic.tongnian }}" fit="{{ posterFit }}" shape="rect" placeholder="《童年往事》剧照" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot></div></div>
+          <div style="margin-top: 16px; font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 22px;">童年往事</div>
+          <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.8; color: #52544a;">聊得最动情：外省人「回不去」的乡愁；父亲摘下眼镜往后一仰的那个镜头。片中死了很多人，却不让人觉得是悲剧。</p>
+        </div>
+        <div>
+          <div style="padding: 10px; background: #e3dbca; box-shadow: inset 0 0 0 1px rgba(27,28,26,0.12);"><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #1b1c1a;"><image-slot id="hhh-lianlian" src="{{ pic.lianlian }}" fit="{{ posterFit }}" shape="rect" placeholder="《恋恋风尘》剧照" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot></div></div>
+          <div style="margin-top: 16px; font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 22px;">恋恋风尘</div>
+          <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.8; color: #52544a;">吴念真看了《童年往事》才理解外省人，于是有了这部。但侯导删掉了他当兵前准备 1090 个信封的浪漫细节，吴念真很受伤。节目用亚里士多德的话解释：可信的不可能之事，胜过不可信的可能之事。</p>
+        </div>
+        <div>
+          <div style="padding: 10px; background: #e3dbca; box-shadow: inset 0 0 0 1px rgba(27,28,26,0.12);"><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #1b1c1a;"><image-slot id="hhh-niluohe" src="{{ pic.niluohe }}" fit="{{ posterFit }}" shape="rect" placeholder="《尼罗河女儿》剧照" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot></div></div>
+          <div style="margin-top: 16px; font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 22px;">尼罗河女儿</div>
+          <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.8; color: #52544a;">公认失败。此后侯导不再向商业妥协。</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 60px; border-top: 2px solid #a33a2a; padding-top: 24px;">
+      <div style="font-family: 'Noto Serif SC', serif; font-size: 30px; font-weight: 600;">台湾历史三部曲</div>
+      <div style="margin-top: 28px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px;">
+        <div>
+          <div style="padding: 10px; background: #e3dbca; box-shadow: inset 0 0 0 1px rgba(27,28,26,0.12);"><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #1b1c1a;"><image-slot id="hhh-beiqing" src="{{ pic.beiqing }}" fit="{{ posterFit }}" shape="rect" placeholder="《悲情城市》剧照" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot></div></div>
+          <div style="margin-top: 16px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px;"><span style="font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 23px;">悲情城市</span><span style="font-size: 14px; color: #a33a2a;">影响最大，但偏离了自己的路子</span></div>
+          <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.8; color: #52544a;">隐喻太直白，比如停电时孩子出生、梁朝伟演的哑巴摄影师；人物设置像「小津版《教父》」。不过主持人也不赞成用「二二八有没有被正确呈现」来评价这部片，认为那是泛政治化。</p>
+        </div>
+        <div>
+          <div style="padding: 10px; background: #e3dbca; box-shadow: inset 0 0 0 1px rgba(27,28,26,0.12);"><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #1b1c1a;"><image-slot id="hhh-ximeng" src="{{ pic.ximeng }}" fit="{{ posterFit }}" shape="rect" placeholder="《戏梦人生》剧照" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot></div></div>
+          <div style="margin-top: 16px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px;"><span style="font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 23px;">戏梦人生</span><span style="font-size: 14px; color: #2f4a41;">真正的杰作</span></div>
+          <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.8; color: #52544a;">三重时空交错，声音和画面刻意不对位，形成间离效果，李天禄的讲述宠辱不惊。两人都认为它比同年戛纳的《霸王别姬》《钢琴课》更好。</p>
+        </div>
+        <div>
+          <div style="padding: 10px; background: #e3dbca; box-shadow: inset 0 0 0 1px rgba(27,28,26,0.12);"><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #1b1c1a;"><image-slot id="hhh-haonan" src="{{ pic.haonan }}" fit="{{ posterFit }}" shape="rect" placeholder="《好男好女》剧照" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot></div></div>
+          <div style="margin-top: 16px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px;"><span style="font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 23px;">好男好女</span><span style="font-size: 14px; color: #a33a2a;">算失败</span></div>
+          <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.8; color: #52544a;">伊能静撑不起历史部分；片头电视里放《晚春》，是违背自然主义的「私货」；对资本主义的批判太浅，想走杨德昌的路，却没有杨德昌的精准。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="肆 执念" style="padding: 84px 90px 0;">
+    <div style="display: flex; align-items: center; gap: 22px;">
+      <div style="flex: none; width: 52px; height: 52px; box-sizing: border-box; background: #a33a2a; color: #f2ede3; border-radius: 2px; box-shadow: inset 0 0 0 3px #a33a2a, inset 0 0 0 4.5px rgba(242,237,227,0.85); display: flex; align-items: center; justify-content: center; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 26px;">肆</div>
+      <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 46px; line-height: 1.2;">巅峰期的共同主题：执念</h2>
+    </div>
+    <div style="margin-top: 20px; height: 1px; background: rgba(27,28,26,0.35);"></div>
+
+    <div style="margin-top: 40px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px;">
+      <div>
+        <div style="padding: 10px; background: #e3dbca; box-shadow: inset 0 0 0 1px rgba(27,28,26,0.12);"><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #1b1c1a;"><image-slot id="hhh-nanguo" src="{{ pic.nanguo }}" fit="{{ posterFit }}" shape="rect" placeholder="《南国再见，南国》剧照" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot></div></div>
+        <div style="margin-top: 16px; font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 23px;">南国再见，南国</div>
+        <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.8; color: #52544a;">镜头内调度讲得很细：前景、中景、背景同时发生事情，演员自由出入画面。节目补充：波德威尔讲清了「隐藏与揭露」的形式，却没讲出它从哪里来——根源其实在中国画论，比如程抱一的《中国诗画语言研究》。</p>
+      </div>
+      <div>
+        <div style="padding: 10px; background: #e3dbca; box-shadow: inset 0 0 0 1px rgba(27,28,26,0.12);"><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #1b1c1a;"><image-slot id="hhh-haishanghua" src="{{ pic.haishanghua }}" fit="{{ posterFit }}" shape="rect" placeholder="《海上花》剧照" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot></div></div>
+        <div style="margin-top: 16px; font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 23px;">海上花</div>
+        <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.8; color: #52544a;">全是室内戏，侯导第一次用轨道，把青楼拍出了家常感。片中唯一放下执念的，是李嘉欣演的黄翠凤。</p>
+      </div>
+      <div>
+        <div style="padding: 10px; background: #e3dbca; box-shadow: inset 0 0 0 1px rgba(27,28,26,0.12);"><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #1b1c1a;"><image-slot id="hhh-qianxi" src="{{ pic.qianxi }}" fit="{{ posterFit }}" shape="rect" placeholder="《千禧曼波》剧照" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot></div></div>
+        <div style="margin-top: 16px; font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 23px;">千禧曼波</div>
+        <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.8; color: #52544a;">问题是舒淇撑不起长镜头和近景，而批判城市生活本来就是侯导的短板。</p>
+      </div>
+    </div>
+
+    <div style="margin-top: 64px; border-top: 2px solid #2f4a41; padding-top: 24px;">
+      <div style="display: flex; align-items: baseline; gap: 16px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 30px; font-weight: 600;">执念图谱</div><span style="font-size: 14px; color: #6a6c60;">阿吴对第四阶段的统一解读</span></div>
+      <div style="margin-top: 16px; font-family: 'Noto Serif SC', serif; font-size: 23px; line-height: 1.6; color: #2f4a41;">“摄影机开动，演员进入自然自在的世界；剧情里，角色从执念走向自在。”</div>
+      <div style="margin-top: 26px; display: grid; grid-template-columns: 200px minmax(0, 1fr) 44px minmax(0, 1fr); gap: 0 14px; padding-bottom: 10px; border-bottom: 1px solid #1b1c1a; font-size: 13px; letter-spacing: 0.18em; color: #6a6c60;"><span>影片</span><span>谁被执念困住</span><span></span><span>怎么放下</span></div>
+      <sc-for list="{{ obsession }}" as="r" hint-placeholder-count="5">
+        <div style="margin-top: {{ r.mt }}; display: grid; grid-template-columns: 200px minmax(0, 1fr) 44px minmax(0, 1fr); gap: 0 14px; align-items: center; padding: {{ r.pad }}; border: {{ r.bd }}; border-bottom: {{ r.bb }};">
+          <div><div style="font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 19px; line-height: 1.4;">《{{ r.film }}》</div><sc-if value="{{ r.isFive }}" hint-placeholder-val="{{ false }}"><span style="display: inline-block; margin-top: 6px; border: 1px dashed #6a6c60; padding: 1px 8px; font-size: 12px; color: #6a6c60;">第五阶段</span></sc-if></div>
+          <div style="font-size: 15px; line-height: 1.75; color: #46483f;">{{ r.obs }}</div>
+          <div style="text-align: center; font-family: 'Cormorant Garamond', serif; font-size: 28px; color: #8a5a34;">→</div>
+          <div style="background: #e2e3da; padding: 10px 14px; font-size: 15px; line-height: 1.75; color: #24392f;">{{ r.rel }}</div>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="margin-top: 56px; background: #e8e1d3; padding: 30px 34px;">
+      <div style="font-family: 'Noto Serif SC', serif; font-size: 26px; font-weight: 600;">插曲：导演如何用演员</div>
+      <div style="margin-top: 22px; display: grid; grid-template-columns: 110px repeat(3, minmax(0, 1fr)); gap: 0 28px; border-bottom: 2px solid #1b1c1a; padding-bottom: 12px;">
+        <span></span>
+        <div style="font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 22px;">张艺谋</div>
+        <div style="font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 22px;">王家卫</div>
+        <div style="font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 22px; color: #2f4a41;">侯孝贤</div>
+      </div>
+      <sc-for list="{{ actors }}" as="r" hint-placeholder-count="4">
+        <div style="display: grid; grid-template-columns: 110px repeat(3, minmax(0, 1fr)); gap: 0 28px; padding: 14px 0; border-bottom: 1px solid rgba(27,28,26,0.14);">
+          <div style="padding-top: 3px; font-size: 13px; letter-spacing: 0.16em; color: #6a6c60;">{{ r.label }}</div>
+          <sc-for list="{{ r.cells }}" as="c" hint-placeholder-count="3"><div style="font-family: {{ c.ff }}; font-size: {{ c.fs }}; line-height: 1.75; color: {{ c.fg }};">{{ c.t }}</div></sc-for>
+        </div>
+      </sc-for>
+    </div>
+
+    <div data-screen-label="咖啡时光" style="margin: 56px -90px 0; padding: 72px 90px; background: #2f4a41; color: #e9e3d6;">
+      <div style="display: grid; grid-template-columns: 150px minmax(0, 1fr) 360px; gap: 60px; align-items: start;">
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 26px; border-right: 1px solid rgba(233,227,214,0.25); padding-right: 30px;">
+          <div style="writing-mode: vertical-rl; font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 44px; line-height: 1.55; letter-spacing: 0.2em; color: #f2ede3;">采菊东篱下<br>悠然见南山</div>
+          <div style="width: 40px; height: 40px; box-sizing: border-box; background: #a33a2a; color: #f2ede3; border-radius: 2px; box-shadow: inset 0 0 0 2px #a33a2a, inset 0 0 0 3.5px rgba(242,237,227,0.85); display: flex; align-items: center; justify-content: center; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 20px;">无</div>
+        </div>
+        <div>
+          <div style="font-size: 13px; letter-spacing: 0.2em; color: #9dbcae;">阿吴不同于主流看法</div>
+          <div style="margin-top: 12px; font-family: 'Noto Serif SC', serif; font-size: 46px; font-weight: 700; line-height: 1.25; color: #f2ede3;">《咖啡时光》是最高峰</div>
+          <div style="margin-top: 28px; display: grid; gap: 14px; font-size: 16px; line-height: 1.8; color: #d6dcd4;">
+            <div style="display: grid; grid-template-columns: 30px minmax(0, 1fr); border-top: 1px solid rgba(233,227,214,0.18); padding-top: 12px;"><span style="font-family: 'Cormorant Garamond', serif; color: #9dbcae; font-size: 22px; line-height: 1.3;">1</span><span>开场一青窈边打电话边出入画面。</span></div>
+            <div style="display: grid; grid-template-columns: 30px minmax(0, 1fr); border-top: 1px solid rgba(233,227,214,0.18); padding-top: 12px;"><span style="font-family: 'Cormorant Garamond', serif; color: #9dbcae; font-size: 22px; line-height: 1.3;">2</span><span>小林稔侍演的父亲一句准备好的台词都没说。</span></div>
+            <div style="display: grid; grid-template-columns: 30px minmax(0, 1fr); border-top: 1px solid rgba(233,227,214,0.18); padding-top: 12px;"><span style="font-family: 'Cormorant Garamond', serif; color: #9dbcae; font-size: 22px; line-height: 1.3;">3</span><span>浅野忠信画电车的细节，是侯导探班时发现的。</span></div>
+            <div style="display: grid; grid-template-columns: 30px minmax(0, 1fr); border-top: 1px solid rgba(233,227,214,0.18); padding-top: 12px;"><span style="font-family: 'Cormorant Garamond', serif; color: #9dbcae; font-size: 22px; line-height: 1.3;">4</span><span>结尾两人在电车上重逢，接东京地铁交错运行的画面。</span></div>
+          </div>
+          <div style="margin-top: 30px; font-family: 'Noto Serif SC', serif; font-size: 26px; line-height: 1.6; color: #f2ede3;">正是「采菊东篱下，悠然见南山」的境界。</div>
+        </div>
+        <div>
+          <div style="padding: 10px; background: rgba(242,237,227,0.1); box-shadow: inset 0 0 0 1px rgba(242,237,227,0.2);"><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #1b1c1a;"><image-slot id="hhh-kafei" src="{{ pic.kafei }}" fit="{{ posterFit }}" shape="rect" placeholder="《咖啡时光》剧照" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot></div></div>
+          <p style="margin: 18px 0 0; font-size: 15px; line-height: 1.8; color: #c9d2cb;">他还顺带说：小津墓碑上刻着「无」字，晚年却对日本战败耿耿于怀——西方对小津一直有「美丽的误会」。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="伍 尾声" style="padding: 84px 90px 0;">
+    <div style="display: flex; align-items: center; gap: 22px;">
+      <div style="flex: none; width: 52px; height: 52px; box-sizing: border-box; background: #a33a2a; color: #f2ede3; border-radius: 2px; box-shadow: inset 0 0 0 3px #a33a2a, inset 0 0 0 4.5px rgba(242,237,227,0.85); display: flex; align-items: center; justify-content: center; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 26px;">伍</div>
+      <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 46px; line-height: 1.2;">尾声：回到道家本源</h2>
+    </div>
+    <div style="margin-top: 20px; height: 1px; background: rgba(27,28,26,0.35);"></div>
+
+    <div style="margin-top: 40px; display: grid; grid-template-columns: 300px minmax(0, 1fr) minmax(0, 0.85fr); gap: 40px; align-items: start;">
+      <div>
+        <div style="padding: 10px; background: #e3dbca; box-shadow: inset 0 0 0 1px rgba(27,28,26,0.12);"><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #1b1c1a;"><image-slot id="hhh-nieyinniang" src="{{ pic.nieyinniang }}" fit="{{ posterFit }}" shape="rect" placeholder="《刺客聂隐娘》剧照" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot></div></div>
+        <div style="margin-top: 14px; font-size: 15px; line-height: 1.8; color: #52544a;">《最好的时光》是在重复自己，《红气球之旅》有明显的文化隔膜。</div>
+      </div>
+      <div>
+        <div style="font-family: 'Noto Serif SC', serif; font-size: 28px; font-weight: 600; line-height: 1.45;">《刺客聂隐娘》：放弃刺杀就是放下执念</div>
+        <div style="margin-top: 26px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+          <div style="border: 1px solid rgba(163,58,42,0.5); padding: 22px 22px 24px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 19px; color: #a33a2a;">张艺谋《英雄》</div><div style="margin-top: 18px; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 64px; line-height: 1; color: #a33a2a;">法家</div></div>
+          <div style="background: #2f4a41; padding: 22px 22px 24px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 19px; color: #9dbcae;">侯孝贤《聂隐娘》</div><div style="margin-top: 18px; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 64px; line-height: 1; color: #f2ede3;">道家</div></div>
+        </div>
+        <div style="margin-top: 18px; border-top: 1px solid #1b1c1a;">
+          <sc-for list="{{ heroNie }}" as="r" hint-placeholder-count="3">
+            <div style="display: grid; grid-template-columns: 80px minmax(0, 1fr) minmax(0, 1fr); gap: 14px; padding: 11px 0; border-bottom: 1px solid rgba(27,28,26,0.14); font-size: 14px; line-height: 1.7;"><span style="padding-top: 2px; font-size: 12px; letter-spacing: 0.1em; color: #6a6c60;">{{ r.a }}</span><span style="color: #7c3226;">{{ r.h }}</span><span style="color: #24392f;">{{ r.n }}</span></div>
+          </sc-for>
+        </div>
+        <div style="margin-top: 12px; font-size: 13px; color: #6a6c60;">张艺谋是法家，侯孝贤是道家（节目的玩笑话）</div>
+      </div>
+      <div style="border-left: 2px solid #a33a2a; padding-left: 24px;">
+        <div style="font-size: 13px; letter-spacing: 0.2em; color: #a33a2a;">但从自然主义的标准看，它是失败的</div>
+        <div style="margin-top: 14px; display: grid; gap: 0; font-size: 16px; line-height: 1.8; color: #52544a;">
+          <div style="padding: 8px 0; border-bottom: 1px solid rgba(27,28,26,0.12);">文言白话夹杂，达不到间离效果。</div>
+          <div style="padding: 8px 0; border-bottom: 1px solid rgba(27,28,26,0.12);">演员表演风格不统一。</div>
+          <div style="padding: 8px 0; border-bottom: 1px solid rgba(27,28,26,0.12);">舒淇用布列松式的「模特」演法很突兀，年龄也偏大。</div>
+          <div style="padding: 8px 0;">朱天文事后也认为本来就不该拍唐朝。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="陆 节目怎么推进" style="padding: 84px 90px 0;">
+    <div style="display: flex; align-items: center; gap: 22px;">
+      <div style="flex: none; width: 52px; height: 52px; box-sizing: border-box; background: #a33a2a; color: #f2ede3; border-radius: 2px; box-shadow: inset 0 0 0 3px #a33a2a, inset 0 0 0 4.5px rgba(242,237,227,0.85); display: flex; align-items: center; justify-content: center; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 26px;">陆</div>
+      <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 46px; line-height: 1.2;">节目怎么推进</h2>
+      <span style="margin-left: auto; font-size: 14px; letter-spacing: 0.18em; color: #6a6c60;">影片 × 节目时间 · 每格 10 分钟</span>
+    </div>
+    <div style="margin-top: 20px; height: 1px; background: rgba(27,28,26,0.35);"></div>
+
+    <div style="margin-top: 36px; display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 3px;">
+      <div style="align-self: center; padding-right: 14px; text-align: right; font-size: 12px; letter-spacing: 0.16em; color: #6a6c60;">段落</div>
+      <div style="position: relative; height: 34px;">
+        <sc-for list="{{ segs }}" as="s" hint-placeholder-count="11">
+          <div style="position: absolute; top: 0; bottom: 0; left: {{ s.left }}; width: {{ s.w }}; box-sizing: border-box; border-right: 2px solid #f2ede3; background: {{ s.bg }}; color: {{ s.fg }}; display: flex; align-items: center; justify-content: center; font-size: 15px;">{{ s.n }}</div>
+        </sc-for>
+      </div>
+    </div>
+    <div style="margin-top: 8px; display: grid; grid-template-columns: 150px repeat(17, minmax(0, 1fr)); gap: 3px;">
+      <span></span>
+      <sc-for list="{{ timeLabels }}" as="t" hint-placeholder-count="17"><span style="font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 14px; color: #6a6c60;">{{ t }}</span></sc-for>
+    </div>
+    <div style="position: relative; margin-top: 6px; display: flex; flex-direction: column; gap: 3px;">
+      <sc-for list="{{ heatFilms }}" as="r" hint-placeholder-count="16">
+        <div style="display: grid; grid-template-columns: 150px repeat(17, minmax(0, 1fr)); gap: 3px;">
+          <div style="padding-right: 14px; display: flex; align-items: center; justify-content: flex-end; gap: 6px; font-family: 'Noto Serif SC', serif; font-weight: {{ r.fw }}; font-size: 15px; color: {{ r.labelColor }}; white-space: nowrap;"><sc-if value="{{ r.hasMark }}" hint-placeholder-val="{{ false }}"><span style="font-family: 'Noto Sans SC', sans-serif; font-size: 15px; color: #C07A12;">{{ r.mark }}</span></sc-if>{{ r.name }}</div>
+          <sc-for list="{{ r.cells }}" as="c" hint-placeholder-count="17">
+            <div style="position: relative; height: 32px; background: {{ c.bg }}; color: {{ c.fg }}; outline: {{ c.ol }}; outline-offset: -2px; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 17px; font-variant-numeric: tabular-nums;">{{ c.v }}<sc-if value="{{ c.hasMark }}" hint-placeholder-val="{{ false }}"><span style="position: absolute; top: -10px; right: -8px; z-index: 2; background: #f2ede3; border-radius: 50%; font-family: 'Noto Sans SC', sans-serif; font-weight: 500; font-size: 15px; line-height: 1; color: #C07A12;">{{ c.mark }}</span></sc-if></div>
+          </sc-for>
+        </div>
+      </sc-for>
+      <div style="position: absolute; left: 153px; right: 0; top: 0; bottom: 0; z-index: 1; pointer-events: none;"><svg viewBox="0 0 100 100" preserveAspectRatio="none" width="100%" height="100%" style="display: block;" aria-hidden="true"><line x1="20.6" y1="0" x2="91.2" y2="100" stroke="#1b1c1a" stroke-width="1.5" stroke-dasharray="6 7" vector-effect="non-scaling-stroke" opacity="0.35"></line></svg></div>
+    </div>
+    <div style="margin-top: 26px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px; font-size: 14px; line-height: 1.75; color: #46483f;">
+      <div style="display: grid; grid-template-columns: 24px minmax(0, 1fr);"><span style="font-size: 16px; color: #C07A12;">①</span><span>《海上花》在 2:30 段又出现 5 次：拿来和《聂隐娘》比语言与演员。</span></div>
+      <div style="display: grid; grid-template-columns: 24px minmax(0, 1fr);"><span style="font-size: 16px; color: #C07A12;">②</span><span>《咖啡时光》在 0:30 段出现 3 次：阿吴一开始划分阶段就宣布它是巅峰。</span></div>
+      <div style="display: grid; grid-template-columns: 24px minmax(0, 1fr);"><span style="font-size: 16px; color: #C07A12;">③</span><span>《童年往事》散布在 11 个时间段里，是全期最常被拿来对照的作品。</span></div>
+    </div>
+    <div style="margin-top: 26px; border-top: 1px solid rgba(27,28,26,0.2); padding-top: 18px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px 30px;">
+      <sc-for list="{{ segs }}" as="s" hint-placeholder-count="11">
+        <div style="display: grid; grid-template-columns: 22px 42px minmax(0, 1fr); gap: 4px; align-items: baseline; font-size: 14px; line-height: 1.6;"><span style="color: {{ s.mark }};">{{ s.n }}</span><span style="font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 15px; color: #6a6c60;">{{ s.start }}</span><span>{{ s.title }}<span style="margin-left: 8px; font-size: 12px; color: {{ s.mark }};">{{ s.speaker }}</span></span></div>
+      </sc-for>
+    </div>
+    <div style="margin-top: 14px; font-size: 13px; line-height: 1.7; color: #6a6c60;">段落色块：赭色为老马主讲，墨绿为阿吴主讲，米灰为两人共同。虚线是按年代逐部讲出的对角线。格内为提及次数，近似值；最后一格为 2:40–2:47:33。</div>
+
+    <div style="margin-top: 52px; display: flex; align-items: baseline; gap: 16px;"><div style="font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 24px;">人物 × 时间</div><span style="font-size: 13px; color: #6a6c60;">同样每格 10 分钟</span></div>
+    <div style="margin-top: 14px; display: grid; grid-template-columns: 150px repeat(17, minmax(0, 1fr)); gap: 3px;">
+      <span></span>
+      <sc-for list="{{ timeLabels }}" as="t" hint-placeholder-count="17"><span style="font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 14px; color: #6a6c60;">{{ t }}</span></sc-for>
+    </div>
+    <div style="margin-top: 6px; display: flex; flex-direction: column; gap: 3px;">
+      <sc-for list="{{ heatPeople }}" as="r" hint-placeholder-count="13">
+        <div style="display: grid; grid-template-columns: 150px repeat(17, minmax(0, 1fr)); gap: 3px;">
+          <div style="padding-right: 14px; display: flex; align-items: center; justify-content: flex-end; font-family: 'Noto Serif SC', serif; font-size: 15px; white-space: nowrap;">{{ r.name }}</div>
+          <sc-for list="{{ r.cells }}" as="c" hint-placeholder-count="17">
+            <div style="height: 28px; background: {{ c.bg }}; color: {{ c.fg }}; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 16px; font-variant-numeric: tabular-nums;">{{ c.v }}</div>
+          </sc-for>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section data-screen-label="柒 提及频次" style="padding: 84px 90px 0;">
+    <div style="display: flex; align-items: center; gap: 22px;">
+      <div style="flex: none; width: 52px; height: 52px; box-sizing: border-box; background: #a33a2a; color: #f2ede3; border-radius: 2px; box-shadow: inset 0 0 0 3px #a33a2a, inset 0 0 0 4.5px rgba(242,237,227,0.85); display: flex; align-items: center; justify-content: center; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 26px;">柒</div>
+      <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 46px; line-height: 1.2;">这三小时里，他们在说什么</h2>
+      <span style="margin-left: auto; font-size: 14px; letter-spacing: 0.18em; color: #6a6c60;">字号 ∝ 提及次数</span>
+    </div>
+    <div style="margin-top: 20px; height: 1px; background: rgba(27,28,26,0.35);"></div>
+
+    <div style="margin-top: 40px; display: flex; align-items: baseline; gap: 26px; border-bottom: 1px solid rgba(27,28,26,0.15); padding-bottom: 30px;">
+      <div style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 96px; line-height: 1;">侯孝贤</div>
+      <div style="font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 84px; color: #8a5a34; line-height: 1;">426</div>
+      <div style="font-size: 15px; line-height: 1.7; color: #6a6c60; max-width: 420px;">次（含「侯导」140、ASR 误写「猴岛」38 等变体）。以下三组不含他本人。</div>
+    </div>
+
+    <div style="margin-top: 36px;">
+      <div style="font-size: 13px; letter-spacing: 0.2em; color: #2f4a41;">美学与议题热词</div>
+      <div style="margin-top: 20px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px 22px; font-family: 'Noto Serif SC', serif;">
+        <sc-for list="{{ themes }}" as="w" hint-placeholder-count="50">
+          <span style="font-size: {{ w.size }}; line-height: 1; color: {{ w.color }};">{{ w.w }}<span style="margin-left: 2px; font-family: 'Cormorant Garamond', serif; font-size: {{ w.nsize }}; color: #8a5a34;">{{ w.n }}</span></span>
+        </sc-for>
+      </div>
+    </div>
+
+    <div style="margin-top: 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px;">
+      <div style="border-top: 2px solid #1b1c1a; padding-top: 18px;">
+        <div style="font-size: 13px; letter-spacing: 0.2em; color: #8a5a34;">影片</div>
+        <div style="margin-top: 20px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px 20px; font-family: 'Noto Serif SC', serif;">
+          <sc-for list="{{ films }}" as="w" hint-placeholder-count="22">
+            <span style="font-size: {{ w.size }}; line-height: 1; color: {{ w.color }};">{{ w.w }}<span style="margin-left: 2px; font-family: 'Cormorant Garamond', serif; font-size: {{ w.nsize }}; color: #8a5a34;">{{ w.n }}</span></span>
+          </sc-for>
+        </div>
+        <div style="margin-top: 18px; font-size: 13px; color: #6a6c60;">琥珀色为侯孝贤作品，紫色为他人影片。</div>
+      </div>
+      <div style="border-top: 2px solid #1b1c1a; padding-top: 18px;">
+        <div style="font-size: 13px; letter-spacing: 0.2em; color: #8a5a34;">人物</div>
+        <div style="margin-top: 20px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px 20px; font-family: 'Noto Serif SC', serif;">
+          <sc-for list="{{ names }}" as="w" hint-placeholder-count="40">
+            <span style="font-size: {{ w.size }}; line-height: 1; color: {{ w.color }};">{{ w.w }}<span style="margin-left: 2px; font-family: 'Cormorant Garamond', serif; font-size: {{ w.nsize }}; color: #8a5a34;">{{ w.n }}</span></span>
+          </sc-for>
+        </div>
+        <div style="margin-top: 18px; display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 13px; color: #6a6c60;">
+          <sc-for list="{{ catLegend }}" as="c" hint-placeholder-count="4"><span style="display: flex; align-items: center; gap: 6px;"><span style="width: 9px; height: 9px; border-radius: 50%; background: {{ c.color }};"></span>{{ c.label }}</span></sc-for>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 34px; border-top: 1px solid rgba(27,28,26,0.15); padding-top: 18px; font-size: 14px; line-height: 1.8; color: #6a6c60; max-width: 1060px;">统计基于 ASR 转录稿：先按上下文把错字变体归并到正确名称（「猴岛」归侯孝贤、「科长」归贾樟柯、「小金」归小津），再做最长匹配、不重叠计数。转录稿有漏字串字，数字是近似值，适合看相对热度。</div>
+  </section>
+
+  <footer data-screen-label="总评" style="margin-top: 84px; padding: 72px 90px 60px; background: #141512; color: #e9e3d6;">
+    <div style="display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 64px; align-items: start;">
+      <div>
+        <div style="font-size: 13px; letter-spacing: 0.2em; color: #9dbcae;">总评</div>
+        <div style="margin-top: 16px; font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 36px; line-height: 1.6; color: #f2ede3; text-wrap: pretty;">侯孝贤证明了中国传统哲学美学不必经过激进革命，也能转化成被西方接受的现代形式——可以称为「中式现代主义」。</div>
+        <p style="margin: 20px 0 0; font-size: 17px; line-height: 1.85; color: #c9c4b6;">这也印证了王德威「没有晚清，何来五四」的说法。</p>
+      </div>
+      <div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 26px;">
+          <div style="border-top: 1px solid rgba(233,227,214,0.45); padding-top: 14px;"><div style="font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 20px; color: #f2ede3;">胡金铨</div><p style="margin: 8px 0 0; font-size: 15px; line-height: 1.8; color: #c9c4b6;">把戏曲那一套整个搬进电影，结构臃肿。</p></div>
+          <div style="border-top: 1px solid rgba(233,227,214,0.45); padding-top: 14px;"><div style="font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 20px; color: #f2ede3;">杨德昌</div><p style="margin: 8px 0 0; font-size: 15px; line-height: 1.8; color: #c9c4b6;">西方理性主义的另一端。</p></div>
+        </div>
+        <div style="margin-top: 28px; padding-top: 22px; border-top: 1px solid #9dbcae; font-family: 'Noto Serif SC', serif; font-size: 24px; line-height: 1.6; color: #f2ede3;">台湾电影工业只有三流水平，却出了好几位思想体系完全不同的一流艺术家。</div>
+      </div>
+    </div>
+    <div style="margin-top: 64px; border-top: 1px solid rgba(233,227,214,0.2); padding-top: 36px;">
+      <div style="font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 26px; color: #f2ede3;">华语导演的两端</div>
+      <div style="margin-top: 18px; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-size: 14px; color: #c9c4b6;">
+        <span style="margin-right: 6px; letter-spacing: 0.16em; color: #a9a99c;">传统转化的尝试者</span>
+        <span style="border: 1px solid rgba(233,227,214,0.35); padding: 3px 12px; font-family: 'Noto Serif SC', serif;">朱石麟</span>
+        <span style="border: 1px solid rgba(233,227,214,0.35); padding: 3px 12px; font-family: 'Noto Serif SC', serif;">费穆</span>
+        <span style="border: 1px solid rgba(233,227,214,0.35); padding: 3px 12px; font-family: 'Noto Serif SC', serif;">胡金铨</span>
+        <span style="border: 1px solid rgba(233,227,214,0.35); padding: 3px 12px; font-family: 'Noto Serif SC', serif;">唐书璇</span>
+        <span style="color: #9dbcae;">→</span>
+        <span style="background: #9dbcae; color: #141512; padding: 4px 12px; font-family: 'Noto Serif SC', serif; font-weight: 600;">侯孝贤</span>
+      </div>
+      <div style="margin-top: 10px; font-size: 13px; color: #a9a99c;">把中国传统文化转化为电影现代性的尝试者；完成整体现代转化的是侯孝贤</div>
+      <div style="position: relative; margin-top: 44px; height: 92px;">
+        <div style="position: absolute; left: 8px; right: 8px; top: 7px; height: 2px; background: rgba(233,227,214,0.45);"></div>
+        <div style="position: absolute; left: 0; top: 0; width: 16px; height: 16px; border-radius: 50%; background: #9dbcae;"></div>
+        <div style="position: absolute; left: 0; top: 30px;"><div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 26px; color: #f2ede3;">侯孝贤</div><div style="margin-top: 4px; font-size: 14px; color: #c9c4b6;">东方化的美学思维</div></div>
+        <div style="position: absolute; left: 50%; top: 0; width: 2px; height: 16px; background: rgba(233,227,214,0.6);"></div>
+        <div style="position: absolute; left: 50%; top: 30px; transform: translateX(-50%); text-align: center; white-space: nowrap;"><div style="font-family: 'Noto Serif SC', serif; font-size: 20px; color: #d6d0c2;">大部分华语导演</div><div style="margin-top: 4px; font-size: 14px; color: #a9a99c;">处在两者之间</div></div>
+        <div style="position: absolute; right: 0; top: 0; width: 16px; height: 16px; border-radius: 50%; background: #c9c4b6;"></div>
+        <div style="position: absolute; right: 0; top: 30px; text-align: right;"><div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 26px; color: #f2ede3;">杨德昌</div><div style="margin-top: 4px; font-size: 14px; color: #c9c4b6;">西方化的理性主义工程师头脑</div></div>
+      </div>
+      <div style="margin-top: 26px; display: inline-flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; border: 1px dashed rgba(233,227,214,0.45); padding: 12px 18px;"><span style="font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 20px; color: #f2ede3;">李安</span><span style="font-size: 14px; color: #c9c4b6;">在光谱之外 · 叶月瑜：儒化好莱坞；不宜看作两人的调和</span></div>
+    </div>
+    <div style="margin-top: 56px; padding-top: 22px; border-top: 1px solid rgba(233,227,214,0.2); display: flex; justify-content: space-between; align-items: center; gap: 24px; font-size: 14px; letter-spacing: 0.16em; color: #a9a99c;">
+      <span>电影巨辩 · 侯孝贤专题 · 内容整理自节目转录</span>
+      <span style="display: flex; align-items: center; gap: 16px;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 20px; letter-spacing: 0.06em; color: #9dbcae;">侯孝贤本人约被提及 426 次</span><span style="flex: none; width: 40px; height: 40px; box-sizing: border-box; padding: 4px; background: #a33a2a; border-radius: 2px; box-shadow: inset 0 0 0 2px #a33a2a, inset 0 0 0 3px rgba(242,237,227,0.85);"><span style="display: block; writing-mode: vertical-rl; height: 32px; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 14px; line-height: 16px; letter-spacing: 0; color: #f2ede3; text-align: center;">侯孝贤印</span></span></span>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;monoPortraits&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;图片&quot;},&quot;posterFit&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;铺满&quot;,&quot;完整&quot;],&quot;default&quot;:&quot;铺满&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;图片&quot;}}">
+const PEOPLE = {
+  hhh: ['侯孝贤', 'Hou Hsiao-hsien'],
+  yang: ['杨德昌', 'Edward Yang'],
+  chu: ['朱天文', 'Chu Tien-wen'],
+  wu: ['吴念真', 'Wu Nien-jen'],
+  litianlu: ['李天禄', 'Li Tien-lu'],
+  ozu: ['小津安二郎', 'Yasujirō Ozu'],
+  zhang: ['张艺谋', 'Zhang Yimou'],
+  wong: ['王家卫', 'Wong Kar-wai'],
+  shuqi: ['舒淇', 'Shu Qi'],
+  lee: ['李嘉欣', 'Michele Reis'],
+  leung: ['梁朝伟', 'Tony Leung Chiu-wai'],
+  annie: ['伊能静', 'Annie Yi'],
+  gaojie: ['高捷 (演员)', 'Jack Kao'],
+  asano: ['浅野忠信', 'Tadanobu Asano'],
+  hitoto: ['一青窈', 'Yō Hitoto'],
+  kobayashi: ['小林稔侍', 'Toshiji Kobayashi'],
+  koreeda: ['是枝裕和', 'Hirokazu Kore-eda'],
+  jia: ['贾樟柯', 'Jia Zhangke'],
+  leechangdong: ['李沧东', 'Lee Chang-dong'],
+  jarmusch: ['吉姆·贾木许', 'Jim Jarmusch'],
+  assayas: ['奥利维耶·阿萨亚斯', 'Olivier Assayas'],
+  king: ['胡金铨', 'King Hu'],
+  bordwell: ['大卫·波德维尔', 'David Bordwell'],
+  muller: ['马可·穆勒', 'Marco Müller']
+};
+const FILMS = {
+  fenggui: ['風櫃來的人', ''],
+  tongnian: ['童年往事', ''],
+  lianlian: ['戀戀風塵', ''],
+  niluohe: ['尼羅河女兒', ''],
+  beiqing: ['悲情城市', ''],
+  ximeng: ['戲夢人生', ''],
+  haonan: ['好男好女', 'Good Men, Good Women'],
+  nanguo: ['南國再見，南國', 'Goodbye South, Goodbye'],
+  haishanghua: ['海上花', 'Flowers of Shanghai'],
+  qianxi: ['千禧曼波', ''],
+  kafei: ['咖啡時光', ''],
+  nieyinniang: ['刺客聶隱娘', '']
+};
+const LOCAL = { hhh: 'assets/gh/hou.jpg', yang: 'assets/gh/yang.jpg', fenggui: 'assets/gh/p-fengui.jpg', tongnian: 'assets/gh/p-tongnian.jpg', beiqing: 'assets/gh/p-beiqing.jpg' };
+const GRID = [
+  ['yang', '杨德昌', '带来西方电影观念'], ['chu', '朱天文', '推荐《从文自传》'], ['wu', '吴念真', '1090 个信封'], ['litianlu', '李天禄', '《戏梦人生》'],
+  ['ozu', '小津安二郎', '墓碑上的「无」'], ['muller', '马可·穆勒', '推荐他看小津'], ['bordwell', '波德威尔', '形式分析'], ['assayas', '阿萨亚斯', '拍过侯导纪录片'],
+  ['koreeda', '是枝裕和', '以侯为参照'], ['jia', '贾樟柯', '以侯为参照'], ['leechangdong', '李沧东', '以侯为参照'], ['jarmusch', '贾木许', '以侯为参照'],
+  ['gaojie', '高捷', '最「侯孝贤」的演员'], ['leung', '梁朝伟', '哑巴摄影师'], ['lee', '李嘉欣', '黄翠凤，唯一放下执念'], ['shuqi', '舒淇', '撑不起长镜头？'],
+  ['annie', '伊能静', '撑不起历史部分'], ['hitoto', '一青窈', '《咖啡时光》开场'], ['asano', '浅野忠信', '画电车'], ['kobayashi', '小林稔侍', '一句台词都没说'],
+  ['zhang', '张艺谋', '看脸／法家'], ['wong', '王家卫', '第七个馒头'], ['king', '胡金铨', '戏曲整套搬入']
+];
+const THEMES = '台湾 104 66 1|自然主义 62 53 1|西方 33 42|调度 32 41|道家 32 41 1|成长 27 39|自在 23 36|视点 21 35|执念 21 35 1|写实 19 34|国民党 17 33|白色恐怖 16 32|新电影 14 31|明星 14 31|长镜头 13 30|死亡 10 27|老子／庄子 10 27|情境 10 27|抒情传统 9 27|戏曲 9 27|火车 9 27|汽车 9 27|业余演员 8 26|传统文化 8 26|儒家 8 26|生命经验 8 26|隐藏与揭露 8 26|隐喻 8 26|武侠 8 26|解严 8 26|天人合一 7 25|超越世界 7 25|自传体 7 25|现代性 7 25|青楼 7 25|二二八 7 25|外省人 6 23|本省人 6 23|殖民 6 23|景框 6 23|造作 6 23|交通工具 6 23|京剧 6 23|空镜头 5 22|父权 5 22|间离 4 21|景深 4 21|静态悲剧 2 20|留白 2 20|意境 2 20';
+const FILM_WORDS = '海上花 32 41 1|悲情城市 25 38 1|童年往事 24 37 1|戏梦人生 24 37 1|南国再见，南国 23 36 1|风柜来的人 19 34 1|咖啡时光 16 32 1|好男好女 15 31 1|刺客聂隐娘 14 31 1|冬冬的假期 11 28 1|恋恋风尘 10 27 1|千禧曼波 10 27 1|英雄 7 25 0|在那河畔青草青 6 23 1|尼罗河女儿 5 22 1|霸王别姬 5 22 0|红气球之旅 4 21 1|教父 4 21 0|最好的时光 3 20 1|城南旧事 3 20 0|香蕉天堂 3 20 0|晚春 3 20 0';
+const NAME_WORDS = '杨德昌 28 39 1|朱天文 27 39 1|小津安二郎 24 37 1|高捷 22 36 1|沈从文 17 33|胡金铨 16 32|吴念真 16 32|舒淇 16 32|张艺谋 15 31|波德威尔 14 31|李天禄 13 30|陈世骧 13 30|张爱玲 13 30|李安 11 28|一青窈 11 28|李嘉欣 10 27|阿萨亚斯 9 27|鲁迅 8 26|伊能静 8 26|浅野忠信 8 26|王家卫 7 25|钮承泽 7 25|李行 6 23|帕索里尼 6 23|朱西甯 6 23|陈松勇 6 23|阿巴斯 5 22|左拉 5 22|李屏宾 5 22|林强 5 22|托尼·雷恩 5 22|莲实重彦 5 22|梁朝伟 4 21|谢世宗 4 21|王德威 4 21|德勒兹 4 21|胡兰成 4 21|阿城 4 21|陈怀恩 4 21|金庸 4 21';
+const words = (s, on, off) => s.split('|').map(r => {
+  const [w, n, size, flag] = r.split(' ');
+  return { w, n, size: size + 'px', nsize: Math.max(12, Math.round(8 + size * 0.18)) + 'px', color: flag === '1' ? on : off };
+});
+const px = v => v.toFixed(1) + 'px';
+const EVAL = { peak: '#C07A12', master: '#2F6F6A', solid: '#8FB8AD', practice: '#B9B1A0', dispute: '#6B4C7A', weak: '#D99A8F', fail: '#B23A2F' };
+const EVAL_LABEL = [['peak', '巅峰（阿吴个人判断）'], ['master', '杰作'], ['solid', '重要 / 成熟'], ['practice', '练手'], ['dispute', '影响最大但有争议'], ['weak', '欠佳'], ['fail', '失败']];
+const HOU_FILMS = [
+  ['就是溜溜的她', 1980, 1, 1, 'practice', '商业片练手'],
+  ['风儿踢踏踩', 1981, 1, 1, 'practice', '商业片练手'],
+  ['在那河畔青草青', 1982, 1, 6, 'practice', '让小孩即兴表演，自然主义雏形'],
+  ['风柜来的人', 1983, 2, 19, 'solid', '吴念真：从一楼跳到八楼；但仍稚嫩'],
+  ['冬冬的假期', 1984, 2, 11, 'solid', '儿童视点把大人的狗血事陌生化'],
+  ['童年往事', 1985, 2, 24, 'master', '早期最重要：外省人回不去的乡愁'],
+  ['恋恋风尘', 1986, 2, 10, 'solid', '情感创伤化为四时节气的自然秩序'],
+  ['尼罗河女儿', 1987, 2, 5, 'fail', '公认失败；此后不再妥协'],
+  ['悲情城市', 1989, 3, 25, 'dispute', '影响最大，却偏离侯的美学：隐喻过直白'],
+  ['戏梦人生', 1993, 3, 24, 'master', '真正的杰作；比同年的《霸王别姬》更好'],
+  ['好男好女', 1995, 3, 15, 'fail', '政治正面强攻；批判太浅'],
+  ['南国再见，南国', 1996, 4, 23, 'master', '超一流的镜头内调度；又一部处女作'],
+  ['海上花', 1998, 4, 32, 'master', '全室内的调度杰作；只有黄翠凤解脱'],
+  ['千禧曼波', 2001, 4, 10, 'weak', '赌舒淇是赌输了'],
+  ['咖啡时光', 2003, 4, 16, 'peak', '阿吴：巅峰，行云流水、天人合一'],
+  ['最好的时光', 2005, 5, 3, 'weak', '重复自己；较好的舒淇电影'],
+  ['红气球之旅', 2007, 5, 4, 'weak', '对法国文化的躲闪'],
+  ['刺客聂隐娘', 2015, 5, 14, 'fail', '放下执念的主题对了，执行失败']
+];
+const STAGES = [
+  ['商业片时期', 1980, 1982, '轻松都市爱情喜剧；内容平平，但景深、景框、长镜头已有苗头', '#e3dbca', '#1b1c1a'],
+  ['成长题材', 1983, 1987, '自传体原则；杨德昌、小津、沈从文带来的转折', '#d9cfbb', '#1b1c1a'],
+  ['台湾历史三部曲', 1989, 1995, '解严后正面处理历史与政治', '#cfc3ab', '#1b1c1a'],
+  ['巅峰期', 1996, 2003, '内容稀释，场面调度登峰造极；共同主题是执念', '#2f4a41', '#f2ede3'],
+  ['尾声', 2005, 2015, '余音；重复自己、文化隔膜、执行失败', '#e3dbca', '#1b1c1a']
+];
+const TLW = 1130, AXIS = 216, YW = TLW / 36;
+const tx = y => (y - 1979.5) * YW;
+const SEGS = [[0, '0:00', '开场：退休风波', '节目'], [5, '0:05', '研究综述', '老马'], [18, '0:18', '核心论点：道家自然主义', '阿吴'], [33, '0:33', '五阶段划分、商业片时期', '阿吴'], [41, '0:41', '转折的成因', '节目'], [57, '0:57', '成长题材：风柜、冬冬、童年、恋恋、尼罗河', '节目'], [86, '1:26', '台湾历史三部曲：悲情、戏梦、好男好女', '节目'], [111, '1:51', '巅峰期：南国、海上花、千禧、咖啡', '阿吴主导'], [129, '2:09', '三位导演怎么用演员', '节目'], [147, '2:27', '尾声：最好的时光、红气球、聂隐娘', '节目'], [160, '2:40', '总评', '节目']];
+const CIRCLED = '①②③④⑤⑥⑦⑧⑨⑩⑪';
+const HEAT_FILMS = {
+  '在那河畔青草青': [0, 0, 0, 5, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  '风柜来的人': [0, 0, 0, 1, 2, 3, 7, 3, 1, 0, 0, 1, 1, 0, 0, 0, 0],
+  '冬冬的假期': [0, 0, 0, 0, 1, 2, 5, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  '童年往事': [1, 0, 0, 2, 2, 2, 2, 9, 1, 1, 2, 0, 1, 0, 1, 0, 0],
+  '恋恋风尘': [0, 0, 0, 0, 0, 2, 1, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0],
+  '尼罗河女儿': [0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 1, 0, 0, 0],
+  '悲情城市': [0, 1, 0, 2, 1, 1, 0, 0, 6, 8, 4, 0, 1, 1, 0, 0, 0],
+  '戏梦人生': [0, 0, 0, 2, 0, 1, 0, 0, 1, 16, 4, 0, 0, 0, 0, 0, 0],
+  '好男好女': [0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 11, 0, 0, 2, 0, 0, 0],
+  '南国再见，南国': [0, 0, 0, 2, 0, 1, 1, 0, 2, 0, 1, 5, 7, 2, 1, 1, 0],
+  '海上花': [0, 2, 0, 2, 0, 1, 0, 0, 1, 0, 0, 1, 17, 3, 0, 5, 0],
+  '千禧曼波': [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 7, 0, 1, 0],
+  '咖啡时光': [0, 0, 0, 3, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 8, 2, 0],
+  '最好的时光': [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0],
+  '红气球之旅': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 0],
+  '刺客聂隐娘': [1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 11, 0]
+};
+const HEAT_PEOPLE = {
+  '杨德昌': [0, 0, 0, 0, 8, 4, 3, 0, 0, 0, 6, 0, 0, 2, 0, 0, 5],
+  '朱天文': [2, 2, 0, 2, 7, 6, 0, 0, 0, 2, 0, 0, 1, 2, 1, 2, 0],
+  '小津安二郎': [0, 0, 0, 1, 15, 1, 0, 0, 0, 1, 0, 0, 0, 0, 6, 0, 0],
+  '高捷': [0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 9, 0, 10, 0, 0, 0],
+  '沈从文': [0, 2, 0, 0, 8, 3, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0],
+  '胡金铨': [0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14],
+  '吴念真': [0, 0, 0, 0, 0, 2, 0, 1, 13, 0, 0, 0, 0, 0, 0, 0, 0],
+  '舒淇': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 3, 3, 0],
+  '张艺谋': [4, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 5, 4, 0, 1, 0],
+  '波德威尔': [3, 1, 0, 4, 0, 0, 0, 0, 0, 1, 0, 5, 0, 0, 0, 0, 0],
+  '陈世骧': [0, 12, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  '张爱玲': [0, 2, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0],
+  '李天禄': [0, 0, 1, 0, 0, 1, 0, 0, 1, 8, 2, 0, 0, 0, 0, 0, 0]
+};
+const HOT = { '海上花': { 15: '①' }, '咖啡时光': { 3: '②' } };
+const ROWMARK = { '童年往事': '③' };
+const heatRows = (obj, max) => Object.keys(obj).map(name => {
+  const hot = HOT[name] || {};
+  return {
+    name, mark: ROWMARK[name] || '', hasMark: !!ROWMARK[name], labelColor: ROWMARK[name] ? '#8a560c' : '#1b1c1a', fw: ROWMARK[name] ? '700' : '400',
+    cells: obj[name].map((v, i) => {
+      const a = v ? 0.14 + 0.86 * v / max : 0;
+      return { v: v || '', bg: v ? 'rgba(47,111,106,' + a.toFixed(2) + ')' : 'rgba(27,28,26,0.035)', fg: a > 0.55 ? '#f2ede3' : '#1b1c1a', ol: hot[i] ? '2px solid #C07A12' : 'none', mark: hot[i] || '', hasMark: !!hot[i] };
+    })
+  };
+});
+const INF = [
+  { n: '①', color: '#2F6F6A', items: [['n', '杨德昌、万仁等留学派', '直接带来：主镜头概念、西方电影与音乐'], ['e', '在杨家看片'], ['n', '帕索里尼《俄狄浦斯王》'], ['e', '开始思考视点问题']] },
+  { n: '②', color: '#3D5A80', items: [['n', '马可·穆勒'], ['e', '推荐'], ['n', '小津安二郎《我出生了，但…》'], ['e', '学会拍现代：现代受历史支配']] },
+  { n: '③', color: '#7A6A2A', items: [['n', '朱西甯'], ['d', '风格相近，让朱天文想到沈从文（节目的推测）'], ['n', '朱天文'], ['e', '推荐'], ['n', '沈从文《从文自传》'], ['e', '观看的力量、对死亡的态度']] },
+  { n: '', color: '#7A6A2A', items: [['n', '朱家：朱天心、唐诺'], ['e', '卡尔维诺、昆德拉等理念']] }
+];
+const INNER = ['观察力与跳跃式联想', '青春期父母、祖母相继去世', '武侠、通俗小说与戏曲', '在乡野长大；台湾保存较完整的传统文化'];
+const PCOLOR = { D: '#B23A2F', C: '#2F6F6A', S: '#3D5A80', W: '#7A6A2A' };
+const CAT_LEGEND = [['D', '导演'], ['C', '编剧 / 演员 / 主创'], ['S', '学者 / 影评人'], ['W', '作家']];
+const CAT_OF = {};
+[['D', '杨德昌 小津安二郎 胡金铨 张艺谋 李安 阿萨亚斯 王家卫 李行 帕索里尼 阿巴斯'], ['C', '朱天文 高捷 吴念真 舒淇 李天禄 一青窈 李嘉欣 伊能静 浅野忠信 钮承泽 陈松勇 李屏宾 林强 梁朝伟 阿城 陈怀恩'], ['S', '波德威尔 陈世骧 托尼·雷恩 莲实重彦 谢世宗 王德威 德勒兹'], ['W', '沈从文 张爱玲 鲁迅 朱西甯 左拉 胡兰成 金庸']].forEach(g => g[1].split(' ').forEach(n => { CAT_OF[n] = g[0]; }));
+const REL = [
+  ['李行', '引路与同行', 'D', '入行导师：场记、副导、编剧'], ['杨德昌', '引路与同行', 'D', '新电影战友；引介西方电影；为《风柜》重配乐'], ['万仁', '引路与同行', 'D', '讲解好莱坞的主镜头'],
+  ['朱天文', '编剧与理念', 'C', '长期编剧；推荐沈从文'], ['朱天心、唐诺', '编剧与理念', 'W', '输入卡尔维诺、昆德拉等理念；唐诺是幕后军师'], ['吴念真', '编剧与理念', 'C', '《恋恋风尘》故事原型'], ['阿城', '编剧与理念', 'C', '《刺客聂隐娘》编剧'],
+  ['李屏宾', '摄影与声音', 'C', '御用摄影，坚持亲自掌机'], ['陈怀恩', '摄影与声音', 'C', '御用摄影'], ['韩允中', '摄影与声音', 'C', '《好男好女》首次掌机'], ['杜笃之', '摄影与声音', 'C', '录音；《风柜》的环境声'],
+  ['李天禄', '演员', 'C', '《戏梦人生》本人出镜；《恋恋风尘》阿公'], ['高捷', '演员', 'C', '最侯孝贤的演员；《南国》原型'], ['舒淇', '演员', 'C', '后期三部的女主'], ['梁朝伟', '演员', 'C', '《悲情城市》《海上花》'], ['伊能静', '演员', 'C', '《好男好女》《南国》'], ['一青窈、浅野忠信', '演员', 'C', '《咖啡时光》，侯所有电影里最成功的搭档'],
+  ['阿萨亚斯', '友人与见证者', 'D', '拍纪录片《侯孝贤画像》；侯曾在他家住一个月'], ['托尼·雷恩', '友人与见证者', 'S', '数十年交情；透露退休'], ['蔡明亮', '友人与见证者', 'D', '近年越走越近'], ['陈映真', '友人与见证者', 'W', '劝退拍《铃铛花》'], ['陈明忠', '友人与见证者', 'C', '左派友人；出演《好男好女》']
+];
+const ring = names => REL.filter(r => names.indexOf(r[1]) >= 0).map(r => ({ name: r[0], ring: r[1], color: PCOLOR[r[2]], rel: r[3] }));
+const OBS = [
+  ['南国再见，南国', 4, '高捷想干出点事，开个餐厅都要「过五关斩六将」；林强要拿回「属于自己」的地产钱', '搬家时聊起刺青、用筷子喂狗的自在瞬间；结尾车翻进田里，一下子解脱'],
+  ['海上花', 4, '几组三角关系，人人困在情感牢笼里', '只有黄翠凤赎身解脱（三扇门的调度）'],
+  ['千禧曼波', 4, '整部讲一个困局', '自在只在拍到高捷时出现；结尾雪中空镜头偏强行'],
+  ['咖啡时光', 4, '怀孕本可成为戏剧危机', '一青窈毫不焦虑，执念已被破除'],
+  ['刺客聂隐娘', 5, '杀不杀田季安', '放弃刺杀，就是放下执念']
+];
+const ACT_ROWS = [
+  ['方法', ['看照片看脸，几千张里零点几秒选中', '找来大明星，一个镜头 NG 几十次，把演技磨掉', '先观察后选择；不排练、不体验生活，现场基本不调']],
+  ['标准', ['脸的上镜头感，能扛住大银幕特写，近似面相学', '让演员进入「演不动了」的状态', '演员的气质对不对']],
+  ['比喻或例子', ['周冬雨就是这么选出来的', '吃到第七个馒头才饱，前六个省不了', '伊能静演过火就在过火前剪掉；骗陈松勇是「试戏」让他放松']],
+  ['代表演员', ['—', '梁朝伟', '高捷']]
+];
+const HERO_NIE = [['核心问题', '杀不杀秦王', '杀不杀田季安'], ['不杀的理由', '为了天下，理由明确', '表面上：嗣子年幼，杀了魏博就乱；也可能是被父子亲情打动'], ['不杀的目的', '让秦王打破现状、改天换地', '维持现状，顺其自然']];
+const NAT_WEST = ['孔德实证主义、遗传学、生理学', '左拉：客观、科学地写人的本能与欲望', '日本自然主义：向内转，演变为私小说', '电影：德勒兹举布努埃尔、施特罗海姆，从现实中挖出原生世界与原生冲动'];
+const NAT_HOU = ['道家的「无」是实践概念：否定造作、虚伪、执念', '自然 = 自在自为、自是如此', '无为：静观世界流变的审美主体', '写实：重点在写；深度在表面'];
+const NEIGH = [['罗西里尼', '基督教视点下的自然主义，寻求神迹与救赎'], ['皮亚拉', '接近左拉，表现人性之恶与赤裸的欲望'], ['卡萨维蒂斯', '受剧场影响的即兴表演，寻求人性与社会的真相'], ['侯孝贤', '道家自然主义：否定造作，求自在']];
+const API = { zh: 'https://zh.wikipedia.org/w/api.php', en: 'https://en.wikipedia.org/w/api.php' };
+
+class Component extends DCLogic {
+  state = { img: {} };
+
+  componentDidMount() { this.loadImages(); }
+
+  async getJSON(url) { return (await fetch(url)).json(); }
+
+  async pageImages(lang, titles) {
+    const url = API[lang] + '?action=query&format=json&origin=*&redirects=1&prop=pageimages'
+      + '&piprop=thumbnail&pithumbsize=720&titles=' + encodeURIComponent(titles.join('|'));
+    const q = (await this.getJSON(url)).query || {};
+    const byTitle = {};
+    Object.keys(q.pages || {}).forEach(k => {
+      const p = q.pages[k];
+      if (p && p.thumbnail && p.thumbnail.source) byTitle[p.title] = p.thumbnail.source;
+    });
+    const alias = {};
+    (q.normalized || []).forEach(n => { alias[n.from] = n.to; });
+    (q.redirects || []).forEach(r => { alias[r.from] = r.to; });
+    return t => byTitle[alias[t] || t] || byTitle[t] || '';
+  }
+
+  // Film posters are non-free local uploads, which pageimages skips.
+  async posterFor(lang, title) {
+    if (!title) return '';
+    const url = API[lang] + '?action=query&format=json&origin=*&redirects=1&generator=images&gimlimit=30'
+      + '&prop=imageinfo&iiprop=url&iiurlwidth=640&titles=' + encodeURIComponent(title);
+    const q = (await this.getJSON(url)).query || {};
+    const pages = Object.keys(q.pages || {}).map(k => q.pages[k]);
+    const local = new RegExp('/wikipedia/' + lang + '/');
+    for (const p of pages) {
+      const info = p && p.imageinfo && p.imageinfo[0];
+      if (!info) continue;
+      const src = info.url || '';
+      if (!local.test(src) || /\.svg$/i.test(src)) continue;
+      return info.thumburl || src;
+    }
+    return '';
+  }
+
+  async loadImages() {
+    const out = {};
+    try {
+      const zh = await this.pageImages('zh', Object.keys(PEOPLE).map(k => PEOPLE[k][0]));
+      Object.keys(PEOPLE).forEach(k => { out[k] = zh(PEOPLE[k][0]); });
+      const missing = Object.keys(PEOPLE).filter(k => !out[k]);
+      if (missing.length) {
+        const en = await this.pageImages('en', missing.map(k => PEOPLE[k][1]));
+        missing.forEach(k => { out[k] = en(PEOPLE[k][1]); });
+      }
+      this.setState({ img: Object.assign({}, out) });
+    } catch (e) {
+      console.warn('portrait lookup failed', e);
+    }
+    const keys = Object.keys(FILMS).filter(k => !LOCAL[k]);
+    const posters = await Promise.all(keys.map(async k => {
+      const zh = await this.posterFor('zh', FILMS[k][0]).catch(() => '');
+      if (zh) return zh;
+      return this.posterFor('en', FILMS[k][1]).catch(() => '');
+    }));
+    keys.forEach((k, i) => { out[k] = posters[i]; });
+    this.setState({ img: Object.assign({}, out) });
+  }
+
+  renderVals() {
+    const img = this.state.img;
+    const pic = {};
+    Object.keys(PEOPLE).concat(Object.keys(FILMS)).forEach(k => { pic[k] = LOCAL[k] || img[k] || ''; });
+    return {
+      pic,
+      people: GRID.map(g => ({ slot: 'p-' + g[0], src: pic[g[0]], name: g[1], note: g[2] })),
+      portraitFilter: this.props.monoPortraits === false ? 'none' : 'grayscale(1) contrast(1.04)',
+      posterFit: this.props.posterFit === '完整' ? 'contain' : 'cover',
+      themes: words(THEMES, '#1b1c1a', '#2f4a41'),
+      films: words(FILM_WORDS, '#a8670f', '#6B4C7A'),
+      names: words(NAME_WORDS, '', '').map(w => Object.assign(w, { color: PCOLOR[CAT_OF[w.w]] || '#52544a' })),
+      catLegend: CAT_LEGEND.map(c => ({ color: PCOLOR[c[0]], label: c[1] })),
+      ringOuter: ring(['友人与见证者']),
+      ringMid: ring(['摄影与声音', '演员']),
+      ringInner: ring(['引路与同行', '编剧与理念']),
+      natWest: NAT_WEST.map((t, i) => ({ n: String(i + 1), text: t })),
+      natHou: NAT_HOU.map((t, i) => {
+        const last = i === NAT_HOU.length - 1;
+        return { n: String(i + 1), text: t, bd: last ? '2px solid #C07A12' : '1px solid rgba(47,74,65,0.35)', bg: last ? 'rgba(192,122,18,0.12)' : 'rgba(47,74,65,' + (0.06 + 0.05 * i).toFixed(2) + ')', fg: last ? '#7d4c08' : '#24392f', nc: last ? '#C07A12' : '#4a6b5f', fw: last ? '700' : '400' };
+      }),
+      neighbors: NEIGH.map((n, i) => ({ name: n[0], text: n[1], fg: i === 3 ? '#2f4a41' : '#8a5a34', bg: i === 3 ? '#e2e3da' : 'transparent', padX: i === 3 ? '18px' : '0' })),
+      evalLegend: EVAL_LABEL.map(e => ({ color: EVAL[e[0]], label: e[1] })),
+      tl: {
+        films: HOU_FILMS.map(f => {
+          const r = Math.max(5, 22 * Math.sqrt(f[3] / 32)), x = tx(f[1]);
+          return { title: f[0], x: px(x), dl: px(x - r), dt: px(AXIS - r), d: px(2 * r), bg: EVAL[f[4]], bd: '0', tColor: f[4] === 'peak' ? '#8a560c' : '#1b1c1a', weight: f[4] === 'peak' ? '700' : '500' };
+        }).concat([{ title: '舒兰河上', x: '1185px', dl: '1180px', dt: px(AXIS - 5), d: '10px', bg: 'transparent', bd: '1.5px dashed #6a6c60', tColor: '#6a6c60', weight: '500' }]),
+        ticks: Array.from({ length: 36 }, (_, i) => ({ x: px(tx(1980 + i)), h: (1980 + i) % 5 === 0 ? '9px' : '5px' })),
+        years: [1980, 1985, 1990, 1995, 2000, 2005, 2010, 2015].map(y => ({ y, x: px(tx(y)) })),
+        bands: STAGES.map(s => ({ name: s[0], years: s[1] + '–' + s[2], l: px(tx(s[1] - 0.5) + 1), w: px((s[2] - s[1] + 1) * YW - 2), bg: s[4], fg: s[5] })),
+        peakX: px(tx(2003)), beiX: px(tx(1989)),
+        gapL: px(tx(2007) + 14), gapW: px(tx(2015) - 20 - tx(2007) - 14)
+      },
+      stages: STAGES.map((s, i) => ({ name: s[0], years: s[1] + '–' + s[2], summary: s[3], rule: i === 3 ? '#2f4a41' : '#b9ad95', films: HOU_FILMS.filter(f => f[2] === i + 1).map(f => ({ title: f[0], year: f[1], line: f[5], color: EVAL[f[4]] })) })),
+      inf: INF.map(r => ({ n: r.n, color: r.color, items: r.items.map(it => ({ isNode: it[0] === 'n', isEdge: it[0] !== 'n', text: it[1], sub: it[2] || '', hasSub: !!it[2], line: it[0] === 'd' ? 'dashed' : 'solid' })) })),
+      inner: INNER,
+      obsession: OBS.map(o => {
+        const five = o[1] === 5;
+        return { film: o[0], obs: o[2], rel: o[3], isFive: five, mt: five ? '14px' : '0px', pad: five ? '16px 14px' : '16px 0', bd: five ? '1.5px dashed #6a6c60' : '0', bb: five ? '1.5px dashed #6a6c60' : '1px solid rgba(27,28,26,0.14)' };
+      }),
+      actors: ACT_ROWS.map(r => ({ label: r[0], cells: r[1].map((t, i) => ({ t, fg: i === 2 ? '#24392f' : '#46483f', ff: r[0] === '代表演员' ? "'Noto Serif SC', serif" : "'Noto Sans SC', sans-serif", fs: r[0] === '代表演员' ? '18px' : '15px' })) })),
+      heroNie: HERO_NIE.map(r => ({ a: r[0], h: r[1], n: r[2] })),
+      segs: SEGS.map((s, i) => {
+        const next = i < SEGS.length - 1 ? SEGS[i + 1][0] : 167.55;
+        const sp = s[3];
+        const style = sp === '老马' ? ['#8a5a34', '#f2ede3', '#8a5a34'] : sp.indexOf('阿吴') === 0 ? ['#2f4a41', '#f2ede3', '#2f4a41'] : ['#d9cfbb', '#1b1c1a', '#6a6c60'];
+        return { n: CIRCLED[i], left: (s[0] / 170 * 100).toFixed(2) + '%', w: ((next - s[0]) / 170 * 100).toFixed(2) + '%', bg: style[0], fg: style[1], mark: style[2], start: s[1], title: s[2], speaker: sp };
+      }),
+      timeLabels: Array.from({ length: 17 }, (_, i) => Math.floor(i / 6) + ':' + String(i % 6) + '0'),
+      heatFilms: heatRows(HEAT_FILMS, 17),
+      heatPeople: heatRows(HEAT_PEOPLE, 15)
+    };
+  }
+}
+</script>
+</body>
+</html>

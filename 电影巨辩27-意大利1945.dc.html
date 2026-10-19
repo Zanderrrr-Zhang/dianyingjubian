@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700;900&family=Noto+Sans+SC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  body { margin: 0; background: #d9d7cf; }
+  a { color: #15140f; text-decoration: underline; }
+  a:hover { color: #d9622f; }
+</style>
+</helmet>
+<div style="position: relative; width: 1080px; margin: 0 auto; background: #ecebe5; color: #15140f; font-family: 'Noto Sans SC', sans-serif; font-variant-numeric: tabular-nums;">
+
+<sc-if value="{{ grain }}" hint-placeholder-val="{{ true }}">
+  <div style="position: absolute; inset: 0; z-index: 20; pointer-events: none; opacity: 0.16; mix-blend-mode: multiply; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22220%22 height=%22220%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%222%22 stitchTiles=%22stitch%22/%3E%3CfeColorMatrix values=%220 0 0 0 0.1 0 0 0 0 0.1 0 0 0 0 0.08 0 0 0 0.9 0%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E');"></div>
+</sc-if>
+
+<!-- 01 封面 -->
+<section data-screen-label="01 封面与核心论点" style="position: relative; padding: 80px 72px 96px; border-bottom: 2px solid #15140f; background: #15140f; color: #ecebe5;">
+  <div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.14em; color: #a9a69b;">
+    <span>电影巨辩 · EP27</span><span>01 / 10</span>
+  </div>
+  <div style="margin-top: 120px; font-size: 26px; letter-spacing: 0.3em; color: #a9a69b;">第 27 期</div>
+  <h1 style="margin: 18px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 200px; line-height: 1; letter-spacing: 0.02em;">意大利</h1>
+  <div style="display: flex; align-items: flex-end; gap: 28px; margin-top: 8px;">
+    <span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 220px; line-height: 0.85; letter-spacing: -0.04em;">1945</span>
+  </div>
+  <div style="margin-top: 56px; height: 1px; background: #4a4840;"></div>
+  <p style="margin: 40px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 500; font-size: 36px; line-height: 1.7; text-wrap: pretty;">新现实主义不是从天而降的“反法西斯美学”，而是法西斯体制、抵抗运动与战后政治共同塑造的产物，也是古典电影通往现代电影的桥梁。</p>
+  <div style="margin-top: 48px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 1px solid #4a4840; border-bottom: 1px solid #4a4840;">
+    <div style="padding: 24px 0;"><div style="font-size: 20px; color: #a9a69b; letter-spacing: 0.12em;">主持</div><div style="margin-top: 8px; font-size: 28px; font-weight: 500;">老马 · 阿吴</div></div>
+    <div style="padding: 24px 0 24px 24px; border-left: 1px solid #4a4840;"><div style="font-size: 20px; color: #a9a69b; letter-spacing: 0.12em;">时长</div><div style="margin-top: 8px; font-family: 'IBM Plex Mono', monospace; font-size: 30px; font-weight: 500;">3:36:07</div></div>
+    <div style="padding: 24px 0 24px 24px; border-left: 1px solid #4a4840;"><div style="font-size: 20px; color: #a9a69b; letter-spacing: 0.12em;">结构</div><div style="margin-top: 8px; font-size: 28px; font-weight: 500;">5 部分 23 章</div></div>
+    <div style="padding: 24px 0 24px 24px; border-left: 1px solid #4a4840;"><div style="font-size: 20px; color: #a9a69b; letter-spacing: 0.12em;">文字量</div><div style="margin-top: 8px; font-size: 28px; font-weight: 500;">约 6.3 万字</div></div>
+  </div>
+  <div style="margin-top: 56px; font-size: 20px; color: #a9a69b; letter-spacing: 0.24em;">本期主角</div>
+  <div style="margin-top: 20px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+    <sc-for list="{{ cast }}" as="p" hint-placeholder-count="4">
+      <div>
+        <div style="position: relative; width: 100%; aspect-ratio: 3 / 4; background: #2a2923; filter: grayscale(1) contrast(1.05);">
+          <image-slot id="{{ p.slot }}" src="{{ p.img }}" shape="rect" style="position: absolute; inset: 0; width: 100%; height: 100%;" placeholder="{{ p.name }}"></image-slot>
+        </div>
+        <div style="margin-top: 12px; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 28px;">{{ p.name }}</div>
+        <div style="margin-top: 2px; font-size: 20px; color: #a9a69b;">{{ p.role }}</div>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section data-screen-label="01b 八条核心论点" style="position: relative; padding: 88px 72px 96px; border-bottom: 2px solid #15140f;">
+  <div style="font-size: 22px; letter-spacing: 0.24em; color: #5c5a52;">核心论点</div>
+  <h2 style="margin: 16px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 56px; line-height: 1.3;">八个判断</h2>
+  <div style="margin-top: 28px; display: flex; flex-wrap: wrap; gap: 14px 28px; font-size: 22px; color: #5c5a52;">
+    <sc-for list="{{ parts }}" as="p" hint-placeholder-count="5">
+      <span style="display: flex; align-items: center; gap: 10px;"><span style="width: 16px; height: 16px; background: {{ p.color }};"></span>{{ p.label }}</span>
+    </sc-for>
+  </div>
+  <div style="margin-top: 44px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+    <sc-for list="{{ theses }}" as="t" hint-placeholder-count="8">
+      <div style="background: #f6f5f0; border: 1px solid #c9c6bb; padding: 30px 30px 34px; display: flex; flex-direction: column; gap: 16px;">
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 44px; line-height: 1;">{{ t.n }}</span>
+          <span style="width: 40px; height: 6px; background: {{ t.color }};"></span>
+        </div>
+        <div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 32px; line-height: 1.35;">{{ t.head }}</div>
+        <div style="font-size: 24px; line-height: 1.7; color: #3a3830; text-wrap: pretty;">{{ t.body }}</div>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<!-- 02 脑图 -->
+<section data-screen-label="02 全集脑图" style="position: relative; padding: 80px 72px 96px; border-bottom: 2px solid #15140f;">
+  <div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.14em; color: #5c5a52;"><span>全集脑图</span><span>02 / 10</span></div>
+  <h2 style="margin: 36px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 56px; line-height: 1.3;">五个部分，二十三章</h2>
+  <p style="margin: 16px 0 0; font-size: 24px; line-height: 1.7; color: #5c5a52;">每章下方灰字是一句话要点；右侧时间码为该章起始时间。</p>
+  <div style="margin-top: 56px; display: flex; gap: 0;">
+    <div style="width: 110px; flex-shrink: 0; display: flex; justify-content: center; border-right: 3px solid #15140f;">
+      <div style="writing-mode: vertical-rl; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 60px; letter-spacing: 0.12em; padding-top: 8px;">意大利1945</div>
+    </div>
+    <div style="flex: 1; display: flex; flex-direction: column; gap: 36px;">
+      <sc-for list="{{ tree }}" as="p" hint-placeholder-count="5">
+        <div style="display: flex; align-items: stretch;">
+          <div style="width: 36px; flex-shrink: 0; display: flex; align-items: flex-start; padding-top: 34px;"><div style="width: 36px; height: 3px; background: #15140f;"></div></div>
+          <div style="width: 196px; flex-shrink: 0; background: {{ p.color }}; color: #fff; padding: 20px 20px 22px; box-sizing: border-box; align-self: flex-start;">
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 22px; opacity: 0.85;">{{ p.roman }}</div>
+            <div style="margin-top: 6px; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 30px; line-height: 1.3;">{{ p.name }}</div>
+            <div style="margin-top: 10px; font-size: 20px; opacity: 0.9;">{{ p.meta }}</div>
+          </div>
+          <div style="flex: 1; margin-left: 20px; border-left: 3px solid {{ p.color }}; padding-left: 22px; display: flex; flex-direction: column; gap: 16px;">
+            <sc-for list="{{ p.chapters }}" as="c" hint-placeholder-count="4">
+              <div style="display: flex; gap: 14px; align-items: baseline;">
+                <span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 22px; color: {{ p.color }}; width: 34px; flex-shrink: 0;">{{ c.nn }}</span>
+                <div style="flex: 1; min-width: 0;">
+                  <div style="display: flex; justify-content: space-between; gap: 12px; align-items: baseline;">
+                    <span style="font-size: 25px; font-weight: 500; line-height: 1.4;">{{ c.title }}</span>
+                    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 20px; color: #7a776d; flex-shrink: 0;">{{ c.start }}</span>
+                  </div>
+                  <div style="margin-top: 4px; font-size: 21px; line-height: 1.55; color: #6f6c62;">{{ c.gist }}</div>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- 03 章节时间轴 -->
+<section data-screen-label="03 章节时间轴" style="position: relative; padding: 80px 72px 96px; border-bottom: 2px solid #15140f;">
+  <div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.14em; color: #5c5a52;"><span>章节时间轴</span><span>03 / 10</span></div>
+  <h2 style="margin: 36px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 56px; line-height: 1.3;">3 小时 36 分钟里，话题怎样分配</h2>
+  <p style="margin: 16px 0 0; font-size: 24px; line-height: 1.7; color: #5c5a52; text-wrap: pretty;">历史语境与五部影片个案合计占近六成时长；理论与现代主义两部分各占约五分之一。</p>
+
+  <div style="margin-top: 64px; position: relative;">
+    <div style="display: flex; height: 120px; gap: 2px;">
+      <sc-for list="{{ chapters }}" as="c" hint-placeholder-count="23">
+        <div title="{{ c.tip }}" style="width: {{ c.w }}; flex-shrink: 0; background: {{ c.color }}; opacity: {{ c.op }}; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 8px; box-sizing: border-box; color: #fff; font-family: 'IBM Plex Mono', monospace; font-size: 18px; cursor: default;" style-hover="opacity: 1; outline: 2px solid #15140f;">{{ c.axisLabel }}</div>
+      </sc-for>
+    </div>
+    <div style="position: relative; height: 56px; border-top: 2px solid #15140f; margin-top: 10px;">
+      <sc-for list="{{ ticks }}" as="k" hint-placeholder-count="5">
+        <div style="position: absolute; left: {{ k.x }}; top: 0; transform: translateX({{ k.tx }}); display: flex; flex-direction: column; align-items: center;">
+          <div style="width: 2px; height: 12px; background: #15140f;"></div>
+          <div style="margin-top: 6px; font-family: 'IBM Plex Mono', monospace; font-size: 20px;">{{ k.label }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+  <div style="margin-top: 36px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px;">
+    <sc-for list="{{ parts }}" as="p" hint-placeholder-count="5">
+      <div style="border-top: 6px solid {{ p.color }}; padding-top: 14px;">
+        <div style="font-size: 22px; font-weight: 500;">{{ p.label }}</div>
+        <div style="margin-top: 6px; font-family: 'IBM Plex Mono', monospace; font-size: 30px; font-weight: 600;">{{ p.pct }}</div>
+        <div style="font-size: 20px; color: #5c5a52;">{{ p.mins }}</div>
+      </div>
+    </sc-for>
+  </div>
+
+  <div style="margin-top: 80px; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 36px; line-height: 1.4;">每章时长（分钟）</div>
+  <p style="margin: 12px 0 0; font-size: 22px; line-height: 1.7; color: #5c5a52;">《罗马，不设防的城市》、战后政治与审查、巴赞、扎瓦蒂尼四章合计约 79 分钟，超过全集三分之一。</p>
+  <div style="margin-top: 32px; display: flex; flex-direction: column; gap: 10px;">
+    <sc-for list="{{ chapters }}" as="c" hint-placeholder-count="23">
+      <div style="display: grid; grid-template-columns: 96px 360px 1fr; align-items: center; gap: 14px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 19px; color: #7a776d;">{{ c.start }}</span>
+        <span style="font-size: 23px; font-weight: {{ c.fw }}; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ c.nn }} {{ c.title }}</span>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div style="height: 26px; width: {{ c.bw }}; background: {{ c.color }};"></div>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 21px; font-weight: {{ c.fw }};">{{ c.dur }}</span>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<!-- 04 双轨时间线 -->
+<section data-screen-label="04 政治与电影双轨时间线" style="position: relative; padding: 80px 72px 96px; border-bottom: 2px solid #15140f;">
+  <div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.14em; color: #5c5a52;"><span>双轨时间线</span><span>04 / 10</span></div>
+  <h2 style="margin: 36px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 56px; line-height: 1.3;">政治与电影，1922–1976</h2>
+  <p style="margin: 16px 0 0; font-size: 24px; line-height: 1.7; color: #5c5a52;">左轨政治与社会，右轨电影与理论。灰底一段为 1943–1945 年放大。</p>
+  <div style="margin-top: 48px; display: grid; grid-template-columns: 1fr 180px 1fr; font-size: 22px; font-weight: 700; letter-spacing: 0.16em; padding-bottom: 16px; border-bottom: 2px solid #15140f;">
+    <span style="text-align: right; color: #2f6fbf;">政治与社会</span><span></span><span style="color: #d9622f;">电影与理论</span>
+  </div>
+  <div style="position: relative;">
+    <div style="position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; margin-left: -1px; background: #15140f;"></div>
+    <sc-for list="{{ timeline }}" as="r" hint-placeholder-count="26">
+      <div style="position: relative; display: grid; grid-template-columns: 1fr 180px 1fr; align-items: center; padding: {{ r.pad }}; background: {{ r.bg }};">
+        <div style="text-align: right; font-size: {{ r.fs }}; line-height: 1.6; color: #15140f; text-wrap: pretty;">{{ r.pol }}</div>
+        <div style="display: flex; justify-content: center;">
+          <span style="position: relative; z-index: 1; background: {{ r.pillBg }}; color: {{ r.pillFg }}; font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 19px; padding: 6px 12px; text-align: center; line-height: 1.3; max-width: 160px;">{{ r.t }}</span>
+        </div>
+        <div style="font-size: {{ r.fs }}; line-height: 1.6; color: #15140f; text-wrap: pretty;">{{ r.film }}</div>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<!-- 05 影响谱系 -->
+<section data-screen-label="05 影响谱系" style="position: relative; padding: 80px 72px 96px; border-bottom: 2px solid #15140f;">
+  <div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.14em; color: #5c5a52;"><span>影响谱系</span><span>05 / 10</span></div>
+  <h2 style="margin: 36px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 56px; line-height: 1.3;">六股来源汇入，六条延续流出</h2>
+  <p style="margin: 16px 0 0; font-size: 24px; line-height: 1.7; color: #5c5a52; text-wrap: pretty;">从左到右读。六股来源在 1943–1953 年汇成新现实主义；右栏的六条延续中，也有主持人只做类比的呼应。</p>
+  <div style="margin-top: 48px; display: grid; grid-template-columns: 300px 44px 248px 44px 300px; font-size: 22px; font-weight: 700; letter-spacing: 0.16em; color: #5c5a52;">
+    <span>来源</span><span></span><span style="text-align: center; color: #15140f;">运动本身</span><span></span><span>延续与回响</span>
+  </div>
+  <div style="margin-top: 20px; display: grid; grid-template-columns: 300px 44px 248px 44px 300px; align-items: stretch;">
+    <div style="display: flex; flex-direction: column; gap: 18px;">
+      <sc-for list="{{ sources }}" as="s" hint-placeholder-count="6">
+        <div style="height: 204px; box-sizing: border-box; background: #f6f5f0; border: 1px solid #c9c6bb; padding: 18px 20px;">
+          <div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 26px;">{{ s.t }}</div>
+          <div style="margin-top: 8px; font-size: 20px; line-height: 1.55; color: #5c5a52;">{{ s.a }}<br>{{ s.b }}</div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 18px;">
+      <sc-for list="{{ sources }}" as="s" hint-placeholder-count="6">
+        <div style="height: 204px; display: flex; align-items: center;"><div style="flex: 1; height: 2px; background: #8c877c;"></div><div style="width: 0; height: 0; border-left: 10px solid #8c877c; border-top: 7px solid transparent; border-bottom: 7px solid transparent;"></div></div>
+      </sc-for>
+    </div>
+    <div style="background: #15140f; color: #ecebe5; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 30px 18px; gap: 18px;">
+      <div style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 38px; line-height: 1.3;">意大利<br>新现实主义</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 24px; color: #a9a69b;">1943–1953</div>
+      <div style="width: 60px; height: 2px; background: #d9622f;"></div>
+      <div style="font-size: 24px; line-height: 1.9;">维斯康蒂<br>罗西里尼<br>德西卡与扎瓦蒂尼<br>德桑蒂斯</div>
+      <div style="width: 60px; height: 2px; background: #d9622f;"></div>
+      <div style="font-size: 22px; color: #a9a69b;">理论：巴赞</div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 18px;">
+      <sc-for list="{{ sources }}" as="s" hint-placeholder-count="6">
+        <div style="height: 204px; display: flex; align-items: center;"><div style="flex: 1; height: 2px; background: #d9622f;"></div><div style="width: 0; height: 0; border-left: 10px solid #d9622f; border-top: 7px solid transparent; border-bottom: 7px solid transparent;"></div></div>
+      </sc-for>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 18px;">
+      <sc-for list="{{ legacies }}" as="s" hint-placeholder-count="6">
+        <div style="height: 204px; box-sizing: border-box; background: #f6f5f0; border: 1px solid #c9c6bb; border-left: 6px solid #d9622f; padding: 18px 20px;">
+          <div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 26px;">{{ s.t }}</div>
+          <div style="margin-top: 8px; font-size: 20px; line-height: 1.55; color: #5c5a52;">{{ s.a }}<br>{{ s.b }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- 06 孵化网络 -->
+<section data-screen-label="06 法西斯时期的孵化网络" style="position: relative; padding: 80px 72px 96px; border-bottom: 2px solid #15140f;">
+  <div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.14em; color: #5c5a52;"><span>孵化网络</span><span>06 / 10</span></div>
+  <h2 style="margin: 36px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 56px; line-height: 1.3;">骨干多从法西斯体制内的机构走出</h2>
+  <p style="margin: 16px 0 0; font-size: 24px; line-height: 1.7; color: #5c5a52; text-wrap: pretty;">枢纽是维托里奥·墨索里尼：主编《电影》杂志，任 ACI 主席。从上到下读，箭头表示人员与合作关系。</p>
+  <div style="margin-top: 56px; position: relative; width: 936px; height: 1010px;">
+    <div style="position: absolute; left: -16px; top: 160px; width: 968px; height: 210px; background: #dedcd4;"></div>
+    <div style="position: absolute; left: 0; top: 166px; font-size: 19px; letter-spacing: 0.1em; color: #5c5a52;">法西斯体制内的孵化点，1930 年代至 1943 年</div>
+    <svg width="936" height="1010" viewBox="0 0 936 1010" style="position: absolute; left: 0; top: 0; overflow: visible;">
+      <defs>
+        <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8c877c"></path></marker>
+        <marker id="ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2f6fbf"></path></marker>
+      </defs>
+      <g stroke="#2f6fbf" stroke-width="3" fill="none">
+        <line x1="420" y1="100" x2="348" y2="196" marker-end="url(#ahb)"></line>
+        <line x1="516" y1="100" x2="588" y2="196" marker-end="url(#ahb)"></line>
+        <path d="M618,50 C 975,50 975,330 890,436" stroke-dasharray="8 7" marker-end="url(#ahb)"></path>
+      </g>
+      <g font-family="Noto Sans SC" font-size="19" fill="#2f6fbf" font-weight="700">
+        <text x="330" y="146">主编</text>
+        <text x="566" y="146">主席</text>
+        <text x="930" y="200">朋友</text>
+      </g>
+      <g stroke="#8c877c" stroke-width="2" fill="none">
+        <line x1="80" y1="354" x2="86" y2="434" marker-end="url(#ah)"></line>
+        <line x1="140" y1="354" x2="250" y2="434" marker-end="url(#ah)"></line>
+        <line x1="320" y1="354" x2="300" y2="434" marker-end="url(#ah)"></line>
+        <line x1="352" y1="354" x2="460" y2="434" marker-end="url(#ah)"></line>
+        <line x1="384" y1="354" x2="640" y2="434" marker-end="url(#ah)"></line>
+        <line x1="610" y1="354" x2="820" y2="434" marker-end="url(#ah)"></line>
+        <line x1="840" y1="354" x2="872" y2="434" marker-end="url(#ah)"></line>
+        <line x1="277" y1="600" x2="230" y2="694" marker-end="url(#ah)"></line>
+        <line x1="468" y1="600" x2="300" y2="694" marker-end="url(#ah)"></line>
+        <line x1="659" y1="600" x2="380" y2="694" marker-end="url(#ah)"></line>
+        <line x1="850" y1="600" x2="780" y2="694" marker-end="url(#ah)"></line>
+        <line x1="280" y1="800" x2="400" y2="894" marker-end="url(#ah)"></line>
+        <line x1="748" y1="800" x2="560" y2="894" marker-end="url(#ah)"></line>
+      </g>
+    </svg>
+    <div style="position: absolute; left: 318px; top: 0; width: 300px; height: 100px; box-sizing: border-box; background: #2f6fbf; color: #fff; padding: 16px 20px; text-align: center;">
+      <div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 28px;">维托里奥·墨索里尼</div>
+      <div style="margin-top: 4px; font-size: 19px; opacity: 0.9;">墨索里尼之子 · 网络枢纽</div>
+    </div>
+    <sc-for list="{{ netInst }}" as="n" hint-placeholder-count="4">
+      <div style="position: absolute; left: {{ n.x }}; top: 196px; width: 216px; height: 158px; box-sizing: border-box; background: #f6f5f0; border: 1px solid #b9b6aa; padding: 14px 14px;">
+        <div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 24px;">{{ n.t }}</div>
+        <div style="margin-top: 8px; font-size: 19px; line-height: 1.55; color: #5c5a52;">{{ n.a }}<br>{{ n.b }}</div>
+      </div>
+    </sc-for>
+    <sc-for list="{{ netPeople }}" as="n" hint-placeholder-count="5">
+      <div style="position: absolute; left: {{ n.x }}; top: 434px; width: 172px; height: 166px; box-sizing: border-box; background: #f6f5f0; border: 1px solid #b9b6aa; padding: 14px 14px;">
+        <div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 25px;">{{ n.t }}</div>
+        <div style="margin-top: 8px; font-size: 19px; line-height: 1.55; color: #5c5a52;">{{ n.a }}<br>{{ n.b }}</div>
+      </div>
+    </sc-for>
+    <div style="position: absolute; left: 40px; top: 694px; width: 480px; height: 106px; box-sizing: border-box; background: #f6f5f0; border: 1px solid #b9b6aa; padding: 16px 20px;">
+      <div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 26px;">《沉沦》1943</div>
+      <div style="margin-top: 6px; font-size: 20px; color: #5c5a52;">集体编剧，被视为先声</div>
+    </div>
+    <div style="position: absolute; left: 560px; top: 694px; width: 376px; height: 106px; box-sizing: border-box; background: #f6f5f0; border: 1px solid #b9b6aa; padding: 16px 20px;">
+      <div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 26px;">“法西斯三部曲”1941–43</div>
+      <div style="margin-top: 6px; font-size: 20px; color: #5c5a52;">九成宣传，一成人性的犹疑</div>
+    </div>
+    <div style="position: absolute; left: 168px; top: 894px; width: 600px; height: 116px; box-sizing: border-box; background: #15140f; color: #ecebe5; padding: 20px 26px;">
+      <div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 30px;">1945 年后的新现实主义</div>
+      <div style="margin-top: 8px; font-size: 21px; color: #a9a69b;">起点：《罗马，不设防的城市》</div>
+    </div>
+  </div>
+  <div style="margin-top: 48px; border-top: 1px solid #c9c6bb; padding-top: 24px; font-size: 22px; line-height: 1.75; color: #5c5a52; text-wrap: pretty;">图外还有两条线：巴巴罗评《沉沦》时借用了“新现实主义”一词；罗西里尼经制片人里甘蒂入行，而里甘蒂所属公司的主席正是维托里奥。</div>
+</section>
+
+<!-- 07 五部影片 -->
+<section data-screen-label="07 五部影片与神话还原" style="position: relative; padding: 80px 72px 96px; border-bottom: 2px solid #15140f;">
+  <div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.14em; color: #5c5a52;"><span>五部影片</span><span>07 / 10</span></div>
+  <h2 style="margin: 36px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 56px; line-height: 1.3;">从先声到建国神话，再到拆掉神话</h2>
+  <p style="margin: 16px 0 0; font-size: 24px; line-height: 1.7; color: #5c5a52;">第 9–13 章 · 约 58 分钟。点击卡片展开主持人的判断。</p>
+  <div style="margin-top: 48px; display: flex; flex-direction: column; gap: 0; border-top: 2px solid #15140f;">
+    <sc-for list="{{ films }}" as="f" hint-placeholder-count="5">
+      <div onClick="{{ f.toggle }}" style="display: grid; grid-template-columns: 150px 1fr 180px; gap: 28px; padding: 32px 0; border-bottom: 1px solid #b9b6aa; cursor: pointer;" style-hover="background: #e4e2da;">
+        <div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 50px; line-height: 1;">{{ f.year }}</div>
+          <div style="margin-top: 12px; display: inline-block; background: {{ f.tagBg }}; color: #fff; font-size: 20px; padding: 4px 12px;">{{ f.tag }}</div>
+        </div>
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px;">
+            <span style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 36px; line-height: 1.3;">{{ f.title }}</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 28px; color: #7a776d; flex-shrink: 0;">{{ f.sign }}</span>
+          </div>
+          <div style="margin-top: 6px; font-size: 21px; color: #7a776d;">{{ f.who }}</div>
+          <div style="margin-top: 14px; font-size: 26px; line-height: 1.6;">{{ f.verdict }}</div>
+          <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}">
+            <div style="margin-top: 18px; display: flex; flex-direction: column; gap: 10px; border-left: 3px solid #d9622f; padding-left: 18px;">
+              <sc-for list="{{ f.notes }}" as="x" hint-placeholder-count="2">
+                <div style="font-size: 22px; line-height: 1.7; color: #3a3830; text-wrap: pretty;">{{ x }}</div>
+              </sc-for>
+            </div>
+          </sc-if>
+        </div>
+        <div style="position: relative; width: 180px; aspect-ratio: 2 / 3; background: #dedcd4; align-self: start;">
+          <image-slot id="{{ f.slot }}" src="{{ f.img }}" shape="rect" style="position: absolute; inset: 0; width: 100%; height: 100%;" placeholder="{{ f.title }} 海报"></image-slot>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+
+  <div style="margin-top: 88px;">
+    <div style="font-size: 22px; letter-spacing: 0.24em; color: #d9622f; font-weight: 700;">《战火》</div>
+    <div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 44px;">六个段落，从西西里一路向北</div>
+    <p style="margin: 14px 0 0; font-size: 22px; line-height: 1.7; color: #5c5a52; text-wrap: pretty;">唯一的连线是盟军从南到北的行军路线，呼应加里波第统一意大利的路线，走向的却不是凯旋。</p>
+    <div style="margin-top: 36px; display: grid; grid-template-columns: 560px 1fr; gap: 36px; align-items: start;">
+      <iframe src="./ep27-paisa-map.html" title="《战火》行军路线地图" style="width: 560px; height: 760px; border: 0; display: block;"></iframe>
+      <div style="display: flex; flex-direction: column; gap: 0; border-top: 2px solid #15140f;">
+        <div style="padding: 18px 0; border-bottom: 1px solid #b9b6aa; display: flex; gap: 14px;"><span style="flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%; background: #d9622f; color: #fff; font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 17px; display: flex; align-items: center; justify-content: center;">1</span><div><div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 26px;">西西里</div><div style="margin-top: 4px; font-size: 20px; line-height: 1.6; color: #5c5a52;">盟军登陆，美国兵与本地姑娘语言不通</div></div></div>
+        <div style="padding: 18px 0; border-bottom: 1px solid #b9b6aa; display: flex; gap: 14px;"><span style="flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%; background: #d9622f; color: #fff; font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 17px; display: flex; align-items: center; justify-content: center;">2</span><div><div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 26px;">那不勒斯</div><div style="margin-top: 4px; font-size: 20px; line-height: 1.6; color: #5c5a52;">黑人美军士兵与偷走他靴子的流浪儿</div></div></div>
+        <div style="padding: 18px 0; border-bottom: 1px solid #b9b6aa; display: flex; gap: 14px;"><span style="flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%; background: #d9622f; color: #fff; font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 17px; display: flex; align-items: center; justify-content: center;">3</span><div><div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 26px;">罗马</div><div style="margin-top: 4px; font-size: 20px; line-height: 1.6; color: #5c5a52;">美国兵与解放时相识的姑娘</div></div></div>
+        <div style="padding: 18px 0; border-bottom: 1px solid #b9b6aa; display: flex; gap: 14px;"><span style="flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%; background: #d9622f; color: #fff; font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 17px; display: flex; align-items: center; justify-content: center;">4</span><div><div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 26px;">佛罗伦萨</div><div style="margin-top: 4px; font-size: 20px; line-height: 1.6; color: #5c5a52;">护士穿越战线寻找游击队员</div></div></div>
+        <div style="padding: 18px 0; border-bottom: 1px solid #b9b6aa; display: flex; gap: 14px;"><span style="flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%; background: #d9622f; color: #fff; font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 17px; display: flex; align-items: center; justify-content: center;">5</span><div><div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 26px;">罗马涅山区修道院</div><div style="margin-top: 4px; font-size: 20px; line-height: 1.6; color: #5c5a52;">美军随军牧师和拉比，与修道院的僧侣</div></div></div>
+        <div style="padding: 18px 0; border-bottom: 1px solid #b9b6aa; display: flex; gap: 14px;"><span style="flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%; background: #d9622f; color: #fff; font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 17px; display: flex; align-items: center; justify-content: center;">6</span><div><div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 26px;">波河三角洲</div><div style="margin-top: 4px; font-size: 20px; line-height: 1.6; color: #5c5a52;">游击队与盟军士兵，沼泽里讲方言的农民</div></div></div>
+        <div style="margin-top: 26px; display: flex; flex-direction: column; gap: 10px; font-size: 19px; color: #5c5a52;">
+          <div style="display: flex; align-items: center; gap: 10px;"><span style="width: 14px; height: 14px; border-radius: 50%; background: #d9622f;"></span>《战火》的段落</div>
+          <div style="display: flex; align-items: center; gap: 10px;"><span style="width: 10px; height: 10px; background: #15140f; margin: 0 2px;"></span>本期提到的地点：墨索里尼遗体示众的洛雷托广场、萨罗共和国、被用作难民营两年的电影城</div>
+        </div>
+        <div style="margin-top: 18px; font-size: 18px; line-height: 1.7; color: #7a776d;">位置为示意。段落地点依通行史料整理，引用前建议再核。</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top: 88px; display: flex; justify-content: space-between; align-items: flex-end; gap: 20px;">
+    <div>
+      <div style="font-size: 22px; letter-spacing: 0.24em; color: #d9622f; font-weight: 700;">《罗马，不设防的城市》</div>
+      <div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 44px;">五个流行说法，逐一还原</div>
+    </div>
+    <div onClick="{{ flipAll }}" style="flex-shrink: 0; border: 2px solid #15140f; padding: 10px 18px; font-size: 21px; cursor: pointer;" style-hover="background: #15140f; color: #ecebe5;">{{ flipAllLabel }}</div>
+  </div>
+  <p style="margin: 14px 0 0; font-size: 22px; color: #5c5a52;">点击卡片在“说法”与“还原”之间翻转。</p>
+  <div style="margin-top: 32px; display: flex; flex-direction: column; gap: 18px;">
+    <sc-for list="{{ myths }}" as="m" hint-placeholder-count="5">
+      <div onClick="{{ m.toggle }}" style="position: relative; height: 210px; perspective: 1800px; cursor: pointer;">
+        <div style="position: absolute; inset: 0; transform-style: preserve-3d; transition: transform 0.6s cubic-bezier(.3,.7,.2,1); transform: {{ m.rot }};">
+          <div style="position: absolute; inset: 0; backface-visibility: hidden; background: #f6f5f0; border: 1px solid #b9b6aa; display: grid; grid-template-columns: 110px 1fr; align-items: center; padding: 0 36px 0 0;">
+            <div style="align-self: stretch; display: flex; align-items: center; justify-content: center; border-right: 1px solid #b9b6aa; font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 40px; color: #8c877c;">{{ m.n }}</div>
+            <div style="padding-left: 32px;">
+              <div style="font-size: 20px; letter-spacing: 0.2em; color: #8c877c;">流行说法</div>
+              <div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 34px; line-height: 1.4; text-decoration: line-through; text-decoration-color: rgba(217,98,47,0);">{{ m.myth }}</div>
+            </div>
+          </div>
+          <div style="position: absolute; inset: 0; backface-visibility: hidden; transform: rotateY(180deg); background: #15140f; color: #ecebe5; display: grid; grid-template-columns: 110px 1fr; align-items: center; padding: 0 32px 0 0;">
+            <div style="align-self: stretch; display: flex; align-items: center; justify-content: center; border-right: 1px solid #3a3830; font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 40px; color: #d9622f;">{{ m.n }}</div>
+            <div style="padding-left: 32px;">
+              <div style="font-size: 20px; letter-spacing: 0.2em; color: #d9622f;">主持人的还原</div>
+              <div style="margin-top: 8px; font-size: 22px; line-height: 1.6; text-wrap: pretty;">{{ m.real }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<!-- 08 巴赞 vs 扎瓦蒂尼 -->
+<section data-screen-label="08 巴赞对扎瓦蒂尼" style="position: relative; padding: 80px 0 96px; border-bottom: 2px solid #15140f;">
+  <div style="padding: 0 72px;">
+    <div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.14em; color: #5c5a52;"><span>理论</span><span>08 / 10</span></div>
+    <h2 style="margin: 36px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 56px; line-height: 1.3;">巴赞给哲学，扎瓦蒂尼给方法</h2>
+    <p style="margin: 16px 0 0; font-size: 24px; line-height: 1.7; color: #5c5a52; text-wrap: pretty;">新现实主义是理论与创作“比翼齐飞”的运动。第 14–16 章 · 约 38 分钟。</p>
+  </div>
+  <div style="margin-top: 56px; display: grid; grid-template-columns: 1fr 1fr;">
+    <div style="background: #15140f; color: #ecebe5; padding: 44px 40px 36px 72px;">
+      <div style="position: relative; width: 220px; aspect-ratio: 3 / 4; background: #2a2923; margin-bottom: 28px; filter: grayscale(1);">
+        <image-slot id="ep27-bazin" src="{{ pic.bazin }}" shape="rect" style="position: absolute; inset: 0; width: 100%; height: 100%;" placeholder="巴赞"></image-slot>
+      </div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 22px; color: #1f9a6c; letter-spacing: 0.16em;">ANDRÉ BAZIN</div>
+      <div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 84px; line-height: 1.1;">巴赞</div>
+      <div style="margin-top: 14px; font-size: 26px; color: #a9a69b;">哲学合法性</div>
+    </div>
+    <div style="background: #f6f5f0; padding: 44px 72px 36px 40px; border-bottom: 1px solid #c9c6bb;">
+      <div style="position: relative; width: 220px; aspect-ratio: 3 / 4; background: #dedcd4; margin-bottom: 28px; filter: grayscale(1);">
+        <image-slot id="ep27-zavattini" src="{{ pic.zavattini }}" shape="rect" style="position: absolute; inset: 0; width: 100%; height: 100%;" placeholder="扎瓦蒂尼"></image-slot>
+      </div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 22px; color: #1f9a6c; letter-spacing: 0.16em;">CESARE ZAVATTINI</div>
+      <div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 84px; line-height: 1.1;">扎瓦蒂尼</div>
+      <div style="margin-top: 14px; font-size: 26px; color: #5c5a52;">可操作的方法论</div>
+    </div>
+  </div>
+  <sc-for list="{{ versus }}" as="v" hint-placeholder-count="6">
+    <div style="display: grid; grid-template-columns: 1fr 1fr;">
+      <div style="background: #15140f; color: #ecebe5; padding: 26px 40px 26px 72px; border-top: 1px solid #3a3830;">
+        <div style="font-size: 19px; letter-spacing: 0.2em; color: #1f9a6c; font-weight: 700;">{{ v.k }}</div>
+        <div style="margin-top: 10px; font-size: 24px; line-height: 1.65; text-wrap: pretty;">{{ v.a }}</div>
+      </div>
+      <div style="background: #f6f5f0; padding: 26px 72px 26px 40px; border-top: 1px solid #c9c6bb;">
+        <div style="font-size: 19px; letter-spacing: 0.2em; color: #1f9a6c; font-weight: 700;">{{ v.k }}</div>
+        <div style="margin-top: 10px; font-size: 24px; line-height: 1.65; text-wrap: pretty;">{{ v.b }}</div>
+      </div>
+    </div>
+  </sc-for>
+  <div style="display: grid; grid-template-columns: 1fr 1fr;">
+    <div style="background: #15140f; color: #ecebe5; padding: 30px 40px 44px 72px; border-top: 1px solid #3a3830;">
+      <div style="font-family: 'Noto Serif SC', serif; font-size: 30px; line-height: 1.6;">“现实本身就是情节。”</div>
+      <div style="margin-top: 8px; font-size: 20px; color: #a9a69b;">论《偷自行车的人》</div>
+    </div>
+    <div style="background: #f6f5f0; padding: 30px 72px 44px 40px; border-top: 1px solid #c9c6bb;">
+      <div style="font-family: 'Noto Serif SC', serif; font-size: 30px; line-height: 1.6;">飞机经过三次不够，要经过二十次。</div>
+      <div style="margin-top: 8px; font-size: 20px; color: #5c5a52;">“停留”的例子</div>
+    </div>
+  </div>
+</section>
+
+<!-- 09 桥 -->
+<section data-screen-label="09 四条理论路径的桥" style="position: relative; padding: 80px 72px 96px; border-bottom: 2px solid #15140f;">
+  <div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.14em; color: #5c5a52;"><span>通往现代主义</span><span>09 / 10</span></div>
+  <h2 style="margin: 36px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 56px; line-height: 1.3;">四条理论路径，同一座桥</h2>
+  <p style="margin: 16px 0 0; font-size: 24px; line-height: 1.7; color: #5c5a52; text-wrap: pretty;">德勒兹、奥蒙、帕索里尼、卡塞蒂用不同的词描述同一次转折：中间一栏是“桥”，箭头从古典指向现代。</p>
+  <svg width="936" height="110" viewBox="0 0 936 110" style="display: block; margin-top: 56px;">
+    <path d="M 270 104 Q 543 -40 816 104" fill="none" stroke="#183a6a" stroke-width="4"></path>
+    <line x1="150" y1="104" x2="936" y2="104" stroke="#183a6a" stroke-width="4"></line>
+    <g stroke="#183a6a" stroke-width="2">
+      <line x1="340" y1="104" x2="340" y2="72"></line><line x1="410" y1="104" x2="410" y2="50"></line><line x1="480" y1="104" x2="480" y2="37"></line><line x1="543" y1="104" x2="543" y2="33"></line><line x1="606" y1="104" x2="606" y2="37"></line><line x1="676" y1="104" x2="676" y2="50"></line><line x1="746" y1="104" x2="746" y2="72"></line>
+    </g>
+  </svg>
+  <div style="display: grid; grid-template-columns: 150px 240px 28px 250px 28px 240px; margin-top: 16px; font-size: 22px; font-weight: 700; letter-spacing: 0.1em;">
+    <span></span><span style="color: #5c5a52;">古典电影</span><span></span><span style="color: #183a6a;">新现实主义：桥</span><span></span><span style="color: #5c5a52;">现代电影</span>
+  </div>
+  <div style="margin-top: 18px; display: flex; flex-direction: column; gap: 18px;">
+    <sc-for list="{{ bridge }}" as="b" hint-placeholder-count="4">
+      <div style="display: grid; grid-template-columns: 150px 240px 28px 250px 28px 240px; align-items: stretch;">
+        <div style="padding-top: 4px;">
+          <div style="position: relative; width: 84px; height: 84px; background: #dedcd4; margin-bottom: 10px; filter: grayscale(1);">
+            <image-slot id="{{ b.slot }}" src="{{ b.img }}" shape="circle" style="position: absolute; inset: 0; width: 100%; height: 100%;" placeholder="{{ b.who }}"></image-slot>
+          </div>
+          <div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 30px;">{{ b.who }}</div>
+          <div style="margin-top: 6px; font-size: 19px; color: #5c5a52;">{{ b.axis }}</div>
+        </div>
+        <div style="background: {{ b.c1bg }}; border: {{ b.c1border }}; padding: 16px 16px; min-height: 170px; box-sizing: border-box;">
+          <div style="font-weight: 700; font-size: 24px;">{{ b.c1t }}</div>
+          <div style="margin-top: 8px; font-size: 19px; line-height: 1.55; color: #5c5a52;">{{ b.c1 }}</div>
+        </div>
+        <div style="display: flex; align-items: center; justify-content: center; font-size: 22px; color: #8c877c;">{{ b.arr1 }}</div>
+        <div style="background: #183a6a; color: #fff; padding: 16px 18px; box-sizing: border-box;">
+          <div style="font-weight: 700; font-size: 25px;">{{ b.c2t }}</div>
+          <div style="margin-top: 8px; font-size: 19px; line-height: 1.55; color: #d4dbe6;">{{ b.c2 }}</div>
+        </div>
+        <div style="display: flex; align-items: center; justify-content: center; font-size: 22px; color: #8c877c;">→</div>
+        <div style="background: #f6f5f0; border: 1px solid #b9b6aa; padding: 16px 16px; box-sizing: border-box;">
+          <div style="font-weight: 700; font-size: 24px;">{{ b.c3t }}</div>
+          <div style="margin-top: 8px; font-size: 19px; line-height: 1.55; color: #5c5a52;">{{ b.c3 }}</div>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+  <div style="margin-top: 44px; border-top: 1px solid #c9c6bb; padding-top: 24px; font-size: 22px; line-height: 1.75; color: #5c5a52;">德勒兹和奥蒙都以罗西里尼为主要例证；卡塞蒂的断裂点则是安东尼奥尼的《某种爱的纪事》。</div>
+  <div style="margin-top: 72px; background: #15140f; color: #ecebe5; padding: 48px 52px;">
+    <div style="font-size: 20px; letter-spacing: 0.24em; color: #c4507c; font-weight: 700;">Ⅴ 结语</div>
+    <div style="margin-top: 18px; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 42px; line-height: 1.5;">“现实不是一个对象，而是一个方法、一个态度。”</div>
+    <div style="margin-top: 22px; font-size: 23px; line-height: 1.75; color: #c9c6bb; text-wrap: pretty;">新现实主义把罪责外化给纳粹，也推迟了对法西斯的清算。转折点要等近 30 年：贝托鲁奇《同流者》、维斯康蒂“德意志三部曲”、费里尼《阿玛柯德》、帕索里尼《索多玛 120 天》。</div>
+  </div>
+</section>
+
+<!-- 10 分歧与数据 -->
+<section data-screen-label="10 分歧与数据" style="position: relative; padding: 80px 72px 96px;">
+  <div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.14em; color: #5c5a52;"><span>分歧与数据</span><span>10 / 10</span></div>
+  <h2 style="margin: 36px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 56px; line-height: 1.3;">大方向一致，七处分歧</h2>
+  <p style="margin: 16px 0 0; font-size: 24px; line-height: 1.7; color: #5c5a52; text-wrap: pretty;">分歧集中在具体镜头、人物动机和个别判断上。ASR 没有说话人标注，只能写“一方 / 另一方”。</p>
+  <div style="margin-top: 48px; display: flex; flex-direction: column; gap: 40px;">
+    <sc-for list="{{ debates }}" as="d" hint-placeholder-count="7">
+      <div>
+        <div style="display: flex; align-items: baseline; gap: 18px; border-bottom: 1px solid #b9b6aa; padding-bottom: 12px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 22px; color: #7a776d;">{{ d.at }}</span>
+          <span style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 30px;">{{ d.topic }}</span>
+        </div>
+        <div style="margin-top: 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+          <div style="position: relative; background: #f6f5f0; border: 1px solid #b9b6aa; border-radius: 22px 22px 22px 4px; padding: 20px 24px;">
+            <div style="font-size: 19px; letter-spacing: 0.16em; color: #7a776d; font-weight: 700;">一方</div>
+            <div style="margin-top: 8px; font-size: 23px; line-height: 1.65; text-wrap: pretty;">{{ d.a }}</div>
+          </div>
+          <div style="position: relative; background: #15140f; color: #ecebe5; border-radius: 22px 22px 4px 22px; padding: 20px 24px; margin-top: 28px;">
+            <div style="font-size: 19px; letter-spacing: 0.16em; color: #a9a69b; font-weight: 700;">另一方</div>
+            <div style="margin-top: 8px; font-size: 23px; line-height: 1.65; text-wrap: pretty;">{{ d.b }}</div>
+          </div>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+
+  <sc-for list="{{ charts }}" as="ch" hint-placeholder-count="3">
+    <div style="margin-top: 96px;">
+      <div style="font-size: 22px; letter-spacing: 0.24em; color: #5c5a52;">{{ ch.kicker }}</div>
+      <div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 40px; line-height: 1.35;">{{ ch.title }}</div>
+      <div style="margin-top: 22px; display: flex; flex-wrap: wrap; gap: 12px 28px;">
+        <sc-for list="{{ ch.legend }}" as="l" hint-placeholder-count="4">
+          <span style="display: flex; align-items: center; gap: 10px; font-size: 21px;"><span style="width: 16px; height: 16px; background: {{ l.color }};"></span>{{ l.label }}<span style="color: #7a776d; font-family: 'IBM Plex Mono', monospace; font-size: 19px;">{{ l.sum }}</span></span>
+        </sc-for>
+      </div>
+      <div style="margin-top: 28px; display: flex; flex-direction: column; gap: 8px;">
+        <sc-for list="{{ ch.rows }}" as="r" hint-placeholder-count="20">
+          <div style="display: grid; grid-template-columns: 250px 1fr; align-items: center; gap: 16px;">
+            <span style="text-align: right; font-size: 22px; white-space: nowrap;">{{ r.label }}</span>
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <div style="height: 26px; width: {{ r.w }}; background: {{ r.color }};"></div>
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 21px; font-weight: 500;">{{ r.v }}</span>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+      <div style="margin-top: 16px; font-size: 19px; color: #7a776d;">{{ ch.note }}</div>
+    </div>
+  </sc-for>
+
+  <div style="margin-top: 72px; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 2px solid #15140f; border-bottom: 1px solid #b9b6aa;">
+    <div style="padding: 24px 0;"><div style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 52px;">20</div><div style="font-size: 21px; color: #5c5a52;">“1945”被提到的次数</div></div>
+    <div style="padding: 24px 0 24px 24px; border-left: 1px solid #b9b6aa;"><div style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 52px;">100+</div><div style="font-size: 21px; color: #5c5a52;">点名的人物</div></div>
+    <div style="padding: 24px 0 24px 24px; border-left: 1px solid #b9b6aa;"><div style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 52px;">约 60</div><div style="font-size: 21px; color: #5c5a52;">有片名的影片</div></div>
+  </div>
+  <div style="margin-top: 16px; font-size: 20px; line-height: 1.7; color: #7a776d;">另：1943 年 9 次，1948 年 7 次；“60 年代”13 次，“50 年代”10 次。</div>
+
+  <div style="margin-top: 80px; padding-top: 24px; border-top: 1px solid #b9b6aa; display: flex; justify-content: space-between; gap: 20px; font-size: 19px; color: #7a776d; letter-spacing: 0.08em;">
+    <span>数据：ASR 转录稿近似计数，误写变体已合并；《罗马，不设防的城市》只计全称</span>
+    <span style="font-family: 'IBM Plex Mono', monospace; flex-shrink: 0;">MAGASA / LOOK</span>
+  </div>
+</section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;grain&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;质感&quot;},&quot;mythDefault&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;说法&quot;,&quot;还原&quot;],&quot;default&quot;:&quot;说法&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;神话还原卡&quot;}}">
+const C = { 1: '#2f6fbf', 2: '#d9622f', 3: '#1f9a6c', 4: '#183a6a', 5: '#c4507c' };
+const PARTS = [
+  { k: 1, roman: 'Ⅰ', name: '历史语境', mins: 68 },
+  { k: 2, roman: 'Ⅱ', name: '五部影片', mins: 58 },
+  { k: 3, roman: 'Ⅲ', name: '理论', mins: 38 },
+  { k: 4, roman: 'Ⅳ', name: '通往现代主义', mins: 41 },
+  { k: 5, roman: 'Ⅴ', name: '结语', mins: 11 },
+];
+const PCT = { 1: '32%', 2: '27%', 3: '18%', 4: '19%', 5: '5%' };
+const CH = [
+  [1, '开场：为何是意大利1945', 2.9, '1945 既是战争的分界线，也是电影的分界线'],
+  [1, '1943–45 历史背景', 2.9, '墨索里尼被捕，萨罗共和国与抵抗运动'],
+  [1, '与法西斯的关系·巴赞盲点', 10.5, '风格本身是中性的，现实主义也能做殖民宣传'],
+  [1, '被动反向孵化', 9.2, '电影城、CSC、《电影》与《黑与白》'],
+  [1, '不彻底的极权与清算', 7.6, '电影界没有法律清算，自我形象变成“英雄民族”'],
+  [1, '抵抗运动与建国神话', 5.4, '提供素材和新的伦理支撑，也是一次建国神话'],
+  [1, '战后政治、审查与退潮', 21.5, '1948 年右转、安德烈奥蒂法、粉红新现实主义'],
+  [1, '为什么是意大利', 8.2, '抵抗运动提供道德救赎，片厂体系被彻底打碎'],
+  [2, '第一部？《沉沦》', 14.1, '先声：存在主义的心理现实主义'],
+  [2, '《孩子们在看着我们》', 7.7, '儿童视角是道德分析工具'],
+  [2, '《罗马，不设防的城市》', 22.7, '公认起点，也是一部建国神话'],
+  [2, '《擦鞋童》', 5.8, '国家机构失能，转向无名的日常受害者'],
+  [2, '《战火》', 7.5, '片段结构瓦解团结神话'],
+  [3, '理论与实践（引子）', 2.8, '理论与创作“比翼齐飞”'],
+  [3, '巴赞', 18.8, '尊重现实的暧昧：本体论、人格主义、事实-影像'],
+  [3, '扎瓦蒂尼', 16.3, '受够了故事：停留、尾随、相遇'],
+  [4, '转型之争', 5.8, '阿里斯泰戈对巴赞：物质贫困到精神贫困'],
+  [4, '两次电影现代主义', 8.6, '1920 年代是地方性的，1960 年代是全球性的'],
+  [4, '德勒兹', 12.9, '从运动-影像到时间-影像'],
+  [4, '奥蒙', 6.5, '伦理而非风格'],
+  [4, '帕索里尼', 2.7, '语言的零度与诗电影'],
+  [4, '卡塞蒂', 4.3, '社会信任与看的方式'],
+  [5, '结语：创作与历史反思', 11.2, '现实是方法和态度；清算被推迟了近 30 年'],
+];
+const KEY = [7, 11, 15, 16];
+const TOTAL = 216.1;
+const fmt = s => { s = Math.round(s); const h = Math.floor(s / 3600), m = Math.floor(s % 3600 / 60), x = s % 60; return h + ':' + String(m).padStart(2, '0') + ':' + String(x).padStart(2, '0'); };
+
+const THESES = [
+  [1, '战争的分界线，也是电影的分界线', '1945 年既是战争的分界线，也是电影的分界线；“全世界只能是意大利”最能体现这一断裂。'],
+  [1, '被动反向孵化', '新现实主义的制度、人才与理论，是在法西斯体制内“被动反向孵化”的：电影城、国家电影学校 CSC、《电影》与《黑与白》杂志。'],
+  [1, '风格是中性的', '同样的实景与纪实手法，既能揭露压迫，也能美化殖民；巴赞“现实主义 = 反法西斯”是结构性盲点。'],
+  [2, '《罗马》是一部建国神话', '把罪责外化给德国占领者，淡化内战与本国共谋，让意大利从“重犯”转身为“英雄民族”。'],
+  [1, '三股力量合力退潮', '1947–48 年政局右转、DGS 与“安德烈奥蒂法”的软性审查、美国资本与观众口味变化，催生“粉红新现实主义”。'],
+  [3, '理论与创作共振', '巴赞提供哲学合法性（本体论、人格主义、绵延），扎瓦蒂尼提供方法论（反故事、停留、尾随、相遇）。'],
+  [4, '通往现代主义的桥', '德勒兹、奥蒙、帕索里尼、卡塞蒂四条路径描述同一转折，德勒兹与奥蒙的枢纽人物是罗西里尼，卡塞蒂的断裂点则在安东尼奥尼。'],
+  [5, '方法与清算', '“现实不是对象，而是方法和态度”；同时反省新现实主义推迟了对法西斯的清算，真正的反思要等到近 30 年后。'],
+];
+
+const TL = [
+  ['1922', '法西斯上台，此后统治约二十年', ''],
+  ['1936', '', '杰尼纳《白色中队》获威尼斯奖，现实主义被用于殖民宣传'],
+  ['1938', '法西斯政权推出电影产业保护政策', '福克斯、派拉蒙、米高梅、华纳撤出意大利'],
+  ['1941', '', '罗西里尼《白船》；扎瓦蒂尼未署名参与德西卡的《医生小心》'],
+  ['1942', '', '《飞行员归来》《云中四步》；《孩子们在看着我们》开拍'],
+  ['1943', '', '《沉沦》首映后被禁；巴巴罗的影评借用“新现实主义”一词', 1],
+  ['1943.07', '墨索里尼被撤职并逮捕', '', 1],
+  ['1943.08.14', '政府单方面宣布罗马为“不设防城市”', '', 1],
+  ['1943.09 起', '德军占领罗马 9 个月；北方萨罗共和国，南方巴多格里奥政府与盟军；抵抗运动兴起', '', 1],
+  ['1943.10', '罗马犹太人遭大规模驱逐', '', 1],
+  ['1944.03', '阿尔帖亭洞窟大屠杀', '', 1],
+  ['1944.06', '罗马解放', '同年《孩子们在看着我们》正式公映', 1],
+  ['1945.01.18', '', '《罗马，不设防的城市》开拍', 1],
+  ['1945.04', '墨索里尼被游击队处决', '', 1],
+  ['1945.09.24', '', '《罗马》在奎里诺剧院首映；巴赞同年发表《摄影影像的本体论》', 1],
+  ['1946', '全民公投改共和，左翼参与联合政府', '《擦鞋童》《战火》'],
+  ['1947.05', '左翼被逐出联合政府', ''],
+  ['1948', '天主教民主党大选获胜', '《偷自行车的人》《大地在波动》《德意志零年》；巴赞 1 月在《精神》发表长文；“新现实主义”在电影界正式通用'],
+  ['1949', '“安德烈奥蒂法”出台', '佩鲁贾电影俱乐部全国大会；杰尼纳凭《沼泽的蓝天》恢复声誉'],
+  ['1950', '', '安东尼奥尼《某种爱的纪事》'],
+  ['1952', '', '《风烛泪》票房惨败，安德烈奥蒂发公开信批评；扎瓦蒂尼《关于电影的一些想法》（12 月）'],
+  ['1953', '', '帕尔马会议讨论“新现实主义的危机”；《面包、爱情和梦想》'],
+  ['1959', '', '罗西里尼《罗维雷将军》，反派仍是纳粹军官'],
+  ['1969–1975', '', '《同流者》、维斯康蒂“德意志三部曲”、《阿玛柯德》、《索多玛 120 天》开始直面法西斯'],
+  ['1972', '', '安东尼奥尼来华拍纪录片'],
+  ['1974、1976', '', '佩萨罗电影节两次举办法西斯时期意大利电影展'],
+];
+
+const SOURCES = [
+  { t: '意大利本土文学', a: '维尔加的真实主义（近似左拉）', b: '黄昏派诗人（帕索里尼的说法）' },
+  { t: '美国文学', a: '多斯·帕索斯（帕韦塞译介）', b: '福克纳、海明威、詹姆斯·M·凯恩' },
+  { t: '法国诗意现实主义', a: '雷诺阿：维斯康蒂当过其助理', b: '卡尔内：安东尼奥尼当过其助理' },
+  { t: '苏联蒙太奇理论', a: '巴巴罗在 CSC 讲授普多夫金', b: '课程参照莫斯科电影学院' },
+  { t: '法西斯时期的体制', a: '电影城、CSC、《电影》《黑与白》', b: '德·罗伯蒂斯式的纪实战争片' },
+  { t: '抵抗运动', a: '提供素材与新的伦理支撑', b: '也是一次建国神话' },
+];
+const LEGACIES = [
+  { t: '意大利现代主义', a: '安东尼奥尼、费里尼、帕索里尼', b: '奥尔米、贝托鲁奇' },
+  { t: '粉红新现实主义', a: '《面包、爱情和梦想》1953', b: '→ 意式喜剧' },
+  { t: '法国新浪潮', a: '巴赞与《电影手册》', b: '里维特、侯麦、戈达尔' },
+  { t: '国际艺术电影', a: '合拍与海外票房', b: '罗西里尼与褒曼、《终点站》' },
+  { t: '拉美新电影与第三电影', a: '费尔南多·比利（CSC 学员）', b: '扎瓦蒂尼常去古巴、墨西哥' },
+  { t: '更远的回响', a: '阿巴斯《五》：最纯粹的绵延', b: '侯孝贤；德勒兹的时间-影像' },
+];
+const NET_INST = [
+  { x: '0px', t: 'CSC 国家电影学校', a: '巴巴罗讲授苏联理论', b: '巴巴罗主编《黑与白》' },
+  { x: '240px', t: '《电影》杂志', a: '维托里奥·墨索里尼主编', b: '抨击白色电话片' },
+  { x: '480px', t: 'ACI 电影公司', a: '维托里奥任主席', b: '出品《飞行员归来》' },
+  { x: '720px', t: '海军电影中心', a: '德·罗伯蒂斯主管', b: '与罗西里尼合作《白船》' },
+];
+const NET_PEOPLE = [
+  { x: '0px', t: '安东尼奥尼', a: 'CSC 学员', b: '当过卡尔内助理' },
+  { x: '191px', t: '德桑蒂斯', a: 'CSC 学员', b: '《电影》撰稿人' },
+  { x: '382px', t: '阿利卡塔', a: '《电影》撰稿人', b: '意共党员' },
+  { x: '573px', t: '维斯康蒂', a: '《电影》撰稿人', b: '当过雷诺阿助理' },
+  { x: '764px', t: '罗西里尼', a: '维托里奥的朋友', b: '无党证获空军支持' },
+];
+const FILMS = [
+  { year: '1943', title: '《沉沦》', who: '维斯康蒂 / 阿利卡塔、德桑蒂斯、普契尼等', tag: '先声', verdict: '存在主义的心理现实主义，不是社会学的', notes: ['融合法国诗意现实主义的宿命感与美国硬汉派小说。', '1943 年首映丑闻：维托里奥·墨索里尼怒吼“这不是意大利！”后离场。影片被禁，维斯康蒂偷偷复制了底片。'] },
+  { year: '1944', title: '《孩子们在看着我们》', who: '德西卡 / 扎瓦蒂尼 · 1942 年拍，1944 年正式公映', tag: '预热', verdict: '儿童视角是道德分析工具，批判法西斯的家庭观', notes: ['门框构成的“框中框”象征家庭的禁锢；剪辑模仿儿童碎片式的认知。', '片名用复数“孩子们”：整个世代都在看着大人。'] },
+  { year: '1945', title: '《罗马，不设防的城市》', who: '罗西里尼 / 阿米代伊、费里尼', tag: '起点', verdict: '公认起点，也是一部建国神话', notes: ['神父与共产党员合作并先后牺牲，象征民族团结可以跨越意识形态分歧。', '罪责全部外化给德国占领者，淡化意大利人的胁从者身份。'] },
+  { year: '1946', title: '《擦鞋童》', who: '德西卡 / 扎瓦蒂尼', tag: '日常', verdict: '国家机构失能；从史诗转向无名的日常受害者', notes: ['挑战了新政府“国家复苏”的官方叙事，激怒司法部门，送审时被删改。', '主角是战后无名的、非政治化的受害者，这后来成为新现实主义的主导模式。'] },
+  { year: '1946', title: '《战火》', who: '罗西里尼 / 费里尼、阿米代伊', tag: '拆神话', verdict: '片段结构瓦解团结神话，预示 60 年代现代主义', notes: ['几乎没有职业演员，即兴程度远超《罗马》。', '唯一的连线是盟军从南到北的行军路线，走向的却不是凯旋。'] },
+];
+const MYTHS = [
+  ['胶片是黑市零碎买来的过期货', '现存底片是高质量专业胶片，主要是意大利费拉尼亚和德国爱克发；另有美国人唐纳德·唐斯盗取杜邦胶片相助的说法。'],
+  ['全靠赤贫硬拍出来', '初期确实缺钱：罗西里尼卖家具，妻子卖掉钻石胸针。最终资金来自黑市纺织品商人阿尔多·文图里尼，后来又有美国资金注入。'],
+  ['首映遭嘘，墙内开花墙外香', '9 月 24 日奎里诺剧院首映，皮娜之死一场全场起立鼓掌；它是 1945–46 年意大利票房最高的本土片。不满的主要是左派评论。'],
+  ['只用业余演员', '主演安娜·马尼亚尼、阿尔多·法布里齐都是大明星；创举在于把明星放到真实街头。'],
+  ['横空出世的新风格', '纪录片质感加情节剧的融合，在罗西里尼此前的法西斯战争片里已有苗头。'],
+];
+const VERSUS = [
+  ['身份', '法国影评人，《电影手册》创办人之一', '意大利编剧，德西卡的长期搭档，运动的组织者'],
+  ['思想资源', '天主教信仰；穆尼埃的人格主义与《精神》杂志；梅洛-庞蒂、柏格森', '左翼人道主义，亲意共但未入党；对法西斯时期沉默二十年的内疚'],
+  ['关键文本', '《摄影影像的本体论》（1945）；1948 年 1 月发表于《精神》的新现实主义长文', '《关于电影的一些想法》（1952 年 12 月，对话体；英文版 1953 年 10 月刊于《视与听》）；《我是乐观主义者》'],
+  ['核心概念', '神圣的歧义、事实-影像、省略、反蒙太奇', '受够了故事、停留、尾随、相遇的电影、本人演本人'],
+  ['主要片例', '《战火》《德意志零年》《偷自行车的人》《风烛泪》', '《擦鞋童》《偷自行车的人》《风烛泪》《城市之爱》'],
+  ['历史作用', '把现实主义从社会伦理转向美学风格与精神现实', '把新现实主义变成可以复制的方法，并播种到拉美'],
+];
+const BRIDGE = [
+  ['德勒兹', '运动与时间', '运动-影像', '行动者对情境做出反应；感知-运动链完整', '纯视听情境', '行动者变成观察者；《风烛泪》女仆看着肚子', '时间-影像', '直接呈现时间的绵延；安东尼奥尼的空景、小津'],
+  ['奥蒙', '以脸为线索', '叙事符号的脸', '意义在镜头组合里；库里肖夫效应', '人文主义的脸', '通往内在与灵魂的管道；罗西里尼与褒曼的合作', '崩塌的脸', '不透明的表面，与风景同列；《奇遇》里的莫妮卡·维蒂'],
+  ['帕索里尼', '散文与诗', '散文电影', '电影语言是叙事工具；遵守古典成规', '语言的零度', '打破成规，尚无新语言；停在散文与诗之间', '诗电影', '自由间接主观；影像必须挑衅观众'],
+  ['卡塞蒂', '看的方式', '', '', '矛盾元素的协商', '靠观众的社会信任，达成脆弱的现实效果', '恋人的凝视', '《某种爱的纪事》1950；侦探之看失败，主观之看兴起'],
+];
+const DEBATES = [
+  ['约 0:57', '德西卡 1952 年后转拍喜剧的原因', '他是赌徒，欠了一屁股赌债，只能拍商业片', '更重要的是创作层面：德西卡、罗西里尼、费里尼都转向个人化、精神化的主题'],
+  ['约 1:17', '《沉沦》男女主角的“猴急”', '无法压制的情欲激情', '更像无法忍受无聊现实后的反抗式爆发，带着自我毁灭的冲动'],
+  ['约 1:41', '皮娜之死', '死得毫无意义，正是战争的荒谬', '追着卡车跑的那个镜头已是影史经典，艺术上极有冲击力'],
+  ['约 1:43', '意大利在二战中的罪责', '如果德国是主犯，意大利也可以说是主犯', '起码是个重犯'],
+  ['约 2:03', '《战火》的结尾', '很悲剧，走向的不是凯旋', '美国人最终与意大利人同甘共苦，展示了救赎的可能'],
+  ['约 2:40', '“摄影机的位置是道德选择”的源头', '扎瓦蒂尼说得比戈达尔早，戈达尔可能是从这里学的', '影人里讲“道德”最多的是罗西里尼，戈达尔、里维特是从他那里学的'],
+  ['约 3:26', '创作中风格的分量', '对艺术片来说，风格和技术都是次要的', '风格还是很重要；最重要的是思想观念与艺术形式互相促进'],
+];
+const PEOPLE = [['罗西里尼',136,1],['巴赞',73,2],['德西卡',45,1],['扎瓦蒂尼',44,3],['德勒兹',35,2],['维斯康蒂',33,1],['贝尼托·墨索里尼',21,4],['费里尼',21,1],['安东尼奥尼',20,1],['帕索里尼',19,1],['维托里奥·墨索里尼',18,4],['奥蒙',16,2],['阿米代伊',11,3],['戈达尔',11,1],['德桑蒂斯',9,1],['阿里斯泰戈',8,2],['安德烈奥蒂',8,4],['多斯·帕索斯',8,5],['贝托鲁奇',8,1],['法布里齐',8,5]];
+const FILMCOUNT = [['《沉沦》',33,3],['《偷自行车的人》',22,2],['《战火》',18,1],['《罗马，不设防的城市》',18,1],['《风烛泪》',15,2],['《孩子们在看着我们》',10,2],['《意大利之旅》',10,1],['《德意志零年》',9,1],['《擦鞋童》',7,2],['《白船》',6,1],['《大地在波动》',5,3],['《索多玛120天》',4,4],['《飞行员归来》',3,1],['《欧洲1951》',3,1],['《云中四步》',3,4],['《同流者》',3,4],['《阿玛柯德》',3,4]];
+const KW = [['新现实主义',213,1],['法西斯',131,2],['道德',61,3],['现实主义（不含新）',56,1],['现代主义',55,1],['真实',42,1],['纳粹',32,2],['共产党 / 意共',31,2],['天主教',27,2],['抵抗运动',24,2],['废墟',22,2],['神话',21,2],['审查',21,2],['蒙太奇',15,1],['纪实',13,1],['时间影像',12,1],['伦理',11,3],['长镜头',8,1],['人道主义',7,3],['绵延',6,1],['冷战',4,2]];
+
+function chart(rows, max, legend) {
+  return {
+    rows: rows.map(r => ({ label: r[0], v: r[1], color: C[r[2]], w: Math.max(0.6, r[1] / max * 86) + '%' })),
+    legend: legend.map(l => ({ label: l[0], color: C[l[1]], sum: l[2] || '' })),
+  };
+}
+
+const WP = 'https://en.wikipedia.org/w/api.php';
+const PEOPLE_WP = {
+  rossellini: 'Roberto Rossellini', desica: 'Vittorio De Sica', visconti: 'Luchino Visconti', zavattini: 'Cesare Zavattini',
+  bazin: 'André Bazin', deleuze: 'Gilles Deleuze', aumont: 'Jacques Aumont', pasolini: 'Pier Paolo Pasolini', casetti: 'Francesco Casetti',
+};
+const FILMS_WP = ['Ossessione', 'The Children Are Watching Us', 'Rome, Open City', 'Shoeshine (film)', 'Paisan'];
+const CAST = [
+  { key: 'rossellini', name: '罗西里尼', role: '提及 136 次 · 《罗马》《战火》' },
+  { key: 'desica', name: '德西卡', role: '提及 45 次 · 《擦鞋童》' },
+  { key: 'visconti', name: '维斯康蒂', role: '提及 33 次 · 《沉沦》' },
+  { key: 'zavattini', name: '扎瓦蒂尼', role: '提及 44 次 · 编剧与理论' },
+];
+const BRIDGE_KEYS = ['deleuze', 'aumont', 'pasolini', 'casetti'];
+
+class Component extends DCLogic {
+  state = { open: {}, flip: null, img: {} };
+
+  componentDidMount() { this.loadImages(); }
+
+  async loadImages() {
+    const out = {};
+    try {
+      const keys = Object.keys(PEOPLE_WP);
+      const url = WP + '?action=query&format=json&origin=*&redirects=1&prop=pageimages&piprop=thumbnail&pithumbsize=600&titles=' + encodeURIComponent(keys.map(k => PEOPLE_WP[k]).join('|'));
+      const q = (await (await fetch(url)).json()).query || {};
+      const alias = {};
+      (q.normalized || []).concat(q.redirects || []).forEach(x => { alias[x.from] = x.to; });
+      const by = {};
+      Object.values(q.pages || {}).forEach(p => { if (p.thumbnail) by[p.title] = p.thumbnail.source; });
+      keys.forEach(k => { const t = PEOPLE_WP[k]; out[k] = by[alias[t] || t] || by[t] || ''; });
+      this.setState({ img: { ...out } });
+    } catch (e) { console.warn('portrait lookup failed', e); }
+    const posters = await Promise.all(FILMS_WP.map(t => this.poster(t).catch(() => '')));
+    posters.forEach((u, i) => { out['film' + i] = u; });
+    this.setState({ img: { ...out } });
+  }
+
+  async poster(title) {
+    const url = WP + '?action=query&format=json&origin=*&redirects=1&generator=images&gimlimit=30&prop=imageinfo&iiprop=url|size&iiurlwidth=500&titles=' + encodeURIComponent(title);
+    const q = (await (await fetch(url)).json()).query || {};
+    const ok = [];
+    Object.values(q.pages || {}).forEach(p => {
+      const info = p.imageinfo && p.imageinfo[0];
+      if (!info) return;
+      const file = decodeURIComponent((info.url || '').split('/').pop().split('?')[0]);
+      if (!/\.(jpe?g|png)$/i.test(file)) return;
+      if (/(Flag_of|_flag|Symbol_|Commons-logo|Wikimedia_|OOjs_UI|Question_book|Padlock|Ambox)/i.test(file)) return;
+      if (info.width && info.width < 200) return;
+      ok.push({ file, url: info.thumburl || info.url, tall: info.height > info.width });
+    });
+    const pick = ok.find(c => /(poster|locandina|manifesto)/i.test(c.file)) || ok.find(c => c.tall) || ok[0];
+    return pick ? pick.url : '';
+  }
+
+  flipped(i) {
+    const f = this.state.flip;
+    if (f && i in f) return f[i];
+    return (this.props.mythDefault ?? '说法') === '还原';
+  }
+
+  renderVals() {
+    let acc = 15;
+    const chapters = CH.map((c, i) => {
+      const n = i + 1, start = acc; acc += c[2] * 60;
+      const key = KEY.includes(n);
+      return {
+        n, nn: String(n).padStart(2, '0'), part: c[0], title: c[1], dur: c[2].toFixed(1), gist: c[3],
+        color: C[c[0]], start: fmt(start), tip: n + ' ' + c[1] + ' · ' + fmt(start) + ' 起 · ' + c[2] + ' 分钟',
+        w: 'calc(' + (c[2] / TOTAL * 100) + '% - 2px)', op: 1,
+        axisLabel: c[2] >= 7 ? String(n) : '', bw: (c[2] / 23 * 88) + '%', fw: key ? 700 : 400,
+      };
+    });
+    const parts = PARTS.map(p => ({ label: p.roman + ' ' + p.name, color: C[p.k], mins: p.mins + ' 分钟', pct: PCT[p.k] }));
+    const tree = PARTS.map(p => {
+      const cs = chapters.filter(c => c.part === p.k);
+      return { roman: p.roman, name: p.name, color: C[p.k], meta: '第 ' + cs[0].n + '–' + cs[cs.length - 1].n + ' 章 · ' + p.mins + ' 分钟', chapters: cs };
+    });
+    const ticks = [0, 60, 120, 180, 216.1].map((m, i) => ({ x: (m / TOTAL * 100) + '%', tx: i === 0 ? '0' : i === 4 ? '-100%' : '-50%', label: i === 4 ? '3:36:07' : (m / 60) + ':00' }));
+    const timeline = TL.map(r => {
+      const z = !!r[3];
+      return { t: r[0], pol: r[1], film: r[2], pad: z ? '22px 0' : '14px 0', bg: z ? '#dedcd4' : 'transparent', fs: z ? '23px' : '21px', pillBg: z ? '#15140f' : '#ecebe5', pillFg: z ? '#ecebe5' : '#15140f' };
+    });
+    const films = FILMS.map((f, i) => ({
+      ...f, slot: 'ep27-film' + i, img: this.state.img['film' + i] || '', tagBg: i === 2 ? '#d9622f' : '#15140f', open: !!this.state.open[i], sign: this.state.open[i] ? '−' : '+',
+      toggle: () => this.setState(s => ({ open: { ...s.open, [i]: !s.open[i] } })),
+    }));
+    const myths = MYTHS.map((m, i) => ({
+      n: String(i + 1).padStart(2, '0'), myth: m[0], real: m[1],
+      rot: this.flipped(i) ? 'rotateY(180deg)' : 'rotateY(0deg)',
+      toggle: () => { const f = {}; MYTHS.forEach((_, j) => { f[j] = this.flipped(j); }); f[i] = !f[i]; this.setState({ flip: f }); },
+    }));
+    const allFlipped = MYTHS.every((_, i) => this.flipped(i));
+    const bridge = BRIDGE.map((b, i) => ({
+      slot: 'ep27-' + BRIDGE_KEYS[i], img: this.state.img[BRIDGE_KEYS[i]] || '', who: b[0], axis: b[1], c1t: b[2], c1: b[3], c2t: b[4], c2: b[5], c3t: b[6], c3: b[7],
+      c1bg: b[2] ? '#f6f5f0' : 'transparent', c1border: b[2] ? '1px solid #b9b6aa' : '1px dashed #b9b6aa', arr1: b[2] ? '→' : '',
+    }));
+    const charts = [
+      { kicker: 'ASR 转录稿近似计数 · 人物前 20 位', title: '罗西里尼被提到 136 次，接近第二名巴赞的两倍', note: '误写变体已合并（如“巴战、八战、巴藏”都计入巴赞）。',
+        ...chart(PEOPLE, 136, [['导演', 1], ['理论家与影评人', 2], ['编剧', 3], ['政治人物', 4], ['作家、演员', 5]]) },
+      { kicker: 'ASR 转录稿近似计数 · 影片 3 次及以上', title: '《沉沦》单片被提到最多，罗西里尼的作品合计最多', note: '《罗马，不设防的城市》只计全称，“罗马”简称未计入。',
+        ...chart(FILMCOUNT, 33, [['罗西里尼', 1, '合计 67'], ['德西卡', 2, '合计 54'], ['维斯康蒂', 3, '合计 38'], ['其他导演', 4, '合计 13']]) },
+      { kicker: 'ASR 转录稿近似计数 · 21 个关键词', title: '“道德”被提到 61 次，仅次于“新现实主义”和“法西斯”', note: '“纪实”含 ASR 误写的“即时 / 计时”；“废墟”兼指实物与意识形态的废墟。',
+        ...chart(KW, 213, [['运动与美学', 1, '合计 420'], ['政治与历史', 2, '合计 313'], ['伦理', 3, '合计 79']]) },
+    ];
+    return {
+      grain: this.props.grain ?? true,
+      cast: CAST.map(c => ({ ...c, slot: 'ep27-cast-' + c.key, img: this.state.img[c.key] || '' })),
+      pic: { bazin: this.state.img.bazin || '', zavattini: this.state.img.zavattini || '' },
+      parts, tree, chapters, ticks, timeline,
+      theses: THESES.map((t, i) => ({ n: String(i + 1).padStart(2, '0'), color: C[t[0]], head: t[1], body: t[2] })),
+      sources: SOURCES, legacies: LEGACIES, netInst: NET_INST, netPeople: NET_PEOPLE,
+      films, myths, flipAllLabel: allFlipped ? '全部翻回说法' : '全部翻到还原',
+      flipAll: () => { const f = {}; MYTHS.forEach((_, j) => { f[j] = !allFlipped; }); this.setState({ flip: f }); },
+      versus: VERSUS.map(v => ({ k: v[0], a: v[1], b: v[2] })),
+      bridge, charts,
+      debates: DEBATES.map(d => ({ at: d[0], topic: d[1], a: d[2], b: d[3] })),
+    };
+  }
+}
+</script>
+</body>
+</html>

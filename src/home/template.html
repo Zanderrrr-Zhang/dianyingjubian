@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="电影巨辩的节目导读、老马与阿吴的公开介绍，以及有出处的播客摘句。">
+<title>电影巨辩 · 长谈之后，继续想</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@400;500;700&family=Cinzel:wght@400;600&family=Bodoni+Moda:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; background: #e9e2d2; }
+  @keyframes quote-arrive { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+</style>
+</helmet>
+<div style="max-width:1320px;margin:0 auto;background:#f4eee0;color:#211c17;font-family:'Noto Sans SC',sans-serif;line-height:1.7;font-variant-numeric:tabular-nums;">
+  <header id="about" style="background:#191613;color:#f4eee0;">
+    <div aria-hidden="true" style="height:10px;background:repeating-linear-gradient(90deg,#a8813c 0 19px,#191613 19px 27px);"></div>
+    <nav aria-label="首页导航" style="padding:22px clamp(20px,4.5vw,60px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 24px;border-bottom:1px solid #514637;font-size:13px;">
+      <a href="#about" style="color:#dec185;text-decoration:none;font-family:'Cinzel',serif;letter-spacing:0.12em;">DIANYING JUBIAN</a>
+      <div style="display:flex;flex-wrap:wrap;gap:12px 24px;">
+        <a href="#voices" style="color:#e1d6c3;text-decoration:none;" style-hover="color:#dec185;">两位主播</a>
+        <a href="#quotes" style="color:#e1d6c3;text-decoration:none;" style-hover="color:#dec185;">片刻金句</a>
+        <a href="#archive" style="color:#e1d6c3;text-decoration:none;" style-hover="color:#dec185;">节目目录 ↓</a>
+      </div>
+    </nav>
+    <div style="padding:32px clamp(20px,4.5vw,60px) 38px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:32px 64px;align-items:end;">
+      <div>
+        <div style="color:#b89b6b;font-family:'Cinzel',serif;font-size:12px;letter-spacing:0.18em;">FILM, IN CONTEXT</div>
+        <h1 style="margin:8px 0 10px;font-family:'Noto Serif SC',serif;font-size:clamp(48px,7.5vw,92px);line-height:1.22;letter-spacing:0.055em;font-weight:900;">电影巨辩</h1>
+        <p style="margin:0;color:#e4d7bd;font-family:'Noto Serif SC',serif;font-size:clamp(19px,2vw,25px);line-height:1.6;">从一部电影，聊到它身后的世界。</p>
+        <div style="display:flex;flex-wrap:wrap;gap:10px 24px;margin-top:22px;font-size:14px;">
+          <a href="{{ show.podcastUrl }}" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;min-height:44px;padding:8px 18px;background:#d9b671;color:#201b15;text-decoration:none;font-weight:700;" style-hover="background:#e8c98c;" style-focus="outline:2px solid #f4eee0;outline-offset:4px;">在小宇宙收听 ↗</a>
+          <a href="{{ show.seriesUrl }}" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;min-height:44px;color:#e0c28b;text-underline-offset:5px;">《为了华语电影》 ↗</a>
+        </div>
+      </div>
+      <aside aria-label="关于节目与本站" style="border-top:1px solid #796347;padding-top:20px;">
+        <p style="margin:0 0 20px;font-size:15px;line-height:1.95;color:#d0c5b3;">{{ show.description }}</p>
+        <div style="display:flex;flex-wrap:wrap;gap:14px 38px;align-items:baseline;">
+          <div><span style="font-family:'Bodoni Moda',serif;font-size:48px;line-height:1;color:#e6c886;">{{ total }}</span><span style="margin-left:10px;color:#b8ad98;font-size:13px;">篇已整理导读</span></div>
+          <div><span style="font-family:'Bodoni Moda',serif;font-size:48px;line-height:1;color:#e6c886;">{{ seriesCount }}</span><span style="margin-left:10px;color:#b8ad98;font-size:13px;">期华语专题</span></div>
+        </div>
+        <p style="margin:16px 0 0;color:#a99c89;font-size:12px;">影迷整理站 · 收录数量为本站篇目，非节目总集数</p>
+      </aside>
+    </div>
+  </header>
+
+  <section id="quotes" role="region" aria-label="播客金句" aria-roledescription="轮播" onMouseEnter="{{ enterQuotes }}" onMouseLeave="{{ leaveQuotes }}" onFocus="{{ focusQuotes }}" onBlur="{{ blurQuotes }}" style="padding:24px clamp(20px,4.5vw,60px) 26px;background:#e4d4b3;border-bottom:1px solid #bcaa89;">
+    <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 22px;">
+      <h2 style="margin:0;display:flex;align-items:baseline;gap:14px;font-size:14px;font-weight:500;letter-spacing:0.12em;">片刻金句<span style="font-family:'Cinzel',serif;font-size:10px;color:#756348;letter-spacing:0.1em;">QUOTES ON FILM</span></h2>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <span aria-label="金句序号" style="margin-right:12px;font-family:'Bodoni Moda',serif;font-size:18px;"><strong style="font-weight:600;">{{ quoteNumber }}</strong><span style="color:#857354;"> / {{ quoteTotal }}</span></span>
+        <button type="button" aria-label="上一条金句" onClick="{{ previousQuote }}" style="width:42px;height:42px;background:transparent;border:1px solid #a18b64;color:#34291b;font-size:20px;cursor:pointer;" style-hover="background:#f3e7d1;" style-focus="outline:2px solid #392f20;outline-offset:3px;">←</button>
+        <button type="button" aria-label="{{ playbackAria }}" onClick="{{ togglePlayback }}" style="min-height:42px;padding:0 13px;background:#34291b;border:1px solid #34291b;color:#f4eee0;font-size:12px;cursor:pointer;" style-hover="background:#51422b;" style-focus="outline:2px solid #392f20;outline-offset:3px;">{{ playbackIcon }} {{ playbackLabel }}</button>
+        <button type="button" aria-label="下一条金句" onClick="{{ nextQuote }}" style="width:42px;height:42px;background:transparent;border:1px solid #a18b64;color:#34291b;font-size:20px;cursor:pointer;" style-hover="background:#f3e7d1;" style-focus="outline:2px solid #392f20;outline-offset:3px;">→</button>
+      </div>
+    </div>
+    <div aria-live="off" style="min-height:200px;padding:20px 0 12px;display:flex;align-items:center;">
+      <blockquote key="{{ quote.id }}" style="margin:0;max-width:1050px;animation:{{ quoteAnimation }};">
+        <p data-quote-text="true" style="margin:0;font-family:'Noto Serif SC',serif;font-size:clamp(23px,3.1vw,38px);font-weight:700;line-height:1.65;letter-spacing:0.01em;">“{{ quote.text }}”</p>
+        <div style="margin-top:14px;font-size:12px;color:#6a573b;">{{ quote.context }}</div>
+      </blockquote>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 22px;border-top:1px solid #c0ad8a;padding-top:13px;font-size:12px;">
+      <div><strong style="font-weight:700;">{{ quote.speaker }}</strong><span style="margin-left:12px;color:#67563d;">{{ quote.episode }}</span><span style="margin-left:12px;color:#756348;">{{ quote.kind }}</span></div>
+      <a href="{{ quote.href }}" target="{{ quote.target }}" rel="noopener noreferrer" style="color:#3b3021;text-underline-offset:4px;">{{ quote.linkLabel }}</a>
+    </div>
+    <div style="margin-top:9px;font-size:11px;color:#7a694d;">{{ quoteStatus }} · 署名“电影巨辩”的摘句不区分两位主持人</div>
+  </section>
+
+  <section id="voices" style="padding:48px clamp(20px,4.5vw,60px) 46px;">
+    <div style="display:flex;flex-wrap:wrap;gap:10px 30px;justify-content:space-between;align-items:baseline;border-bottom:1px solid #b8ad98;padding-bottom:16px;">
+      <h2 style="margin:0;font-family:'Noto Serif SC',serif;font-size:clamp(27px,3.5vw,38px);font-weight:700;">两位主播，一场长谈</h2>
+      <span style="font-family:'Cinzel',serif;font-size:11px;letter-spacing:0.16em;color:#8b7654;">MAGASA &amp; LOOK</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,350px),1fr));gap:34px 64px;margin-top:28px;">
+      <sc-for list="{{ hosts }}" as="host" hint-placeholder-count="2">
+        <article style="min-width:0;">
+          <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:12px 22px;">
+            <h3 style="margin:0;font-family:'Noto Serif SC',serif;font-size:38px;font-weight:700;letter-spacing:0.08em;">{{ host.name }}</h3>
+            <span style="font-family:'Bodoni Moda',serif;font-size:26px;color:#927444;">{{ host.alias }}</span>
+          </div>
+          <p style="margin:6px 0 13px;font-size:12px;letter-spacing:0.06em;color:#886b43;">影评人 · {{ host.focus }}</p>
+          <p style="margin:0;font-size:14px;line-height:2;color:#554d42;">{{ host.bio }}</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:15px;font-size:12px;">
+            <a href="{{ host.source }}" target="_blank" rel="noopener noreferrer" style="color:#8c3d2c;text-underline-offset:4px;">{{ host.sourceLabel }} ↗</a>
+            <a href="{{ host.aliasSource }}" target="_blank" rel="noopener noreferrer" style="color:#7c715f;text-underline-offset:4px;">网络 ID 资料 ↗</a>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+  </section>
+
+  <main id="archive" style="padding:36px clamp(20px,4.5vw,60px) 54px;background:#eee6d7;border-top:1px solid #c8bca8;">
+    <div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 24px;">
+      <h2 style="margin:0;font-family:'Noto Serif SC',serif;font-size:clamp(29px,3.5vw,40px);font-weight:700;">从这里，继续看电影</h2>
+      <span style="color:#857357;font-size:12px;">{{ total }} 篇导读 · {{ episodeCount }} 期单集 · {{ seriesCount }} 期华语专题</span>
+    </div>
+    <p style="margin:12px 0 26px;max-width:760px;font-size:14px;line-height:1.9;color:#6d6252;">{{ show.approach }}</p>
+    <div style="display:flex;flex-wrap:wrap;gap:18px 26px;align-items:center;justify-content:space-between;border-bottom:1px solid #c8bca8;padding-bottom:20px;">
+      <div role="group" aria-label="筛选节目" style="display:flex;flex-wrap:wrap;gap:8px;">
+        <sc-for list="{{ categories }}" as="category" hint-placeholder-count="4">
+          <button type="button" aria-pressed="{{ category.selected }}" onClick="{{ category.onSelect }}" style="min-height:42px;padding:8px 14px;border:1px solid {{ category.border }};background:{{ category.background }};color:{{ category.color }};font-family:inherit;font-size:12px;cursor:pointer;transition:{{ transition }};" style-hover="border-color:#8c3d2c;" style-focus="outline:2px solid #8c3d2c;outline-offset:3px;">{{ category.name }} <span style="margin-left:5px;opacity:0.65;">{{ category.count }}</span></button>
+        </sc-for>
+      </div>
+      <label style="display:flex;align-items:center;gap:10px;flex:1 1 235px;max-width:330px;border-bottom:1px solid #8e7d64;padding:6px 0;">
+        <span style="font-size:12px;color:#74634d;">查找</span>
+        <input type="search" aria-label="搜索节目" placeholder="片名、导演、专题…" value="{{ query }}" onChange="{{ onSearch }}" style="flex:1;min-width:0;width:100%;padding:6px 2px;background:transparent;border:0;color:#211c17;font-family:inherit;font-size:14px;" style-focus="outline:2px solid #8c3d2c;outline-offset:2px;">
+      </label>
+    </div>
+    <p role="status" style="margin:16px 0 0;font-size:12px;color:#82715a;">找到 {{ resultCount }} 篇导读</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,295px),1fr));gap:28px 24px;margin-top:18px;">
+      <sc-for list="{{ entries }}" as="entry" hint-placeholder-count="6">
+        <a data-archive-entry="true" href="{{ entry.href }}" style="display:flex;flex-direction:column;min-width:0;color:#211c17;text-decoration:none;background:#f8f3e9;border:1px solid #cbbfaa;transition:{{ transition }};" style-hover="border-color:#7e6741;background:#fffaf1;" style-focus="outline:3px solid #8c3d2c;outline-offset:3px;">
+          <div style="position:relative;aspect-ratio:16 / 10;overflow:hidden;background:#24211b;">
+            <sc-if value="{{ entry.hasImage }}" hint-placeholder-val="{{ true }}"><img src="{{ entry.img }}" alt="{{ entry.title }}" loading="lazy" style="display:block;width:100%;height:100%;object-fit:cover;"></sc-if>
+            <sc-if value="{{ entry.noImage }}" hint-placeholder-val="{{ false }}"><div style="height:100%;display:flex;align-items:center;justify-content:center;padding:30px;border:12px solid #24211b;background:#404a43;color:#eee6d7;font-family:'Cinzel',serif;font-size:30px;line-height:1.3;text-align:center;">SIGHT<br>&amp; SOUND</div></sc-if>
+            <span style="position:absolute;left:0;bottom:0;padding:6px 14px;background:#191613;color:#f4eee0;font-size:13px;">{{ entry.categoryLabel }} · {{ entry.num }}</span>
+          </div>
+          <div style="height:4px;background:{{ entry.color }};"></div>
+          <div style="display:flex;flex-direction:column;flex:1;padding:20px 22px 18px;">
+            <div style="font-size:11px;letter-spacing:0.04em;color:#887151;">节目时长 {{ entry.dur }}</div>
+            <h3 style="margin:10px 0 12px;font-family:'Noto Serif SC',serif;font-size:23px;line-height:1.55;font-weight:700;">{{ entry.title }}</h3>
+            <p style="margin:0 0 20px;font-size:13px;line-height:1.9;color:#6b6152;">{{ entry.desc }}</p>
+            <div style="margin-top:auto;padding-top:12px;border-top:1px solid #dbd0bd;font-size:12px;color:#8c3d2c;">阅读本期 <span style="float:right;">↗</span></div>
+          </div>
+        </a>
+      </sc-for>
+    </div>
+    <sc-if value="{{ empty }}" hint-placeholder-val="{{ false }}"><div style="padding:42px 0;text-align:center;border-bottom:1px solid #c8bca8;"><p style="margin:0 0 14px;color:#6d6252;">暂时没有匹配的导读，换个关键词试试。</p><button type="button" onClick="{{ clearSearch }}" style="background:#211c17;color:#f4eee0;border:0;padding:12px 20px;cursor:pointer;">查看全部导读</button></div></sc-if>
+  </main>
+
+  <footer style="padding:28px clamp(20px,4.5vw,60px) 34px;background:#191613;color:#b1a38f;">
+    <div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:10px 26px;">
+      <span style="color:#d8bc85;font-family:'Cinzel',serif;font-size:13px;letter-spacing:0.12em;">DIANYING JUBIAN · READING NOTES</span>
+      <a href="#about" style="color:#d8bc85;font-size:12px;text-underline-offset:4px;">回到页首 ↑</a>
+    </div>
+    <p style="margin:14px 0 0;font-size:12px;line-height:1.9;">本页是影迷整理站，非节目官方页面。完整音频请到原平台收听。简介依据公开资料整理；金句摘自公开导语与已有整理文稿，不将无法确认的说话人强行署名。</p>
+    <p style="margin:8px 0 0;font-size:11px;color:#948570;">资料核对：{{ checkedAt }} · 图片沿用各期配图，版权归各自权利人。节目介绍来源：<a href="https://www.vistopia.com.cn/speaker/253" target="_blank" rel="noopener noreferrer" style="color:#bfa77a;text-underline-offset:3px;">看理想</a> / <a href="{{ show.podcastUrl }}" target="_blank" rel="noopener noreferrer" style="color:#bfa77a;text-underline-offset:3px;">小宇宙</a></p>
+  </footer>
+</div>
+</x-dc>
+<!-- HOME_LOGIC -->
+</body>
+</html>

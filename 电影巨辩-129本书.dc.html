@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  body { margin: 0; background: #e8e4da; }
+  a { color: #8c2f24; }
+  a:hover { color: #b04a3c; }
+</style>
+</helmet>
+<div style="width: 1400px; background: #f3f0e8; color: #1b1d22; font-family: 'Noto Sans SC', sans-serif;">
+
+  <header style="padding: 58px 90px 46px; border-bottom: 3px double #1b1d22;">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; font-size: 15px; letter-spacing: 0.22em; color: #8c2f24;">
+      <span>电影巨辩 · 书单专期 · 老马 / 阿吴</span>
+      <span>约 4 小时 10 分 · 129 本</span>
+    </div>
+    <div style="margin-top: 30px; display: grid; grid-template-columns: 1fr 360px; gap: 54px; align-items: end;">
+      <div>
+        <h1 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 98px; line-height: 1.02; letter-spacing: -0.02em;">用 129 本书<br>构建电影知识体系</h1>
+        <div style="margin-top: 16px; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 34px; color: #2f3d5c;">129 = 电影诞生 129 年</div>
+      </div>
+      <div style="border-left: 1px solid rgba(27,29,34,0.25); padding-left: 26px; font-size: 16px; line-height: 1.9; color: #3c3f47;">
+        <div style="font-size: 13px; letter-spacing: 0.2em; color: #8c2f24;">开场与防杠声明</div>
+        <div style="margin-top: 12px;">以英文＋中文书为主</div>
+        <div>个人书单，不能用于考研</div>
+        <div>老书也值得读</div>
+      </div>
+    </div>
+    <p style="margin: 34px 0 0; max-width: 1080px; font-size: 19px; line-height: 1.9; color: #34373e; text-wrap: pretty;">两人开场就说明，普通影迷没必要专门“构建电影知识体系”。这份书单是他们自己读过、受过影响的书，有盲区，也不适合用来备考研究生。他们也强调，老书即使部分观点过时，仍然值得读，因为要知道知识是怎么一步步发展过来的。</p>
+  </header>
+
+  <section style="padding: 56px 90px 0;">
+    <div style="display: flex; align-items: baseline; gap: 18px;">
+      <span style="font-family: 'Cormorant Garamond', serif; font-size: 26px; color: #8c2f24;">I</span>
+      <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 42px;">四小时怎么分配</h2>
+      <span style="margin-left: auto; font-size: 14px; letter-spacing: 0.18em; color: #6b6f78;">条宽 ∝ 时长 · 华语部分最长</span>
+    </div>
+    <div style="margin-top: 12px; height: 1px; background: #1b1d22;"></div>
+
+    <div style="margin-top: 30px; display: flex; gap: 2px; align-items: stretch;">
+      <div style="width: 2%; background: rgba(27,29,34,0.12); padding: 12px 6px;"><div style="font-size: 12px; color: #4b4f57;">开场</div></div>
+      <div style="width: 11.6%; background: rgba(47,61,92,0.3); padding: 12px 12px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 16px;">理论</div><div style="font-size: 12px; color: #464b55; margin-top: 4px;">29′ · 16 本</div></div>
+      <div style="width: 3.6%; background: rgba(47,61,92,0.16); padding: 12px 8px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 14px;">类型</div><div style="font-size: 12px; color: #4b4f57; margin-top: 4px;">9′</div></div>
+      <div style="width: 8.4%; background: rgba(47,61,92,0.3); padding: 12px 12px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 16px;">电影史</div><div style="font-size: 12px; color: #464b55; margin-top: 4px;">21′</div></div>
+      <div style="width: 8.4%; background: rgba(47,61,92,0.16); padding: 12px 12px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 16px;">好莱坞</div><div style="font-size: 12px; color: #4b4f57; margin-top: 4px;">21′</div></div>
+      <div style="width: 12.4%; background: rgba(47,61,92,0.3); padding: 12px 12px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 16px;">影人传记</div><div style="font-size: 12px; color: #464b55; margin-top: 4px;">31′ · 14 本</div></div>
+      <div style="width: 13.6%; background: rgba(140,47,36,0.34); padding: 12px 12px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 16px;">影评</div><div style="font-size: 12px; color: #5c2a22; margin-top: 4px;">34′ · 单节第二长</div></div>
+      <div style="width: 2.8%; background: rgba(27,29,34,0.12); padding: 12px 6px;"><div style="font-size: 12px; color: #4b4f57;">产业</div></div>
+      <div style="width: 6.4%; background: rgba(47,61,92,0.16); padding: 12px 10px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 15px;">创作</div><div style="font-size: 12px; color: #4b4f57; margin-top: 4px;">16′</div></div>
+      <div style="width: 5.6%; background: rgba(47,61,92,0.3); padding: 12px 10px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 15px;">访谈</div><div style="font-size: 12px; color: #464b55; margin-top: 4px;">14′</div></div>
+      <div style="width: 19.6%; background: rgba(140,47,36,0.48); padding: 12px 14px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 18px; color: #f3f0e8;">华语电影 · 约 35 本</div><div style="font-size: 12px; color: #f0dcd7; margin-top: 4px;">49′ · 最长</div></div>
+      <div style="width: 5.6%; background: rgba(27,29,34,0.12); padding: 12px 10px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 15px;">结语</div><div style="font-size: 12px; color: #4b4f57; margin-top: 4px;">14′</div></div>
+    </div>
+
+    <div style="margin-top: 34px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: rgba(27,29,34,0.22);">
+      <div style="background: #f3f0e8; padding: 18px 18px;"><div style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #8c2f24;">00:00–00:05</div><div style="margin-top: 6px; font-family: 'Noto Serif SC', serif; font-size: 19px;">开场与防杠声明</div><div style="margin-top: 8px; font-size: 14px; line-height: 1.8; color: #5a5e66;">129 = 电影诞生 129 年 · 以英文＋中文书为主 · 个人书单，不能用于考研 · 老书也值得读</div></div>
+      <div style="background: #f3f0e8; padding: 18px 18px;"><div style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #8c2f24;">00:05–00:34</div><div style="margin-top: 6px; font-family: 'Noto Serif SC', serif; font-size: 19px;">① 电影理论与美学 · 16 本</div><div style="margin-top: 8px; font-size: 14px; line-height: 1.8; color: #5a5e66;">巴赞《电影是什么》 · 奥蒙系列（分析／辞典／导演理论） · 卡塞蒂、伯奇、希翁、埃尔塞瑟 · 未选：德勒兹两卷（易走火入魔）</div></div>
+      <div style="background: #f3f0e8; padding: 18px 18px;"><div style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #8c2f24;">00:34–00:43</div><div style="margin-top: 6px; font-family: 'Noto Serif SC', serif; font-size: 19px;">② 类型电影 · 5 本</div><div style="margin-top: 8px; font-size: 14px; line-height: 1.8; color: #5a5e66;">奥特曼 → 沙茨（师生） · 纳雷摩尔《黑色电影》 · 西部片文化史 · 西特尼《幻象电影》</div></div>
+      <div style="background: #f3f0e8; padding: 18px 18px;"><div style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #8c2f24;">00:43–01:04</div><div style="margin-top: 6px; font-family: 'Noto Serif SC', serif; font-size: 19px;">③ 电影史与国别电影 · 13 本</div><div style="margin-top: 8px; font-size: 14px; line-height: 1.8; color: #5a5e66;">史学四维：美学／经济／技术／社会 · 日本、韩国、意大利、法国、德国 · 德巴克《迷影》 · 第三世界未选：可选书太少</div></div>
+      <div style="background: #f3f0e8; padding: 18px 18px;"><div style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #8c2f24;">01:04–01:25</div><div style="margin-top: 6px; font-family: 'Noto Serif SC', serif; font-size: 19px;">④ 好莱坞 · 13 本</div><div style="margin-top: 8px; font-size: 14px; line-height: 1.8; color: #5a5e66;">十卷本《美国电影史》五星 · 《古典好莱坞电影》、汉森 · 比斯金德：八卦写成史诗 · 沙茨《体制的天才》</div></div>
+      <div style="background: #f3f0e8; padding: 18px 18px;"><div style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #8c2f24;">01:25–01:56</div><div style="margin-top: 6px; font-family: 'Noto Serif SC', serif; font-size: 19px;">⑤ 影人传记与导演研究 · 14 本</div><div style="margin-top: 8px; font-size: 14px; line-height: 1.8; color: #5a5e66;">传记：戈达尔、侯麦、帕索里尼、罗西里尼、福特、卡赞、莱昂内 · 研究：巴赞论雷诺阿、奥蒙论伯格曼 · 伍德《重访希区柯克》重点</div></div>
+      <div style="background: rgba(140,47,36,0.1); padding: 18px 18px;"><div style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #8c2f24;">01:56–02:30</div><div style="margin-top: 6px; font-family: 'Noto Serif SC', serif; font-size: 19px;">⑥ 影评 · 13 本</div><div style="margin-top: 8px; font-size: 14px; line-height: 1.8; color: #5a5e66;">BFI 经典丛书 · 特吕福、凯尔、萨里斯、伊伯特 · 罗森鲍姆 vs 霍伯曼 · 达内、手册选集、香港影评</div></div>
+      <div style="background: #f3f0e8; padding: 18px 18px;"><div style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #8c2f24;">02:30–02:37</div><div style="margin-top: 6px; font-family: 'Noto Serif SC', serif; font-size: 19px;">⑦ 电影产业 · 5 本</div><div style="margin-top: 8px; font-size: 14px; line-height: 1.8; color: #5a5e66;">德瓦尼：电影业是赌博 · 派拉蒙案是错误 · 审查史、电影节研究</div></div>
+      <div style="background: #f3f0e8; padding: 18px 18px;"><div style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #8c2f24;">02:37–02:53</div><div style="margin-top: 6px; font-family: 'Noto Serif SC', serif; font-size: 19px;">⑧ 创作与技术 · 13 本</div><div style="margin-top: 8px; font-size: 14px; line-height: 1.8; color: #5a5e66;">麦基《故事》：“人物弧光”误译 · 阿德勒 vs 斯特拉斯伯格 · 剪辑、摄影、阿里洪 · 索特：计量电影学</div></div>
+      <div style="background: #f3f0e8; padding: 18px 18px;"><div style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #8c2f24;">02:53–03:07</div><div style="margin-top: 6px; font-family: 'Noto Serif SC', serif; font-size: 19px;">⑨ 访谈录 · 9 本</div><div style="margin-top: 8px; font-size: 14px; line-height: 1.8; color: #5a5e66;">《希区柯克与特吕福》是母版 · 博格丹诺维奇两本 · 布列松、帕索里尼、阿巴斯 · 《胡金铨武侠电影作法》</div></div>
+      <div style="background: rgba(140,47,36,0.16); padding: 18px 18px;"><div style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #8c2f24;">03:07–03:56</div><div style="margin-top: 6px; font-family: 'Noto Serif SC', serif; font-size: 19px;">⑩ 华语电影 · 约 35 本</div><div style="margin-top: 8px; font-size: 14px; line-height: 1.8; color: #5a5e66;">大陆：程季华、陈立、启之、张真 · 台湾：卢非易为中文最佳电影史 · 香港：波德维尔、张建德、冷战 · 王家卫、杜琪峰、白睿文</div></div>
+      <div style="background: #f3f0e8; padding: 18px 18px;"><div style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #8c2f24;">03:56–04:10</div><div style="margin-top: 6px; font-family: 'Noto Serif SC', serif; font-size: 19px;">结语：电影书与迷影</div><div style="margin-top: 8px; font-size: 14px; line-height: 1.8; color: #5a5e66;">电影书出版的兴衰 · 电影是否“反阅读” · 看电影助眠 vs 追剧亢奋 · 知识的纯精神快乐</div></div>
+    </div>
+  </section>
+
+  <section style="padding: 56px 90px 0;">
+    <div style="display: flex; align-items: baseline; gap: 18px;">
+      <div style="font-size: 13px; letter-spacing: 0.2em; color: #8c2f24;">书单背后的人</div>
+      <span style="margin-left: auto; font-size: 13px; color: #6b6f78;">头像自维基百科取图，可拖入自己的图片替换</span>
+    </div>
+    <div style="margin-top: 20px; display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px;">
+      <div><div style="position: relative; width: 100%; aspect-ratio: 1; background: #e3dfd4;"><image-slot id="bk-p-bazin" src="{{ pic.bazin }}" shape="circle" placeholder="巴赞"></image-slot></div><div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 15px;">巴赞</div><div style="font-size: 12px; color: #6b6f78;">不可逾越</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 1; background: #e3dfd4;"><image-slot id="bk-p-aumont" src="{{ pic.aumont }}" shape="circle" placeholder="雅克·奥蒙"></image-slot></div><div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 15px;">奥蒙</div><div style="font-size: 12px; color: #6b6f78;">阿吴推崇</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 1; background: #e3dfd4;"><image-slot id="bk-p-elsaesser" src="{{ pic.elsaesser }}" shape="circle" placeholder="埃尔塞瑟"></image-slot></div><div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 15px;">埃尔塞瑟</div><div style="font-size: 12px; color: #6b6f78;">“十项全能”</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 1; background: #e3dfd4;"><image-slot id="bk-p-bordwell" src="{{ pic.bordwell }}" shape="circle" placeholder="波德维尔"></image-slot></div><div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 15px;">波德维尔</div><div style="font-size: 12px; color: #6b6f78;">认知形式主义</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 1; background: #e3dfd4;"><image-slot id="bk-p-thompson" src="{{ pic.thompson }}" shape="circle" placeholder="克里斯汀·汤普森"></image-slot></div><div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 15px;">汤普森</div><div style="font-size: 12px; color: #6b6f78;">《世界电影史》</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 1; background: #e3dfd4;"><image-slot id="bk-p-deleuze" src="{{ pic.deleuze }}" shape="circle" placeholder="德勒兹"></image-slot></div><div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 15px;">德勒兹</div><div style="font-size: 12px; color: #6b6f78;">喜欢，但不推荐</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 1; background: #e3dfd4;"><image-slot id="bk-p-truffaut" src="{{ pic.truffaut }}" shape="circle" placeholder="特吕福"></image-slot></div><div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 15px;">特吕福</div><div style="font-size: 12px; color: #6b6f78;">错误前提，依然迷人</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 1; background: #e3dfd4;"><image-slot id="bk-p-godard" src="{{ pic.godard }}" shape="circle" placeholder="戈达尔"></image-slot></div><div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 15px;">戈达尔</div><div style="font-size: 12px; color: #6b6f78;">影评“有点装”</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 1; background: #e3dfd4;"><image-slot id="bk-p-rivette" src="{{ pic.rivette }}" shape="circle" placeholder="里维特"></image-slot></div><div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 15px;">里维特</div><div style="font-size: 12px; color: #6b6f78;">五虎里写得最好</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 1; background: #e3dfd4;"><image-slot id="bk-p-kael" src="{{ pic.kael }}" shape="circle" placeholder="宝琳·凯尔"></image-slot></div><div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 15px;">凯尔</div><div style="font-size: 12px; color: #6b6f78;">媒体影评典范</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 1; background: #e3dfd4;"><image-slot id="bk-p-ebert" src="{{ pic.ebert }}" shape="circle" placeholder="伊伯特"></image-slot></div><div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 15px;">伊伯特</div><div style="font-size: 12px; color: #6b6f78;">面向普通观众</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 1; background: #e3dfd4;"><image-slot id="bk-p-brando" src="{{ pic.brando }}" shape="circle" placeholder="白兰度"></image-slot></div><div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 15px;">白兰度</div><div style="font-size: 12px; color: #6b6f78;">表演是否存在</div></div>
+    </div>
+  </section>
+
+  <section style="padding: 56px 90px 0;">
+    <div style="display: flex; align-items: baseline; gap: 18px;">
+      <span style="font-family: 'Cormorant Garamond', serif; font-size: 26px; color: #8c2f24;">II</span>
+      <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 42px;">谁是谁的学生，谁影响了谁</h2>
+      <span style="margin-left: auto; font-size: 14px; letter-spacing: 0.18em; color: #6b6f78;">这期大量篇幅在讲师承关系</span>
+    </div>
+    <div style="margin-top: 12px; height: 1px; background: #1b1d22;"></div>
+
+    <div style="margin-top: 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 34px 46px;">
+      <sc-for list="{{ chains }}" as="ch" hint-placeholder-count="6">
+        <div>
+          <div style="font-size: 13px; letter-spacing: 0.18em; color: #6b6f78;">{{ ch.label }}</div>
+          <div style="margin-top: 10px; display: flex; align-items: stretch; gap: 8px; flex-wrap: wrap;">
+            <sc-for list="{{ ch.nodes }}" as="n" hint-placeholder-count="3">
+              <div style="flex: 1 1 0; min-width: 140px; border: 1px solid; border-color: {{ n.border }}; background: {{ n.bg }}; padding: 12px 14px;">
+                <div style="font-family: 'Noto Serif SC', serif; font-size: 17px; color: {{ n.ink }};">{{ n.name }}</div>
+                <div style="margin-top: 4px; font-size: 13px; line-height: 1.6; color: {{ n.sub }};">{{ n.note }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="margin-top: 26px; display: flex; gap: 28px; font-size: 13px; color: #6b6f78;">
+      <span><span style="display: inline-block; width: 12px; height: 12px; background: rgba(47,61,92,0.16); border: 1px solid rgba(47,61,92,0.5); margin-right: 8px;"></span>学者 / 评论人</span>
+      <span><span style="display: inline-block; width: 12px; height: 12px; background: rgba(140,47,36,0.14); border: 1px solid rgba(140,47,36,0.55); margin-right: 8px;"></span>创作者（导演 / 演员 / 表演教师）</span>
+    </div>
+  </section>
+
+  <section style="padding: 56px 90px 0;">
+    <div style="display: flex; align-items: baseline; gap: 18px;">
+      <span style="font-family: 'Cormorant Garamond', serif; font-size: 26px; color: #8c2f24;">III</span>
+      <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 42px;">核心观点</h2>
+    </div>
+    <div style="margin-top: 12px; height: 1px; background: #1b1d22;"></div>
+
+    <div style="margin-top: 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 34px 46px;">
+      <div style="border-top: 2px solid #2f3d5c; padding-top: 18px;">
+        <div style="font-family: 'Noto Serif SC', serif; font-size: 24px;">理论取向</div>
+        <div style="margin-top: 14px; display: grid; gap: 10px; font-size: 16px; line-height: 1.85; color: #3c3f47;">
+          <div>阿吴对奥蒙和埃尔塞瑟推崇备至。他称埃尔塞瑟是“十项全能”，认为卡塞蒂和奥蒙都比不上他。</div>
+          <div>两人都认为巴赞的《电影是什么》不可逾越，但也承认“完整电影神话”这类观点已经过时。</div>
+          <div>阿吴很喜欢德勒兹，但不推荐德勒兹的两卷书，理由是读起来容易“走火入魔”。</div>
+          <div>老马不认同戴尔《明星》所用的符号学方法。</div>
+        </div>
+      </div>
+      <div style="border-top: 2px solid #2f3d5c; padding-top: 18px;">
+        <div style="font-family: 'Noto Serif SC', serif; font-size: 24px;">对好莱坞的看法</div>
+        <p style="margin: 14px 0 0; font-size: 16px; line-height: 1.85; color: #3c3f47;">老马偏向沙茨和波德维尔的“体制论”，认为资本与创意之间并非简单的对立。他也赞同德瓦尼“电影业是赌博”的说法，把各种票房成功的事后总结一律斥为“马后炮”。</p>
+        <div style="margin-top: 26px; font-family: 'Noto Serif SC', serif; font-size: 24px;">创作与表演</div>
+        <div style="margin-top: 14px; display: grid; gap: 10px; font-size: 16px; line-height: 1.85; color: #3c3f47;">
+          <div>老马吐槽麦基《故事》的中译本把关键概念译成“人物弧光”，应改为“人物弧线”。</div>
+          <div>周传基晚年后悔翻译阿里洪的书，因为读者把它当成了教条。</div>
+          <div>老马借白兰度的例子再次质疑“电影表演”是否真的存在：同一段表演，换了导演和摄影师，效果会完全不同。</div>
+        </div>
+      </div>
+      <div style="border-top: 2px solid #8c2f24; padding-top: 18px;">
+        <div style="font-family: 'Noto Serif SC', serif; font-size: 24px;">影评观</div>
+        <div style="margin-top: 14px; display: grid; gap: 10px; font-size: 16px; line-height: 1.85; color: #3c3f47;">
+          <div>老马反对“影评没有门槛”的说法。</div>
+          <div>特吕福的影评常常是“从错误前提推出错误结论”，却依然迷人。</div>
+          <div>凯尔的文风近于网络上的“阴阳怪气”，却是媒体影评的典范。</div>
+          <div>伊伯特是面向普通观众写作的好榜样。</div>
+          <div>阿吴认为手册五虎里里维特的影评写得最好，戈达尔的影评“有点装”。</div>
+        </div>
+      </div>
+      <div style="border-top: 2px solid #8c2f24; padding-top: 18px;">
+        <div style="font-family: 'Noto Serif SC', serif; font-size: 24px;">华语部分</div>
+        <div style="margin-top: 14px; display: grid; gap: 10px; font-size: 16px; line-height: 1.85; color: #3c3f47;">
+          <div>卢非易的《台湾电影：政治、经济、美学》被评为中文世界最好的电影史专著。</div>
+          <div>程季华的《中国电影发展史》评价已经不能看，只剩下史料价值。</div>
+          <div>对 17 年电影和文革电影的研究，两人首推启之（吴迪）的著作，认为“街上能随便买到的书就肯定不行”。</div>
+          <div>两人对张建德、李翰祥、王家卫都有直接批评：张建德的理论是生搬硬套，李翰祥格调不高，王家卫过于保守、排斥政治。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 56px 90px 0;">
+    <div style="display: flex; align-items: baseline; gap: 18px;">
+      <span style="font-family: 'Cormorant Garamond', serif; font-size: 26px; color: #8c2f24;">IV</span>
+      <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 42px;">书单</h2>
+      <span style="margin-left: auto; font-size: 14px; letter-spacing: 0.18em; color: #6b6f78;">按板块整理，约 130 本，含顺带提及的</span>
+    </div>
+    <div style="margin-top: 12px; height: 1px; background: #1b1d22;"></div>
+
+    <div style="margin-top: 30px; display: grid; grid-template-columns: 200px 1fr; gap: 1px; background: rgba(27,29,34,0.22);">
+      <sc-for list="{{ booklist }}" as="row" hint-placeholder-count="13">
+        <div style="display: grid; grid-template-columns: 200px 1fr; gap: 1px; grid-column: 1 / -1; background: rgba(27,29,34,0.22);">
+          <div style="background: {{ row.head }}; padding: 18px 20px; font-family: 'Noto Serif SC', serif; font-size: 19px;">{{ row.name }}</div>
+          <div style="background: {{ row.body }}; padding: 18px 22px; font-size: 16px; line-height: 1.95; color: #34373e;">{{ row.books }}</div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="margin-top: 16px; font-size: 14px; line-height: 1.8; color: #6b6f78;">ASR 无法百分之百还原他们的原始书单。以上书名和人名已按上下文勘误，“（疑）”表示不太确定的地方。</div>
+  </section>
+
+  <section style="padding: 56px 90px 0;">
+    <div style="display: flex; align-items: baseline; gap: 18px;">
+      <span style="font-family: 'Cormorant Garamond', serif; font-size: 26px; color: #8c2f24;">V</span>
+      <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 42px;">被点到名的人</h2>
+      <span style="margin-left: auto; font-size: 14px; letter-spacing: 0.18em; color: #6b6f78;">按身份分组</span>
+    </div>
+    <div style="margin-top: 12px; height: 1px; background: #1b1d22;"></div>
+
+    <div style="margin-top: 30px; display: grid; gap: 28px;">
+      <sc-for list="{{ people }}" as="g" hint-placeholder-count="5">
+        <div style="display: grid; grid-template-columns: 180px 1fr; gap: 28px; align-items: start; border-bottom: 1px solid rgba(27,29,34,0.18); padding-bottom: 24px;">
+          <div><div style="font-family: 'Noto Serif SC', serif; font-size: 22px;">{{ g.name }}</div><div style="font-family: 'Cormorant Garamond', serif; font-size: 22px; color: #8c2f24;">{{ g.count }}</div></div>
+          <div style="font-family: 'Noto Serif SC', serif; font-size: 21px; line-height: 1.95; color: #34373e;">{{ g.names }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding: 56px 90px 0;">
+    <div style="display: flex; align-items: baseline; gap: 18px;">
+      <span style="font-family: 'Cormorant Garamond', serif; font-size: 26px; color: #8c2f24;">VI</span>
+      <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 42px;">顺带提到的电影</h2>
+      <span style="margin-left: auto; font-size: 14px; letter-spacing: 0.18em; color: #6b6f78;">约 70 部</span>
+    </div>
+    <div style="margin-top: 12px; height: 1px; background: #1b1d22;"></div>
+
+    <div style="margin-top: 30px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(27,29,34,0.22);">
+      <div style="background: rgba(47,61,92,0.1); padding: 20px 22px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 20px;">经典西片</div><div style="margin-top: 12px; font-size: 16px; line-height: 2; color: #34373e;">《夜长梦多》《爱到天堂》（1945）《夺魂索》《侠骨柔情》《红河》《归途路迢迢》《双虎屠龙》《游戏时间》《大河》《M 就是凶手》《大都会》《公民凯恩》《七武士》《奥林匹亚》《迷魂记》《惊魂记》《辣手摧花》《后窗》《成功的甜蜜滋味》《贪婪》《离魂异客》《轻蔑》《大开眼界》《非洲女王号》《猎人之夜》《秋日奏鸣曲》《美第奇时代》《愤怒的葡萄》《特写》《飞向太空》《马戏团》</div></div>
+      <div style="background: #f3f0e8; padding: 20px 22px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 20px;">好莱坞与产业</div><div style="margin-top: 12px; font-size: 16px; line-height: 2; color: #34373e;">《愤怒的公牛》《最后的华尔兹》《洛奇》《喜剧之王》（1982）《一个国家的诞生》《乱世佳人》《十诫》《星球大战》《侏罗纪公园》《星期五女郎》《犯罪都市》（The Front Page）《码头风云》《欲望号街车》《教父》《教父 2》《天堂之日》《我的左脚》《阿甘正传》《寄生虫》</div></div>
+      <div style="background: rgba(140,47,36,0.1); padding: 20px 22px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 20px;">华语</div><div style="margin-top: 12px; font-size: 16px; line-height: 2; color: #34373e;">《劳工之爱情》《舞台姐妹》《再会吧，上海》《苏州河》《小武》《十七岁的单车》《海上花》《儿子的大玩偶》《卧虎藏龙》《重庆森林》《一代宗师》《枪火》《倩女幽魂》（李翰祥版及徐克版）《美人计》《新婚第一夜》《刀马旦》《客途秋恨》《辣手神探》《喋血街头》《PTU》《无间道》《阮玲玉》《侠女》《英雄本色》《春光乍泄》《东邪西毒》《浮世恋曲》《金猴降妖》；剧集《大时代》</div></div>
+    </div>
+  </section>
+
+  <footer style="margin-top: 56px; padding: 52px 90px 64px; border-top: 3px double #1b1d22; background: rgba(47,61,92,0.06);">
+    <div style="display: grid; grid-template-columns: 1.15fr 1fr; gap: 54px; align-items: start;">
+      <div>
+        <div style="font-size: 13px; letter-spacing: 0.2em; color: #8c2f24;">结语 · 电影是否“反阅读”</div>
+        <div style="margin-top: 14px; font-family: 'Noto Serif SC', serif; font-size: 32px; line-height: 1.6; text-wrap: pretty;">他们举了戈达尔反感德勒兹、金宇澄不爱看电影两个例子，结论是读书和看片必须双管齐下，谁也替代不了谁。</div>
+      </div>
+      <div style="display: grid; gap: 22px;">
+        <div style="border-top: 2px solid rgba(27,29,34,0.5); padding-top: 14px; font-size: 16px; line-height: 1.9; color: #3c3f47;">老马多年来靠晚上看电影助眠；追剧则会让人又累又亢奋，他三天看完《大时代》就是例子。</div>
+        <div style="border-top: 2px solid rgba(27,29,34,0.5); padding-top: 14px; font-family: 'Noto Serif SC', serif; font-size: 22px; line-height: 1.7;">两人都认为，钻研电影是一种没有功利目的的纯精神快乐。</div>
+      </div>
+    </div>
+    <div style="margin-top: 40px; display: flex; justify-content: space-between; align-items: baseline; font-size: 14px; letter-spacing: 0.16em; color: #6b6f78;">
+      <span>电影巨辩 · 书单专期 · 内容整理自节目转录，人物提及次数为近似值</span>
+      <span style="font-family: 'Cormorant Garamond', serif; font-size: 20px; letter-spacing: 0.06em; color: #8c2f24;">129 books · one cinephile syllabus</span>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1400},&quot;showChains&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;版块&quot;}}">
+const SCHOLAR = { bg: 'rgba(47,61,92,0.12)', border: 'rgba(47,61,92,0.45)', ink: '#22304d', sub: '#4f5a70' };
+const MAKER = { bg: 'rgba(140,47,36,0.1)', border: 'rgba(140,47,36,0.5)', ink: '#7d291f', sub: '#7a4a42' };
+
+function n(name, note, kind) {
+  const t = kind === 'm' ? MAKER : SCHOLAR;
+  return { name: name, note: note, bg: t.bg, border: t.border, ink: t.ink, sub: t.sub };
+}
+
+const CHAINS = [
+  { label: '法国批评传统与作者论', nodes: [n('巴赞', '《电影手册》精神之父'), n('手册派', '特吕福·戈达尔等', 'm'), n('萨里斯', '作者论带回美国')] },
+  { label: '巴黎三大学派', nodes: [n('奥蒙 / 玛丽', '三大电影系开创者'), n('卡塞蒂', '三大培养，后赴美')] },
+  { label: '美国形式主义', nodes: [n('达德利·安德鲁', '法国电影专家'), n('波德维尔', '认知形式主义'), n('乌登 / 詹金斯', '波德维尔的学生')] },
+  { label: '类型研究', nodes: [n('里克·奥特曼', '类型理论开拓者'), n('托马斯·沙茨', '爱荷华时期学生'), n('巴赞', '「体制的天才」出处')] },
+  { label: '芝加哥学派', nodes: [n('阿多诺', '法兰克福学派'), n('米莲姆·汉森', '白话现代主义'), n('张真 / 包卫红', '芝大华人学生'), n('沙丹', '《银幕艳史》译者')] },
+  { label: '早期电影史', nodes: [n('爱森斯坦', '导演 / 理论家', 'm'), n('陈立 Leyda', '美国电影史学奠基人'), n('汤姆·甘宁', '汉森带入芝大')] },
+  { label: '中国视听语言', nodes: [n('诺埃尔·伯奇', '《电影实践理论》'), n('周传基', '译伯奇 / 阿里洪'), n('阿里洪', '《电影语言的语法》')] },
+  { label: '方法派表演', nodes: [n('斯坦尼', '晚年修正体系', 'm'), n('斯特拉·阿德勒', '亲炙五周', 'm'), n('白兰度 / 德尼罗', '认阿德勒为师', 'm')] },
+  { label: '方法派表演（另一支）', nodes: [n('斯坦尼', '情绪记忆', 'm'), n('斯特拉斯伯格', '演员工作室', 'm'), n('帕西诺 / 梦露', '迪恩·纽曼…', 'm')] },
+  { label: '德国表现主义', nodes: [n('朗格卢瓦', '法国资料馆'), n('洛特·艾斯纳', '《闹鬼的银幕》'), n('赫尔佐格', '徒步探病', 'm')] }
+];
+
+const BOOKLIST = [
+  ['① 理论', '巴赞《电影是什么》（崔君衍译）；奥蒙、玛丽《当代电影分析》（吴珮慈译）；波德维尔、汤普森《电影艺术：形式与风格》（曾伟祯译；对比贾内梯《认识电影》，不推荐）；卡塞蒂《电影理论1945–1995》《世纪之眼》；杨远婴编《电影理论读本》；奥蒙、玛丽《电影理论与批评辞典》；海沃德《电影研究关键词》；奥蒙《电影导演的电影理论》（推荐蔡文晟译本）；伯奇《电影实践理论》；《电影声音：理论与实践》；希翁《声音》；埃尔塞瑟《作为媒介考古学的电影史》；戴尔《明星》；纳雷摩尔《电影中的表演》；李洋编《宽忍的灰色黎明》'],
+  ['② 类型', '奥特曼《电影/类型》；沙茨《好莱坞类型电影》；纳雷摩尔《黑色电影：历史、批评与风格》；《西部电影的发明》（文化史）；西特尼《幻象电影》'],
+  ['③ 电影史', '艾伦、戈梅里《电影史：理论与实践》（李迅译）；汤普森、波德维尔《世界电影史》；《牛津世界电影史》；佐藤忠男《日本电影史》；《韩国电影史：从开化期到开花期》；邦达内拉《意大利电影》；安德鲁《悔恨之雾》（Mists of Regret）；玛丽《法国新浪潮》；《当代法国电影指南》；德巴克《迷影》；埃尔塞瑟《魏玛电影及之后》《新德国电影史》；艾斯纳《闹鬼的银幕》'],
+  ['④ 好莱坞', '十卷本《美国电影史》；Wiley 四卷本美国电影史；《古典好莱坞电影》及续作《好莱坞的叙事之道》；汉森《巴别塔与巴比伦》；《新好莱坞电影导论》；比斯金德《逍遥骑士，愤怒公牛》《低俗电影》；罗森鲍姆《电影战争》；伍德《从越战到里根时代的好莱坞》；布朗洛《游行已经过去》（The Parade’s Gone By）；沙茨《体制的天才》；《史诗、奇观与大片》'],
+  ['⑤ 影人', '麦凯布《戈达尔：70岁艺术家的肖像》；德巴克《侯麦传》；《帕索里尼传：安魂曲》；加拉格尔《罗西里尼的冒险》；艾曼《印刷传奇：约翰·福特》；《卡赞自传》（顺带提到伯格曼《魔灯》、布努埃尔《我的最后一口气》、黑泽明《蛤蟆的油》）；弗雷林《赛尔乔·莱昂内传》；巴赞《让·雷诺阿》；奥蒙《英格玛·伯格曼》；伍德《重访希区柯克》（徐展雄译）；波德维尔论德莱叶、小津、爱森斯坦三书；甘宁《弗里茨·朗的电影》'],
+  ['⑥ 影评', 'BFI 电影经典丛书；特吕福《我生命中的电影》；凯尔《电影时代》；萨里斯《美国电影》；伊伯特《伟大的电影》系列；罗森鲍姆《电影精华》；霍伯曼《庸俗的现代主义》；《艾吉论电影》；《法伯论电影》（《白象艺术与白蚁艺术》）；达内《电影的家与世界》；《电影手册》英文选集四卷；罗卡编《六十风尚：〈中国学生周报〉影评十年》；李焯桃《淋漓影像馆》'],
+  ['⑦ 产业', '巴里奥编《美国电影工业》；德瓦尼《好莱坞经济学》；刘立行《国家电影制度》；维滕克勒《银幕自由》（电影审查史）；德·法尔克《电影节：历史、理论、方法、实践》'],
+  ['⑧ 创作', '麦基《故事》；悉德·菲尔德《电影剧本写作基础》；戈德曼《编剧》（续作《我说了什么谎》）；阿德勒《表演的艺术》；赖兹《电影剪辑技巧》；默奇《眨眼之间》《剪辑之道》；克里滕登《欧洲剪辑大师访谈录》；阿里洪《电影语言的语法》；阿尔门德罗斯《摄影师手记》；《欧洲电影摄影百年史》画册；夏布洛尔《如何拍电影》；索特《电影风格与技术》'],
+  ['⑨ 访谈', '《希区柯克与特吕福对话录》；克罗《对话比利·怀尔德》；博格丹诺维奇《我是奥逊·威尔斯》《谁拍了这部电影》；《电影的节奏是心跳：布列松谈话录》；《异端的影像：帕索里尼访谈录》；《樱桃的滋味：阿巴斯谈电影》；《胡金铨武侠电影作法》；Backstory 编剧访谈五卷'],
+  ['⑩ 华语 · 大陆', '程季华等《中国电影发展史》；陈立《电影：中国电影与观众》（Dianying）；叶月瑜编《华语电影工业》；李道新《中国电影批评史》；杨远婴编《北影记事》（疑）；启之《人民电影》《中国电影：一个制度与观念的历史》《中西风马牛》；张真《银幕艳史》（沙丹等译）；罗雪莹《回望纯真年代》；倪震《北京电影学院故事》；张献民《看不见的影像》', 1],
+  ['⑩ 华语 · 台湾', '卢非易《台湾电影：政治、经济、美学》；《台湾电影年鉴》；《跨世纪台湾电影实录》；叶月瑜、戴乐为《台湾电影百年漂流》；《杨德昌的电影世界》；《再见杨德昌》；乌登《无人是孤岛》；谢世宗论侯孝贤（疑）；白睿文《煮海时光》；李翰祥《三十年细说从头》', 1],
+  ['⑩ 华语 · 香港', '波德维尔《香港电影的秘密》（修订版由香港电影评论学会出版）；张建德《香港电影：额外的维度》（苏涛译）；李培德、黄爱玲编《冷战与香港电影》；傅葆石《香港的“中国”：邵氏电影》；《国泰故事》；《风起潮涌》（七十年代港片）；《超前与跨越：胡金铨与张爱玲》；《乘风变化：嘉禾电影研究》；《溜走的激情》（八十年代港片）；港大“新香港电影”丛书；陈清伟《香港电影工业结构及市场分析》；王家卫英文访谈录（WKW）；《银河映像，难以想像》；白睿文《光影言语》', 1]
+];
+
+const PEOPLE_GROUPS = [
+  ['学者', '奥蒙、米歇尔·玛丽、波德维尔、克里斯汀·汤普森、卡塞蒂、埃尔塞瑟、汉森、甘宁、齐维安、沙茨、奥特曼、达德利·安德鲁、纳雷摩尔、德巴克、伯奇、希翁、戴尔、海沃德、米特里、麦茨、雷蒙·贝卢尔、卡维尔、德勒兹、巴特、巴迪欧、福柯、基特勒、克拉考尔、艾斯纳、布朗洛、陈立、萨杜尔、索特、乌登、詹金斯、夏志清、四方田犬彦、周蕾、尼克·布朗'],
+  ['影评人', '巴赞、特吕福、里维特、戈达尔、夏布洛尔、达内、凯尔、萨里斯、伊伯特、罗森鲍姆、霍伯曼、罗宾·伍德、理查德·利佩、艾吉、法伯、麦克唐纳、A.O.斯科特、郑圣一、李焯桃、罗卡、何思颖、蒲锋、黄爱玲'],
+  ['导演', '戈达尔、侯麦、雷诺阿、罗西里尼、帕索里尼、伯格曼、布列松、爱森斯坦、希区柯克、福特、霍克斯、弗里茨·朗、卡赞、莱昂内、怀尔德、威尔斯、斯科塞斯、阿尔特曼、比蒂、德帕尔玛、阿巴斯、塔可夫斯基、法斯宾德、赫尔佐格、奉俊昊、侯孝贤、杨德昌、李安、蔡明亮、王家卫、杜琪峰、胡金铨、李翰祥、张彻、谢晋、张艺谋、王小帅、娄烨、贾樟柯、陈耀成、许鞍华、严浩、许冠文'],
+  ['演员与表演教师', '白兰度、德尼罗、帕西诺、纽曼、迪恩、梦露、英格丽·褒曼、凯瑟琳·赫本、斯坦尼斯拉夫斯基、阿德勒、斯特拉斯伯格、迈斯纳'],
+  ['国内相关人士', '周传基、崔君衍、李迅、杨远婴、李洋、蔡文晟、吴珮慈、启之（吴迪）、倪震、张献民、李道新、石川、苏涛、叶航、沙丹（奇爱博士）、101（老姚）、九仓、金宇澄、芦苇、周铁东']
+];
+
+const PORTRAITS = {
+  bazin: ['安德烈·巴赞', 'André Bazin'],
+  aumont: ['', 'Jacques Aumont'],
+  elsaesser: ['', 'Thomas Elsaesser'],
+  bordwell: ['大卫·波德维尔', 'David Bordwell'],
+  thompson: ['克莉絲汀·湯普森', 'Kristin Thompson'],
+  deleuze: ['吉尔·德勒兹', 'Gilles Deleuze'],
+  truffaut: ['弗朗索瓦·特吕弗', 'François Truffaut'],
+  godard: ['让-吕克·戈达尔', 'Jean-Luc Godard'],
+  rivette: ['雅克·里维特', 'Jacques Rivette'],
+  kael: ['寶琳·凱爾', 'Pauline Kael'],
+  ebert: ['罗杰·艾伯特', 'Roger Ebert'],
+  brando: ['马龙·白兰度', 'Marlon Brando']
+};
+const API = { zh: 'https://zh.wikipedia.org/w/api.php', en: 'https://en.wikipedia.org/w/api.php' };
+
+class Component extends DCLogic {
+  state = { img: {} };
+
+  componentDidMount() { this.loadImages(); }
+
+  async pageImages(lang, titles) {
+    const list = titles.filter(Boolean);
+    if (!list.length) return () => '';
+    const url = API[lang] + '?action=query&format=json&origin=*&redirects=1&prop=pageimages'
+      + '&piprop=thumbnail&pithumbsize=720&titles=' + encodeURIComponent(list.join('|'));
+    const q = (await (await fetch(url)).json()).query || {};
+    const byTitle = {};
+    Object.keys(q.pages || {}).forEach(k => {
+      const p = q.pages[k];
+      if (p && p.thumbnail && p.thumbnail.source) byTitle[p.title] = p.thumbnail.source;
+    });
+    const alias = {};
+    (q.normalized || []).forEach(x => { alias[x.from] = x.to; });
+    (q.redirects || []).forEach(r => { alias[r.from] = r.to; });
+    return t => byTitle[alias[t] || t] || byTitle[t] || '';
+  }
+
+  async loadImages() {
+    const out = {};
+    const keys = Object.keys(PORTRAITS);
+    try {
+      const zh = await this.pageImages('zh', keys.map(k => PORTRAITS[k][0]));
+      keys.forEach(k => { out[k] = zh(PORTRAITS[k][0]); });
+      const missing = keys.filter(k => !out[k]);
+      if (missing.length) {
+        const en = await this.pageImages('en', missing.map(k => PORTRAITS[k][1]));
+        missing.forEach(k => { out[k] = en(PORTRAITS[k][1]); });
+      }
+      this.setState({ img: out });
+    } catch (e) {
+      console.warn('portrait lookup failed', e);
+    }
+  }
+
+  renderVals() {
+    const img = this.state.img;
+    const pic = {};
+    Object.keys(PORTRAITS).forEach(k => { pic[k] = img[k] || ''; });
+    return {
+      pic: pic,
+      chains: CHAINS,
+      booklist: BOOKLIST.map((r, i) => ({
+        name: r[0],
+        books: r[1],
+        head: r[2] ? 'rgba(140,47,36,0.14)' : (i % 2 ? 'rgba(47,61,92,0.13)' : 'rgba(47,61,92,0.07)'),
+        body: r[2] ? 'rgba(140,47,36,0.05)' : (i % 2 ? '#f0ece3' : '#f3f0e8')
+      })),
+      people: PEOPLE_GROUPS.map(g => ({
+        name: g[0],
+        names: g[1],
+        count: g[1].split('、').length + ' 人'
+      }))
+    };
+  }
+}
+</script>
+</body>
+</html>

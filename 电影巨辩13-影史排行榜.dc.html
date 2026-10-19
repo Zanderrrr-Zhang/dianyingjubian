@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  body { margin: 0; background: #0b0e15; }
+  a { color: #c9923f; }
+  a:hover { color: #e0b063; }
+</style>
+</helmet>
+<div style="width: 1400px; background: #12161f; color: #eae6dc; font-family: 'Noto Sans SC', sans-serif;">
+
+  <header style="padding: 58px 90px 48px; border-bottom: 1px solid rgba(234,230,220,0.28);">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; font-size: 15px; letter-spacing: 0.22em; color: #c9923f;">
+      <span>电影巨辩 · 第 13 期 · 2024 年第 2 期</span>
+      <span>约 4 小时 17 分 · 老马 / 阿吴</span>
+    </div>
+    <div style="margin-top: 30px; display: grid; grid-template-columns: 1fr 420px; gap: 54px; align-items: end;">
+      <div>
+        <h1 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 100px; line-height: 1.03; letter-spacing: -0.02em;">影史排行榜的<br>诞生与颠覆</h1>
+        <div style="margin-top: 16px; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 34px; color: #5b9c93;">how a canon is made &nbsp;·&nbsp; and unmade</div>
+      </div>
+      <div style="border-left: 1px solid rgba(234,230,220,0.28); padding-left: 28px;">
+        <div style="font-size: 13px; letter-spacing: 0.2em; color: #c9923f;">核心问题</div>
+        <div style="margin-top: 12px; font-family: 'Noto Serif SC', serif; font-size: 26px; line-height: 1.65;">经典电影是怎么来的？谁来认定？认定的过程是什么？</div>
+        <div style="margin-top: 18px; font-size: 15px; line-height: 1.85; color: #a9a49a;">主线是《视与听》十年一次的影史十佳投票，按年代梳理「经典化」的机制，最后落到华语世界的榜单。</div>
+      </div>
+    </div>
+    <div style="margin-top: 34px; padding: 20px 24px; border: 1px solid rgba(91,156,147,0.45); background: rgba(91,156,147,0.08); font-family: 'Noto Serif SC', serif; font-size: 25px; line-height: 1.65; max-width: 1100px;">节目的立场：电影史还没有「永恒经典」。重要的不是判定经典，而是理解经典为何成立、让观念保持流动。</div>
+  </header>
+
+  <section style="padding: 56px 90px 0;">
+    <div style="display: flex; align-items: baseline; gap: 18px;">
+      <span style="font-family: 'Cormorant Garamond', serif; font-size: 26px; color: #c9923f;">I</span>
+      <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 42px;">整期结构</h2>
+      <span style="margin-left: auto; font-size: 14px; letter-spacing: 0.18em; color: #80877f;">六个一级分支</span>
+    </div>
+    <div style="margin-top: 12px; height: 1px; background: linear-gradient(to right, #c9923f, rgba(234,230,220,0.18));"></div>
+
+    <div style="margin-top: 30px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(234,230,220,0.2);">
+      <div style="background: #12161f; padding: 20px 22px;"><div style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #5b9c93;">开场</div><div style="margin-top: 6px; font-family: 'Noto Serif SC', serif; font-size: 20px;">播客半年回顾</div><div style="margin-top: 10px; font-size: 15px; line-height: 1.85; color: #9a958b;">不做《繁花》长节目，理由是后期变成了主旋律味道的文旅产品。专业性与受众面之间的权衡。给新听众推荐往期：第 1 期主旋律、第 7 期三大电影节、第 11 期金马奖、1997 那期。</div></div>
+      <div style="background: #12161f; padding: 20px 22px;"><div style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #5b9c93;">年度榜单现象</div><div style="margin-top: 6px; font-family: 'Noto Serif SC', serif; font-size: 20px;">热度榜与媒体榜</div><div style="margin-top: 10px; font-size: 15px; line-height: 1.85; color: #9a958b;">IMDb 与豆瓣的热度榜；媒体榜：《电影手册》《视与听》《Film Comment》《电影旬报》。手册的作者论传统与式微。</div></div>
+      <div style="background: #12161f; padding: 20px 22px;"><div style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #5b9c93;">理论框架</div><div style="margin-top: 6px; font-family: 'Noto Serif SC', serif; font-size: 20px;">经典是什么</div><div style="margin-top: 10px; font-size: 15px; line-height: 1.85; color: #9a958b;">经典的三种类型；canon 的词源从宗教到世俗；卡尔维诺的十四条与布鲁姆《西方正典》；电影经典不等于文学经典。</div></div>
+      <div style="background: rgba(201,146,63,0.1); padding: 20px 22px;"><div style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #c9923f;">经典化的影响因素</div><div style="margin-top: 6px; font-family: 'Noto Serif SC', serif; font-size: 20px;">九个变量</div><div style="margin-top: 10px; font-size: 15px; line-height: 1.85; color: #a9a49a;">负面：技术迭代造成的观看障碍、商业片易过时。正面：影评人与媒体、电影节与奖项（作用被高估）、传播与重映修复（最易被忽视）、影响的焦虑。</div></div>
+      <div style="background: rgba(201,146,63,0.16); padding: 20px 22px;"><div style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #c9923f;">视与听投票编年史</div><div style="margin-top: 6px; font-family: 'Noto Serif SC', serif; font-size: 20px;">1941 – 2022</div><div style="margin-top: 10px; font-size: 15px; line-height: 1.85; color: #a9a49a;">前史；1952《偷自行车的人》；1962《公民凯恩》登顶；1972 艺术片大师定型；1982 万神殿封闭；1992 小津上位；2002；2012《迷魂记》；2022《让娜·迪尔曼》。</div></div>
+      <div style="background: rgba(91,156,147,0.1); padding: 20px 22px;"><div style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #5b9c93;">华语世界的榜单</div><div style="margin-top: 6px; font-family: 'Noto Serif SC', serif; font-size: 20px;">两岸三地各自为政</div><div style="margin-top: 10px; font-size: 15px; line-height: 1.85; color: #9a958b;">2012 华语影评人影史十佳；《小城之春》与《花样年华》的内外反差；2019 本世纪华语 20 佳；互联网与豆瓣。收尾：电影是最全球化的艺术；历史不会自动公正。</div></div>
+    </div>
+  </section>
+
+  <section style="padding: 56px 90px 0;">
+    <div style="display: flex; align-items: baseline; gap: 18px;">
+      <span style="font-family: 'Cormorant Garamond', serif; font-size: 26px; color: #c9923f;">II</span>
+      <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 42px;">经典的三种类型</h2>
+      <span style="margin-left: auto; font-size: 14px; letter-spacing: 0.18em; color: #80877f;">阿吴提出的分类</span>
+    </div>
+    <div style="margin-top: 12px; height: 1px; background: linear-gradient(to right, #c9923f, rgba(234,230,220,0.18));"></div>
+
+    <div style="margin-top: 30px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px;">
+      <div style="border: 1px solid rgba(234,230,220,0.28); padding: 24px 26px;">
+        <div style="font-family: 'Cormorant Garamond', serif; font-size: 30px; color: #c9923f;">①</div>
+        <div style="margin-top: 6px; font-family: 'Noto Serif SC', serif; font-size: 26px;">大众型经典</div>
+        <div style="margin-top: 16px; font-size: 13px; letter-spacing: 0.18em; color: #80877f;">评定者</div>
+        <div style="margin-top: 6px; font-size: 16px; color: #d2cdc3;">普通观众、票房</div>
+        <div style="margin-top: 14px; font-size: 13px; letter-spacing: 0.18em; color: #80877f;">代表作</div>
+        <div style="margin-top: 6px; font-family: 'Noto Serif SC', serif; font-size: 18px; line-height: 1.8;">《大白鲨》《星球大战》《音乐之声》《肖申克的救赎》</div>
+        <div style="margin-top: 14px; font-size: 13px; letter-spacing: 0.18em; color: #80877f;">代表榜单</div>
+        <div style="margin-top: 6px; font-size: 16px; color: #d2cdc3;">英国《帝国》杂志、IMDb、豆瓣</div>
+      </div>
+      <div style="border: 1px solid rgba(201,146,63,0.6); background: rgba(201,146,63,0.1); padding: 24px 26px;">
+        <div style="font-family: 'Cormorant Garamond', serif; font-size: 30px; color: #c9923f;">②</div>
+        <div style="margin-top: 6px; font-family: 'Noto Serif SC', serif; font-size: 26px;">公民凯恩式经典</div>
+        <div style="margin-top: 16px; font-size: 13px; letter-spacing: 0.18em; color: #a08850;">评定者</div>
+        <div style="margin-top: 6px; font-size: 16px; color: #e0dbd1;">专业影评人、学者</div>
+        <div style="margin-top: 14px; font-size: 13px; letter-spacing: 0.18em; color: #a08850;">代表作</div>
+        <div style="margin-top: 6px; font-family: 'Noto Serif SC', serif; font-size: 18px; line-height: 1.8;">《公民凯恩》《游戏规则》《东京物语》</div>
+        <div style="margin-top: 14px; font-size: 13px; letter-spacing: 0.18em; color: #a08850;">代表榜单</div>
+        <div style="margin-top: 6px; font-size: 16px; color: #e0dbd1;">《视与听》、学术著作、教科书</div>
+      </div>
+      <div style="border: 1px solid rgba(234,230,220,0.28); padding: 24px 26px;">
+        <div style="font-family: 'Cormorant Garamond', serif; font-size: 30px; color: #c9923f;">③</div>
+        <div style="margin-top: 6px; font-family: 'Noto Serif SC', serif; font-size: 26px;">亚文化经典</div>
+        <div style="margin-top: 16px; font-size: 13px; letter-spacing: 0.18em; color: #80877f;">评定者</div>
+        <div style="margin-top: 6px; font-size: 16px; color: #d2cdc3;">特定影迷群体</div>
+        <div style="margin-top: 14px; font-size: 13px; letter-spacing: 0.18em; color: #80877f;">代表作</div>
+        <div style="margin-top: 6px; font-family: 'Noto Serif SC', serif; font-size: 18px; line-height: 1.8;">恐怖片、科幻片经典</div>
+        <div style="margin-top: 14px; font-size: 13px; letter-spacing: 0.18em; color: #80877f;">代表榜单</div>
+        <div style="margin-top: 6px; font-size: 16px; color: #d2cdc3;">类型迷社群</div>
+      </div>
+    </div>
+    <div style="margin-top: 22px; display: grid; grid-template-columns: 1fr 1fr; gap: 26px; font-size: 16px; line-height: 1.85; color: #a9a49a;">
+      <div style="border-left: 2px solid #5b9c93; padding-left: 18px;">AFI 1998 百大美国电影是 ① 与 ② 的混合。</div>
+      <div style="border-left: 2px solid #5b9c93; padding-left: 18px;">地区差异：美国三套系统都有很大影响力；欧洲（以法国为代表）基本只有第二类，因为精英讨论一直出现在主流媒体上。</div>
+    </div>
+  </section>
+
+  <section style="padding: 56px 90px 0;">
+    <div style="display: flex; align-items: baseline; gap: 18px;">
+      <span style="font-family: 'Cormorant Garamond', serif; font-size: 26px; color: #c9923f;">III</span>
+      <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 42px;">经典是什么</h2>
+      <span style="margin-left: auto; font-size: 14px; letter-spacing: 0.18em; color: #80877f;">词源 · 文学参照 · 与电影的区别</span>
+    </div>
+    <div style="margin-top: 12px; height: 1px; background: linear-gradient(to right, #c9923f, rgba(234,230,220,0.18));"></div>
+
+    <div style="margin-top: 30px; display: flex; gap: 2px; align-items: stretch;">
+      <div style="flex: 1; background: rgba(234,230,220,0.07); padding: 16px 18px;"><div style="font-family: 'Cormorant Garamond', serif; font-size: 16px; color: #5b9c93;">canon</div><div style="margin-top: 6px; font-size: 15px; line-height: 1.8; color: #d2cdc3;">长期是宗教／神学词，与圣经相连</div></div>
+      <div style="flex: 1; background: rgba(234,230,220,0.11); padding: 16px 18px;"><div style="font-family: 'Cormorant Garamond', serif; font-size: 16px; color: #5b9c93;">17–18 世纪</div><div style="margin-top: 6px; font-size: 15px; line-height: 1.8; color: #d2cdc3;">启蒙与浪漫主义后出现世俗意义</div></div>
+      <div style="flex: 1; background: rgba(234,230,220,0.15); padding: 16px 18px;"><div style="font-family: 'Cormorant Garamond', serif; font-size: 16px; color: #5b9c93;">此后</div><div style="margin-top: 6px; font-size: 15px; line-height: 1.8; color: #d2cdc3;">各艺术门类逐步建立经典系统</div></div>
+      <div style="flex: 1.1; background: rgba(201,146,63,0.2); padding: 16px 18px;"><div style="font-family: 'Cormorant Garamond', serif; font-size: 16px; color: #c9923f;">二战后</div><div style="margin-top: 6px; font-size: 15px; line-height: 1.8; color: #e0dbd1;">电影的经典系统才开始建，距今六七十年</div></div>
+    </div>
+
+    <div style="margin-top: 34px; display: grid; grid-template-columns: 1fr 1fr; gap: 34px;">
+      <div>
+        <div style="font-size: 13px; letter-spacing: 0.2em; color: #c9923f;">文学参照</div>
+        <div style="margin-top: 16px; display: grid; gap: 16px;">
+          <div style="border-left: 2px solid rgba(234,230,220,0.35); padding-left: 18px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 20px;">卡尔维诺</div><div style="margin-top: 6px; font-size: 16px; line-height: 1.85; color: #a9a49a;">经典是我们会不断重读的作品；即使不占主导，也构成无法忽略的「背景噪音」。</div></div>
+          <div style="border-left: 2px solid #c9923f; padding-left: 18px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 20px;">哈罗德·布鲁姆《西方正典》</div><div style="margin-top: 6px; font-size: 16px; line-height: 1.85; color: #a9a49a;">莎士比亚是核心中的核心；审美是最高标准；把 1960 年代后的女性主义、新历史主义、拉康学派、解构主义等称为「憎恨学派」；<span style="color: #e0dbd1;">经典是在动态竞争中确定的</span>（本期最常被引用的观点）；「影响的焦虑」；经典成立的原因之一是「陌生性」；西方经典是一份幸存者名单。</div></div>
+          <div style="border-left: 2px solid rgba(184,80,63,0.8); padding-left: 18px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 20px;">反方 · 保罗·劳特、埃默里·埃利奥特</div><div style="margin-top: 6px; font-size: 16px; line-height: 1.85; color: #a9a49a;">经典是精英、父权、种族主义的产物。</div></div>
+        </div>
+        <div style="margin-top: 26px; padding: 20px 22px; border: 1px solid rgba(91,156,147,0.45); background: rgba(91,156,147,0.08);">
+          <div style="font-size: 13px; letter-spacing: 0.2em; color: #5b9c93;">节目提出的「跨时代经典」标准</div>
+          <div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-size: 21px; line-height: 1.7;">至少需要两到三代人的沉淀，经历完全相反的时代浪潮冲刷后地位不变。</div>
+          <div style="margin-top: 10px; font-size: 15px; line-height: 1.85; color: #a9a49a;">当年在影院看《迷魂记》《东京物语》的第一代观众还活着，所以这些片还没彻底进入历史。</div>
+        </div>
+      </div>
+      <div>
+        <div style="font-size: 13px; letter-spacing: 0.2em; color: #c9923f;">电影经典与文学经典的区别</div>
+        <div style="margin-top: 16px; display: grid; grid-template-columns: 110px 1fr 1fr; gap: 1px; background: rgba(234,230,220,0.2);">
+          <div style="background: rgba(234,230,220,0.1); padding: 12px 14px; font-size: 13px; letter-spacing: 0.14em; color: #a9a49a;">维度</div>
+          <div style="background: rgba(234,230,220,0.1); padding: 12px 14px; font-size: 13px; letter-spacing: 0.14em; color: #a9a49a;">文学</div>
+          <div style="background: rgba(201,146,63,0.18); padding: 12px 14px; font-size: 13px; letter-spacing: 0.14em; color: #e0dbd1;">电影</div>
+
+          <div style="background: #12161f; padding: 14px; font-family: 'Noto Serif SC', serif; font-size: 17px;">作者</div>
+          <div style="background: #12161f; padding: 14px; font-size: 15px; line-height: 1.75; color: #a9a49a;">作家即作者</div>
+          <div style="background: #161b26; padding: 14px; font-size: 15px; line-height: 1.75; color: #d2cdc3;">导演不等于作者；工业大片涉及上万人；版权多属出品公司</div>
+
+          <div style="background: #12161f; padding: 14px; font-family: 'Noto Serif SC', serif; font-size: 17px;">历史长度</div>
+          <div style="background: #12161f; padding: 14px; font-size: 15px; line-height: 1.75; color: #a9a49a;">数千年，荷马、莎士比亚、但丁地位稳固</div>
+          <div style="background: #161b26; padding: 14px; font-size: 15px; line-height: 1.75; color: #d2cdc3;">120 多年，仍在激烈变动，《公民凯恩》也会被拉下来</div>
+
+          <div style="background: #12161f; padding: 14px; font-family: 'Noto Serif SC', serif; font-size: 17px;">雅俗关系</div>
+          <div style="background: #12161f; padding: 14px; font-size: 15px; line-height: 1.75; color: #a9a49a;">严肃与通俗基本井水不犯河水</div>
+          <div style="background: #161b26; padding: 14px; font-size: 15px; line-height: 1.75; color: #d2cdc3;">高雅与大众长期处在同一场域，作品多有混杂属性</div>
+
+          <div style="background: #12161f; padding: 14px; font-family: 'Noto Serif SC', serif; font-size: 17px;">形式障碍</div>
+          <div style="background: #12161f; padding: 14px; font-size: 15px; line-height: 1.75; color: #a9a49a;">语言变化慢，读百年前小说无碍</div>
+          <div style="background: #161b26; padding: 14px; font-size: 15px; line-height: 1.75; color: #d2cdc3;">有声、彩色等技术迭代快，老片观看门槛高</div>
+
+          <div style="background: #12161f; padding: 14px; font-family: 'Noto Serif SC', serif; font-size: 17px;">学科化</div>
+          <div style="background: #12161f; padding: 14px; font-size: 15px; line-height: 1.75; color: #a9a49a;">早已完成</div>
+          <div style="background: #161b26; padding: 14px; font-size: 15px; line-height: 1.75; color: #d2cdc3;">1960 年代才进入学院，经典化与学科化同步进行</div>
+        </div>
+        <div style="margin-top: 22px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+          <div style="border-top: 2px solid #5b9c93; padding-top: 14px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 19px;">学科化 · 欧洲线</div><div style="margin-top: 6px; font-size: 15px; line-height: 1.8; color: #a9a49a;">麦茨、雷蒙·贝卢尔、雅克·奥蒙、彼得·沃伦，加上电影手册批评系统（巴黎三大电影系由手册的人建立）。方法是符号学、精神分析、现象学、结构主义。</div></div>
+          <div style="border-top: 2px solid #5b9c93; padding-top: 14px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 19px;">学科化 · 美国线</div><div style="margin-top: 6px; font-size: 15px; line-height: 1.8; color: #a9a49a;">1970 年代后期的大卫·波德维尔，以认知科学为基础的形式／风格分析，《电影艺术》成为全球最畅销教材。</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 56px 90px 0;">
+    <div style="display: flex; align-items: baseline; gap: 18px;">
+      <span style="font-family: 'Cormorant Garamond', serif; font-size: 26px; color: #c9923f;">IV</span>
+      <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 42px;">影响经典化的九个因素</h2>
+      <span style="margin-left: auto; font-size: 14px; letter-spacing: 0.18em; color: #80877f;">方向与强度为节目的主观判断</span>
+    </div>
+    <div style="margin-top: 12px; height: 1px; background: linear-gradient(to right, #c9923f, rgba(234,230,220,0.18));"></div>
+
+    <div style="margin-top: 30px; display: grid; grid-template-columns: 250px 120px 1fr; gap: 1px; background: rgba(234,230,220,0.2);">
+      <sc-for list="{{ factors }}" as="f" hint-placeholder-count="9">
+        <div style="display: grid; grid-template-columns: 250px 120px 1fr; gap: 1px; grid-column: 1 / -1; background: rgba(234,230,220,0.2);">
+          <div style="background: {{ f.bg }}; padding: 16px 18px; font-family: 'Noto Serif SC', serif; font-size: 18px; line-height: 1.5;">{{ f.name }}</div>
+          <div style="background: {{ f.bg }}; padding: 16px 14px; font-size: 14px; letter-spacing: 0.1em; color: {{ f.dirInk }};">{{ f.dir }}</div>
+          <div style="background: #12161f; padding: 16px 20px; font-size: 16px; line-height: 1.85; color: #cbc6bc;">{{ f.note }}</div>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 46px;">
+      <div>
+        <div style="font-size: 13px; letter-spacing: 0.2em; color: #c9923f;">奖项通胀 · 导演获奖数（1970–2004 统计口径）</div>
+        <div style="margin-top: 20px; display: grid; gap: 14px;">
+          <div><div style="display: flex; justify-content: space-between; font-size: 16px;"><span style="font-family: 'Noto Serif SC', serif;">斯皮尔伯格</span><span style="font-family: 'Cormorant Garamond', serif; font-size: 22px; color: #c9923f;">90+</span></div><div style="margin-top: 6px; height: 16px; background: rgba(234,230,220,0.1);"><div style="width: 100%; height: 16px; background: #c9923f;"></div></div></div>
+          <div><div style="display: flex; justify-content: space-between; font-size: 16px;"><span style="font-family: 'Noto Serif SC', serif;">约翰·福特</span><span style="font-family: 'Cormorant Garamond', serif; font-size: 22px; color: #c9923f;">27</span></div><div style="margin-top: 6px; height: 16px; background: rgba(234,230,220,0.1);"><div style="width: 30%; height: 16px; background: rgba(201,146,63,0.6);"></div></div></div>
+          <div><div style="display: flex; justify-content: space-between; font-size: 16px;"><span style="font-family: 'Noto Serif SC', serif;">希区柯克</span><span style="font-family: 'Cormorant Garamond', serif; font-size: 22px; color: #c9923f;">21</span></div><div style="margin-top: 6px; height: 16px; background: rgba(234,230,220,0.1);"><div style="width: 23%; height: 16px; background: rgba(201,146,63,0.6);"></div></div></div>
+          <div><div style="display: flex; justify-content: space-between; font-size: 16px;"><span style="font-family: 'Noto Serif SC', serif;">卓别林</span><span style="font-family: 'Cormorant Garamond', serif; font-size: 22px; color: #c9923f;">16</span></div><div style="margin-top: 6px; height: 16px; background: rgba(234,230,220,0.1);"><div style="width: 18%; height: 16px; background: rgba(201,146,63,0.6);"></div></div></div>
+        </div>
+      </div>
+      <div>
+        <div style="font-size: 13px; letter-spacing: 0.2em; color: #5b9c93;">奖项通胀 · 影片获奖数</div>
+        <div style="margin-top: 20px; display: grid; gap: 14px;">
+          <div><div style="display: flex; justify-content: space-between; font-size: 16px;"><span style="font-family: 'Noto Serif SC', serif;">《指环王》</span><span style="font-family: 'Cormorant Garamond', serif; font-size: 22px; color: #5b9c93;">79</span></div><div style="margin-top: 6px; height: 16px; background: rgba(234,230,220,0.1);"><div style="width: 100%; height: 16px; background: #5b9c93;"></div></div></div>
+          <div><div style="display: flex; justify-content: space-between; font-size: 16px;"><span style="font-family: 'Noto Serif SC', serif;">《乱世佳人》</span><span style="font-family: 'Cormorant Garamond', serif; font-size: 22px; color: #5b9c93;">10</span></div><div style="margin-top: 6px; height: 16px; background: rgba(234,230,220,0.1);"><div style="width: 12.7%; height: 16px; background: rgba(91,156,147,0.65);"></div></div></div>
+          <div><div style="display: flex; justify-content: space-between; font-size: 16px;"><span style="font-family: 'Noto Serif SC', serif;">《卡萨布兰卡》</span><span style="font-family: 'Cormorant Garamond', serif; font-size: 22px; color: #5b9c93;">3</span></div><div style="margin-top: 6px; height: 16px; background: rgba(234,230,220,0.1);"><div style="width: 4%; height: 16px; background: rgba(91,156,147,0.65);"></div></div></div>
+        </div>
+        <div style="margin-top: 22px; font-size: 16px; line-height: 1.85; color: #a9a49a;">节目解读：不是老片不好，而是电影业自我营销能力完全不在一个量级；前哨奖多数只作为统计数字产生意义。</div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 56px 90px 0;">
+    <div style="display: flex; align-items: baseline; gap: 18px;">
+      <span style="font-family: 'Cormorant Garamond', serif; font-size: 26px; color: #c9923f;">V</span>
+      <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 42px;">《视与听》投票编年史</h2>
+      <span style="margin-left: auto; font-size: 14px; letter-spacing: 0.18em; color: #80877f;">全期主干</span>
+    </div>
+    <div style="margin-top: 12px; height: 1px; background: linear-gradient(to right, #c9923f, rgba(234,230,220,0.18));"></div>
+
+    <div style="margin-top: 30px; font-size: 13px; letter-spacing: 0.2em; color: #5b9c93;">前史 1915 – 1951</div>
+    <div style="margin-top: 16px; display: flex; gap: 2px; align-items: stretch;">
+      <div style="flex: 1; background: rgba(234,230,220,0.07); padding: 14px 16px;"><div style="font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #c9923f;">1915</div><div style="margin-top: 6px; font-size: 15px; line-height: 1.75; color: #cbc6bc;">《一个国家的诞生》，电影成为完整的叙事艺术</div></div>
+      <div style="flex: 1.2; background: rgba(234,230,220,0.07); padding: 14px 16px;"><div style="font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #c9923f;">1920s</div><div style="margin-top: 6px; font-size: 15px; line-height: 1.75; color: #cbc6bc;">Film Daily、Photoplay 的年度最佳，重票房、重叙事、重题材、重催泪；欧洲先锋派并起：德国表现主义、法国印象派、苏联蒙太奇</div></div>
+      <div style="flex: 1; background: rgba(234,230,220,0.07); padding: 14px 16px;"><div style="font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #c9923f;">1930</div><div style="margin-top: 6px; font-size: 15px; line-height: 1.75; color: #cbc6bc;">保罗·罗塔《迄今为止的电影》，最早的系统电影史著作；30 年代第一批电影资料馆建立</div></div>
+      <div style="flex: 1; background: rgba(201,146,63,0.16); padding: 14px 16px;"><div style="font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #c9923f;">1941</div><div style="margin-top: 6px; font-size: 15px; line-height: 1.75; color: #e0dbd1;">《视与听》首次邀请研究者发表影史十佳</div></div>
+      <div style="flex: 1; background: rgba(201,146,63,0.16); padding: 14px 16px;"><div style="font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #c9923f;">1951</div><div style="margin-top: 6px; font-size: 15px; line-height: 1.75; color: #e0dbd1;">先做导演预投票，苏、中、日、印的导演未回信</div></div>
+    </div>
+    <div style="margin-top: 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; font-size: 15px; line-height: 1.85; color: #a9a49a;">
+      <div>1920 年代美国年度最佳举例：1922《风雨中的孤儿》、1923《篷车队》、1924《巴格达窃贼》、1925《淘金记》。节目认为 1920 年代欧洲电影水平高于美国。</div>
+      <div>茂瑙《最卑贱的人》被罗塔视为「纯电影」：废弃字幕卡，只靠摄影机运动与场面调度，希区柯克看后震惊。茂瑙今天近乎「默片第一人」。</div>
+      <div>卓别林（左翼平民意识）与基顿（拥抱现代资本世界、正面肯定美国梦）是两条路，成龙完整继承了基顿的观念。英国人最早推动电影教育，但英国电影地位偏中下层——特吕弗毒舌「电影与英国不兼容」，节目认为说过了。</div>
+    </div>
+
+    <div style="margin-top: 40px; display: grid; grid-template-columns: 90px 210px 150px 1fr; gap: 1px; background: rgba(234,230,220,0.2);">
+      <div style="background: rgba(201,146,63,0.2); padding: 14px 16px; font-size: 13px; letter-spacing: 0.14em; color: #e0dbd1;">届</div>
+      <div style="background: rgba(201,146,63,0.2); padding: 14px 16px; font-size: 13px; letter-spacing: 0.14em; color: #e0dbd1;">评论家榜第一</div>
+      <div style="background: rgba(201,146,63,0.2); padding: 14px 16px; font-size: 13px; letter-spacing: 0.14em; color: #e0dbd1;">关键词</div>
+      <div style="background: rgba(201,146,63,0.2); padding: 14px 16px; font-size: 13px; letter-spacing: 0.14em; color: #e0dbd1;">节目要点</div>
+      <sc-for list="{{ sightsound }}" as="r" hint-placeholder-count="8">
+        <div style="display: grid; grid-template-columns: 90px 210px 150px 1fr; gap: 1px; grid-column: 1 / -1; background: rgba(234,230,220,0.2);">
+          <div style="background: {{ r.bg }}; padding: 16px; font-family: 'Cormorant Garamond', serif; font-size: 24px; color: #c9923f;">{{ r.year }}</div>
+          <div style="background: {{ r.bg }}; padding: 16px; font-family: 'Noto Serif SC', serif; font-size: 19px; line-height: 1.5;">{{ r.first }}</div>
+          <div style="background: {{ r.bg }}; padding: 16px; font-size: 15px; line-height: 1.6; color: #5b9c93;">{{ r.key }}</div>
+          <div style="background: #12161f; padding: 16px 20px; font-size: 16px; line-height: 1.85; color: #cbc6bc;">{{ r.note }}</div>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="margin-top: 40px; display: grid; grid-template-columns: 1.3fr 1fr; gap: 46px; align-items: start;">
+      <div>
+        <div style="font-size: 13px; letter-spacing: 0.2em; color: #c9923f;">投票人数（维基百科统计）</div>
+        <div style="margin-top: 24px; display: flex; align-items: flex-end; gap: 16px; height: 260px; border-bottom: 1px solid rgba(234,230,220,0.3);">
+          <sc-for list="{{ voters }}" as="v" hint-placeholder-count="8">
+            <div style="flex: 1; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: 6px;">
+              <div style="font-family: 'Cormorant Garamond', serif; font-size: 19px; color: #c9923f;">{{ v.critics }}</div>
+              <div style="width: 100%; display: flex; gap: 3px; align-items: flex-end; justify-content: center;">
+                <div style="width: 46%; background: #c9923f; height: {{ v.ch }};"></div>
+                <div style="width: 30%; background: rgba(91,156,147,0.85); height: {{ v.dh }};"></div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+        <div style="display: flex; gap: 16px; margin-top: 8px;">
+          <sc-for list="{{ voters }}" as="v" hint-placeholder-count="8">
+            <div style="flex: 1; text-align: center; font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #a9a49a;">{{ v.year }}</div>
+          </sc-for>
+        </div>
+        <div style="margin-top: 16px; display: flex; gap: 26px; font-size: 14px; color: #80877f;">
+          <span><span style="display: inline-block; width: 12px; height: 12px; background: #c9923f; margin-right: 8px;"></span>评论家</span>
+          <span><span style="display: inline-block; width: 12px; height: 12px; background: rgba(91,156,147,0.85); margin-right: 8px;"></span>导演</span>
+        </div>
+        <div style="margin-top: 18px; font-size: 15px; line-height: 1.85; color: #a9a49a;">1952 年《视与听》实际邀请 85 位评论家、63 位回复；《偷自行车的人》得 25 票，卓别林《城市之光》《淘金记》各 19 票并列第二。节目说的「上百位影评人」与此有出入。</div>
+      </div>
+      <div>
+        <div style="font-size: 13px; letter-spacing: 0.2em; color: #c9923f;">2022 年的身份政治数据</div>
+        <div style="margin-top: 20px; display: grid; gap: 18px;">
+          <div style="border: 1px solid rgba(234,230,220,0.25); padding: 18px 20px;"><div style="display: flex; align-items: baseline; gap: 14px;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 44px; color: #c9923f;">11</span><span style="font-size: 16px; color: #cbc6bc;">位女导演进入百大，其中 4 位进前 20</span></div></div>
+          <div style="border: 1px solid rgba(234,230,220,0.25); padding: 18px 20px;"><div style="font-size: 16px; color: #cbc6bc;">百大中的黑人导演</div><div style="margin-top: 10px; display: flex; align-items: baseline; gap: 12px; font-family: 'Cormorant Garamond', serif; font-size: 38px; color: #c9923f;">1<span style="font-size: 20px; color: #80877f;">2012</span><span style="font-size: 24px; color: #80877f;">→</span>7<span style="font-size: 20px; color: #80877f;">2022</span></div></div>
+          <div style="border: 1px solid rgba(91,156,147,0.45); background: rgba(91,156,147,0.08); padding: 18px 20px; font-size: 16px; line-height: 1.85; color: #cbc6bc;">《花样年华》是 1975 年以来排名最高的影片。投票者主要是西方（尤其英国）影评人，华人与亚洲评委投它的很少。</div>
+          <div style="border: 1px solid rgba(184,80,63,0.5); background: rgba(184,80,63,0.1); padding: 18px 20px;"><div style="font-size: 13px; letter-spacing: 0.18em; color: #d98a78;">从百大前列消失</div><div style="margin-top: 10px; font-size: 16px; line-height: 1.85; color: #cbc6bc;">《贪婪》完全出百大，《大幻影》《阿拉伯的劳伦斯》《愤怒的公牛》《教父 2》等下滑；《奇遇》从 1962 年的第 2 掉到七十多名；《霸王别姬》未进前 250。</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 56px 90px 0;">
+    <div style="display: flex; align-items: baseline; gap: 18px;">
+      <div style="font-size: 13px; letter-spacing: 0.2em; color: #c9923f;">榜单上的常客</div>
+      <span style="margin-left: auto; font-size: 13px; color: #80877f;">海报与头像自维基百科取图，可拖入自己的图片替换</span>
+    </div>
+    <div style="margin-top: 20px; display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px;">
+      <div><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #1c212d;"><image-slot id="rk-f-kane" src="{{ pic.kane }}" fit="contain" shape="rect" placeholder="《公民凯恩》海报"></image-slot></div><div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-size: 18px;">公民凯恩</div><div style="font-size: 12px; color: #80877f;">1962–2002 六届第一</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #1c212d;"><image-slot id="rk-f-bicycle" src="{{ pic.bicycle }}" fit="contain" shape="rect" placeholder="《偷自行车的人》海报"></image-slot></div><div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-size: 18px;">偷自行车的人</div><div style="font-size: 12px; color: #80877f;">1952 第一</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #1c212d;"><image-slot id="rk-f-vertigo" src="{{ pic.vertigo }}" fit="contain" shape="rect" placeholder="《迷魂记》海报"></image-slot></div><div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-size: 18px;">迷魂记</div><div style="font-size: 12px; color: #80877f;">2012 第一</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #1c212d;"><image-slot id="rk-f-jeanne" src="{{ pic.jeanne }}" fit="contain" shape="rect" placeholder="《让娜·迪尔曼》海报"></image-slot></div><div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-size: 18px;">让娜·迪尔曼</div><div style="font-size: 12px; color: #80877f;">2022 第一</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #1c212d;"><image-slot id="rk-f-rules" src="{{ pic.rules }}" fit="contain" shape="rect" placeholder="《游戏规则》海报"></image-slot></div><div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-size: 18px;">游戏规则</div><div style="font-size: 12px; color: #80877f;">修复版翻身</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #1c212d;"><image-slot id="rk-f-tokyo" src="{{ pic.tokyo }}" fit="contain" shape="rect" placeholder="《东京物语》海报"></image-slot></div><div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-size: 18px;">东京物语</div><div style="font-size: 12px; color: #80877f;">1992 上位</div></div>
+    </div>
+    <div style="margin-top: 24px; display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px;">
+      <div><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #1c212d;"><image-slot id="rk-f-mood" src="{{ pic.mood }}" fit="contain" shape="rect" placeholder="《花样年华》海报"></image-slot></div><div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-size: 18px;">花样年华</div><div style="font-size: 12px; color: #80877f;">2022 前十</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #1c212d;"><image-slot id="rk-f-spring" src="{{ pic.spring }}" fit="contain" shape="rect" placeholder="《小城之春》海报"></image-slot></div><div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-size: 18px;">小城之春</div><div style="font-size: 12px; color: #80877f;">两岸三地通杀</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #1c212d;"><image-slot id="rk-f-samurai" src="{{ pic.samurai }}" fit="contain" shape="rect" placeholder="《七武士》海报"></image-slot></div><div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-size: 18px;">七武士</div><div style="font-size: 12px; color: #80877f;">1982 上位</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #1c212d;"><image-slot id="rk-f-2001" src="{{ pic.space }}" fit="contain" shape="rect" placeholder="《2001太空漫游》海报"></image-slot></div><div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-size: 18px;">2001 太空漫游</div><div style="font-size: 12px; color: #80877f;">1992 上位</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #1c212d;"><image-slot id="rk-f-godfather" src="{{ pic.godfather }}" fit="contain" shape="rect" placeholder="《教父》海报"></image-slot></div><div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-size: 18px;">教父</div><div style="font-size: 12px; color: #80877f;">评论家榜仅 2002 一次</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #1c212d;"><image-slot id="rk-f-yiyi" src="{{ pic.yiyi }}" fit="contain" shape="rect" placeholder="《一一》海报"></image-slot></div><div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-size: 18px;">一一</div><div style="font-size: 12px; color: #80877f;">2019 华语 20 佳第一</div></div>
+    </div>
+    <div style="margin-top: 26px; display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px;">
+      <sc-for list="{{ portraits }}" as="p" hint-placeholder-count="12">
+        <div>
+          <div style="position: relative; width: 100%; aspect-ratio: 1; background: #1c212d;"><image-slot id="{{ p.id }}" src="{{ p.src }}" shape="circle" placeholder="{{ p.name }}"></image-slot></div>
+          <div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 15px;">{{ p.name }}</div>
+          <div style="font-size: 12px; line-height: 1.5; color: #80877f;">{{ p.note }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding: 56px 90px 0;">
+    <div style="display: flex; align-items: baseline; gap: 18px;">
+      <span style="font-family: 'Cormorant Garamond', serif; font-size: 26px; color: #c9923f;">VI</span>
+      <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 42px;">经典化路径案例库</h2>
+      <span style="margin-left: auto; font-size: 14px; letter-spacing: 0.18em; color: #80877f;">地位升降与拐点事件</span>
+    </div>
+    <div style="margin-top: 12px; height: 1px; background: linear-gradient(to right, #c9923f, rgba(234,230,220,0.18));"></div>
+
+    <div style="margin-top: 30px; display: grid; grid-template-columns: 200px 300px 1fr; gap: 1px; background: rgba(234,230,220,0.2);">
+      <div style="background: rgba(201,146,63,0.2); padding: 14px 16px; font-size: 13px; letter-spacing: 0.14em; color: #e0dbd1;">作品 / 影人</div>
+      <div style="background: rgba(201,146,63,0.2); padding: 14px 16px; font-size: 13px; letter-spacing: 0.14em; color: #e0dbd1;">走势</div>
+      <div style="background: rgba(201,146,63,0.2); padding: 14px 16px; font-size: 13px; letter-spacing: 0.14em; color: #e0dbd1;">拐点事件</div>
+      <sc-for list="{{ cases }}" as="c" hint-placeholder-count="24">
+        <div style="display: grid; grid-template-columns: 200px 300px 1fr; gap: 1px; grid-column: 1 / -1; background: rgba(234,230,220,0.2);">
+          <div style="background: {{ c.bg }}; padding: 15px 16px; font-family: 'Noto Serif SC', serif; font-size: 18px; line-height: 1.5;">{{ c.name }}</div>
+          <div style="background: {{ c.bg }}; padding: 15px 16px; font-size: 15px; line-height: 1.7; color: {{ c.trendInk }};">{{ c.trend }}</div>
+          <div style="background: #12161f; padding: 15px 20px; font-size: 15px; line-height: 1.8; color: #cbc6bc;">{{ c.pivot }}</div>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 46px; align-items: start;">
+      <div>
+        <div style="font-family: 'Noto Serif SC', serif; font-size: 26px;">约翰·福特 与 霍华德·霍克斯</div>
+        <div style="margin-top: 16px; font-size: 16px; line-height: 1.9; color: #cbc6bc;">福特拿过四座奥斯卡，圈内地位高但评论界起伏。巴赞认为《关山飞渡》在社会传奇、历史再现、心理真实、场面调度四个维度上完美平衡，让·米特里也肯定；60 年代彼得·沃伦的文章加上萨里斯《美国电影》把他放进「万神殿」，一锤定音。《搜索者》最常进前十：种族问题的复杂表达，伊森近似亚哈船长，《出租车司机》则是《搜索者》加《乡村牧师日记》。</div>
+        <div style="margin-top: 24px; font-size: 13px; letter-spacing: 0.2em; color: #c9923f;">1958 布鲁塞尔世博会评选 · 25 国 117 位影评人</div>
+        <div style="margin-top: 18px; display: grid; gap: 12px;">
+          <div><div style="display: flex; justify-content: space-between; font-size: 16px;"><span style="font-family: 'Noto Serif SC', serif;">约翰·福特</span><span style="font-family: 'Cormorant Garamond', serif; font-size: 22px; color: #c9923f;">107</span></div><div style="margin-top: 6px; height: 16px; background: rgba(234,230,220,0.1);"><div style="width: 100%; height: 16px; background: #c9923f;"></div></div></div>
+          <div><div style="display: flex; justify-content: space-between; font-size: 16px;"><span style="font-family: 'Noto Serif SC', serif;">金·维多</span><span style="font-family: 'Cormorant Garamond', serif; font-size: 22px; color: #c9923f;">44</span></div><div style="margin-top: 6px; height: 16px; background: rgba(234,230,220,0.1);"><div style="width: 41%; height: 16px; background: rgba(201,146,63,0.6);"></div></div></div>
+          <div><div style="display: flex; justify-content: space-between; font-size: 16px;"><span style="font-family: 'Noto Serif SC', serif;">威廉·惠勒</span><span style="font-family: 'Cormorant Garamond', serif; font-size: 22px; color: #c9923f;">33</span></div><div style="margin-top: 6px; height: 16px; background: rgba(234,230,220,0.1);"><div style="width: 31%; height: 16px; background: rgba(201,146,63,0.6);"></div></div></div>
+          <div><div style="display: flex; justify-content: space-between; font-size: 16px;"><span style="font-family: 'Noto Serif SC', serif;">霍华德·霍克斯</span><span style="font-family: 'Cormorant Garamond', serif; font-size: 22px; color: #d98a78;">8</span></div><div style="margin-top: 6px; height: 16px; background: rgba(234,230,220,0.1);"><div style="width: 7.5%; height: 16px; background: #b8503f;"></div></div></div>
+        </div>
+        <div style="margin-top: 20px; font-size: 13px; letter-spacing: 0.2em; color: #5b9c93;">霍克斯翻身的三条线</div>
+        <div style="margin-top: 12px; display: grid; gap: 10px; font-size: 16px; line-height: 1.85; color: #cbc6bc;">
+          <div><span style="color: #5b9c93;">①</span> 朗格卢瓦偏爱，在法国资料馆高频放映。</div>
+          <div><span style="color: #5b9c93;">②</span> 福克纳在法国被萨特、马尔罗平反，霍克斯与福克纳是挚友，两人声誉联动。</div>
+          <div><span style="color: #5b9c93;">③</span> 影响的焦虑：《精疲力尽》对标《疤面人》，《爱的大追踪》翻拍《育婴奇谭》，《血溅13号警署》翻拍《赤胆屠龙》。</div>
+        </div>
+      </div>
+      <div>
+        <div style="font-family: 'Noto Serif SC', serif; font-size: 26px;">王家卫的接受史</div>
+        <div style="margin-top: 18px; display: grid; gap: 10px;">
+          <sc-for list="{{ wkw }}" as="w" hint-placeholder-count="7">
+            <div style="display: grid; grid-template-columns: 190px 1fr; gap: 14px; align-items: baseline; border-left: 2px solid {{ w.line }}; padding-left: 16px;">
+              <div style="font-family: 'Noto Serif SC', serif; font-size: 18px;">{{ w.title }}</div>
+              <div style="font-size: 15px; line-height: 1.75; color: #a9a49a;">{{ w.note }}</div>
+            </div>
+          </sc-for>
+        </div>
+        <div style="margin-top: 22px; font-size: 16px; line-height: 1.9; color: #cbc6bc;">节目归纳西方热捧的三个原因：风格辨识度高且易复制传播（手册前主编德洛姆吐槽王家卫、马力克、贾木许「无法回应时代」）；把被西方拍烂的城市题材翻出新意（「戈达尔代表 60 年代巴黎，王家卫代表 90 年代城市」）；最懂包装与反复重发修复。香港人自己心中王家卫最好的永远是《阿飞正传》。</div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 56px 90px 0;">
+    <div style="display: flex; align-items: baseline; gap: 18px;">
+      <span style="font-family: 'Cormorant Garamond', serif; font-size: 26px; color: #c9923f;">VII</span>
+      <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 42px;">《电影手册》的路线变迁</h2>
+      <span style="margin-left: auto; font-size: 14px; letter-spacing: 0.18em; color: #80877f;">谁掌权，品位就往哪边偏</span>
+    </div>
+    <div style="margin-top: 12px; height: 1px; background: linear-gradient(to right, #c9923f, rgba(234,230,220,0.18));"></div>
+
+    <div style="margin-top: 30px; display: grid; grid-template-columns: 170px 280px 1fr; gap: 1px; background: rgba(234,230,220,0.2);">
+      <sc-for list="{{ cahiers }}" as="c" hint-placeholder-count="9">
+        <div style="display: grid; grid-template-columns: 170px 280px 1fr; gap: 1px; grid-column: 1 / -1; background: rgba(234,230,220,0.2);">
+          <div style="background: {{ c.bg }}; padding: 15px 16px; font-family: 'Cormorant Garamond', serif; font-size: 21px; color: #c9923f;">{{ c.era }}</div>
+          <div style="background: {{ c.bg }}; padding: 15px 16px; font-family: 'Noto Serif SC', serif; font-size: 18px; line-height: 1.5;">{{ c.line }}</div>
+          <div style="background: #12161f; padding: 15px 20px; font-size: 15px; line-height: 1.8; color: #cbc6bc;">{{ c.note }}</div>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 46px; align-items: start;">
+      <div>
+        <div style="font-size: 13px; letter-spacing: 0.2em; color: #c9923f;">五虎将内部差异</div>
+        <div style="margin-top: 18px; padding: 18px 20px; border: 1px solid rgba(201,146,63,0.5); background: rgba(201,146,63,0.1);">
+          <div style="font-family: 'Noto Serif SC', serif; font-size: 22px;">巴赞</div>
+          <div style="margin-top: 4px; font-size: 15px; color: #a9a49a;">本体论 · 天主教徒 · 天生的导师</div>
+        </div>
+        <div style="margin-top: 14px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+          <div style="border: 1px solid rgba(234,230,220,0.25); padding: 14px 16px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 19px;">特吕弗</div><div style="margin-top: 4px; font-size: 14px; line-height: 1.7; color: #a9a49a;">最纯真，最爱希区柯克</div></div>
+          <div style="border: 1px solid rgba(234,230,220,0.25); padding: 14px 16px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 19px;">戈达尔</div><div style="margin-top: 4px; font-size: 14px; line-height: 1.7; color: #a9a49a;">最爱尼古拉斯·雷，喜欢把冷门片吹成经典</div></div>
+          <div style="border: 1px solid rgba(234,230,220,0.25); padding: 14px 16px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 19px;">里维特</div><div style="margin-top: 4px; font-size: 14px; line-height: 1.7; color: #a9a49a;">最激进最毒舌，场面调度至上，最爱霍克斯</div></div>
+          <div style="border: 1px solid rgba(234,230,220,0.25); padding: 14px 16px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 19px;">侯麦</div><div style="margin-top: 4px; font-size: 14px; line-height: 1.7; color: #a9a49a;">最右最古典，年长约十岁，最爱茂瑙</div></div>
+        </div>
+        <div style="margin-top: 14px; border: 1px solid rgba(234,230,220,0.25); padding: 14px 16px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 19px;">夏布洛尔</div></div>
+        <div style="margin-top: 18px; display: grid; gap: 10px; font-size: 15px; line-height: 1.8; color: #a9a49a;">
+          <div>罗西里尼是他们共同的人生导师。</div>
+          <div>里维特利用特吕弗发动政变罢免侯麦，80 年代两人和解。</div>
+          <div>特吕弗长期寄支票资助里维特；与戈达尔决裂后拒绝和解。</div>
+        </div>
+      </div>
+      <div>
+        <div style="font-size: 13px; letter-spacing: 0.2em; color: #c9923f;">影评人对阵</div>
+        <div style="margin-top: 18px; display: grid; gap: 12px;">
+          <sc-for list="{{ feuds }}" as="f" hint-placeholder-count="8">
+            <div style="display: grid; grid-template-columns: 1fr 120px 1fr; gap: 12px; align-items: center;">
+              <div style="border: 1px solid rgba(234,230,220,0.25); padding: 12px 14px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 17px;">{{ f.a }}</div><div style="margin-top: 3px; font-size: 13px; line-height: 1.6; color: #80877f;">{{ f.aNote }}</div></div>
+              <div style="text-align: center; font-size: 13px; line-height: 1.5; color: #c9923f;">{{ f.rel }}</div>
+              <div style="border: 1px solid rgba(234,230,220,0.25); padding: 12px 14px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 17px;">{{ f.b }}</div><div style="margin-top: 3px; font-size: 13px; line-height: 1.6; color: #80877f;">{{ f.bNote }}</div></div>
+            </div>
+          </sc-for>
+        </div>
+        <div style="margin-top: 20px; font-size: 15px; line-height: 1.85; color: #a9a49a;">补充人物：曼尼·法伯（画家出身，捧沃尔什、霍克斯、富勒、菲尔·卡尔森，节目看不出卡尔森好在哪）；梅卡斯兄弟《电影文化》（首推卡萨维茨，熟悉欧洲）；彼得·博格丹诺维奇（美国版特吕弗／戈达尔，为《风的另一边》奔走）。1966 年凯尔、考夫曼、希克尔、摩根斯坦等成立美国全国影评人协会，首届最佳给《放大》，后给伯格曼《假面》《羞耻》。</div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 56px 90px 0;">
+    <div style="display: flex; align-items: baseline; gap: 18px;">
+      <span style="font-family: 'Cormorant Garamond', serif; font-size: 26px; color: #c9923f;">VIII</span>
+      <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 42px;">《小城之春》的重新发现</h2>
+      <span style="margin-left: auto; font-size: 14px; letter-spacing: 0.18em; color: #80877f;">唯一两岸三地通杀的华语经典</span>
+    </div>
+    <div style="margin-top: 12px; height: 1px; background: linear-gradient(to right, #c9923f, rgba(234,230,220,0.18));"></div>
+
+    <div style="margin-top: 30px; display: grid; grid-template-columns: 1.1fr 1fr; gap: 46px; align-items: start;">
+      <div style="display: grid; gap: 10px;">
+        <sc-for list="{{ springChain }}" as="s" hint-placeholder-count="10">
+          <div style="display: grid; grid-template-columns: 96px 1fr; gap: 14px; align-items: baseline; background: {{ s.bg }}; padding: 13px 16px;">
+            <div style="font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #c9923f;">{{ s.when }}</div>
+            <div style="font-size: 16px; line-height: 1.8; color: #cbc6bc;">{{ s.what }}</div>
+          </div>
+        </sc-for>
+      </div>
+      <div>
+        <div style="display: grid; gap: 12px; font-size: 16px; line-height: 1.9; color: #cbc6bc;">
+          <div>它是唯一两岸三地通杀的华语经典：港选《英雄本色》《阿飞正传》，台选《悲情城市》，陆选《芙蓉镇》《霸王别姬》，互相认可度很低。原因是古典中国美学（隐喻、戏曲写意、景框与园林空间相通），而港台更容易理解 1949 年前的民国社会。</div>
+          <div>80 年代的心理：打开国门后发现差距，需要一部拿得出手、传统又现代的作品来与国际对话。节目类比张爱玲、沈从文、钱锺书借夏志清《中国现代小说史》从港台翻红，但电影界没有同等分量的电影史著作。</div>
+          <div>阿吴的不同意见：左翼本身没问题，爱森斯坦、维尔托夫、68 后的戈达尔都是左翼，问题在于当时中国左翼电影的电影语言乏善可陈。</div>
+          <div>在西方经典系统里地位仍不高，2022 年投它的多是华人，西方知名影评人里罗森鲍姆投了。</div>
+        </div>
+        <div style="margin-top: 26px; font-size: 13px; letter-spacing: 0.2em; color: #c9923f;">内外反差对照</div>
+        <div style="margin-top: 14px; display: grid; grid-template-columns: 1fr 140px 1fr; gap: 1px; background: rgba(234,230,220,0.2);">
+          <div style="background: rgba(234,230,220,0.1); padding: 12px 14px; font-size: 13px; letter-spacing: 0.14em; color: #a9a49a;">作品</div>
+          <div style="background: rgba(234,230,220,0.1); padding: 12px 14px; font-size: 13px; letter-spacing: 0.14em; color: #a9a49a;">华语圈</div>
+          <div style="background: rgba(234,230,220,0.1); padding: 12px 14px; font-size: 13px; letter-spacing: 0.14em; color: #a9a49a;">西方经典系统</div>
+          <div style="background: #12161f; padding: 13px 14px; font-family: 'Noto Serif SC', serif; font-size: 17px;">《小城之春》</div>
+          <div style="background: #12161f; padding: 13px 14px; font-size: 16px; color: #c9923f;">极高</div>
+          <div style="background: #12161f; padding: 13px 14px; font-size: 16px; color: #a9a49a;">不高</div>
+          <div style="background: #161b26; padding: 13px 14px; font-family: 'Noto Serif SC', serif; font-size: 17px;">《花样年华》</div>
+          <div style="background: #161b26; padding: 13px 14px; font-size: 16px; color: #a9a49a;">热情远不及海外</div>
+          <div style="background: #161b26; padding: 13px 14px; font-size: 16px; color: #c9923f;">2022 前十</div>
+          <div style="background: #12161f; padding: 13px 14px; font-family: 'Noto Serif SC', serif; font-size: 17px;">《霸王别姬》</div>
+          <div style="background: #12161f; padding: 13px 14px; font-size: 16px; color: #c9923f;">很高</div>
+          <div style="background: #12161f; padding: 13px 14px; font-size: 16px; color: #a9a49a;">2022 未进前 250</div>
+          <div style="background: #161b26; padding: 13px 14px; font-family: 'Noto Serif SC', serif; font-size: 17px;">《阿飞正传》</div>
+          <div style="background: #161b26; padding: 13px 14px; font-size: 16px; color: #c9923f;">华语圈最认同的王家卫片</div>
+          <div style="background: #161b26; padding: 13px 14px; font-size: 16px; color: #a9a49a;">不如《重庆森林》《花样年华》</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 56px 90px 0;">
+    <div style="display: flex; align-items: baseline; gap: 18px;">
+      <span style="font-family: 'Cormorant Garamond', serif; font-size: 26px; color: #c9923f;">IX</span>
+      <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 42px;">华语世界的榜单</h2>
+      <span style="margin-left: auto; font-size: 14px; letter-spacing: 0.18em; color: #80877f;">各自为政</span>
+    </div>
+    <div style="margin-top: 12px; height: 1px; background: linear-gradient(to right, #c9923f, rgba(234,230,220,0.18));"></div>
+
+    <div style="margin-top: 30px; display: grid; grid-template-columns: 110px 300px 1fr; gap: 1px; background: rgba(234,230,220,0.2);">
+      <sc-for list="{{ cnLists }}" as="l" hint-placeholder-count="7">
+        <div style="display: grid; grid-template-columns: 110px 300px 1fr; gap: 1px; grid-column: 1 / -1; background: rgba(234,230,220,0.2);">
+          <div style="background: {{ l.bg }}; padding: 14px 16px; font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #c9923f;">{{ l.year }}</div>
+          <div style="background: {{ l.bg }}; padding: 14px 16px; font-family: 'Noto Serif SC', serif; font-size: 17px; line-height: 1.6;">{{ l.who }}</div>
+          <div style="background: #12161f; padding: 14px 20px; font-size: 15px; line-height: 1.8; color: #cbc6bc;">{{ l.what }}</div>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="margin-top: 40px; display: grid; grid-template-columns: 1fr 1.25fr; gap: 46px; align-items: start;">
+      <div>
+        <div style="font-size: 13px; letter-spacing: 0.2em; color: #c9923f;">2012 华语影评人影史十佳 · 全影史</div>
+        <div style="margin-top: 18px; display: grid; gap: 2px;">
+          <sc-for list="{{ top2012 }}" as="t" hint-placeholder-count="11">
+            <div style="display: grid; grid-template-columns: 60px 1fr; gap: 14px; align-items: baseline; background: {{ t.bg }}; padding: 11px 14px;">
+              <div style="font-family: 'Cormorant Garamond', serif; font-size: 24px; color: {{ t.ink }};">{{ t.rank }}</div>
+              <div style="font-family: 'Noto Serif SC', serif; font-size: 19px;">{{ t.film }}</div>
+            </div>
+          </sc-for>
+        </div>
+        <div style="margin-top: 18px; font-size: 15px; line-height: 1.85; color: #a9a49a;">节目解读：与《视与听》重合度高，说明被既有公认结果影响；华语片占比更高。《玩乐时间》《大都会》排名高，是因为 2010、2011 年刚在上海国际电影节展映过——传播频率会影响历史地位。</div>
+      </div>
+      <div>
+        <div style="font-size: 13px; letter-spacing: 0.2em; color: #c9923f;">2019 本世纪华语电影 20 佳 · 2000–2019</div>
+        <div style="margin-top: 18px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px;">
+          <sc-for list="{{ top2019 }}" as="t" hint-placeholder-count="20">
+            <div style="background: {{ t.bg }}; padding: 12px 14px;">
+              <div style="font-family: 'Cormorant Garamond', serif; font-size: 18px; color: {{ t.ink }};">{{ t.rank }}</div>
+              <div style="margin-top: 4px; font-family: 'Noto Serif SC', serif; font-size: 17px; line-height: 1.4;">{{ t.film }}</div>
+              <div style="font-size: 12px; color: #80877f;">{{ t.note }}</div>
+            </div>
+          </sc-for>
+        </div>
+        <div style="margin-top: 14px; font-size: 13px; color: #80877f;">5–10 名与 12–20 名的顺序按节目口述整理。</div>
+        <div style="margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; font-size: 16px; line-height: 1.85; color: #cbc6bc;">
+          <div style="border-top: 2px solid #c9923f; padding-top: 14px;">前四名都是 2000 年的片，2000 年是巅峰之年。前十没有大陆导演的院线片，《鬼子来了》《站台》《铁西区》都是地下或独立电影。第五代一部都没有。</div>
+          <div style="border-top: 2px solid #5b9c93; padding-top: 14px;">海外投票人举例：杨毅恒（马来西亚）、赵德胤（缅甸）、陈哲艺（新加坡）、付东（法国）等。</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 40px; border: 1px solid rgba(234,230,220,0.25); padding: 26px 28px;">
+      <div style="font-family: 'Noto Serif SC', serif; font-size: 24px;">华语影人在 2022《视与听》的投票</div>
+      <div style="margin-top: 18px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; font-size: 16px; line-height: 1.85; color: #cbc6bc;">
+        <div><div style="font-family: 'Noto Serif SC', serif; font-size: 19px; color: #c9923f;">李焯桃</div><div style="margin-top: 6px;">10 部全投华语片，除《小城之春》外全是新片：《让子弹飞》《路边野餐》《一代宗师》《牛皮贰》等。</div></div>
+        <div><div style="font-family: 'Noto Serif SC', serif; font-size: 19px; color: #c9923f;">舒琪</div><div style="margin-top: 6px;">两部华语片：《香港制造》《路边野餐》。</div></div>
+        <div><div style="font-family: 'Noto Serif SC', serif; font-size: 19px; color: #c9923f;">刁亦男</div><div style="margin-top: 6px;">没投华语片。</div></div>
+        <div><div style="font-family: 'Noto Serif SC', serif; font-size: 19px; color: #c9923f;">王小帅</div><div style="margin-top: 6px;">10 部都附了短评。</div></div>
+      </div>
+      <div style="margin-top: 22px; display: grid; grid-template-columns: 1fr 1fr; gap: 26px; font-size: 16px; line-height: 1.85; color: #a9a49a;">
+        <div>节目解读：全投华语片可以理解为提升华语影响力的策略，或反西方中心主义的情绪反抗，不等于民族主义。</div>
+        <div>投票者的三种心态：被既定经典同化（「不选《公民凯恩》显得不懂」）、纯个人化、方案式合纵连横（曾有人号召中国投票人联合抬某几部片，未成功）。</div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 56px 90px 0;">
+    <div style="display: flex; align-items: baseline; gap: 18px;">
+      <span style="font-family: 'Cormorant Garamond', serif; font-size: 26px; color: #c9923f;">X</span>
+      <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 42px;">欧美差异，与互联网带来的变化</h2>
+    </div>
+    <div style="margin-top: 12px; height: 1px; background: linear-gradient(to right, #c9923f, rgba(234,230,220,0.18));"></div>
+
+    <div style="margin-top: 30px; display: grid; grid-template-columns: 1.15fr 1fr; gap: 46px; align-items: start;">
+      <div>
+        <div style="font-size: 13px; letter-spacing: 0.2em; color: #5b9c93;">欧美电影文化差异 · 罗森鲍姆线</div>
+        <div style="margin-top: 18px; display: grid; grid-template-columns: 130px 1fr 1fr; gap: 1px; background: rgba(234,230,220,0.2);">
+          <div style="background: rgba(234,230,220,0.1); padding: 12px 14px; font-size: 13px; letter-spacing: 0.14em; color: #a9a49a;">维度</div>
+          <div style="background: rgba(91,156,147,0.16); padding: 12px 14px; font-size: 13px; letter-spacing: 0.14em; color: #e0dbd1;">欧洲</div>
+          <div style="background: rgba(201,146,63,0.16); padding: 12px 14px; font-size: 13px; letter-spacing: 0.14em; color: #e0dbd1;">美国</div>
+          <sc-for list="{{ euus }}" as="e" hint-placeholder-count="6">
+            <div style="display: grid; grid-template-columns: 130px 1fr 1fr; gap: 1px; grid-column: 1 / -1; background: rgba(234,230,220,0.2);">
+              <div style="background: {{ e.bg }}; padding: 13px 14px; font-family: 'Noto Serif SC', serif; font-size: 16px; line-height: 1.5;">{{ e.dim }}</div>
+              <div style="background: {{ e.bg }}; padding: 13px 14px; font-size: 15px; line-height: 1.75; color: #cbc6bc;">{{ e.eu }}</div>
+              <div style="background: {{ e.bg }}; padding: 13px 14px; font-size: 15px; line-height: 1.75; color: #cbc6bc;">{{ e.us }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+      <div>
+        <div style="font-size: 13px; letter-spacing: 0.2em; color: #c9923f;">观影媒介的演进</div>
+        <div style="margin-top: 18px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-family: 'Noto Serif SC', serif; font-size: 17px;">
+          <span style="background: rgba(234,230,220,0.08); padding: 10px 14px;">影院</span><span style="color: #80877f;">→</span>
+          <span style="background: rgba(234,230,220,0.11); padding: 10px 14px;">电影俱乐部与资料馆</span><span style="color: #80877f;">→</span>
+          <span style="background: rgba(234,230,220,0.14); padding: 10px 14px;">录像带 1980s</span><span style="color: #80877f;">→</span>
+          <span style="background: rgba(201,146,63,0.18); padding: 10px 14px;">VCD / DVD</span><span style="color: #80877f;">→</span>
+          <span style="background: rgba(201,146,63,0.24); padding: 10px 14px;">互联网</span><span style="color: #80877f;">→</span>
+          <span style="background: rgba(201,146,63,0.3); padding: 10px 14px;">流媒体</span>
+        </div>
+        <div style="margin-top: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 22px;">
+          <div style="border-top: 2px solid rgba(234,230,220,0.35); padding-top: 14px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 19px;">前互联网</div><div style="margin-top: 6px; font-size: 15px; line-height: 1.8; color: #a9a49a;">经典建构的主力是权威媒体、学术共同体、电影界内部传承。</div></div>
+          <div style="border-top: 2px solid #c9923f; padding-top: 14px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 19px;">互联网</div><div style="margin-top: 6px; font-size: 15px; line-height: 1.8; color: #a9a49a;">大众权重更大。两层影响：传播更容易（对中国这样的国家是巨大利好）；交流更密（Senses of Cinema 这类精英网站，加上打分网站刷分与论坛）。</div></div>
+        </div>
+        <div style="margin-top: 22px; display: grid; gap: 10px; font-size: 16px; line-height: 1.85; color: #cbc6bc;">
+          <div>欧美形成极客式小圈子，例如给《黑暗骑士》刷分，但它仍属大众型经典。</div>
+          <div>中国是民间舆论直接造经典：《大话西游》靠大学生 BBS，《让子弹飞》靠观众玩梗；杨德昌在大陆影迷心中的地位靠网络；豆瓣几乎是唯一参考平台。</div>
+          <div>亚文化可被网络放大并转化为主流，阿吴猜测诺兰如果早生 30 年可能是小众导演。</div>
+          <div>修复本身就是一种经典化认定，上海电影节培养出「看到 4K 修复就抢票」的观众。特吕弗的名言是：喜欢电影就去影院看，研究电影就反复看录像带。</div>
+          <div>电影没有「原作」（本雅明），互联网彻底解放了影迷，专业影迷全民化。</div>
+          <div style="color: #d98a78;">近十年的收缩：社交网络、大数据、短视频、监管强化，形成同温层与沉默，豆瓣资深用户撤退，高质量发言变少。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 56px 90px 0;">
+    <div style="display: flex; align-items: baseline; gap: 18px;">
+      <span style="font-family: 'Cormorant Garamond', serif; font-size: 26px; color: #c9923f;">XI</span>
+      <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 42px;">数字卡片</h2>
+    </div>
+    <div style="margin-top: 12px; height: 1px; background: linear-gradient(to right, #c9923f, rgba(234,230,220,0.18));"></div>
+    <div style="margin-top: 30px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: rgba(234,230,220,0.2);">
+      <sc-for list="{{ numbers }}" as="n" hint-placeholder-count="12">
+        <div style="background: #12161f; padding: 20px 22px;">
+          <div style="font-family: 'Cormorant Garamond', serif; font-size: 34px; color: #c9923f; line-height: 1.2;">{{ n.value }}</div>
+          <div style="margin-top: 8px; font-size: 15px; line-height: 1.75; color: #a9a49a;">{{ n.label }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <footer style="margin-top: 56px; padding: 54px 90px 66px; border-top: 1px solid rgba(234,230,220,0.28); background: rgba(201,146,63,0.05);">
+    <div style="display: grid; grid-template-columns: 1.1fr 1fr; gap: 54px; align-items: start;">
+      <div>
+        <div style="font-size: 13px; letter-spacing: 0.2em; color: #c9923f;">收尾</div>
+        <div style="margin-top: 14px; font-family: 'Noto Serif SC', serif; font-size: 34px; line-height: 1.55; text-wrap: pretty;">不存在自动给出公正结论的历史老人。正因为历史不公平，才有那么多被忽视的杰作。</div>
+        <div style="margin-top: 20px; font-size: 16px; line-height: 1.9; color: #cbc6bc;">比判定经典更重要的是理解经典为何成立、检验标准是否可靠，持续发表经过思考的看法，与偏见和平庸的主流意见对抗，让观念流动。</div>
+      </div>
+      <div style="display: grid; gap: 20px;">
+        <div style="border-top: 2px solid rgba(234,230,220,0.35); padding-top: 14px; font-size: 16px; line-height: 1.9; color: #cbc6bc;">电影是最全球化的艺术，比严肃文学（翻译慢）和流行音乐（高度本土化）都更全球化。在全球化倒退的年代，迷影人可能是最后坚守全球化理想的一小撮人。</div>
+        <div style="border-top: 2px solid rgba(234,230,220,0.35); padding-top: 14px; font-size: 16px; line-height: 1.9; color: #cbc6bc;">大量看世界电影的人难成狭隘民族主义者——阿吴自称「可能有点天真」，理由是需要同理心与换位思考才能理解和喜欢。化用杨德昌「电影让生命延长三倍」：电影也打开了三倍视角，并让人反省身边。</div>
+        <div style="border-top: 2px solid #5b9c93; padding-top: 14px; font-size: 15px; line-height: 1.85; color: #a9a49a;">其他引用：埃科「所有清单都暗示清单之外有一个无限广阔的世界」；斯科塞斯十个名额只选出五个，再选五个就有五十部并列；施拉德想写电影版《西方正典》，旁听詹姆斯·沙姆斯一年电影史课后只写了导论就放弃；《视与听》后来出了「只得一票」的遗珠榜。</div>
+      </div>
+    </div>
+    <div style="margin-top: 42px; display: flex; justify-content: space-between; align-items: baseline; font-size: 14px; letter-spacing: 0.16em; color: #80877f;">
+      <span>电影巨辩 · 第 13 期 · 内容整理自节目转录，人名片名已按上下文勘误</span>
+      <span style="font-family: 'Cormorant Garamond', serif; font-size: 20px; letter-spacing: 0.06em; color: #c9923f;">Sight &amp; Sound &nbsp;1941 – 2022</span>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1400}}">
+const NEG = 'rgba(184,80,63,0.14)';
+const POS = 'rgba(201,146,63,0.14)';
+const NEU = 'rgba(234,230,220,0.08)';
+
+const FACTORS = [
+  ['技术与形式迭代（默片到有声、黑白到彩色）', '负面', NEG, '#d98a78', '客观存在的观看障碍。批评年轻人看不进老片是居高临下；「黑白默片就代表艺术」也经不起推敲。'],
+  ['商业片的时代趣味', '负面', NEG, '#d98a78', '商业片追逐当下趣味，隔代容易过时。例子：看过徐克的黄飞鸿，就很难再看关德兴版。'],
+  ['影评人与媒体', '正面 · 强', POS, '#e0b063', '半世纪前是重要的文化权力。宝琳·凯尔与安德鲁·萨里斯笔战二十余年。'],
+  ['电影节', '正面 · 短期', POS, '#e0b063', '作用集中在上映后几年、商业回收期内，对影史前十或前百级别的作品几乎没有加分。容易制造争议效应（《夜与雾》），也是宣言发布地与政策开放的桥头堡（纽约电影节 1963）。'],
+  ['奖项', '正面 · 弱', POS, '#e0b063', '「需要拿奖来说事的，肯定不是历史级别的经典」。比利·奥古斯特有两座金棕榈，如今少有人记得；已经出现「电影节做题家」。'],
+  ['传播、重映、修复', '正面 · 最易被忽视', 'rgba(91,156,147,0.16)', '#7fc0b5', '「酒香也怕巷子深」。王家卫最精于此道。'],
+  ['影响的焦虑（对后辈导演的影响）', '正面 · 强', POS, '#e0b063', '黑泽明在西方地位高，因为模仿者太多：新好莱坞、徐克、杜琪峰。'],
+  ['被禁与难得一见', '双向', NEU, '#a9a49a', '可能因神秘感被高估，公开后暴跌，如卓别林《巴黎一妇人》。类比禁片效应：《活着》是张艺谋豆瓣最高分，但不是他最好的片。'],
+  ['「被放逐的艺术家」人设', '正面', POS, '#e0b063', '西方评论界同情被边缘化者：格里菲斯、施特罗海姆、威尔斯、尼古拉斯·雷、科波拉、让·维果、德莱叶。']
+];
+
+const SIGHTSOUND = [
+  ['1952', '《偷自行车的人》', '人道主义 · 战后', '上映仅几年即登顶，与道德立场及巴赞的推荐有关。卓别林地位至高无上，上榜默片多。规则相当混乱：朗格卢瓦只选 8 部，林赛·安德森选 16 部。'],
+  ['1962', '《公民凯恩》', '作者论 · 新浪潮前夜', '此后坐了 50 年头把交椅。《奇遇》刚拍出即排第 2；沟口《雨月物语》进前十，印度《大地之歌》靠前；《伊凡雷帝》第二部 1958 年解禁后入围；卡尔内、克莱尔下滑。'],
+  ['1972', '《公民凯恩》', '艺术片大师定型', '伯格曼两部进前十，之后再无。《圣女贞德受难记》《将军号》因德莱叶、基顿去世而反弹。Jay Leyda（陈立）提名了首部中国电影。'],
+  ['1982', '《公民凯恩》', '万神殿封闭', '1970 年代以后的新片无人选，电影开始有了「历史包袱」。《七武士》上位，《雨中曲》冲到前三；石挥《我这一辈子》和《马路天使》获得个别提名。'],
+  ['1992', '《公民凯恩》', '小津上位', '《2001太空漫游》《东京物语》上位。新增导演榜，《教父》1、2 与《愤怒的公牛》进入。程季华成为首位参投的大陆学者。'],
+  ['2002', '《公民凯恩》', '—', '《教父》唯一一次进入评论家十佳，导演榜则一直有它。'],
+  ['2012', '《迷魂记》', '投票人扩容', '人推人扩到近千人。《电影史》《撒旦探戈》《浩劫》《持摄影机的人》因音像流通获得认可。'],
+  ['2022', '《让娜·迪尔曼》', '身份政治 · 全球化', '投票超过 2000 人，包含发行、策展、选片人。前十新面孔：《让娜·迪尔曼》《花样年华》《军中禁恋》《穆赫兰道》。']
+];
+
+const VOTERS = [
+  ['1952', 63, null], ['1962', 70, null], ['1972', 89, null], ['1982', 122, null],
+  ['1992', 132, 101], ['2002', 145, 108], ['2012', 846, 358], ['2022', 1639, 480]
+];
+
+const CASES = [
+  ['《偷自行车的人》', '1952 巅峰 → 下降', 'd', '60 年代现代主义重形式；开创者不一定是集大成者；德西卡的温情被视为不够高级。'],
+  ['《公民凯恩》', '美国票房失败 → 1962–2002 第一 → 2012 让位', 'u', '1956 年 RKO 卖给电视台并重映；巴赞 1947、1950 两篇文章；萨特曾认为它过时。老马认为不是它下降，而是别人上升，「电影已经不需要教科书」。'],
+  ['《游戏规则》', '首映票房口碑双败、被剪、被禁 → 1959 修复版重映翻身 → 长期前三', 'u', '1956 年发现原始拷贝；60 年代的左倾氛围不利于《大幻影》。'],
+  ['《大幻影》', '50 年代导演榜高位 → 下降', 'd', '底片被德军运走、又被苏军运走，60 年代换回法国，80 年代图卢兹资料馆才在仓库发现。手册认为它只是爱国主题。'],
+  ['《迷魂记》', '首映失败 → 1972 第 12 → 1982 起前十 → 2012 第一', 'u', '罗宾·伍德的分析；精神分析批评兴起；1983 重映、1984 录像带、1996 修复；克里斯·马克《自由重演》的解读。'],
+  ['《东京物语》/ 小津', '被松竹认为「太日本」 → 1992 上位', 'u', '川喜多夫人与唐纳德·里奇推广，施拉德 1972《电影中的超验风格》，文德斯，波德维尔 1988 专著，德勒兹《时间-影像》临门一脚（莲实重彦的观点）。'],
+  ['《七武士》', '日本国内被批评 → 1982 上位', 'u', '大岛渚、筱田正浩、佐藤忠男都批评过；新好莱坞导演掌握话语权后力挺黑泽明，《影子武士》《乱》跟上。'],
+  ['沟口健二', '战后 30 年欧洲眼中的日本第一人 → 衰落', 'd', '助推力量只有电影手册一家；西方厌倦古装题材。'],
+  ['成濑巳喜男', '经典化未完全成功', 'd', '缺少标签式风格；奥迪·博克、诺埃尔·伯奇总拿他和小津比，反成陪衬。'],
+  ['《贪婪》', '60 年代前公认十佳 → 2022 出百大', 'd', '靠主题取胜；「被放逐艺术家」的代言人被威尔斯取代，深焦调度被《公民凯恩》代表。'],
+  ['《日出》', '被视为默片最高成就', 'u', '融合欧洲风格与好莱坞工业、梅里爱与卢米埃尔、城乡、古典与现代等对立元素。'],
+  ['《将军号》/ 基顿', '有声片时代被遗忘 → 60 年代重映 → 1965 翻身', 'u', '签约米高梅后失去创作权；1965 年威尼斯回顾展翻身；出演过贝克特短片《电影》。'],
+  ['《亚特兰大号》/ 让·维果', '被删到 65 分钟 → 1990 修复回 89 分钟', 'u', '「法国的兰波」人设；新浪潮的认同。'],
+  ['《圣女贞德受难记》', '商业失败 → 封神', 'u', '1951 年洛·杜卡的改动版；1981 年在挪威精神病院发现最接近原意的拷贝。'],
+  ['《伊凡雷帝》', '第二部被斯大林封杀 → 1958 解禁即获西方认可', 'u', '冷战政治因素。'],
+  ['《巴黎一妇人》', '半世纪看不到、地位高 → 70 年代重发后暴跌', 'd', '神秘感消除。'],
+  ['《雨中曲》', '法国配音版口碑差 → 1963 原声版平反 → 1982 前三', 'u', '70 年代米高梅重发加电视播放；80 年代对作者论的反思；元电影热。'],
+  ['《2001太空漫游》', '美国早期评价惨淡 → 1992 上位', 'u', '萨里斯曾把库布里克划入第七流。欧洲观影环境更严肃；录像带普及；80 年代科幻特效片成主流后回溯。'],
+  ['《教父》', '导演榜常驻，评论家榜仅 2002 一次', 'n', '早期互联网男性话语推动；AFI 2007 排第二。阿吴怀疑未来地位会下降。'],
+  ['《肖申克的救赎》', '1994 年不如《阿甘正传》《低俗小说》 → 大众口碑反超', 'u', '次年录像带市场第一；TNT 自 1997 年起反复播放（特纳集团左手倒右手）。'],
+  ['《让娜·迪尔曼》', '长期难看到 → DVD 后走高 → 2022 第一', 'u', '女性主义理论加投票扩容。阿克曼本人拒绝参加投票。'],
+  ['《花样年华》/ 王家卫', '香港本地争议 → 西方全面接受', 'u', '详见王家卫接受史一节。'],
+  ['《小城之春》', '1948 上映几天即撤 → 49 后被遗忘 → 80 年代重新发现', 'u', '详见重新发现一节。'],
+  ['《持摄影机的人》', '70 年代维尔托夫压过爱森斯坦 → 2012 / 2022 十佳', 'u', '「电影眼」概念在当代与监控社会思潮挂钩。'],
+  ['《午后的迷惘》', '2022 第 16', 'u', '美国实验电影体系的象征性承认。阿吴认为它比《一条安达鲁狗》拍得好。']
+];
+
+const WKW = [
+  ['《旺角卡门》', '叫好叫座，传统黑帮片', 'rgba(234,230,220,0.35)'],
+  ['《阿飞正传》', '口碑好，票房惨败', 'rgba(234,230,220,0.35)'],
+  ['《重庆森林》', '国际好评，昆汀助推', '#5b9c93'],
+  ['《东邪西毒》', '香港恶评，制片灾难，刘镇伟救场', '#b8503f'],
+  ['《春光乍泄》《花样年华》', '获国际奖，西方全面接受', '#c9923f'],
+  ['《东邪西毒》口碑反弹', '大学生与 BBS 台词传播', '#5b9c93'],
+  ['学术背书', 'Wiley-Blackwell 导演手册 2016，贝卢尔、希翁撰文；2022 视与听前十', '#c9923f']
+];
+
+const CAHIERS = [
+  ['1950s', '巴赞与「五虎将」，纯迷影、偏右', 'rgba(201,146,63,0.16)', '反萨杜尔的左派品位霸权与「优质电影」；作者论；推希区柯克、霍克斯。'],
+  ['1960 前后', '侯麦任主编，古典保守', NEU, '对新浪潮保持距离，《精疲力尽》只给两星。'],
+  ['1960s', '里维特政变罢免侯麦', 'rgba(91,156,147,0.14)', '引入结构主义、拉康、阿尔都塞；推布努埃尔、费里尼、塔蒂、杨佐、斯特劳布、帕索里尼。'],
+  ['1968–70s 中', '「红色时期」，极左', 'rgba(184,80,63,0.16)', '不评年度十佳，月刊变季刊，错过整个新好莱坞。达内时期德勒兹、福柯、朗西埃与编辑部互动密切。'],
+  ['1970s 中', '恢复正常', NEU, '转折点是《大白鲨》的评论。'],
+  ['1980s', '图比亚纳，与好莱坞「复婚」', NEU, '订户曾只剩约 2000，其中 500 为北美大学；1989 年《蝙蝠侠》上封面被视为丑闻。'],
+  ['1990s–2000s', '推德·帕尔玛、伊斯特伍德、斯皮尔伯格', 'rgba(201,146,63,0.1)', '《廊桥遗梦》被称为 90 年代最伟大电影（节目认为离谱）。阿萨亚斯、泰松去亚洲发现侯孝贤，节目肯定为历史性贡献。'],
+  ['现在', '仍有高冷的象征意义，已失前瞻性', NEU, '激进原创的作者转向博物馆与当代艺术。']
+];
+
+const FEUDS = [
+  ['宝琳·凯尔', '纽约客 · 反学院 · 反作者论', '笔战二十余年', '安德鲁·萨里斯', '作者论 ·《美国电影》万神殿'],
+  ['巴赞', '长镜头 · 深焦', '对立', '让·米特里', ''],
+  ['巴赞', '本体论', '被简化为对立', '爱森斯坦', '蒙太奇'],
+  ['乔治·萨杜尔', '老左派品位霸权', '被反叛', '电影手册青年派', ''],
+  ['罗杰·伊伯特 + 宝琳·凯尔', '力挺《雌雄大盗》1967', '对峙', '波斯利·克劳瑟', '纽约时报 · 痛骂《雌雄大盗》'],
+  ['电影手册', '首推希区柯克', '接力吹捧', '罗宾·伍德', '《迷魂记》的分析'],
+  ['诺埃尔·伯奇', '认为黑泽明才是战后调度大师', '反对手册', '电影手册', '扬沟口抑黑泽明']
+];
+
+const SPRING = [
+  ['1948', '《小城之春》在上海上映几天即撤片', 'rgba(184,80,63,0.14)'],
+  ['1950s', '费穆去港，1950 年回大陆找江青无果，回港郁郁而终', 'rgba(184,80,63,0.14)'],
+  ['1963', '程季华《中国电影发展史》：艺术越高、政治越有害', NEU],
+  ['此后', '长期被遗忘', NEU],
+  ['1980s', '马可·穆勒在都灵中国电影展放映', 'rgba(91,156,147,0.14)'],
+  ['', '香港影评人罗卡、黄爱玲、石琪赴意观看', 'rgba(91,156,147,0.14)'],
+  ['', '向中国电影资料馆借拷贝在港放映，韦伟与费明仪对谈', 'rgba(91,156,147,0.14)'],
+  ['1984–85', '早期中国电影展；1985 香港国际电影节费穆专题', 'rgba(201,146,63,0.14)'],
+  ['', '李欧梵、王德威接上抒情传统；大陆学者钟惦棐、罗艺军、李少白、陈山跟进', 'rgba(201,146,63,0.14)'],
+  ['至今', '田壮壮翻拍，贾樟柯多次致敬，当下被抬为民族美学旗帜', 'rgba(201,146,63,0.2)']
+];
+
+const CN_LISTS = [
+  ['2000', '香港《电影双周刊》', '20 世纪 100 部最佳港片'],
+  ['2005', '香港金像奖', '百年百大华语电影'],
+  ['2010', '台湾金马奖', '百大经典华语电影'],
+  ['2011', '香港电影资料馆', '百部不可不看的香港电影（1916–1999）。邵氏少、粤语长片多，强调主体性，类比台湾推台语片。'],
+  ['多次', '中国电影评论学会、中国电影资料馆、《看电影》、华语电影传媒大奖', '各类百年百大，差异很大。评论学会版较体制内，主旋律多。'],
+  ['2012', '主持人参与发起', '华语影评人影史十佳（全影史），100 多位两岸三地影评人投票。'],
+  ['2019', '主持人参与组织', '2000–2019 华语电影 20 佳，200 多位从业者投票，含海外。']
+];
+
+const TOP2012 = [
+  ['1', '公民凯恩'], ['2', '教父'], ['3', '牯岭街少年杀人事件'], ['4', '2001太空漫游'],
+  ['5', '东京物语'], ['6', '八部半'], ['7', '迷魂记'], ['8', '七武士'],
+  ['9', '大都会'], ['10', '小城之春'], ['15', '悲情城市']
+];
+
+const TOP2019 = [
+  ['1', '一一', '2000'], ['2', '花样年华', '2000'], ['3', '鬼子来了', '2000'], ['4', '卧虎藏龙', '2000'],
+  ['5', '刺客聂隐娘', ''], ['6', '无间道', ''], ['7', '世界', ''], ['8', '站台', ''],
+  ['9', '一代宗师', ''], ['10', '铁西区', ''], ['11', '白日焰火', '首部大陆导演院线片'], ['12', '黑社会', ''],
+  ['13', '功夫', ''], ['14', '路边野餐', ''], ['15', '大象席地而坐', ''], ['16', '春风沉醉的夜晚', ''],
+  ['17', '大佛普拉斯', ''], ['18', '三峡好人', ''], ['19', '天水围的日与夜', ''], ['20', '推拿', '']
+];
+
+const EUUS = [
+  ['看片渠道', '能看到世界各国电影，掌握话语权', '2000 年前很多艺术片、亚洲片看不到，韦恩斯坦买断雪藏'],
+  ['公共资助', 'BFI 年资助约 6000 万美元', 'AFI 约 10 万美元'],
+  ['学术与大众媒体', '埃科、卡尔维诺给日报写稿；巴特《神话学》先发在杂志；德勒兹等接受手册专访', '学院研究水平高，但与大众媒体脱钩'],
+  ['专业研讨会', '1992 年罗马威尔斯研讨会上全国报刊', '同类活动在美国本地媒体不会提'],
+  ['观众', '—', '孤立主义传统，不爱看字幕片。罗森鲍姆的家乡 40 年来第一部外语片是《美丽人生》'],
+  ['代表榜单', '《视与听》', 'AFI 1998 百大。罗森鲍姆批评它只评美国片、目的是卖 DVD']
+];
+
+const NUMBERS = [
+  ['4h17m', '节目时长，主持人自称有史以来最长的一期'],
+  ['7 个月 / 12 期', '播客开播至本期'],
+  ['1919', '《电影旬报》创刊，节目称世界上历史最悠久的电影杂志'],
+  ['120+ 年', '电影史长度'],
+  ['约 60–70 年', '电影经典系统的历史，二战后才开始'],
+  ['50 年', '《公民凯恩》占据第一的时间，1962–2012'],
+  ['8h → 2h → 4h', '《贪婪》：施特罗海姆剪辑版 8 小时多，素材 80 多小时，塔尔伯格剪到 2 小时多，修复版约 4 小时'],
+  ['113 → 85 → 修复', '《游戏规则》：113 分钟，雷诺阿自剪 85 分钟，1959 修复重映'],
+  ['89 → 65 → 89', '《亚特兰大号》：1990 年修复回 89 分钟'],
+  ['各 100+ 部', '川喜多夫人与法国资料馆交流展 1962–63，双方各放映 100 多部'],
+  ['25 国 · 117 人', '1958 布鲁塞尔世博会评选'],
+  ['100+ / 200+', '2012 华语影评人投票人数 / 2019 华语 20 佳投票人数']
+];
+
+const PORTRAITS = [
+  ['rk-p-welles', '威尔斯', '《公民凯恩》', '奥逊·威尔斯', 'Orson Welles'],
+  ['rk-p-bazin', '巴赞', '推举《偷自行车的人》', '安德烈·巴赞', 'André Bazin'],
+  ['rk-p-sarris', '萨里斯', '作者论 · 万神殿', '', 'Andrew Sarris'],
+  ['rk-p-kael', '宝琳·凯尔', '反作者论 · 笔战 20 年', '寶琳·凱爾', 'Pauline Kael'],
+  ['rk-p-ebert', '伊伯特', '力挺《雌雄大盗》', '罗杰·艾伯特', 'Roger Ebert'],
+  ['rk-p-rosenbaum', '罗森鲍姆', '批评 AFI 百大', '', 'Jonathan Rosenbaum'],
+  ['rk-p-bordwell', '波德维尔', '美国学科化一线', '大卫·波德维尔', 'David Bordwell'],
+  ['rk-p-langlois', '朗格卢瓦', '1952 只选 8 部', '亨利·朗格卢瓦', 'Henri Langlois'],
+  ['rk-p-ford', '约翰·福特', '1958 布鲁塞尔 107 票', '约翰·福特', 'John Ford'],
+  ['rk-p-hawks', '霍克斯', '1958 只得 8 票', '霍华德·霍克斯', 'Howard Hawks'],
+  ['rk-p-akerman', '阿克曼', '拒绝参加投票', '香特尔·阿克曼', 'Chantal Akerman'],
+  ['rk-p-feimu', '费穆', '《小城之春》', '费穆', 'Fei Mu']
+];
+
+const API = { zh: 'https://zh.wikipedia.org/w/api.php', en: 'https://en.wikipedia.org/w/api.php' };
+const FILMS = {
+  kane: ['大國民', 'Citizen Kane'],
+  bicycle: ['單車失竊記', 'Bicycle Thieves'],
+  vertigo: ['迷魂記', 'Vertigo (film)'],
+  jeanne: ['', 'Jeanne Dielman, 23, quai du Commerce, 1080 Bruxelles'],
+  rules: ['遊戲規則', 'The Rules of the Game'],
+  tokyo: ['東京物語', 'Tokyo Story'],
+  mood: ['花樣年華', 'In the Mood for Love'],
+  spring: ['小城之春', 'Spring in a Small Town'],
+  samurai: ['七武士', 'Seven Samurai'],
+  space: ['2001太空漫遊', '2001: A Space Odyssey (film)'],
+  godfather: ['教父 (電影)', 'The Godfather'],
+  yiyi: ['一一 (電影)', 'Yi Yi']
+};
+
+class Component extends DCLogic {
+  state = { img: {} };
+
+  componentDidMount() { this.load(); }
+
+  async json(url) { return (await fetch(url)).json(); }
+
+  async pageImages(lang, titles) {
+    const list = titles.filter(Boolean);
+    if (!list.length) return () => '';
+    const url = API[lang] + '?action=query&format=json&origin=*&redirects=1&prop=pageimages'
+      + '&piprop=thumbnail&pithumbsize=720&titles=' + encodeURIComponent(list.join('|'));
+    const q = (await this.json(url)).query || {};
+    const byTitle = {};
+    Object.keys(q.pages || {}).forEach(k => {
+      const p = q.pages[k];
+      if (p && p.thumbnail && p.thumbnail.source) byTitle[p.title] = p.thumbnail.source;
+    });
+    const alias = {};
+    (q.normalized || []).forEach(x => { alias[x.from] = x.to; });
+    (q.redirects || []).forEach(r => { alias[r.from] = r.to; });
+    return t => byTitle[alias[t] || t] || byTitle[t] || '';
+  }
+
+  // Posters are non-free local uploads, which pageimages skips —
+  // walk the article's images and keep the locally hosted raster.
+  async posterFor(lang, title) {
+    if (!title) return '';
+    const url = API[lang] + '?action=query&format=json&origin=*&redirects=1&generator=images&gimlimit=30'
+      + '&prop=imageinfo&iiprop=url|size&iiurlwidth=640&titles=' + encodeURIComponent(title);
+    const q = (await this.json(url)).query || {};
+    const pages = Object.keys(q.pages || {}).map(k => q.pages[k]);
+    const local = new RegExp('/wikipedia/(' + lang + '|commons)/');
+    const ok = [];
+    for (const p of pages) {
+      const info = p && p.imageinfo && p.imageinfo[0];
+      if (!info) continue;
+      const src = info.url || '';
+      if (!local.test(src)) continue;
+      const file = decodeURIComponent(src.split('/').pop().split('?')[0]);
+      if (/\.svg/i.test(file) || !/\.(jpe?g|png)$/i.test(file)) continue;
+      if (/(Flag_of|_flag|Cscr-|Symbol_|Video-x-|Ambox|Commons-logo|Wikimedia_|OOjs_UI|Question_book|Padlock|Disambig|Edit-clear)/i.test(file)) continue;
+      if (typeof info.width === 'number' && info.width < 200) continue;
+      ok.push({ file: file, url: info.thumburl || src });
+    }
+    if (!ok.length) return '';
+    const poster = ok.find(c => /(poster|ver\d|_ad\b|cover)/i.test(c.file));
+    return (poster || ok[0]).url;
+  }
+
+  async load() {
+    const out = {};
+    try {
+      const zh = await this.pageImages('zh', PORTRAITS.map(p => p[3]));
+      PORTRAITS.forEach(p => { out[p[0]] = zh(p[3]); });
+      const missing = PORTRAITS.filter(p => !out[p[0]]);
+      if (missing.length) {
+        const en = await this.pageImages('en', missing.map(p => p[4]));
+        missing.forEach(p => { out[p[0]] = en(p[4]); });
+      }
+      this.setState({ img: Object.assign({}, out) });
+    } catch (e) {
+      console.warn('portrait lookup failed', e);
+    }
+    const keys = Object.keys(FILMS);
+    const posters = await Promise.all(keys.map(async k => {
+      const zh = await this.posterFor('zh', FILMS[k][0]).catch(() => '');
+      if (zh) return zh;
+      return this.posterFor('en', FILMS[k][1]).catch(() => '');
+    }));
+    keys.forEach((k, i) => { out[k] = posters[i]; });
+    this.setState({ img: Object.assign({}, out) });
+  }
+
+  renderVals() {
+    const img = this.state.img;
+    const pic = {};
+    Object.keys(FILMS).forEach(k => { pic[k] = img[k] || ''; });
+    const max = 1639, H = 216;
+    const trendInk = { u: '#e0b063', d: '#d98a78', n: '#a9a49a' };
+    return {
+      pic: pic,
+      portraits: PORTRAITS.map(p => ({ id: p[0], name: p[1], note: p[2], src: img[p[0]] || '' })),
+      factors: FACTORS.map(f => ({ name: f[0], dir: f[1], bg: f[2], dirInk: f[3], note: f[4] })),
+      sightsound: SIGHTSOUND.map((r, i) => ({
+        year: r[0], first: r[1], key: r[2], note: r[3],
+        bg: i % 2 ? 'rgba(234,230,220,0.09)' : 'rgba(234,230,220,0.05)'
+      })),
+      voters: VOTERS.map(v => ({
+        year: v[0], critics: v[1],
+        ch: Math.round(10 + v[1] / max * H) + 'px',
+        dh: v[2] ? Math.round(10 + v[2] / max * H) + 'px' : '0px'
+      })),
+      cases: CASES.map((c, i) => ({
+        name: c[0], trend: c[1], pivot: c[3], trendInk: trendInk[c[2]],
+        bg: i % 2 ? 'rgba(234,230,220,0.09)' : 'rgba(234,230,220,0.05)'
+      })),
+      wkw: WKW.map(w => ({ title: w[0], note: w[1], line: w[2] })),
+      cahiers: CAHIERS.map(c => ({ era: c[0], line: c[1], bg: c[2], note: c[3] })),
+      feuds: FEUDS.map(f => ({ a: f[0], aNote: f[1], rel: f[2], b: f[3], bNote: f[4] })),
+      springChain: SPRING.map(s => ({ when: s[0], what: s[1], bg: s[2] })),
+      cnLists: CN_LISTS.map((l, i) => ({
+        year: l[0], who: l[1], what: l[2],
+        bg: i % 2 ? 'rgba(234,230,220,0.09)' : 'rgba(234,230,220,0.05)'
+      })),
+      top2012: TOP2012.map(t => ({
+        rank: t[0], film: t[1],
+        bg: Number(t[0]) <= 3 ? 'rgba(201,146,63,0.18)' : 'rgba(234,230,220,0.06)',
+        ink: Number(t[0]) <= 3 ? '#e0b063' : '#a9a49a'
+      })),
+      top2019: TOP2019.map(t => ({
+        rank: t[0], film: t[1], note: t[2],
+        bg: Number(t[0]) <= 4 ? 'rgba(201,146,63,0.18)' : 'rgba(234,230,220,0.06)',
+        ink: Number(t[0]) <= 4 ? '#e0b063' : '#80877f'
+      })),
+      euus: EUUS.map((e, i) => ({
+        dim: e[0], eu: e[1], us: e[2],
+        bg: i % 2 ? 'rgba(234,230,220,0.09)' : 'rgba(234,230,220,0.04)'
+      })),
+      numbers: NUMBERS.map(n => ({ value: n[0], label: n[1] }))
+    };
+  }
+}
+</script>
+</body>
+</html>

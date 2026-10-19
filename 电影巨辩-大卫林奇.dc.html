@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  body { margin: 0; background: #08070a; }
+  a { color: #c2453f; }
+  a:hover { color: #e0736b; }
+</style>
+</helmet>
+<div style="width: 1400px; background: #0e0d11; color: #ece7dd; font-family: 'Noto Sans SC', sans-serif; position: relative; overflow: hidden;">
+
+  <header style="position: relative; padding: 0 0 54px;">
+    <div style="height: 26px; background: repeating-linear-gradient(90deg, #12110f 0 44px, #efe9df 44px 88px);"></div>
+    <div style="padding: 58px 90px 0; background: repeating-linear-gradient(90deg, rgba(122,16,20,0.55) 0 26px, rgba(68,8,12,0.55) 26px 52px), #0e0d11;">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; font-size: 15px; letter-spacing: 0.22em; color: #d8a13f;">
+        <span>电影巨辩 · 第 24 期 · 大卫·林奇</span>
+        <span>时长 4:13 · 老马 / 阿吴</span>
+      </div>
+      <div style="margin-top: 32px; display: grid; grid-template-columns: 1fr 400px; gap: 48px; align-items: end;">
+        <div>
+          <h1 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 104px; line-height: 1.0; letter-spacing: -0.02em;">大脑即屏幕</h1>
+          <div style="margin-top: 14px; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 38px; color: #d8a13f;">David Lynch &nbsp;·&nbsp; the brain is a screen</div>
+          <div style="margin-top: 24px; max-width: 860px; font-family: 'Noto Serif SC', serif; font-size: 28px; line-height: 1.55;">林奇电影里的变身与幻象<span style="color: #e5988f;">不是梦</span>，是<span style="color: #d8a13f;">意识改写了现实</span>。</div>
+          <p style="margin: 16px 0 0; max-width: 860px; font-size: 19px; line-height: 1.85; color: #cfc8bc; text-wrap: pretty;">按时间戳切分，视角一占了 103 分钟，约四成；两套解读合计近六成，光铺垫宗教哲学背景就用了半小时以上。这期的重心显然是「怎么读林奇」，生平只是底子。</p>
+          <div style="margin-top: 14px; font-size: 14px; line-height: 1.8; color: #9b9488;">原题《讨论大卫·林奇的 N 种角度：纪念我们这个时代的艺术电影第一人》，约 2025 年 4 月发布，林奇去世约三个月后。</div>
+        </div>
+        <div style="position: relative; width: 400px; height: 300px; background: #191720;">
+          <image-slot id="dl-portrait" src="{{ pic.lynch }}" shape="rect" placeholder="大卫·林奇肖像（拖入图片）"></image-slot>
+        </div>
+      </div>
+      <div style="margin-top: 44px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 34px; align-items: start; padding-bottom: 46px;">
+        <div style="border-top: 2px solid #c2453f; padding-top: 18px;">
+          <div style="font-size: 13px; letter-spacing: 0.2em; color: #c2453f;">节目的判断</div>
+          <p style="margin: 10px 0 0; font-size: 17px; line-height: 1.85; color: #cfc8bc;">1980 年代以后最重要的美国艺术片导演。戛纳、《电影手册》、《视与听》三家都给了最高规格的认可。</p>
+        </div>
+        <div style="border-top: 2px solid #d8a13f; padding-top: 18px;">
+          <div style="font-size: 13px; letter-spacing: 0.2em; color: #d8a13f;">两条学术路径</div>
+          <p style="margin: 10px 0 0; font-size: 17px; line-height: 1.85; color: #cfc8bc;">托德·麦高恩走精神分析，玛莎·诺希姆森走印度教哲学，后者直接否定前者。节目的两套视角基本对应这两条。</p>
+        </div>
+        <div style="border-top: 2px solid rgba(236,231,221,0.5); padding-top: 18px;">
+          <div style="font-size: 13px; letter-spacing: 0.2em; color: #b8b1a5;">方法论</div>
+          <p style="margin: 10px 0 0; font-size: 17px; line-height: 1.85; color: #cfc8bc;">林奇从不解释自己的电影，别人怎么理解他都说「对」。所以这期不给标准答案，而是把多种角度摆出来。</p>
+        </div>
+      </div>
+    </div>
+    <div style="height: 18px; background: repeating-linear-gradient(90deg, #12110f 0 44px, #efe9df 44px 88px);"></div>
+  </header>
+
+  <sc-if value="{{ showChapterMap }}" hint-placeholder-val="{{ true }}">
+  <section style="padding: 64px 90px 0;">
+    <div style="display: flex; align-items: baseline; gap: 18px;">
+      <span style="font-family: 'Cormorant Garamond', serif; font-size: 26px; color: #d8a13f;">I</span>
+      <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 44px;">四小时怎么分配</h2>
+      <span style="margin-left: auto; font-size: 14px; letter-spacing: 0.18em; color: #8d867b;">条宽 ∝ 时长 · 时间戳误差约一分钟</span>
+    </div>
+    <div style="margin-top: 12px; height: 1px; background: linear-gradient(to right, #c2453f, rgba(236,231,221,0.18));"></div>
+
+    <div style="margin-top: 30px; display: grid; grid-template-columns: 1fr 420px; gap: 48px; align-items: end;">
+      <p style="margin: 0; max-width: 760px; font-size: 18px; line-height: 1.85; color: #cfc8bc; text-wrap: pretty;">节目按过渡句分成九段。前一小时讲影史地位、产业与生涯；之后用视角一把九部长片过一遍，花半小时铺垫宗教与哲学，再用视角二重读一遍，最后收尾。</p>
+      <div>
+        <div style="display: flex; align-items: baseline; justify-content: flex-end; gap: 14px;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 88px; line-height: 0.9; color: #d8a13f;">72%</span><span style="font-family: 'Noto Serif SC', serif; font-size: 20px; line-height: 1.5;">的时间在讲<br>怎么读林奇</span></div>
+        <div style="margin-top: 10px; text-align: right; font-size: 13px; color: #8d867b;">视角一 103.0′ + 工具箱 34.1′ + 视角二 45.2′ = 182.3′，占全长 253′</div>
+      </div>
+    </div>
+
+    <div style="margin-top: 40px; display: grid; gap: 0;">
+      <div style="display: grid; grid-template-columns: 150px 1fr; gap: 20px;">
+        <div style="display: flex; align-items: flex-end; padding-bottom: 14px; font-size: 13px; letter-spacing: 0.2em; color: #8d867b;">主要站点</div>
+        <div style="position: relative; height: 239px;"><div style="position: absolute; left: 0.441%; bottom: 0; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 13px; line-height: 1; color: #b3aca0; white-space: nowrap; margin-bottom: 5px;">0:01</span><span style="writing-mode: vertical-rl; padding: 8px 3px; font-size: 13px; line-height: 1; letter-spacing: 0.08em; color: #ece7dd; background: linear-gradient(rgba(236,231,221,0.12), rgba(236,231,221,0.12)), #0e0d11; border: 1px solid rgba(236,231,221,0.45);">三大机构的背书</span><span style="width: 1px; height: 10px; background: rgba(236,231,221,0.45);"></span></div><div style="position: absolute; left: 5.581%; bottom: 0; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 13px; line-height: 1; color: #b3aca0; white-space: nowrap; margin-bottom: 5px;">0:14</span><span style="writing-mode: vertical-rl; padding: 8px 3px; font-size: 13px; line-height: 1; letter-spacing: 0.08em; color: #ece7dd; background: linear-gradient(rgba(236,231,221,0.12), rgba(236,231,221,0.12)), #0e0d11; border: 1px solid rgba(236,231,221,0.45);">错位的一代</span><span style="width: 1px; height: 10px; background: rgba(236,231,221,0.45);"></span></div><div style="position: absolute; left: 11.958%; bottom: 0; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 13px; line-height: 1; color: #b3aca0; white-space: nowrap; margin-bottom: 5px;">0:30</span><span style="writing-mode: vertical-rl; padding: 8px 3px; font-size: 13px; line-height: 1; letter-spacing: 0.08em; color: #ece7dd; background: linear-gradient(rgba(236,231,221,0.12), rgba(236,231,221,0.12)), #0e0d11; border: 1px solid rgba(236,231,221,0.45);">《沙丘》失败</span><span style="width: 1px; height: 10px; background: rgba(236,231,221,0.45);"></span></div><div style="position: absolute; left: 16.097%; bottom: 0; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 13px; line-height: 1; color: #b3aca0; white-space: nowrap; margin-bottom: 5px;">0:40</span><span style="writing-mode: vertical-rl; padding: 8px 3px; font-size: 13px; line-height: 1; letter-spacing: 0.08em; color: #ece7dd; background: linear-gradient(rgba(236,231,221,0.12), rgba(236,231,221,0.12)), #0e0d11; border: 1px solid rgba(236,231,221,0.45);">1990：金棕榈与《双峰》</span><span style="width: 1px; height: 10px; background: rgba(236,231,221,0.45);"></span></div><div style="position: absolute; left: 20.823%; bottom: 0; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 13px; line-height: 1; color: #b3aca0; white-space: nowrap; margin-bottom: 5px;">0:52</span><span style="writing-mode: vertical-rl; padding: 8px 3px; font-size: 13px; line-height: 1; letter-spacing: 0.08em; color: #ece7dd; background: linear-gradient(rgba(236,231,221,0.12), rgba(236,231,221,0.12)), #0e0d11; border: 1px solid rgba(236,231,221,0.45);">多媒体艺术家</span><span style="width: 1px; height: 10px; background: rgba(236,231,221,0.45);"></span></div><div style="position: absolute; left: 23.238%; bottom: 0; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 13px; line-height: 1; color: #8d867b; white-space: nowrap; margin-bottom: 5px;">0:58</span><span style="writing-mode: vertical-rl; padding: 8px 3px; font-size: 13px; line-height: 1; letter-spacing: 0.08em; color: #ece7dd; background: linear-gradient(rgba(236,231,221,0.05), rgba(236,231,221,0.05)), #0e0d11; border: 1px solid rgba(236,231,221,0.3);">林奇为什么不解释</span><span style="width: 1px; height: 10px; background: rgba(236,231,221,0.3);"></span></div><div style="position: absolute; left: 29.437%; bottom: 0; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 13px; line-height: 1; color: #e5988f; white-space: nowrap; margin-bottom: 5px;">1:14</span><span style="writing-mode: vertical-rl; padding: 8px 3px; font-size: 13px; line-height: 1; letter-spacing: 0.08em; color: #ece7dd; background: linear-gradient(rgba(194,69,63,0.3), rgba(194,69,63,0.3)), #0e0d11; border: 1px solid rgba(194,69,63,0.8);">《蓝丝绒》</span><span style="width: 1px; height: 10px; background: rgba(194,69,63,0.8);"></span></div><div style="position: absolute; left: 41.961%; bottom: 0; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 13px; line-height: 1; color: #e5988f; white-space: nowrap; margin-bottom: 5px;">1:46</span><span style="writing-mode: vertical-rl; padding: 8px 3px; font-size: 13px; line-height: 1; letter-spacing: 0.08em; color: #ece7dd; background: linear-gradient(rgba(194,69,63,0.3), rgba(194,69,63,0.3)), #0e0d11; border: 1px solid rgba(194,69,63,0.8);">《妖夜荒踪》：五种分支</span><span style="width: 1px; height: 10px; background: rgba(194,69,63,0.8);"></span></div><div style="position: absolute; left: 51.023%; bottom: 0; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 13px; line-height: 1; color: #e5988f; white-space: nowrap; margin-bottom: 5px;">2:09</span><span style="writing-mode: vertical-rl; padding: 8px 3px; font-size: 13px; line-height: 1; letter-spacing: 0.08em; color: #ece7dd; background: linear-gradient(rgba(194,69,63,0.3), rgba(194,69,63,0.3)), #0e0d11; border: 1px solid rgba(194,69,63,0.8);">《穆赫兰道》：前梦后实</span><span style="width: 1px; height: 10px; background: rgba(194,69,63,0.8);"></span></div><div style="position: absolute; left: 56.203%; bottom: 0; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 13px; line-height: 1; color: #e5988f; white-space: nowrap; margin-bottom: 5px;">2:22</span><span style="writing-mode: vertical-rl; padding: 8px 3px; font-size: 13px; line-height: 1; letter-spacing: 0.08em; color: #ece7dd; background: linear-gradient(rgba(194,69,63,0.3), rgba(194,69,63,0.3)), #0e0d11; border: 1px solid rgba(194,69,63,0.8);">《内陆帝国》：时空套层</span><span style="width: 1px; height: 10px; background: rgba(194,69,63,0.8);"></span></div><div style="position: absolute; left: 66.805%; bottom: 0; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 13px; line-height: 1; color: #d8a13f; white-space: nowrap; margin-bottom: 5px;">2:49</span><span style="writing-mode: vertical-rl; padding: 8px 3px; font-size: 13px; line-height: 1; letter-spacing: 0.08em; color: #ece7dd; background: linear-gradient(rgba(216,161,63,0.2), rgba(216,161,63,0.2)), #0e0d11; border: 1px solid rgba(216,161,63,0.7);">超觉冥想</span><span style="width: 1px; height: 10px; background: rgba(216,161,63,0.7);"></span></div><div style="position: absolute; left: 74.123%; bottom: 0; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 13px; line-height: 1; color: #d8a13f; white-space: nowrap; margin-bottom: 5px;">3:07</span><span style="writing-mode: vertical-rl; padding: 8px 3px; font-size: 13px; line-height: 1; letter-spacing: 0.08em; color: #ece7dd; background: linear-gradient(rgba(216,161,63,0.2), rgba(216,161,63,0.2)), #0e0d11; border: 1px solid rgba(216,161,63,0.7);">量子：统一场、纠缠、叠加</span><span style="width: 1px; height: 10px; background: rgba(216,161,63,0.7);"></span></div><div style="position: absolute; left: 79.691%; bottom: 0; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 13px; line-height: 1; color: #d8a13f; white-space: nowrap; margin-bottom: 5px;">3:21</span><span style="writing-mode: vertical-rl; padding: 8px 3px; font-size: 13px; line-height: 1; letter-spacing: 0.08em; color: #ece7dd; background: linear-gradient(rgba(216,161,63,0.2), rgba(216,161,63,0.2)), #0e0d11; border: 1px solid rgba(216,161,63,0.7);">视角二从《橡皮头》重读</span><span style="width: 1px; height: 10px; background: rgba(216,161,63,0.7);"></span></div><div style="position: absolute; left: 83.922%; bottom: 0; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 13px; line-height: 1; color: #d8a13f; white-space: nowrap; margin-bottom: 5px;">3:32</span><span style="writing-mode: vertical-rl; padding: 8px 3px; font-size: 13px; line-height: 1; letter-spacing: 0.08em; color: #ece7dd; background: linear-gradient(rgba(216,161,63,0.2), rgba(216,161,63,0.2)), #0e0d11; border: 1px solid rgba(216,161,63,0.7);">《妖夜荒踪》：变身是真的</span><span style="width: 1px; height: 10px; background: rgba(216,161,63,0.7);"></span></div><div style="position: absolute; left: 87.996%; bottom: 0; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 13px; line-height: 1; color: #d8a13f; white-space: nowrap; margin-bottom: 5px;">3:42</span><span style="writing-mode: vertical-rl; padding: 8px 3px; font-size: 13px; line-height: 1; letter-spacing: 0.08em; color: #ece7dd; background: linear-gradient(rgba(216,161,63,0.2), rgba(216,161,63,0.2)), #0e0d11; border: 1px solid rgba(216,161,63,0.7);">《穆赫兰道》：两半都是真实</span><span style="width: 1px; height: 10px; background: rgba(216,161,63,0.7);"></span></div><div style="position: absolute; left: 92.017%; bottom: 0; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 13px; line-height: 1; color: #d8a13f; white-space: nowrap; margin-bottom: 5px;">3:53</span><span style="writing-mode: vertical-rl; padding: 8px 3px; font-size: 13px; line-height: 1; letter-spacing: 0.08em; color: #ece7dd; background: linear-gradient(rgba(216,161,63,0.2), rgba(216,161,63,0.2)), #0e0d11; border: 1px solid rgba(216,161,63,0.7);">《内陆帝国》：统一场即宫殿</span><span style="width: 1px; height: 10px; background: rgba(216,161,63,0.7);"></span></div><div style="position: absolute; left: 97.618%; bottom: 0; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 13px; line-height: 1; color: #8d867b; white-space: nowrap; margin-bottom: 5px;">4:07</span><span style="writing-mode: vertical-rl; padding: 8px 3px; font-size: 13px; line-height: 1; letter-spacing: 0.08em; color: #ece7dd; background: linear-gradient(rgba(236,231,221,0.05), rgba(236,231,221,0.05)), #0e0d11; border: 1px solid rgba(236,231,221,0.3);">德勒兹：大脑即屏幕</span><span style="width: 1px; height: 10px; background: rgba(236,231,221,0.3);"></span></div></div>
+      </div>
+      <div style="display: grid; grid-template-columns: 150px 1fr; gap: 20px;">
+        <div style="display: flex; align-items: center; font-size: 13px; letter-spacing: 0.2em; color: #8d867b;">板块</div>
+        <div>
+          <div style="position: relative; height: 66px;"><div style="position: absolute; top: 0; bottom: 0; left: 0.118%; width: 0.322%; padding-right: 2px; box-sizing: border-box;"><div style="height: 100%; background: rgba(236,231,221,0.07); padding: 12px 10px; box-sizing: border-box; overflow: hidden;"></div></div><div style="position: absolute; top: 0; bottom: 0; left: 0.441%; width: 5.140%; padding-right: 2px; box-sizing: border-box;"><div style="height: 100%; background: rgba(236,231,221,0.2); padding: 12px 10px; box-sizing: border-box; overflow: hidden;"><div style="font-family: 'Noto Serif SC', serif; font-size: 16px; color: #ece7dd; white-space: nowrap;">影史</div><div style="margin-top: 4px; font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #cfc8bc; white-space: nowrap;">13′</div></div></div><div style="position: absolute; top: 0; bottom: 0; left: 5.581%; width: 15.242%; padding-right: 2px; box-sizing: border-box;"><div style="height: 100%; background: rgba(236,231,221,0.2); padding: 12px 10px; box-sizing: border-box; overflow: hidden;"><div style="font-family: 'Noto Serif SC', serif; font-size: 16px; color: #ece7dd; white-space: nowrap;">产业与生涯</div><div style="margin-top: 4px; font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #cfc8bc; white-space: nowrap;">38.6′ · 15%</div></div></div><div style="position: absolute; top: 0; bottom: 0; left: 20.823%; width: 2.415%; padding-right: 2px; box-sizing: border-box;"><div style="height: 100%; background: rgba(236,231,221,0.2); padding: 12px 10px; box-sizing: border-box; overflow: hidden;"></div></div><div style="position: absolute; top: 0; bottom: 0; left: 23.238%; width: 2.080%; padding-right: 2px; box-sizing: border-box;"><div style="height: 100%; background: rgba(236,231,221,0.07); padding: 12px 10px; box-sizing: border-box; overflow: hidden;"></div></div><div style="position: absolute; top: 0; bottom: 0; left: 25.318%; width: 40.691%; padding-right: 2px; box-sizing: border-box;"><div style="height: 100%; background: rgba(194,69,63,0.5); padding: 12px 10px; box-sizing: border-box; overflow: hidden;"><div style="font-family: 'Noto Serif SC', serif; font-size: 16px; color: #ece7dd; white-space: nowrap;">视角一 · 梦与精神分析</div><div style="margin-top: 4px; font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #f0c8c4; white-space: nowrap;">103′ · 41%</div></div></div><div style="position: absolute; top: 0; bottom: 0; left: 66.009%; width: 13.458%; padding-right: 2px; box-sizing: border-box;"><div style="height: 100%; background: repeating-linear-gradient(135deg, rgba(216,161,63,0.36) 0 6px, rgba(216,161,63,0.18) 6px 12px); padding: 12px 10px; box-sizing: border-box; overflow: hidden;"><div style="font-family: 'Noto Serif SC', serif; font-size: 16px; color: #ece7dd; white-space: nowrap;">宗教哲学工具箱</div><div style="margin-top: 4px; font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #ecd9b0; white-space: nowrap;">34′ · 13%</div></div></div><div style="position: absolute; top: 0; bottom: 0; left: 79.467%; width: 17.841%; padding-right: 2px; box-sizing: border-box;"><div style="height: 100%; background: rgba(216,161,63,0.42); padding: 12px 10px; box-sizing: border-box; overflow: hidden;"><div style="font-family: 'Noto Serif SC', serif; font-size: 16px; color: #ece7dd; white-space: nowrap;">视角二 · 意识重读</div><div style="margin-top: 4px; font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #ecd9b0; white-space: nowrap;">45′ · 18%</div></div></div><div style="position: absolute; top: 0; bottom: 0; left: 97.308%; width: 2.692%; padding-right: 2px; box-sizing: border-box;"><div style="height: 100%; background: rgba(236,231,221,0.07); padding: 12px 10px; box-sizing: border-box; overflow: hidden;"></div></div></div>
+          <div style="height: 14px; background: #17161b; display: flex; align-items: center;"><div style="flex: 1; height: 2px; background: repeating-linear-gradient(90deg, rgba(216,161,63,0.75) 0 18px, transparent 18px 34px);"></div></div>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: 150px 1fr; gap: 20px;">
+        <div></div>
+        <div style="position: relative; height: 34px;"><div style="position: absolute; left: 0.000%; top: 0; width: 1px; height: 6px; background: rgba(236,231,221,0.35);"></div><div style="position: absolute; left: 0.000%; top: 8px; font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #8d867b;">0:00</div><div style="position: absolute; left: 11.846%; top: 0; width: 1px; height: 6px; background: rgba(236,231,221,0.35);"></div><div style="position: absolute; left: 11.846%; top: 8px; transform: translateX(-50%); font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #8d867b;">0:30</div><div style="position: absolute; left: 23.692%; top: 0; width: 1px; height: 6px; background: rgba(236,231,221,0.35);"></div><div style="position: absolute; left: 23.692%; top: 8px; transform: translateX(-50%); font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #8d867b;">1:00</div><div style="position: absolute; left: 35.538%; top: 0; width: 1px; height: 6px; background: rgba(236,231,221,0.35);"></div><div style="position: absolute; left: 35.538%; top: 8px; transform: translateX(-50%); font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #8d867b;">1:30</div><div style="position: absolute; left: 47.384%; top: 0; width: 1px; height: 6px; background: rgba(236,231,221,0.35);"></div><div style="position: absolute; left: 47.384%; top: 8px; transform: translateX(-50%); font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #8d867b;">2:00</div><div style="position: absolute; left: 59.230%; top: 0; width: 1px; height: 6px; background: rgba(236,231,221,0.35);"></div><div style="position: absolute; left: 59.230%; top: 8px; transform: translateX(-50%); font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #8d867b;">2:30</div><div style="position: absolute; left: 71.076%; top: 0; width: 1px; height: 6px; background: rgba(236,231,221,0.35);"></div><div style="position: absolute; left: 71.076%; top: 8px; transform: translateX(-50%); font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #8d867b;">3:00</div><div style="position: absolute; left: 82.922%; top: 0; width: 1px; height: 6px; background: rgba(236,231,221,0.35);"></div><div style="position: absolute; left: 82.922%; top: 8px; transform: translateX(-50%); font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #8d867b;">3:30</div><div style="position: absolute; left: 94.768%; top: 0; width: 1px; height: 6px; background: rgba(236,231,221,0.35);"></div><div style="position: absolute; left: 94.768%; top: 8px; transform: translateX(-50%); font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #8d867b;">4:00</div><div style="position: absolute; right: 0; top: 0; width: 1px; height: 6px; background: rgba(236,231,221,0.35);"></div><div style="position: absolute; right: 0; top: 8px; font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #8d867b;">4:13</div></div>
+      </div>
+      <div style="display: grid; grid-template-columns: 150px 1fr; gap: 20px; margin-bottom: 4px;">
+        <div></div>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: 13px; color: #8d867b;"><span style="display: flex; align-items: center; gap: 8px;"><span style="width: 14px; height: 10px; background: rgba(236,231,221,0.2);"></span>背景篇：影史、产业、生涯</span><span style="display: flex; align-items: center; gap: 8px;"><span style="width: 14px; height: 10px; background: rgba(194,69,63,0.5);"></span>视角一</span><span style="display: flex; align-items: center; gap: 8px;"><span style="width: 14px; height: 10px; background: repeating-linear-gradient(135deg, rgba(216,161,63,0.36) 0 6px, rgba(216,161,63,0.18) 6px 12px);"></span>宗教哲学工具箱</span><span style="display: flex; align-items: center; gap: 8px;"><span style="width: 14px; height: 10px; background: rgba(216,161,63,0.42);"></span>视角二</span><span style="display: flex; align-items: center; gap: 8px;"><span style="width: 14px; height: 10px; background: rgba(236,231,221,0.12);"></span>开场 · 方法论 · 结语</span></div>
+      </div>
+      <div style="margin-top: 26px; display: grid; grid-template-columns: 150px 1fr; gap: 20px;">
+        <div style="font-size: 13px; letter-spacing: 0.2em; color: #d8a13f;">话题接力</div>
+        <div style="font-family: 'Noto Serif SC', serif; font-size: 24px; line-height: 1.5;">先谈钱，再谈梦，然后冥想接棒，最后量子与意识收尾。</div>
+      </div>
+      <div style="display: grid; grid-template-columns: 150px 1fr; gap: 20px;">
+        <div style="display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 2px;"><div style="display: flex; align-items: center; gap: 8px;"><span style="width: 10px; height: 10px; flex: none; background: rgba(236,231,221,0.55);"></span><span style="font-family: 'Noto Serif SC', serif; font-size: 16px;">产业资金</span></div><div style="margin-top: 2px; padding-left: 18px; font-size: 12px; color: #8d867b;">峰值 9.0 / 千字</div></div>
+        <div style="position: relative; height: 82px; border-bottom: 1px solid rgba(236,231,221,0.2);"><div style="position: absolute; left: 0.441%; top: 0; bottom: 0; width: 1px; background: rgba(236,231,221,0.08);"></div><div style="position: absolute; left: 5.581%; top: 0; bottom: 0; width: 1px; background: rgba(236,231,221,0.08);"></div><div style="position: absolute; left: 20.823%; top: 0; bottom: 0; width: 1px; background: rgba(236,231,221,0.08);"></div><div style="position: absolute; left: 23.238%; top: 0; bottom: 0; width: 1px; background: rgba(236,231,221,0.08);"></div><div style="position: absolute; left: 25.318%; top: 0; bottom: 0; width: 1px; background: rgba(236,231,221,0.08);"></div><div style="position: absolute; left: 66.009%; top: 0; bottom: 0; width: 1px; background: rgba(236,231,221,0.08);"></div><div style="position: absolute; left: 79.467%; top: 0; bottom: 0; width: 1px; background: rgba(236,231,221,0.08);"></div><div style="position: absolute; left: 97.308%; top: 0; bottom: 0; width: 1px; background: rgba(236,231,221,0.08);"></div><div style="position: absolute; left: 0.000%; width: 3.949%; bottom: 0; height: 1.0px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: rgba(236,231,221,0.55);"></div></div><div style="position: absolute; left: 3.949%; width: 3.949%; bottom: 0; height: 7.5px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: rgba(236,231,221,0.55);"></div></div><div style="position: absolute; left: 7.897%; width: 3.949%; bottom: 0; height: 11.8px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: rgba(236,231,221,0.55);"></div></div><div style="position: absolute; left: 11.846%; width: 3.949%; bottom: 0; height: 16.4px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: rgba(236,231,221,0.55);"></div></div><div style="position: absolute; left: 15.795%; width: 3.949%; bottom: 0; height: 19.1px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: rgba(236,231,221,0.55);"></div></div><div style="position: absolute; left: 19.743%; width: 3.949%; bottom: 0; height: 3.0px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: rgba(236,231,221,0.55);"></div></div><div style="position: absolute; left: 27.641%; width: 3.949%; bottom: 0; height: 1.0px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: rgba(236,231,221,0.55);"></div></div><div style="position: absolute; left: 43.435%; width: 3.949%; bottom: 0; height: 1.5px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: rgba(236,231,221,0.55);"></div></div><div style="position: absolute; left: 47.384%; width: 3.949%; bottom: 0; height: 1.0px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: rgba(236,231,221,0.55);"></div></div><div style="position: absolute; left: 51.333%; width: 3.949%; bottom: 0; height: 1.4px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: rgba(236,231,221,0.55);"></div></div><div style="position: absolute; left: 55.281%; width: 3.949%; bottom: 0; height: 3.6px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: rgba(236,231,221,0.55);"></div></div><div style="position: absolute; left: 67.127%; width: 3.949%; bottom: 0; height: 2.3px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: rgba(236,231,221,0.55);"></div></div><div style="position: absolute; left: 17.769%; bottom: 23.1px; transform: translateX(-50%); display: flex; align-items: baseline; gap: 6px; white-space: nowrap; color: #cfc8bc;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 17px;">9.0</span><span style="font-size: 12px;">谈钱最密</span></div></div>
+      </div>
+      <div style="display: grid; grid-template-columns: 150px 1fr; gap: 20px;">
+        <div style="display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 2px;"><div style="display: flex; align-items: center; gap: 8px;"><span style="width: 10px; height: 10px; flex: none; background: #c2453f;"></span><span style="font-family: 'Noto Serif SC', serif; font-size: 16px;">梦与精神分析</span></div><div style="margin-top: 2px; padding-left: 18px; font-size: 12px; color: #8d867b;">峰值 15.4 / 千字</div></div>
+        <div style="position: relative; height: 82px; border-bottom: 1px solid rgba(236,231,221,0.2);"><div style="position: absolute; left: 0.441%; top: 0; bottom: 0; width: 1px; background: rgba(236,231,221,0.08);"></div><div style="position: absolute; left: 5.581%; top: 0; bottom: 0; width: 1px; background: rgba(236,231,221,0.08);"></div><div style="position: absolute; left: 20.823%; top: 0; bottom: 0; width: 1px; background: rgba(236,231,221,0.08);"></div><div style="position: absolute; left: 23.238%; top: 0; bottom: 0; width: 1px; background: rgba(236,231,221,0.08);"></div><div style="position: absolute; left: 25.318%; top: 0; bottom: 0; width: 1px; background: rgba(236,231,221,0.08);"></div><div style="position: absolute; left: 66.009%; top: 0; bottom: 0; width: 1px; background: rgba(236,231,221,0.08);"></div><div style="position: absolute; left: 79.467%; top: 0; bottom: 0; width: 1px; background: rgba(236,231,221,0.08);"></div><div style="position: absolute; left: 97.308%; top: 0; bottom: 0; width: 1px; background: rgba(236,231,221,0.08);"></div><div style="position: absolute; left: 0.000%; width: 3.949%; bottom: 0; height: 1.0px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: #c2453f;"></div></div><div style="position: absolute; left: 19.743%; width: 3.949%; bottom: 0; height: 1.0px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: #c2453f;"></div></div><div style="position: absolute; left: 23.692%; width: 3.949%; bottom: 0; height: 16.7px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: #c2453f;"></div></div><div style="position: absolute; left: 27.641%; width: 3.949%; bottom: 0; height: 19.0px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: #c2453f;"></div></div><div style="position: absolute; left: 31.589%; width: 3.949%; bottom: 0; height: 15.1px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: #c2453f;"></div></div><div style="position: absolute; left: 35.538%; width: 3.949%; bottom: 0; height: 13.4px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: #c2453f;"></div></div><div style="position: absolute; left: 39.487%; width: 3.949%; bottom: 0; height: 6.0px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: #c2453f;"></div></div><div style="position: absolute; left: 43.435%; width: 3.949%; bottom: 0; height: 21.9px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: #c2453f;"></div></div><div style="position: absolute; left: 47.384%; width: 3.949%; bottom: 0; height: 12.8px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: #c2453f;"></div></div><div style="position: absolute; left: 51.333%; width: 3.949%; bottom: 0; height: 32.6px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: #c2453f;"></div></div><div style="position: absolute; left: 55.281%; width: 3.949%; bottom: 0; height: 9.5px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: #c2453f;"></div></div><div style="position: absolute; left: 59.230%; width: 3.949%; bottom: 0; height: 10.9px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: #c2453f;"></div></div><div style="position: absolute; left: 63.179%; width: 3.949%; bottom: 0; height: 26.5px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: #c2453f;"></div></div><div style="position: absolute; left: 67.127%; width: 3.949%; bottom: 0; height: 2.3px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: #c2453f;"></div></div><div style="position: absolute; left: 71.076%; width: 3.949%; bottom: 0; height: 3.1px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: #c2453f;"></div></div><div style="position: absolute; left: 75.025%; width: 3.949%; bottom: 0; height: 4.4px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: #c2453f;"></div></div><div style="position: absolute; left: 78.973%; width: 3.949%; bottom: 0; height: 11.9px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: #c2453f;"></div></div><div style="position: absolute; left: 82.922%; width: 3.949%; bottom: 0; height: 7.5px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: #c2453f;"></div></div><div style="position: absolute; left: 86.871%; width: 3.949%; bottom: 0; height: 7.4px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: #c2453f;"></div></div><div style="position: absolute; left: 90.819%; width: 3.949%; bottom: 0; height: 7.4px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: #c2453f;"></div></div><div style="position: absolute; left: 53.307%; bottom: 36.6px; transform: translateX(-50%); display: flex; align-items: baseline; gap: 6px; white-space: nowrap; color: #e5988f;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 17px;">15.4</span><span style="font-size: 12px;">正讲《穆赫兰道》</span></div></div>
+      </div>
+      <div style="display: grid; grid-template-columns: 150px 1fr; gap: 20px;">
+        <div style="display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 2px;"><div style="display: flex; align-items: center; gap: 8px;"><span style="width: 10px; height: 10px; flex: none; background: #d8a13f;"></span><span style="font-family: 'Noto Serif SC', serif; font-size: 16px;">冥想与吠陀</span></div><div style="margin-top: 2px; padding-left: 18px; font-size: 12px; color: #8d867b;">峰值 26.4 / 千字</div></div>
+        <div style="position: relative; height: 82px; border-bottom: 1px solid rgba(236,231,221,0.2);"><div style="position: absolute; left: 0.441%; top: 0; bottom: 0; width: 1px; background: rgba(236,231,221,0.08);"></div><div style="position: absolute; left: 5.581%; top: 0; bottom: 0; width: 1px; background: rgba(236,231,221,0.08);"></div><div style="position: absolute; left: 20.823%; top: 0; bottom: 0; width: 1px; background: rgba(236,231,221,0.08);"></div><div style="position: absolute; left: 23.238%; top: 0; bottom: 0; width: 1px; background: rgba(236,231,221,0.08);"></div><div style="position: absolute; left: 25.318%; top: 0; bottom: 0; width: 1px; background: rgba(236,231,221,0.08);"></div><div style="position: absolute; left: 66.009%; top: 0; bottom: 0; width: 1px; background: rgba(236,231,221,0.08);"></div><div style="position: absolute; left: 79.467%; top: 0; bottom: 0; width: 1px; background: rgba(236,231,221,0.08);"></div><div style="position: absolute; left: 97.308%; top: 0; bottom: 0; width: 1px; background: rgba(236,231,221,0.08);"></div><div style="position: absolute; left: 0.000%; width: 3.949%; bottom: 0; height: 1.0px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: #d8a13f;"></div></div><div style="position: absolute; left: 23.692%; width: 3.949%; bottom: 0; height: 7.6px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: #d8a13f;"></div></div><div style="position: absolute; left: 39.487%; width: 3.949%; bottom: 0; height: 1.0px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: #d8a13f;"></div></div><div style="position: absolute; left: 47.384%; width: 3.949%; bottom: 0; height: 1.5px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: #d8a13f;"></div></div><div style="position: absolute; left: 55.281%; width: 3.949%; bottom: 0; height: 1.0px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: #d8a13f;"></div></div><div style="position: absolute; left: 63.179%; width: 3.949%; bottom: 0; height: 7.4px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: #d8a13f;"></div></div><div style="position: absolute; left: 67.127%; width: 3.949%; bottom: 0; height: 56.0px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: #d8a13f;"></div></div><div style="position: absolute; left: 71.076%; width: 3.949%; bottom: 0; height: 29.1px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: #d8a13f;"></div></div><div style="position: absolute; left: 75.025%; width: 3.949%; bottom: 0; height: 10.2px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: #d8a13f;"></div></div><div style="position: absolute; left: 78.973%; width: 3.949%; bottom: 0; height: 10.4px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: #d8a13f;"></div></div><div style="position: absolute; left: 82.922%; width: 3.949%; bottom: 0; height: 6.0px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: #d8a13f;"></div></div><div style="position: absolute; left: 86.871%; width: 3.949%; bottom: 0; height: 6.0px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: #d8a13f;"></div></div><div style="position: absolute; left: 90.819%; width: 3.949%; bottom: 0; height: 14.7px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: #d8a13f;"></div></div><div style="position: absolute; left: 94.768%; width: 3.949%; bottom: 0; height: 3.0px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: #d8a13f;"></div></div><div style="position: absolute; left: 98.717%; width: 1.283%; bottom: 0; height: 16.4px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: #d8a13f;"></div></div><div style="position: absolute; left: 69.102%; bottom: 60.0px; transform: translateX(-50%); display: flex; align-items: baseline; gap: 6px; white-space: nowrap; color: #d8a13f;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 17px;">26.4</span><span style="font-size: 12px;">冥想最密</span></div></div>
+      </div>
+      <div style="display: grid; grid-template-columns: 150px 1fr; gap: 20px;">
+        <div style="display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 2px;"><div style="display: flex; align-items: center; gap: 8px;"><span style="width: 10px; height: 10px; flex: none; background: repeating-linear-gradient(135deg, #e8c98a 0 3px, rgba(232,201,138,0.42) 3px 6px);"></span><span style="font-family: 'Noto Serif SC', serif; font-size: 16px;">量子与意识</span></div><div style="margin-top: 2px; padding-left: 18px; font-size: 12px; color: #8d867b;">峰值 10.5 / 千字</div></div>
+        <div style="position: relative; height: 82px; border-bottom: 1px solid rgba(236,231,221,0.2);"><div style="position: absolute; left: 0.441%; top: 0; bottom: 0; width: 1px; background: rgba(236,231,221,0.08);"></div><div style="position: absolute; left: 5.581%; top: 0; bottom: 0; width: 1px; background: rgba(236,231,221,0.08);"></div><div style="position: absolute; left: 20.823%; top: 0; bottom: 0; width: 1px; background: rgba(236,231,221,0.08);"></div><div style="position: absolute; left: 23.238%; top: 0; bottom: 0; width: 1px; background: rgba(236,231,221,0.08);"></div><div style="position: absolute; left: 25.318%; top: 0; bottom: 0; width: 1px; background: rgba(236,231,221,0.08);"></div><div style="position: absolute; left: 66.009%; top: 0; bottom: 0; width: 1px; background: rgba(236,231,221,0.08);"></div><div style="position: absolute; left: 79.467%; top: 0; bottom: 0; width: 1px; background: rgba(236,231,221,0.08);"></div><div style="position: absolute; left: 97.308%; top: 0; bottom: 0; width: 1px; background: rgba(236,231,221,0.08);"></div><div style="position: absolute; left: 3.949%; width: 3.949%; bottom: 0; height: 1.5px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: repeating-linear-gradient(135deg, #e8c98a 0 3px, rgba(232,201,138,0.42) 3px 6px);"></div></div><div style="position: absolute; left: 23.692%; width: 3.949%; bottom: 0; height: 1.5px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: repeating-linear-gradient(135deg, #e8c98a 0 3px, rgba(232,201,138,0.42) 3px 6px);"></div></div><div style="position: absolute; left: 27.641%; width: 3.949%; bottom: 0; height: 1.0px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: repeating-linear-gradient(135deg, #e8c98a 0 3px, rgba(232,201,138,0.42) 3px 6px);"></div></div><div style="position: absolute; left: 31.589%; width: 3.949%; bottom: 0; height: 1.0px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: repeating-linear-gradient(135deg, #e8c98a 0 3px, rgba(232,201,138,0.42) 3px 6px);"></div></div><div style="position: absolute; left: 35.538%; width: 3.949%; bottom: 0; height: 1.0px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: repeating-linear-gradient(135deg, #e8c98a 0 3px, rgba(232,201,138,0.42) 3px 6px);"></div></div><div style="position: absolute; left: 51.333%; width: 3.949%; bottom: 0; height: 1.0px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: repeating-linear-gradient(135deg, #e8c98a 0 3px, rgba(232,201,138,0.42) 3px 6px);"></div></div><div style="position: absolute; left: 55.281%; width: 3.949%; bottom: 0; height: 1.0px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: repeating-linear-gradient(135deg, #e8c98a 0 3px, rgba(232,201,138,0.42) 3px 6px);"></div></div><div style="position: absolute; left: 59.230%; width: 3.949%; bottom: 0; height: 5.1px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: repeating-linear-gradient(135deg, #e8c98a 0 3px, rgba(232,201,138,0.42) 3px 6px);"></div></div><div style="position: absolute; left: 63.179%; width: 3.949%; bottom: 0; height: 2.2px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: repeating-linear-gradient(135deg, #e8c98a 0 3px, rgba(232,201,138,0.42) 3px 6px);"></div></div><div style="position: absolute; left: 67.127%; width: 3.949%; bottom: 0; height: 10.9px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: repeating-linear-gradient(135deg, #e8c98a 0 3px, rgba(232,201,138,0.42) 3px 6px);"></div></div><div style="position: absolute; left: 71.076%; width: 3.949%; bottom: 0; height: 22.2px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: repeating-linear-gradient(135deg, #e8c98a 0 3px, rgba(232,201,138,0.42) 3px 6px);"></div></div><div style="position: absolute; left: 75.025%; width: 3.949%; bottom: 0; height: 17.5px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: repeating-linear-gradient(135deg, #e8c98a 0 3px, rgba(232,201,138,0.42) 3px 6px);"></div></div><div style="position: absolute; left: 78.973%; width: 3.949%; bottom: 0; height: 8.2px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: repeating-linear-gradient(135deg, #e8c98a 0 3px, rgba(232,201,138,0.42) 3px 6px);"></div></div><div style="position: absolute; left: 82.922%; width: 3.949%; bottom: 0; height: 9.8px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: repeating-linear-gradient(135deg, #e8c98a 0 3px, rgba(232,201,138,0.42) 3px 6px);"></div></div><div style="position: absolute; left: 86.871%; width: 3.949%; bottom: 0; height: 3.7px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: repeating-linear-gradient(135deg, #e8c98a 0 3px, rgba(232,201,138,0.42) 3px 6px);"></div></div><div style="position: absolute; left: 90.819%; width: 3.949%; bottom: 0; height: 21.3px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: repeating-linear-gradient(135deg, #e8c98a 0 3px, rgba(232,201,138,0.42) 3px 6px);"></div></div><div style="position: absolute; left: 94.768%; width: 3.949%; bottom: 0; height: 13.4px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: repeating-linear-gradient(135deg, #e8c98a 0 3px, rgba(232,201,138,0.42) 3px 6px);"></div></div><div style="position: absolute; left: 98.717%; width: 1.283%; bottom: 0; height: 11.7px; padding: 0 1px; box-sizing: border-box;"><div style="height: 100%; background: repeating-linear-gradient(135deg, #e8c98a 0 3px, rgba(232,201,138,0.42) 3px 6px);"></div></div><div style="position: absolute; left: 73.050%; bottom: 26.2px; transform: translateX(-50%); display: flex; align-items: baseline; gap: 6px; white-space: nowrap; color: #e8c98a;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 17px;">10.5</span></div><div style="position: absolute; left: 92.794%; bottom: 25.3px; transform: translateX(-50%); display: flex; align-items: baseline; gap: 6px; white-space: nowrap; color: #e8c98a;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 17px;">10.1</span></div></div>
+      </div>
+      <div style="margin-top: 14px; display: grid; grid-template-columns: 150px 1fr; gap: 20px;">
+        <div></div>
+        <div style="font-size: 13px; line-height: 1.8; color: #8d867b;">每 10 分钟一格，柱高为关键词每千字出现次数，四行同一刻度；最后一格只有 3 分钟。竖细线为板块分界。产业资金：票房、投资、发行、预算、片酬、剪辑权等；梦与精神分析：梦（不含梦想）、幻想、拉康、弗洛伊德、欲望等；冥想与吠陀：冥想、静坐、吠陀、梵、中阴、宫殿等；量子与意识：量子、统一场、叠加、纠缠、意识（不含潜意识）。</div>
+      </div>
+    </div>
+
+    <div style="margin-top: 50px; display: flex; align-items: baseline; gap: 18px;">
+      <div style="font-size: 13px; letter-spacing: 0.2em; color: #d8a13f;">按时间戳回听</div>
+      <span style="font-size: 13px; color: #8d867b;">宋体为主要站点</span>
+    </div>
+    <div style="margin-top: 18px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; align-items: start;">
+      <div style="display: grid; gap: 22px; align-content: start;"><div style="border-top: 2px solid rgba(236,231,221,0.45); padding-top: 10px;"><div style="display: flex; align-items: baseline; gap: 12px;"><span style="font-family: 'Noto Serif SC', serif; font-size: 18px; color: #ece7dd;">影史地位</span><span style="margin-left: auto; font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #8d867b;">0:01:07 – 0:14:08 · 13′</span></div><div style="margin-top: 8px;"><div style="display: grid; grid-template-columns: 62px 1fr; gap: 10px; padding: 4px 0;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #b3aca0;">0:01:07</span><span style="font-family: 'Noto Serif SC', serif; font-size: 15px; color: #ece7dd;">三大机构的背书</span></div><div style="display: grid; grid-template-columns: 62px 1fr; gap: 10px; padding: 4px 0;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #b3aca0;">0:06:10</span><span style="font-size: 14px; color: #9b9488;">学者爱吵架：麦高恩与诺希姆森</span></div><div style="display: grid; grid-template-columns: 62px 1fr; gap: 10px; padding: 4px 0;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #b3aca0;">0:07:09</span><span style="font-size: 14px; color: #9b9488;">能破圈：奥斯卡与《双峰》</span></div></div></div><div style="border-top: 2px solid rgba(236,231,221,0.45); padding-top: 10px;"><div style="display: flex; align-items: baseline; gap: 12px;"><span style="font-family: 'Noto Serif SC', serif; font-size: 18px; color: #ece7dd;">产业与生涯</span><span style="margin-left: auto; font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #8d867b;">0:14:08 – 0:52:44 · 38.6′</span></div><div style="margin-top: 8px;"><div style="display: grid; grid-template-columns: 62px 1fr; gap: 10px; padding: 4px 0;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #b3aca0;">0:14:08</span><span style="font-family: 'Noto Serif SC', serif; font-size: 15px; color: #ece7dd;">错位的一代：AFI 与新好莱坞</span></div><div style="display: grid; grid-template-columns: 62px 1fr; gap: 10px; padding: 4px 0;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #b3aca0;">0:18:22</span><span style="font-size: 14px; color: #9b9488;">《橡皮头》与午夜场</span></div><div style="display: grid; grid-template-columns: 62px 1fr; gap: 10px; padding: 4px 0;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #b3aca0;">0:22:42</span><span style="font-size: 14px; color: #9b9488;">《象人》：接活攒名气</span></div><div style="display: grid; grid-template-columns: 62px 1fr; gap: 10px; padding: 4px 0;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #b3aca0;">0:29:37</span><span style="font-size: 14px; color: #9b9488;">拒拍《星球大战》</span></div><div style="display: grid; grid-template-columns: 62px 1fr; gap: 10px; padding: 4px 0;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #b3aca0;">0:30:17</span><span style="font-family: 'Noto Serif SC', serif; font-size: 15px; color: #ece7dd;">《沙丘》失败</span></div><div style="display: grid; grid-template-columns: 62px 1fr; gap: 10px; padding: 4px 0;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #b3aca0;">0:36:35</span><span style="font-size: 14px; color: #9b9488;">不能死两次</span></div><div style="display: grid; grid-template-columns: 62px 1fr; gap: 10px; padding: 4px 0;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #b3aca0;">0:37:57</span><span style="font-size: 14px; color: #9b9488;">《蓝丝绒》：减半换终剪权</span></div><div style="display: grid; grid-template-columns: 62px 1fr; gap: 10px; padding: 4px 0;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #b3aca0;">0:40:46</span><span style="font-family: 'Noto Serif SC', serif; font-size: 15px; color: #ece7dd;">1990：金棕榈与《双峰》</span></div><div style="display: grid; grid-template-columns: 62px 1fr; gap: 10px; padding: 4px 0;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #b3aca0;">0:44:09</span><span style="font-size: 14px; color: #9b9488;">CiBy 2000 与法国资金</span></div><div style="display: grid; grid-template-columns: 62px 1fr; gap: 10px; padding: 4px 0;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #b3aca0;">0:48:58</span><span style="font-size: 14px; color: #9b9488;">《穆赫兰道》的来历</span></div><div style="display: grid; grid-template-columns: 62px 1fr; gap: 10px; padding: 4px 0;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #b3aca0;">0:51:10</span><span style="font-size: 14px; color: #9b9488;">《双峰：回归》</span></div></div></div><div style="border-top: 2px solid rgba(236,231,221,0.45); padding-top: 10px;"><div style="display: flex; align-items: baseline; gap: 12px;"><span style="font-family: 'Noto Serif SC', serif; font-size: 18px; color: #ece7dd;">多媒体艺术家</span><span style="margin-left: auto; font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #8d867b;">0:52:44 – 0:58:51 · 6.1′</span></div><div style="margin-top: 8px;"><div style="display: grid; grid-template-columns: 62px 1fr; gap: 10px; padding: 4px 0;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #b3aca0;">0:52:44</span><span style="font-family: 'Noto Serif SC', serif; font-size: 15px; color: #ece7dd;">多媒体艺术家</span></div></div></div></div>
+      <div style="display: grid; gap: 22px; align-content: start;"><div style="border-top: 2px solid rgba(236,231,221,0.3); padding-top: 10px;"><div style="display: flex; align-items: baseline; gap: 12px;"><span style="font-family: 'Noto Serif SC', serif; font-size: 18px; color: #cfc8bc;">解读方法论</span><span style="margin-left: auto; font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #8d867b;">0:58:51 – 1:04:07 · 5.3′</span></div><div style="margin-top: 8px;"><div style="display: grid; grid-template-columns: 62px 1fr; gap: 10px; padding: 4px 0;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #8d867b;">0:58:51</span><span style="font-family: 'Noto Serif SC', serif; font-size: 15px; color: #ece7dd;">林奇为什么不解释</span></div></div></div><div style="border-top: 2px solid rgba(194,69,63,0.8); padding-top: 10px;"><div style="display: flex; align-items: baseline; gap: 12px;"><span style="font-family: 'Noto Serif SC', serif; font-size: 18px; color: #ece7dd;">视角一：梦与精神分析</span><span style="margin-left: auto; font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #8d867b;">1:04:07 – 2:47:10 · 103′</span></div><div style="margin-top: 8px;"><div style="display: grid; grid-template-columns: 62px 1fr; gap: 10px; padding: 4px 0;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #e5988f;">1:04:07</span><span style="font-size: 14px; color: #9b9488;">《橡皮头》：责任恐惧</span></div><div style="display: grid; grid-template-columns: 62px 1fr; gap: 10px; padding: 4px 0;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #e5988f;">1:08:53</span><span style="font-size: 14px; color: #9b9488;">《象人》：拉康三界</span></div><div style="display: grid; grid-template-columns: 62px 1fr; gap: 10px; padding: 4px 0;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #e5988f;">1:14:33</span><span style="font-family: 'Noto Serif SC', serif; font-size: 15px; color: #ece7dd;">《蓝丝绒》</span></div><div style="display: grid; grid-template-columns: 62px 1fr; gap: 10px; padding: 4px 0;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #e5988f;">1:15:56</span><span style="font-size: 14px; color: #9b9488;">罗宾·伍德论争</span></div><div style="display: grid; grid-template-columns: 62px 1fr; gap: 10px; padding: 4px 0;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #e5988f;">1:35:40</span><span style="font-size: 14px; color: #9b9488;">《我心狂野》</span></div><div style="display: grid; grid-template-columns: 62px 1fr; gap: 10px; padding: 4px 0;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #e5988f;">1:43:25</span><span style="font-size: 14px; color: #9b9488;">插曲：林奇的政治观</span></div><div style="display: grid; grid-template-columns: 62px 1fr; gap: 10px; padding: 4px 0;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #e5988f;">1:46:16</span><span style="font-family: 'Noto Serif SC', serif; font-size: 15px; color: #ece7dd;">《妖夜荒踪》：五种分支</span></div><div style="display: grid; grid-template-columns: 62px 1fr; gap: 10px; padding: 4px 0;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #e5988f;">2:02:10</span><span style="font-size: 14px; color: #9b9488;">《史崔特的故事》</span></div><div style="display: grid; grid-template-columns: 62px 1fr; gap: 10px; padding: 4px 0;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #e5988f;">2:09:13</span><span style="font-family: 'Noto Serif SC', serif; font-size: 15px; color: #ece7dd;">《穆赫兰道》：前梦后实</span></div><div style="display: grid; grid-template-columns: 62px 1fr; gap: 10px; padding: 4px 0;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #e5988f;">2:22:20</span><span style="font-family: 'Noto Serif SC', serif; font-size: 15px; color: #ece7dd;">《内陆帝国》：时空套层</span></div></div></div></div>
+      <div style="display: grid; gap: 22px; align-content: start;"><div style="border-top: 2px solid rgba(216,161,63,0.7); padding-top: 10px;"><div style="display: flex; align-items: baseline; gap: 12px;"><span style="font-family: 'Noto Serif SC', serif; font-size: 18px; color: #ece7dd;">工具箱：宗教与哲学</span><span style="margin-left: auto; font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #8d867b;">2:47:10 – 3:21:15 · 34.1′</span></div><div style="margin-top: 8px;"><div style="display: grid; grid-template-columns: 62px 1fr; gap: 10px; padding: 4px 0;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #d8a13f;">2:49:11</span><span style="font-family: 'Noto Serif SC', serif; font-size: 15px; color: #ece7dd;">超觉冥想</span></div><div style="display: grid; grid-template-columns: 62px 1fr; gap: 10px; padding: 4px 0;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #d8a13f;">2:56:07</span><span style="font-size: 14px; color: #9b9488;">吠陀：梵我合一</span></div><div style="display: grid; grid-template-columns: 62px 1fr; gap: 10px; padding: 4px 0;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #d8a13f;">3:05:57</span><span style="font-size: 14px; color: #9b9488;">中阴与图帕</span></div><div style="display: grid; grid-template-columns: 62px 1fr; gap: 10px; padding: 4px 0;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #d8a13f;">3:07:43</span><span style="font-family: 'Noto Serif SC', serif; font-size: 15px; color: #ece7dd;">量子：统一场、纠缠、叠加</span></div><div style="display: grid; grid-template-columns: 62px 1fr; gap: 10px; padding: 4px 0;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #d8a13f;">3:15:42</span><span style="font-size: 14px; color: #9b9488;">市场与宫殿</span></div><div style="display: grid; grid-template-columns: 62px 1fr; gap: 10px; padding: 4px 0;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #d8a13f;">3:18:43</span><span style="font-size: 14px; color: #9b9488;">鸭子的眼睛</span></div></div></div><div style="border-top: 2px solid rgba(216,161,63,0.7); padding-top: 10px;"><div style="display: flex; align-items: baseline; gap: 12px;"><span style="font-family: 'Noto Serif SC', serif; font-size: 18px; color: #ece7dd;">视角二：意识重读</span><span style="margin-left: auto; font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #8d867b;">3:21:15 – 4:06:26 · 45.2′</span></div><div style="margin-top: 8px;"><div style="display: grid; grid-template-columns: 62px 1fr; gap: 10px; padding: 4px 0;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #d8a13f;">3:21:49</span><span style="font-family: 'Noto Serif SC', serif; font-size: 15px; color: #ece7dd;">视角二从《橡皮头》重读</span></div><div style="display: grid; grid-template-columns: 62px 1fr; gap: 10px; padding: 4px 0;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #d8a13f;">3:26:06</span><span style="font-size: 14px; color: #9b9488;">《蓝丝绒》：耳朵是通道</span></div><div style="display: grid; grid-template-columns: 62px 1fr; gap: 10px; padding: 4px 0;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #d8a13f;">3:28:51</span><span style="font-size: 14px; color: #9b9488;">《我心狂野》：照片消失</span></div><div style="display: grid; grid-template-columns: 62px 1fr; gap: 10px; padding: 4px 0;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #d8a13f;">3:32:32</span><span style="font-family: 'Noto Serif SC', serif; font-size: 15px; color: #ece7dd;">《妖夜荒踪》：变身是真的</span></div><div style="display: grid; grid-template-columns: 62px 1fr; gap: 10px; padding: 4px 0;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #d8a13f;">3:38:26</span><span style="font-size: 14px; color: #9b9488;">《史崔特的故事》：星空</span></div><div style="display: grid; grid-template-columns: 62px 1fr; gap: 10px; padding: 4px 0;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #d8a13f;">3:42:51</span><span style="font-family: 'Noto Serif SC', serif; font-size: 15px; color: #ece7dd;">《穆赫兰道》：两半都是真实</span></div><div style="display: grid; grid-template-columns: 62px 1fr; gap: 10px; padding: 4px 0;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #d8a13f;">3:53:02</span><span style="font-family: 'Noto Serif SC', serif; font-size: 15px; color: #ece7dd;">《内陆帝国》：统一场即宫殿</span></div></div></div><div style="border-top: 2px solid rgba(236,231,221,0.3); padding-top: 10px;"><div style="display: flex; align-items: baseline; gap: 12px;"><span style="font-family: 'Noto Serif SC', serif; font-size: 18px; color: #cfc8bc;">结语</span><span style="margin-left: auto; font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #8d867b;">4:06:26 – 4:13:15 · 6.8′</span></div><div style="margin-top: 8px;"><div style="display: grid; grid-template-columns: 62px 1fr; gap: 10px; padding: 4px 0;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #8d867b;">4:07:13</span><span style="font-family: 'Noto Serif SC', serif; font-size: 15px; color: #ece7dd;">德勒兹：大脑即屏幕</span></div><div style="display: grid; grid-template-columns: 62px 1fr; gap: 10px; padding: 4px 0;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #8d867b;">4:10:09</span><span style="font-size: 14px; color: #9b9488;">林奇是诗人</span></div></div></div></div>
+    </div>
+  </section>
+  </sc-if>
+
+  <section style="padding: 64px 90px 0;">
+    <div style="display: flex; align-items: baseline; gap: 18px;">
+      <div style="font-size: 13px; letter-spacing: 0.2em; color: #d8a13f;">节目中反复出现的人</div>
+      <span style="margin-left: auto; font-size: 13px; color: #8d867b;">头像与海报自维基百科取图，可拖入自己的图片替换</span>
+    </div>
+    <div style="margin-top: 22px; display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px;">
+      <div><div style="position: relative; width: 100%; aspect-ratio: 1; background: #191720;"><image-slot id="dl-p-dern" src="{{ pic.dern }}" shape="circle" placeholder="劳拉·邓恩"></image-slot></div><div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 15px;">劳拉·邓恩</div><div style="font-size: 12px; color: #8d867b;">提及 25 次，最多</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 1; background: #191720;"><image-slot id="dl-p-watts" src="{{ pic.watts }}" shape="circle" placeholder="娜奥米·沃茨"></image-slot></div><div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 15px;">娜奥米·沃茨</div><div style="font-size: 12px; color: #8d867b;">贝蒂／戴安</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 1; background: #191720;"><image-slot id="dl-p-harring" src="{{ pic.harring }}" shape="circle" placeholder="劳拉·哈灵"></image-slot></div><div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 15px;">劳拉·哈灵</div><div style="font-size: 12px; color: #8d867b;">丽塔</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 1; background: #191720;"><image-slot id="dl-p-maclachlan" src="{{ pic.maclachlan }}" shape="circle" placeholder="凯尔·麦克拉克伦"></image-slot></div><div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 15px;">麦克拉克伦</div><div style="font-size: 12px; color: #8d867b;">杰弗里／库珀</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 1; background: #191720;"><image-slot id="dl-p-rossellini" src="{{ pic.rossellini }}" shape="circle" placeholder="伊莎贝拉·罗塞里尼"></image-slot></div><div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 15px;">罗塞里尼</div><div style="font-size: 12px; color: #8d867b;">《蓝丝绒》</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 1; background: #191720;"><image-slot id="dl-p-hopper" src="{{ pic.hopper }}" shape="circle" placeholder="丹尼斯·霍珀"></image-slot></div><div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 15px;">丹尼斯·霍珀</div><div style="font-size: 12px; color: #8d867b;">弗兰克</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 1; background: #191720;"><image-slot id="dl-p-frost" src="{{ pic.frost }}" shape="circle" placeholder="马克·弗罗斯特"></image-slot></div><div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 15px;">马克·弗罗斯特</div><div style="font-size: 12px; color: #8d867b;">《双峰》合创</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 1; background: #191720;"><image-slot id="dl-p-badalamenti" src="{{ pic.badalamenti }}" shape="circle" placeholder="巴达拉门蒂"></image-slot></div><div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 15px;">巴达拉门蒂</div><div style="font-size: 12px; color: #8d867b;">《工业交响曲一号》</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 1; background: #191720;"><image-slot id="dl-p-delaurentiis" src="{{ pic.delaurentiis }}" shape="circle" placeholder="德劳伦蒂斯"></image-slot></div><div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 15px;">德劳伦蒂斯</div><div style="font-size: 12px; color: #8d867b;">《沙丘》《蓝丝绒》出资</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 1; background: #191720;"><image-slot id="dl-p-lucas" src="{{ pic.lucas }}" shape="circle" placeholder="乔治·卢卡斯"></image-slot></div><div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 15px;">卢卡斯</div><div style="font-size: 12px; color: #8d867b;">300 万片酬被拒</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 1; background: #191720;"><image-slot id="dl-p-hopkins" src="{{ pic.hopkins }}" shape="circle" placeholder="安东尼·霍普金斯"></image-slot></div><div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 15px;">霍普金斯</div><div style="font-size: 12px; color: #8d867b;">投诉他不专业</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 1; background: #191720;"><image-slot id="dl-p-maharishi" src="{{ pic.maharishi }}" shape="circle" placeholder="马哈里希"></image-slot></div><div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 15px;">马哈里希</div><div style="font-size: 12px; color: #8d867b;">超觉冥想创立者</div></div>
+    </div>
+    <div style="margin-top: 26px; display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px;">
+      <div><div style="position: relative; width: 100%; aspect-ratio: 1; background: #191720;"><image-slot id="dl-p-freud" src="{{ pic.freud }}" shape="circle" placeholder="弗洛伊德"></image-slot></div><div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 15px;">弗洛伊德</div><div style="font-size: 12px; color: #8d867b;">梦的读法</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 1; background: #191720;"><image-slot id="dl-p-lacan" src="{{ pic.lacan }}" shape="circle" placeholder="拉康"></image-slot></div><div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 15px;">拉康</div><div style="font-size: 12px; color: #8d867b;">创伤性真实</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 1; background: #191720;"><image-slot id="dl-p-deleuze" src="{{ pic.deleuze }}" shape="circle" placeholder="德勒兹"></image-slot></div><div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 15px;">德勒兹</div><div style="font-size: 12px; color: #8d867b;">大脑即屏幕</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 1; background: #191720;"><image-slot id="dl-p-zizek" src="{{ pic.zizek }}" shape="circle" placeholder="齐泽克"></image-slot></div><div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 15px;">齐泽克</div><div style="font-size: 12px; color: #8d867b;">先锋叠庸俗</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 1; background: #191720;"><image-slot id="dl-p-jameson" src="{{ pic.jameson }}" shape="circle" placeholder="詹明信"></image-slot></div><div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 15px;">詹明信</div><div style="font-size: 12px; color: #8d867b;">新的男子气概</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 1; background: #191720;"><image-slot id="dl-p-robinwood" src="{{ pic.robinwood }}" shape="circle" placeholder="罗宾·伍德"></image-slot></div><div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 15px;">罗宾·伍德</div><div style="font-size: 12px; color: #8d867b;">酷儿立场的批评</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 1; background: #191720;"><image-slot id="dl-p-kael" src="{{ pic.kael }}" shape="circle" placeholder="宝琳·凯尔"></image-slot></div><div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 15px;">宝琳·凯尔</div><div style="font-size: 12px; color: #8d867b;">怪异与天真</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 1; background: #191720;"><image-slot id="dl-p-nochimson" src="{{ pic.nochimson }}" shape="circle" placeholder="玛莎·诺希姆森"></image-slot></div><div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 15px;">诺希姆森</div><div style="font-size: 12px; color: #8d867b;">印度教哲学路径</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 1; background: #191720;"><image-slot id="dl-p-hitchcock" src="{{ pic.hitchcock }}" shape="circle" placeholder="希区柯克"></image-slot></div><div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 15px;">希区柯克</div><div style="font-size: 12px; color: #8d867b;">《后窗》《辣手摧花》</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 1; background: #191720;"><image-slot id="dl-p-wilder" src="{{ pic.wilder }}" shape="circle" placeholder="比利·怀尔德"></image-slot></div><div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 15px;">比利·怀尔德</div><div style="font-size: 12px; color: #8d867b;">《日落大道》</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 1; background: #191720;"><image-slot id="dl-p-fellini" src="{{ pic.fellini }}" shape="circle" placeholder="费里尼"></image-slot></div><div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 15px;">费里尼</div><div style="font-size: 12px; color: #8d867b;">提及 10 次</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 1; background: #191720;"><image-slot id="dl-p-tarantino" src="{{ pic.tarantino }}" shape="circle" placeholder="昆汀"></image-slot></div><div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 15px;">昆汀</div><div style="font-size: 12px; color: #8d867b;">被《我心狂野》开启</div></div>
+    </div>
+  </section>
+
+  <section style="padding: 70px 90px 0;">
+    <div style="display: flex; align-items: baseline; gap: 18px;">
+      <span style="font-family: 'Cormorant Garamond', serif; font-size: 26px; color: #d8a13f;">II</span>
+      <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 44px;">影史地位</h2>
+      <span style="margin-left: auto; font-size: 14px; letter-spacing: 0.18em; color: #8d867b;">1970 年代以后，没有这三家背书基本进不了殿堂</span>
+    </div>
+    <div style="margin-top: 12px; height: 1px; background: linear-gradient(to right, #c2453f, rgba(236,231,221,0.18));"></div>
+
+    <div style="margin-top: 34px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(236,231,221,0.18);">
+      <div style="background: #0e0d11; padding: 24px 26px;">
+        <div style="font-family: 'Cormorant Garamond', serif; font-size: 26px; color: #d8a13f;">Cannes</div>
+        <p style="margin: 12px 0 0; font-size: 16px; line-height: 1.85; color: #cfc8bc;">90 年代作品除《妖夜荒踪》外全部入围主竞赛，《我心狂野》拿了金棕榈。</p>
+      </div>
+      <div style="background: #0e0d11; padding: 24px 26px;">
+        <div style="font-family: 'Cormorant Garamond', serif; font-size: 26px; color: #d8a13f;">Cahiers du Cinéma</div>
+        <div style="margin-top: 14px; display: grid; gap: 8px; font-size: 16px; line-height: 1.7; color: #cfc8bc;">
+          <div><span style="font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #c2453f;">90s</span>　《双峰：与火同行》第 4</div>
+          <div><span style="font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #c2453f;">00s</span>　《穆赫兰道》第 1</div>
+          <div><span style="font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #c2453f;">10s</span>　《双峰：回归》第 1</div>
+        </div>
+        <p style="margin: 14px 0 0; font-size: 15px; line-height: 1.8; color: #9b9488;">等于本世纪前二十年最好的两部电影都是林奇的。</p>
+      </div>
+      <div style="background: #0e0d11; padding: 24px 26px;">
+        <div style="font-family: 'Cormorant Garamond', serif; font-size: 26px; color: #d8a13f;">Sight &amp; Sound</div>
+        <p style="margin: 12px 0 0; font-size: 16px; line-height: 1.85; color: #cfc8bc;">影史十佳里，21 世纪电影只有《穆赫兰道》和《花样年华》两部。</p>
+      </div>
+    </div>
+
+    <div style="margin-top: 34px; display: grid; grid-template-columns: 1fr 1fr; gap: 34px;">
+      <div style="border: 1px solid rgba(236,231,221,0.22); padding: 26px 28px;">
+        <div style="font-size: 13px; letter-spacing: 0.2em; color: #d8a13f;">纯作者，但能破圈</div>
+        <div style="margin-top: 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 22px; font-size: 15px; line-height: 1.8; color: #b3aca0;">
+          <div><div style="font-family: 'Noto Serif SC', serif; font-size: 18px; color: #ece7dd;">同一路</div><div style="margin-top: 8px;">马利克 · 贾木许 · 詹姆斯·格雷 · 肖恩·贝克</div></div>
+          <div><div style="font-family: 'Noto Serif SC', serif; font-size: 18px; color: #ece7dd;">会拍商业片的</div><div style="margin-top: 8px;">昆汀 · 科恩兄弟 · 索德伯格 · 李安</div></div>
+        </div>
+        <p style="margin: 18px 0 0; font-size: 16px; line-height: 1.85; color: #cfc8bc;">他三次获奥斯卡最佳导演提名（《象人》《蓝丝绒》《穆赫兰道》）。《双峰》试播集有 3500 万人看，林奇因此登上《时代》封面，被称作「怪诞沙皇」。</p>
+      </div>
+      <div style="background: rgba(122,16,20,0.28); border: 1px solid rgba(194,69,63,0.5); padding: 26px 28px;">
+        <div style="font-size: 13px; letter-spacing: 0.2em; color: #e5988f;">林奇不是影痴</div>
+        <p style="margin: 12px 0 0; font-size: 16px; line-height: 1.85; color: #eadad4;">他最爱《绿野仙踪》，反复提到的是怀尔德的《日落大道》《公寓春光》、塔蒂的于洛先生系列、希区柯克的《后窗》和库布里克的《洛丽塔》，都是他少年时代看的五六十年代电影。</p>
+        <p style="margin: 14px 0 0; font-size: 16px; line-height: 1.85; color: #eadad4;">他首先是画家，因为希望画能动起来才去考 AFI。他追求杜尚式的「艺术生活」，节目认为他播天气预报和杜尚下象棋是一回事。</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 70px 90px 0;">
+    <div style="display: flex; align-items: baseline; gap: 18px;">
+      <span style="font-family: 'Cormorant Garamond', serif; font-size: 26px; color: #d8a13f;">III</span>
+      <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 44px;">钱从哪来，有没有终剪权</h2>
+      <span style="margin-left: auto; font-size: 14px; letter-spacing: 0.18em; color: #8d867b;">一个「有规划」的艺术家</span>
+    </div>
+    <div style="margin-top: 12px; height: 1px; background: linear-gradient(to right, #c2453f, rgba(236,231,221,0.18));"></div>
+
+    <div style="margin-top: 34px; display: grid; gap: 2px;">
+      <div style="display: grid; grid-template-columns: 236px 1fr; gap: 2px;"><div style="background: rgba(236,231,221,0.1); padding: 14px 18px; font-family: 'Noto Serif SC', serif; font-size: 19px; display: flex; align-items: center; gap: 10px;"><span style="font-family: 'Cormorant Garamond', serif; color: #d8a13f;">1977</span><span>橡皮头</span><span style="margin-left: auto; flex: none; width: 11px; height: 11px; box-sizing: border-box; background: #ece7dd;"></span></div><div style="background: rgba(236,231,221,0.06); padding: 14px 20px; font-size: 16px; color: #cfc8bc;">AFI 学生作品，亲友资助拍了六年，午夜场发行。磨片的六年让他完全错过了 70 年代。</div></div>
+      <div style="display: grid; grid-template-columns: 236px 1fr; gap: 2px;"><div style="background: rgba(216,161,63,0.24); padding: 14px 18px; font-family: 'Noto Serif SC', serif; font-size: 19px; display: flex; align-items: center; gap: 10px;"><span style="font-family: 'Cormorant Garamond', serif; color: #d8a13f;">1980</span><span>象人</span><span style="margin-left: auto; flex: none; width: 11px; height: 11px; box-sizing: border-box; border: 1.5px solid #ece7dd; background: linear-gradient(90deg, #ece7dd 50%, transparent 50%);"></span></div><div style="background: rgba(216,161,63,0.1); padding: 14px 20px; font-size: 16px; color: #cfc8bc;">梅尔·布鲁克斯出品，片酬 7.5 万，奥斯卡 8 项提名。英国剧组联名写信说他的方法全错了，上映后又都道了歉。</div></div>
+      <div style="display: grid; grid-template-columns: 236px 1fr; gap: 2px;"><div style="background: rgba(216,161,63,0.24); padding: 14px 18px; font-family: 'Noto Serif SC', serif; font-size: 19px; display: flex; align-items: center; gap: 10px;"><span style="font-family: 'Cormorant Garamond', serif; color: #d8a13f;">1984</span><span>沙丘</span><span style="margin-left: auto; flex: none; width: 11px; height: 11px; box-sizing: border-box; border: 1.5px solid #ece7dd;"></span></div><div style="background: rgba(122,16,20,0.4); padding: 14px 20px; font-size: 16px; color: #eadad4;">劳伦蒂斯出资，五小时初剪被砍到 137 分钟，无终剪权。节目推测：要是成功，林奇可能会变成斯皮尔伯格、斯科特那样的大片导演。</div></div>
+      <div style="display: grid; grid-template-columns: 236px 1fr; gap: 2px;"><div style="background: rgba(216,161,63,0.24); padding: 14px 18px; font-family: 'Noto Serif SC', serif; font-size: 19px; display: flex; align-items: center; gap: 10px;"><span style="font-family: 'Cormorant Garamond', serif; color: #d8a13f;">1986</span><span>蓝丝绒</span><span style="margin-left: auto; flex: none; width: 11px; height: 11px; box-sizing: border-box; background: #ece7dd;"></span></div><div style="background: rgba(216,161,63,0.1); padding: 14px 20px; font-size: 16px; color: #cfc8bc;">预算与片酬减半，换来终剪权。</div></div>
+      <div style="display: grid; grid-template-columns: 236px 1fr; gap: 2px;"><div style="background: rgba(216,161,63,0.24); padding: 14px 18px; font-family: 'Noto Serif SC', serif; font-size: 19px; display: flex; align-items: center; gap: 10px;"><span style="font-family: 'Cormorant Garamond', serif; color: #d8a13f;">1990</span><span>双峰 S1–S2</span><span style="margin-left: auto; flex: none; width: 11px; height: 11px; box-sizing: border-box; border: 1.5px solid #ece7dd; background: linear-gradient(90deg, #ece7dd 50%, transparent 50%);"></span></div><div style="background: rgba(216,161,63,0.1); padding: 14px 20px; font-size: 16px; color: #cfc8bc;">ABC 电视网，与马克·弗罗斯特合创。5 月 23 日第一季播完。</div></div>
+      <div style="display: grid; grid-template-columns: 236px 1fr; gap: 2px;"><div style="background: rgba(194,69,63,0.45); padding: 14px 18px; font-family: 'Noto Serif SC', serif; font-size: 19px; display: flex; align-items: center; gap: 10px;"><span style="font-family: 'Cormorant Garamond', serif; color: #f0c8c4;">1990</span><span>我心狂野</span><span style="margin-left: auto; flex: none; width: 11px; height: 11px; box-sizing: border-box; background: #ece7dd;"></span></div><div style="background: rgba(194,69,63,0.2); padding: 14px 20px; font-size: 16px; color: #eadad4;">5 月 21 日金棕榈，节目说主要靠评审团主席贝托鲁奇的偏爱：伊伯特在现场带头嘘，戈达尔在《解放报》上痛批。两天之隔的「世界之王」时刻。</div></div>
+      <div style="display: grid; grid-template-columns: 236px 1fr; gap: 2px;"><div style="background: rgba(74,60,110,0.4); padding: 14px 18px; font-family: 'Noto Serif SC', serif; font-size: 19px; display: flex; align-items: center; gap: 10px;"><span style="font-family: 'Cormorant Garamond', serif; color: #b9aee8;">1992</span><span>与火同行</span><span style="margin-left: auto; flex: none; width: 11px; height: 11px; box-sizing: border-box; background: #ece7dd;"></span></div><div style="background: rgba(74,60,110,0.18); padding: 14px 20px; font-size: 16px; color: #cfc8bc;">CiBy 2000 用 1000 万美元签三部片。票房失败但自己喜欢，只算「死一次」。对方想毁约，林奇凭 pay or play 条款告赢，获赔 650 万。</div></div>
+      <div style="display: grid; grid-template-columns: 236px 1fr; gap: 2px;"><div style="background: rgba(74,60,110,0.4); padding: 14px 18px; font-family: 'Noto Serif SC', serif; font-size: 19px; display: flex; align-items: center; gap: 10px;"><span style="font-family: 'Cormorant Garamond', serif; color: #b9aee8;">1997</span><span>妖夜荒踪</span><span style="margin-left: auto; flex: none; width: 11px; height: 11px; box-sizing: border-box; background: #ece7dd;"></span></div><div style="background: rgba(74,60,110,0.18); padding: 14px 20px; font-size: 16px; color: #cfc8bc;">让美国发行商十月影业亏掉几百万，公司随后被环球收购。与米拉麦克斯、新线一起，标志美国纯独立发行公司时代的结束。</div></div>
+      <div style="display: grid; grid-template-columns: 236px 1fr; gap: 2px;"><div style="background: rgba(74,60,110,0.4); padding: 14px 18px; font-family: 'Noto Serif SC', serif; font-size: 19px; display: flex; align-items: center; gap: 10px;"><span style="font-family: 'Cormorant Garamond', serif; color: #b9aee8;">1999</span><span>史崔特的故事</span><span style="margin-left: auto; flex: none; width: 11px; height: 11px; box-sizing: border-box; background: #ece7dd;"></span></div><div style="background: rgba(74,60,110,0.18); padding: 14px 20px; font-size: 16px; color: #cfc8bc;">欧洲电视台资金，迪士尼发行的 G 级片。</div></div>
+      <div style="display: grid; grid-template-columns: 236px 1fr; gap: 2px;"><div style="background: rgba(74,60,110,0.4); padding: 14px 18px; font-family: 'Noto Serif SC', serif; font-size: 19px; display: flex; align-items: center; gap: 10px;"><span style="font-family: 'Cormorant Garamond', serif; color: #b9aee8;">2001</span><span>穆赫兰道</span><span style="margin-left: auto; flex: none; width: 11px; height: 11px; box-sizing: border-box; background: #ece7dd;"></span></div><div style="background: rgba(74,60,110,0.18); padding: 14px 20px; font-size: 16px; color: #cfc8bc;">ABC 弃用约 88 分钟的试播集，Canal+ 救成长片，后三分之一和裸戏是后来补拍的。</div></div>
+      <div style="display: grid; grid-template-columns: 236px 1fr; gap: 2px;"><div style="background: rgba(74,60,110,0.4); padding: 14px 18px; font-family: 'Noto Serif SC', serif; font-size: 19px; display: flex; align-items: center; gap: 10px;"><span style="font-family: 'Cormorant Garamond', serif; color: #b9aee8;">2006</span><span>内陆帝国</span><span style="margin-left: auto; flex: none; width: 11px; height: 11px; box-sizing: border-box; background: #ece7dd;"></span></div><div style="background: rgba(74,60,110,0.18); padding: 14px 20px; font-size: 16px; color: #cfc8bc;">StudioCanal，DV 无剧本拍三年，自办发行，「一分钱没赚」。</div></div>
+      <div style="display: grid; grid-template-columns: 236px 1fr; gap: 2px;"><div style="background: rgba(236,231,221,0.1); padding: 14px 18px; font-family: 'Noto Serif SC', serif; font-size: 19px; display: flex; align-items: center; gap: 10px;"><span style="font-family: 'Cormorant Garamond', serif; color: #d8a13f;">2017</span><span>双峰：回归</span><span style="margin-left: auto; flex: none; width: 11px; height: 11px; box-sizing: border-box; background: #ece7dd;"></span></div><div style="background: rgba(236,231,221,0.06); padding: 14px 20px; font-size: 16px; color: #cfc8bc;">Showtime 最后接受按总价打包，不管拍几集。18 集全部亲自执导，相当于拍了九部电影。此后身体状况不再允许他上片场。</div></div>
+    </div>
+
+    <div style="margin-top: 22px; display: flex; gap: 26px; font-size: 13px; color: #8d867b;">
+      <span><span style="display: inline-block; width: 12px; height: 12px; background: rgba(236,231,221,0.2); margin-right: 8px;"></span>独立 / 其他</span>
+      <span><span style="display: inline-block; width: 12px; height: 12px; background: rgba(216,161,63,0.35); margin-right: 8px;"></span>好莱坞体系内</span>
+      <span><span style="display: inline-block; width: 12px; height: 12px; background: rgba(74,60,110,0.55); margin-right: 8px;"></span>法国 / 欧洲资金为主</span>
+      <span style="margin-left: auto; display: flex; gap: 22px;"><span style="display: flex; align-items: center; gap: 8px;"><span style="width: 11px; height: 11px; box-sizing: border-box; background: #ece7dd;"></span>完全自主</span><span style="display: flex; align-items: center; gap: 8px;"><span style="width: 11px; height: 11px; box-sizing: border-box; border: 1.5px solid #ece7dd; background: linear-gradient(90deg, #ece7dd 50%, transparent 50%);"></span>部分自主</span><span style="display: flex; align-items: center; gap: 8px;"><span style="width: 11px; height: 11px; box-sizing: border-box; border: 1.5px solid #ece7dd;"></span>无终剪权</span></span>
+    </div>
+
+    <div style="margin-top: 34px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 26px;">
+      <div style="border-left: 2px solid #c2453f; padding-left: 20px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 22px;">错位的一代</div><p style="margin: 10px 0 0; font-size: 15px; line-height: 1.85; color: #b3aca0;">生于 1946 年，和斯皮尔伯格、保罗·施拉德同年，AFI 第二届。按年龄属于新好莱坞，却在那批人沉寂的 80 年代崛起，后来被归入独立电影一波。节目拿杜琪峰错过香港新浪潮来类比。</p></div>
+      <div style="border-left: 2px solid #c2453f; padding-left: 20px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 22px;">不能死两次</div><p style="margin: 10px 0 0; font-size: 15px; line-height: 1.85; color: #b3aca0;">片子拍得不是自己想要的，这是死一次；票房再失败，就是死两次。以后只拍自己喜欢的。</p></div>
+      <div style="border-left: 2px solid #d8a13f; padding-left: 20px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 22px;">一条好莱坞定律</div><p style="margin: 10px 0 0; font-size: 15px; line-height: 1.85; color: #b3aca0;">创作自由与预算成反比。外国投资人不干预创作，这是他 90 年代以后自主权的来源。</p></div>
+    </div>
+
+    <div style="margin-top: 34px; display: grid; grid-template-columns: 1.15fr 1fr; gap: 34px; align-items: start;">
+      <div style="border: 1px solid rgba(236,231,221,0.22); padding: 26px 28px;">
+        <div style="font-size: 13px; letter-spacing: 0.2em; color: #d8a13f;">「不能死两次」的四种结局</div>
+        <div style="margin-top: 18px; display: grid; grid-template-columns: 108px 1fr 1fr; gap: 2px;">
+          <div></div>
+          <div style="padding: 6px 4px; font-size: 13px; letter-spacing: 0.16em; color: #b3aca0;">票房成功</div>
+          <div style="padding: 6px 4px; font-size: 13px; letter-spacing: 0.16em; color: #b3aca0;">票房失败</div>
+          <div style="padding: 16px 12px 0 0; font-size: 13px; line-height: 1.6; color: #b3aca0;">拍成了<br>自己想要的</div>
+          <div style="background: rgba(216,161,63,0.24); padding: 16px 18px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 22px; color: #e8c98a;">不死</div><div style="margin-top: 6px; font-size: 15px; color: #cfc8bc;">《蓝丝绒》</div></div>
+          <div style="background: rgba(74,60,110,0.4); padding: 16px 18px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 22px; color: #b9aee8;">死一次</div><div style="margin-top: 6px; font-size: 15px; color: #cfc8bc;">《双峰：与火同行》</div></div>
+          <div style="padding: 16px 12px 0 0; font-size: 13px; line-height: 1.6; color: #b3aca0;">没拍成<br>自己想要的</div>
+          <div style="background: rgba(236,231,221,0.04); padding: 16px 18px; border: 1px dashed rgba(236,231,221,0.25);"><div style="font-family: 'Noto Serif SC', serif; font-size: 22px; color: #b3aca0;">死一次</div><div style="margin-top: 6px; font-size: 15px; color: #cfc8bc;">「那也行」，无实例</div></div>
+          <div style="background: rgba(122,16,20,0.55); padding: 16px 18px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 22px; color: #f0c8c4;">死两次</div><div style="margin-top: 6px; font-size: 15px; color: #cfc8bc;">《沙丘》</div></div>
+        </div>
+        <p style="margin: 16px 0 0; font-size: 14px; line-height: 1.8; color: #9b9488;">林奇在《沙丘》之后定下的原则，此后只拍自己喜欢的东西。</p>
+      </div>
+      <div>
+        <div style="font-size: 13px; letter-spacing: 0.2em; color: #d8a13f;">没拍成的林奇</div>
+        <div style="margin-top: 14px; display: grid;">
+          <div style="display: flex; align-items: baseline; gap: 14px; padding: 14px 0; border-bottom: 1px solid rgba(236,231,221,0.14);"><span style="font-family: 'Noto Serif SC', serif; font-size: 19px;">《罗尼火箭》</span><span style="margin-left: auto; font-size: 15px; color: #b3aca0;">未拍成</span></div><div style="display: flex; align-items: baseline; gap: 14px; padding: 14px 0; border-bottom: 1px solid rgba(236,231,221,0.14);"><span style="font-family: 'Noto Serif SC', serif; font-size: 19px;">《星球大战》第三集</span><span style="margin-left: auto; font-size: 15px; color: #b3aca0;">林奇拒绝</span></div><div style="display: flex; align-items: baseline; gap: 14px; padding: 14px 0; border-bottom: 1px solid rgba(236,231,221,0.14);"><span style="font-family: 'Noto Serif SC', serif; font-size: 19px;">《美国丽人》</span><span style="margin-left: auto; font-size: 15px; color: #b3aca0;">最初找过他</span></div><div style="display: flex; align-items: baseline; gap: 14px; padding: 14px 0; border-bottom: 1px solid rgba(236,231,221,0.14);"><span style="font-family: 'Noto Serif SC', serif; font-size: 19px;">美版《午夜凶铃》</span><span style="margin-left: auto; font-size: 15px; color: #b3aca0;">最初找过他</span><span style="font-size: 12px; color: #d8a13f; border: 1px solid rgba(216,161,63,0.5); padding: 1px 6px;">推测</span></div><div style="display: flex; align-items: baseline; gap: 14px; padding: 14px 0; border-bottom: 1px solid rgba(236,231,221,0.14);"><span style="font-family: 'Noto Serif SC', serif; font-size: 19px;">卡夫卡《变形记》</span><span style="margin-left: auto; font-size: 15px; color: #b3aca0;">没人投资</span></div>
+        </div>
+        <p style="margin: 14px 0 0; font-size: 13px; line-height: 1.8; color: #8d867b;">美版《午夜凶铃》由转写读音推定。</p>
+      </div>
+    </div>
+
+    <div style="margin-top: 44px; display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px;">
+      <div><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #191720;"><image-slot id="dl-f-eraserhead" src="{{ pic.eraserhead }}" fit="contain" shape="rect" placeholder="《橡皮头》海报"></image-slot></div><div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-size: 18px;">橡皮头</div><div style="font-size: 12px; color: #8d867b;">1977</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #191720;"><image-slot id="dl-f-elephant" src="{{ pic.elephant }}" fit="contain" shape="rect" placeholder="《象人》海报"></image-slot></div><div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-size: 18px;">象人</div><div style="font-size: 12px; color: #8d867b;">1980</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #191720;"><image-slot id="dl-f-dune" src="{{ pic.dune }}" fit="contain" shape="rect" placeholder="《沙丘》海报"></image-slot></div><div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-size: 18px;">沙丘</div><div style="font-size: 12px; color: #8d867b;">1984 · 分水岭</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #191720;"><image-slot id="dl-f-blue" src="{{ pic.blue }}" fit="contain" shape="rect" placeholder="《蓝丝绒》海报"></image-slot></div><div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-size: 18px;">蓝丝绒</div><div style="font-size: 12px; color: #8d867b;">1986</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #191720;"><image-slot id="dl-f-wild" src="{{ pic.wild }}" fit="contain" shape="rect" placeholder="《我心狂野》海报"></image-slot></div><div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-size: 18px;">我心狂野</div><div style="font-size: 12px; color: #8d867b;">1990 · 金棕榈</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #191720;"><image-slot id="dl-f-firewalk" src="{{ pic.firewalk }}" fit="contain" shape="rect" placeholder="《与火同行》海报"></image-slot></div><div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-size: 18px;">与火同行</div><div style="font-size: 12px; color: #8d867b;">1992</div></div>
+    </div>
+    <div style="margin-top: 24px; display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px;">
+      <div><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #191720;"><image-slot id="dl-f-lost" src="{{ pic.lost }}" fit="contain" shape="rect" placeholder="《妖夜荒踪》海报"></image-slot></div><div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-size: 18px;">妖夜荒踪</div><div style="font-size: 12px; color: #8d867b;">1997 · 最悲观</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #191720;"><image-slot id="dl-f-straight" src="{{ pic.straight }}" fit="contain" shape="rect" placeholder="《史崔特的故事》海报"></image-slot></div><div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-size: 18px;">史崔特的故事</div><div style="font-size: 12px; color: #8d867b;">1999</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #191720;"><image-slot id="dl-f-mulholland" src="{{ pic.mulholland }}" fit="contain" shape="rect" placeholder="《穆赫兰道》海报"></image-slot></div><div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-size: 18px;">穆赫兰道</div><div style="font-size: 12px; color: #8d867b;">2001 · 手册 00s 第一</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #191720;"><image-slot id="dl-f-inland" src="{{ pic.inland }}" fit="contain" shape="rect" placeholder="《内陆帝国》海报"></image-slot></div><div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-size: 18px;">内陆帝国</div><div style="font-size: 12px; color: #8d867b;">2006 · 讨论最久</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #191720;"><image-slot id="dl-f-twinpeaks" src="{{ pic.twinpeaks }}" fit="contain" shape="rect" placeholder="《双峰》海报"></image-slot></div><div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-size: 18px;">双峰</div><div style="font-size: 12px; color: #8d867b;">1990 / 2017</div></div>
+      <div style="display: grid; align-content: end;"><div style="font-size: 13px; line-height: 1.8; color: #8d867b;">取图失败的格位留空，拖入图片即可补齐。</div></div>
+    </div>
+  </section>
+
+  <section style="padding: 70px 90px 0;">
+    <div style="display: flex; align-items: baseline; gap: 18px;">
+      <span style="font-family: 'Cormorant Garamond', serif; font-size: 26px; color: #d8a13f;">IV</span>
+      <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 44px;">多媒体艺术家</h2>
+      <span style="margin-left: auto; font-size: 14px; letter-spacing: 0.18em; color: #8d867b;">「电影导演」这个称呼不够</span>
+    </div>
+    <div style="margin-top: 12px; height: 1px; background: linear-gradient(to right, #c2453f, rgba(236,231,221,0.18));"></div>
+    <div style="margin-top: 32px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: rgba(236,231,221,0.18);">
+      <div style="background: #0e0d11; padding: 22px 22px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 20px;">绘画与摄影</div><p style="margin: 10px 0 0; font-size: 15px; line-height: 1.8; color: #b3aca0;">受培根和霍珀影响很深，也做石版画，另有雕塑和以女性裸体为主的摄影。</p></div>
+      <div style="background: #0e0d11; padding: 22px 22px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 20px;">广告与 MV</div><p style="margin: 10px 0 0; font-size: 15px; line-height: 1.8; color: #b3aca0;">给迈克尔·杰克逊《危险》专辑拍过预告片，合作不太愉快；大量香水和咖啡广告；还给自然法则党拍过竞选宣传片。</p></div>
+      <div style="background: #0e0d11; padding: 22px 22px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 20px;">家具与舞台</div><p style="margin: 10px 0 0; font-size: 15px; line-height: 1.8; color: #b3aca0;">家具在米兰家具展展出过，腿很细、台面小到只放得下一杯咖啡。录《我心狂野》配乐的间隙，和巴达拉门蒂在纽约做了舞台剧《工业交响曲一号》。</p></div>
+      <div style="background: rgba(122,16,20,0.3); padding: 22px 22px;"><div style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 34px; color: #e5988f;">Lynchian</div><p style="margin: 10px 0 0; font-size: 15px; line-height: 1.8; color: #eadad4;">牛津词典已收录词条，节目认为概括力很强。</p></div>
+    </div>
+  </section>
+
+  <div style="margin-top: 70px; height: 22px; background: repeating-linear-gradient(90deg, #12110f 0 44px, #efe9df 44px 88px);"></div>
+
+  <section style="padding: 64px 90px 0;">
+    <div style="display: flex; align-items: baseline; gap: 18px;">
+      <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 44px;">两条路</h2>
+      <span style="margin-left: auto; font-size: 14px; letter-spacing: 0.18em; color: #8d867b;">接下来的三个多小时，九部长片各过两遍</span>
+    </div>
+    <div style="margin-top: 12px; height: 1px; background: linear-gradient(to right, #c2453f, rgba(236,231,221,0.18));"></div>
+    <div style="margin: 40px auto 0; max-width: 820px; text-align: center; font-family: 'Noto Serif SC', serif; font-size: 32px; line-height: 1.5; text-wrap: pretty;">林奇电影里的变身、分身、时间回环，到底是什么？</div>
+    <div style="margin: 20px auto 0; width: 1px; height: 28px; background: rgba(236,231,221,0.45);"></div>
+    <div style="margin: 0 auto; width: 640px; height: 26px; border-top: 1px solid rgba(236,231,221,0.45); border-left: 1px solid #c2453f; border-right: 1px solid #d8a13f;"></div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;">
+      <div>
+        <div style="background: rgba(194,69,63,0.42); padding: 16px 22px; text-align: center;"><div style="font-family: 'Noto Serif SC', serif; font-size: 22px;">视角一 · 梦与精神分析</div><div style="margin-top: 4px; font-size: 14px; color: #e8c3bf;">主流读法 · 1:04 – 2:47</div></div>
+          <div style="text-align: center; color: #8d867b; font-size: 18px; padding: 6px 0;">↓</div>
+          <div style="border: 1px solid rgba(194,69,63,0.5); background: rgba(194,69,63,0.1); padding: 16px 22px; display: grid; grid-template-columns: 26px 1fr; gap: 12px; align-items: baseline;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 24px; color: #e5988f;">1</span><div><div style="font-family: 'Noto Serif SC', serif; font-size: 20px;">先分真假</div><div style="margin-top: 4px; font-size: 15px; color: #b3aca0;">哪段是现实，哪段是梦</div></div></div>
+          <div style="text-align: center; color: #8d867b; font-size: 18px; padding: 6px 0;">↓</div>
+          <div style="border: 1px solid rgba(194,69,63,0.5); background: rgba(194,69,63,0.1); padding: 16px 22px; display: grid; grid-template-columns: 26px 1fr; gap: 12px; align-items: baseline;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 24px; color: #e5988f;">2</span><div><div style="font-family: 'Noto Serif SC', serif; font-size: 20px;">欲望世界与幻想世界</div><div style="margin-top: 4px; font-size: 15px; color: #b3aca0;">匮乏产生欲望，幻想终将失败</div></div></div>
+          <div style="text-align: center; color: #8d867b; font-size: 18px; padding: 6px 0;">↓</div>
+          <div style="border: 1px solid rgba(194,69,63,0.5); background: rgba(194,69,63,0.1); padding: 16px 22px; display: grid; grid-template-columns: 26px 1fr; gap: 12px; align-items: baseline;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 24px; color: #e5988f;">3</span><div><div style="font-family: 'Noto Serif SC', serif; font-size: 20px;">看电影等于解谜</div></div></div>
+      </div>
+      <div>
+        <div style="background: rgba(216,161,63,0.32); padding: 16px 22px; text-align: center;"><div style="font-family: 'Noto Serif SC', serif; font-size: 22px;">视角二 · 吠陀、冥想与量子</div><div style="margin-top: 4px; font-size: 14px; color: #ecd9b0;">林奇本人信奉的 · 3:21 – 4:06</div></div>
+          <div style="text-align: center; color: #8d867b; font-size: 18px; padding: 6px 0;">↓</div>
+          <div style="border: 1px solid rgba(216,161,63,0.45); background: rgba(216,161,63,0.08); padding: 16px 22px; display: grid; grid-template-columns: 26px 1fr; gap: 12px; align-items: baseline;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 24px; color: #d8a13f;">1</span><div><div style="font-family: 'Noto Serif SC', serif; font-size: 20px;">不分真假</div><div style="margin-top: 4px; font-size: 15px; color: #b3aca0;">现实与幻象都是意识之「象」</div></div></div>
+          <div style="text-align: center; color: #8d867b; font-size: 18px; padding: 6px 0;">↓</div>
+          <div style="border: 1px solid rgba(216,161,63,0.45); background: rgba(216,161,63,0.08); padding: 16px 22px; display: grid; grid-template-columns: 26px 1fr; gap: 12px; align-items: baseline;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 24px; color: #d8a13f;">2</span><div><div style="font-family: 'Noto Serif SC', serif; font-size: 20px;">意识足够强就能改写现实</div><div style="margin-top: 4px; font-size: 15px; color: #b3aca0;">变身是真的变身</div></div></div>
+          <div style="text-align: center; color: #8d867b; font-size: 18px; padding: 6px 0;">↓</div>
+          <div style="border: 1px solid rgba(216,161,63,0.45); background: rgba(216,161,63,0.08); padding: 16px 22px; display: grid; grid-template-columns: 26px 1fr; gap: 12px; align-items: baseline;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 24px; color: #d8a13f;">3</span><div><div style="font-family: 'Noto Serif SC', serif; font-size: 20px;">看电影等于读伦理寓言</div><div style="margin-top: 4px; font-size: 15px; color: #b3aca0;">心向光明则路开</div></div></div>
+      </div>
+    </div>
+    <div style="margin: 0 auto; width: 640px; height: 26px; border-bottom: 1px solid rgba(236,231,221,0.45); border-left: 1px solid #c2453f; border-right: 1px solid #d8a13f;"></div>
+    <div style="margin: 0 auto; width: 1px; height: 28px; background: rgba(236,231,221,0.45);"></div>
+    <div style="margin: 0 auto; max-width: 760px; border: 1px solid rgba(236,231,221,0.35); padding: 22px 30px; text-align: center;">
+      <div style="font-size: 13px; letter-spacing: 0.2em; color: #b3aca0;">节目立场 · 两种都成立</div>
+      <div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-size: 24px; line-height: 1.6;">作品是开放的，作者原意可以参考，但不享有最高优先级。</div>
+    </div>
+  </section>
+
+  <section style="padding: 70px 90px 0; background: linear-gradient(180deg, rgba(122,16,20,0.22), rgba(14,13,17,0) 420px);">
+    <div style="display: flex; align-items: baseline; gap: 18px;">
+      <span style="font-family: 'Cormorant Garamond', serif; font-size: 26px; color: #e5988f;">V</span>
+      <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 44px;">视角一 · 梦与精神分析</h2>
+      <span style="margin-left: auto; font-size: 14px; letter-spacing: 0.18em; color: #b3aca0;">102 分钟 · 全片最长的一段</span>
+    </div>
+    <div style="margin-top: 12px; height: 1px; background: linear-gradient(to right, #c2453f, rgba(236,231,221,0.18));"></div>
+
+    <div style="margin-top: 30px; font-family: 'Noto Serif SC', serif; font-size: 30px; line-height: 1.6; color: #ece7dd; max-width: 1100px; text-wrap: pretty;">主流读法的核心是「欲望世界与幻想世界」的二元结构：人用幻想摆脱现实的乏味与恐怖，结局表面上恢复秩序，但表象已经被戳破。</div>
+
+    <div style="margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 34px;">
+      <div style="border: 1px solid rgba(236,231,221,0.22); padding: 26px 28px;">
+        <div style="font-size: 13px; letter-spacing: 0.2em; color: #c2453f;">《蓝丝绒》论争 · 罗宾·伍德的批评</div>
+        <div style="margin-top: 16px; display: grid; gap: 10px; font-size: 15px; line-height: 1.8; color: #b3aca0;">
+          <div>影片居高临下地嘲讽小镇，远不如希区柯克的《辣手摧花》辩证。</div>
+          <div>结尾复辟了父权秩序。</div>
+          <div>性少数被塑造成罪恶的化身。</div>
+          <div>属于后现代式的调侃，价值上是空洞的。</div>
+        </div>
+      </div>
+      <div style="background: rgba(216,161,63,0.12); border: 1px solid rgba(216,161,63,0.4); padding: 26px 28px;">
+        <div style="font-size: 13px; letter-spacing: 0.2em; color: #d8a13f;">节目的回应</div>
+        <div style="margin-top: 16px; display: grid; gap: 10px; font-size: 15px; line-height: 1.8; color: #cfc8bc;">
+          <div>林奇表现的是小镇的两面性，不是嘲讽。</div>
+          <div>结尾的秩序恢复本身就很超现实。一位主持人甚至认为，杰弗里在草丛里发现耳朵之后的情节可以全看作幻想。</div>
+          <div>伍德自己也双标：希区柯克的片子大多同样以恢复秩序收尾，《西北偏北》用火车进隧道隐喻回归婚姻就是例子。这套批评拿去批昆汀更成立。</div>
+          <div>詹明信则肯定杰弗里身上体现了一种新的男子气概。</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 26px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 26px;">
+      <div style="border-top: 1px solid rgba(236,231,221,0.25); padding-top: 16px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 18px;">深河公寓</div><p style="margin: 8px 0 0; font-size: 15px; line-height: 1.8; color: #b3aca0;">七层楼梯和马桶冲水声，把欲望空间和外部世界隔开。</p></div>
+      <div style="border-top: 1px solid rgba(236,231,221,0.25); padding-top: 16px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 18px;">桑迪家墙上的肖像</div><p style="margin: 8px 0 0; font-size: 15px; line-height: 1.8; color: #b3aca0;">蒙哥马利·克利夫特，双性恋，还在休斯顿的传记片里演过弗洛伊德。节目倾向认为这是巧合。</p></div>
+      <div style="border-top: 1px solid rgba(194,69,63,0.6); padding-top: 16px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 18px; color: #e5988f;">插曲 · 林奇的政治观</div><p style="margin: 8px 0 0; font-size: 15px; line-height: 1.8; color: #b3aca0;">节目点名反驳《华盛顿邮报》那篇「最伟大的保守主义电影人」专栏。他支持过里根，也支持过民主党、自然法则党和桑德斯；挺「黑人的命也是命」，反对俄罗斯入侵乌克兰，冰桶挑战点名普京。原则上主张小政府，判断全凭直觉。</p></div>
+    </div>
+
+    <div style="margin-top: 46px; background: rgba(122,16,20,0.26); border: 1px solid rgba(194,69,63,0.45); padding: 30px 32px;">
+      <div style="display: flex; align-items: baseline; gap: 20px; flex-wrap: wrap;">
+        <div style="font-family: 'Noto Serif SC', serif; font-size: 28px; font-weight: 600;">《妖夜荒踪》：谁真的被弗雷德杀了</div>
+        <span style="font-size: 15px; color: #d8a13f;">按「梦」去读，这是一部标准的解谜片。节目排出至少五个分支。</span>
+      </div>
+      <div style="margin-top: 24px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 44px; align-items: start;">
+        <div>
+          <div style="display: grid; grid-template-columns: 40px 64px 64px 64px 1fr; gap: 1px; background: rgba(236,231,221,0.2);">
+            <div style="background: #241519; padding: 10px 12px; font-size: 13px; letter-spacing: 0.1em; color: #e5988f;"></div><div style="background: #241519; padding: 10px 12px; font-size: 13px; letter-spacing: 0.1em; color: #e5988f; text-align: center;">劳伦特</div><div style="background: #241519; padding: 10px 12px; font-size: 13px; letter-spacing: 0.1em; color: #e5988f; text-align: center;">雷妮</div><div style="background: #241519; padding: 10px 12px; font-size: 13px; letter-spacing: 0.1em; color: #e5988f; text-align: center;">安迪</div><div style="background: #241519; padding: 10px 12px; font-size: 13px; letter-spacing: 0.1em; color: #e5988f;">要点</div>
+            <div style="background: #171114; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #e5988f;">1</div><div style="background: #171114; display: flex; align-items: center; justify-content: center;"><span style="width: 14px; height: 14px; border-radius: 50%; background: #e5988f;"></span></div><div style="background: #171114; display: flex; align-items: center; justify-content: center;"><span style="width: 14px; height: 14px; border-radius: 50%; background: #e5988f;"></span></div><div style="background: #171114; display: flex; align-items: center; justify-content: center;"><span style="width: 14px; height: 14px; border-radius: 50%; background: #e5988f;"></span></div><div style="background: #171114; padding: 12px 14px; font-size: 14px; line-height: 1.7; color: #cfc8bc;">顺序：劳伦特、雷妮、安迪，再按梦的规则翻译成皮特的故事</div>
+            <div style="background: #171114; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #e5988f;">2</div><div style="background: #171114; display: flex; align-items: center; justify-content: center;"><span style="width: 14px; height: 14px; border-radius: 50%; background: #e5988f;"></span></div><div style="background: #171114; display: flex; align-items: center; justify-content: center;"><span style="width: 14px; height: 14px; border-radius: 50%; background: #e5988f;"></span></div><div style="background: #171114; display: flex; align-items: center; justify-content: center;"><span style="width: 14px; height: 14px; box-sizing: border-box; border-radius: 50%; border: 1.5px solid rgba(229,152,143,0.75);"></span></div><div style="background: #171114; padding: 12px 14px; font-size: 14px; line-height: 1.7; color: #cfc8bc;">杀安迪只发生在化身皮特之后的幻想里</div>
+            <div style="background: #171114; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #e5988f;">3</div><div style="background: #171114; display: flex; align-items: center; justify-content: center;"><span style="width: 14px; height: 14px; box-sizing: border-box; border-radius: 50%; border: 1.5px solid rgba(229,152,143,0.75);"></span></div><div style="background: #171114; display: flex; align-items: center; justify-content: center;"><span style="width: 14px; height: 14px; border-radius: 50%; background: #e5988f;"></span></div><div style="background: #171114; display: flex; align-items: center; justify-content: center;"><span style="width: 14px; height: 14px; border-radius: 50%; background: #e5988f;"></span></div><div style="background: #171114; padding: 12px 14px; font-size: 14px; line-height: 1.7; color: #cfc8bc;">按片中时间顺序读，杀劳伦特纯属幻想</div>
+            <div style="background: #171114; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #e5988f;">4</div><div style="background: #171114; display: flex; align-items: center; justify-content: center;"><span style="width: 14px; height: 14px; box-sizing: border-box; border-radius: 50%; border: 1.5px solid rgba(229,152,143,0.75);"></span></div><div style="background: #171114; display: flex; align-items: center; justify-content: center;"><span style="width: 14px; height: 14px; border-radius: 50%; background: #e5988f;"></span></div><div style="background: #171114; display: flex; align-items: center; justify-content: center;"><span style="width: 14px; height: 14px; box-sizing: border-box; border-radius: 50%; border: 1.5px solid rgba(229,152,143,0.75);"></span></div><div style="background: #171114; padding: 12px 14px; font-size: 14px; line-height: 1.7; color: #cfc8bc;">后面全是幻想，现实中没有对照</div>
+            <div style="background: #171114; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #e5988f;">5</div><div style="background: #171114; display: flex; align-items: center; justify-content: center;"><span style="width: 14px; height: 14px; box-sizing: border-box; border-radius: 50%; border: 1.5px solid rgba(229,152,143,0.75);"></span></div><div style="background: #171114; display: flex; align-items: center; justify-content: center;"><span style="width: 14px; height: 14px; box-sizing: border-box; border-radius: 50%; border: 1.5px solid rgba(229,152,143,0.75);"></span></div><div style="background: #171114; display: flex; align-items: center; justify-content: center;"><span style="width: 14px; height: 14px; box-sizing: border-box; border-radius: 50%; border: 1.5px solid rgba(229,152,143,0.75);"></span></div><div style="background: #171114; padding: 12px 14px; font-size: 14px; line-height: 1.7; color: #cfc8bc;">杀妻那段被隐藏；难点是警察为什么抓他</div>
+          </div>
+          <div style="margin-top: 12px; display: flex; gap: 22px; font-size: 13px; color: #b3aca0;"><span style="display: flex; align-items: center; gap: 8px;"><span style="width: 14px; height: 14px; border-radius: 50%; background: #e5988f;"></span>杀</span><span style="display: flex; align-items: center; gap: 8px;"><span style="width: 14px; height: 14px; box-sizing: border-box; border-radius: 50%; border: 1.5px solid rgba(229,152,143,0.75);"></span>未杀</span></div>
+        </div>
+        <div>
+          <div style="font-size: 13px; letter-spacing: 0.2em; color: #e5988f;">三段式回环</div>
+          <div style="position: relative; margin-top: 16px; padding-right: 64px;">
+            <div style="height: 66px; box-sizing: border-box; border: 1px solid rgba(236,231,221,0.3); background: #171114; padding: 0 18px; display: flex; flex-direction: column; justify-content: center;"><div style="font-size: 12px; letter-spacing: 0.18em; color: #c99a94;">第一部分</div><div style="margin-top: 4px; font-family: 'Noto Serif SC', serif; font-size: 18px;">弗雷德与雷妮</div></div>
+            <div style="padding: 8px 0 8px 18px; font-size: 13px; color: #c99a94;">↓ 牢房变身</div>
+            <div style="height: 66px; box-sizing: border-box; border: 1px solid rgba(236,231,221,0.3); background: #171114; padding: 0 18px; display: flex; flex-direction: column; justify-content: center;"><div style="font-size: 12px; letter-spacing: 0.18em; color: #c99a94;">第二部分</div><div style="margin-top: 4px; font-family: 'Noto Serif SC', serif; font-size: 18px;">皮特与爱丽丝</div></div>
+            <div style="padding: 8px 0 8px 18px; font-size: 13px; color: #c99a94;">↓ 变回弗雷德</div>
+            <div style="height: 66px; box-sizing: border-box; border: 1px solid rgba(236,231,221,0.3); background: #171114; padding: 0 18px; display: flex; flex-direction: column; justify-content: center;"><div style="font-size: 12px; letter-spacing: 0.18em; color: #c99a94;">第三部分</div><div style="margin-top: 4px; font-family: 'Noto Serif SC', serif; font-size: 18px;">「迪克·劳伦特死了」</div></div>
+            <div style="position: absolute; top: 33px; bottom: 33px; right: 28px; width: 32px; border: 1px dashed #e5988f; border-left: none;"></div>
+            <div style="position: absolute; top: 29px; right: 60px; width: 0; height: 0; border-top: 4px solid transparent; border-bottom: 4px solid transparent; border-right: 6px solid #e5988f;"></div>
+            <div style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); writing-mode: vertical-rl; font-size: 13px; letter-spacing: 0.2em; color: #e5988f;">回到开头</div>
+          </div>
+          <p style="margin: 16px 0 0; font-size: 15px; line-height: 1.85; color: #cfc8bc;">「迪克·劳伦特死了」这句台词首尾接上，结构上是莫比乌斯环。节目强调应理解为螺旋上升，不是原地打转。</p>
+        </div>
+      </div>
+      <div style="margin-top: 26px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 44px; align-items: start; border-top: 1px solid rgba(236,231,221,0.18); padding-top: 22px;">
+        <div>
+          <p style="margin: 0; font-size: 15px; line-height: 1.85; color: #cfc8bc;">节目还拿德勒兹「欲望是生产而非匮乏」作对照，一位主持人联想到《金瓶梅》里停不下来的西门庆。</p>
+          <p style="margin: 12px 0 0; font-size: 14px; line-height: 1.8; color: #9b9488;">译名：港译《妖夜荒踪》像鬼片，台译《惊狂》是白开水，节目认为不如直接叫《迷失高速公路》。</p>
+        </div>
+        <div style="background: rgba(216,161,63,0.14); border: 1px solid rgba(216,161,63,0.45); padding: 18px 22px;"><div style="font-size: 13px; letter-spacing: 0.2em; color: #d8a13f;">视角二的回答</div><div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 22px; line-height: 1.6;">变身是真的；换了躯壳，没换心。</div></div>
+      </div>
+    </div>
+
+    <div style="margin-top: 46px; display: grid; grid-template-columns: 1fr 1.08fr; gap: 44px; align-items: start;">
+      <div>
+        <div style="font-family: 'Noto Serif SC', serif; font-size: 28px; font-weight: 600;">《穆赫兰道》：标准答案怎么来的</div>
+        <p style="margin: 14px 0 0; font-size: 16px; line-height: 1.85; color: #cfc8bc;">前三分之二为贝蒂之梦，后三分之一为戴安的现实，娜奥米·沃茨本人也这么理解。反常的是，幻想部分剪得线性清晰，现实部分反而是跳跃剪辑。</p>
+        <div style="margin-top: 20px; display: grid; grid-template-columns: 2fr 1fr; gap: 2px; align-items: stretch;">
+          <div style="background: rgba(216,161,63,0.22); padding: 14px 16px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 17px;">ABC 试播集 ≈ 88 分钟</div><div style="margin-top: 6px; font-size: 14px; color: #b3aca0;">线性、清晰，后来成了「梦」的部分</div></div>
+          <div style="background: rgba(194,69,63,0.35); padding: 14px 16px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 17px;">补拍</div><div style="margin-top: 6px; font-size: 14px; color: #eadad4;">跳跃剪辑 · 裸戏</div></div>
+        </div>
+        <p style="margin: 18px 0 0; font-size: 15px; line-height: 1.85; color: #b3aca0;">节目类比《花样年华》拍着拍着淡化了复仇动机，反而成了经典。试播集剧本里原本有贝蒂和丽塔在屋顶大喊「好莱坞我来了」的戏，床上的死者也并非戴安。逼死戴安的老夫妇被读作拉康所说的「创伤性真实」。</p>
+      </div>
+      <div>
+        <div style="display: flex; align-items: baseline; gap: 14px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 24px; font-weight: 600;">七种读法</div><span style="font-size: 14px; color: #8d867b;">三种落在「梦—现实」轴上，四种在轴外</span></div>
+        <div style="margin-top: 22px; display: flex; justify-content: space-between; font-size: 13px; letter-spacing: 0.16em; color: #8d867b;"><span>← 全是梦</span><span>全是现实 →</span></div>
+        <div style="position: relative; margin-top: 10px; height: 20px;">
+          <div style="position: absolute; left: 9px; right: 9px; top: 9px; height: 2px; background: linear-gradient(90deg, #c2453f, rgba(236,231,221,0.7));"></div>
+          <div style="position: absolute; left: 2px; top: 3px; width: 14px; height: 14px; border-radius: 50%; background: #c2453f;"></div>
+          <div style="position: absolute; left: calc(50% - 10px); top: 0; width: 20px; height: 20px; box-sizing: border-box; border-radius: 50%; border: 2px solid #ece7dd; background: #d9877f;"></div>
+          <div style="position: absolute; right: 2px; top: 3px; width: 14px; height: 14px; border-radius: 50%; background: #ece7dd;"></div>
+        </div>
+        <div style="margin-top: 14px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px;">
+          <div style="text-align: left;"><div style="font-family: 'Noto Serif SC', serif; font-size: 18px; color: #e5988f;">全是梦</div><div style="margin-top: 2px; font-size: 12px; color: #8d867b;">一位主持人</div><div style="margin-top: 6px; font-size: 14px; line-height: 1.7; color: #b3aca0;">上半场好梦、下半场噩梦；吞枪自杀没有血，只冒白烟</div></div>
+          <div style="text-align: center;"><div style="font-family: 'Noto Serif SC', serif; font-size: 18px; color: #ece7dd;">标准答案</div><div style="margin-top: 2px; font-size: 12px; color: #8d867b;">大多数观众；娜奥米·沃茨</div><div style="margin-top: 6px; font-size: 14px; line-height: 1.7; color: #b3aca0;">前三分之二是戴安的梦，后三分之一是现实</div></div>
+          <div style="text-align: right;"><div style="font-family: 'Noto Serif SC', serif; font-size: 18px; color: #ece7dd;">全是现实</div><div style="margin-top: 2px; font-size: 12px; color: #8d867b;">部分评论者</div><div style="margin-top: 6px; font-size: 14px; line-height: 1.7; color: #b3aca0;">贝蒂与戴安是两个人，卡米拉没死；节目认为牵强</div></div>
+        </div>
+        <div style="margin-top: 26px; font-size: 13px; letter-spacing: 0.2em; color: #b3aca0;">轴外</div>
+        <div style="margin-top: 12px; display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(236,231,221,0.18);">
+          <div style="background: #0e0d11; padding: 16px 18px;"><div style="display: flex; align-items: baseline; gap: 10px;"><span style="font-family: 'Noto Serif SC', serif; font-size: 18px; color: #ece7dd;">莫比乌斯带</span><span style="font-size: 12px; color: #8d867b;">部分评论者</span></div><div style="margin-top: 6px; font-size: 14px; line-height: 1.7; color: #b3aca0;">前后两个平行宇宙连成一个环</div></div>
+          <div style="background: #0e0d11; padding: 16px 18px;"><div style="display: flex; align-items: baseline; gap: 10px;"><span style="font-family: 'Noto Serif SC', serif; font-size: 18px; color: #ece7dd;">制作史</span><span style="font-size: 12px; color: #8d867b;">节目</span></div><div style="margin-top: 6px; font-size: 14px; line-height: 1.7; color: #b3aca0;">试播集本来是真实的闯荡好莱坞故事，补拍后的噱头造成模糊</div></div>
+          <div style="background: linear-gradient(rgba(216,161,63,0.1), rgba(216,161,63,0.1)), #0e0d11; padding: 16px 18px;"><div style="display: flex; align-items: baseline; gap: 10px;"><span style="font-family: 'Noto Serif SC', serif; font-size: 18px; color: #d8a13f;">吠陀视角</span><span style="font-size: 12px; color: #8d867b;">节目 · 视角二</span></div><div style="margin-top: 6px; font-size: 14px; line-height: 1.7; color: #b3aca0;">两半都是真实；「市场」摧毁女演员，试镜那刻进入「宫殿」</div></div>
+          <div style="background: linear-gradient(rgba(216,161,63,0.1), rgba(216,161,63,0.1)), #0e0d11; padding: 16px 18px;"><div style="display: flex; align-items: baseline; gap: 10px;"><span style="font-family: 'Noto Serif SC', serif; font-size: 18px; color: #d8a13f;">图帕</span><span style="font-size: 12px; color: #8d867b;">节目 · 视角二</span></div><div style="margin-top: 6px; font-size: 14px; line-height: 1.7; color: #b3aca0;">丽塔是贝蒂冥想出来的假想伙伴</div></div>
+        </div>
+        <div style="margin-top: 14px; font-size: 13px; line-height: 1.8; color: #8d867b;">林奇 2002 年为 DVD 给出「十大线索」，节目认为是促销花招。</div>
+      </div>
+    </div>
+
+    <div style="margin-top: 46px; border-top: 2px solid #c2453f; padding-top: 28px;">
+      <div style="display: flex; align-items: baseline; gap: 18px;">
+        <div style="font-family: 'Noto Serif SC', serif; font-size: 30px; font-weight: 600;">《内陆帝国》的套层</div>
+        <span style="font-size: 14px; color: #8d867b;">连「银幕上发生了什么」都难以达成共识，节目给出的只是一种梳理</span>
+      </div>
+      <div style="margin-top: 24px; display: grid; grid-template-columns: 1.25fr 1fr; gap: 34px; align-items: start;">
+        <div>
+          <div style="border: 1px solid rgba(236,231,221,0.3); padding: 22px;">
+            <div style="font-family: 'Noto Serif SC', serif; font-size: 21px;">广播剧 Axxon N</div>
+            <div style="font-size: 14px; color: #9b9488; margin-top: 4px;">开场唱机播放 · 史上最长广播剧</div>
+            <div style="margin-top: 18px; border: 1px solid rgba(216,161,63,0.55); padding: 22px;">
+              <div style="font-family: 'Noto Serif SC', serif; font-size: 21px; color: #d8a13f;">波兰姑娘（失落女孩）</div>
+              <div style="font-size: 14px; color: #b09551; margin-top: 4px;">电视机前冥想 · 回忆加幻想 · 整个故事的种子</div>
+              <div style="margin-top: 16px; border: 1px dashed rgba(236,231,221,0.4); padding: 12px 18px; display: flex; align-items: baseline; gap: 14px;"><span style="font-family: 'Noto Serif SC', serif; font-size: 18px;">兔子房间</span><span style="font-size: 14px; color: #9b9488;">阈限空间，人物经此中转</span></div>
+              <div style="margin-top: 18px; border: 1px solid rgba(194,69,63,0.6); background: rgba(122,16,20,0.22); padding: 22px;">
+                <div style="font-family: 'Noto Serif SC', serif; font-size: 21px; color: #e5988f;">妮基 · 劳拉·邓恩</div>
+                <div style="font-size: 14px; color: #c99a94; margin-top: 4px;">过气女星，接下翻拍片</div>
+                <div style="margin-top: 18px; border: 1px solid rgba(236,231,221,0.35); background: rgba(236,231,221,0.06); padding: 20px;">
+                  <div style="font-family: 'Noto Serif SC', serif; font-size: 20px;">苏珊 · 戏中戏角色</div>
+                  <div style="font-size: 14px; color: #9b9488; margin-top: 4px;">《蓝色明日之上》翻拍自《47》</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top: 20px; background: rgba(216,161,63,0.14); border: 1px solid rgba(216,161,63,0.4); padding: 18px 22px; font-family: 'Noto Serif SC', serif; font-size: 20px; color: #ece7dd;">唯一确定的现实：丈夫与儿子回家</div>
+        </div>
+        <div>
+          <div style="display: grid; gap: 14px;">
+            <div style="border-left: 2px solid rgba(194,69,63,0.7); padding-left: 18px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 19px;">魅影 Phantom</div><div style="font-size: 15px; line-height: 1.75; color: #b3aca0; margin-top: 4px;">心魔，在套层之外。类似《双峰》的 BOB、印度神话的罗刹、《浮士德》的梅菲斯特</div></div>
+            <div style="margin-top: 8px; font-size: 13px; letter-spacing: 0.2em; color: #d8a13f;">出口路径</div>
+            <div style="border-left: 2px solid rgba(194,69,63,0.7); padding-left: 18px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 19px;"><span style="font-family: 'Cormorant Garamond', serif; color: #e5988f; margin-right: 10px;">1</span>47 号房间</div><div style="font-size: 15px; color: #b3aca0; margin-top: 4px;">妮基开枪击毙魅影</div></div>
+            <div style="border-left: 2px solid rgba(216,161,63,0.7); padding-left: 18px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 19px;"><span style="font-family: 'Cormorant Garamond', serif; color: #d8a13f; margin-right: 10px;">2</span>走出电视机</div><div style="font-size: 15px; color: #b3aca0; margin-top: 4px;">与波兰姑娘拥抱，合二为一</div></div>
+            <div style="border-left: 2px solid rgba(216,161,63,0.7); padding-left: 18px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 19px;"><span style="font-family: 'Cormorant Garamond', serif; color: #d8a13f; margin-right: 10px;">3</span>回到唯一确定的现实</div><div style="font-size: 15px; color: #b3aca0; margin-top: 4px;">丈夫与儿子回家</div></div>
+          </div>
+          <div style="margin-top: 24px; border-top: 1px solid rgba(236,231,221,0.2); padding-top: 18px;">
+            <div style="font-size: 13px; letter-spacing: 0.2em; color: #d8a13f;">几个关键接缝</div>
+            <div style="margin-top: 12px; display: grid; gap: 10px; font-size: 15px; line-height: 1.8; color: #b3aca0;">
+              <div>苏珊穿过小巷里的一扇门，与此前妮基读剧本的时间点会合，形成类似莫比乌斯环的结构。</div>
+              <div>灯光一明一灭之后，苏珊变成了波兰姑娘——林奇认为电力是自然界的重要力量。</div>
+              <div>烟头在丝绸上烫出的洞，是回忆的窥孔。</div>
+              <div>「驱逐邪恶的梦」这句祈祷，同时致敬了《日落大道》和施特罗海姆的《凯利女王》。</div>
+            </div>
+            <div style="margin-top: 16px; font-size: 14px; line-height: 1.8; color: #8d867b;">难点在于，《内陆帝国》里的变身往往是无缝的。其他读法：本就是戏中戏；几个时空是轮回转世；多元宇宙论。节目认为都说得通，因为林奇拍摄时没有剧本，线索本身就是松散的。</div>
+          </div>
+          <div style="margin-top: 20px; padding: 18px 20px; border: 1px dashed rgba(216,161,63,0.5); font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 22px; line-height: 1.6; color: #d8a13f;">「那个房间里的女人是某种原初情感的化身，它的存在像一粒种子，整个故事从中生长出来。」<span style="font-family: 'Noto Sans SC', sans-serif; font-style: normal; font-size: 14px; color: #8d867b; display: block; margin-top: 8px;">林奇，2007 年《电影手册》访谈</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 70px 90px 0;">
+    <div style="display: flex; align-items: baseline; gap: 18px;">
+      <span style="font-family: 'Cormorant Garamond', serif; font-size: 26px; color: #d8a13f;">VI</span>
+      <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 44px;">宗教与哲学工具箱</h2>
+      <span style="margin-left: auto; font-size: 14px; letter-spacing: 0.18em; color: #8d867b;">节目最独特的板块</span>
+    </div>
+    <div style="margin-top: 12px; height: 1px; background: linear-gradient(to right, #c2453f, rgba(236,231,221,0.18));"></div>
+
+    <div style="margin-top: 32px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 26px;">
+      <div><div style="font-family: 'Noto Serif SC', serif; font-size: 20px;">超觉冥想</div><p style="margin: 8px 0 0; font-size: 15px; line-height: 1.85; color: #b3aca0;">1973 年经妹妹介绍开始练，每天两次、每次约半小时，一直练到去世。由印度教背景的玛赫西·玛赫什·优济创立，追求意识转化与梵我合一。</p></div>
+      <div><div style="font-family: 'Noto Serif SC', serif; font-size: 20px;">与正念不是一回事</div><p style="margin: 8px 0 0; font-size: 15px; line-height: 1.85; color: #b3aca0;">乔·卡巴金的正念冥想出自佛教，追求体会无常无我。林奇早年不太愿意谈冥想，等正念把冥想的名声翻转过来才开始大谈特谈。</p></div>
+      <div><div style="font-family: 'Noto Serif SC', serif; font-size: 20px; color: #e5988f;">争议</div><p style="margin: 8px 0 0; font-size: 15px; line-height: 1.85; color: #b3aca0;">1975 年《大西洋月刊》称它为「冥想界的麦当劳」；2001 年的 100 万美元开悟课程，学员只见到一张空宝座，大师本人出现在显示屏上，林奇也花钱参加了。</p></div>
+    </div>
+
+    <div style="margin-top: 24px; padding: 16px 20px; border-left: 2px solid #d8a13f; font-size: 15px; line-height: 1.85; color: #cfc8bc;">节目明确表示，不评判这些理论在科学或宗教上的对错，只关心它们怎样成为林奇的创作方法。林奇自己说创作与信仰无关，节目认为「这不是事实」。</div>
+
+    <div style="margin-top: 34px; display: grid; grid-template-columns: 220px 1fr 1fr; gap: 1px; background: rgba(236,231,221,0.18);">
+      <div style="background: rgba(122,16,20,0.35); padding: 14px 18px; font-size: 13px; letter-spacing: 0.18em; color: #eadad4;">概念</div>
+      <div style="background: rgba(122,16,20,0.35); padding: 14px 18px; font-size: 13px; letter-spacing: 0.18em; color: #eadad4;">节目的解释</div>
+      <div style="background: rgba(122,16,20,0.35); padding: 14px 18px; font-size: 13px; letter-spacing: 0.18em; color: #eadad4;">片中对应</div>
+
+      <div style="background: #0e0d11; padding: 16px 18px; font-family: 'Noto Serif SC', serif; font-size: 18px;">梵 / 纯意识（不二论）</div>
+      <div style="background: #0e0d11; padding: 16px 18px; font-size: 15px; line-height: 1.8; color: #b3aca0;">世界是唯一绝对意识的投射，所见现实只是「象」</div>
+      <div style="background: #0e0d11; padding: 16px 18px; font-size: 15px; line-height: 1.8; color: #cfc8bc;">林奇自认是现实主义者，而非超现实主义</div>
+
+      <div style="background: #131217; padding: 16px 18px; font-family: 'Noto Serif SC', serif; font-size: 18px;">阿特曼、梵我合一</div>
+      <div style="background: #131217; padding: 16px 18px; font-size: 15px; line-height: 1.8; color: #b3aca0;">个人意识与宇宙本体同一</div>
+      <div style="background: #131217; padding: 16px 18px; font-size: 15px; line-height: 1.8; color: #cfc8bc;">《史崔特的故事》里的星空</div>
+
+      <div style="background: #0e0d11; padding: 16px 18px; font-family: 'Noto Serif SC', serif; font-size: 18px;">中阴（藏传佛教）</div>
+      <div style="background: #0e0d11; padding: 16px 18px; font-size: 15px; line-height: 1.8; color: #b3aca0;">死后到再生前的过渡时刻</div>
+      <div style="background: #0e0d11; padding: 16px 18px; font-size: 15px; line-height: 1.8; color: #cfc8bc;">《双峰》红房间、寂静俱乐部</div>
+
+      <div style="background: #131217; padding: 16px 18px; font-family: 'Noto Serif SC', serif; font-size: 18px;">图帕</div>
+      <div style="background: #131217; padding: 16px 18px; font-size: 15px; line-height: 1.8; color: #b3aca0;">冥想造出的幻人，可以独立甚至显形</div>
+      <div style="background: #131217; padding: 16px 18px; font-size: 15px; line-height: 1.8; color: #cfc8bc;">《双峰》第三季戴安；贝蒂与丽塔</div>
+
+      <div style="background: #0e0d11; padding: 16px 18px; font-family: 'Noto Serif SC', serif; font-size: 18px;">统一场</div>
+      <div style="background: #0e0d11; padding: 16px 18px; font-size: 15px; line-height: 1.8; color: #b3aca0;">被林奇诗化为爱、和平与创造力的源头，断开连接就会自毁</div>
+      <div style="background: #0e0d11; padding: 16px 18px; font-size: 15px; line-height: 1.8; color: #cfc8bc;">妮基、艾尔文得救</div>
+
+      <div style="background: #131217; padding: 16px 18px; font-family: 'Noto Serif SC', serif; font-size: 18px;">量子纠缠</div>
+      <div style="background: #131217; padding: 16px 18px; font-size: 15px; line-height: 1.8; color: #b3aca0;">两个「粒子」必须合起来理解</div>
+      <div style="background: #131217; padding: 16px 18px; font-size: 15px; line-height: 1.8; color: #cfc8bc;">神秘人同时出现在两处；库珀与劳拉做同一个梦</div>
+
+      <div style="background: #0e0d11; padding: 16px 18px; font-family: 'Noto Serif SC', serif; font-size: 18px;">量子叠加</div>
+      <div style="background: #0e0d11; padding: 16px 18px; font-size: 15px; line-height: 1.8; color: #b3aca0;">一个角色同时是多个角色</div>
+      <div style="background: #0e0d11; padding: 16px 18px; font-size: 15px; line-height: 1.8; color: #cfc8bc;">雷妮死没死；妮基与苏珊</div>
+
+      <div style="background: #131217; padding: 16px 18px; font-family: 'Noto Serif SC', serif; font-size: 18px;">不确定性原理</div>
+      <div style="background: #131217; padding: 16px 18px; font-size: 15px; line-height: 1.8; color: #b3aca0;">反对一切确定化</div>
+      <div style="background: #131217; padding: 16px 18px; font-size: 15px; line-height: 1.8; color: #cfc8bc;">拒绝解释自己的电影</div>
+
+      <div style="background: #0e0d11; padding: 16px 18px; font-family: 'Noto Serif SC', serif; font-size: 18px;">市场 / 宫殿</div>
+      <div style="background: #0e0d11; padding: 16px 18px; font-size: 15px; line-height: 1.8; color: #b3aca0;">马哈里希的术语：虚假稳定的日常现实 / 终极源头与开悟</div>
+      <div style="background: #0e0d11; padding: 16px 18px; font-size: 15px; line-height: 1.8; color: #cfc8bc;">《内陆帝国》邻居老太的「预言」</div>
+
+      <div style="background: #131217; padding: 16px 18px; font-family: 'Noto Serif SC', serif; font-size: 18px;">还债</div>
+      <div style="background: #131217; padding: 16px 18px; font-size: 15px; line-height: 1.8; color: #b3aca0;">诺希姆森说是林奇自创的黑话：有人需要帮助，你就欠下道义之债</div>
+      <div style="background: #131217; padding: 16px 18px; font-size: 15px; line-height: 1.8; color: #cfc8bc;">妮基解救波兰姑娘</div>
+    </div>
+
+    <div style="margin-top: 30px; display: grid; grid-template-columns: 220px 1fr; gap: 26px; align-items: center; border-top: 1px solid rgba(236,231,221,0.18); border-bottom: 1px solid rgba(236,231,221,0.18); padding: 24px 0;">
+      <div style="font-size: 13px; line-height: 1.8; letter-spacing: 0.2em; color: #d8a13f;">市场与宫殿<br>落在片中的一句台词</div>
+      <div><div style="font-family: 'Noto Serif SC', serif; font-size: 26px; line-height: 1.6;">「她没有穿过市场，她穿过市场后面的小巷，这是通往宫殿的路。」</div><div style="margin-top: 8px; font-size: 14px; color: #8d867b;">《内陆帝国》邻居老太的台词，节目转述</div></div>
+    </div>
+
+    <div style="margin-top: 34px; border: 1px solid rgba(216,161,63,0.4); padding: 26px 28px;">
+      <div style="display: flex; align-items: baseline; gap: 16px;">
+        <div style="font-family: 'Noto Serif SC', serif; font-size: 26px; font-weight: 600;">鸭子的眼睛</div>
+        <span style="font-size: 15px; color: #8d867b;">林奇自己的说法，意思接近画龙点睛：让整部片活起来的那一场戏</span>
+      </div>
+      <div style="margin-top: 20px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+        <div style="background: rgba(216,161,63,0.16); padding: 16px 18px;"><div style="font-size: 12px; letter-spacing: 0.18em; color: #d8a13f;">林奇亲口说过</div><div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 18px;">象人</div><div style="font-size: 15px; color: #cfc8bc; margin-top: 4px;">结尾躺下死去</div></div>
+        <div style="background: rgba(216,161,63,0.16); padding: 16px 18px;"><div style="font-size: 12px; letter-spacing: 0.18em; color: #d8a13f;">林奇亲口说过</div><div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 18px;">蓝丝绒</div><div style="font-size: 15px; color: #cfc8bc; margin-top: 4px;">唱 In Dreams 那场</div></div>
+        <div style="background: rgba(236,231,221,0.07); padding: 16px 18px;"><div style="font-size: 12px; letter-spacing: 0.18em; color: #8d867b;">一般认为</div><div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 18px;">妖夜荒踪</div><div style="font-size: 15px; color: #b3aca0; margin-top: 4px;">皮特和爱丽丝在车前</div></div>
+        <div style="background: rgba(236,231,221,0.07); padding: 16px 18px;"><div style="font-size: 12px; letter-spacing: 0.18em; color: #8d867b;">节目的猜测</div><div style="margin-top: 8px; font-size: 15px; line-height: 1.8; color: #b3aca0;">《橡皮头》暖气片女人出场 · 《我心狂野》车祸 · 《史崔特的故事》星空 · 《穆赫兰道》夜空中两人的幻影 · 《内陆帝国》魅影嘴含灯泡</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 70px 90px 0;">
+    <div style="display: flex; align-items: baseline; gap: 18px;">
+      <span style="font-family: 'Cormorant Garamond', serif; font-size: 26px; color: #d8a13f;">VII</span>
+      <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 44px;">视角二 · 用「意识」重读</h2>
+      <span style="margin-left: auto; font-size: 14px; letter-spacing: 0.18em; color: #8d867b;">变身与幻象不是梦，是意识改写了现实</span>
+    </div>
+    <div style="margin-top: 12px; height: 1px; background: linear-gradient(to right, #c2453f, rgba(236,231,221,0.18));"></div>
+
+    <div style="margin-top: 34px; display: grid; grid-template-columns: 1fr 1.4fr; gap: 40px; align-items: start;">
+      <div>
+        <div style="display: grid; gap: 12px;">
+          <div style="background: rgba(236,231,221,0.09); padding: 16px 20px; text-align: center;"><div style="font-family: 'Noto Serif SC', serif; font-size: 20px;">梵 · 统一场</div><div style="font-size: 14px; color: #9b9488; margin-top: 4px;">纯粹意识，万物源头</div></div>
+          <div style="text-align: center; color: #8d867b; font-size: 18px;">↓</div>
+          <div style="background: rgba(236,231,221,0.09); padding: 16px 20px; text-align: center;"><div style="font-family: 'Noto Serif SC', serif; font-size: 20px;">个体意识 · 阿特曼</div><div style="font-size: 14px; color: #9b9488; margin-top: 4px;">所见现实是意识之「象」</div></div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 6px;">
+            <div style="display: grid; gap: 10px;">
+              <div style="background: rgba(122,16,20,0.38); padding: 14px 16px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 18px; color: #f0c8c4;">与统一场断开</div><div style="font-size: 14px; color: #d4b3af; margin-top: 4px;">迷失在「市场」</div></div>
+              <div style="text-align: center; color: #8d867b;">↓</div>
+              <div style="background: rgba(122,16,20,0.38); padding: 14px 16px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 18px; color: #f0c8c4;">欲望控制 · 恶性循环</div><div style="font-size: 14px; color: #d4b3af; margin-top: 4px;">换了躯壳，心没变</div></div>
+              <div style="text-align: center; color: #8d867b;">↓</div>
+              <div style="background: rgba(122,16,20,0.38); padding: 14px 16px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 18px; color: #f0c8c4;">弗雷德 · 戴安</div><div style="font-size: 14px; color: #d4b3af; margin-top: 4px;">《妖夜荒踪》《穆赫兰道》</div></div>
+            </div>
+            <div style="display: grid; gap: 10px;">
+              <div style="background: rgba(216,161,63,0.22); padding: 14px 16px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 18px; color: #e8c98a;">与统一场相连</div><div style="font-size: 14px; color: #c4b189; margin-top: 4px;">冥想、直觉顿悟，通向「宫殿」</div></div>
+              <div style="text-align: center; color: #8d867b;">↓</div>
+              <div style="background: rgba(216,161,63,0.22); padding: 14px 16px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 18px; color: #e8c98a;">意识转化 · 现实让路</div><div style="font-size: 14px; color: #c4b189; margin-top: 4px;">照片消失、障碍自解</div></div>
+              <div style="text-align: center; color: #8d867b;">↓</div>
+              <div style="background: rgba(216,161,63,0.22); padding: 14px 16px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 18px; color: #e8c98a;">妮基 · 艾尔文 · 塞勒与卢拉</div><div style="font-size: 14px; color: #c4b189; margin-top: 4px;">《内陆帝国》《史崔特》《我心狂野》</div></div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top: 22px; padding: 14px 18px; border: 1px dashed rgba(216,161,63,0.5); text-align: center; font-family: 'Noto Serif SC', serif; font-size: 22px; color: #e8c98a;">你是什么样，世界就是什么样。</div>
+        <div style="margin-top: 22px; font-family: 'Noto Serif SC', serif; font-size: 22px; line-height: 1.6; color: #ece7dd;">节目因此说林奇的电影是伦理电影：内心充满邪念，处境就越来越糟；内心有善念和勇气，一切障碍都会让路。</div>
+        <div style="margin-top: 16px; font-size: 15px; line-height: 1.85; color: #9b9488;">节目把创作分成两个阶段：《蓝丝绒》《我心狂野》和《双峰》前两季是「初始期」，从《妖夜荒踪》开始完全放开。</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 160px 1fr 1fr; gap: 1px; background: rgba(236,231,221,0.18); align-content: start;">
+        <div style="background: #17131a; padding: 14px 16px; font-size: 13px; letter-spacing: 0.16em; color: #b3aca0;">影片</div>
+        <div style="background: #17131a; padding: 14px 16px; font-size: 13px; letter-spacing: 0.16em; color: #e5988f;">视角一 · 梦 / 精神分析</div>
+        <div style="background: #17131a; padding: 14px 16px; font-size: 13px; letter-spacing: 0.16em; color: #d8a13f;">视角二 · 吠陀 / 冥想 / 量子</div>
+
+        <div style="background: #0e0d11; padding: 14px 16px; font-family: 'Noto Serif SC', serif; font-size: 17px;">橡皮头<div style="font-family: 'Cormorant Garamond', serif; font-size: 14px; color: #8d867b;">1977</div></div>
+        <div style="background: #0e0d11; padding: 14px 16px; font-size: 15px; line-height: 1.75; color: #b3aca0;">初为人父的责任恐惧；米歇尔·希翁读出「丈夫与婴儿争宠」</div>
+        <div style="background: #0e0d11; padding: 14px 16px; font-size: 15px; line-height: 1.75; color: #cfc8bc;">亨利的幻想就是冥想，用更好的幻想替换悲惨的幻想</div>
+
+        <div style="background: #131217; padding: 14px 16px; font-family: 'Noto Serif SC', serif; font-size: 17px;">象人<div style="font-family: 'Cormorant Garamond', serif; font-size: 14px; color: #8d867b;">1980</div></div>
+        <div style="background: #131217; padding: 14px 16px; font-size: 15px; line-height: 1.75; color: #b3aca0;">拉康三界：进不了象征界、镜像误认、实在界创伤；常人的丑陋被象人照见</div>
+        <div style="background: #131217; padding: 14px 16px; font-size: 15px; line-height: 1.75; color: #cfc8bc;">节目承认联系较勉强，剧本不是林奇原创</div>
+
+        <div style="background: #0e0d11; padding: 14px 16px; font-family: 'Noto Serif SC', serif; font-size: 17px;">沙丘<div style="font-family: 'Cormorant Garamond', serif; font-size: 14px; color: #8d867b;">1984</div></div>
+        <div style="background: #0e0d11; padding: 14px 16px; font-size: 15px; line-height: 1.75; color: #b3aca0;">卡拉丹与厄拉科斯的二元；删掉宗教欺骗和圣战，成了里根时代的童话</div>
+        <div style="background: #0e0d11; padding: 14px 16px; font-size: 15px; line-height: 1.75; color: #cfc8bc;">结尾保罗蓝眼中涌现的汪洋就是「意识之海」，节目称之为曲线救国</div>
+
+        <div style="background: #131217; padding: 14px 16px; font-family: 'Noto Serif SC', serif; font-size: 17px;">蓝丝绒<div style="font-family: 'Cormorant Garamond', serif; font-size: 14px; color: #8d867b;">1986</div></div>
+        <div style="background: #131217; padding: 14px 16px; font-size: 15px; line-height: 1.75; color: #b3aca0;">小镇两面性与偷窥；深河公寓分隔两个世界</div>
+        <div style="background: #131217; padding: 14px 16px; font-size: 15px; line-height: 1.75; color: #cfc8bc;">原剧本里镜头推进耳朵、如入黑洞，是冥想通道；林奇改剪，淡化了「全是梦」的联想</div>
+
+        <div style="background: #0e0d11; padding: 14px 16px; font-family: 'Noto Serif SC', serif; font-size: 17px;">我心狂野<div style="font-family: 'Cormorant Garamond', serif; font-size: 14px; color: #8d867b;">1990</div></div>
+        <div style="background: #0e0d11; padding: 14px 16px; font-size: 15px; line-height: 1.75; color: #b3aca0;">《绿野仙踪》的好女巫与坏女巫；红鞋碰鞋跟不管用，说明困在幻想里</div>
+        <div style="background: #0e0d11; padding: 14px 16px; font-size: 15px; line-height: 1.75; color: #cfc8bc;">泼过水的母亲照片消失，是意识改写现实；塞勒一道歉，帮派就放人，是行为导致后果</div>
+
+        <div style="background: #131217; padding: 14px 16px; font-family: 'Noto Serif SC', serif; font-size: 17px;">妖夜荒踪<div style="font-family: 'Cormorant Garamond', serif; font-size: 14px; color: #8d867b;">1997</div></div>
+        <div style="background: #131217; padding: 14px 16px; font-size: 15px; line-height: 1.75; color: #b3aca0;">性焦虑之梦，五种剧情分支，最悲观</div>
+        <div style="background: #131217; padding: 14px 16px; font-size: 15px; line-height: 1.75; color: #cfc8bc;">灵感来自卡夫卡《变形记》，大变活人是真的；换了躯壳心没变，所以还困在「市场」</div>
+
+        <div style="background: #0e0d11; padding: 14px 16px; font-family: 'Noto Serif SC', serif; font-size: 17px;">史崔特的故事<div style="font-family: 'Cormorant Garamond', serif; font-size: 14px; color: #8d867b;">1999</div></div>
+        <div style="background: #0e0d11; padding: 14px 16px; font-size: 15px; line-height: 1.75; color: #b3aca0;">老白男公路片；主角在画面上从右往左走，模仿西部片（诺希姆森的观察）</div>
+        <div style="background: #0e0d11; padding: 14px 16px; font-size: 15px; line-height: 1.75; color: #cfc8bc;">星空象征融入宇宙；物理学家大卫·阿尔伯特的「退相干」说：去掉可能性，换来和谐</div>
+
+        <div style="background: #131217; padding: 14px 16px; font-family: 'Noto Serif SC', serif; font-size: 17px;">穆赫兰道<div style="font-family: 'Cormorant Garamond', serif; font-size: 14px; color: #8d867b;">2001</div></div>
+        <div style="background: #131217; padding: 14px 16px; font-size: 15px; line-height: 1.75; color: #b3aca0;">前半是梦、后半是现实；老夫妇是创伤性真实</div>
+        <div style="background: #131217; padding: 14px 16px; font-size: 15px; line-height: 1.75; color: #cfc8bc;">两半都是真实；「市场」摧毁了女演员，贝蒂试镜时却一度进入「宫殿」；寂静俱乐部是中阴或虚空意识，蓝盒子是黑洞</div>
+
+        <div style="background: #0e0d11; padding: 14px 16px; font-family: 'Noto Serif SC', serif; font-size: 17px;">内陆帝国<div style="font-family: 'Cormorant Garamond', serif; font-size: 14px; color: #8d867b;">2006</div></div>
+        <div style="background: #0e0d11; padding: 14px 16px; font-size: 15px; line-height: 1.75; color: #b3aca0;">波兰姑娘的幻想套层，杀死心魔得救赎</div>
+        <div style="background: #0e0d11; padding: 14px 16px; font-size: 15px; line-height: 1.75; color: #cfc8bc;">冥想比做梦更深，而且能生成实体；终场派对上不同次元的人齐聚一堂，就是统一场、就是「宫殿」</div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 70px 90px 0;">
+    <div style="display: flex; align-items: baseline; gap: 18px;">
+      <span style="font-family: 'Cormorant Garamond', serif; font-size: 26px; color: #d8a13f;">VIII</span>
+      <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 44px;">节目站在谁一边</h2>
+      <span style="margin-left: auto; font-size: 14px; letter-spacing: 0.18em; color: #8d867b;">评论者与理论来源 · 按节目态度分组</span>
+    </div>
+    <div style="margin-top: 12px; height: 1px; background: linear-gradient(to right, #c2453f, rgba(236,231,221,0.18));"></div>
+    <div style="margin-top: 34px; display: grid; grid-template-columns: 170px 2.4fr 1fr 1fr 1fr; gap: 1px; background: rgba(236,231,221,0.18);">
+      <div style="background: rgba(122,16,20,0.35); padding: 14px 18px; font-size: 13px; letter-spacing: 0.18em; color: #eadad4;">对象</div><div style="background: rgba(122,16,20,0.35); padding: 14px 18px; font-size: 13px; letter-spacing: 0.18em; color: #eadad4;">采用</div><div style="background: rgba(122,16,20,0.35); padding: 14px 18px; font-size: 13px; letter-spacing: 0.18em; color: #eadad4;">部分认同</div><div style="background: rgba(122,16,20,0.35); padding: 14px 18px; font-size: 13px; letter-spacing: 0.18em; color: #eadad4;">只作介绍</div><div style="background: rgba(122,16,20,0.35); padding: 14px 18px; font-size: 13px; letter-spacing: 0.18em; color: #eadad4;">驳斥</div>
+      <div style="background: #0e0d11; padding: 16px 18px; font-family: 'Noto Serif SC', serif; font-size: 17px;">视角一的理论来源</div>
+      <div style="background: #0e0d11; padding: 14px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;"><div style="position: relative; background: rgba(236,231,221,0.07); border: 1px solid rgba(236,231,221,0.16); padding: 12px 14px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 17px;">托德·麦高恩</div><div style="margin-top: 4px; font-size: 13px; line-height: 1.7; color: #b3aca0;">从精神分析读林奇：欲望与幻想</div></div><div style="position: relative; background: rgba(236,231,221,0.07); border: 1px solid rgba(236,231,221,0.16); padding: 12px 14px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 17px;">齐泽克</div><div style="margin-top: 4px; font-size: 13px; line-height: 1.7; color: #b3aca0;">先锋与庸俗交叠；怀疑林奇用低频噪音制造恐怖</div></div><div style="position: relative; background: rgba(236,231,221,0.07); border: 1px solid rgba(236,231,221,0.16); padding: 12px 14px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 17px;">米歇尔·希翁</div><div style="margin-top: 4px; font-size: 13px; line-height: 1.7; color: #b3aca0;">《橡皮头》里丈夫与婴儿争宠；发明「林奇症」一词</div></div></div>
+      <div style="background: #0e0d11; padding: 14px; display: grid; gap: 10px;"></div>
+      <div style="background: #0e0d11; padding: 14px; display: grid; gap: 10px;"></div>
+      <div style="background: #0e0d11; padding: 14px; display: grid; gap: 10px;"></div>
+      <div style="background: #131217; padding: 16px 18px; font-family: 'Noto Serif SC', serif; font-size: 17px;">视角二的理论来源</div>
+      <div style="background: #131217; padding: 14px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;"><div style="position: relative; background: rgba(236,231,221,0.07); border: 1px solid rgba(236,231,221,0.16); padding: 12px 14px;"><div style="position: absolute; left: 24px; top: -30px; height: 30px; border-left: 1px dashed #e5988f;"></div><div style="position: absolute; left: 20px; top: -31px; width: 0; height: 0; border-left: 4.5px solid transparent; border-right: 4.5px solid transparent; border-bottom: 7px solid #e5988f;"></div><div style="position: absolute; left: 36px; top: -25px; font-size: 12px; line-height: 1.5; color: #e5988f; white-space: nowrap;">否定其研究路径</div><div style="font-family: 'Noto Serif SC', serif; font-size: 17px;">玛莎·诺希姆森</div><div style="margin-top: 4px; font-size: 13px; line-height: 1.7; color: #b3aca0;">从印度教哲学读林奇</div></div><div style="position: relative; background: rgba(236,231,221,0.07); border: 1px solid rgba(236,231,221,0.16); padding: 12px 14px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 17px;">大卫·阿尔伯特</div><div style="margin-top: 4px; font-size: 13px; line-height: 1.7; color: #b3aca0;">用退相干解释《史崔特的故事》</div></div></div>
+      <div style="background: #131217; padding: 14px; display: grid; gap: 10px;"></div>
+      <div style="background: #131217; padding: 14px; display: grid; gap: 10px;"></div>
+      <div style="background: #131217; padding: 14px; display: grid; gap: 10px;"></div>
+      <div style="background: #0e0d11; padding: 16px 18px; font-family: 'Noto Serif SC', serif; font-size: 17px;">结语框架</div>
+      <div style="background: #0e0d11; padding: 14px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;"><div style="position: relative; background: rgba(236,231,221,0.07); border: 1px solid rgba(236,231,221,0.16); padding: 12px 14px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 17px;">德勒兹</div><div style="margin-top: 4px; font-size: 13px; line-height: 1.7; color: #b3aca0;">欲望是生产而非匮乏；大脑即屏幕</div></div></div>
+      <div style="background: #0e0d11; padding: 14px; display: grid; gap: 10px;"></div>
+      <div style="background: #0e0d11; padding: 14px; display: grid; gap: 10px;"></div>
+      <div style="background: #0e0d11; padding: 14px; display: grid; gap: 10px;"></div>
+      <div style="background: #131217; padding: 16px 18px; font-family: 'Noto Serif SC', serif; font-size: 17px;">《蓝丝绒》</div>
+      <div style="background: #131217; padding: 14px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;"><div style="position: relative; background: rgba(236,231,221,0.07); border: 1px solid rgba(236,231,221,0.16); padding: 12px 14px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 17px;">宝琳·凯尔</div><div style="margin-top: 4px; font-size: 13px; line-height: 1.7; color: #b3aca0;">怪异加天真；不会把林奇的画面和别人混淆</div></div><div style="position: relative; background: rgba(236,231,221,0.07); border: 1px solid rgba(236,231,221,0.16); padding: 12px 14px; grid-column: 2 / span 2;"><div style="font-family: 'Noto Serif SC', serif; font-size: 17px;">詹明信</div><div style="margin-top: 4px; font-size: 13px; line-height: 1.7; color: #b3aca0;">小镇封闭自足、虚假快乐；结尾体现新的男子气概</div><div style="margin-top: 8px; font-size: 12px; color: #e5988f;">与罗宾·伍德对结尾看法相反</div></div></div>
+      <div style="background: #131217; padding: 14px; display: grid; gap: 10px;"><div style="position: relative; background: rgba(236,231,221,0.03); border: 1px dashed rgba(236,231,221,0.32); padding: 12px 14px;"><div style="position: absolute; left: -30px; top: 50%; width: 29px; border-top: 1px dashed #e5988f;"></div><div style="position: absolute; left: -33px; top: calc(50% - 3px); width: 6px; height: 6px; border-radius: 50%; background: #e5988f;"></div><div style="position: absolute; left: -3px; top: calc(50% - 3px); width: 6px; height: 6px; border-radius: 50%; background: #e5988f;"></div><div style="font-family: 'Noto Serif SC', serif; font-size: 17px;">罗宾·伍德</div><div style="margin-top: 4px; font-size: 13px; line-height: 1.7; color: #b3aca0;">居高临下嘲讽小镇、复辟父权、后现代式调侃</div><div style="margin-top: 8px; font-size: 12px; color: #e5988f;">见 V 节论争</div></div></div>
+      <div style="background: #131217; padding: 14px; display: grid; gap: 10px;"></div>
+      <div style="background: #131217; padding: 14px; display: grid; gap: 10px;"></div>
+      <div style="background: #0e0d11; padding: 16px 18px; font-family: 'Noto Serif SC', serif; font-size: 17px;">《我心狂野》</div>
+      <div style="background: #0e0d11; padding: 14px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;"></div>
+      <div style="background: #0e0d11; padding: 14px; display: grid; gap: 10px;"></div>
+      <div style="background: #0e0d11; padding: 14px; display: grid; gap: 10px;"><div style="position: relative; background: transparent; border: 1px solid rgba(236,231,221,0.14); padding: 12px 14px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 17px;">罗杰·伊伯特</div><div style="margin-top: 4px; font-size: 13px; line-height: 1.7; color: #b3aca0;">林奇的死敌，在戛纳带头嘘</div></div><div style="position: relative; background: transparent; border: 1px solid rgba(236,231,221,0.14); padding: 12px 14px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 17px;">戈达尔</div><div style="margin-top: 4px; font-size: 13px; line-height: 1.7; color: #b3aca0;">在《解放报》痛批</div></div></div>
+      <div style="background: #0e0d11; padding: 14px; display: grid; gap: 10px;"></div>
+      <div style="background: #131217; padding: 16px 18px; font-family: 'Noto Serif SC', serif; font-size: 17px;">林奇的政治观</div>
+      <div style="background: #131217; padding: 14px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;"></div>
+      <div style="background: #131217; padding: 14px; display: grid; gap: 10px;"></div>
+      <div style="background: #131217; padding: 14px; display: grid; gap: 10px;"></div>
+      <div style="background: #131217; padding: 14px; display: grid; gap: 10px;"><div style="position: relative; background: rgba(122,16,20,0.45); border: 1px solid rgba(194,69,63,0.6); padding: 12px 14px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 17px;">《华盛顿邮报》专栏</div><div style="margin-top: 4px; font-size: 13px; line-height: 1.7; color: #b3aca0;">称林奇是最伟大的保守主义电影人</div></div></div>
+    </div>
+    <div style="margin-top: 16px; font-size: 13px; line-height: 1.8; color: #8d867b;">虚线标出两组观点关系：诺希姆森否定麦高恩的研究路径；詹明信与罗宾·伍德对《蓝丝绒》结尾看法相反。</div>
+  </section>
+
+  <sc-if value="{{ showWordCloud }}" hint-placeholder-val="{{ true }}">
+  <section style="padding: 70px 90px 0;">
+    <div style="display: flex; align-items: baseline; gap: 18px;">
+      <span style="font-family: 'Cormorant Garamond', serif; font-size: 26px; color: #d8a13f;">IX</span>
+      <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 44px;">这四小时里，他们在说什么</h2>
+      <span style="margin-left: auto; font-size: 14px; letter-spacing: 0.18em; color: #8d867b;">字号 ∝ 提及次数</span>
+    </div>
+    <div style="margin-top: 12px; height: 1px; background: linear-gradient(to right, #c2453f, rgba(236,231,221,0.18));"></div>
+
+    <div style="margin-top: 34px; display: flex; align-items: baseline; gap: 22px; border-bottom: 1px solid rgba(236,231,221,0.18); padding-bottom: 26px;">
+      <div style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 86px; line-height: 1;">梦</div>
+      <div style="font-family: 'Cormorant Garamond', serif; font-size: 62px; color: #c2453f; line-height: 1;">113</div>
+      <div style="font-size: 15px; line-height: 1.7; color: #8d867b; max-width: 460px;">次，全稿最高频的概念（含梦境、做梦等词）。紧随其后的是「幻想」109 次——两套解读的分歧就在这两个词之间。</div>
+    </div>
+
+    <div style="margin-top: 34px;">
+      <div style="font-size: 13px; letter-spacing: 0.2em; color: #d8a13f;">概念</div>
+      <div style="margin-top: 20px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px 24px; font-family: 'Noto Serif SC', serif; color: #cfc8bc;">
+        <span style="font-size: 76px; line-height: 1; color: #ece7dd;">梦<span style="font-family: 'Cormorant Garamond', serif; font-size: 22px; color: #c2453f;">113</span></span>
+        <span style="font-size: 74px; line-height: 1; color: #ece7dd;">幻想<span style="font-family: 'Cormorant Garamond', serif; font-size: 22px; color: #c2453f;">109</span></span>
+        <span style="font-size: 60px; line-height: 1; color: #ece7dd;">冥想／静坐<span style="font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #c2453f;">70</span></span>
+        <span style="font-size: 59px; line-height: 1;">好莱坞<span style="font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #c2453f;">68</span></span>
+        <span style="font-size: 51px; line-height: 1; color: #ece7dd;">吠陀<span style="font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #c2453f;">51</span></span>
+        <span style="font-size: 45px; line-height: 1;">量子<span style="font-family: 'Cormorant Garamond', serif; font-size: 17px; color: #c2453f;">39</span></span>
+        <span style="font-size: 44px; line-height: 1;">欲望<span style="font-family: 'Cormorant Garamond', serif; font-size: 17px; color: #c2453f;">37</span></span>
+        <span style="font-size: 42px; line-height: 1;">变身／大变活人<span style="font-family: 'Cormorant Garamond', serif; font-size: 17px; color: #c2453f;">34</span></span>
+        <span style="font-size: 33px; line-height: 1;">市场<span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #c2453f;">21</span></span>
+        <span style="font-size: 32px; line-height: 1;">统一场<span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #c2453f;">19</span></span>
+      </div>
+    </div>
+
+    <div style="margin-top: 50px;">
+      <div style="display: flex; align-items: baseline; gap: 18px;">
+        <div style="font-size: 13px; letter-spacing: 0.2em; color: #d8a13f;">时间都给了谁 · 逐片讨论时长</div>
+        <div style="margin-left: auto; display: flex; gap: 22px; font-size: 13px; color: #8d867b;"><span style="display: flex; align-items: center; gap: 8px;"><span style="width: 14px; height: 10px; background: repeating-linear-gradient(135deg, rgba(236,231,221,0.55) 0 3px, rgba(236,231,221,0.22) 3px 6px);"></span>产业史</span><span style="display: flex; align-items: center; gap: 8px;"><span style="width: 14px; height: 10px; background: #c2453f;"></span>视角一</span><span style="display: flex; align-items: center; gap: 8px;"><span style="width: 14px; height: 10px; background: #d8a13f;"></span>视角二</span></div>
+      </div>
+      <div style="margin-top: 18px; display: grid;">
+        <div style="display: grid; grid-template-columns: 200px 1fr 70px 150px; gap: 18px; padding-bottom: 8px; border-bottom: 1px solid rgba(236,231,221,0.2); font-size: 12px; letter-spacing: 0.14em; color: #8d867b;">
+          <span>影片</span><div style="position: relative; font-family: 'Cormorant Garamond', serif; font-size: 14px; letter-spacing: 0;"><span style="position: absolute; left: 0%;">0′</span><span style="position: absolute; left: 25%; transform: translateX(-50%);">10′</span><span style="position: absolute; left: 50%; transform: translateX(-50%);">20′</span><span style="position: absolute; left: 75%; transform: translateX(-50%);">30′</span><span style="position: absolute; left: 100%; transform: translateX(-50%);">40′</span></div><span style="text-align: right;">合计</span><span>提及次数</span>
+        </div>
+        <div style="display: grid; grid-template-columns: 200px 1fr 70px 150px; gap: 18px; align-items: center; padding: 9px 0; border-bottom: 1px solid rgba(236,231,221,0.08);">
+          <div style="display: flex; align-items: center; gap: 8px;"><span style="font-family: 'Noto Serif SC', serif; font-size: 18px;">内陆帝国</span><span style="font-size: 11px; color: #b3aca0; border: 1px solid rgba(236,231,221,0.3); padding: 0 5px;">洛杉矶</span></div>
+          <div style="height: 26px; display: flex; background: repeating-linear-gradient(90deg, rgba(236,231,221,0.1) 0 1px, transparent 1px 25%);"><div style="width: 1.25%; background: repeating-linear-gradient(135deg, rgba(236,231,221,0.55) 0 3px, rgba(236,231,221,0.22) 3px 6px); display: flex; align-items: center; justify-content: center; overflow: hidden; font-family: 'Cormorant Garamond', serif; font-size: 14px; color: #0e0d11;"></div><div style="width: 62.00%; background: #c2453f; display: flex; align-items: center; justify-content: center; overflow: hidden; font-family: 'Cormorant Garamond', serif; font-size: 14px; color: #f5e6e3;">24.8</div><div style="width: 33.50%; background: #d8a13f; display: flex; align-items: center; justify-content: center; overflow: hidden; font-family: 'Cormorant Garamond', serif; font-size: 14px; color: #1c1a17;">13.4</div></div>
+          <div style="font-family: 'Cormorant Garamond', serif; font-size: 20px; text-align: right;">38.7′</div>
+          <div style="display: flex; align-items: center; gap: 10px;"><div style="height: 2px; width: 51px; background: rgba(236,231,221,0.45);"></div><span style="font-family: 'Cormorant Garamond', serif; font-size: 19px;">38</span><span style="font-size: 12px; color: #8d867b;">次</span></div>
+        </div>
+        <div style="display: grid; grid-template-columns: 200px 1fr 70px 150px; gap: 18px; align-items: center; padding: 9px 0; border-bottom: 1px solid rgba(236,231,221,0.08);">
+          <div style="display: flex; align-items: center; gap: 8px;"><span style="font-family: 'Noto Serif SC', serif; font-size: 18px;">蓝丝绒</span></div>
+          <div style="height: 26px; display: flex; background: repeating-linear-gradient(90deg, rgba(236,231,221,0.1) 0 1px, transparent 1px 25%);"><div style="width: 3.75%; background: repeating-linear-gradient(135deg, rgba(236,231,221,0.55) 0 3px, rgba(236,231,221,0.22) 3px 6px); display: flex; align-items: center; justify-content: center; overflow: hidden; font-family: 'Cormorant Garamond', serif; font-size: 14px; color: #0e0d11;"></div><div style="width: 52.75%; background: #c2453f; display: flex; align-items: center; justify-content: center; overflow: hidden; font-family: 'Cormorant Garamond', serif; font-size: 14px; color: #f5e6e3;">21.1</div><div style="width: 7.00%; background: #d8a13f; display: flex; align-items: center; justify-content: center; overflow: hidden; font-family: 'Cormorant Garamond', serif; font-size: 14px; color: #1c1a17;">2.8</div></div>
+          <div style="font-family: 'Cormorant Garamond', serif; font-size: 20px; text-align: right;">25.4′</div>
+          <div style="display: flex; align-items: center; gap: 10px;"><div style="height: 2px; width: 69px; background: rgba(236,231,221,0.45);"></div><span style="font-family: 'Cormorant Garamond', serif; font-size: 19px;">52</span><span style="font-size: 12px; color: #8d867b;">次</span></div>
+        </div>
+        <div style="display: grid; grid-template-columns: 200px 1fr 70px 150px; gap: 18px; align-items: center; padding: 9px 0; border-bottom: 1px solid rgba(236,231,221,0.08);">
+          <div style="display: flex; align-items: center; gap: 8px;"><span style="font-family: 'Noto Serif SC', serif; font-size: 18px;">穆赫兰道</span><span style="font-size: 11px; color: #b3aca0; border: 1px solid rgba(236,231,221,0.3); padding: 0 5px;">洛杉矶</span></div>
+          <div style="height: 26px; display: flex; background: repeating-linear-gradient(90deg, rgba(236,231,221,0.1) 0 1px, transparent 1px 25%);"><div style="width: 4.25%; background: repeating-linear-gradient(135deg, rgba(236,231,221,0.55) 0 3px, rgba(236,231,221,0.22) 3px 6px); display: flex; align-items: center; justify-content: center; overflow: hidden; font-family: 'Cormorant Garamond', serif; font-size: 14px; color: #0e0d11;"></div><div style="width: 32.75%; background: #c2453f; display: flex; align-items: center; justify-content: center; overflow: hidden; font-family: 'Cormorant Garamond', serif; font-size: 14px; color: #f5e6e3;">13.1</div><div style="width: 25.50%; background: #d8a13f; display: flex; align-items: center; justify-content: center; overflow: hidden; font-family: 'Cormorant Garamond', serif; font-size: 14px; color: #1c1a17;">10.2</div></div>
+          <div style="font-family: 'Cormorant Garamond', serif; font-size: 20px; text-align: right;">25′</div>
+          <div style="display: flex; align-items: center; gap: 10px;"><div style="height: 2px; width: 64px; background: rgba(236,231,221,0.45);"></div><span style="font-family: 'Cormorant Garamond', serif; font-size: 19px;">48</span><span style="font-size: 12px; color: #8d867b;">次</span></div>
+        </div>
+        <div style="display: grid; grid-template-columns: 200px 1fr 70px 150px; gap: 18px; align-items: center; padding: 9px 0; border-bottom: 1px solid rgba(236,231,221,0.08);">
+          <div style="display: flex; align-items: center; gap: 8px;"><span style="font-family: 'Noto Serif SC', serif; font-size: 18px;">妖夜荒踪</span><span style="font-size: 11px; color: #b3aca0; border: 1px solid rgba(236,231,221,0.3); padding: 0 5px;">洛杉矶</span></div>
+          <div style="height: 26px; display: flex; background: repeating-linear-gradient(90deg, rgba(236,231,221,0.1) 0 1px, transparent 1px 25%);"><div style="width: 3.00%; background: repeating-linear-gradient(135deg, rgba(236,231,221,0.55) 0 3px, rgba(236,231,221,0.22) 3px 6px); display: flex; align-items: center; justify-content: center; overflow: hidden; font-family: 'Cormorant Garamond', serif; font-size: 14px; color: #0e0d11;"></div><div style="width: 39.75%; background: #c2453f; display: flex; align-items: center; justify-content: center; overflow: hidden; font-family: 'Cormorant Garamond', serif; font-size: 14px; color: #f5e6e3;">15.9</div><div style="width: 14.75%; background: #d8a13f; display: flex; align-items: center; justify-content: center; overflow: hidden; font-family: 'Cormorant Garamond', serif; font-size: 14px; color: #1c1a17;">5.9</div></div>
+          <div style="font-family: 'Cormorant Garamond', serif; font-size: 20px; text-align: right;">23′</div>
+          <div style="display: flex; align-items: center; gap: 10px;"><div style="height: 2px; width: 65px; background: rgba(236,231,221,0.45);"></div><span style="font-family: 'Cormorant Garamond', serif; font-size: 19px;">49</span><span style="font-size: 12px; color: #8d867b;">次</span></div>
+        </div>
+        <div style="display: grid; grid-template-columns: 200px 1fr 70px 150px; gap: 18px; align-items: center; padding: 9px 0; border-bottom: 1px solid rgba(236,231,221,0.08);">
+          <div style="display: flex; align-items: center; gap: 8px;"><span style="font-family: 'Noto Serif SC', serif; font-size: 18px;">我心狂野</span></div>
+          <div style="height: 26px; display: flex; background: repeating-linear-gradient(90deg, rgba(236,231,221,0.1) 0 1px, transparent 1px 25%);"><div style="width: 8.50%; background: repeating-linear-gradient(135deg, rgba(236,231,221,0.55) 0 3px, rgba(236,231,221,0.22) 3px 6px); display: flex; align-items: center; justify-content: center; overflow: hidden; font-family: 'Cormorant Garamond', serif; font-size: 14px; color: #0e0d11;">3.4</div><div style="width: 19.50%; background: #c2453f; display: flex; align-items: center; justify-content: center; overflow: hidden; font-family: 'Cormorant Garamond', serif; font-size: 14px; color: #f5e6e3;">7.8</div><div style="width: 9.25%; background: #d8a13f; display: flex; align-items: center; justify-content: center; overflow: hidden; font-family: 'Cormorant Garamond', serif; font-size: 14px; color: #1c1a17;">3.7</div></div>
+          <div style="font-family: 'Cormorant Garamond', serif; font-size: 20px; text-align: right;">14.9′</div>
+          <div style="display: flex; align-items: center; gap: 10px;"><div style="height: 2px; width: 44px; background: rgba(236,231,221,0.45);"></div><span style="font-family: 'Cormorant Garamond', serif; font-size: 19px;">33</span><span style="font-size: 12px; color: #8d867b;">次</span></div>
+        </div>
+        <div style="display: grid; grid-template-columns: 200px 1fr 70px 150px; gap: 18px; align-items: center; padding: 9px 0; border-bottom: 1px solid rgba(236,231,221,0.08);">
+          <div style="display: flex; align-items: center; gap: 8px;"><span style="font-family: 'Noto Serif SC', serif; font-size: 18px;">史崔特的故事</span></div>
+          <div style="height: 26px; display: flex; background: repeating-linear-gradient(90deg, rgba(236,231,221,0.1) 0 1px, transparent 1px 25%);"><div style="width: 4.25%; background: repeating-linear-gradient(135deg, rgba(236,231,221,0.55) 0 3px, rgba(236,231,221,0.22) 3px 6px); display: flex; align-items: center; justify-content: center; overflow: hidden; font-family: 'Cormorant Garamond', serif; font-size: 14px; color: #0e0d11;"></div><div style="width: 17.50%; background: #c2453f; display: flex; align-items: center; justify-content: center; overflow: hidden; font-family: 'Cormorant Garamond', serif; font-size: 14px; color: #f5e6e3;">7</div><div style="width: 11.00%; background: #d8a13f; display: flex; align-items: center; justify-content: center; overflow: hidden; font-family: 'Cormorant Garamond', serif; font-size: 14px; color: #1c1a17;">4.4</div></div>
+          <div style="font-family: 'Cormorant Garamond', serif; font-size: 20px; text-align: right;">13.1′</div>
+          <div style="display: flex; align-items: center; gap: 10px;"><div style="height: 2px; width: 23px; background: rgba(236,231,221,0.45);"></div><span style="font-family: 'Cormorant Garamond', serif; font-size: 19px;">17</span><span style="font-size: 12px; color: #8d867b;">次</span></div>
+        </div>
+        <div style="display: grid; grid-template-columns: 200px 1fr 70px 150px; gap: 18px; align-items: center; padding: 9px 0; border-bottom: 1px solid rgba(236,231,221,0.08);">
+          <div style="display: flex; align-items: center; gap: 8px;"><span style="font-family: 'Noto Serif SC', serif; font-size: 18px;">沙丘</span></div>
+          <div style="height: 26px; display: flex; background: repeating-linear-gradient(90deg, rgba(236,231,221,0.1) 0 1px, transparent 1px 25%);"><div style="width: 19.25%; background: repeating-linear-gradient(135deg, rgba(236,231,221,0.55) 0 3px, rgba(236,231,221,0.22) 3px 6px); display: flex; align-items: center; justify-content: center; overflow: hidden; font-family: 'Cormorant Garamond', serif; font-size: 14px; color: #0e0d11;">7.7</div><div style="width: 4.75%; background: #c2453f; display: flex; align-items: center; justify-content: center; overflow: hidden; font-family: 'Cormorant Garamond', serif; font-size: 14px; color: #f5e6e3;"></div><div style="width: 4.25%; background: #d8a13f; display: flex; align-items: center; justify-content: center; overflow: hidden; font-family: 'Cormorant Garamond', serif; font-size: 14px; color: #1c1a17;"></div></div>
+          <div style="font-family: 'Cormorant Garamond', serif; font-size: 20px; text-align: right;">11.3′</div>
+          <div style="display: flex; align-items: center; gap: 10px;"><div style="height: 2px; width: 41px; background: rgba(236,231,221,0.45);"></div><span style="font-family: 'Cormorant Garamond', serif; font-size: 19px;">31</span><span style="font-size: 12px; color: #8d867b;">次</span></div>
+        </div>
+        <div style="display: grid; grid-template-columns: 200px 1fr 70px 150px; gap: 18px; align-items: center; padding: 9px 0; border-bottom: 1px solid rgba(236,231,221,0.08);">
+          <div style="display: flex; align-items: center; gap: 8px;"><span style="font-family: 'Noto Serif SC', serif; font-size: 18px;">象人</span></div>
+          <div style="height: 26px; display: flex; background: repeating-linear-gradient(90deg, rgba(236,231,221,0.1) 0 1px, transparent 1px 25%);"><div style="width: 17.25%; background: repeating-linear-gradient(135deg, rgba(236,231,221,0.55) 0 3px, rgba(236,231,221,0.22) 3px 6px); display: flex; align-items: center; justify-content: center; overflow: hidden; font-family: 'Cormorant Garamond', serif; font-size: 14px; color: #0e0d11;">6.9</div><div style="width: 9.25%; background: #c2453f; display: flex; align-items: center; justify-content: center; overflow: hidden; font-family: 'Cormorant Garamond', serif; font-size: 14px; color: #f5e6e3;">3.7</div><div style="width: 1.50%; background: #d8a13f; display: flex; align-items: center; justify-content: center; overflow: hidden; font-family: 'Cormorant Garamond', serif; font-size: 14px; color: #1c1a17;"></div></div>
+          <div style="font-family: 'Cormorant Garamond', serif; font-size: 20px; text-align: right;">11.2′</div>
+          <div style="display: flex; align-items: center; gap: 10px;"><div style="height: 2px; width: 40px; background: rgba(236,231,221,0.45);"></div><span style="font-family: 'Cormorant Garamond', serif; font-size: 19px;">30</span><span style="font-size: 12px; color: #8d867b;">次</span></div>
+        </div>
+        <div style="display: grid; grid-template-columns: 200px 1fr 70px 150px; gap: 18px; align-items: center; padding: 9px 0; border-bottom: 1px solid rgba(236,231,221,0.08);">
+          <div style="display: flex; align-items: center; gap: 8px;"><span style="font-family: 'Noto Serif SC', serif; font-size: 18px;">橡皮头</span></div>
+          <div style="height: 26px; display: flex; background: repeating-linear-gradient(90deg, rgba(236,231,221,0.1) 0 1px, transparent 1px 25%);"><div style="width: 10.75%; background: repeating-linear-gradient(135deg, rgba(236,231,221,0.55) 0 3px, rgba(236,231,221,0.22) 3px 6px); display: flex; align-items: center; justify-content: center; overflow: hidden; font-family: 'Cormorant Garamond', serif; font-size: 14px; color: #0e0d11;">4.3</div><div style="width: 12.00%; background: #c2453f; display: flex; align-items: center; justify-content: center; overflow: hidden; font-family: 'Cormorant Garamond', serif; font-size: 14px; color: #f5e6e3;">4.8</div><div style="width: 5.00%; background: #d8a13f; display: flex; align-items: center; justify-content: center; overflow: hidden; font-family: 'Cormorant Garamond', serif; font-size: 14px; color: #1c1a17;"></div></div>
+          <div style="font-family: 'Cormorant Garamond', serif; font-size: 20px; text-align: right;">11.1′</div>
+          <div style="display: flex; align-items: center; gap: 10px;"><div style="height: 2px; width: 48px; background: rgba(236,231,221,0.45);"></div><span style="font-family: 'Cormorant Garamond', serif; font-size: 19px;">36</span><span style="font-size: 12px; color: #8d867b;">次</span></div>
+        </div>
+        <div style="display: grid; grid-template-columns: 200px 1fr 70px 150px; gap: 18px; align-items: center; padding: 9px 12px; border-bottom: 1px solid rgba(236,231,221,0.08); background: rgba(122,16,20,0.32); margin: 0 -12px;">
+          <div style="display: flex; align-items: center; gap: 8px;"><span style="font-family: 'Noto Serif SC', serif; font-size: 18px; color: #f0c8c4;">双峰（剧集与电影）</span></div>
+          <div style="height: 26px; display: flex; background: repeating-linear-gradient(90deg, rgba(236,231,221,0.1) 0 1px, transparent 1px 25%);"><div style="width: 11.75%; background: repeating-linear-gradient(135deg, rgba(236,231,221,0.55) 0 3px, rgba(236,231,221,0.22) 3px 6px); display: flex; align-items: center; justify-content: center; overflow: hidden; font-family: 'Cormorant Garamond', serif; font-size: 14px; color: #0e0d11;">4.7</div><div style="width: 1.00%; background: #c2453f; display: flex; align-items: center; justify-content: center; overflow: hidden; font-family: 'Cormorant Garamond', serif; font-size: 14px; color: #f5e6e3;"></div></div>
+          <div style="font-family: 'Cormorant Garamond', serif; font-size: 20px; text-align: right;">5.1′</div>
+          <div style="display: flex; align-items: center; gap: 10px;"><div style="height: 2px; width: 77px; background: #e5988f;"></div><span style="font-family: 'Cormorant Garamond', serif; font-size: 19px; color: #f0c8c4;">58</span><span style="font-size: 12px; color: #8d867b;">次</span></div>
+        </div>
+      </div>
+      <div style="margin-top: 16px; font-size: 14px; line-height: 1.8; color: #9b9488; max-width: 1060px;">《双峰》提及 58 次排第一，专门讨论只有 5.1 分钟，节目说要另做一期。洛杉矶三部曲（《妖夜荒踪》《穆赫兰道》《内陆帝国》）合计 86.7 分钟，约占逐片讨论的一半。《蓝丝绒》几乎全在视角一（21.1 分钟），大半花在罗宾·伍德那场论争上。</div>
+      <div style="margin-top: 6px; font-size: 13px; line-height: 1.8; color: #8d867b;">按时间戳把讨论分配到具体影片，单位为分钟；提及次数含转写变体，是约数。</div>
+    </div>
+
+    <div style="margin-top: 50px;">
+      <div style="font-size: 13px; letter-spacing: 0.2em; color: #d8a13f;">人物 / 作品</div>
+      <div style="margin-top: 20px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px 28px; font-family: 'Noto Serif SC', serif; color: #cfc8bc;">
+          <span style="font-size: 49px; line-height: 1; color: #ece7dd;">劳拉·邓恩<span style="font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #c2453f;">25</span></span>
+          <span style="font-size: 39px; line-height: 1;">德劳伦蒂斯<span style="font-family: 'Cormorant Garamond', serif; font-size: 16px; color: #c2453f;">16</span></span>
+          <span style="font-size: 38px; line-height: 1;">马哈里希<span style="font-family: 'Cormorant Garamond', serif; font-size: 16px; color: #c2453f;">15</span></span>
+          <span style="font-size: 35px; line-height: 1;">罗宾·伍德<span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #c2453f;">13</span></span>
+          <span style="font-size: 35px; line-height: 1;">怀尔德／《日落大道》<span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #c2453f;">13</span></span>
+          <span style="font-size: 32px; line-height: 1;">希区柯克<span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #c2453f;">11</span></span>
+          <span style="font-size: 32px; line-height: 1;">弗洛伊德<span style="font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #c2453f;">11</span></span>
+          <span style="font-size: 30px; line-height: 1;">费里尼<span style="font-family: 'Cormorant Garamond', serif; font-size: 14px; color: #c2453f;">10</span></span>
+          <span style="font-size: 27px; line-height: 1;">《绿野仙踪》<span style="font-family: 'Cormorant Garamond', serif; font-size: 14px; color: #c2453f;">8</span></span>
+          <span style="font-size: 25px; line-height: 1;">诺希姆森<span style="font-family: 'Cormorant Garamond', serif; font-size: 13px; color: #c2453f;">7</span></span>
+          <span style="font-size: 25px; line-height: 1;">德勒兹<span style="font-family: 'Cormorant Garamond', serif; font-size: 13px; color: #c2453f;">7</span></span>
+          <span style="font-size: 25px; line-height: 1;">昆汀<span style="font-family: 'Cormorant Garamond', serif; font-size: 13px; color: #c2453f;">7</span></span>
+        </div>
+    </div>
+
+    <div style="margin-top: 50px; font-size: 13px; letter-spacing: 0.2em; color: #d8a13f;">几个数字</div>
+    <div style="margin-top: 18px; display: grid; grid-template-columns: repeat(6, 1fr); gap: 1px; background: rgba(236,231,221,0.18);">
+      <div style="background: #0e0d11; padding: 22px 20px;"><div style="display: flex; align-items: baseline; gap: 6px;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 52px; line-height: 1; color: #d8a13f;">约 553</span><span style="font-size: 15px; color: #d8a13f;">次</span></div><div style="margin-top: 14px; font-size: 15px; line-height: 1.7; color: #cfc8bc;">「林奇」一词出现次数，平均每分钟 2.2 次</div><div style="margin-top: 8px; font-size: 12px; color: #8d867b;">转写统计，含转写变体</div></div>
+      <div style="background: #0e0d11; padding: 22px 20px;"><div style="display: flex; align-items: baseline; gap: 6px;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 52px; line-height: 1; color: #d8a13f;">58</span><span style="font-size: 15px; color: #d8a13f;">次</span></div><div style="margin-top: 14px; font-size: 15px; line-height: 1.7; color: #cfc8bc;">《双峰》被提及最多，专门讨论却只有 5.1 分钟</div><div style="margin-top: 8px; font-size: 12px; color: #8d867b;">转写统计</div></div>
+      <div style="background: #0e0d11; padding: 22px 20px;"><div style="display: flex; align-items: baseline; gap: 6px;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 52px; line-height: 1; color: #d8a13f;">137</span><span style="font-size: 15px; color: #d8a13f;">分钟</span></div><div style="margin-top: 14px; font-size: 15px; line-height: 1.7; color: #cfc8bc;">《沙丘》五小时初剪被砍到的长度</div><div style="margin-top: 8px; font-size: 12px; color: #8d867b;">节目说法</div></div>
+      <div style="background: #0e0d11; padding: 22px 20px;"><div style="display: flex; align-items: baseline; gap: 6px;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 52px; line-height: 1; color: #d8a13f;">3500</span><span style="font-size: 15px; color: #d8a13f;">万</span></div><div style="margin-top: 14px; font-size: 15px; line-height: 1.7; color: #cfc8bc;">《双峰》试播集的全美观众</div><div style="margin-top: 8px; font-size: 12px; color: #8d867b;">节目说法</div></div>
+      <div style="background: #0e0d11; padding: 22px 20px;"><div style="display: flex; align-items: baseline; gap: 6px;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 52px; line-height: 1; color: #d8a13f;">2</span><span style="font-size: 15px; color: #d8a13f;">次 / 天</span></div><div style="margin-top: 14px; font-size: 15px; line-height: 1.7; color: #cfc8bc;">林奇从 1973 年起练超觉冥想，一直练到去世</div><div style="margin-top: 8px; font-size: 12px; color: #8d867b;">节目说法</div></div>
+      <div style="background: #0e0d11; padding: 22px 20px;"><div style="display: flex; align-items: baseline; gap: 6px;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 52px; line-height: 1; color: #d8a13f;">18</span><span style="font-size: 15px; color: #d8a13f;">集</span></div><div style="margin-top: 14px; font-size: 15px; line-height: 1.7; color: #cfc8bc;">《双峰：回归》全部由林奇亲自执导</div><div style="margin-top: 8px; font-size: 12px; color: #8d867b;">节目说法</div></div>
+    </div>
+
+    <div style="margin-top: 30px; border-top: 1px solid rgba(236,231,221,0.18); padding-top: 18px; font-size: 14px; line-height: 1.8; color: #8d867b; max-width: 1060px;">统计基于 ASR 转录稿，已把各种错写合并计算，是近似值。「梦」包含梦境、做梦等词；「市场」里混有少量商业意义上的用法。</div>
+  </section>
+  </sc-if>
+
+  <div style="margin-top: 70px; height: 22px; background: repeating-linear-gradient(90deg, #12110f 0 44px, #efe9df 44px 88px);"></div>
+
+  <footer style="padding: 58px 90px 66px; background: repeating-linear-gradient(90deg, rgba(122,16,20,0.5) 0 26px, rgba(58,7,10,0.6) 26px 52px), #0e0d11;">
+    <div style="display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: start;">
+      <div>
+        <div style="font-size: 13px; letter-spacing: 0.2em; color: #e5988f;">结语 · 大脑即屏幕</div>
+        <div style="margin-top: 14px; font-family: 'Noto Serif SC', serif; font-size: 34px; line-height: 1.55; text-wrap: pretty;">德勒兹的说法源自柏格森「宇宙本身就是元电影」：大脑不是被动的镜子，而是主动、非线性地放映影像流。</div>
+        <p style="margin: 18px 0 0; font-size: 16px; line-height: 1.85; color: #cfc8bc;">德勒兹常拿雷乃举例，节目遗憾他 1995 年去世，没能看到洛杉矶三部曲。节目还区分了林奇和科幻片：科幻片要和观众订立「假定性」契约，林奇则认为世界本来就是这样构成的。</p>
+      </div>
+      <div>
+        <div style="display: grid; gap: 22px;">
+          <div style="border-top: 2px solid rgba(236,231,221,0.4); padding-top: 14px;"><div style="font-size: 13px; letter-spacing: 0.2em; color: #b3aca0;">一位主持人</div><div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 22px; line-height: 1.6;">电影不是逃避现实或对抗世界的工具，电影本身就是世界，就是意识。</div></div>
+          <div style="border-top: 2px solid rgba(236,231,221,0.4); padding-top: 14px;"><div style="font-size: 13px; letter-spacing: 0.2em; color: #b3aca0;">另一位</div><div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 22px; line-height: 1.6;">林奇不是祭司，不是物理学家，而是诗人：他把宗教和科学的观念做了诗学化处理，建立了一套「林奇诗学」，他的作品不是在传教。</div></div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 42px; display: flex; justify-content: space-between; align-items: baseline; font-size: 14px; letter-spacing: 0.16em; color: #b3aca0;">
+      <span>电影巨辩 · 第 24 期 · 内容整理自节目转录</span>
+      <span style="font-family: 'Cormorant Garamond', serif; font-size: 20px; letter-spacing: 0.06em; color: #d8a13f;">预告：《双峰》另做一期，下期付费节目聊台湾电影</span>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showChapterMap&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;版块&quot;},&quot;showWordCloud&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;版块&quot;}}">
+const PEOPLE = {
+  lynch: ['大卫·林奇', 'David Lynch'],
+  dern: ['劳拉·邓恩', 'Laura Dern'],
+  watts: ['娜奥米·沃茨', 'Naomi Watts'],
+  harring: ['劳拉·赫尔宁', 'Laura Harring'],
+  maclachlan: ['凯尔·麦克拉克伦', 'Kyle MacLachlan'],
+  rossellini: ['伊莎贝拉·罗塞里尼', 'Isabella Rossellini'],
+  hopper: ['丹尼斯·霍珀', 'Dennis Hopper'],
+  frost: ['马克·弗罗斯特', 'Mark Frost'],
+  badalamenti: ['安杰洛·巴达拉门蒂', 'Angelo Badalamenti'],
+  delaurentiis: ['迪诺·德·劳伦提斯', 'Dino De Laurentiis'],
+  lucas: ['乔治·卢卡斯', 'George Lucas'],
+  hopkins: ['安东尼·霍普金斯', 'Anthony Hopkins'],
+  freud: ['西格蒙德·弗洛伊德', 'Sigmund Freud'],
+  lacan: ['雅克·拉康', 'Jacques Lacan'],
+  deleuze: ['吉尔·德勒兹', 'Gilles Deleuze'],
+  zizek: ['斯拉沃热·齐泽克', 'Slavoj Žižek'],
+  jameson: ['弗雷德里克·詹姆逊', 'Fredric Jameson'],
+  robinwood: ['罗宾·伍德', 'Robin Wood (critic)'],
+  kael: ['寶琳·凱爾', 'Pauline Kael'],
+  nochimson: ['', 'Martha P. Nochimson'],
+  hitchcock: ['阿尔弗雷德·希区柯克', 'Alfred Hitchcock'],
+  wilder: ['比利·怀尔德', 'Billy Wilder'],
+  fellini: ['费德里科·费里尼', 'Federico Fellini'],
+  tarantino: ['昆汀·塔伦蒂诺', 'Quentin Tarantino'],
+  maharishi: ['马哈礼施·马赫什·优济', 'Maharishi Mahesh Yogi']
+};
+const FILMS = {
+  eraserhead: ['橡皮頭', 'Eraserhead'],
+  elephant: ['象人 (電影)', 'The Elephant Man (film)'],
+  dune: ['沙丘 (1984年電影)', 'Dune (1984 film)'],
+  blue: ['藍絲絨 (電影)', 'Blue Velvet (film)'],
+  wild: ['我心狂野', 'Wild at Heart (film)'],
+  firewalk: ['雙峰：與火同行', 'Twin Peaks: Fire Walk with Me'],
+  lost: ['妖夜慌踪', 'Lost Highway (film)'],
+  straight: ['史崔特先生的故事', 'The Straight Story'],
+  mulholland: ['穆荷蘭大道 (電影)', 'Mulholland Drive (film)'],
+  inland: ['內陸帝國', 'Inland Empire (film)'],
+  twinpeaks: ['双峰 (电视剧)', 'Twin Peaks']
+};
+const API = { zh: 'https://zh.wikipedia.org/w/api.php', en: 'https://en.wikipedia.org/w/api.php' };
+
+class Component extends DCLogic {
+  state = { img: {} };
+
+  componentDidMount() { this.loadImages(); }
+
+  async getJSON(url) { return (await fetch(url)).json(); }
+
+  async pageImages(lang, titles) {
+    const list = titles.filter(Boolean);
+    if (!list.length) return () => '';
+    const url = API[lang] + '?action=query&format=json&origin=*&redirects=1&prop=pageimages'
+      + '&piprop=thumbnail&pithumbsize=720&titles=' + encodeURIComponent(list.join('|'));
+    const q = (await this.getJSON(url)).query || {};
+    const byTitle = {};
+    Object.keys(q.pages || {}).forEach(k => {
+      const p = q.pages[k];
+      if (p && p.thumbnail && p.thumbnail.source) byTitle[p.title] = p.thumbnail.source;
+    });
+    const alias = {};
+    (q.normalized || []).forEach(n => { alias[n.from] = n.to; });
+    (q.redirects || []).forEach(r => { alias[r.from] = r.to; });
+    return t => byTitle[alias[t] || t] || byTitle[t] || '';
+  }
+
+  // Posters are non-free local uploads, which pageimages skips —
+  // walk the article's images and keep the locally hosted raster.
+  async posterFor(lang, title) {
+    if (!title) return '';
+    const url = API[lang] + '?action=query&format=json&origin=*&redirects=1&generator=images&gimlimit=30'
+      + '&prop=imageinfo&iiprop=url|size&iiurlwidth=640&titles=' + encodeURIComponent(title);
+    const q = (await this.getJSON(url)).query || {};
+    const pages = Object.keys(q.pages || {}).map(k => q.pages[k]);
+    const local = new RegExp('/wikipedia/(' + lang + '|commons)/');
+    const ok = [];
+    for (const p of pages) {
+      const info = p && p.imageinfo && p.imageinfo[0];
+      if (!info) continue;
+      const src = info.url || '';
+      if (!local.test(src)) continue;
+      const file = decodeURIComponent(src.split('/').pop().split('?')[0]);
+      // real raster only: must END in jpg/png and contain no ".svg" anywhere
+      if (/\.svg/i.test(file) || !/\.(jpe?g|png)$/i.test(file)) continue;
+      if (/(Flag_of|_flag|Cscr-|Symbol_|Video-x-|Ambox|Commons-logo|Wikimedia_|OOjs_UI|Question_book|Padlock|Disambig|Edit-clear)/i.test(file)) continue;
+      if (typeof info.width === 'number' && info.width < 200) continue;
+      ok.push({ file: file, url: info.thumburl || src });
+    }
+    if (!ok.length) return '';
+    const poster = ok.find(c => /(poster|ver\d|_ad\b|cover)/i.test(c.file));
+    return (poster || ok[0]).url;
+  }
+
+  async loadImages() {
+    const out = {};
+    try {
+      const zh = await this.pageImages('zh', Object.keys(PEOPLE).map(k => PEOPLE[k][0]));
+      Object.keys(PEOPLE).forEach(k => { out[k] = zh(PEOPLE[k][0]); });
+      const missing = Object.keys(PEOPLE).filter(k => !out[k]);
+      if (missing.length) {
+        const en = await this.pageImages('en', missing.map(k => PEOPLE[k][1]));
+        missing.forEach(k => { out[k] = en(PEOPLE[k][1]); });
+      }
+      this.setState({ img: Object.assign({}, out) });
+    } catch (e) {
+      console.warn('portrait lookup failed', e);
+    }
+    const keys = Object.keys(FILMS);
+    const posters = await Promise.all(keys.map(async k => {
+      const zh = await this.posterFor('zh', FILMS[k][0]).catch(() => '');
+      if (zh) return zh;
+      return this.posterFor('en', FILMS[k][1]).catch(() => '');
+    }));
+    keys.forEach((k, i) => { out[k] = posters[i]; });
+    this.setState({ img: Object.assign({}, out) });
+  }
+
+  renderVals() {
+    const img = this.state.img;
+    const pic = {};
+    Object.keys(PEOPLE).forEach(k => { pic[k] = img[k] || ''; });
+    Object.keys(FILMS).forEach(k => { pic[k] = img[k] || ''; });
+    return {
+      pic: pic,
+      showChapterMap: this.props.showChapterMap !== false,
+      showWordCloud: this.props.showWordCloud !== false
+    };
+  }
+}
+</script>
+</body>
+</html>

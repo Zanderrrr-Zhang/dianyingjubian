@@ -1,0 +1,317 @@
+{
+ "p-tzz": {
+  "title": "田壮壮",
+  "desc": "中国导演",
+  "src": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Tian_Zhuangzhuang.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Tian_Zhuangzhuang.jpg/330px-Tian_Zhuangzhuang.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 1622,
+  "h": 2592
+ },
+ "f-w01": {
+  "title": "黑炮事件",
+  "desc": "",
+  "src": "https://upload.wikimedia.org/wikipedia/zh/5/54/The_Black_Cannon_Incident%EF%BC%8CCN_Film%2C1985.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "thumb": "https://upload.wikimedia.org/wikipedia/zh/5/54/The_Black_Cannon_Incident%EF%BC%8CCN_Film%2C1985.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 282,
+  "h": 353
+ },
+ "f-jd": {
+  "title": "建党伟业",
+  "desc": "2011年中国大陆电影",
+  "src": "https://upload.wikimedia.org/wikipedia/zh/7/79/The_Founding_of_a_Party.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "thumb": "https://upload.wikimedia.org/wikipedia/zh/7/79/The_Founding_of_a_Party.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 261,
+  "h": 383
+ },
+ "p-fw": {
+  "title": "范伟",
+  "desc": "中国大陆影视、喜剧男演员"
+ },
+ "p-wh": {
+  "title": "汪晖",
+  "desc": "中国学者",
+  "src": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Wang_Hui%2C_Berlin_2016.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Wang_Hui%2C_Berlin_2016.jpg/330px-Wang_Hui%2C_Berlin_2016.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 383,
+  "h": 460
+ },
+ "p-fg": {
+  "title": "冯巩",
+  "desc": "中国相声演员"
+ },
+ "p-kafka": {
+  "title": "弗朗茨·卡夫卡",
+  "desc": "德语小说家",
+  "src": "https://upload.wikimedia.org/wikipedia/commons/2/26/Franz_Kafka%2C_1923.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Franz_Kafka%2C_1923.jpg/330px-Franz_Kafka%2C_1923.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 1992,
+  "h": 2656
+ },
+ "p-hjx": {
+  "title": "黄建新",
+  "desc": "中国电影导演"
+ },
+ "p-hsp": {
+  "title": "韩三平",
+  "desc": ""
+ },
+ "p-xj": {
+  "title": "谢晋",
+  "desc": "中国导演 (1923-2008)",
+  "src": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Portrait_de_Xie_Jin.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Portrait_de_Xie_Jin.jpg/330px-Portrait_de_Xie_Jin.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 600,
+  "h": 764
+ },
+ "p-xf": {
+  "title": "谢飞",
+  "desc": "中国导演",
+  "src": "https://upload.wikimedia.org/wikipedia/commons/7/78/Xie_Fei.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Xie_Fei.jpg/330px-Xie_Fei.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 480,
+  "h": 1200
+ },
+ "p-ff": {
+  "title": "方方",
+  "desc": "中国政治人物"
+ },
+ "p-js": {
+  "title": "江珊",
+  "desc": "中国大陆女演员"
+ },
+ "p-glh": {
+  "title": "梁冠华",
+  "desc": "中国男演员"
+ },
+ "p-zym": {
+  "title": "张艺谋",
+  "desc": "中國導演、演員",
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Zhang_Yimou_from_%22Full_River_Red%22_at_Red_Carpet_of_the_Tokyo_International_Film_Festival_2023_%2853348405394%29.jpg/3840px-Zhang_Yimou_from_%22Full_River_Red%22_at_Red_Carpet_of_the_Tokyo_International_Film_Festival_2023_%2853348405394%29.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Zhang_Yimou_from_%22Full_River_Red%22_at_Red_Carpet_of_the_Tokyo_International_Film_Festival_2023_%2853348405394%29.jpg/330px-Zhang_Yimou_from_%22Full_River_Red%22_at_Red_Carpet_of_the_Tokyo_International_Film_Festival_2023_%2853348405394%29.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 4672,
+  "h": 7008
+ },
+ "p-wtm": {
+  "title": "吴天明",
+  "desc": "中国导演 (1939-2014)",
+  "src": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Wu_Tianming01.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Wu_Tianming01.jpg/330px-Wu_Tianming01.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 612,
+  "h": 897
+ },
+ "p-nzh": {
+  "title": "牛振华",
+  "desc": "",
+  "src": "https://upload.wikimedia.org/wikipedia/zh/1/13/%E6%BC%94%E5%91%98%E7%89%9B%E6%8C%AF%E5%8D%8E.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "thumb": "https://upload.wikimedia.org/wikipedia/zh/1/13/%E6%BC%94%E5%91%98%E7%89%9B%E6%8C%AF%E5%8D%8E.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 250,
+  "h": 333
+ },
+ "p-anton": {
+  "title": "米开朗基罗·安东尼奥尼",
+  "desc": "意大利電影導演兼編劇（1912—2007）",
+  "src": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Michelangelo_Antonioni.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Michelangelo_Antonioni.jpg/330px-Michelangelo_Antonioni.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 708,
+  "h": 1192
+ },
+ "p-mjs": {
+  "title": "米家山",
+  "desc": "中国导演"
+ },
+ "f-w06": {
+  "title": "背靠背，脸对脸",
+  "desc": "",
+  "src": "https://upload.wikimedia.org/wikipedia/zh/7/7f/Back_to_Back_Face_to_Face_poster.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "thumb": "https://upload.wikimedia.org/wikipedia/zh/7/7f/Back_to_Back_Face_to_Face_poster.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 250,
+  "h": 350
+ },
+ "f-htd": {
+  "title": "黄土地 (电影)",
+  "desc": "1984年陈凯歌电影",
+  "src": "https://upload.wikimedia.org/wikipedia/zh/b/b1/Yellow_Earth.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "thumb": "https://upload.wikimedia.org/wikipedia/zh/b/b1/Yellow_Earth.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 263,
+  "h": 380
+ },
+ "p-dsc": {
+  "title": "达式常",
+  "desc": "中国演员"
+ },
+ "f-w13": {
+  "title": "建国大业",
+  "desc": "2009年中國大陸電影",
+  "src": "https://upload.wikimedia.org/wikipedia/zh/d/d5/%E5%BB%BA%E5%9B%BD%E5%A4%A7%E4%B8%9A.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "thumb": "https://upload.wikimedia.org/wikipedia/zh/d/d5/%E5%BB%BA%E5%9B%BD%E5%A4%A7%E4%B8%9A.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 268,
+  "h": 372
+ },
+ "p-lzh": {
+  "title": "李泽厚",
+  "desc": "",
+  "src": "https://upload.wikimedia.org/wikipedia/zh/9/94/Li_Zehou_pic.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "thumb": "https://upload.wikimedia.org/wikipedia/zh/9/94/Li_Zehou_pic.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 251,
+  "h": 335
+ },
+ "p-yys": {
+  "title": "余英時",
+  "desc": "美國華裔歷史學家（1930-2021）",
+  "src": "https://upload.wikimedia.org/wikipedia/commons/8/8d/%E4%BD%99%E8%8B%B1%E6%99%82_Ying-Shih_Yu.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/%E4%BD%99%E8%8B%B1%E6%99%82_Ying-Shih_Yu.jpg/330px-%E4%BD%99%E8%8B%B1%E6%99%82_Ying-Shih_Yu.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 2941,
+  "h": 3922
+ },
+ "p-wzw": {
+  "title": "王志文",
+  "desc": "中国男演员"
+ },
+ "p-fxg": {
+  "title": "冯小刚",
+  "desc": "中國電影導演",
+  "src": "https://upload.wikimedia.org/wikipedia/commons/5/53/%E9%A6%AE%E5%B0%8F%E5%89%9B.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/%E9%A6%AE%E5%B0%8F%E5%89%9B.jpg/330px-%E9%A6%AE%E5%B0%8F%E5%89%9B.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 1049,
+  "h": 1497
+ },
+ "p-ws": {
+  "title": "王朔",
+  "desc": "中国作家"
+ },
+ "p-jh": {
+  "title": "句号 (演员)",
+  "desc": "中国大陆男演员，相声演员"
+ },
+ "p-gdl": {
+  "title": "郭冬临",
+  "desc": ""
+ },
+ "f-w02": {
+  "title": "错位 (1986年电影)",
+  "desc": "1986年華語喜劇電影",
+  "src": "https://upload.wikimedia.org/wikipedia/zh/b/bf/Dislocation%2Cfilm_poster%2CCN%2C1986.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "thumb": "https://upload.wikimedia.org/wikipedia/zh/b/bf/Dislocation%2Cfilm_poster%2CCN%2C1986.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 269,
+  "h": 369
+ },
+ "f-wz": {
+  "none": "顽主 (电影)"
+ },
+ "f-w08": {
+  "none": "埋伏 (电影)"
+ },
+ "f-w03": {
+  "none": "轮回 (电影)"
+ },
+ "p-ydc": {
+  "title": "楊德昌",
+  "desc": "臺灣電影導演、編劇(1947-2007)",
+  "src": "https://upload.wikimedia.org/wikipedia/commons/e/e2/%E7%AC%AC31%E5%B1%86%E9%87%91%E9%A6%AC%E3%80%8C%E6%9C%80%E4%BD%B3%E5%8E%9F%E8%91%97%E5%8A%87%E6%9C%AC%E7%8D%8E%E3%80%8D%E5%BE%97%E4%B8%BB%E6%A5%8A%E5%BE%B7%E6%98%8C.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/e/e2/%E7%AC%AC31%E5%B1%86%E9%87%91%E9%A6%AC%E3%80%8C%E6%9C%80%E4%BD%B3%E5%8E%9F%E8%91%97%E5%8A%87%E6%9C%AC%E7%8D%8E%E3%80%8D%E5%BE%97%E4%B8%BB%E6%A5%8A%E5%BE%B7%E6%98%8C.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 237,
+  "h": 362
+ },
+ "f-jj": {
+  "title": "建军大业",
+  "desc": "「建國」系列片三部曲之三",
+  "src": "https://upload.wikimedia.org/wikipedia/zh/6/65/Jian_jun_da_ye.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "thumb": "https://upload.wikimedia.org/wikipedia/zh/6/65/Jian_jun_da_ye.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 278,
+  "h": 390
+ },
+ "f-w12": {
+  "title": "求求你，表揚我",
+  "desc": ""
+ },
+ "p-ckg": {
+  "title": "陈凯歌",
+  "desc": "中国电影导演",
+  "src": "https://upload.wikimedia.org/wikipedia/commons/4/4d/26th_Tokyo_International_Film_Festival_Chen_Kaige.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/26th_Tokyo_International_Film_Festival_Chen_Kaige.jpg/330px-26th_Tokyo_International_Film_Festival_Chen_Kaige.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 2524,
+  "h": 3169
+ },
+ "f-w10": {
+  "none": "睡不着 (电影)"
+ },
+ "f-1921": {
+  "title": "1921 (2021年电影)",
+  "desc": "",
+  "src": "https://upload.wikimedia.org/wikipedia/zh/0/0b/1921_film_poster.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "thumb": "https://upload.wikimedia.org/wikipedia/zh/0/0b/1921_film_poster.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 263,
+  "h": 378
+ },
+ "f-trial": {
+  "none": "审判 (1962年电影)"
+ },
+ "p-wjs": {
+  "dis": 1,
+  "title": "王劲松"
+ },
+ "f-w05": {
+  "none": "五魁"
+ },
+ "p-rayns": {
+  "none": "汤尼·雷恩"
+ },
+ "p-lzf": {
+  "title": "刘子枫",
+  "desc": ""
+ },
+ "p-wajda": {
+  "title": "安德烈·華依達",
+  "desc": "波蘭電影導演（Andrzej Wajda，1926—2016）",
+  "src": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Andrzej-Wajda-1963.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Andrzej-Wajda-1963.jpg/330px-Andrzej-Wajda-1963.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 466,
+  "h": 540
+ },
+ "f-zxs": {
+  "title": "赵先生",
+  "desc": ""
+ },
+ "p-bkw": {
+  "none": "毕克伟"
+ },
+ "p-hxx": {
+  "title": "侯孝賢",
+  "desc": "臺灣電影導演、編劇、製片、監製",
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/The_Assassin_Paris_premiere_7.JPG/960px-The_Assassin_Paris_premiere_7.JPG?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/The_Assassin_Paris_premiere_7.JPG/330px-The_Assassin_Paris_premiere_7.JPG?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 1200,
+  "h": 1600
+ },
+ "f-yy": {
+  "none": "一一 (电影)"
+ },
+ "f-w11": {
+  "none": "谁说我不在乎"
+ },
+ "f-w04": {
+  "none": "站直啰别趴下"
+ },
+ "f-w07": {
+  "none": "红灯停，绿灯行"
+ },
+ "p-wm": {
+  "dis": 1,
+  "title": "王蒙"
+ },
+ "p-zzl": {
+  "title": "張之亮",
+  "desc": "香港電影導演、編劇、演員",
+  "src": "https://upload.wikimedia.org/wikipedia/commons/5/57/Jacob_Cheung_20260426.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Jacob_Cheung_20260426.jpg/330px-Jacob_Cheung_20260426.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 590,
+  "h": 835
+ },
+ "f-w09": {
+  "none": "说出你的秘密"
+ },
+ "p-zjy": {
+  "title": "张嘉益",
+  "desc": "中国男演员"
+ }
+}

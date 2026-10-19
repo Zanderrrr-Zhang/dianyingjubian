@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700;900&family=Noto+Sans+SC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<meta name="referrer" content="no-referrer">
+<script src="./image-slot.js"></script>
+<style>
+  body { margin: 0; background: #26241F; padding: 56px 0 40px; -webkit-font-smoothing: antialiased; }
+  a { color: #7A5F0E; text-decoration: underline; text-underline-offset: 3px; }
+  a:hover { color: #1C1C1C; }
+</style>
+</helmet>
+
+<section id="m1" data-screen-label="M01 封面" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: 4 / 5; margin: 0 auto 64px; padding: 56px 64px 0; background: #141311; color: #F4EFE4; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column; overflow: hidden;">
+  <div style="height: 16px; margin: -56px -64px 44px; flex: none; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%23C9A227%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23141311%22/%3E%3C/svg%3E');"></div>
+  <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 24px;">
+    <span style="font-size: 24px; font-weight: 500; letter-spacing: 0.28em; color: #C9A227;">电影巨辩 · 第 11 期</span>
+    <span style="font-size: 22px; letter-spacing: 0.06em; color: #B9B2A3;">老马 × 阿吴｜3 小时 02 分</span>
+  </div>
+  <div style="margin-top: 26px; height: 2px; background: #C9A227;"></div>
+  <div style="margin-top: 4px; height: 1px; background: #C9A227;"></div>
+  <h1 style="margin: 60px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 116px; line-height: 1.16; letter-spacing: 0.02em;">金马六十年，<br>大陆与台湾</h1>
+  <div style="margin-top: 44px; display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 44px; align-items: end;">
+    <div>
+      <p style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 500; font-size: 36px; line-height: 1.45; color: #E6DFD0; text-wrap: pretty;">一个电影奖，怎样被时势推着走了六十年</p>
+      <div style="margin-top: 44px; display: flex; align-items: baseline; gap: 10px;"><span style="font-size: 26px;">第</span><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 150px; line-height: 0.9; letter-spacing: -0.03em; background: linear-gradient(160deg, #F3DC8A 0%, #C9A227 48%, #8E6F12 100%); -webkit-background-clip: text; background-clip: text; color: transparent;">60</span><span style="font-size: 26px;">届之后</span></div>
+      <div style="margin-top: 10px; font-size: 18px; color: #B9B2A3;">回看金马奖从 1962 年第 1 届走过的六十年</div>
+      <p style="margin: 34px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 500; font-size: 21px; line-height: 1.6; color: #B9B2A3; text-wrap: pretty;">“三种政治环境下，能有几年不分彼此地评奖，本身就是一个奇迹。”</p>
+    </div>
+    <div>
+      <div style="position: relative; width: 340px; height: 453px; background: #2A2824; outline: 1px solid #C9A227; outline-offset: 8px;"><image-slot id="gh-cover-trophy" src="assets/gh/trophyB.jpg" shape="rect" placeholder="金马奖座照片" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot></div>
+      <div style="margin-top: 20px; font-size: 14px; color: #B9B2A3;">金马奖座 · 台北电影公园的复制品</div>
+    </div>
+  </div>
+  <div style="margin-top: auto; padding-top: 28px; flex: none;">
+    <div style="position: relative; height: 50px;">
+      <sc-for list="{{ coverDoors }}" as="d" hint-placeholder-count="5">
+        <svg viewBox="0 0 108 132" width="36" height="44" style="position: absolute; left: {{ d.left }}; bottom: 4px; overflow: visible;" aria-hidden="true">
+          <rect x="14" y="10" width="72" height="112" fill="#C9A227" stroke="#1C1C1C" stroke-width="5"></rect>
+          <polygon points="{{ d.leaf }}" fill="#E9E2D2" stroke="#1C1C1C" stroke-width="5" stroke-linejoin="round"></polygon>
+          <path d="{{ d.marks }}" fill="none" stroke="#1C1C1C" stroke-width="5" stroke-linecap="round"></path>
+        </svg>
+      </sc-for>
+    </div>
+    <div style="height: 30px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2222%22 height=%2230%22%3E%3Crect width=%2222%22 height=%2230%22 fill=%22%23C9A227%22/%3E%3Crect x=%227%22 y=%223.5%22 width=%228%22 height=%225%22 rx=%221%22 fill=%22%23141311%22/%3E%3Crect x=%227%22 y=%2221.5%22 width=%228%22 height=%225%22 rx=%221%22 fill=%22%23141311%22/%3E%3C/svg%3E');"></div>
+    <div style="position: relative; height: 30px;">
+      <sc-for list="{{ coverYears }}" as="y" hint-placeholder-count="7">
+        <div style="position: absolute; left: {{ y.left }}; top: 0; height: 30px; border-left: 2px solid #C9A227; padding-left: 6px; font-family: 'IBM Plex Mono', monospace; font-size: 16px; line-height: 34px; color: #E6DFD0;">{{ y.year }}</div>
+      </sc-for>
+    </div>
+    <div style="margin-top: 10px; display: flex; justify-content: space-between; align-items: baseline;">
+      <span style="display: flex; align-items: baseline; gap: 12px;"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 60px; line-height: 1; background: linear-gradient(160deg, #F3DC8A 0%, #C9A227 48%, #8E6F12 100%); -webkit-background-clip: text; background-clip: text; color: transparent;">1962</span><span style="font-size: 16px; color: #B9B2A3;">第 1 届</span></span>
+      <span style="display: flex; align-items: baseline; gap: 12px;"><span style="font-size: 16px; color: #B9B2A3;">第 60 届</span><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 60px; line-height: 1; background: linear-gradient(160deg, #F3DC8A 0%, #C9A227 48%, #8E6F12 100%); -webkit-background-clip: text; background-clip: text; color: transparent;">2023</span></span>
+    </div>
+  </div>
+  <div style="height: 16px; margin: 36px -64px 0; flex: none; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%23C9A227%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23141311%22/%3E%3C/svg%3E');"></div>
+</section>
+
+<section id="m1b" data-screen-label="M01b 这期反复出现的人" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #1C1C1C; color: #F4EFE4; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
+  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%23C9A227%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%231C1C1C%22/%3E%3C/svg%3E');"></div>
+  <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #B9B2A3;"><span>人物</span><span style="display: flex; align-items: center; gap: 10px;"><span style="flex: none; width: 28px; height: 28px; border-radius: 50%; background-image: url('assets/gh/trophyB.jpg'); background-size: 230% auto; background-position: 52% 20%; box-shadow: 0 0 0 1.5px #C9A227;"></span>电影巨辩 EP11 · 金马六十年</span></div>
+  <h2 style="margin: 32px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 62px; line-height: 1.2;">这期反复出现的人</h2>
+  <div style="margin-top: 12px; font-size: 19px; color: #B9B2A3;">数字为转录文本中的提及次数，约数</div>
+  <div style="margin-top: 36px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px;">
+    <sc-for list="{{ peopleTop }}" as="p" hint-placeholder-count="2">
+      <div style="display: grid; grid-template-columns: 176px minmax(0, 1fr); gap: 22px; align-items: end; border: 1px solid rgba(201,162,39,0.6); padding: 16px;">
+        <div style="position: relative; width: 176px; height: 226px; background: #2A2824;"><image-slot id="{{ p.slot }}" src="{{ p.src }}" shape="rect" placeholder="{{ p.name }}" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot></div>
+        <div>
+          <div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 72px; line-height: 1; background: linear-gradient(160deg, #F3DC8A 0%, #C9A227 48%, #8E6F12 100%); -webkit-background-clip: text; background-clip: text; color: transparent;">{{ p.count }}</span><span style="font-size: 18px;">次</span></div>
+          <div style="margin-top: 14px; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 36px; line-height: 1.2;">{{ p.name }}</div>
+          <div style="margin-top: 8px; font-size: 15px; line-height: 1.55; color: #B9B2A3;">{{ p.role }}</div>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+  <div style="margin-top: 22px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px 20px;">
+    <sc-for list="{{ peopleRest }}" as="p" hint-placeholder-count="9">
+      <div style="display: grid; grid-template-columns: 90px minmax(0, 1fr); gap: 14px; align-items: end; border-top: 1px solid rgba(244,239,228,0.22); padding-top: 14px;">
+        <div style="position: relative; width: 90px; height: 114px; background: {{ p.monoBg }}; display: flex; align-items: center; justify-content: center;">
+          <sc-if value="{{ p.has }}" hint-placeholder-val="{{ true }}"><image-slot id="{{ p.slot }}" src="{{ p.src }}" shape="rect" placeholder="{{ p.name }}" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot></sc-if>
+          <sc-if value="{{ p.noImg }}" hint-placeholder-val="{{ false }}"><span style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 42px; color: {{ p.monoFg }};">{{ p.mono }}</span></sc-if>
+        </div>
+        <div>
+          <div style="display: flex; align-items: baseline; gap: 6px;"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 30px; line-height: 1; color: #C9A227;">{{ p.count }}</span><span style="font-size: 14px;">次</span></div>
+          <div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 22px; line-height: 1.25;">{{ p.name }}</div>
+          <div style="margin-top: 4px; font-size: 13px; line-height: 1.5; color: #B9B2A3;">{{ p.role }}</div>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+  <div style="margin-top: auto; padding-top: 32px; display: flex; justify-content: space-between; gap: 24px; font-size: 16px; color: #B9B2A3;"><span>照片来自维基共享资源，可拖入自己的图片替换。官员与政治人物只写文字（灰底）</span><span style="font-family: 'IBM Plex Mono', monospace;">01b</span></div>
+</section>
+
+<section id="m1c" data-screen-label="M01c 这期提到的电影" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F4EFE4; color: #1C1C1C; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
+  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
+  <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #57534C;"><span>片单</span><span style="display: flex; align-items: center; gap: 10px;"><span style="flex: none; width: 28px; height: 28px; border-radius: 50%; background-image: url('assets/gh/trophyB.jpg'); background-size: 230% auto; background-position: 52% 20%; box-shadow: 0 0 0 1.5px #C9A227;"></span>电影巨辩 EP11 · 金马六十年</span></div>
+  <h2 style="margin: 32px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 62px; line-height: 1.2;">这期提到的电影</h2>
+  <div style="margin-top: 12px; font-size: 19px; color: #57534C;">按年份排列；海报下的色条是出品地区</div>
+  <div style="margin-top: 30px; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 22px 14px;">
+    <sc-for list="{{ posters }}" as="p" hint-placeholder-count="12">
+      <div>
+        <div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #D9D2C2;"><image-slot id="{{ p.slot }}" src="{{ p.src }}" shape="rect" placeholder="{{ p.title }}" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot></div>
+        <div style="height: 5px; background: {{ p.color }};"></div>
+        <div style="margin-top: 8px; display: flex; justify-content: space-between; align-items: baseline; gap: 6px;"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 15px;">{{ p.year }}</span><span style="font-size: 12px; color: #57534C; white-space: nowrap;">{{ p.region }}</span></div>
+        <div style="margin-top: 2px; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 15px; line-height: 1.4;">{{ p.title }}</div>
+        <div style="margin-top: 3px; font-size: 13px; line-height: 1.5; color: #3A3732;">{{ p.note }}</div>
+      </div>
+    </sc-for>
+  </div>
+  <div style="margin-top: 30px; border-top: 2px solid #1C1C1C; padding-top: 16px;">
+    <div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 22px;">金马奖座</div>
+    <div style="margin-top: 14px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px;">
+      <div style="display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 14px; align-items: end;"><div style="position: relative; width: 120px; height: 160px; background: #D9D2C2;"><image-slot id="gh-m1c-trophy" src="assets/gh/trophyA.jpg" shape="rect" placeholder="金马奖座" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot></div><div style="font-size: 14px; line-height: 1.55;"><b style="font-family: 'Noto Serif SC', serif; font-size: 16px;">奖座</b><br>台北电影公园的复制品，2018 年摄</div></div>
+      <div style="display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 14px; align-items: end;"><div style="position: relative; width: 120px; height: 160px; background: #D9D2C2;"><image-slot id="gh-m1c-1985" src="assets/gh/y1985.jpg" shape="rect" placeholder="1985 年金马奖" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot></div><div style="font-size: 14px; line-height: 1.55;"><b style="font-family: 'IBM Plex Mono', monospace; font-size: 16px;">1985</b><br>金马奖最佳女配角得主领奖</div></div>
+      <div style="display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 14px; align-items: end;"><div style="position: relative; width: 120px; height: 160px; background: #D9D2C2;"><image-slot id="gh-m1c-50" src="assets/gh/statue50.jpg" shape="rect" placeholder="金马 50 风华展" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot></div><div style="font-size: 14px; line-height: 1.55;"><b style="font-family: 'IBM Plex Mono', monospace; font-size: 16px;">2013</b><br>第 50 届，金马 50 风华展</div></div>
+    </div>
+  </div>
+  <div style="margin-top: auto; padding-top: 30px; display: flex; justify-content: space-between; gap: 24px; font-size: 16px; color: #57534C;"><span>海报来自英文维基百科，奖座照片来自维基共享资源；可拖入自己的图片替换</span><span style="font-family: 'IBM Plex Mono', monospace;">01c</span></div>
+</section>
+
+<section id="m2" data-screen-label="M02 十个要点" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F4EFE4; color: #1C1C1C; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
+  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
+  <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #57534C;"><span>M02 · 要点</span><span style="display: flex; align-items: center; gap: 10px;"><span style="flex: none; width: 28px; height: 28px; border-radius: 50%; background-image: url('assets/gh/trophyB.jpg'); background-size: 230% auto; background-position: 52% 20%; box-shadow: 0 0 0 1.5px #C9A227;"></span>电影巨辩 EP11 · 金马六十年</span></div>
+  <h2 style="margin: 32px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 62px; line-height: 1.2;">十个要点</h2>
+  <div style="margin-top: 40px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 44px;">
+    <sc-for list="{{ points }}" as="p" hint-placeholder-count="10">
+      <div style="border-top: {{ p.ruleH }} solid {{ p.rule }}; padding-top: 16px; display: grid; grid-template-columns: 58px minmax(0, 1fr); gap: 4px 12px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 30px; line-height: 1.1;">{{ p.n }}</div>
+        <div>
+          <div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 25px; line-height: 1.35;">{{ p.title }}</div>
+          <div style="margin-top: 8px; font-size: 17px; line-height: 1.7; color: #3A3732; text-wrap: pretty;">{{ p.text }}</div>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+  <div style="margin-top: auto; padding-top: 32px; display: flex; justify-content: space-between; gap: 24px; font-size: 16px; color: #57534C;"><span>金色粗线：第 8 条“只有九年”，对应 M07 第七段、M10 第七扇门</span><span style="font-family: 'IBM Plex Mono', monospace;">02</span></div>
+</section>
+
+<section id="m3" data-screen-label="M03 全期脑图" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F4EFE4; color: #1C1C1C; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
+  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
+  <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #57534C;"><span>M03 · 脑图</span><span style="display: flex; align-items: center; gap: 10px;"><span style="flex: none; width: 28px; height: 28px; border-radius: 50%; background-image: url('assets/gh/trophyB.jpg'); background-size: 230% auto; background-position: 52% 20%; box-shadow: 0 0 0 1.5px #C9A227;"></span>电影巨辩 EP11 · 金马六十年</span></div>
+  <h2 style="margin: 32px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 62px; line-height: 1.2;">全期脑图</h2>
+  <div style="margin-top: 36px; align-self: flex-start; background: #1C1C1C; color: #F4EFE4; padding: 14px 26px; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 30px; letter-spacing: 0.08em;">金马六十年</div>
+  <div style="margin-left: 14px; border-left: 2px solid #1C1C1C; padding: 18px 0 2px 30px; display: flex; flex-direction: column; gap: 14px;">
+    <sc-for list="{{ branches }}" as="b" hint-placeholder-count="9">
+      <div style="display: grid; grid-template-columns: 236px minmax(0, 1fr); gap: 18px; align-items: center;">
+        <div style="position: relative; background: {{ b.bg }}; color: {{ b.fg }}; padding: 10px 14px; display: flex; align-items: baseline; gap: 10px;">
+          <div style="position: absolute; left: -30px; top: 50%; width: 30px; height: 2px; background: #1C1C1C;"></div>
+          <span style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 24px; line-height: 1.2;">{{ b.ord }}</span>
+          <span style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 19px; line-height: 1.2;">{{ b.name }}</span>
+          <span style="margin-left: auto; font-family: 'IBM Plex Mono', monospace; font-size: 13px;">{{ b.years }}</span>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <sc-for list="{{ b.children }}" as="c" hint-placeholder-count="4">
+            <span style="border: 1px solid rgba(28,28,28,0.38); padding: 4px 10px; font-size: 15px; line-height: 1.5;">{{ c }}</span>
+          </sc-for>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+  <div style="margin-top: 28px; display: flex; flex-wrap: wrap; gap: 10px 26px; font-size: 15px; color: #3A3732;">
+    <span style="display: flex; align-items: center; gap: 8px;"><span style="width: 18px; height: 12px; background: #8A8F93;"></span>立论 / 过渡</span>
+    <span style="display: flex; align-items: center; gap: 8px;"><span style="width: 18px; height: 12px; background: #1C1C1C;"></span>官办</span>
+    <span style="display: flex; align-items: center; gap: 8px;"><span style="width: 54px; height: 12px; background: linear-gradient(90deg, #EBDDA8, #A8861A);"></span>逐步开放，由浅到深</span>
+    <span style="display: flex; align-items: center; gap: 8px;"><span style="width: 18px; height: 12px; background: #2A9D8F;"></span>转向海外</span>
+  </div>
+  <div style="margin-top: auto; padding-top: 32px; display: flex; justify-content: space-between; gap: 24px; font-size: 16px; color: #57534C;"><span>分期：老马</span><span style="font-family: 'IBM Plex Mono', monospace;">03</span></div>
+</section>
+
+<section id="m4" data-screen-label="M04 三小时都聊了什么" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F4EFE4; color: #1C1C1C; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
+  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
+  <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #57534C;"><span>M04 · 时间分配</span><span style="display: flex; align-items: center; gap: 10px;"><span style="flex: none; width: 28px; height: 28px; border-radius: 50%; background-image: url('assets/gh/trophyB.jpg'); background-size: 230% auto; background-position: 52% 20%; box-shadow: 0 0 0 1.5px #C9A227;"></span>电影巨辩 EP11 · 金马六十年</span></div>
+  <h2 style="margin: 32px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 62px; line-height: 1.2;">三小时都聊了什么</h2>
+  <div style="margin-top: 12px; font-size: 19px; color: #57534C;">横条全长 = 182.2 分钟，按每段起止时间切分</div>
+  <div style="margin-top: 36px; display: flex; height: 64px;">
+    <sc-for list="{{ segs }}" as="s" hint-placeholder-count="14">
+      <div style="flex: none; width: {{ s.w }}; height: 64px; background: {{ s.bg }}; color: {{ s.fg }}; box-shadow: inset -1px 0 0 #F4EFE4; display: flex; align-items: center; justify-content: center; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 17px;">{{ s.code }}</div>
+    </sc-for>
+  </div>
+  <div style="position: relative; height: 30px;">
+    <sc-for list="{{ segTicks }}" as="t" hint-placeholder-count="7">
+      <div style="position: absolute; left: {{ t.left }}; top: 0; transform: translateX({{ t.tx }}); display: flex; flex-direction: column; align-items: {{ t.align }};"><span style="width: 1px; height: 8px; background: #1C1C1C;"></span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #57534C;">{{ t.label }}</span></div>
+    </sc-for>
+  </div>
+  <div style="margin-top: 22px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px;">
+    <sc-for list="{{ groups }}" as="g" hint-placeholder-count="3">
+      <div style="border-top: 6px solid {{ g.bg }}; padding-top: 12px;">
+        <div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 22px;">{{ g.name }}</div>
+        <div style="margin-top: 4px; display: flex; align-items: baseline; gap: 10px;"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 38px;">{{ g.min }}</span><span style="font-size: 16px;">分钟</span><span style="margin-left: auto; font-family: 'IBM Plex Mono', monospace; font-size: 18px; color: #57534C;">{{ g.share }}</span></div>
+      </div>
+    </sc-for>
+  </div>
+  <div style="margin-top: 26px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(7, auto); grid-auto-flow: column; gap: 7px 40px;">
+    <sc-for list="{{ segLegend }}" as="s" hint-placeholder-count="14">
+      <div style="display: grid; grid-template-columns: 30px minmax(0, 1fr) auto; gap: 12px; align-items: center; font-size: 16px;">
+        <span style="height: 24px; background: {{ s.bg }}; color: {{ s.fg }}; display: flex; align-items: center; justify-content: center; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 14px;">{{ s.code }}</span>
+        <span style="line-height: 1.4;">{{ s.label }}</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 15px; color: #57534C;">{{ s.minutes }}′</span>
+      </div>
+    </sc-for>
+  </div>
+  <div style="margin-top: 36px; border-top: 2px solid #1C1C1C; padding-top: 18px; display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 32px; align-items: end;">
+    <div>
+      <div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 26px;">每年分到几分钟</div>
+      <p style="margin: 12px 0 0; font-size: 18px; line-height: 1.7; text-wrap: pretty;">讲得最细的是 1990 到 1995 年，刚转为民办、两岸开始接触的那六年。</p>
+      <p style="margin: 10px 0 0; font-size: 15px; line-height: 1.7; color: #57534C; text-wrap: pretty;">离现在最近的一段讲得最少，主播把篇幅留给了对未来的设想。</p>
+    </div>
+    <div style="display: flex; align-items: flex-end; gap: 10px; height: 250px;">
+      <sc-for list="{{ perYear }}" as="b" hint-placeholder-count="8">
+        <div style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 17px;">{{ b.v }}</span>
+          <div style="margin-top: 6px; width: 100%; height: {{ b.h }}; background: {{ b.bg }};"></div>
+          <span style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 18px;">{{ b.cn }}</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #57534C;">{{ b.years }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+  <div style="margin-top: auto; padding-top: 32px; display: flex; justify-content: space-between; gap: 24px; font-size: 16px; color: #57534C;"><span>柱高：该阶段讨论分钟数 ÷ 跨越年数</span><span style="font-family: 'IBM Plex Mono', monospace;">04</span></div>
+</section>
+
+<section id="m5" data-screen-label="M05 金马在哪：两种模式之间" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F4EFE4; color: #1C1C1C; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
+  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
+  <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #57534C;"><span>M05 · 定位</span><span style="display: flex; align-items: center; gap: 10px;"><span style="flex: none; width: 28px; height: 28px; border-radius: 50%; background-image: url('assets/gh/trophyB.jpg'); background-size: 230% auto; background-position: 52% 20%; box-shadow: 0 0 0 1.5px #C9A227;"></span>电影巨辩 EP11 · 金马六十年</span></div>
+  <h2 style="margin: 32px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 62px; line-height: 1.2;">金马在哪：两种模式之间</h2>
+  <div style="margin-top: 12px; font-size: 19px; color: #57534C;">左右两端是两种成熟的模式，金马在中间，从两边各拿了一半。</div>
+  <div style="margin-top: 40px; display: grid; grid-template-columns: 250px minmax(0, 1fr) 250px; gap: 0; align-items: stretch;">
+    <div style="border: 2px solid #1C1C1C; padding: 22px 20px;">
+      <div style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 28px;">电影节模式</div>
+      <div style="margin-top: 6px; font-size: 15px; color: #57534C;">戛纳、威尼斯、柏林</div>
+      <div style="margin-top: 18px; display: flex; flex-direction: column; gap: 12px; font-size: 16px; line-height: 1.55;">
+        <div style="border-top: 1px solid rgba(28,28,28,0.25); padding-top: 10px;">全世界选片，多是没公映的新片</div>
+        <div style="border-top: 1px solid rgba(28,28,28,0.25); padding-top: 10px;">小评审团，每年换人</div>
+        <div style="border-top: 1px solid rgba(28,28,28,0.25); padding-top: 10px;">七八个奖，不强调技术工种</div>
+        <div style="border-top: 1px solid rgba(28,28,28,0.25); padding-top: 10px;">偏爱作者风格的艺术电影</div>
+      </div>
+    </div>
+    <div style="position: relative; margin: 34px 0; background: #C9A227; padding: 22px 26px; display: flex; flex-direction: column;">
+      <div style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 34px; text-align: center; letter-spacing: 0.1em;">金马奖</div>
+      <div style="margin-top: 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; font-size: 16px; line-height: 1.55;">
+        <div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.06em;">← 从电影节拿来</div>
+          <div style="margin-top: 8px; background: #F4EFE4; padding: 8px 10px;">小评审团，一二十人</div>
+          <div style="margin-top: 8px; background: #F4EFE4; padding: 8px 10px;">没上映的新片也可以报名</div>
+        </div>
+        <div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.06em; text-align: right;">从奥斯卡拿来 →</div>
+          <div style="margin-top: 8px; background: #F4EFE4; padding: 8px 10px;">年度产业盘点</div>
+          <div style="margin-top: 8px; background: #F4EFE4; padding: 8px 10px;">设有多项技术奖</div>
+        </div>
+      </div>
+      <div style="margin-top: 18px; text-align: center; font-size: 15px;">主播认为这种评法全世界没有第二家</div>
+    </div>
+    <div style="border: 2px solid #1C1C1C; padding: 22px 20px;">
+      <div style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 28px;">奥斯卡模式</div>
+      <div style="margin-top: 6px; font-size: 15px; color: #57534C;">奥斯卡、香港金像奖、法国凯撒奖</div>
+      <div style="margin-top: 18px; display: flex; flex-direction: column; gap: 12px; font-size: 16px; line-height: 1.55;">
+        <div style="border-top: 1px solid rgba(28,28,28,0.25); padding-top: 10px;">盘点过去一年已公映的电影</div>
+        <div style="border-top: 1px solid rgba(28,28,28,0.25); padding-top: 10px;">几百到几千人的学院集体投票</div>
+        <div style="border-top: 1px solid rgba(28,28,28,0.25); padding-top: 10px;">几十个奖，技术门类分得很细</div>
+        <div style="border-top: 1px solid rgba(28,28,28,0.25); padding-top: 10px;">偏爱有社会议题的商业类型片</div>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: 32px; font-family: 'IBM Plex Mono', monospace; font-size: 15px; letter-spacing: 0.08em; color: #57534C;">于是 ↓</div>
+  <div style="margin-top: 10px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px;">
+    <div style="background: #1C1C1C; color: #F4EFE4; padding: 18px 20px; font-size: 18px; line-height: 1.6;">每年换一批评审，标准忽左忽右</div>
+    <div style="background: #1C1C1C; color: #F4EFE4; padding: 18px 20px; font-size: 18px; line-height: 1.6;">小评审团未必评得了技术门类</div>
+    <div style="background: #1C1C1C; color: #F4EFE4; padding: 18px 20px; font-size: 18px; line-height: 1.6;">艺术片和商业大片被放在一起比</div>
+  </div>
+  <div style="margin-top: 30px; border-top: 2px solid #1C1C1C; padding-top: 18px; display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 20px; align-items: start;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 40px; line-height: 1;">2005</div>
+    <div>
+      <div style="display: flex; gap: 16px;">
+        <div style="width: 96px;"><div style="position: relative; width: 96px; height: 142px; background: #D9D2C2;"><image-slot id="gh-m5-zuihao" src="assets/gh/p-zuihao.jpg" shape="rect" placeholder="《最好的时光》" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot></div><div style="margin-top: 6px; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 15px; line-height: 1.35;">《最好的时光》</div></div>
+        <div style="width: 96px;"><div style="position: relative; width: 96px; height: 142px; background: #D9D2C2;"><image-slot id="gh-m5-gongfu" src="assets/gh/p-gongfu.jpg" shape="rect" placeholder="《功夫》" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot></div><div style="margin-top: 6px; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 15px; line-height: 1.35;">《功夫》</div></div>
+        <div style="width: 96px;"><div style="position: relative; width: 96px; height: 142px; background: #D9D2C2;"><image-slot id="gh-m5-tianbian" src="assets/gh/p-tianbian.jpg" shape="rect" placeholder="《天边一朵云》" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot></div><div style="margin-top: 6px; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 15px; line-height: 1.35;">《天边一朵云》</div></div>
+      </div>
+      <p style="margin: 12px 0 0; font-size: 18px; line-height: 1.65;">三部一起入围最佳剧情片。主播：这没有办法比较。</p>
+    </div>
+  </div>
+  <div style="margin-top: auto; padding-top: 32px; display: flex; justify-content: space-between; gap: 24px; font-size: 16px; color: #57534C;"><span>两端为成熟模式，中间为金马</span><span style="font-family: 'IBM Plex Mono', monospace;">05</span></div>
+</section>
+
+<section id="m6" data-screen-label="M06 为什么只能是金马" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F4EFE4; color: #1C1C1C; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
+  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
+  <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #57534C;"><span>M06 · 三地</span><span style="display: flex; align-items: center; gap: 10px;"><span style="flex: none; width: 28px; height: 28px; border-radius: 50%; background-image: url('assets/gh/trophyB.jpg'); background-size: 230% auto; background-position: 52% 20%; box-shadow: 0 0 0 1.5px #C9A227;"></span>电影巨辩 EP11 · 金马六十年</span></div>
+  <h2 style="margin: 32px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 62px; line-height: 1.2;">为什么只能是金马</h2>
+  <div style="margin-top: 12px; font-size: 19px; color: #57534C;">要办一个覆盖整个华语圈的奖，三地各自的条件</div>
+  <div style="margin-top: 36px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px;">
+    <div style="border: 2px solid #B4472E; display: flex; flex-direction: column;">
+      <div style="background: #B4472E; color: #F4EFE4; padding: 16px 20px;"><div style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 32px;">大陆</div><div style="margin-top: 2px; font-size: 17px;">金鸡奖</div></div>
+      <div style="padding: 20px; display: flex; flex-direction: column; gap: 14px;">
+        <div style="align-self: flex-start; border: 3px solid #B4472E; color: #B4472E; padding: 2px 14px; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 30px; letter-spacing: 0.12em; transform: rotate(-4deg);">不能</div>
+        <div style="display: flex; gap: 10px; font-size: 16px; line-height: 1.6;"><span style="flex: none; width: 7px; height: 7px; margin-top: 10px; background: #B4472E;"></span><span>奖项的设置和管理都在上层，主管部门自己也做不了主</span></div>
+        <div style="display: flex; gap: 10px; font-size: 16px; line-height: 1.6;"><span style="flex: none; width: 7px; height: 7px; margin-top: 10px; background: #B4472E;"></span><span>民间试过：《南方都市报》办的华语电影传媒大奖，评得好，但没能延续</span></div>
+      </div>
+    </div>
+    <div style="border: 2px solid #C2417A; display: flex; flex-direction: column;">
+      <div style="background: #C2417A; color: #F4EFE4; padding: 16px 20px;"><div style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 32px;">香港</div><div style="margin-top: 2px; font-size: 17px;">金像奖（1982 年创办）</div></div>
+      <div style="padding: 20px; display: flex; flex-direction: column; gap: 14px;">
+        <div style="align-self: flex-start; border: 3px solid #C2417A; color: #C2417A; padding: 2px 14px; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 30px; letter-spacing: 0.12em; transform: rotate(-4deg);">不能</div>
+        <div style="display: flex; gap: 10px; font-size: 16px; line-height: 1.6;"><span style="flex: none; width: 7px; height: 7px; margin-top: 10px; background: #C2417A;"></span><span>它是行业的自我表彰，核心荣誉不会给外地电影</span></div>
+        <div style="display: flex; gap: 10px; font-size: 16px; line-height: 1.6;"><span style="flex: none; width: 7px; height: 7px; margin-top: 10px; background: #C2417A;"></span><span>创办的动机之一就是对抗金马：当年港片去参赛，要先配成国语</span></div>
+      </div>
+    </div>
+    <div style="border: 2px solid #5E548E; display: flex; flex-direction: column;">
+      <div style="background: #5E548E; color: #F4EFE4; padding: 16px 20px;"><div style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 32px;">台湾</div><div style="margin-top: 2px; font-size: 17px;">金马奖（1962 年创办）</div></div>
+      <div style="padding: 20px; display: flex; flex-direction: column; gap: 14px;">
+        <div style="align-self: flex-start; background: #5E548E; color: #F4EFE4; border: 3px solid #5E548E; padding: 2px 22px; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 30px; letter-spacing: 0.12em; transform: rotate(-4deg);">能</div>
+        <div style="display: flex; gap: 10px; font-size: 16px; line-height: 1.6;"><span style="flex: none; width: 7px; height: 7px; margin-top: 10px; background: #5E548E;"></span><span>本地年产量一度只有二三十部，撑不起只评本地的奖，必须扩大</span></div>
+        <div style="display: flex; gap: 10px; font-size: 16px; line-height: 1.6;"><span style="flex: none; width: 7px; height: 7px; margin-top: 10px; background: #5E548E;"></span><span>1997 年后港片不能再算“国片”，转型势在必行</span></div>
+        <div style="display: flex; gap: 10px; font-size: 16px; line-height: 1.6;"><span style="flex: none; width: 7px; height: 7px; margin-top: 10px; background: #5E548E;"></span><span>环境允许</span></div>
+      </div>
+    </div>
+  </div>
+  <p style="margin: 30px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 24px; line-height: 1.6; text-wrap: pretty;">金马需要大陆电影，大陆电影圈也需要一个有公信力的奖。这个黄金时期只有几年。</p>
+  <div style="margin-top: 30px; border: 1.5px solid #1C1C1C; border-top: 6px solid #B4472E; padding: 22px 24px; display: grid; grid-template-columns: 280px minmax(0, 1fr); gap: 28px;">
+    <div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.08em; color: #57534C;">一次民间尝试</div>
+      <div style="margin-top: 6px; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 26px; line-height: 1.3;">华语电影传媒大奖</div>
+      <div style="margin-top: 8px; font-size: 15px; line-height: 1.6;">主办：《南方都市报》</div>
+      <div style="margin-top: 2px; font-size: 15px; line-height: 1.6; color: #57534C;">2001 年首届颁奖，2017 年改名，2019 年后不再举办</div>
+    </div>
+    <div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px 18px; font-size: 15px; line-height: 1.55;">
+        <span>· 评两岸三地和海外的华语电影</span><span>· 不用报名，拍出来就可以评</span>
+        <span>· 初审、复审、终审三轮；先讨论再投票</span><span>· 没有技术奖</span>
+      </div>
+      <p style="margin: 12px 0 0; font-size: 15px; line-height: 1.65; color: #3A3732;">主播之一称它“相当于大陆办的一个小金马奖”，评奖结果“经得起历史的考验”。</p>
+      <p style="margin: 8px 0 0; font-size: 16px; font-weight: 700; line-height: 1.6;">任何一个奖只有延续存在才有影响力，一旦中断，一切归零。</p>
+    </div>
+  </div>
+  <div style="margin-top: auto; padding-top: 32px; display: flex; justify-content: space-between; gap: 24px; font-size: 16px; color: #57534C;"><span>空心印章 = 不能；实心印章 = 能</span><span style="font-family: 'IBM Plex Mono', monospace;">06</span></div>
+</section>
+
+<section id="m7" data-screen-label="M07 八个阶段" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F4EFE4; color: #1C1C1C; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
+  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
+  <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #57534C;"><span>M07 · 主时间线</span><span style="display: flex; align-items: center; gap: 10px;"><span style="flex: none; width: 28px; height: 28px; border-radius: 50%; background-image: url('assets/gh/trophyB.jpg'); background-size: 230% auto; background-position: 52% 20%; box-shadow: 0 0 0 1.5px #C9A227;"></span>电影巨辩 EP11 · 金马六十年</span></div>
+  <h2 style="margin: 32px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 62px; line-height: 1.2;">六十年，八个阶段</h2>
+  <div style="margin-top: 12px; font-size: 19px; color: #57534C;">横轴按真实年份比例绘制，1962–2023</div>
+  <div style="position: relative; margin-top: 40px; height: 264px;">
+    <sc-for list="{{ phases }}" as="p" hint-placeholder-count="8">
+      <div style="position: absolute; left: {{ p.left }}; width: {{ p.width }}; top: 0; height: 132px; box-sizing: border-box; padding: 10px 8px; background: {{ p.bg }}; color: {{ p.fg }}; box-shadow: inset -2px 0 0 #F4EFE4;">
+        <div style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 32px; line-height: 1.1;">{{ p.cn }}</div>
+        <div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 17px; line-height: 1.3;">{{ p.name }}</div>
+      </div>
+    </sc-for>
+    <div style="position: absolute; left: 0; right: 0; top: 140px; height: 30px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2222%22 height=%2230%22%3E%3Crect width=%2222%22 height=%2230%22 fill=%22%23C9A227%22/%3E%3Crect x=%227%22 y=%223.5%22 width=%228%22 height=%225%22 rx=%221%22 fill=%22%23F4EFE4%22/%3E%3Crect x=%227%22 y=%2221.5%22 width=%228%22 height=%225%22 rx=%221%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
+    <sc-for list="{{ gaps }}" as="g" hint-placeholder-count="2">
+      <div style="position: absolute; left: {{ g.left }}; width: {{ g.w }}; top: 136px; height: 38px; box-sizing: border-box; background: #F4EFE4; border: 1.5px dashed #1C1C1C;"></div>
+      <div style="position: absolute; left: {{ g.left }}; top: 240px; font-size: 14px; color: #57534C; white-space: nowrap;"><span style="font-family: 'IBM Plex Mono', monospace;">{{ g.year }}</span> 停办</div>
+    </sc-for>
+    <sc-for list="{{ bounds }}" as="b" hint-placeholder-count="8">
+      <div style="position: absolute; left: {{ b.left }}; top: 132px; height: 96px; border-left: 2px solid #1C1C1C; padding-left: 6px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-end; font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 19px; line-height: 1;"><span>{{ b.year }}</span><span style="margin-top: 5px; font-family: 'Noto Sans SC', sans-serif; font-weight: 500; font-size: 12px; color: #7A5F0E; white-space: nowrap;">第 {{ b.ed }} 届</span></div>
+    </sc-for>
+    <div style="position: absolute; right: 0; top: 238px; display: flex; align-items: baseline; gap: 8px; font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 19px;">→ 2023<span style="font-family: 'Noto Sans SC', sans-serif; font-weight: 500; font-size: 12px; color: #7A5F0E;">第 60 届</span></div>
+  </div>
+  <div style="margin-top: 24px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px;">
+    <sc-for list="{{ phases }}" as="p" hint-placeholder-count="8">
+      <div style="border-top: 6px solid {{ p.bg }}; background: #EDE6D7; padding: 14px 14px 16px; display: flex; flex-direction: column;">
+        <div style="display: flex; align-items: baseline; gap: 10px;"><span style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 26px;">{{ p.cn }}</span><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 16px;">{{ p.years }}</span></div>
+        <div style="margin-top: 6px; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 23px; line-height: 1.3;">{{ p.name }}</div>
+        <div style="margin-top: 4px; font-size: 13px; line-height: 1.5; color: #57534C;">{{ p.organizer }}</div>
+        <div style="margin-top: 10px; font-size: 17px; line-height: 1.55; text-wrap: pretty;">{{ p.oneLine }}</div>
+        <div style="margin-top: auto; padding-top: 12px; font-size: 13px; line-height: 1.55; color: #3A3732;"><span style="font-family: 'IBM Plex Mono', monospace; color: #57534C;">转折 → </span>{{ p.turn }}</div>
+      </div>
+    </sc-for>
+  </div>
+  <div style="margin-top: auto; padding-top: 32px; display: flex; justify-content: space-between; gap: 24px; font-size: 16px; color: #57534C;"><span>分期：老马。虚线空格：1964、1974 年金马停办，台湾当年承办亚洲影展</span><span style="font-family: 'IBM Plex Mono', monospace;">07</span></div>
+</section>
+
+<section id="m8" data-screen-label="M08 四条纵线" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F4EFE4; color: #1C1C1C; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
+  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
+  <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #57534C;"><span>M08 · 泳道</span><span style="display: flex; align-items: center; gap: 10px;"><span style="flex: none; width: 28px; height: 28px; border-radius: 50%; background-image: url('assets/gh/trophyB.jpg'); background-size: 230% auto; background-position: 52% 20%; box-shadow: 0 0 0 1.5px #C9A227;"></span>电影巨辩 EP11 · 金马六十年</span></div>
+  <h2 style="margin: 32px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 62px; line-height: 1.2;">四条纵线</h2>
+  <div style="position: relative; margin-top: 30px;">
+    <sc-for list="{{ bounds }}" as="b" hint-placeholder-count="8">
+      <div style="position: absolute; left: {{ b.left }}; top: 0; bottom: 0; border-left: 1px dashed rgba(28,28,28,0.28);"></div>
+    </sc-for>
+    <div style="position: relative; height: 62px;">
+      <sc-for list="{{ phases }}" as="p" hint-placeholder-count="8">
+        <div style="position: absolute; left: {{ p.left }}; width: {{ p.width }}; top: 0; height: 10px; background: {{ p.bg }}; box-shadow: inset -2px 0 0 #F4EFE4;"></div>
+      </sc-for>
+      <div style="position: absolute; left: 0; right: 0; top: 12px; height: 22px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2218%22 height=%2222%22%3E%3Crect width=%2218%22 height=%2222%22 fill=%22%23C9A227%22/%3E%3Crect x=%226%22 y=%223%22 width=%226%22 height=%224%22 rx=%221%22 fill=%22%23F4EFE4%22/%3E%3Crect x=%226%22 y=%2215%22 width=%226%22 height=%224%22 rx=%221%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
+      <sc-for list="{{ bounds }}" as="b" hint-placeholder-count="8">
+        <div style="position: absolute; left: {{ b.left }}; top: 38px; padding-left: 5px; font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 15px;">{{ b.year }}</div>
+      </sc-for>
+    </div>
+    <sc-for list="{{ lanes }}" as="l" hint-placeholder-count="4">
+      <div style="position: relative; margin-top: 8px;">
+        <div style="display: flex; align-items: baseline; gap: 10px;"><span style="background: #F4EFE4; padding-right: 8px; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 22px; line-height: 1.3;">{{ l.name }}</span></div>
+        <div style="position: relative; height: {{ l.h }}; margin-top: 8px;">
+          <div style="position: absolute; left: 0; right: 0; top: -1px; height: 2px; background: {{ l.line }};"></div>
+          <sc-for list="{{ l.nodes }}" as="n" hint-placeholder-count="6">
+            <div style="position: absolute; left: {{ n.elLeft }}; top: 0; width: 7px; height: {{ n.elH }}; box-sizing: border-box; border-left: {{ n.bl }}; border-right: {{ n.br }}; border-bottom: 1.5px solid #1C1C1C;"></div>
+            <div style="position: absolute; left: {{ n.dotLeft }}; top: -6px; width: 12px; height: 12px; box-sizing: border-box; border-radius: 50%; background: {{ n.dotBg }}; border: 2.5px solid {{ n.dotBd }};"></div>
+            <div style="position: absolute; left: {{ n.left }}; right: {{ n.right }}; top: {{ n.top }}; display: flex; gap: 6px; align-items: baseline; white-space: nowrap; line-height: 22px; background: #F4EFE4; padding: 0 4px;">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 14px;">{{ n.yl }}</span><span style="font-size: 15px;">{{ n.label }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+  <p style="margin: 16px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 22px; line-height: 1.6;">报名的范围一直在扩大：从国语片，到华语片，到华人电影。</p>
+  <div style="margin-top: auto; padding-top: 20px; display: flex; justify-content: space-between; gap: 24px; font-size: 16px; color: #57534C;"><span>空心点：节目只说了大致时间。2004、2010 两个节点据节目</span><span style="font-family: 'IBM Plex Mono', monospace;">08</span></div>
+</section>
+
+<section id="m9" data-screen-label="M09 评审制度折腾史" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F4EFE4; color: #1C1C1C; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
+  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
+  <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #57534C;"><span>M09 · 评审</span><span style="display: flex; align-items: center; gap: 10px;"><span style="flex: none; width: 28px; height: 28px; border-radius: 50%; background-image: url('assets/gh/trophyB.jpg'); background-size: 230% auto; background-position: 52% 20%; box-shadow: 0 0 0 1.5px #C9A227;"></span>电影巨辩 EP11 · 金马六十年</span></div>
+  <h2 style="margin: 32px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 62px; line-height: 1.2;">评审制度折腾史</h2>
+  <p style="margin: 14px 0 0; font-size: 19px; line-height: 1.65; color: #3A3732;"><span style="font-family: 'Noto Serif SC', serif; font-weight: 700; color: #1C1C1C;">“为了减少外界对评审制度的争议，今年做了哪些改革。”</span>到了下一年，这句话又出现了。</p>
+  <div style="margin-top: 30px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px;">
+    <sc-for list="{{ rules }}" as="r" hint-placeholder-count="15">
+      <div style="background: {{ r.bg }}; color: {{ r.fg }}; border: 1.5px solid #1C1C1C; padding: 12px 14px 14px;">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px;"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 15px;">{{ r.when }}</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; opacity: 0.8;">{{ r.n }}</span></div>
+        <div style="margin-top: 8px; font-size: 16px; line-height: 1.55;">{{ r.rule }}</div>
+        <sc-if value="{{ r.hasNote }}" hint-placeholder-val="{{ false }}"><div style="margin-top: 8px; font-size: 13px; line-height: 1.5; color: {{ r.noteFg }};">{{ r.note }}</div></sc-if>
+      </div>
+    </sc-for>
+  </div>
+  <div style="margin-top: 28px; display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 36px; align-items: end;">
+    <p style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 32px; line-height: 1.4; text-wrap: pretty;">只要是小评审团，就一定会有争议。</p>
+    <div>
+      <div style="font-size: 15px; color: #57534C;">1992 年的评审构成</div>
+      <div style="margin-top: 8px; display: flex; height: 44px;">
+        <sc-for list="{{ jury }}" as="j" hint-placeholder-count="4">
+          <div style="width: {{ j.w }}; background: {{ j.bg }}; color: {{ j.fg }}; box-shadow: inset -2px 0 0 #F4EFE4; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 15px;">{{ j.share }}%</div>
+        </sc-for>
+      </div>
+      <div style="margin-top: 6px; display: flex;">
+        <sc-for list="{{ jury }}" as="j" hint-placeholder-count="4">
+          <div style="width: {{ j.w }}; font-size: 13px; text-align: center;">{{ j.group }}</div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: auto; padding-top: 28px; display: flex; justify-content: space-between; gap: 24px; font-size: 16px; color: #57534C;"><span>黑底：主播认为离谱的规则。“1990 年代初”的两条只知道在李行任内</span><span style="font-family: 'IBM Plex Mono', monospace;">09</span></div>
+</section>
+
+<section id="m10" data-screen-label="M10 大陆电影的八道门" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F4EFE4; color: #1C1C1C; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
+  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
+  <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #57534C;"><span>M10 · 门</span><span style="display: flex; align-items: center; gap: 10px;"><span style="flex: none; width: 28px; height: 28px; border-radius: 50%; background-image: url('assets/gh/trophyB.jpg'); background-size: 230% auto; background-position: 52% 20%; box-shadow: 0 0 0 1.5px #C9A227;"></span>电影巨辩 EP11 · 金马六十年</span></div>
+  <h2 style="margin: 32px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 62px; line-height: 1.2;">大陆电影的八道门</h2>
+  <p style="margin: 14px 0 0; font-size: 19px; line-height: 1.65; color: #3A3732;"><span style="font-family: 'Noto Serif SC', serif; font-weight: 700; color: #1C1C1C;">“大陆对金马的放开，是一小步一小步的，没有一步到位。”</span>从第一次邀请到全面放开，用了二十年。</p>
+  <div style="margin-top: 30px; display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 8px; border-bottom: 3px solid #1C1C1C;">
+    <sc-for list="{{ doors }}" as="d" hint-placeholder-count="8">
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 14px; white-space: nowrap;">{{ d.when }}</div>
+        <div style="margin-top: 4px; font-size: 14px; font-weight: 700; white-space: nowrap;">{{ d.state }}</div>
+        <svg viewBox="0 0 108 132" width="84" height="103" style="margin-top: 8px; display: block; overflow: visible;" aria-hidden="true">
+          <rect x="14" y="10" width="72" height="112" fill="#C9A227" stroke="#1C1C1C" stroke-width="3"></rect>
+          <polygon points="{{ d.leaf }}" fill="#E9E2D2" stroke="#1C1C1C" stroke-width="2.5" stroke-linejoin="round"></polygon>
+          <polygon points="{{ d.leaf2 }}" fill="#E9E2D2" stroke="#1C1C1C" stroke-width="2.5" stroke-linejoin="round"></polygon>
+          <path d="{{ d.marks }}" fill="none" stroke="#1C1C1C" stroke-width="3" stroke-linecap="round"></path>
+        </svg>
+      </div>
+    </sc-for>
+  </div>
+  <div style="margin-top: 22px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 36px;">
+    <sc-for list="{{ doors }}" as="d" hint-placeholder-count="8">
+      <div style="display: grid; grid-template-columns: 38px minmax(0, 1fr); gap: 10px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 20px;">{{ d.n }}</div>
+        <div>
+          <div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 19px; line-height: 1.4;">{{ d.title }}</div>
+          <div style="margin-top: 3px; font-size: 15px; line-height: 1.6; color: #3A3732; text-wrap: pretty;">{{ d.detail }}</div>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+  <div style="margin-top: 26px; border-top: 2px solid #1C1C1C; padding-top: 14px;">
+    <div style="display: grid; grid-template-columns: 70px minmax(0, 1.2fr) minmax(0, 1fr); gap: 12px; font-size: 14px; color: #57534C;"><span>第六扇门后</span><span>报名成功（实心）</span><span>被令退赛（虚线）</span></div>
+    <sc-for list="{{ coprod }}" as="r" hint-placeholder-count="6">
+      <div style="margin-top: 8px; display: grid; grid-template-columns: 70px minmax(0, 1.2fr) minmax(0, 1fr); gap: 12px; align-items: center;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 16px;">{{ r.year }}</span>
+        <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+          <sc-for list="{{ r.ins }}" as="f" hint-placeholder-count="1"><span style="background: #B4472E; color: #F4EFE4; padding: 2px 8px; font-size: 14px; line-height: 1.5;">{{ f }}</span></sc-for>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+          <sc-for list="{{ r.outs }}" as="f" hint-placeholder-count="1"><span style="border: 1.5px dashed #B4472E; color: #B4472E; padding: 1px 7px; font-size: 14px; line-height: 1.5;">{{ f }}</span></sc-for>
+          <sc-if value="{{ r.noOut }}" hint-placeholder-val="{{ false }}"><span style="font-size: 14px; color: #57534C;">—</span></sc-if>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+  <div style="margin-top: auto; padding-top: 26px; display: flex; justify-content: space-between; gap: 24px; font-size: 16px; color: #57534C;"><span>门只表示状态；金色 = 开着的部分。报名成功的大陆片，背后都有一个香港或外资的出品身份</span><span style="font-family: 'IBM Plex Mono', monospace;">10</span></div>
+</section>
+
+<section id="m11" data-screen-label="M11 1996 阳光灿烂的日子事件" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #1C1C1C; color: #F4EFE4; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
+  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%23C9A227%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%231C1C1C%22/%3E%3C/svg%3E');"></div>
+  <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #B9B2A3;"><span>M11 · 1996</span><span style="display: flex; align-items: center; gap: 10px;"><span style="flex: none; width: 28px; height: 28px; border-radius: 50%; background-image: url('assets/gh/trophyB.jpg'); background-size: 230% auto; background-position: 52% 20%; box-shadow: 0 0 0 1.5px #C9A227;"></span>电影巨辩 EP11 · 金马六十年</span></div>
+  <h2 style="margin: 32px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 62px; line-height: 1.2;"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600;">1996</span>：《阳光灿烂的日子》事件</h2>
+  <div style="margin-top: 40px; display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 44px;">
+    <div style="position: relative;">
+      <div style="position: absolute; left: 17px; top: 18px; bottom: 18px; width: 2px; background: rgba(244,239,228,0.45);"></div>
+      <sc-for list="{{ flow96 }}" as="s" hint-placeholder-count="10">
+        <div style="position: relative; display: grid; grid-template-columns: 36px minmax(0, 1fr); gap: 16px; align-items: start; padding-bottom: 14px;">
+          <span style="width: 36px; height: 36px; border-radius: 50%; background: {{ s.bg }}; color: {{ s.fg }}; border: 2px solid #F4EFE4; box-sizing: border-box; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 15px;">{{ s.n }}</span>
+          <span style="padding-top: 5px; font-size: 18px; line-height: 1.55; text-wrap: pretty;">{{ s.text }}</span>
+        </div>
+      </sc-for>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 26px;">
+      <div style="display: grid; grid-template-columns: 132px minmax(0, 1fr); gap: 18px; align-items: end;">
+        <div><div style="position: relative; width: 132px; height: 186px; background: #2A2824;"><image-slot id="gh-m11-poster" src="assets/gh/p-yangguang.jpg" shape="rect" placeholder="《阳光灿烂的日子》海报" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot></div></div>
+        <div>
+          <div style="display: flex; align-items: baseline; gap: 10px;"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 64px; line-height: 1; color: #C9A227;">10</span><span style="font-size: 20px;">部报名</span></div>
+          <div style="margin-top: 12px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 5px;">
+            <sc-for list="{{ sq10 }}" as="q" hint-placeholder-count="10"><span style="aspect-ratio: 1; box-sizing: border-box; background: {{ q.bg }}; border: 2px {{ q.line }} #B4472E;"></span></sc-for>
+          </div>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+        <div><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 52px; line-height: 1;">7</span><span style="font-size: 18px;">部退赛</span></div><div style="margin-top: 6px; display: flex; align-items: center; gap: 6px; font-size: 14px; color: #B9B2A3;"><span style="width: 14px; height: 14px; box-sizing: border-box; border: 2px dashed #B4472E;"></span>虚线</div></div>
+        <div><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 52px; line-height: 1;">3</span><span style="font-size: 18px;">部留下</span></div><div style="margin-top: 6px; display: flex; align-items: center; gap: 6px; font-size: 14px; color: #B9B2A3;"><span style="width: 14px; height: 14px; background: #B4472E;"></span>实心，均为合拍片</div></div>
+      </div>
+      <div style="border-top: 2px solid #C9A227; padding-top: 18px;">
+        <p style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 22px; line-height: 1.6; text-wrap: pretty;">“政治上的事情让政治家去操心，我们可以先让两岸的电影统一起来。”</p>
+        <div style="margin-top: 8px; font-size: 14px; color: #B9B2A3;">节目转述李行</div>
+        <p style="margin: 18px 0 0; font-size: 15px; line-height: 1.7; color: #CFC9BC;">主播：事实证明这非常难。文化的整合也受制于政治，很难超前进行。</p>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: auto; padding-top: 32px; display: flex; justify-content: space-between; gap: 24px; font-size: 16px; color: #B9B2A3;"><span>金色：金马一方的动作；灰色：大陆主管部门的动作</span><span style="font-family: 'IBM Plex Mono', monospace;">11</span></div>
+</section>
+
+<section id="m12" data-screen-label="M12 金马亏待过谁" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F4EFE4; color: #1C1C1C; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
+  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
+  <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #57534C;"><span>M12 · 导演</span><span style="display: flex; align-items: center; gap: 10px;"><span style="flex: none; width: 28px; height: 28px; border-radius: 50%; background-image: url('assets/gh/trophyB.jpg'); background-size: 230% auto; background-position: 52% 20%; box-shadow: 0 0 0 1.5px #C9A227;"></span>电影巨辩 EP11 · 金马六十年</span></div>
+  <h2 style="margin: 32px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 62px; line-height: 1.2;">金马亏待过谁</h2>
+  <div style="margin-top: 12px; font-size: 19px; color: #57534C;">小评审团每年换人，美学取向就完全不一样。</div>
+  <div style="margin-top: 40px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px;">
+    <sc-for list="{{ directors }}" as="d" hint-placeholder-count="3">
+      <div>
+        <div style="display: flex; gap: 16px; align-items: flex-end;">
+          <div style="position: relative; flex: none; width: 100px; height: 128px; background: #D9D2C2;"><image-slot id="{{ d.slot }}" src="{{ d.img }}" shape="rect" placeholder="{{ d.name }}" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot></div>
+          <div style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 34px; line-height: 1.2;">{{ d.name }}</div>
+        </div>
+        <div style="margin-top: 18px; margin-left: 7px; border-left: 2px solid #1C1C1C; padding-top: 2px;">
+          <sc-for list="{{ d.events }}" as="e" hint-placeholder-count="5">
+            <div style="position: relative; padding: 0 0 14px 22px;">
+              <div style="position: absolute; left: -8px; top: 5px; width: 14px; height: 14px; border-radius: 50%; box-sizing: border-box; background: {{ e.dotBg }}; border: 3px solid {{ e.dotBd }};"></div>
+              <div style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 18px; line-height: 1.3;">{{ e.yl }}</div>
+              <div style="margin-top: 5px; display: flex; gap: 10px; align-items: flex-start;">
+                <sc-if value="{{ e.hasImg }}" hint-placeholder-val="{{ false }}"><div style="position: relative; flex: none; width: 44px; height: 64px; background: #D9D2C2;"><image-slot id="{{ e.slot }}" src="{{ e.img }}" shape="rect" placeholder="海报" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot></div></sc-if>
+                <div style="flex: 1; min-width: 0; padding: {{ e.pad }}; background: {{ e.bg }}; border: {{ e.bd }}; font-size: 15px; line-height: 1.55; text-wrap: pretty;">{{ e.text }}</div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+        <sc-if value="{{ d.hasQuote }}" hint-placeholder-val="{{ false }}">
+          <div style="margin-top: 10px; border-top: 2px solid #1C1C1C; padding-top: 14px;">
+            <div style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 24px; line-height: 1.45;">“{{ d.quote }}”</div>
+            <div style="margin-top: 6px; font-size: 14px; color: #57534C;">节目转述</div>
+            <div style="margin-top: 10px; font-size: 15px; line-height: 1.6; color: #3A3732;">{{ d.aside }}</div>
+          </div>
+        </sc-if>
+      </div>
+    </sc-for>
+  </div>
+  <div style="margin-top: auto; padding-top: 32px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; font-size: 15px; color: #57534C;">
+    <div style="display: flex; flex-wrap: wrap; gap: 8px 22px; align-items: center;">
+      <span style="display: flex; align-items: center; gap: 8px;"><span style="width: 12px; height: 12px; border-radius: 50%; background: #1C1C1C;"></span>受挫或得奖</span>
+      <span style="display: flex; align-items: center; gap: 8px;"><span style="width: 22px; height: 14px; border: 1.5px dashed #1C1C1C;"></span>退出</span>
+      <span style="display: flex; align-items: center; gap: 8px;"><span style="width: 22px; height: 14px; border: 1.5px solid #C9A227;"></span>转折</span>
+      <span style="display: flex; align-items: center; gap: 8px;"><span style="width: 22px; height: 14px; background: #C9A227;"></span>和解</span>
+      <span>约 = 节目只说了大致时间</span>
+    </div>
+    <span style="font-family: 'IBM Plex Mono', monospace;">12</span>
+  </div>
+</section>
+
+<section id="m13" data-screen-label="M13 最佳剧情片去了哪里" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F4EFE4; color: #1C1C1C; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
+  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
+  <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #57534C;"><span>M13 · 最佳剧情片</span><span style="display: flex; align-items: center; gap: 10px;"><span style="flex: none; width: 28px; height: 28px; border-radius: 50%; background-image: url('assets/gh/trophyB.jpg'); background-size: 230% auto; background-position: 52% 20%; box-shadow: 0 0 0 1.5px #C9A227;"></span>电影巨辩 EP11 · 金马六十年</span></div>
+  <h2 style="margin: 32px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 62px; line-height: 1.2;">最佳剧情片去了哪里</h2>
+  <div style="margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: 16px;">
+    <span style="display: flex; align-items: center; gap: 8px;"><span style="width: 14px; height: 14px; border-radius: 50%; background: #5E548E;"></span>台湾</span>
+    <span style="display: flex; align-items: center; gap: 8px;"><span style="width: 14px; height: 14px; border-radius: 50%; background: #C2417A;"></span>香港</span>
+    <span style="display: flex; align-items: center; gap: 8px;"><span style="width: 14px; height: 14px; border-radius: 50%; background: #B4472E;"></span>大陆</span>
+    <span style="display: flex; align-items: center; gap: 8px;"><span style="width: 14px; height: 14px; border-radius: 50%; background: #2A9D8F;"></span>东南亚与海外</span>
+    <span style="color: #57534C;">短刻度：节目没有提到的年份，留空</span>
+  </div>
+  <div style="position: relative; margin-top: 30px; height: 150px;">
+    <div style="position: absolute; left: {{ m13.brLeft }}; width: {{ m13.brW }}; top: 0; height: 12px; border: 1.5px solid #5E548E; border-bottom: 0; box-sizing: border-box;"></div>
+    <div style="position: absolute; left: {{ m13.brLeft }}; top: 18px; font-size: 14px; color: #3A3732; white-space: nowrap;">1965–1987：节目提到的全是台湾片</div>
+    <div style="position: absolute; left: {{ m13.x2013 }}; top: 0; height: 78px; border-left: 1.5px solid #2A9D8F;"></div>
+    <div style="position: absolute; right: 0; top: 0; text-align: right; font-size: 14px; line-height: 1.5; color: #3A3732;"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600;">2013</span> 新加坡导演的<br>第一部长片</div>
+    <div style="position: absolute; left: 0; right: 0; top: 92px; height: 2px; background: #1C1C1C;"></div>
+    <sc-for list="{{ m13.slots }}" as="s" hint-placeholder-count="20">
+      <div style="position: absolute; left: {{ s.left }}; top: {{ s.tTop }}; width: 1px; height: {{ s.tH }}; background: #1C1C1C;"></div>
+      <sc-if value="{{ s.has }}" hint-placeholder-val="{{ false }}"><div style="position: absolute; left: {{ s.dot }}; top: 85px; width: 15px; height: 15px; border-radius: 50%; background: {{ s.color }}; box-shadow: 0 0 0 2px #F4EFE4;"></div></sc-if>
+    </sc-for>
+    <sc-for list="{{ m13.decades }}" as="d" hint-placeholder-count="7">
+      <div style="position: absolute; left: {{ d.left }}; top: 112px; font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 15px; transform: translateX(-50%);">{{ d.year }}</div>
+    </sc-for>
+  </div>
+  <div style="margin-top: 14px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(10, auto); grid-auto-flow: column; gap: 0 40px;">
+    <sc-for list="{{ m13.list }}" as="b" hint-placeholder-count="20">
+      <div style="display: grid; grid-template-columns: 56px minmax(0, 1fr) auto; gap: 12px; align-items: baseline; padding: 6px 0; border-bottom: 1px solid rgba(28,28,28,0.16);">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 16px;">{{ b.year }}</span>
+        <span style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 17px; line-height: 1.4;">{{ b.film }}<span style="font-family: 'Noto Sans SC', sans-serif; font-weight: 400; font-size: 13px; color: #57534C;">{{ b.note }}</span></span>
+        <span style="display: flex; align-items: center; gap: 6px; font-size: 13px; white-space: nowrap;"><span style="width: 10px; height: 10px; border-radius: 50%; background: {{ b.color }};"></span>{{ b.region }}</span>
+      </div>
+    </sc-for>
+  </div>
+  <div style="margin-top: 22px; display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 36px; align-items: start;">
+    <div style="display: flex; flex-direction: column; gap: 12px; font-size: 16px; line-height: 1.65;">
+      <div style="display: grid; grid-template-columns: 26px minmax(0, 1fr) 60px; gap: 0 12px; align-items: start;"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600;">1</span><span>主播说，从第三届起到 1988 年《七小福》，再没有港片拿过这个奖。</span><div style="position: relative; width: 60px; height: 88px; background: #D9D2C2;"><image-slot id="gh-m13-qixiaofu" src="assets/gh/p-qixiaofu.jpg" shape="rect" placeholder="《七小福》" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot></div></div>
+      <div style="display: grid; grid-template-columns: 26px minmax(0, 1fr) 60px; gap: 0 12px; align-items: start;"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600;">2</span><span>2013 年的对手是《天注定》《一代宗师》《郊游》《毒战》，赢的是陈哲艺的第一部长片《爸妈不在家》。</span><div style="position: relative; width: 60px; height: 88px; background: #D9D2C2;"><image-slot id="gh-m13-ilo" src="assets/gh/p-ilo.jpg" shape="rect" placeholder="《爸妈不在家》" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot></div></div>
+    </div>
+    <div style="border: 1.5px solid #1C1C1C; padding: 14px 16px;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 15px;">2018 年的提名</div>
+      <sc-for list="{{ m13.y2018 }}" as="r" hint-placeholder-count="2">
+        <div style="margin-top: 10px; display: grid; grid-template-columns: 100px repeat(5, 26px) auto; gap: 5px; align-items: center; font-size: 14px;">
+          <span>{{ r.label }}</span>
+          <sc-for list="{{ r.cells }}" as="c" hint-placeholder-count="5"><span style="height: 26px; background: {{ c.bg }};"></span></sc-for>
+          <span style="padding-left: 6px; font-size: 13px; color: #3A3732; white-space: nowrap;">{{ r.text }}</span>
+        </div>
+      </sc-for>
+      <div style="margin-top: 10px; font-size: 14px; line-height: 1.55; color: #3A3732;">台湾有人问：这到底是金鸡奖还是金马奖？</div>
+    </div>
+  </div>
+  <div style="margin-top: auto; padding-top: 28px; display: flex; justify-content: space-between; gap: 24px; font-size: 16px; color: #57534C;"><span>仅含节目中提到的年份</span><span style="font-family: 'IBM Plex Mono', monospace;">13</span></div>
+</section>
+
+<section id="m14" data-screen-label="M14 2002 钱从哪里来" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F4EFE4; color: #1C1C1C; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
+  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
+  <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #57534C;"><span>M14 · 预算</span><span style="display: flex; align-items: center; gap: 10px;"><span style="flex: none; width: 28px; height: 28px; border-radius: 50%; background-image: url('assets/gh/trophyB.jpg'); background-size: 230% auto; background-position: 52% 20%; box-shadow: 0 0 0 1.5px #C9A227;"></span>电影巨辩 EP11 · 金马六十年</span></div>
+  <h2 style="margin: 32px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 62px; line-height: 1.2;"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600;">2002</span>：钱从哪里来</h2>
+  <div style="margin-top: 40px; display: grid; grid-template-columns: 400px minmax(0, 1fr); gap: 48px;">
+    <div>
+      <div style="display: flex; gap: 22px; height: 360px;">
+        <div style="position: relative; flex: none; width: 140px; box-sizing: border-box; border: 2px solid #1C1C1C; background: repeating-linear-gradient(135deg, transparent 0 9px, rgba(28,28,28,0.1) 9px 11px);">
+          <div style="position: absolute; left: 0; right: 0; bottom: 0; height: 25%; background: #1C1C1C;"></div>
+        </div>
+        <div style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div><div style="font-size: 15px; color: #57534C;">金马一届的实际开销</div><div style="margin-top: 4px; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 40px; line-height: 1.2;">五六千万</div></div>
+          <div><div style="font-size: 15px; color: #57534C;">新闻局每年的补贴</div><div style="margin-top: 4px; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 30px; line-height: 1.2;">一千几百万</div><div style="margin-top: 6px; display: inline-block; background: #1C1C1C; color: #F4EFE4; padding: 2px 10px; font-size: 15px;">约四分之一</div></div>
+        </div>
+      </div>
+      <div style="margin-top: 22px; border-top: 2px solid #8A8F93; padding-top: 12px;">
+        <div style="font-size: 15px; color: #57534C;">2002 年高雄市政府的赞助</div>
+        <div style="margin-top: 6px; display: flex; gap: 28px; align-items: baseline;"><span><span style="font-size: 14px;">实际 </span><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 26px;">1000 万</span></span><span style="color: #57534C;"><span style="font-size: 14px;">对外称 </span><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 26px;">1500 万</span></span></div>
+      </div>
+    </div>
+    <div style="position: relative;">
+      <div style="position: absolute; left: 15px; top: 16px; bottom: 16px; width: 2px; background: #8A8F93;"></div>
+      <sc-for list="{{ fund }}" as="s" hint-placeholder-count="6">
+        <div style="position: relative; display: grid; grid-template-columns: 32px minmax(0, 1fr); gap: 16px; align-items: start; padding-bottom: 18px;">
+          <span style="width: 32px; height: 32px; border-radius: 50%; background: #8A8F93; color: #1C1C1C; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 15px;">{{ s.n }}</span>
+          <span style="padding-top: 3px; font-size: 18px; line-height: 1.55; text-wrap: pretty;">{{ s.text }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+  <div style="margin-top: 34px; background: #1C1C1C; color: #F4EFE4; padding: 30px 34px; display: grid; grid-template-columns: 430px minmax(0, 1fr); gap: 34px; align-items: center;">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+      <div style="border: 2px solid #F4EFE4; padding: 14px 0; text-align: center; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 30px;">不上台</div>
+      <div style="border: 2px solid #F4EFE4; padding: 14px 0; text-align: center; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 30px;">不致辞</div>
+      <div style="border: 2px solid #F4EFE4; padding: 14px 0; text-align: center; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 30px;">不颁奖</div>
+    </div>
+    <div>
+      <div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 22px; line-height: 1.5;">“三不”：欢迎政治人物出席，但只坐在台下。</div>
+      <p style="margin: 10px 0 0; font-size: 15px; line-height: 1.7; color: #CFC9BC; text-wrap: pretty;">主播：全世界的电影颁奖有政治人物出场很常见。只是华语地区情况太特殊，他们一上台，就摆不平了。</p>
+    </div>
+  </div>
+  <div style="margin-top: auto; padding-top: 32px; display: flex; justify-content: space-between; gap: 24px; font-size: 16px; color: #57534C;"><span>单位：新台币。均为主播口述的约数，柱高示意，不按刻度</span><span style="font-family: 'IBM Plex Mono', monospace;">14</span></div>
+</section>
+
+<section id="m15" data-screen-label="M15 每任主席留下了什么" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F4EFE4; color: #1C1C1C; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
+  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
+  <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #57534C;"><span>M15 · 主席</span><span style="display: flex; align-items: center; gap: 10px;"><span style="flex: none; width: 28px; height: 28px; border-radius: 50%; background-image: url('assets/gh/trophyB.jpg'); background-size: 230% auto; background-position: 52% 20%; box-shadow: 0 0 0 1.5px #C9A227;"></span>电影巨辩 EP11 · 金马六十年</span></div>
+  <h2 style="margin: 32px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 62px; line-height: 1.2;">每任主席留下了什么</h2>
+  <div style="margin-top: 12px; font-size: 19px; color: #57534C;">从下往上读：每一任在前任的基础上加一层</div>
+  <div style="margin-top: 34px; display: grid; grid-template-columns: minmax(0, 1fr) 230px; gap: 30px; align-items: start;">
+    <div style="display: flex; flex-direction: column; gap: 8px;">
+      <sc-for list="{{ chairs }}" as="c" hint-placeholder-count="5">
+        <div style="margin-left: {{ c.indent }}; margin-right: {{ c.indentR }}; display: grid; grid-template-columns: 60px 128px minmax(0, 1fr); gap: 16px; align-items: center; padding: 12px 18px 12px 12px; background: {{ c.bg }}; border: {{ c.bd }};">
+          <div style="position: relative; width: 60px; height: 76px; background: {{ c.monoBg }}; display: flex; align-items: center; justify-content: center;"><sc-if value="{{ c.has }}" hint-placeholder-val="{{ true }}"><image-slot id="{{ c.slot }}" src="{{ c.src }}" shape="rect" placeholder="{{ c.chair }}" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot></sc-if><sc-if value="{{ c.noImg }}" hint-placeholder-val="{{ false }}"><span style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 28px;">{{ c.mono }}</span></sc-if></div>
+          <div><div style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 26px; line-height: 1.25;">{{ c.chair }}</div><div style="margin-top: 2px; font-family: 'IBM Plex Mono', monospace; font-size: 13px;">{{ c.meta }}</div></div>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+            <sc-for list="{{ c.legacy }}" as="g" hint-placeholder-count="2"><span style="background: rgba(244,239,228,0.72); border: 1px solid rgba(28,28,28,0.35); padding: 4px 12px; font-size: 16px; line-height: 1.5;">{{ g }}</span></sc-for>
+          </div>
+        </div>
+      </sc-for>
+      <div style="margin-top: 10px; display: flex; align-items: center; gap: 12px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; letter-spacing: 0.08em; color: #57534C;"><span style="flex: 1; border-top: 1.5px dashed #57534C;"></span>地基：更早的两位<span style="flex: 1; border-top: 1.5px dashed #57534C;"></span></div>
+      <sc-for list="{{ base }}" as="c" hint-placeholder-count="2">
+        <div style="display: grid; grid-template-columns: 60px 128px minmax(0, 1fr); gap: 16px; align-items: center; padding: 12px 18px 12px 12px; background: {{ c.bg }}; border: {{ c.bd }};">
+          <div style="position: relative; width: 60px; height: 76px; background: {{ c.monoBg }}; display: flex; align-items: center; justify-content: center;"><sc-if value="{{ c.has }}" hint-placeholder-val="{{ true }}"><image-slot id="{{ c.slot }}" src="{{ c.src }}" shape="rect" placeholder="{{ c.chair }}" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot></sc-if><sc-if value="{{ c.noImg }}" hint-placeholder-val="{{ false }}"><span style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 28px;">{{ c.mono }}</span></sc-if></div>
+          <div><div style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 26px; line-height: 1.25;">{{ c.chair }}</div><div style="margin-top: 2px; font-family: 'IBM Plex Mono', monospace; font-size: 13px;">{{ c.meta }}</div></div>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+            <sc-for list="{{ c.legacy }}" as="g" hint-placeholder-count="2"><span style="background: rgba(244,239,228,0.72); border: 1px solid rgba(28,28,28,0.35); padding: 4px 12px; font-size: 16px; line-height: 1.5;">{{ g }}</span></sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="border-top: 2px solid #1C1C1C; padding-top: 14px;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.08em; color: #57534C;">主播的小担心</div>
+      <p style="margin: 10px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 20px; line-height: 1.6; text-wrap: pretty;">每任主席都加一个单元，后任又不好意思取消，几十年后办得过来吗？</p>
+    </div>
+  </div>
+  <div style="margin-top: auto; padding-top: 32px; display: flex; justify-content: space-between; gap: 24px; font-size: 16px; color: #57534C;"><span>未标年份的，节目没有说上任时间</span><span style="font-family: 'IBM Plex Mono', monospace;">15</span></div>
+</section>
+
+<section id="m16" data-screen-label="M16 两次整合机遇" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F4EFE4; color: #1C1C1C; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
+  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
+  <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #57534C;"><span>M16 · 机遇</span><span style="display: flex; align-items: center; gap: 10px;"><span style="flex: none; width: 28px; height: 28px; border-radius: 50%; background-image: url('assets/gh/trophyB.jpg'); background-size: 230% auto; background-position: 52% 20%; box-shadow: 0 0 0 1.5px #C9A227;"></span>电影巨辩 EP11 · 金马六十年</span></div>
+  <h2 style="margin: 32px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 62px; line-height: 1.2;">两次整合机遇</h2>
+  <div style="margin-top: 40px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px;">
+    <div style="border: 2px solid #1C1C1C; padding: 26px 28px; display: flex; flex-direction: column;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 22px;">1990 年代前期</div>
+      <div style="margin-top: 14px; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 30px; line-height: 1.4;">台湾出钱，香港出人，大陆出场地</div>
+      <div style="margin-top: 22px; border-top: 1px solid rgba(28,28,28,0.25); padding-top: 12px;"><div style="font-size: 14px; color: #57534C;">标志</div><div style="margin-top: 4px; font-size: 18px; line-height: 1.6;">台湾片商投资大陆第五代导演</div></div>
+      <div style="margin-top: 14px; border-top: 1px solid rgba(28,28,28,0.25); padding-top: 12px;"><div style="font-size: 14px; color: #57534C;">当时的期待</div><div style="margin-top: 4px; font-size: 18px; line-height: 1.6;">有人以为可以实现一体化</div></div>
+      <div style="margin-top: 14px; border-top: 1px solid rgba(28,28,28,0.25); padding-top: 12px;"><div style="font-size: 14px; color: #57534C;">为什么没成</div><div style="margin-top: 4px; font-size: 18px; line-height: 1.6;">大陆当时还没有电影产业，正在从计划经济转向市场经济</div></div>
+      <div style="margin-top: auto; padding-top: 26px;"><span style="display: inline-block; border: 3px solid #1C1C1C; padding: 2px 14px; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 24px; letter-spacing: 0.1em; transform: rotate(-3deg);">没有实现</span></div>
+    </div>
+    <div style="border: 2px solid #1C1C1C; padding: 26px 28px; display: flex; flex-direction: column;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 22px;">2008–2016 年前后</div>
+      <div style="margin-top: 14px; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 30px; line-height: 1.4;">两岸合拍片进入大陆市场</div>
+      <div style="margin-top: 22px; border-top: 1px solid rgba(28,28,28,0.25); padding-top: 12px;"><div style="font-size: 14px; color: #57534C;">标志</div><div style="margin-top: 4px; font-size: 18px; line-height: 1.6;">合拍片《大灌篮》在大陆春节档票房过亿</div></div>
+      <div style="margin-top: 14px; border-top: 1px solid rgba(28,28,28,0.25); padding-top: 12px;"><div style="font-size: 14px; color: #57534C;">当时的期待</div><div style="margin-top: 4px; font-size: 18px; line-height: 1.6;">台湾希望合拍片能占到大陆票房的 7%</div></div>
+      <div style="margin-top: 14px; border-top: 1px solid rgba(28,28,28,0.25); padding-top: 12px;"><div style="font-size: 14px; color: #57534C;">为什么没成</div><div style="margin-top: 4px; font-size: 18px; line-height: 1.6;">政治上的障碍始终没有解决；台湾缺少类型片和大片的制作能力</div></div>
+      <div style="margin-top: auto; padding-top: 26px;"><span style="display: inline-block; border: 3px solid #1C1C1C; padding: 2px 14px; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 24px; letter-spacing: 0.1em; transform: rotate(-3deg);">没有实现</span></div>
+    </div>
+  </div>
+  <div style="margin-top: 40px; border-top: 2px solid #1C1C1C; padding-top: 24px;">
+    <p style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 32px; line-height: 1.5; text-wrap: pretty;">“欧盟一体化的基础，首先是政治，是价值观，不是语言，也不是货币。”</p>
+    <div style="margin-top: 10px; font-size: 15px; color: #57534C;">主播</div>
+  </div>
+  <div style="margin-top: auto; padding-top: 32px; display: flex; justify-content: space-between; gap: 24px; font-size: 16px; color: #57534C;"><span>第二次机遇的时间为年份区间，按节目所指的时期换算</span><span style="font-family: 'IBM Plex Mono', monospace;">16</span></div>
+</section>
+
+<section id="m17" data-screen-label="M17 三个时代的华语电影系统" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F4EFE4; color: #1C1C1C; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
+  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
+  <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #57534C;"><span>M17 · 系统</span><span style="display: flex; align-items: center; gap: 10px;"><span style="flex: none; width: 28px; height: 28px; border-radius: 50%; background-image: url('assets/gh/trophyB.jpg'); background-size: 230% auto; background-position: 52% 20%; box-shadow: 0 0 0 1.5px #C9A227;"></span>电影巨辩 EP11 · 金马六十年</span></div>
+  <h2 style="margin: 32px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 62px; line-height: 1.2;">三个时代的华语电影系统</h2>
+  <div style="margin-top: 36px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px;">
+    <div style="border: 1.5px solid #1C1C1C; padding: 18px 16px 20px; display: flex; flex-direction: column;">
+      <div style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 25px;">冷战年代</div>
+      <div style="margin-top: 2px; font-size: 15px; color: #57534C;">两个互不往来的系统</div>
+      <svg viewBox="0 0 288 250" width="100%" style="margin-top: 12px; display: block;" role="img" aria-label="冷战年代：大陆电影自成一体，港台与东南亚、欧美唐人街相连">
+        <line x1="124" y1="26" x2="124" y2="220" stroke="#8A8F93" stroke-width="2" stroke-dasharray="4 6"></line>
+        <line x1="206" y1="78" x2="168" y2="176" stroke="#1C1C1C" stroke-width="2"></line>
+        <line x1="206" y1="78" x2="252" y2="168" stroke="#1C1C1C" stroke-width="2"></line>
+        <line x1="168" y1="176" x2="252" y2="168" stroke="#1C1C1C" stroke-width="2"></line>
+        <circle cx="62" cy="120" r="42" fill="#B4472E"></circle>
+        <text x="62" y="126" text-anchor="middle" font-family="Noto Sans SC" font-weight="700" font-size="16" fill="#F4EFE4">大陆电影</text>
+        <circle cx="206" cy="78" r="32" fill="#C2417A"></circle>
+        <text x="206" y="84" text-anchor="middle" font-family="Noto Sans SC" font-weight="700" font-size="17" fill="#F4EFE4">港台</text>
+        <circle cx="168" cy="176" r="18" fill="#2A9D8F"></circle>
+        <text x="168" y="216" text-anchor="middle" font-family="Noto Sans SC" font-weight="500" font-size="14" fill="#1C1C1C">东南亚华人区</text>
+        <circle cx="252" cy="168" r="14" fill="#2A9D8F"></circle>
+        <text x="252" y="204" text-anchor="middle" font-family="Noto Sans SC" font-weight="500" font-size="14" fill="#1C1C1C">欧美唐人街</text>
+      </svg>
+      <div style="margin-top: 10px; display: flex; flex-direction: column; gap: 6px; font-size: 14px; line-height: 1.5;">
+        <div><b>大陆电影</b>　关起门来自己做</div>
+        <div><b>港台</b>　海外华语电影的中心</div>
+        <div><b>东南亚华人区</b>　市场与人才</div>
+        <div><b>欧美唐人街</b>　市场</div>
+      </div>
+      <p style="margin: 14px 0 0; padding-top: 12px; border-top: 1px solid rgba(28,28,28,0.25); font-size: 13px; line-height: 1.65; color: #3A3732; text-wrap: pretty;">在大陆与外界相对隔绝的年代，大陆以外的华人社区诞生了黄金时期的香港商业电影，也诞生了台湾艺术电影的高峰。这和市场人口不成正比。</p>
+    </div>
+    <div style="border: 1.5px solid #1C1C1C; padding: 18px 16px 20px; display: flex; flex-direction: column;">
+      <div style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 25px;">2010 年代</div>
+      <div style="margin-top: 2px; font-size: 15px; color: #57534C;">一个产业中心，一座灯塔，互补</div>
+      <svg viewBox="0 0 288 250" width="100%" style="margin-top: 12px; display: block;" role="img" aria-label="2010 年代：北京与金马奖双向相连">
+        <line x1="138" y1="120" x2="188" y2="120" stroke="#1C1C1C" stroke-width="2.5"></line>
+        <path d="M138 120l10 -6v12z" fill="#1C1C1C"></path>
+        <path d="M188 120l-10 -6v12z" fill="#1C1C1C"></path>
+        <circle cx="84" cy="120" r="52" fill="#B4472E"></circle>
+        <text x="84" y="127" text-anchor="middle" font-family="Noto Sans SC" font-weight="700" font-size="21" fill="#F4EFE4">北京</text>
+        <circle cx="222" cy="120" r="32" fill="#C9A227"></circle>
+        <text x="222" y="126" text-anchor="middle" font-family="Noto Sans SC" font-weight="700" font-size="16" fill="#1C1C1C">金马奖</text>
+      </svg>
+      <div style="margin-top: 10px; display: flex; flex-direction: column; gap: 6px; font-size: 14px; line-height: 1.5;">
+        <div><b>北京</b>　大华语电影的产业中心</div>
+        <div><b>金马奖</b>　奖项的灯塔</div>
+      </div>
+    </div>
+    <div style="border: 1.5px dashed #1C1C1C; padding: 18px 16px 20px; display: flex; flex-direction: column;">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px;"><span style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 25px;">主播设想的未来</span><span style="border: 1.5px solid #1C1C1C; padding: 0 8px; font-size: 13px;">设想</span></div>
+      <div style="margin-top: 2px; font-size: 15px; color: #57534C;">和冷战年代相似，但欧美那一块不再是唐人街</div>
+      <svg viewBox="0 0 288 250" width="100%" style="margin-top: 12px; display: block;" role="img" aria-label="设想的未来：大陆电影产业自成体系，与另一个以金马奖为灯塔的系统之间隔着一扇关着但没上锁的门">
+        <line x1="210" y1="92" x2="210" y2="58" stroke="#1C1C1C" stroke-width="2" stroke-dasharray="5 5"></line>
+        <line x1="194" y1="138" x2="170" y2="180" stroke="#1C1C1C" stroke-width="2" stroke-dasharray="5 5"></line>
+        <line x1="226" y1="138" x2="244" y2="176" stroke="#1C1C1C" stroke-width="2" stroke-dasharray="5 5"></line>
+        <circle cx="56" cy="120" r="42" fill="#F4EFE4" stroke="#B4472E" stroke-width="3" stroke-dasharray="7 5"></circle>
+        <text x="56" y="116" text-anchor="middle" font-family="Noto Sans SC" font-weight="700" font-size="14" fill="#1C1C1C">大陆</text>
+        <text x="56" y="134" text-anchor="middle" font-family="Noto Sans SC" font-weight="700" font-size="14" fill="#1C1C1C">电影产业</text>
+        <rect x="112" y="98" width="24" height="44" fill="#E9E2D2" stroke="#1C1C1C" stroke-width="2"></rect>
+        <circle cx="131" cy="121" r="1.8" fill="#1C1C1C"></circle>
+        <circle cx="210" cy="118" r="26" fill="#F4EFE4" stroke="#C9A227" stroke-width="3.5" stroke-dasharray="7 5"></circle>
+        <text x="210" y="123" text-anchor="middle" font-family="Noto Sans SC" font-weight="700" font-size="14" fill="#1C1C1C">金马奖</text>
+        <circle cx="210" cy="40" r="18" fill="#F4EFE4" stroke="#C2417A" stroke-width="3" stroke-dasharray="6 4"></circle>
+        <text x="236" y="45" text-anchor="start" font-family="Noto Sans SC" font-weight="500" font-size="14" fill="#1C1C1C">港台</text>
+        <circle cx="160" cy="196" r="18" fill="#F4EFE4" stroke="#2A9D8F" stroke-width="3" stroke-dasharray="6 4"></circle>
+        <text x="160" y="234" text-anchor="middle" font-family="Noto Sans SC" font-weight="500" font-size="14" fill="#1C1C1C">东南亚</text>
+        <circle cx="250" cy="190" r="16" fill="#F4EFE4" stroke="#2A9D8F" stroke-width="3" stroke-dasharray="6 4"></circle>
+        <text x="250" y="224" text-anchor="middle" font-family="Noto Sans SC" font-weight="500" font-size="13" fill="#1C1C1C">欧美</text>
+        <text x="250" y="240" text-anchor="middle" font-family="Noto Sans SC" font-weight="500" font-size="13" fill="#1C1C1C">新一代华裔</text>
+      </svg>
+      <div style="margin-top: 10px; display: flex; flex-direction: column; gap: 6px; font-size: 14px; line-height: 1.5;">
+        <div><b>大陆电影产业</b>　自成体系</div>
+        <div><b>门</b>　关着，但没上锁。主播说双方“其实没有断”</div>
+        <div><b>金马奖</b>　另一个系统的灯塔</div>
+        <div><b>港台</b>　两地重新互动</div>
+        <div><b>东南亚</b>　已经有成绩（见 M13 的 2013 年）</div>
+        <div><b>欧美新一代华裔</b>　还没有太大动静，可以期待</div>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: 30px; border-top: 2px solid #1C1C1C; padding-top: 20px; display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 30px; align-items: end;">
+    <p style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 30px; line-height: 1.5; text-wrap: pretty;">“承载文化的主体是人，不是那些抽象的宏大的东西。”</p>
+    <div style="font-size: 15px; line-height: 1.6; color: #57534C;">以上是主播的设想，不是预测。第三联用虚线表示。</div>
+  </div>
+  <div style="margin-top: auto; padding-top: 32px; display: flex; justify-content: space-between; gap: 24px; font-size: 16px; color: #57534C;"><span>圆的颜色对应地区：赭红 大陆，霓虹玫 港台，青石 东南亚与海外，鎏金 金马</span><span style="font-family: 'IBM Plex Mono', monospace;">17</span></div>
+</section>
+
+<section id="m18" data-screen-label="M18 提及频次" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F4EFE4; color: #1C1C1C; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
+  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
+  <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #57534C;"><span>M18 · 数据</span><span style="display: flex; align-items: center; gap: 10px;"><span style="flex: none; width: 28px; height: 28px; border-radius: 50%; background-image: url('assets/gh/trophyB.jpg'); background-size: 230% auto; background-position: 52% 20%; box-shadow: 0 0 0 1.5px #C9A227;"></span>电影巨辩 EP11 · 金马六十年</span></div>
+  <h2 style="margin: 32px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 62px; line-height: 1.2;">提及频次</h2>
+  <div style="margin-top: 30px; display: grid; grid-template-columns: 330px minmax(0, 1fr); gap: 36px; align-items: center; background: #1C1C1C; color: #F4EFE4; padding: 22px 28px;">
+    <div style="display: flex; align-items: baseline; gap: 12px;"><span style="font-size: 18px;">“金马”约</span><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 84px; line-height: 1; color: #C9A227;">497</span><span style="font-size: 18px;">次</span></div>
+    <div style="font-size: 20px; line-height: 1.6;">平均每 <span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #C9A227;">22</span> 秒出现一次</div>
+  </div>
+  <div style="margin-top: 28px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px 44px;">
+    <div>
+      <div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 22px;">人物</div>
+      <div style="margin-top: 10px; display: flex; flex-direction: column; gap: 5px;">
+        <sc-for list="{{ fPeople }}" as="r" hint-placeholder-count="11">
+          <div style="display: grid; grid-template-columns: 70px minmax(0, 1fr) 34px; gap: 10px; align-items: center; font-size: 15px;"><span>{{ r.name }}</span><span style="height: 16px; width: {{ r.w }}; background: {{ r.bg }};"></span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; text-align: right;">{{ r.count }}</span></div>
+        </sc-for>
+      </div>
+    </div>
+    <div>
+      <div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 22px;">概念</div>
+      <div style="margin-top: 10px; display: flex; flex-direction: column; gap: 5px;">
+        <sc-for list="{{ fConcepts }}" as="r" hint-placeholder-count="12">
+          <div style="display: grid; grid-template-columns: 90px minmax(0, 1fr) 34px; gap: 10px; align-items: center; font-size: 15px;"><span>{{ r.name }}</span><span style="height: 16px; width: {{ r.w }}; background: {{ r.bg }};"></span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; text-align: right;">{{ r.count }}</span></div>
+        </sc-for>
+      </div>
+    </div>
+    <div>
+      <div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 22px;">电影</div>
+      <div style="margin-top: 10px; display: flex; flex-direction: column; gap: 5px;">
+        <sc-for list="{{ fFilms }}" as="r" hint-placeholder-count="6">
+          <div style="display: grid; grid-template-columns: 160px minmax(0, 1fr) 26px; gap: 10px; align-items: center; font-size: 15px;"><span>{{ r.name }}</span><span style="height: 16px; width: {{ r.w }}; background: {{ r.bg }};"></span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; text-align: right;">{{ r.count }}</span></div>
+        </sc-for>
+      </div>
+    </div>
+    <div>
+      <div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 22px;">年份提及，按阶段</div>
+      <div style="margin-top: 10px; display: flex; align-items: flex-end; gap: 6px; height: 150px;">
+        <sc-for list="{{ fYears }}" as="y" hint-placeholder-count="9">
+          <div style="flex: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px;">{{ y.count }}</span><span style="margin-top: 3px; width: 100%; height: {{ y.h }}; background: {{ y.bg }};"></span><span style="margin-top: 5px; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 13px; white-space: nowrap;">{{ y.phase }}</span></div>
+        </sc-for>
+      </div>
+      <div style="margin-top: 8px; font-size: 13px; color: #57534C;">单年最多：2010（9 次）</div>
+    </div>
+  </div>
+  <div style="margin-top: 26px; border-top: 2px solid #1C1C1C; padding-top: 14px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 36px; font-size: 15px; line-height: 1.6;">
+    <div style="display: grid; grid-template-columns: 22px minmax(0, 1fr);"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600;">1</span><span>“评审”出现 132 次，是这一期真正的关键词。</span></div>
+    <div style="display: grid; grid-template-columns: 22px minmax(0, 1fr);"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600;">2</span><span>被提到最多的人是李行（60 次），比侯孝贤多三分之一。</span></div>
+    <div style="display: grid; grid-template-columns: 22px minmax(0, 1fr);"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600;">3</span><span>前五名里，三位当过金马执委会主席，一位是改革它的官员，一位是和它冲突最多的导演。</span></div>
+    <div style="display: grid; grid-template-columns: 22px minmax(0, 1fr);"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600;">4</span><span>被提到最多的几部电影，都是引发了事件的电影。</span></div>
+  </div>
+  <div style="margin-top: auto; padding-top: 28px; display: flex; justify-content: space-between; gap: 24px; font-size: 16px; color: #57534C;"><span>转录文本统计，约数。灰色条：官员与政治人物</span><span style="font-family: 'IBM Plex Mono', monospace;">18</span></div>
+</section>
+
+<section id="m20" data-screen-label="M20 主播的分歧" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F4EFE4; color: #1C1C1C; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
+  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
+  <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #57534C;"><span>M20 · 分歧</span><span style="display: flex; align-items: center; gap: 10px;"><span style="flex: none; width: 28px; height: 28px; border-radius: 50%; background-image: url('assets/gh/trophyB.jpg'); background-size: 230% auto; background-position: 52% 20%; box-shadow: 0 0 0 1.5px #C9A227;"></span>电影巨辩 EP11 · 金马六十年</span></div>
+  <h2 style="margin: 32px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 62px; line-height: 1.2;">主播的分歧</h2>
+  <div style="margin-top: 30px; display: flex; flex-direction: column; gap: 20px;">
+    <sc-for list="{{ debates }}" as="d" hint-placeholder-count="5">
+      <div style="border-top: 2px solid #1C1C1C; padding-top: 12px;">
+        <div style="display: flex; gap: 12px; align-items: baseline;"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 16px;">{{ d.n }}</span><span style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 21px; line-height: 1.45;">{{ d.topic }}</span></div>
+        <div style="margin-top: 10px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px;">
+          <div style="background: #E9E2D2; padding: 10px 14px; font-size: 15px; line-height: 1.6;"><span style="font-weight: 700;">{{ d.aWho }}　</span>{{ d.aText }}</div>
+          <div style="border: 1.5px solid #1C1C1C; padding: 9px 13px; font-size: 15px; line-height: 1.6;"><span style="font-weight: 700;">{{ d.bWho }}　</span>{{ d.bText }}</div>
+        </div>
+        <div style="margin-top: 8px; display: flex; gap: 10px; align-items: baseline; font-size: 15px; line-height: 1.6;"><span style="flex: none; width: 10px; height: 10px; background: #C9A227; transform: translateY(1px);"></span><span><b>结果</b>　{{ d.result }}</span></div>
+        <sc-if value="{{ d.hasChart }}" hint-placeholder-val="{{ false }}">
+          <div style="margin-top: 10px; padding-left: 20px; display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: 16px; align-items: center;">
+            <div style="font-size: 13px; line-height: 1.5; color: #57534C;">2010–2018 新导演提名（主播口述）</div>
+            <div style="display: flex; flex-direction: column; gap: 4px;">
+              <sc-for list="{{ newDir }}" as="r" hint-placeholder-count="3">
+                <div style="display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 8px; align-items: center; font-size: 13px;"><span>{{ r.name }}</span><span style="display: flex; align-items: center; gap: 6px;"><span style="height: 13px; width: {{ r.w }}; background: {{ r.bg }};"></span><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600;">{{ r.n }}</span></span></div>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
+      </div>
+    </sc-for>
+  </div>
+  <div style="margin-top: auto; padding-top: 28px; display: flex; justify-content: space-between; gap: 24px; font-size: 16px; color: #57534C;"><span>只有原话可依的才写主播名，其余写“一方 / 另一方”</span><span style="font-family: 'IBM Plex Mono', monospace;">20</span></div>
+</section>
+
+<section id="m19" data-screen-label="M19 金句卡" style="box-sizing: border-box; width: 1080px; margin: 0 auto 64px;">
+  <div style="display: flex; justify-content: space-between; align-items: baseline; padding: 0 4px 20px; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #B9B2A3;"><span>M19 · 金句</span><span style="display: flex; align-items: center; gap: 10px;"><span style="flex: none; width: 28px; height: 28px; border-radius: 50%; background-image: url('assets/gh/trophyB.jpg'); background-size: 230% auto; background-position: 52% 20%; box-shadow: 0 0 0 1.5px #C9A227;"></span>电影巨辩 EP11 · 金马六十年</span></div>
+  <div style="display: grid; grid-template-columns: {{ quoteCols }}; gap: 24px;">
+    <sc-for list="{{ quotes }}" as="q" hint-placeholder-count="11">
+      <div style="grid-column: {{ q.span }}; box-sizing: border-box; min-height: {{ q.minH }}; padding: {{ q.pad }}; background: {{ q.bg }}; color: {{ q.fg }}; display: flex; flex-direction: column; font-family: 'Noto Sans SC', sans-serif;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 16px; color: {{ q.sub }};">{{ q.n }}</div>
+        <div style="margin-top: 22px; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: {{ q.size }}; line-height: 1.45; text-wrap: pretty;">{{ q.text }}</div>
+        <div style="margin-top: auto; padding-top: 24px; font-size: {{ q.subSize }}; color: {{ q.sub }};">— {{ q.source }}</div>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section id="m21" data-screen-label="M21 收尾：记录一个族群的流变" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #1C1C1C; color: #F4EFE4; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column; overflow: hidden;">
+  <div style="position: absolute; left: 50%; top: 66%; width: 0; height: 0;">
+    <div style="position: absolute; left: -340px; top: -340px; width: 680px; height: 680px; border-radius: 50%; border: 1.5px dashed rgba(201,162,39,0.35);"></div>
+    <div style="position: absolute; left: -240px; top: -240px; width: 480px; height: 480px; border-radius: 50%; border: 1.5px dashed rgba(201,162,39,0.5);"></div>
+    <div style="position: absolute; left: -150px; top: -150px; width: 300px; height: 300px; border-radius: 50%; border: 2px dashed rgba(201,162,39,0.7);"></div>
+    <div style="position: absolute; left: -70px; top: -70px; width: 140px; height: 140px; border-radius: 50%; border: 2px solid #C9A227;"></div>
+    <div style="position: absolute; left: -12px; top: -12px; width: 24px; height: 24px; border-radius: 50%; background: #C9A227;"></div>
+  </div>
+  <div style="position: relative; display: flex; justify-content: space-between; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #B9B2A3;"><span>收尾</span><span style="display: flex; align-items: center; gap: 10px;"><span style="flex: none; width: 28px; height: 28px; border-radius: 50%; background-image: url('assets/gh/trophyB.jpg'); background-size: 230% auto; background-position: 52% 20%; box-shadow: 0 0 0 1.5px #C9A227;"></span>电影巨辩 EP11 · 金马六十年</span></div>
+  <h2 style="position: relative; margin: 36px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 68px; line-height: 1.2;">记录一个族群的流变</h2>
+  <div style="position: relative; margin-top: 44px; display: flex; flex-direction: column; gap: 18px; font-family: 'Noto Serif SC', serif; font-weight: 500; font-size: 30px; line-height: 1.55;">
+    <div>这个世纪，华人更汹涌地散入世界的各个角落。</div>
+    <div>金马可以记录他们的思想和观念怎样流变。</div>
+    <div>也可以记录，在这个时代，维系他们的到底是什么。</div>
+  </div>
+  <div style="position: relative; margin-top: auto;">
+    <div style="display: flex; align-items: center; gap: 0;">
+      <div style="flex: 1; height: 30px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2222%22 height=%2230%22%3E%3Crect width=%2222%22 height=%2230%22 fill=%22%23C9A227%22/%3E%3Crect x=%227%22 y=%223.5%22 width=%228%22 height=%225%22 rx=%221%22 fill=%22%231C1C1C%22/%3E%3Crect x=%227%22 y=%2221.5%22 width=%228%22 height=%225%22 rx=%221%22 fill=%22%231C1C1C%22/%3E%3C/svg%3E');"></div>
+      <div style="flex: none; width: 180px; height: 0; border-top: 3px dashed #C9A227; margin-right: -64px;"></div>
+    </div>
+    <div style="margin-top: 14px; display: flex; justify-content: space-between; align-items: baseline;">
+      <span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 28px;">1962</span>
+      <span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 28px;">2023 →</span>
+    </div>
+    <div style="margin-top: 26px; display: flex; justify-content: space-between; gap: 24px; font-size: 16px; color: #B9B2A3;"><span>电影巨辩 EP11 · 老马 × 阿吴</span><span style="font-family: 'IBM Plex Mono', monospace;">21</span></div>
+  </div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;fixedRatio&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;卡片&quot;},&quot;quoteLayout&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;双列&quot;,&quot;单列大卡&quot;],&quot;default&quot;:&quot;双列&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;金句卡&quot;}}">
+const C = { gold: '#C9A227', violet: '#5E548E', ochre: '#B4472E', rose: '#C2417A', teal: '#2A9D8F', ink: '#1C1C1C', grey: '#8A8F93', paper: '#F4EFE4', mute: '#57534C' };
+const REGION = { '台湾': C.violet, '大陆': C.ochre, '香港': C.rose, '东南亚与海外': C.teal };
+const W = 952, Y0 = 1962, Y1 = 2024;
+const xOf = y => (y - Y0) / (Y1 - Y0) * W;
+const px = v => v.toFixed(1) + 'px';
+const CN = ['一', '二', '三', '四', '五', '六', '七', '八'];
+const GOLD8 = ['#F0E4B8', '#E8D597', '#DFC676', '#D4B54F', '#C9A227', '#B08C1C', '#957414', '#7A5F0E'];
+const BR_STYLE = [
+  { bg: '#8A8F93', fg: C.ink }, { bg: '#1C1C1C', fg: C.paper }, { bg: '#3B3936', fg: C.paper }, { bg: '#8A8F93', fg: C.ink },
+  { bg: '#EBDDA8', fg: C.ink }, { bg: '#DEC56E', fg: C.ink }, { bg: '#C9A227', fg: C.ink }, { bg: '#A8861A', fg: C.ink }, { bg: '#2A9D8F', fg: C.ink }
+];
+
+const POINTS = [
+  ['百分之百的政治产物', '1962 年创办，为的是推广国语片、争取香港影人、给领导人祝寿。'],
+  ['卡在两种模式中间', '做的是奥斯卡式的年度盘点，用的是电影节式的小评审团。争议大多出在这里。'],
+  ['只能是金马', '要办一个覆盖整个华语圈的奖，大陆的环境做不到，香港金像奖没有动机。'],
+  ['六十年，八个阶段', '每一段的终点都是一次转折：1978、1984、1990、1996、2004、2010、2019。'],
+  ['改了几十次的评审制度', '主题意识占分、导演一人两票、让记者看监控直播，都出现过。争议从没变小。'],
+  ['亏待新电影', '侯孝贤在 1980 年代屡次全军覆没。1989 年《悲情城市》输掉最佳剧情片。'],
+  ['一小步一小步', '从 1990 年开始邀请，到 2010 年纯大陆片可以自由报名，中间隔了二十年。'],
+  ['只有九年', '真正的两岸三地同场竞技是 2010 到 2018 年。主播说，做不到反而是正常的。'],
+  ['两头受压', '2002 年预算被冻结。“政治人物不上台、不致辞、不颁奖”的原则就是这样逼出来的。'],
+  ['重建坐标', '2019 年之后转向全球华人。主播设想以金马为灯塔，再造一个华人电影系统。']
+];
+
+const BRANCHES = [
+  ['立论', '', '', ['第 60 届与“华语语系”', '两种模式之间', '为什么只能是金马', '小评审团 vs 学院投票', '老马的评审亲历']],
+  ['一', '1962–1977', '政治宣传', ['国语片与统战香港', '祝寿日颁奖、官员训话', '主题意识占分', '健康写实与政宣片', '亚洲影展与一场空难']],
+  ['二', '1978–1983', '宋楚瑜改革', ['专业化、国际化、艺术化', '两轮评选、现场揭晓', '金马影展与主题曲', '先肯定香港新浪潮']],
+  ['三', '1984–1989', '官民合办', ['十家公会轮流承办', '1985 拥侯与反侯', '《恋恋风尘》与《恐怖分子》', '1989《悲情城市》落败']],
+  ['四', '1990–1995', '转为民办', ['基金会与执委会', '监控直播评审', '外籍资格之争', '1993 大陆代表团访台']],
+  ['五', '1996–2003', '单方面开放', ['《阳光灿烂的日子》事件', '地下电影参赛', '蔡明亮、杨德昌退赛', '预算风波与“三不”']],
+  ['六', '2004–2009', '合拍片通道', ['借香港身份报名', '纯大陆片年年退赛', '语言不再是门槛', '电影学院与创投']],
+  ['七', '2010–2018', '同场竞技', ['纯大陆片放开', '台湾电影复苏', '肯定大陆独立电影', '港片被冷落']],
+  ['八', '2019–', '重建坐标', ['大陆撤出', '转向东南亚与海外', '再造一个系统']]
+];
+
+const T0 = 16, TT = 10950 - 16;
+const SEGMENTS = [
+  ['A', '开场：第 60 届与“华语语系”', 16, 434, 7.0, '立论'], ['B', '评审亲历与闻天祥', 434, 835, 6.7, '立论'],
+  ['C', '两种模式之间', 835, 1077, 4.0, '立论'], ['D', '为什么只能是金马', 1077, 1626, 9.2, '立论'],
+  ['E', '小评审团 vs 学院', 1626, 1894, 4.5, '立论'],
+  ['一', '1962–1977 政治宣传', 1894, 3141, 20.8, '历史'], ['二', '1978–1983 宋楚瑜改革', 3141, 4049, 15.1, '历史'],
+  ['三', '1984–1989 官民合办', 4049, 5302, 20.9, '历史'], ['四', '1990–1995 转为民办', 5302, 7025, 28.7, '历史'],
+  ['五', '1996–2003 单方面开放', 7025, 8435, 23.5, '历史'], ['六', '2004–2009 合拍片通道', 8435, 9334, 15.0, '历史'],
+  ['七', '2010–2018 同场竞技', 9334, 10428, 18.2, '历史'], ['八', '2019– 重建坐标', 10428, 10582, 2.6, '历史'],
+  ['展', '展望与结语', 10582, 10950, 6.1, '展望']
+];
+const PER_YEAR = [['1962–1977', 1.3], ['1978–1983', 2.5], ['1984–1989', 3.5], ['1990–1995', 4.8], ['1996–2003', 2.9], ['2004–2009', 2.5], ['2010–2018', 2.0], ['2019–2023', 0.5]];
+
+const PHASES = [
+  { name: '政治宣传', start: 1962, end: 1977, organizer: '官办', one: '为国语片、为统战、为祝寿', turn: '1978 年宋楚瑜出任新闻局代局长' },
+  { name: '宋楚瑜改革', start: 1978, end: 1983, organizer: '官办', one: '把它改造成一个真正的电影奖', turn: '预算受到威胁，新闻局交出承办权' },
+  { name: '官民合办', start: 1984, end: 1989, organizer: '官方出钱，十家公会轮流承办', one: '新电影与旧审美的战场', turn: '新闻局决定彻底下放民间' },
+  { name: '转为民办', start: 1990, end: 1995, organizer: '基金会主办，执委会筹办', one: '李行当家，开始接触大陆影人', turn: '香港回归在即，台湾产量见底' },
+  { name: '单方面开放', start: 1996, end: 2003, organizer: '民办', one: '门开了，来的是地下电影', turn: '大陆宣布合拍片可以自由报名' },
+  { name: '合拍片通道', start: 2004, end: 2009, organizer: '民办', one: '借一个香港身份才能进来', turn: '两岸关系改善，纯大陆片放开' },
+  { name: '同场竞技', start: 2010, end: 2018, organizer: '民办', one: '唯一无障碍的九年', turn: '大陆撤出' },
+  { name: '重建坐标', start: 2019, end: 2023, organizer: '民办', one: '转向东南亚与全球华人', turn: null }
+];
+
+const LANES = [
+  { name: '谁在办', dot: C.ink, nodes: [[1962, '官办'], [1984, '官民合办'], [1990, '民办'], [2009, '基金会与执委会关系理顺']] },
+  { name: '谁能报名', dot: C.ink, nodes: [[1962, '只收国语片'], [1985, '非国语片可报'], [1987, '第一部粤语原声港片'], [1991, '外籍人士有条件参赛', 1], [1996, '华语片，不问产地'], [1997, '定位：全球华语影片竞赛'], [1999, '大陆片来者不拒'], [2007, '华人主创过半即可，语言不限']] },
+  { name: '怎么评', dot: C.ink, nodes: [[1962, '一轮，主题意识占分'], [1978, '两轮，现场揭晓'], [1985, '取消主题意识，公布票数'], [1988, '导演一人两票'], [1990, '监控直播给记者', 1], [1995, '执委提名、评审计分'], [1997, '改回一轮'], [2007, '三阶段，沿用至今']] },
+  { name: '大陆电影', dot: C.ochre, nodes: [[1990, '开始邀请影人'], [1993, '代表团成行'], [1996, '金马开放，大陆退出'], [1998, '地下电影参赛'], [2004, '合拍片可报'], [2010, '纯大陆片放开'], [2019, '撤出']] }
+];
+
+const RULES = [
+  ['1962–1977', '分项打分，“主题意识”占 22%，后来升到 25%', 1, '主播：相当于思想性'],
+  ['1962–1977', '没有提名，颁奖前就公布唯一的获奖者', 1, ''],
+  ['1962–1977', '评审多是历史学者、音乐美术教授等跨界专家', 1, ''],
+  ['1978', '两轮评选：先提名，再决选；现场揭晓', 0, ''],
+  ['1985', '正式取消“主题意识”', 0, ''],
+  ['1985', '对外公布每部影片的得票数和理由', 1, '主播：公开透明不等于专业'],
+  ['1988', '评审分组，导演组一人两票，其他人一票', 1, ''],
+  ['1990', '评审全部用业内人士', 0, ''],
+  ['1990 年代初', '先投票，再讨论', 1, '主播：都投完了，还讨论什么'],
+  ['1990 年代初', '评审会议用监控直播，记者在隔壁房间看', 1, '主播：全世界都没有这么搞的'],
+  ['1992', '业内 50%、影评人 20%、学者 15%、文化人 15%', 0, ''],
+  ['1995', '执委会委员提名，评审团计分', 1, '主播：委员太忙，会找人代看'],
+  ['1997', '改回一轮，15 个人从头评到尾', 0, ''],
+  ['2007', '初选、复选、决选三阶段', 0, ''],
+  ['现在', '复审和终审在同一家影院统一看片，之前看过也不行', 0, '']
+];
+const JURY = [['电影业内', 50, '#1C1C1C', C.paper], ['影评人', 20, '#57534C', C.paper], ['学者', 15, '#8A8F93', C.ink], ['文化人', 15, '#BDBFC0', C.ink]];
+
+const DOORS = [
+  ['1990–1992', '敲门', '三次邀请，都没成', '有人在拍戏，有人身在国外不能直接赴台，有人到的时候已经闭幕'],
+  ['1993', '开一条缝', '29 人代表团出席第 30 届', '人到了，电影还不能参赛'],
+  ['1994', '关', '大陆编导演过半的影片不得参赛', '金马执委会自己的决议'],
+  ['1996', '一边开一边关', '金马开放，大陆全面退出', '大陆只许经批准的合拍片参加；一部未获批准的影片入围后，其余影片退赛'],
+  ['1998–2003', '开一条缝', '来的是地下电影', '《天浴》《蓝宇》《十七岁的单车》《盲井》'],
+  ['2004', '半开', '合拍片可以自由报名', '纯大陆出品的影片仍然不行，此后几年年年有影片被令退赛'],
+  ['2010', '全开', '纯大陆片放开', '此后九年，两岸三地无障碍同场竞技'],
+  ['2019', '关上', '大陆撤出', '金马转向东南亚与海外华人']
+];
+const COPROD = [
+  [2004, ['《可可西里》'], []],
+  [2005, ['《天下无贼》'], ['《求求你表扬我》', '《心急吃不了热豆腐》']],
+  [2006, ['《疯狂的石头》'], ['《吴清源》']],
+  [2007, ['《落叶归根》', '《太阳照常升起》'], ['《图雅的婚事》', '《苹果》', '《盲山》']],
+  [2008, ['《集结号》'], []],
+  [2009, ['《斗牛》', '《疯狂的赛车》', '《梅兰芳》'], []]
+];
+const COVER_DOORS = [[1990, '敲门'], [1993, '开一条缝'], [2004, '半开'], [2010, '全开'], [2019, '关上']];
+
+const FLOW96 = [
+  ['金马宣布向大陆电影开放', 'gh'], ['金马代表团到大陆，劝说放行', 'gh'],
+  ['大陆同意，但有约定：只准合拍片，片单须经批准', 'gov'], ['10 部大陆影片报名', ''],
+  ['提名公布，名单里有《阳光灿烂的日子》', 'gh'], ['大陆主管部门表示没有批准这部影片，要求撤片', 'gov'],
+  ['报名的台湾片方拒绝；金马认为报名符合规则', 'gh'], ['大陆全面退出这一届，7 部影片退赛', 'gov'],
+  ['留下 3 部合拍片', ''], ['《阳光灿烂的日子》拿下多个大奖，主创没有到场', '']
+];
+
+const DIRECTORS = [
+  { name: '侯孝贤', quote: '金马奖恨我，我也恨金马奖。', aside: '主播：侯导对金马是爱恨交织。', events: [
+    [1983, '《儿子的大玩偶》全军覆没'], [1984, '《风柜来的人》《冬冬的假期》全军覆没'], [1985, '《童年往事》只得剧本奖'],
+    [1986, '《恋恋风尘》全军覆没'], [1989, '《悲情城市》输掉最佳剧情片'],
+    [2002, '金马预算被冻结，他说宁可停掉辅导金也要保住金马', 'turn'], [2009, '出任金马执委会主席，办电影学院', 'reconcile']] },
+  { name: '杨德昌', events: [
+    [1986, '《恐怖分子》拿下最佳剧情片，导演奖却没有入围'], [1991, '《牯岭街少年杀人事件》拿下最佳剧情片'],
+    [1996, '宣布退出金马', '', 1], [2000, '《一一》没有报名。主办方来电相请，他说把机会留给年轻人', 'exit']] },
+  { name: '蔡明亮', events: [
+    [1994, '《爱情万岁》是大赢家'], [1997, '《河流》被评审贬损，全军覆没'], [1998, '《洞》退赛，被罚三年不得报名', 'exit'],
+    [2006, '《黑眼圈》被评审教训“要考虑票房和观众”，再次退赛', 'exit'], [2009, '《脸》重新报名，理由是给侯孝贤面子', 'turn'],
+    [2013, '《郊游》拿到最佳导演', 'reconcile']] }
+];
+const TONE = {
+  '': { dotBg: C.ink, dotBd: C.ink, bg: 'transparent', bd: '0', pad: '0' },
+  turn: { dotBg: C.paper, dotBd: C.gold, bg: 'transparent', bd: '1.5px solid #C9A227', pad: '7px 10px' },
+  reconcile: { dotBg: C.gold, dotBd: C.gold, bg: C.gold, bd: '1.5px solid #C9A227', pad: '7px 10px' },
+  exit: { dotBg: C.paper, dotBd: C.ink, bg: 'transparent', bd: '1.5px dashed #1C1C1C', pad: '7px 10px' }
+};
+
+const BEST = [
+  [1962, '《星星月亮太阳》', '香港'], [1963, '《梁山伯与祝英台》', '香港'], [1965, '《养鸭人家》', '台湾'],
+  [1978, '《汪洋中的一条船》', '台湾'], [1980, '《早安台北》', '台湾'], [1984, '《老莫的第二个春天》', '台湾'],
+  [1985, '《我这样过了一生》', '台湾'], [1986, '《恐怖分子》', '台湾'], [1987, '《稻草人》', '台湾'],
+  [1988, '《七小福》', '香港'], [1989, '《三个女人的故事》', '香港', '（香港片名《人在纽约》）'], [1991, '《牯岭街少年杀人事件》', '台湾'],
+  [1993, '《喜宴》', '台湾'], [1996, '《阳光灿烂的日子》', '大陆', ' 合拍片'], [2011, '《赛德克·巴莱》', '台湾'],
+  [2012, '《神探亨特张》', '大陆'], [2013, '《爸妈不在家》', '东南亚与海外', ' 新加坡'], [2016, '《八月》', '大陆'],
+  [2017, '《血观音》', '台湾'], [2018, '《大象席地而坐》', '大陆']
+];
+
+const FUND = [
+  '有民意代表质疑：台湾电影在金马拿不到奖，办它做什么', '新闻局冻结金马预算', '高雄市政府出资，颁奖礼移到高雄',
+  '主办城市希望政治人物上台', '金马以“三不”原则拒绝', '次年补贴被删，由另一座城市和企业接手'
+];
+
+const CHAIRS = [
+  ['李屏宾', '现任', ['主播：还需要再看一看'], 'transparent', '2px dashed #1C1C1C', '64px', '0px'],
+  ['李安', '', ['经典影展', '大师课'], '#E8D597', '0', '48px', '0px'],
+  ['张艾嘉', '', ['青少年观影团'], '#DFC676', '0', '30px', '0px'],
+  ['侯孝贤', '2009 年起', ['创投百万首奖', '金马电影学院', '金马奇幻影展'], '#D4B54F', '0', '14px', '0px'],
+  ['焦雄屏', '2007 年起', ['金马创投', '华人主创过半即可报名', '三阶段评审'], '#C9A227', '0', '0px', '0px']
+];
+const BASE = [
+  ['李行', '1990 年起 · 首任执委会主席', ['两岸电影交流', '“三不”原则'], '#DCD5C6', '0'],
+  ['宋楚瑜', '1978 年起 · 新闻局', ['金马影展', '主题曲', '现场揭晓'], '#B9BCBE', '0']
+];
+
+const FREQ = {
+  people: [['李行', 60], ['侯孝贤', 44], ['宋楚瑜', 29, 1], ['蔡明亮', 26], ['焦雄屏', 23], ['杨德昌', 16], ['蒋介石', 15, 1], ['闻天祥', 12], ['朱延平', 12], ['李安', 11], ['邱复生', 11]],
+  concepts: [['评审', 132], ['大陆电影', 79, C.ochre], ['提名 / 入围', 74], ['香港电影', 57, C.rose], ['台湾电影', 49, C.violet], ['产业', 46], ['政治', 46], ['华语电影', 42], ['报名', 39], ['新电影', 26], ['争议', 24], ['合拍片', 22]],
+  films: [['《阳光灿烂的日子》', 9, C.ochre], ['《悲情城市》', 7, C.violet], ['《赛德克·巴莱》', 6, C.violet], ['《恐怖分子》', 6, C.violet], ['《恋恋风尘》', 6, C.violet], ['《三个女人的故事》', 6, C.rose]],
+  years: [['62 前', 4], ['一', 11], ['二', 16], ['三', 21], ['四', 21], ['五', 27], ['六', 24], ['七', 25], ['八', 9]]
+};
+
+const QUOTES = [
+  ['金马奖的创办，是百分之百的政治的产物。', '主播'],
+  ['能有那么几年不分彼此地评奖，这本身就是一个奇迹。做不到反而是正常的。', '主播'],
+  ['任何一个奖只有延续存在，才有影响力。一旦中断，一切归零。', '主播'],
+  ['粽子包子什么都卖，但坚决不卖汉堡。', '节目转述闻天祥对金马定位的比喻'],
+  ['只要是小评审团，就一定会有争议。', '主播'],
+  ['公开透明不等于专业水平高。', '主播'],
+  ['金马奖恨我，我也恨金马奖。', '节目转述侯孝贤'],
+  ['文化的整合也是受制于政治的，它很难超前进行。', '主播'],
+  ['电影终究是影像的，对白不是决定性的要素。', '主播'],
+  ['承载文化的主体是人，不是那些抽象的宏大的东西。', '主播'],
+  ['维系华人的到底是什么？不一定是语言，甚至不一定是传统文化。', '主播']
+];
+const QUOTE_THEME = [
+  { bg: C.ink, fg: C.paper, sub: '#B9B2A3' },
+  { bg: C.paper, fg: C.ink, sub: C.mute },
+  { bg: C.gold, fg: C.ink, sub: '#3A3320' }
+];
+
+const DEBATES = [
+  ['大陆能不能办成一个统合华语电影的奖？', '老马', '环境不具备条件。', '阿吴', '不完全同意。华语电影传媒大奖就是一次尝试，而且办得不错。', '老马：这次努力值得肯定。但它办不下去，恰恰说明这件事做不到。'],
+  ['2009 年两位演员并列影帝，合理吗？', '一方', '有点勉强。', '另一方', '香港和大陆是两套表演系统，第一次同场，没法比高低。', '互补。'],
+  ['金马冷落了香港电影吗？', '一方', '是。2010 到 2018 年的新导演提名，台湾 21、大陆 15、香港只有 5。', '另一方', '同意有这个现象。不过你举的两部片是 2019 年之后的，应该根本没有报名。', '判断一致，例子被当场纠正。', 1],
+  ['规则放宽到“华人主创”之后，谁算华人？', '一方', '混血怎么算？将来一定会碰到敏感地带。', '另一方', '有华人血统就可以，外籍导演拍的华语片也该算。', '没有结论。'],
+  ['华语电影共同体，还做不做？', '一方', '现阶段是不是不可行，或者没有意义？', '另一方', '可以做，金马也不会放弃。但它不是最终目的，最终是具体的人之间的连接。', '互补。']
+];
+
+const GH = 'assets/gh/';
+const edition = y => y <= 1963 ? y - 1961 : y <= 1973 ? y - 1962 : y - 1963;
+const PEOPLE = [
+  ['lixing', '李行', 60, 'lixing.jpg', '导演，首任执委会主席（1990 年起）'],
+  ['hou', '侯孝贤', 44, 'hou.jpg', '导演，2009 年起任执委会主席'],
+  ['song', '宋楚瑜', 29, '', '1978 年起任新闻局代局长、局长', 1],
+  ['tsai', '蔡明亮', 26, 'tsai.jpg', '导演'],
+  ['jiao', '焦雄屏', 23, 'jiao.jpg', '影评人、制片人，2007 年起任主席'],
+  ['yang', '杨德昌', 16, 'yang.jpg', '导演'],
+  ['chiang', '蒋介石', 15, '', '金马创办时的台湾领导人', 1],
+  ['wen', '闻天祥', 12, '', '金马执委会执行长，2009 年起'],
+  ['zhu', '朱延平', 12, '', '2009 年起任基金会董事长'],
+  ['anglee', '李安', 11, 'anglee.jpg', '导演，曾任执委会主席'],
+  ['chiu', '邱复生', 11, 'chiu.jpg', '年代公司，1995 年任主席']
+];
+const POSTERS = [
+  ['kongbu', 1986, '《恐怖分子》', '台湾', '最佳剧情片，导演奖没入围', 'p-kongbu.jpg'],
+  ['qixiaofu', 1988, '《七小福》', '香港', '多年来再次获奖的港片', 'p-qixiaofu.jpg'],
+  ['beiqing', 1989, '《悲情城市》', '台湾', '输掉最佳剧情片', 'p-beiqing.jpg'],
+  ['sange', 1989, '《三个女人的故事》', '香港', '即《人在纽约》，当届最佳剧情片', 'p-sange.jpg'],
+  ['guling', 1991, '《牯岭街少年杀人事件》', '台湾', '最佳剧情片', 'p-guling.jpg'],
+  ['xiyan', 1993, '《喜宴》', '台湾', '最佳剧情片', 'p-xiyan.png'],
+  ['yangguang', 1996, '《阳光灿烂的日子》', '大陆', '合拍片，引发大陆全面退赛', 'p-yangguang.jpg'],
+  ['yiyi', 2000, '《一一》', '台湾', '没有报名', 'p-yiyi.jpg'],
+  ['saide', 2011, '《赛德克·巴莱》', '台湾', '最佳剧情片', 'p-saide.png'],
+  ['ilo', 2013, '《爸妈不在家》', '东南亚与海外', '新加坡，最佳剧情片', 'p-ilo.jpg'],
+  ['jiaoyou', 2013, '《郊游》', '台湾', '蔡明亮获最佳导演', 'p-jiaoyou.png'],
+  ['daxiang', 2018, '《大象席地而坐》', '大陆', '最佳剧情片', 'p-daxiang.jpg']
+];
+const DIR_IMG = { '侯孝贤': 'hou.jpg', '杨德昌': 'yang.jpg', '蔡明亮': 'tsai.jpg' };
+const EV_IMG = {
+  '侯孝贤-1984': 'p-fengui.jpg', '侯孝贤-1985': 'p-tongnian.jpg', '侯孝贤-1989': 'p-beiqing.jpg',
+  '杨德昌-1986': 'p-kongbu.jpg', '杨德昌-1991': 'p-guling.jpg', '杨德昌-2000': 'p-yiyi.jpg',
+  '蔡明亮-1994': 'p-aiqing.jpg', '蔡明亮-1997': 'p-heliu.jpg', '蔡明亮-1998': 'p-dong.jpg',
+  '蔡明亮-2006': 'p-heiyan.jpg', '蔡明亮-2009': 'p-lian.jpg', '蔡明亮-2013': 'p-jiaoyou.png'
+};
+const CHAIR_IMG = { '李屏宾': 'pingbin.jpg', '李安': 'anglee.jpg', '张艾嘉': 'sylvia.jpg', '侯孝贤': 'hou.jpg', '焦雄屏': 'jiao.jpg', '李行': 'lixing.jpg' };
+const chairVals = (c, i) => {
+  const f = CHAIR_IMG[c[0]] || '';
+  return { chair: c[0], meta: c[1], legacy: c[2], bg: c[3], bd: c[4], indent: c[5] || '0px', indentR: c[6] || '0px',
+    slot: 'gh-chair-' + i + '-' + c[0], src: f ? GH + f : '', has: !!f, noImg: !f, mono: c[0].slice(0, 1), monoBg: f ? '#D9D2C2' : '#8A8F93' };
+};
+
+function doorShape(state) {
+  const f = (a, hinge, width) => {
+    const r = a * Math.PI / 180, d = 8 * Math.sin(r);
+    const e = hinge === 'L' ? 14 + width * Math.cos(r) : 86 - width * Math.cos(r);
+    const h = hinge === 'L' ? 14 : 86;
+    return h + ',10 ' + e.toFixed(1) + ',' + (10 - d).toFixed(1) + ' ' + e.toFixed(1) + ',' + (122 + d).toFixed(1) + ' ' + h + ',122';
+  };
+  const s = { leaf: f(0, 'L', 72), leaf2: '', marks: '' };
+  if (state === '敲门') s.marks = 'M93 52q5 7 0 14M99 46q8 13 0 26';
+  if (state === '开一条缝') s.leaf = f(30, 'L', 72);
+  if (state === '半开') s.leaf = f(58, 'L', 72);
+  if (state === '全开') s.leaf = f(84, 'L', 72);
+  if (state === '一边开一边关') { s.leaf = f(66, 'L', 36); s.leaf2 = f(0, 'R', 36); }
+  return s;
+}
+
+class Component extends DCLogic {
+  renderVals() {
+    const fixed = this.props.fixedRatio !== false;
+    const single = this.props.quoteLayout === '单列大卡';
+
+    const phases = PHASES.map((p, i) => ({
+      cn: CN[i], name: p.name, years: p.start + '–' + p.end, left: px(xOf(p.start)), width: px(xOf(p.end + 1) - xOf(p.start)),
+      bg: BR_STYLE[i + 1].bg, fg: BR_STYLE[i + 1].fg, organizer: p.organizer, oneLine: p.one, turn: p.turn || '—'
+    }));
+
+    const segs = SEGMENTS.map(s => {
+      const w = (s[3] - s[2]) / TT * W;
+      return { w: px(w), code: w > 24 ? s[0] : '' };
+    });
+    let li = 0, hi = 0;
+    const segStyle = SEGMENTS.map(s => {
+      if (s[5] === '立论') { const bg = li++ % 2 ? '#B0B3B5' : '#8A8F93'; return { bg, fg: C.ink }; }
+      if (s[5] === '历史') { const k = hi++; return { bg: GOLD8[k], fg: k >= 6 ? C.paper : C.ink }; }
+      return { bg: C.teal, fg: C.ink };
+    });
+    segs.forEach((s, i) => Object.assign(s, segStyle[i]));
+
+    const lanes = LANES.map(l => {
+      const n = l.nodes.length, ROW = 24;
+      return {
+        name: l.name, line: l.dot, h: px(n * ROW + 14),
+        nodes: l.nodes.map((nd, i) => {
+          const x = xOf(nd[0] + 0.5), top = 14 + (n - 1 - i) * ROW;
+          const yl = (nd[2] ? '约' : '') + nd[0];
+          const estW = yl.length * 9 + 14 + Array.from(nd[1]).length * 15;
+          const flip = x + 9 + estW > W;
+          return {
+            yl, label: nd[1], top: px(top),
+            dotLeft: px(x - 6), dotBg: nd[2] ? C.paper : l.dot, dotBd: l.dot,
+            elLeft: px(flip ? x - 6.25 : x - 0.75), elH: px(top + 11),
+            bl: flip ? '0' : '1.5px solid #1C1C1C', br: flip ? '1.5px solid #1C1C1C' : '0',
+            left: flip ? 'auto' : px(x + 5), right: flip ? px(W - x + 5) : 'auto'
+          };
+        })
+      };
+    });
+
+    const bestMap = {};
+    BEST.forEach(b => { bestMap[b[0]] = REGION[b[2]]; });
+    const slots = [];
+    for (let y = Y0; y < Y1; y++) {
+      const dec = y % 10 === 0;
+      slots.push({ left: px(xOf(y + 0.5)), dot: px(xOf(y + 0.5) - 7.5), has: !!bestMap[y], color: bestMap[y] || 'transparent', tTop: dec ? '84px' : '88px', tH: dec ? '18px' : '10px' });
+    }
+
+    const q = i => {
+      const t = QUOTE_THEME[i % 3];
+      return {
+        n: String(i + 1).padStart(2, '0'), text: QUOTES[i][0], source: QUOTES[i][1], bg: t.bg, fg: t.fg, sub: t.sub,
+        span: (!single && i === QUOTES.length - 1) ? '1 / -1' : 'auto',
+        pad: single ? '72px 80px' : '40px 40px', size: single ? '60px' : '34px', subSize: single ? '22px' : '17px', minH: single ? '520px' : '330px'
+      };
+    };
+
+    const bars = (list, max, base) => list.map(r => ({ name: r[0], count: r[1], w: (r[1] / max * 100).toFixed(1) + '%', bg: typeof r[2] === 'string' ? r[2] : (r[2] ? C.grey : base) }));
+
+    return {
+      ratio: fixed ? '4 / 5' : 'auto',
+      quoteCols: single ? '1fr' : '1fr 1fr',
+
+      coverDoors: COVER_DOORS.map(d => Object.assign({ left: px(xOf(d[0] + 0.5) - 18) }, doorShape(d[1]))),
+      coverYears: PHASES.slice(1).map(p => ({ year: p.start, left: px(xOf(p.start)) })),
+
+      points: POINTS.map((p, i) => ({ n: String(i + 1).padStart(2, '0'), title: p[0], text: p[1], rule: i === 7 ? C.gold : C.ink, ruleH: i === 7 ? '6px' : '2px' })),
+      branches: BRANCHES.map((b, i) => ({ ord: b[0], years: b[1], name: b[2], children: b[3], bg: BR_STYLE[i].bg, fg: BR_STYLE[i].fg })),
+
+      segs,
+      segTicks: [0, 30, 60, 90, 120, 150, 180].map((m, i) => ({ left: px(Math.max(0, (m * 60 - T0) / TT * W)), label: Math.floor(m / 60) + ':' + String(m % 60).padStart(2, '0'), tx: i === 0 ? '0' : '-50%', align: i === 0 ? 'flex-start' : 'center' })),
+      segLegend: SEGMENTS.map((s, i) => ({ code: s[0], label: s[1], minutes: s[4].toFixed(1), bg: segStyle[i].bg, fg: segStyle[i].fg })),
+      groups: [{ name: '立论', min: '31.4', share: '17.2%', bg: '#8A8F93' }, { name: '历史', min: '144.8', share: '79.5%', bg: C.gold }, { name: '展望', min: '6.1', share: '3.4%', bg: C.teal }],
+      perYear: PER_YEAR.map((p, i) => ({ cn: CN[i], years: p[0], v: p[1].toFixed(1), h: px(p[1] / 4.8 * 170), bg: GOLD8[i] })),
+
+      phases,
+      bounds: PHASES.map(p => ({ year: p.start, ed: edition(p.start), left: px(xOf(p.start)) })),
+      peopleTop: PEOPLE.slice(0, 2).map(p => ({ slot: 'gh-pp-' + p[0], src: GH + p[3], name: p[1], count: p[2], role: p[4] })),
+      peopleRest: PEOPLE.slice(2).map(p => ({ slot: 'gh-pp-' + p[0], src: p[3] ? GH + p[3] : '', has: !!p[3], noImg: !p[3], mono: p[1].slice(0, 1), monoBg: p[5] ? '#8A8F93' : '#3B3936', monoFg: p[5] ? C.ink : C.gold, name: p[1], count: p[2], role: p[4] })),
+      posters: POSTERS.map(p => ({ slot: 'gh-poster-' + p[0], year: p[1], title: p[2], region: p[3], note: p[4], src: GH + p[5], color: REGION[p[3]] })),
+      gaps: [1964, 1974].map(y => ({ year: y, left: px(xOf(y)), w: px(xOf(y + 1) - xOf(y)) })),
+      lanes,
+
+      rules: RULES.map((r, i) => ({ when: r[0], rule: r[1], note: r[3], hasNote: !!r[3], n: String(i + 1).padStart(2, '0'), bg: r[2] ? C.ink : C.paper, fg: r[2] ? C.paper : C.ink, noteFg: r[2] ? '#CFC9BC' : C.mute })),
+      jury: JURY.map(j => ({ group: j[0], share: j[1], w: j[1] + '%', bg: j[2], fg: j[3] })),
+
+      doors: DOORS.map((d, i) => Object.assign({ n: String(i + 1).padStart(2, '0'), when: d[0], state: d[1], title: d[2], detail: d[3] }, doorShape(d[1]))),
+      coprod: COPROD.map(r => ({ year: r[0], ins: r[1], outs: r[2], noOut: !r[2].length })),
+
+      flow96: FLOW96.map((s, i) => ({ n: String(i + 1), text: s[0], bg: s[1] === 'gh' ? C.gold : s[1] === 'gov' ? C.grey : C.paper, fg: C.ink })),
+      sq10: Array.from({ length: 10 }, (_, i) => ({ bg: i < 3 ? C.ochre : 'transparent', line: i < 3 ? 'solid' : 'dashed' })),
+
+      directors: DIRECTORS.map(d => ({
+        name: d.name, quote: d.quote || '', aside: d.aside || '', hasQuote: !!d.quote,
+        slot: 'gh-dir-' + d.name, img: GH + DIR_IMG[d.name],
+        events: d.events.map(e => {
+          const f = EV_IMG[d.name + '-' + e[0]];
+          return Object.assign({ yl: (e[3] ? '约 ' : '') + e[0], text: e[1], hasImg: !!f, img: f ? GH + f : '', slot: 'gh-ev-' + d.name + '-' + e[0] }, TONE[e[2] || '']);
+        })
+      })),
+
+      m13: {
+        slots,
+        decades: [1970, 1980, 1990, 2000, 2010, 2020].map(y => ({ year: y, left: px(xOf(y + 0.5)) })).concat([{ year: 1962, left: px(xOf(1962.5) + 12) }]),
+        brLeft: px(xOf(1965)), brW: px(xOf(1988) - xOf(1965)), x2013: px(xOf(2013.5)),
+        list: BEST.map(b => ({ year: b[0], film: b[1], region: b[2], note: b[3] || '', color: REGION[b[2]] })),
+        y2018: [
+          { label: '最佳剧情片', text: '大陆 4 · 台湾 1', cells: [C.ochre, C.ochre, C.ochre, C.ochre, C.violet].map(bg => ({ bg })) },
+          { label: '最佳导演', text: '大陆 5 · 台湾 0', cells: [C.ochre, C.ochre, C.ochre, C.ochre, C.ochre].map(bg => ({ bg })) }
+        ]
+      },
+
+      fund: FUND.map((t, i) => ({ n: String(i + 1), text: t })),
+      chairs: CHAIRS.map(chairVals),
+      base: BASE.map((c, i) => chairVals(c, i + 10)),
+
+      fPeople: bars(FREQ.people, 60, C.ink),
+      fConcepts: bars(FREQ.concepts, 132, C.ink),
+      fFilms: bars(FREQ.films, 9, C.ink),
+      fYears: FREQ.years.map((y, i) => ({ phase: y[0], count: y[1], h: px(y[1] / 27 * 100), bg: i === 0 ? '#B0B3B5' : GOLD8[i - 1] })),
+
+      debates: DEBATES.map((d, i) => ({ n: String(i + 1).padStart(2, '0'), topic: d[0], aWho: d[1], aText: d[2], bWho: d[3], bText: d[4], result: d[5], hasChart: !!d[6] })),
+      newDir: [['台湾', 21, C.violet], ['大陆', 15, C.ochre], ['香港', 5, C.rose]].map(r => ({ name: r[0], n: r[1], w: (r[1] / 21 * 82).toFixed(1) + '%', bg: r[2] })),
+
+      quotes: QUOTES.map((_, i) => q(i))
+    };
+  }
+}
+</script>
+</body>
+</html>

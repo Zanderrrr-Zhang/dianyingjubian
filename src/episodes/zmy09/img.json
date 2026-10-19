@@ -1,0 +1,674 @@
+{
+ "p-maggie": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/2005%E5%B9%B4%E5%8C%97%E4%BA%ACOLAY%E6%B4%BB%E5%8A%A8.jpg/500px-2005%E5%B9%B4%E5%8C%97%E4%BA%ACOLAY%E6%B4%BB%E5%8A%A8.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 1391,
+  "h": 1822,
+  "page": "張曼玉",
+  "desc": "香港女演員",
+  "missing": false
+ },
+ "p-assayas": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Viennale_2010.10.30_Olivier_Assayas.jpg/500px-Viennale_2010.10.30_Olivier_Assayas.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 1944,
+  "h": 2571,
+  "page": "奥利维耶·阿萨亚斯",
+  "desc": "法国电影导演",
+  "missing": false
+ },
+ "p-wkw": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Wong_Kar-wai_at_2008_TIFF_cropped.jpg/500px-Wong_Kar-wai_at_2008_TIFF_cropped.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 2536,
+  "h": 2578,
+  "page": "王家卫",
+  "desc": "香港導演",
+  "missing": false
+ },
+ "p-brigitte": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/%E6%9E%97%E9%9D%92%E9%9C%9E.jpg/500px-%E6%9E%97%E9%9D%92%E9%9C%9E.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 1968,
+  "h": 2957,
+  "page": "林青霞",
+  "desc": "臺灣女演員",
+  "missing": false
+ },
+ "p-kwan": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/%E9%97%9C%E9%8C%A6%E9%B5%AC.jpg/500px-%E9%97%9C%E9%8C%A6%E9%B5%AC.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 1322,
+  "h": 1896,
+  "page": "關錦鵬",
+  "desc": "香港電影導演、監製、編劇、演員",
+  "missing": false
+ },
+ "p-andy": {
+  "src": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Andy_Lau_%E5%88%98%E5%BE%B7%E5%8D%8E%2C_Beijing_International_Film_Festival_%E5%8C%97%E4%BA%AC%E7%94%B5%E5%BD%B1%E8%8A%82%2C_2013_%28cropped%29.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 500,
+  "h": 667,
+  "page": "劉德華",
+  "desc": "香港影視男演員、製片人、歌手",
+  "missing": false
+ },
+ "p-tsang": {
+  "src": "https://upload.wikimedia.org/wikipedia/commons/b/b3/EricTsang_small.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 431,
+  "h": 575,
+  "page": "曾志偉",
+  "desc": "香港演員、導演",
+  "missing": false
+ },
+ "p-peter": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Peter_Ho-sun_Chan_TIFF_2026_%28cropped%29.jpg/500px-Peter_Ho-sun_Chan_TIFF_2026_%28cropped%29.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 2383,
+  "h": 3108,
+  "page": "陳可辛",
+  "desc": "香港导演",
+  "missing": false
+ },
+ "p-kafai": {
+  "src": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Tony_Leung_Ka-fai_2025_%28cropped%29.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 481,
+  "h": 580,
+  "page": "梁家輝",
+  "desc": "香港男演員",
+  "missing": false
+ },
+ "p-jackie": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Jackie_Chan.jpg/500px-Jackie_Chan.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 856,
+  "h": 1110,
+  "page": "成龍",
+  "desc": "香港武打演員和歌手",
+  "missing": false
+ },
+ "p-leon": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/%E9%BB%8E%E6%98%8ELEON_LAI_ROBBABA_%E7%B4%85%E9%A4%A8%E6%BC%94%E5%94%B1%E6%9C%832026_20260330-6_%28cropped%29.jpg/500px-%E9%BB%8E%E6%98%8ELEON_LAI_ROBBABA_%E7%B4%85%E9%A4%A8%E6%BC%94%E5%94%B1%E6%9C%832026_20260330-6_%28cropped%29.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 972,
+  "h": 1272,
+  "page": "黎明",
+  "desc": "香港歌手及演員",
+  "missing": false
+ },
+ "p-chow": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/ChowKL2.JPG/500px-ChowKL2.JPG?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 916,
+  "h": 800,
+  "page": "周星馳",
+  "desc": "香港男演員、導演",
+  "missing": false
+ },
+ "p-leslie": {
+  "src": "https://upload.wikimedia.org/wikipedia/commons/9/95/Leslie_Cheung.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 316,
+  "h": 241,
+  "page": "張國榮",
+  "desc": "香港創作歌手、演員",
+  "missing": false
+ },
+ "p-hou": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/The_Assassin_Paris_premiere_7.JPG/500px-The_Assassin_Paris_premiere_7.JPG?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 1200,
+  "h": 1600,
+  "page": "侯孝賢",
+  "desc": "臺灣電影導演、編劇、製片、監製",
+  "missing": false
+ },
+ "p-annhui": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Ann_Hui_at_Berlinale_2024.jpg/500px-Ann_Hui_at_Berlinale_2024.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 1644,
+  "h": 1848,
+  "page": "許鞍華",
+  "desc": "香港電影導演、監製、編劇、演員",
+  "missing": false
+ },
+ "p-michelle": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Michelle_Yeoh-2275.jpg/500px-Michelle_Yeoh-2275.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 4098,
+  "h": 5464,
+  "page": "杨紫琼",
+  "desc": "馬來西亞華裔女演員",
+  "missing": false
+ },
+ "p-tony": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Tony_Leung_at_Shanghai_International_Film_Festival_2026_01.jpg/500px-Tony_Leung_at_Shanghai_International_Film_Festival_2026_01.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 2597,
+  "h": 3740,
+  "page": "梁朝偉",
+  "desc": "香港演員及歌手",
+  "missing": false
+ },
+ "p-wongjing": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Wong_Jing_20250122.jpg/500px-Wong_Jing_20250122.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 1840,
+  "h": 1380,
+  "page": "王晶",
+  "desc": "香港導演、演員",
+  "missing": false
+ },
+ "p-cyf": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Chow_Yun_Fat_for_wiki.jpg/500px-Chow_Yun_Fat_for_wiki.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 3276,
+  "h": 3863,
+  "page": "周润发",
+  "desc": "香港男演員",
+  "missing": false
+ },
+ "p-gongli": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Gong_Li_Cannes_2016.jpg/500px-Gong_Li_Cannes_2016.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 507,
+  "h": 798,
+  "page": "巩俐",
+  "desc": "中国女演员",
+  "missing": false
+ },
+ "p-sylvia": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Sylvia_Chang_from_%22Daughter%27s_Daughter%22_at_Red_Carpet_of_the_Tokyo_International_Film_Festival_2024_%2854577973591%29.jpg/500px-Sylvia_Chang_from_%22Daughter%27s_Daughter%22_at_Red_Carpet_of_the_Tokyo_International_Film_Festival_2024_%2854577973591%29.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 5464,
+  "h": 8192,
+  "page": "張艾嘉",
+  "desc": "臺灣女演員、作家、歌手、製片人和導演",
+  "missing": false
+ },
+ "p-faye": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Faye_Wong_%28cropped%29.jpg/500px-Faye_Wong_%28cropped%29.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 567,
+  "h": 801,
+  "page": "王菲",
+  "desc": "香港女歌手、音樂人、演員",
+  "missing": false
+ },
+ "p-tsui": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Tsui_Hark.jpg/500px-Tsui_Hark.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 1370,
+  "h": 1899,
+  "page": "徐克",
+  "desc": "香港電影導演、編劇、監製、演員",
+  "missing": false
+ },
+ "p-carol": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Carol_Cheng_Yu_Ling_2018.jpg/500px-Carol_Cheng_Yu_Ling_2018.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 512,
+  "h": 683,
+  "page": "鄭裕玲",
+  "desc": "香港女演員及主持人",
+  "missing": false
+ },
+ "p-carina": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Carina_Lau_at_2026_Shanghai_International_Film_Festival_Closing_Ceremony_Red_Carpet_01_%28cropped%29.jpg/500px-Carina_Lau_at_2026_Shanghai_International_Film_Festival_Closing_Ceremony_Red_Carpet_01_%28cropped%29.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 1501,
+  "h": 1880,
+  "page": "劉嘉玲",
+  "desc": "香港女演員",
+  "missing": false
+ },
+ "p-cora": {
+  "src": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Cora_Miao_in_Sausalito%2C_California_1983.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 412,
+  "h": 581,
+  "page": "繆騫人",
+  "desc": "香港女演員",
+  "missing": false
+ },
+ "p-josephine": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Josephine_Siao_20260425.jpg/500px-Josephine_Siao_20260425.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 1528,
+  "h": 1970,
+  "page": "蕭芳芳",
+  "desc": "香港女演員",
+  "missing": false
+ },
+ "p-garbo": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Greta_Garbo_-_1939.jpg/500px-Greta_Garbo_-_1939.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 800,
+  "h": 1018,
+  "page": "葛丽泰·嘉宝",
+  "desc": "瑞典女演员",
+  "missing": false
+ },
+ "p-hepburn": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/AudreyKHepburn.jpg/500px-AudreyKHepburn.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 1216,
+  "h": 1681,
+  "page": "奥黛丽·赫本",
+  "desc": "英国女演员（1929－1993）",
+  "missing": false
+ },
+ "p-nolte": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/NickNolte%28cannesPhotocall%29.jpg/500px-NickNolte%28cannesPhotocall%29.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 942,
+  "h": 1403,
+  "page": "尼克·诺尔蒂",
+  "desc": "",
+  "missing": false
+ },
+ "p-baudrillard": {
+  "src": "https://upload.wikimedia.org/wikipedia/commons/e/ef/WikipediaBaudrillard20040612-cropped.png?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 250,
+  "h": 317,
+  "page": "尚·布希亞",
+  "desc": "法国社会学家（1929—2007）",
+  "missing": false
+ },
+ "p-benjamin": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Walter_Benjamin_vers_1928.jpg/500px-Walter_Benjamin_vers_1928.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 750,
+  "h": 907,
+  "page": "瓦尔特·本雅明",
+  "desc": "德国哲学家、文化评论家（Walter Benjamin，1892—1940）",
+  "missing": false
+ },
+ "p-wangyu": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/%E7%8E%8B%E7%BE%BD.png/500px-%E7%8E%8B%E7%BE%BD.png?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 1040,
+  "h": 1402,
+  "page": "王羽",
+  "desc": "台湾演员、导演、编剧 (1943-2022)",
+  "missing": false
+ },
+ "p-tilung": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Ti_Lung_20260426.jpg/500px-Ti_Lung_20260426.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 2023,
+  "h": 2294,
+  "page": "狄龙",
+  "desc": "香港男演員",
+  "missing": false
+ },
+ "p-chiang": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/John_Chiang_20240414.jpg/500px-John_Chiang_20240414.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 540,
+  "h": 553,
+  "page": "姜大衞",
+  "desc": "香港演員、導演",
+  "missing": false
+ },
+ "p-ruan": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Ruan_Lingyu.png/500px-Ruan_Lingyu.png?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 605,
+  "h": 800,
+  "page": "阮玲玉",
+  "desc": "中国默片时代女演员",
+  "missing": false
+ },
+ "p-yonfan": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Yonfan_2020.jpg/500px-Yonfan_2020.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 4000,
+  "h": 6000,
+  "page": "楊凡",
+  "desc": "臺灣及香港電影導演",
+  "missing": false
+ },
+ "p-clara": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Clara_Law_-_IFFR_2026.jpg/500px-Clara_Law_-_IFFR_2026.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 2788,
+  "h": 4113,
+  "page": "羅卓瑤",
+  "desc": "",
+  "missing": false
+ },
+ "p-woo": {
+  "src": "https://upload.wikimedia.org/wikipedia/commons/0/02/John_Woo_Cannes_2005.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 374,
+  "h": 410,
+  "page": "吴宇森",
+  "desc": "香港男导演及编剧",
+  "missing": false
+ },
+ "p-jia": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Jia_Zhang-Ke_Skipcity_DCF_2005.jpg/500px-Jia_Zhang-Ke_Skipcity_DCF_2005.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 860,
+  "h": 1290,
+  "page": "贾樟柯",
+  "desc": "中國電影導演、編劇",
+  "missing": false
+ },
+ "p-lilihua": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/19680512%E6%9D%8E%E9%BA%97%E8%8F%AF.jpg/500px-19680512%E6%9D%8E%E9%BA%97%E8%8F%AF.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 1368,
+  "h": 2100,
+  "page": "李麗華",
+  "desc": "中国演员（1924—2017）",
+  "missing": false
+ },
+ "p-lingbo": {
+  "src": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Ivy_Ling_Po_1960s.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 274,
+  "h": 364,
+  "page": "凌波",
+  "desc": "香港女演員及歌手",
+  "missing": false
+ },
+ "p-grace": {
+  "src": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Grace_Chang.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 466,
+  "h": 800,
+  "page": "葛兰",
+  "desc": "香港女演員、歌手（1933-2026）",
+  "missing": false
+ },
+ "p-shihui": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/%E9%A6%99%E6%B8%AF%E6%98%9F%E5%85%89%E5%A4%A7%E9%81%93_-_%E7%9F%B3%E6%85%A7%E6%89%8B%E5%8D%B0_-_2026-05-01.jpg/500px-%E9%A6%99%E6%B8%AF%E6%98%9F%E5%85%89%E5%A4%A7%E9%81%93_-_%E7%9F%B3%E6%85%A7%E6%89%8B%E5%8D%B0_-_2026-05-01.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 4284,
+  "h": 5712,
+  "page": "石慧",
+  "desc": "已息影的香港左派女演員",
+  "missing": false
+ },
+ "p-hungsinnui": {
+  "src": "https://upload.wikimedia.org/wikipedia/commons/e/e8/%E7%B4%85%E7%B7%9A%E5%A5%B3.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 450,
+  "h": 580,
+  "page": "红线女",
+  "desc": "粤剧演员",
+  "missing": false
+ },
+ "p-connie": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Connie_Chan_20251226.jpg/500px-Connie_Chan_20251226.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 823,
+  "h": 1290,
+  "page": "陳寶珠",
+  "desc": "香港女歌手及演員",
+  "missing": false
+ },
+ "p-rock": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Dwayne_Johnson-1809_%28cropped%29.jpg/500px-Dwayne_Johnson-1809_%28cropped%29.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 2507,
+  "h": 3342,
+  "page": "巨石強森",
+  "desc": "美国摔跤手、演员",
+  "missing": false
+ },
+ "p-willsmith": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/TechCrunch_Disrupt_2019_%2848834434641%29_%28cropped%29.jpg/500px-TechCrunch_Disrupt_2019_%2848834434641%29_%28cropped%29.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 941,
+  "h": 1397,
+  "page": "威爾·史密斯",
+  "desc": "美國男演員與歌手",
+  "missing": false
+ },
+ "p-jiao": {
+  "src": "https://upload.wikimedia.org/wikipedia/commons/9/90/Voa_chinese_Peggy_Chiao_28Mar10.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 300,
+  "h": 240,
+  "page": "焦雄屏",
+  "desc": "",
+  "missing": false
+ },
+ "p-ngseeyuen": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Ng_See-Yuen.jpg/500px-Ng_See-Yuen.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 1144,
+  "h": 1308,
+  "page": "吳思遠",
+  "desc": "",
+  "missing": false
+ },
+ "p-lee": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Bruce_Lee_1973.jpg/500px-Bruce_Lee_1973.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 516,
+  "h": 689,
+  "page": "李小龙",
+  "desc": "美籍華人武術家、演員（1940–1973）",
+  "missing": false
+ },
+ "p-hui": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Michael_Hui_from_%22The_Last_Dance%22_at_Red_Carpet_of_the_Tokyo_International_Film_Festival_2024_%2854578230865%29.jpg/500px-Michael_Hui_from_%22The_Last_Dance%22_at_Red_Carpet_of_the_Tokyo_International_Film_Festival_2024_%2854578230865%29.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 5464,
+  "h": 8192,
+  "page": "許冠文",
+  "desc": "香港男演員",
+  "missing": false
+ },
+ "p-sammo": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Sammo_Hung_20240414.jpg/500px-Sammo_Hung_20240414.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 606,
+  "h": 532,
+  "page": "洪金宝",
+  "desc": "香港男演員、動作指導、武術家、電影導演及監製",
+  "missing": false
+ },
+ "p-cherie": {
+  "src": "https://upload.wikimedia.org/wikipedia/commons/4/49/%E9%8D%BE%E6%A5%9A%E7%B4%85.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 412,
+  "h": 409,
+  "page": "鍾楚紅",
+  "desc": "香港女演員",
+  "missing": false
+ },
+ "p-to": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Johnnie_To_as_Member_of_the_International_Competition_Jury_at_Opening_Ceremony_of_the_Tokyo_International_Film_Festival_2024_%2854578023421%29_%28cropped%29.jpg/500px-Johnnie_To_as_Member_of_the_International_Competition_Jury_at_Opening_Ceremony_of_the_Tokyo_International_Film_Festival_2024_%2854578023421%29_%28cropped%29.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 3806,
+  "h": 4833,
+  "page": "杜琪峯",
+  "desc": "香港導演",
+  "missing": false
+ },
+ "p-doyle": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Christopher_Doyle.jpg/500px-Christopher_Doyle.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 3008,
+  "h": 2000,
+  "page": "杜可風",
+  "desc": "活躍在香港的澳大利亞籍電影攝影師、導演",
+  "missing": false
+ },
+ "f-w02": {
+  "src": "https://upload.wikimedia.org/wikipedia/zh/f/fd/Police_Story_%28film%29.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 257,
+  "h": 386,
+  "page": "警察故事",
+  "missing": false
+ },
+ "f-w03": {
+  "src": "https://upload.wikimedia.org/wikipedia/zh/f/ff/%E7%8E%AB%E7%91%B0%E7%9A%84%E6%95%85%E4%BA%8B.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 270,
+  "h": 401,
+  "page": "玫瑰的故事 (电影)",
+  "missing": false
+ },
+ "f-w05": {
+  "src": "https://upload.wikimedia.org/wikipedia/zh/3/30/As_Tears_Go_By.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 265,
+  "h": 375,
+  "page": "旺角卡门",
+  "missing": false
+ },
+ "f-w06": {
+  "src": "https://upload.wikimedia.org/wikipedia/zh/4/4d/%E4%B8%8D%E8%84%AB%E8%A5%AA%E7%9A%84%E4%BA%BA.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 269,
+  "h": 371,
+  "page": "不脫襪的人",
+  "missing": false
+ },
+ "f-w09": {
+  "src": "https://upload.wikimedia.org/wikipedia/zh/4/4a/Red_Dust_poster.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 265,
+  "h": 384,
+  "page": "滚滚红尘 (电影)",
+  "missing": false
+ },
+ "f-w10": {
+  "src": "https://upload.wikimedia.org/wikipedia/zh/1/10/Farewell_China_DVD_cover.JPG?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 263,
+  "h": 378,
+  "page": "爱在别乡的季节",
+  "missing": false
+ },
+ "f-w11": {
+  "src": "https://upload.wikimedia.org/wikipedia/zh/7/71/Days_of_Being_Wild_poster.jpeg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 268,
+  "h": 373,
+  "page": "阿飛正傳",
+  "missing": false
+ },
+ "f-w12": {
+  "src": "https://upload.wikimedia.org/wikipedia/zh/a/ae/Between_Hello_and_Goodbye.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 264,
+  "h": 376,
+  "page": "雙城故事",
+  "missing": false
+ },
+ "f-w14": {
+  "src": "https://upload.wikimedia.org/wikipedia/zh/2/23/New_Dragon_Gate_Inn.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 258,
+  "h": 387,
+  "page": "新龍門客棧",
+  "missing": false
+ },
+ "f-w15": {
+  "src": "https://upload.wikimedia.org/wikipedia/zh/6/69/%E5%AE%B6%E6%9C%89%E5%96%9C%E4%BA%8B1992.jpeg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 261,
+  "h": 391,
+  "page": "家有囍事",
+  "missing": false
+ },
+ "f-w16": {
+  "src": "https://upload.wikimedia.org/wikipedia/zh/6/66/Green_Snake_movie.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 263,
+  "h": 378,
+  "page": "青蛇 (電影)",
+  "missing": false
+ },
+ "f-w17": {
+  "src": "https://upload.wikimedia.org/wikipedia/zh/5/55/The_Heroic_Trio.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 270,
+  "h": 369,
+  "page": "東方三俠",
+  "missing": false
+ },
+ "f-w18": {
+  "src": "https://upload.wikimedia.org/wikipedia/zh/3/37/Ashes2.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 268,
+  "h": 372,
+  "page": "东邪西毒",
+  "missing": false
+ },
+ "f-w19": {
+  "src": "https://upload.wikimedia.org/wikipedia/zh/9/93/Irma_vep.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 271,
+  "h": 368,
+  "page": "迷离劫",
+  "missing": false
+ },
+ "f-w20": {
+  "src": "https://upload.wikimedia.org/wikipedia/zh/4/41/Almost_a_Love_Story.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 264,
+  "h": 378,
+  "page": "甜蜜蜜 (电影)",
+  "missing": false
+ },
+ "f-w21": {
+  "src": "https://upload.wikimedia.org/wikipedia/zh/b/b6/The_Soong_Sisters_Poster.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 265,
+  "h": 386,
+  "page": "宋家皇朝",
+  "missing": false
+ },
+ "f-w22": {
+  "src": "https://upload.wikimedia.org/wikipedia/zh/2/2d/Chinese_box.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 268,
+  "h": 350,
+  "page": "中国匣",
+  "missing": false
+ },
+ "f-w23": {
+  "src": "https://upload.wikimedia.org/wikipedia/zh/7/77/In_the_mood_for_love_poster.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 265,
+  "h": 376,
+  "page": "花樣年華",
+  "missing": false
+ },
+ "f-w24": {
+  "src": "https://upload.wikimedia.org/wikipedia/zh/d/dd/Hero.JPG?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 326,
+  "h": 306,
+  "page": "英雄 (电影)",
+  "missing": false
+ },
+ "f-w25": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Woman_washing_hands.jpg/500px-Woman_washing_hands.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 1993,
+  "h": 3000,
+  "page": "清洁",
+  "missing": false
+ },
+ "f-goddess": {
+  "src": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Goddess_1934_film_poster.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 430,
+  "h": 716,
+  "page": "神女 (電影)",
+  "missing": false
+ },
+ "f-onearm": {
+  "src": "https://upload.wikimedia.org/wikipedia/zh/5/5c/One_Armed_Swordsman_movie_poster.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 263,
+  "h": 377,
+  "page": "獨臂刀",
+  "missing": false
+ },
+ "f-jigong": {
+  "src": "https://upload.wikimedia.org/wikipedia/zh/d/d3/The_Mad_Monk.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 270,
+  "h": 370,
+  "page": "濟公 (電影)",
+  "missing": false
+ },
+ "f-exec": {
+  "src": "https://upload.wikimedia.org/wikipedia/zh/f/fd/Executioners.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 252,
+  "h": 395,
+  "page": "現代豪俠傳",
+  "missing": false
+ },
+ "f-better": {
+  "src": "https://upload.wikimedia.org/wikipedia/zh/a/af/ABetterTomorrowPosterHK.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 385,
+  "h": 259,
+  "page": "英雄本色 (1986年電影)",
+  "missing": false
+ },
+ "f-frog": {
+  "src": "https://upload.wikimedia.org/wikipedia/zh/8/81/Prince_Charming_poster.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 258,
+  "h": 387,
+  "page": "青蛙王子 (電影)",
+  "missing": false
+ },
+ "p-chanchi": {
+  "src": "https://upload.wikimedia.org/wikipedia/zh/6/68/%E9%99%B3%E8%87%AA%E5%BC%B7%EF%BC%881941_%EF%BC%8D_2017%EF%BC%89.png?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 240,
+  "h": 335,
+  "page": "陳自強 (香港)",
+  "missing": false
+ },
+ "p-anita": {
+  "src": "https://upload.wikimedia.org/wikipedia/zh/9/97/Anita_Mui_Yim-fong_2000s.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 256,
+  "h": 388,
+  "page": "梅艷芳",
+  "missing": false
+ },
+ "p-changcheh": {
+  "src": "https://upload.wikimedia.org/wikipedia/zh/0/09/%E5%BC%B5%E5%BE%B9%EF%BC%881923_%EF%BC%8D_2002%EF%BC%89.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 242,
+  "h": 339,
+  "page": "張徹",
+  "missing": false
+ },
+ "p-youmin": {
+  "src": "https://upload.wikimedia.org/wikipedia/zh/e/e6/%E5%B0%A4%E6%95%8F.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 164,
+  "h": 220,
+  "page": "尤敏",
+  "missing": false
+ },
+ "p-xiameng": {
+  "src": "https://upload.wikimedia.org/wikipedia/zh/a/a5/%E5%A4%8F%E5%A4%A2_1933-2016.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 210,
+  "h": 210,
+  "page": "夏梦",
+  "missing": false
+ },
+ "p-pakyin": {
+  "src": "https://upload.wikimedia.org/wikipedia/zh/8/80/%E7%99%BD%E7%87%95_1963.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 316,
+  "h": 316,
+  "page": "白燕",
+  "missing": false
+ }
+}

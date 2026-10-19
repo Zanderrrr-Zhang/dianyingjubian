@@ -1,0 +1,222 @@
+[
+  {
+    "num": "37",
+    "href": "./电影巨辩37-诺兰奥德赛.dc.html",
+    "img": "assets/idx/c-nolan.jpg",
+    "dur": "02:57:00",
+    "color": "#2f4a5c",
+    "title": "诺兰的《奥德赛》",
+    "sub": "a modern homecoming, on 70mm IMAX",
+    "desc": "诺兰现象与创作演变，再到这部新片的制作与期待。",
+    "category": "episodes"
+  },
+  {
+    "num": "33",
+    "href": "./电影巨辩33-比利怀尔德.dc.html",
+    "img": "assets/idx/c-wilder.jpg",
+    "dur": "4:08:32",
+    "color": "#a8813c",
+    "title": "比利·怀尔德：和喜剧的边界博弈",
+    "sub": "BILLY WILDER",
+    "desc": "流亡、编剧搭档、审查博弈，以及十六部导演喜剧的逐部拆解。",
+    "category": "episodes"
+  },
+  {
+    "num": "29",
+    "href": "./电影巨辩29-毕赣天才的短板.dc.html",
+    "img": "assets/idx/c-bigan.jpg",
+    "dur": "2:21:00",
+    "color": "#1a1712",
+    "title": "天才的短板",
+    "sub": "BI GAN",
+    "desc": "毕赣三部作品一起谈：长镜头与诗意的天分，以及梦境作为叙事麻醉剂的局限。",
+    "category": "episodes"
+  },
+  {
+    "num": "27",
+    "href": "./电影巨辩27-意大利1945.dc.html",
+    "img": "assets/idx/c-italy.jpg",
+    "dur": "3:36:07",
+    "color": "#1a1712",
+    "title": "意大利1945",
+    "sub": "NEOREALISMO",
+    "desc": "新现实主义如何在法西斯体制内孵化，又如何成为通往现代电影的桥梁。",
+    "category": "episodes"
+  },
+  {
+    "num": "26",
+    "href": "./电影巨辩26-一战再战.dc.html",
+    "img": "assets/idx/c-pta.jpg",
+    "dur": "2 小时 9 分钟",
+    "color": "#556152",
+    "title": "质疑与辩护：关于《一战再战》的现实政治／美学风格",
+    "sub": "ONE BATTLE AFTER ANOTHER",
+    "desc": "保罗·托马斯·安德森的新片，分现实政治与美学风格两条线，谈质疑与辩护。",
+    "category": "episodes"
+  },
+  {
+    "num": "25",
+    "href": "./电影巨辩25-双峰.dc.html",
+    "img": "assets/idx/c-twinpeaks.jpg",
+    "dur": "2:09:28",
+    "color": "linear-gradient(90deg, #8E1B1B 50%, #1F3D36 50%)",
+    "title": "《双峰》是我俩心中最伟大的剧集",
+    "sub": "TWIN PEAKS",
+    "desc": "不是“谁杀了劳拉”，而是“劳拉是谁”：制作史，加上吠陀哲学与神智学两种读法。",
+    "category": "episodes"
+  },
+  {
+    "num": "24",
+    "href": "./电影巨辩-大卫林奇.dc.html",
+    "img": "assets/idx/c-lynch.jpg",
+    "dur": "4:13",
+    "color": "#c2453f",
+    "title": "大脑即屏幕 · 大卫·林奇",
+    "sub": "the brain is a screen",
+    "desc": "两套解读路径：精神分析与印度教哲学，占了全期近六成。",
+    "category": "episodes"
+  },
+  {
+    "num": "18",
+    "href": "./电影巨辩18-戛纳与新好莱坞.dc.html",
+    "img": "assets/idx/c-coppola.jpg",
+    "dur": "约 6 小时",
+    "color": "#4b3a63",
+    "title": "戛纳与美国电影的文艺复兴",
+    "sub": "CANNES × NEW HOLLYWOOD",
+    "desc": "科波拉是全期核心：艺术家与资本体制的关系，以及理想主义如何消散。",
+    "category": "episodes"
+  },
+  {
+    "num": "13",
+    "href": "./电影巨辩13-影史排行榜.dc.html",
+    "img": "",
+    "dur": "约 4 小时 17 分",
+    "color": "#5b9c93",
+    "title": "影史排行榜的诞生与颠覆",
+    "sub": "how a canon is made · and unmade",
+    "desc": "《视与听》1941–2022，榜单如何形成又如何被推翻。",
+    "category": "episodes"
+  },
+  {
+    "num": "11",
+    "href": "./电影巨辩11-金马六十年.dc.html",
+    "img": "assets/idx/c-jinma.jpg",
+    "dur": "3:02:30",
+    "color": "#C9A227",
+    "title": "金马六十年，大陆与台湾",
+    "sub": "GOLDEN HORSE · 1962–2023",
+    "desc": "一个电影奖的制度史：八个阶段，以及大陆电影一小步一小步进来、又离开的二十多年。",
+    "category": "episodes"
+  },
+  {
+    "num": "华语 09",
+    "href": "./电影巨辩-为了华语电影09-张曼玉.dc.html",
+    "img": "assets/zmy09/p-maggie.jpg",
+    "dur": "7:22:21",
+    "color": "#9C2F3A",
+    "title": "为了华语电影 09：张曼玉",
+    "sub": "付费专辑《为了华语电影》第 9 集",
+    "desc": "专辑里唯一一期谈演员、谈明星：她的生涯弧线、香港的明星制，和节目最想讨论的《迷离劫》。",
+    "category": "series"
+  },
+  {
+    "num": "华语 08",
+    "href": "./电影巨辩-为了华语电影08-黄建新.dc.html",
+    "img": "assets/hjx08/f-w01.jpg",
+    "dur": "5:53:10",
+    "color": "#3D5A4A",
+    "title": "为了华语电影 08：黄建新与体制",
+    "sub": "付费专辑《为了华语电影》第 8 集",
+    "desc": "十二部个人长片、四部主旋律：从批判到加入，一个边缘厂里的导演和体制的关系。",
+    "category": "series"
+  },
+  {
+    "num": "华语 06",
+    "href": "./电影巨辩-为了华语电影06-花样年华.dc.html",
+    "img": "assets/hy06/f-w07.jpg",
+    "dur": "5:01:42",
+    "color": "#7A1F24",
+    "title": "为了华语电影 06：《花样年华》与王家卫",
+    "sub": "付费专辑《为了华语电影》第 6 集",
+    "desc": "25 周年修复版在内地重映期间，用一整期谈一部片。",
+    "category": "series"
+  },
+  {
+    "num": "华语 05",
+    "href": "./电影巨辩-为了华语电影05-银河映像.dc.html",
+    "img": "assets/yh05/f-exiled.jpg",
+    "dur": "7:48:34",
+    "color": "#181B1F",
+    "title": "为了华语电影 05：银河映像与杜琪峰",
+    "sub": "付费专辑《为了华语电影》第 5 集",
+    "desc": "四十多部作品，1996–2023：双轨制，谁出钱，谁是大脑，谁拍板。",
+    "category": "series"
+  },
+  {
+    "num": "华语 04",
+    "href": "./电影巨辩-为了华语电影04-贾樟柯.dc.html",
+    "img": "assets/jia04/f-still.jpg",
+    "dur": "4:46:25",
+    "color": "#6B5A3E",
+    "title": "为了华语电影 04：褒贬贾樟柯——独立与妥协",
+    "sub": "付费专辑《为了华语电影》第 4 集",
+    "desc": "十七部作品的起落：从地下到主流，以及用旧素材拼成的新片《风流一代》。",
+    "category": "series"
+  },
+  {
+    "num": "华语 03",
+    "href": "./电影巨辩-为了华语电影03-杨德昌.dc.html",
+    "img": "assets/yang03/f-yy.jpg",
+    "dur": "8:05:45",
+    "color": "#2F5D7C",
+    "title": "为了华语电影 03：杨德昌，爱与希望之梦",
+    "sub": "付费专辑《为了华语电影》第 3 集",
+    "desc": "十部作品，含未完成的《追风》：一级级往上走的阶梯，以及为什么是台湾。",
+    "category": "series"
+  },
+  {
+    "num": "华语 02",
+    "href": "./电影巨辩-为了华语电影02-香港特区电影.dc.html",
+    "img": "assets/hk02/f-wjd.jpg",
+    "dur": "7:18:33",
+    "color": "#B0412E",
+    "title": "为了华语电影 02：香港特区电影，始于 1997",
+    "sub": "付费专辑《为了华语电影》第 2 集",
+    "desc": "1997 年以后的二十七年：过渡期靠影碟和电视活下来，之后谁在唱主角。",
+    "category": "series"
+  },
+  {
+    "num": "华语 01",
+    "href": "./电影巨辩-为了华语电影01-中国电影的改开史.dc.html",
+    "img": "assets/cn01/f-huangtudi.jpg",
+    "dur": "7:22:27",
+    "color": "linear-gradient(90deg, #2F4A6B 33.3%, #A8432F 33.3% 66.6%, #2E7D6B 66.6%)",
+    "title": "为了华语电影 01：中国电影的改开史",
+    "sub": "付费专辑《为了华语电影》第 1 集",
+    "desc": "改了什么，没改什么，开放到哪一步：从统购统销到院线制，四代导演、进口大片与审查，最后估计会停在“2.8”。",
+    "category": "series"
+  },
+  {
+    "num": "专题",
+    "href": "./电影巨辩-侯孝贤.dc.html",
+    "img": "assets/idx/c-hou.jpg",
+    "dur": "02:47:00",
+    "color": "#4a6b5f",
+    "title": "道家的自然主义 · 侯孝贤",
+    "sub": "a stillness that is not emptiness",
+    "desc": "从家属宣布退休讲起，一部部重看侯孝贤的时间与空间。",
+    "category": "extras"
+  },
+  {
+    "num": "书单",
+    "href": "./电影巨辩-129本书.dc.html",
+    "img": "assets/idx/c-books.jpg",
+    "dur": "约 4 小时 10 分",
+    "color": "#8c2f24",
+    "title": "用 129 本书构建电影知识体系",
+    "sub": "129 = 电影诞生 129 年",
+    "desc": "分门类的私人书单，含中英文著作与阅读顺序建议。",
+    "category": "extras"
+  }
+]

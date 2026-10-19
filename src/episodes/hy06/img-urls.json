@@ -1,0 +1,362 @@
+{
+ "f-w05": {
+  "src": "https://upload.wikimedia.org/wikipedia/en/0/04/Fallen-Angels-Poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 258,
+  "h": 386,
+  "title": "Fallen Angels (1995 film)",
+  "desc": "1995 Hong Kong film by Wong Kar-wai"
+ },
+ "f-w06": {
+  "src": "https://upload.wikimedia.org/wikipedia/en/d/d1/Happy_Together_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 252,
+  "h": 350,
+  "title": "Happy Together (1997 film)",
+  "desc": "1997 Hong Kong film by Wong Kar-wai"
+ },
+ "f-hc": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Rear_Window_film_poster.jpg/480px-Rear_Window_film_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 908,
+  "h": 1358,
+  "title": "Rear Window",
+  "desc": "1954 film by Alfred Hitchcock"
+ },
+ "f-mhj": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Vertigomovie_restoration.jpg/480px-Vertigomovie_restoration.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 2703,
+  "h": 4189,
+  "title": "Vertigo (film)",
+  "desc": "1958 film by Alfred Hitchcock"
+ },
+ "f-w07": {
+  "src": "https://upload.wikimedia.org/wikipedia/en/4/45/In_the_Mood_for_Love_movie.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 265,
+  "h": 376,
+  "title": "In the Mood for Love",
+  "desc": "2000 film by Wong Kar-wai"
+ },
+ "f-w08": {
+  "src": "https://upload.wikimedia.org/wikipedia/en/a/a3/2046_movie.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 220,
+  "h": 311,
+  "title": "2046 (film)",
+  "desc": "2004 film by Wong Kar-wai"
+ },
+ "f-w03": {
+  "src": "https://upload.wikimedia.org/wikipedia/en/c/c0/Chungking_Express.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 259,
+  "h": 383,
+  "title": "Chungking Express",
+  "desc": "1994 Hong Kong film by Wong Kar-wai"
+ },
+ "p-bresson": {
+  "src": "https://upload.wikimedia.org/wikipedia/en/b/b0/Robert_Bresson.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 280,
+  "h": 351,
+  "title": "Robert Bresson",
+  "desc": "French filmmaker (1901–1999)"
+ },
+ "p-welles": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Orson_Welles_1937_cr3-4.jpg/480px-Orson_Welles_1937_cr3-4.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 2664,
+  "h": 3552,
+  "title": "Orson Welles",
+  "desc": "American actor and filmmaker (1915–1985)"
+ },
+ "p-hitch": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Hitchcock%2C_Alfred_02.jpg/480px-Hitchcock%2C_Alfred_02.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 808,
+  "h": 973,
+  "title": "Alfred Hitchcock",
+  "desc": "English filmmaker (1899–1980)"
+ },
+ "p-to": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Johnnie_To_as_Member_of_the_International_Competition_Jury_at_Opening_Ceremony_of_the_Tokyo_International_Film_Festival_2024_%2854578023421%29_%28cropped%29.jpg/480px-Johnnie_To_as_Member_of_the_International_Competition_Jury_at_Opening_Ceremony_of_the_Tokyo_International_Film_Festival_2024_%2854578023421%29_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 3806,
+  "h": 4833,
+  "title": "Johnnie To",
+  "desc": "Hong Kong filmmaker (born 1955)"
+ },
+ "p-cortazar": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Cort%C3%A1zar.jpg/480px-Cort%C3%A1zar.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 1950,
+  "h": 2617,
+  "title": "Julio Cortázar",
+  "desc": "Argentine writer (1914–1984)"
+ },
+ "p-puig": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Manuel_Puig%2C_1979.jpg/480px-Manuel_Puig%2C_1979.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 2501,
+  "h": 1592,
+  "title": "Manuel Puig",
+  "desc": "Argentine writer (1932–1990)"
+ },
+ "l-angkor": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Angkor_Wat.jpg/480px-Angkor_Wat.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 2004,
+  "h": 1362,
+  "title": "Angkor Wat",
+  "desc": "Buddhist temple complex in Cambodia"
+ },
+ "f-w04": {
+  "src": "https://upload.wikimedia.org/wikipedia/en/3/37/Ashes2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 203,
+  "h": 297,
+  "title": "Ashes of Time",
+  "desc": "1994 Hong Kong film by Wong Kar-wai"
+ },
+ "f-w01": {
+  "src": "https://upload.wikimedia.org/wikipedia/en/3/30/As_Tears_Go_By.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 267,
+  "h": 373,
+  "title": "As Tears Go By (film)",
+  "desc": "1988 Hong Kong film by Wong Kar-wai"
+ },
+ "f-w10": {
+  "src": "https://upload.wikimedia.org/wikipedia/en/9/95/My_Blueberry_Nights_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 220,
+  "h": 326,
+  "title": "My Blueberry Nights",
+  "desc": "2007 film by Wong Kar-wai"
+ },
+ "p-tony": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Tony_Leung_as_the_President_of_the_International_Competition_Jury_at_Opening_Ceremony_of_the_Tokyo_International_Film_Festival_2024_%2854578353950%29.jpg/480px-Tony_Leung_as_the_President_of_the_International_Competition_Jury_at_Opening_Ceremony_of_the_Tokyo_International_Film_Festival_2024_%2854578353950%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 5464,
+  "h": 8192,
+  "title": "Tony Leung Chiu-wai",
+  "desc": "Hong Kong actor (born 1962)"
+ },
+ "p-godard": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Jean-Luc_Godard_at_Berkeley%2C_1968.jpg/480px-Jean-Luc_Godard_at_Berkeley%2C_1968.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 600,
+  "h": 800,
+  "title": "Jean-Luc Godard",
+  "desc": "French and Swiss film director (1930–2022)"
+ },
+ "p-anton": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Michelangelo_Antonioni_portrait_%28cropped%29.jpg/480px-Michelangelo_Antonioni_portrait_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 3466,
+  "h": 3607,
+  "title": "Michelangelo Antonioni",
+  "desc": "Italian filmmaker (1912–2007)"
+ },
+ "f-sscg": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/All_That_Heaven_Allows_%281955_poster%29.jpg/480px-All_That_Heaven_Allows_%281955_poster%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 1922,
+  "h": 2909,
+  "title": "All That Heaven Allows",
+  "desc": "1955 film by Douglas Sirk"
+ },
+ "p-mu": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Mu_Shiying_Wedding_Picture.jpg/480px-Mu_Shiying_Wedding_Picture.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 600,
+  "h": 496,
+  "title": "Mu Shiying",
+  "desc": "Chinese writer (1912–1940)"
+ },
+ "p-lean": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Aankomst_filmster_Ann_Todd_en_haar_echtgenoot_filmregisseur_David_Lean_op_Schiph%2C_Bestanddeelnr_905-4605_%282%29.jpg/480px-Aankomst_filmster_Ann_Todd_en_haar_echtgenoot_filmregisseur_David_Lean_op_Schiph%2C_Bestanddeelnr_905-4605_%282%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 548,
+  "h": 638,
+  "title": "David Lean",
+  "desc": "English filmmaker and editor (1908–1991)"
+ },
+ "p-roy": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Roy_cheung.JPG/480px-Roy_cheung.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 390,
+  "h": 480,
+  "title": "Roy Cheung",
+  "desc": "Hong Kong-based actor"
+ },
+ "p-murakami": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Conversatorio_Haruki_Murakami_%2812_de_12%29_%2845747009452%29_%28cropped%29.jpg/480px-Conversatorio_Haruki_Murakami_%2812_de_12%29_%2845747009452%29_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 456,
+  "h": 608,
+  "title": "Haruki Murakami",
+  "desc": "Japanese writer (born 1949)"
+ },
+ "p-rayns": {
+  "src": "https://upload.wikimedia.org/wikipedia/en/a/a5/Tony_Rayns.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 199,
+  "h": 267,
+  "title": "Tony Rayns",
+  "desc": "British writer (1948–2026)"
+ },
+ "p-wkw": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Wong_Kar-wai_Berlin_cropped.jpg/480px-Wong_Kar-wai_Berlin_cropped.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 664,
+  "h": 944,
+  "title": "Wong Kar-wai",
+  "desc": "Hong Kong filmmaker (born 1958)"
+ },
+ "f-w11": {
+  "src": "https://upload.wikimedia.org/wikipedia/en/2/23/The_Grandmaster_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 245,
+  "h": 344,
+  "title": "The Grandmaster (film)",
+  "desc": "2013 Hong Kong-Chinese film by Wong Kar-wai"
+ },
+ "p-maggie": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Maggie_Cheung_%28cropped%29.jpg/480px-Maggie_Cheung_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 600,
+  "h": 900,
+  "title": "Maggie Cheung",
+  "desc": "Hong Kong actress (born 1964)"
+ },
+ "f-xjhw": {
+  "src": "https://upload.wikimedia.org/wikipedia/en/3/3a/BriefEncounterPoster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 228,
+  "h": 350,
+  "title": "Brief Encounter",
+  "desc": "1945 British film directed by David Lean"
+ },
+ "p-deleuze": {
+  "src": "https://upload.wikimedia.org/wikipedia/en/7/7e/Gilles_Deleuze.webp?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 299,
+  "h": 332,
+  "title": "Gilles Deleuze",
+  "desc": "French philosopher (1925–1995)"
+ },
+ "p-liu": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/%E5%8A%89%E4%BB%A5%E9%AC%AF.tif/lossless-page1-330px-%E5%8A%89%E4%BB%A5%E9%AC%AF.tif.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 800,
+  "h": 595,
+  "title": "Liu Yichang",
+  "desc": "Hong Kong writer"
+ },
+ "p-lee": {
+  "src": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Mark_Lee_Ping_Bin_2019-07-07.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 283,
+  "h": 318,
+  "title": "Mark Lee Ping-bing",
+  "desc": "Taiwanese cinematographer and photographer"
+ },
+ "p-naruse": {
+  "src": "https://upload.wikimedia.org/wikipedia/commons/6/67/Mikio_Naruse_cropped.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 286,
+  "h": 340,
+  "title": "Mikio Naruse",
+  "desc": "Japanese filmmaker (1905–1969)"
+ },
+ "p-doyle": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Christopher_Doyle_%28cropped%29.jpg/480px-Christopher_Doyle_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 2190,
+  "h": 1995,
+  "title": "Christopher Doyle",
+  "desc": "Australian cinematographer (born 1952)"
+ },
+ "f-w12": {
+  "src": "https://upload.wikimedia.org/wikipedia/en/e/e8/BlossomsShanghai.webp?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 258,
+  "h": 387,
+  "title": "Blossoms Shanghai",
+  "desc": "2023 Chinese TV series by Wong Kar-wai"
+ },
+ "f-zzn": {
+  "src": "https://upload.wikimedia.org/wikipedia/en/0/06/Kiss_of_the_Spider_Woman_%28novel%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 250,
+  "h": 393,
+  "title": "Kiss of the Spider Woman (novel)",
+  "desc": "1976 novel by Manuel Puig"
+ },
+ "f-fy": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Ukigumo_poster_2.jpg/480px-Ukigumo_poster_2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 1468,
+  "h": 2091,
+  "title": "Floating Clouds",
+  "desc": "1955 Japanese drama film"
+ },
+ "p-yokomitsu": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Yokomitsu_Riichi.JPG/480px-Yokomitsu_Riichi.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 494,
+  "h": 527,
+  "title": "Riichi Yokomitsu",
+  "desc": "Japanese writer"
+ },
+ "p-sirk": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Douglas_Sirk_%281955%29.jpg/480px-Douglas_Sirk_%281955%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 480,
+  "h": 650,
+  "title": "Douglas Sirk",
+  "desc": "German film director (1897–1987)"
+ },
+ "p-leslie": {
+  "src": "https://upload.wikimedia.org/wikipedia/commons/9/95/Leslie_Cheung.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 316,
+  "h": 241,
+  "title": "Leslie Cheung",
+  "desc": "Hong Kong singer and actor (1956–2003)"
+ },
+ "p-qt": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Quentin_Tarantino_by_Gage_Skidmore.jpg/480px-Quentin_Tarantino_by_Gage_Skidmore.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 2256,
+  "h": 3016,
+  "title": "Quentin Tarantino",
+  "desc": "American filmmaker (born 1963)"
+ },
+ "f-xczc": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Spring_in_a_Small_Town_poster.jpg/480px-Spring_in_a_Small_Town_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 550,
+  "h": 762,
+  "title": "Spring in a Small Town",
+  "desc": "1948 Chinese film"
+ },
+ "p-hou": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/The_Assassin_Paris_premiere_7.JPG/480px-The_Assassin_Paris_premiere_7.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 1200,
+  "h": 1600,
+  "title": "Hou Hsiao-hsien",
+  "desc": "Taiwanese director, actor (born 1947)"
+ },
+ "p-yang": {
+  "src": "https://upload.wikimedia.org/wikipedia/commons/e/e2/%E7%AC%AC31%E5%B1%86%E9%87%91%E9%A6%AC%E3%80%8C%E6%9C%80%E4%BD%B3%E5%8E%9F%E8%91%97%E5%8A%87%E6%9C%AC%E7%8D%8E%E3%80%8D%E5%BE%97%E4%B8%BB%E6%A5%8A%E5%BE%B7%E6%98%8C.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 237,
+  "h": 362,
+  "title": "Edward Yang",
+  "desc": "Taiwanese-American filmmaker (1947–2007)"
+ },
+ "f-w02": {
+  "src": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a2/Days-of-being-wild-poster.jpg/480px-Days-of-being-wild-poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 368,
+  "h": 270,
+  "title": "Days of Being Wild",
+  "desc": "1990 Hong Kong film by Wong Kar-wai"
+ },
+ "p-rohmer": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Eric_Rohmer_cinematheque_2004-04.jpg/480px-Eric_Rohmer_cinematheque_2004-04.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 578,
+  "h": 722,
+  "title": "Éric Rohmer",
+  "desc": "French film director (1920–2010)"
+ },
+ "p-liuna": {
+  "src": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Liu_Na_Ou.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 275,
+  "h": 382,
+  "title": "Liu Na-ou",
+  "desc": "Chinese novelist and filmmaker (1905–1940)"
+ },
+ "p-hong": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Hong_Sangsoo_at_the_2026_Berlin_International_Film_Festival-68629_%28cropped%29.jpg/480px-Hong_Sangsoo_at_the_2026_Berlin_International_Film_Festival-68629_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "w": 2329,
+  "h": 2832,
+  "title": "Hong Sang-soo",
+  "desc": "South Korean film director (born 1960)"
+ },
+ "p-chin": {
+  "src": "https://upload.wikimedia.org/wikipedia/en/d/d8/Chin_Tsi-ang.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 85,
+  "h": 101,
+  "title": "Chin Tsi-ang",
+  "desc": "Hong Kong martial arts actress (1908–2007)"
+ },
+ "f-w09": {
+  "src": "https://upload.wikimedia.org/wikipedia/en/a/a1/Eros_film.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "w": 236,
+  "h": 350,
+  "title": "Eros (film)"
+ },
+ "l-goldfinch": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Goldfinch_Restaurant_Lan_Fong_Road_Causeway_Bay_night_Hong_Kong_2015-09-20.jpg/960px-Goldfinch_Restaurant_Lan_Fong_Road_Causeway_Bay_night_Hong_Kong_2015-09-20.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "title": "Goldfinch Restaurant"
+ }
+}

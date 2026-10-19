@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700;900&family=Noto+Sans+SC:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<meta name="referrer" content="no-referrer">
+<script src="./image-slot.js"></script>
+<style>
+  body { margin: 0; background: #1A1917; padding: 56px 0 40px; -webkit-font-smoothing: antialiased; }
+  a { color: #8E1B1B; text-decoration: underline; text-underline-offset: 3px; }
+  a:hover { color: #1F3D36; }
+</style>
+</helmet>
+
+<section id="m1" data-screen-label="M01 封面" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: 4 / 5; margin: 0 auto 64px; padding: 0 64px; background: #0E0E0E; color: #F2EBDD; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column; overflow: hidden; isolation: isolate;">
+  <div style="position: absolute; left: 0; top: 28px; bottom: 40px; width: 52px; z-index: -1; background: repeating-linear-gradient(90deg, #4E0B0B 0 5px, #8E1B1B 5px 14px, #B23A2F 14px 17px, #8E1B1B 17px 26px);"></div>
+  <div style="position: absolute; right: 0; top: 28px; bottom: 40px; width: 52px; z-index: -1; background: repeating-linear-gradient(90deg, #4E0B0B 0 5px, #8E1B1B 5px 14px, #B23A2F 14px 17px, #8E1B1B 17px 26px);"></div>
+  <div style="height: 28px; margin: 0 -64px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2224%22%3E%3Crect width=%2248%22 height=%2224%22 fill=%22%23F2EBDD%22/%3E%3Cpath d=%22M0 6L24 -6L48 6V18L24 6L0 18ZM0 30L24 18L48 30V42L24 30L0 42Z%22 fill=%22%23111111%22/%3E%3C/svg%3E');"></div>
+  <div style="margin-top: 52px; display: flex; justify-content: space-between; align-items: baseline; gap: 24px;">
+    <span style="font-size: 24px; letter-spacing: 0.28em; color: #D9A441;">电影巨辩 · 第 25 期</span>
+    <span style="font-size: 22px; letter-spacing: 0.08em; color: #CFC6B4;">老马 × 阿吴｜2 小时 09 分</span>
+  </div>
+  <h1 style="margin: 96px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 112px; line-height: 1.2; letter-spacing: 0.01em;">《双峰》是我俩<br>心中最伟大的剧集</h1>
+  <p style="margin: 44px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 500; font-size: 46px; line-height: 1.4; color: #CFC6B4;">不是“谁杀了劳拉”，<br>而是<span style="color: #D9A441;">“劳拉是谁”</span></p>
+  <svg viewBox="0 0 1080 520" width="1080" height="520" style="display: block; margin: auto -64px 0; flex: none;" aria-hidden="true">
+    <defs>
+      <pattern id="cvzz" width="64" height="32" patternUnits="userSpaceOnUse"><rect width="64" height="32" fill="#121211"></rect><path d="M0 8L32 -8L64 8V24L32 8L0 24ZM0 40L32 24L64 40V56L32 40L0 56Z" fill="#232220"></path></pattern>
+      <radialGradient id="cvglow"><stop offset="0" stop-color="#D9A441" stop-opacity="0.42"></stop><stop offset="1" stop-color="#D9A441" stop-opacity="0"></stop></radialGradient>
+    </defs>
+    <rect x="0" y="220" width="1080" height="300" fill="url(#cvzz)"></rect>
+    <circle cx="538" cy="262" r="170" fill="url(#cvglow)"></circle>
+    <path d="M-30 520L120 330L190 360L300 150L360 220L420 190L640 520Z" fill="#8E1B1B" stroke="#F2EBDD" stroke-opacity="0.28" stroke-width="1.5"></path>
+    <path d="M440 520L640 210L700 260L790 110L860 210L920 180L1110 520Z" fill="#1F3D36" stroke="#F2EBDD" stroke-opacity="0.28" stroke-width="1.5"></path>
+    <circle cx="538" cy="262" r="40" fill="#D9A441"></circle>
+    <path d="{{ pinesCover }}" fill="#080808"></path>
+  </svg>
+  <div style="height: 40px; margin: 0 -64px; flex: none; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2224%22%3E%3Crect width=%2248%22 height=%2224%22 fill=%22%23F2EBDD%22/%3E%3Cpath d=%22M0 6L24 -6L48 6V18L24 6L0 18ZM0 30L24 18L48 30V42L24 30L0 42Z%22 fill=%22%23111111%22/%3E%3C/svg%3E');"></div>
+</section>
+
+<section id="m1b" data-screen-label="M01b 欢迎来到双峰镇" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F2EBDD; color: #111111; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
+  <div style="height: 14px; margin: -56px -64px 42px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2228%22 height=%2214%22%3E%3Crect width=%2228%22 height=%2214%22 fill=%22%23F2EBDD%22/%3E%3Cpath d=%22M0 3.5L14 -3.5L28 3.5V10.5L14 3.5L0 10.5ZM0 17.5L14 10.5L28 17.5V24.5L14 17.5L0 24.5Z%22 fill=%22%23111111%22/%3E%3C/svg%3E');"></div>
+  <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'Space Mono', monospace; font-size: 17px; letter-spacing: 0.12em; color: #5C564B;"><span>双峰镇</span><span>电影巨辩 EP25 · 双峰</span></div>
+  <h2 style="margin: 36px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 64px; line-height: 1.2;">欢迎来到双峰镇</h2>
+  <div style="position: relative; margin-top: 36px; width: 100%; aspect-ratio: 952 / 400; background: #D8CFBC;"><image-slot id="tp-place-sign" src="{{ img.sign }}" shape="rect" placeholder="双峰镇路牌" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot></div>
+  <div style="margin-top: 10px; display: flex; justify-content: space-between; font-size: 18px;"><span style="font-family: 'Noto Serif SC', serif; font-weight: 700;">双峰镇路牌</span><span style="color: #5C564B;">取景地：华盛顿州斯诺夸尔米，Reinig 路</span></div>
+  <div style="margin-top: 28px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px 16px;">
+    <sc-for list="{{ places }}" as="p" hint-placeholder-count="6">
+      <div>
+        <div style="position: relative; width: 100%; aspect-ratio: 4 / 3; background: #D8CFBC;"><image-slot id="{{ p.id }}" src="{{ p.src }}" shape="rect" placeholder="{{ p.name }}" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot></div>
+        <div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 21px;">{{ p.name }}</div>
+        <div style="margin-top: 2px; font-size: 17px; color: #5C564B;">取景地：{{ p.where }}</div>
+      </div>
+    </sc-for>
+  </div>
+  <div style="margin-top: auto; padding-top: 32px; display: flex; justify-content: space-between; gap: 24px; font-size: 17px; color: #5C564B;"><span>取景地照片来自维基共享资源（Wikimedia Commons）；可拖入自己的图片替换</span><span style="font-family: 'Space Mono', monospace;">01b</span></div>
+</section>
+
+<section id="m1d" data-screen-label="M01d 双峰镇在哪里" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F2EBDD; color: #111111; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
+  <div style="height: 14px; margin: -56px -64px 42px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2228%22 height=%2214%22%3E%3Crect width=%2228%22 height=%2214%22 fill=%22%23F2EBDD%22/%3E%3Cpath d=%22M0 3.5L14 -3.5L28 3.5V10.5L14 3.5L0 10.5ZM0 17.5L14 10.5L28 17.5V24.5L14 17.5L0 24.5Z%22 fill=%22%23111111%22/%3E%3C/svg%3E');"></div>
+  <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'Space Mono', monospace; font-size: 17px; letter-spacing: 0.12em; color: #5C564B;"><span>地图</span><span>电影巨辩 EP25 · 双峰</span></div>
+  <h2 style="margin: 36px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 64px; line-height: 1.2;">双峰镇在哪里</h2>
+  <p style="margin: 14px 0 0; font-size: 21px; line-height: 1.65; color: #2E2A25; text-wrap: pretty;">剧中的双峰镇是虚构的。库珀在试播集里说，它在加拿大边境以南 5 英里、州界以西 12 英里。外景主要在西雅图以东的斯诺夸尔米河谷拍摄。</p>
+  <svg viewBox="0 0 952 700" width="952" height="700" style="margin-top: 28px; display: block; flex: none; background: #EDE3CE;" role="img" aria-label="双峰镇及周边示意地图（虚构）">
+    <defs>
+      <pattern id="mpine" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M12 3L18 12H15L20 20H4L9 12H6Z" fill="#1F3D36" fill-opacity="0.5"></path></pattern>
+      <pattern id="mhatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#111111" stroke-opacity="0.22" stroke-width="2"></line></pattern>
+    </defs>
+    <path d="M0 64H952" stroke="#111111" stroke-width="2" stroke-dasharray="16 6 3 6" fill="none"></path>
+    <text x="24" y="42" text-anchor="start" font-family="Noto Sans SC" font-weight="500" font-size="16" fill="#5C564B" letter-spacing="0.2em" paint-order="stroke" stroke="#EDE3CE" stroke-width="5" stroke-linejoin="round">加拿大</text><text x="24" y="92" text-anchor="start" font-family="Noto Sans SC" font-weight="500" font-size="16" fill="#5C564B" letter-spacing="0.2em" paint-order="stroke" stroke="#EDE3CE" stroke-width="5" stroke-linejoin="round">美国 · 华盛顿州</text><text x="928" y="56" text-anchor="end" font-family="Noto Sans SC" font-weight="500" font-size="14" fill="#5C564B" letter-spacing="0.2em" paint-order="stroke" stroke="#EDE3CE" stroke-width="5" stroke-linejoin="round">美加边境</text>
+    <rect x="696" y="32" width="8" height="8" fill="#111111"></rect><text x="712" y="42" text-anchor="start" font-family="Noto Serif SC" font-weight="700" font-size="17" fill="#111111" letter-spacing="0" paint-order="stroke" stroke="#EDE3CE" stroke-width="5" stroke-linejoin="round">独眼杰克</text>
+    <path d="M712 110C800 100 900 112 952 120V470C900 482 820 470 762 432C720 402 700 332 708 262C714 202 700 150 712 110Z" fill="url(#mpine)"></path>
+    <path d="M150 300C120 250 160 120 300 112C420 106 560 100 640 150C670 200 640 280 600 310Z" fill="url(#mpine)" opacity="0.6"></path>
+    <ellipse cx="150" cy="176" rx="28" ry="14" fill="#C9D0D8" stroke="#7F8A96" stroke-width="1.5"></ellipse><ellipse cx="196" cy="198" rx="20" ry="10" fill="#C9D0D8" stroke="#7F8A96" stroke-width="1.5"></ellipse><text x="130" y="226" text-anchor="start" font-family="Noto Serif SC" font-weight="700" font-size="16" fill="#111111" letter-spacing="0" paint-order="stroke" stroke="#EDE3CE" stroke-width="5" stroke-linejoin="round">珍珠湖</text>
+    <path d="M210 300L320 150L380 228L452 128L590 300Z" fill="#E6DCC6" stroke="#111111" stroke-width="2" stroke-linejoin="round"></path>
+    <path d="M320 150L380 228L362 300L338 300Z" fill="url(#mhatch)"></path><path d="M452 128L590 300L486 300Z" fill="url(#mhatch)"></path>
+    <text x="292" y="284" text-anchor="middle" font-family="Noto Serif SC" font-weight="900" font-size="18" fill="#111111" letter-spacing="0" paint-order="stroke" stroke="#EDE3CE" stroke-width="5" stroke-linejoin="round">白尾山</text><text x="456" y="284" text-anchor="middle" font-family="Noto Serif SC" font-weight="900" font-size="18" fill="#111111" letter-spacing="0" paint-order="stroke" stroke="#EDE3CE" stroke-width="5" stroke-linejoin="round">蓝松山</text>
+    <path d="M436 300C446 342 500 362 520 402S498 482 540 544S602 640 612 700" fill="none" stroke="#9FB0C4" stroke-width="9" stroke-linecap="round"></path>
+    <path d="M430 304V324M437 304V326M444 304V322" stroke="#7F8A96" stroke-width="2"></path>
+    <path d="M560 470C480 472 420 452 360 446" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round"></path><path d="M560 470C480 472 420 452 360 446" fill="none" stroke="#EDE3CE" stroke-width="2"></path>
+    <path d="M396 340C440 360 520 380 580 400" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round"></path><path d="M396 340C440 360 520 380 580 400" fill="none" stroke="#EDE3CE" stroke-width="2"></path>
+    <path d="M572 700C566 620 600 560 622 512" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round"></path><path d="M572 700C566 620 600 560 622 512" fill="none" stroke="#EDE3CE" stroke-width="2"></path>
+    <path d="M740 470C780 480 800 500 830 520S900 560 952 562" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round"></path><path d="M740 470C780 480 800 500 830 520S900 560 952 562" fill="none" stroke="#EDE3CE" stroke-width="2"></path>
+    <g stroke="#111111" stroke-opacity="0.28" stroke-width="1.5"><path d="M570 392H742M570 432H742M570 472H742M570 512H742"></path><path d="M584 380V522M632 380V522M680 380V522M728 380V522"></path></g>
+    <text x="656" y="366" text-anchor="middle" font-family="Noto Serif SC" font-weight="900" font-size="34" fill="#111111" letter-spacing="0.1em" paint-order="stroke" stroke="#EDE3CE" stroke-width="5" stroke-linejoin="round">双峰镇</text>
+    <rect x="378" y="326" width="30" height="16" fill="#111111"></rect><path d="M374 327L393 314L412 327Z" fill="#111111"></path><circle cx="362" cy="334" r="11" fill="#8E1B1B" stroke="#EDE3CE" stroke-width="2.5"></circle><text x="362" y="338.5" text-anchor="middle" font-family="Space Mono" font-weight="700" font-size="12" fill="#F2EBDD">1</text><text x="348" y="340" text-anchor="end" font-family="Noto Serif SC" font-weight="700" font-size="17" fill="#111111" letter-spacing="0" paint-order="stroke" stroke="#EDE3CE" stroke-width="5" stroke-linejoin="round">大北方酒店</text>
+    <circle cx="462" cy="316" r="11" fill="#8E1B1B" stroke="#EDE3CE" stroke-width="2.5"></circle><text x="462" y="320.5" text-anchor="middle" font-family="Space Mono" font-weight="700" font-size="12" fill="#F2EBDD">2</text><text x="478" y="322" text-anchor="start" font-family="Noto Serif SC" font-weight="700" font-size="17" fill="#111111" letter-spacing="0" paint-order="stroke" stroke="#EDE3CE" stroke-width="5" stroke-linejoin="round">白尾瀑布</text>
+    <circle cx="604" cy="452" r="11" fill="#8E1B1B" stroke="#EDE3CE" stroke-width="2.5"></circle><text x="604" y="456.5" text-anchor="middle" font-family="Space Mono" font-weight="700" font-size="12" fill="#F2EBDD">3</text><text x="604" y="480" text-anchor="middle" font-family="Noto Serif SC" font-weight="700" font-size="17" fill="#111111" letter-spacing="0" paint-order="stroke" stroke="#EDE3CE" stroke-width="5" stroke-linejoin="round">双 R 餐馆</text>
+    <circle cx="704" cy="412" r="11" fill="#8E1B1B" stroke="#EDE3CE" stroke-width="2.5"></circle><text x="704" y="416.5" text-anchor="middle" font-family="Space Mono" font-weight="700" font-size="12" fill="#F2EBDD">4</text><text x="704" y="440" text-anchor="middle" font-family="Noto Serif SC" font-weight="700" font-size="17" fill="#111111" letter-spacing="0" paint-order="stroke" stroke="#EDE3CE" stroke-width="5" stroke-linejoin="round">警长办公室</text>
+    <rect x="596" y="502" width="8" height="8" fill="#111111"></rect><text x="612" y="512" text-anchor="start" font-family="Noto Serif SC" font-weight="700" font-size="16" fill="#111111" letter-spacing="0" paint-order="stroke" stroke="#EDE3CE" stroke-width="5" stroke-linejoin="round">帕尔默家</text>
+    <rect x="714" y="492" width="8" height="8" fill="#111111"></rect><text x="730" y="502" text-anchor="start" font-family="Noto Serif SC" font-weight="700" font-size="16" fill="#111111" letter-spacing="0" paint-order="stroke" stroke="#EDE3CE" stroke-width="5" stroke-linejoin="round">高中</text>
+    <circle cx="826" cy="516" r="11" fill="#8E1B1B" stroke="#EDE3CE" stroke-width="2.5"></circle><text x="826" y="520.5" text-anchor="middle" font-family="Space Mono" font-weight="700" font-size="12" fill="#F2EBDD">5</text><text x="842" y="506" text-anchor="start" font-family="Noto Serif SC" font-weight="700" font-size="17" fill="#111111" letter-spacing="0" paint-order="stroke" stroke="#EDE3CE" stroke-width="5" stroke-linejoin="round">路边酒吧</text>
+    <text x="838" y="152" text-anchor="middle" font-family="Noto Serif SC" font-weight="900" font-size="19" fill="#111111" letter-spacing="0" paint-order="stroke" stroke="#EDE3CE" stroke-width="5" stroke-linejoin="round">幽灵木国家森林</text>
+    <circle cx="886.0" cy="282.0" r="4" fill="#1F3D36"></circle><circle cx="882.8" cy="294.0" r="4" fill="#1F3D36"></circle><circle cx="874.0" cy="302.8" r="4" fill="#1F3D36"></circle><circle cx="862.0" cy="306.0" r="4" fill="#1F3D36"></circle><circle cx="850.0" cy="302.8" r="4" fill="#1F3D36"></circle><circle cx="841.2" cy="294.0" r="4" fill="#1F3D36"></circle><circle cx="838.0" cy="282.0" r="4" fill="#1F3D36"></circle><circle cx="841.2" cy="270.0" r="4" fill="#1F3D36"></circle><circle cx="850.0" cy="261.2" r="4" fill="#1F3D36"></circle><circle cx="862.0" cy="258.0" r="4" fill="#1F3D36"></circle><circle cx="874.0" cy="261.2" r="4" fill="#1F3D36"></circle><circle cx="882.8" cy="270.0" r="4" fill="#1F3D36"></circle><circle cx="862" cy="282" r="6" fill="#8E1B1B"></circle><text x="862" y="330" text-anchor="middle" font-family="Noto Serif SC" font-weight="700" font-size="16" fill="#111111" letter-spacing="0" paint-order="stroke" stroke="#EDE3CE" stroke-width="5" stroke-linejoin="round">格拉斯顿伯里树林</text><text x="862" y="350" text-anchor="middle" font-family="Noto Sans SC" font-weight="500" font-size="14" fill="#8E1B1B" letter-spacing="0" paint-order="stroke" stroke="#EDE3CE" stroke-width="5" stroke-linejoin="round">红房间的入口</text>
+    <path d="M762 392A16 14 0 0 1 794 392Z" fill="#111111"></path><text x="778" y="416" text-anchor="middle" font-family="Noto Serif SC" font-weight="700" font-size="16" fill="#111111" letter-spacing="0" paint-order="stroke" stroke="#EDE3CE" stroke-width="5" stroke-linejoin="round">猫头鹰洞</text>
+    <path d="M90 470C120 420 260 410 330 440C380 462 372 540 300 570C220 600 110 590 80 540C70 515 75 490 90 470Z" fill="#C9D0D8" stroke="#7F8A96" stroke-width="1.5"></path><text x="214" y="512" text-anchor="middle" font-family="Noto Serif SC" font-weight="900" font-size="22" fill="#3E4A57" letter-spacing="0.3em" paint-order="stroke" stroke="#EDE3CE" stroke-width="5" stroke-linejoin="round">黑湖</text>
+    <rect x="340" y="432" width="26" height="18" fill="#111111"></rect><rect x="356" y="418" width="6" height="16" fill="#111111"></rect><text x="372" y="428" text-anchor="start" font-family="Noto Serif SC" font-weight="700" font-size="16" fill="#111111" letter-spacing="0" paint-order="stroke" stroke="#EDE3CE" stroke-width="5" stroke-linejoin="round">帕卡德锯木厂</text>
+    <circle cx="86" cy="598" r="11" fill="#8E1B1B" stroke="#EDE3CE" stroke-width="2.5"></circle><text x="86" y="602.5" text-anchor="middle" font-family="Space Mono" font-weight="700" font-size="12" fill="#F2EBDD">7</text><text x="102" y="604" text-anchor="start" font-family="Noto Serif SC" font-weight="700" font-size="17" fill="#111111" letter-spacing="0" paint-order="stroke" stroke="#EDE3CE" stroke-width="5" stroke-linejoin="round">蓝松小屋</text>
+    <path d="M0 646C200 634 400 656 560 644S800 612 952 622" fill="none" stroke="#111111" stroke-width="2"></path>
+    <path d="M0 646C200 634 400 656 560 644S800 612 952 622" fill="none" stroke="#111111" stroke-width="10" stroke-dasharray="1.5 9"></path>
+    <path d="M592 630V660M606 628V658" stroke="#111111" stroke-width="3"></path><circle cx="632" cy="668" r="11" fill="#8E1B1B" stroke="#EDE3CE" stroke-width="2.5"></circle><text x="632" y="672.5" text-anchor="middle" font-family="Space Mono" font-weight="700" font-size="12" fill="#F2EBDD">6</text><text x="648" y="674" text-anchor="start" font-family="Noto Serif SC" font-weight="700" font-size="17" fill="#111111" letter-spacing="0" paint-order="stroke" stroke="#EDE3CE" stroke-width="5" stroke-linejoin="round">罗内特之桥</text>
+    <rect x="752" y="608" width="36" height="13" fill="#111111"></rect><text x="770" y="598" text-anchor="middle" font-family="Noto Serif SC" font-weight="700" font-size="16" fill="#111111" letter-spacing="0" paint-order="stroke" stroke="#EDE3CE" stroke-width="5" stroke-linejoin="round">废弃车厢</text>
+    <g transform="translate(906 112)"><path d="M0 -22L8 6L0 0L-8 6Z" fill="#111111"></path><text x="0" y="24" text-anchor="middle" font-family="Space Mono" font-weight="700" font-size="14" fill="#111111">N</text></g>
+    <text x="24" y="684" text-anchor="start" font-family="Noto Sans SC" font-weight="500" font-size="14" fill="#5C564B" letter-spacing="0" paint-order="stroke" stroke="#EDE3CE" stroke-width="5" stroke-linejoin="round">示意图：依据剧集设定绘制，位置与距离不按比例</text>
+  </svg>
+  <div style="margin-top: 26px; display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 32px; align-items: start;">
+    <div><iframe src="./ep25-map.html" title="华盛顿州位置小图" style="width: 300px; height: 214px; border: 0; display: block;"></iframe><div style="margin-top: 8px; font-size: 16px; line-height: 1.5; color: #5C564B;">真实地理：剧中位置与取景地</div></div>
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 26px; font-size: 18px; line-height: 1.45;">
+      <div style="font-size: 15px; letter-spacing: 0.14em; color: #5C564B; grid-column: 1 / -1;">剧中地点 → 现实取景地</div>
+      <div style="display: flex; gap: 10px; align-items: baseline;"><span style="flex: none; width: 22px; height: 22px; border-radius: 50%; background: #8E1B1B; color: #F2EBDD; font-family: 'Space Mono', monospace; font-weight: 700; font-size: 12px; display: flex; align-items: center; justify-content: center; transform: translateY(4px);">1</span><span><b>大北方酒店</b>　Salish Lodge</span></div>
+      <div style="display: flex; gap: 10px; align-items: baseline;"><span style="flex: none; width: 22px; height: 22px; border-radius: 50%; background: #8E1B1B; color: #F2EBDD; font-family: 'Space Mono', monospace; font-weight: 700; font-size: 12px; display: flex; align-items: center; justify-content: center; transform: translateY(4px);">2</span><span><b>白尾瀑布</b>　斯诺夸尔米瀑布</span></div>
+      <div style="display: flex; gap: 10px; align-items: baseline;"><span style="flex: none; width: 22px; height: 22px; border-radius: 50%; background: #8E1B1B; color: #F2EBDD; font-family: 'Space Mono', monospace; font-weight: 700; font-size: 12px; display: flex; align-items: center; justify-content: center; transform: translateY(4px);">3</span><span><b>双 R 餐馆</b>　北本德 Twede’s Cafe</span></div>
+      <div style="display: flex; gap: 10px; align-items: baseline;"><span style="flex: none; width: 22px; height: 22px; border-radius: 50%; background: #8E1B1B; color: #F2EBDD; font-family: 'Space Mono', monospace; font-weight: 700; font-size: 12px; display: flex; align-items: center; justify-content: center; transform: translateY(4px);">4</span><span><b>警长办公室</b>　斯诺夸尔米，今 DirtFish</span></div>
+      <div style="display: flex; gap: 10px; align-items: baseline;"><span style="flex: none; width: 22px; height: 22px; border-radius: 50%; background: #8E1B1B; color: #F2EBDD; font-family: 'Space Mono', monospace; font-weight: 700; font-size: 12px; display: flex; align-items: center; justify-content: center; transform: translateY(4px);">5</span><span><b>路边酒吧</b>　福尔城</span></div>
+      <div style="display: flex; gap: 10px; align-items: baseline;"><span style="flex: none; width: 22px; height: 22px; border-radius: 50%; background: #8E1B1B; color: #F2EBDD; font-family: 'Space Mono', monospace; font-weight: 700; font-size: 12px; display: flex; align-items: center; justify-content: center; transform: translateY(4px);">6</span><span><b>罗内特之桥</b>　Reinig 桥</span></div>
+      <div style="display: flex; gap: 10px; align-items: baseline;"><span style="flex: none; width: 22px; height: 22px; border-radius: 50%; background: #8E1B1B; color: #F2EBDD; font-family: 'Space Mono', monospace; font-weight: 700; font-size: 12px; display: flex; align-items: center; justify-content: center; transform: translateY(4px);">7</span><span><b>蓝松小屋</b>　Kiana Lodge</span></div>
+    </div>
+  </div>
+  <div style="margin-top: auto; padding-top: 32px; display: flex; justify-content: space-between; gap: 24px; font-size: 17px; color: #5C564B;"><span>主图为依据剧集设定绘制的虚构示意图；小图州界 us-atlas</span><span style="font-family: 'Space Mono', monospace;">01d</span></div>
+</section>
+
+<section id="m1c" data-screen-label="M01c 这期反复出现的人" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F2EBDD; color: #111111; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
+  <div style="height: 14px; margin: -56px -64px 42px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2228%22 height=%2214%22%3E%3Crect width=%2228%22 height=%2214%22 fill=%22%23F2EBDD%22/%3E%3Cpath d=%22M0 3.5L14 -3.5L28 3.5V10.5L14 3.5L0 10.5ZM0 17.5L14 10.5L28 17.5V24.5L14 17.5L0 24.5Z%22 fill=%22%23111111%22/%3E%3C/svg%3E');"></div>
+  <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'Space Mono', monospace; font-size: 17px; letter-spacing: 0.12em; color: #5C564B;"><span>人物</span><span>电影巨辩 EP25 · 双峰</span></div>
+  <h2 style="margin: 36px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 64px; line-height: 1.2;">这期反复出现的人</h2>
+  <div style="margin-top: 12px; font-size: 19px; color: #5C564B;">数字为转录文本中的提及次数，约数</div>
+  <div style="margin-top: 36px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+    <sc-for list="{{ creators }}" as="c" hint-placeholder-count="2">
+      <div style="display: flex; gap: 22px; align-items: flex-end; background: {{ c.bg }}; color: #F2EBDD; padding: 20px;">
+        <div style="position: relative; flex: none; width: 150px; height: 190px; background: #0E0E0E; display: flex; align-items: center; justify-content: center;"><sc-if value="{{ c.has }}" hint-placeholder-val="{{ true }}"><image-slot id="{{ c.id }}" src="{{ c.src }}" shape="rect" placeholder="{{ c.name }}" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot></sc-if><sc-if value="{{ c.noImg }}" hint-placeholder-val="{{ false }}"><span style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 72px; color: rgba(242,235,221,0.85);">{{ c.mono }}</span></sc-if></div>
+        <div><div style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 34px; line-height: 1.25;">{{ c.name }}</div><div style="margin-top: 8px; font-family: 'Space Mono', monospace; font-size: 20px;">提及 {{ c.count }} 次</div></div>
+      </div>
+    </sc-for>
+  </div>
+  <div style="margin-top: 40px; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 26px 14px;">
+    <sc-for list="{{ cast }}" as="c" hint-placeholder-count="14">
+      <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+        <div style="position: relative; width: 112px; height: 112px; border-radius: 50%; background: {{ c.monoBg }}; color: {{ c.monoFg }}; box-shadow: 0 0 0 4px {{ c.ring }}; display: flex; align-items: center; justify-content: center;"><sc-if value="{{ c.has }}" hint-placeholder-val="{{ false }}"><image-slot id="{{ c.id }}" src="{{ c.src }}" shape="circle" placeholder="{{ c.name }}" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot></sc-if><sc-if value="{{ c.noImg }}" hint-placeholder-val="{{ true }}"><span style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 44px;">{{ c.mono }}</span></sc-if></div>
+        <div style="margin-top: 12px; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 20px; line-height: 1.3;">{{ c.name }}</div>
+        <div style="font-family: 'Space Mono', monospace; font-size: 16px; color: #5C564B;">{{ c.count }}</div>
+      </div>
+    </sc-for>
+  </div>
+  <div style="margin-top: auto; padding-top: 32px; display: flex; justify-content: space-between; gap: 24px; font-size: 17px; color: #5C564B;"><span>剧照来自英文维基百科，版权归原权利人；没有图的人物可拖入图片</span><span style="font-family: 'Space Mono', monospace;">01c</span></div>
+</section>
+
+<section id="m2" data-screen-label="M02 十个要点" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F2EBDD; color: #111111; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
+  <div style="height: 14px; margin: -56px -64px 42px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2228%22 height=%2214%22%3E%3Crect width=%2228%22 height=%2214%22 fill=%22%23F2EBDD%22/%3E%3Cpath d=%22M0 3.5L14 -3.5L28 3.5V10.5L14 3.5L0 10.5ZM0 17.5L14 10.5L28 17.5V24.5L14 17.5L0 24.5Z%22 fill=%22%23111111%22/%3E%3C/svg%3E');"></div>
+  <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'Space Mono', monospace; font-size: 17px; letter-spacing: 0.12em; color: #5C564B;"><span>M02 · 十个要点</span><span>电影巨辩 EP25 · 双峰</span></div>
+  <h2 style="margin: 36px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 64px; line-height: 1.2;">十个要点</h2>
+  <div style="margin-top: 44px; display: grid; grid-template-columns: 1fr 1fr; gap: 30px 44px;">
+    <sc-for list="{{ points }}" as="p" hint-placeholder-count="10">
+      <div style="border-top: 2px solid #111111; padding-top: 16px; display: flex; flex-direction: column; gap: 10px;">
+        <div style="display: flex; align-items: center; gap: 14px;"><span style="font-family: 'Space Mono', monospace; font-weight: 700; font-size: 24px;">{{ p.n }}</span><span style="width: 44px; height: 8px; background: {{ p.bar }};"></span></div>
+        <div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 30px; line-height: 1.35;">{{ p.title }}</div>
+        <div style="font-size: 21px; line-height: 1.65; color: #2E2A25; text-wrap: pretty;">{{ p.text }}</div>
+      </div>
+    </sc-for>
+  </div>
+  <div style="margin-top: auto; padding-top: 36px; display: flex; justify-content: space-between; font-size: 17px; color: #5C564B;"><span>电影巨辩 · 第 25 期《〈双峰〉是我俩心中最伟大的剧集》</span><span style="font-family: 'Space Mono', monospace;">02</span></div>
+</section>
+
+<section id="m3" data-screen-label="M03 全期脑图" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F2EBDD; color: #111111; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
+  <div style="height: 14px; margin: -56px -64px 42px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2228%22 height=%2214%22%3E%3Crect width=%2228%22 height=%2214%22 fill=%22%23F2EBDD%22/%3E%3Cpath d=%22M0 3.5L14 -3.5L28 3.5V10.5L14 3.5L0 10.5ZM0 17.5L14 10.5L28 17.5V24.5L14 17.5L0 24.5Z%22 fill=%22%23111111%22/%3E%3C/svg%3E');"></div>
+  <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'Space Mono', monospace; font-size: 17px; letter-spacing: 0.12em; color: #5C564B;"><span>M03 · 全期脑图</span><span>电影巨辩 EP25 · 双峰</span></div>
+  <h2 style="margin: 36px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 64px; line-height: 1.2;">全期脑图</h2>
+  <div style="margin-top: 22px; display: flex; flex-wrap: wrap; gap: 10px 26px; font-size: 19px; color: #2E2A25;">
+    <span style="display: flex; align-items: center; gap: 8px;"><span style="width: 16px; height: 16px; background: #8A8F93;"></span>产业与制作史</span>
+    <span style="display: flex; align-items: center; gap: 8px;"><span style="width: 16px; height: 16px; background: linear-gradient(90deg, #8E1B1B 50%, #1F3D36 50%);"></span>双重作者</span>
+    <span style="display: flex; align-items: center; gap: 8px;"><span style="width: 16px; height: 16px; background: #8E1B1B;"></span>林奇视角</span>
+    <span style="display: flex; align-items: center; gap: 8px;"><span style="width: 16px; height: 16px; background: #1F3D36;"></span>弗罗斯特视角</span>
+    <span style="display: flex; align-items: center; gap: 8px;"><span style="width: 16px; height: 16px; background: #3A5BA0;"></span>美国史与现实</span>
+    <span style="display: flex; align-items: center; gap: 8px;"><span style="width: 16px; height: 16px; background: #D9A441;"></span>结语</span>
+  </div>
+  <div style="position: relative; margin-top: 40px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 112px;">
+    <div style="position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; margin-left: -1px; background: #111111;"></div>
+    <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 104px; height: 104px; border-radius: 50%; background: #111111; color: #F2EBDD; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; z-index: 2; box-shadow: 0 0 0 8px #F2EBDD;">
+      <span style="font-family: 'Space Mono', monospace; font-size: 15px; letter-spacing: 0.1em; color: #D9A441;">EP25</span>
+      <span style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 30px; line-height: 1.1;">双峰</span>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 18px;">
+      <sc-for list="{{ branchesL }}" as="b" hint-placeholder-count="5">
+        <div style="position: relative; background: #E8DFCB;">
+          <div style="position: absolute; top: 26px; right: -56px; width: 56px; height: 2px; background: #111111;"></div>
+          <div style="display: flex; align-items: baseline; gap: 12px; padding: 11px 18px; background: {{ b.bg }}; color: {{ b.fg }};"><span style="font-family: 'Noto Serif SC', serif; font-size: 20px;">{{ b.ord }}</span><span style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 23px; line-height: 1.3;">{{ b.name }}</span></div>
+          <div style="padding: 12px 18px 15px; display: flex; flex-direction: column; gap: 3px;">
+            <sc-for list="{{ b.children }}" as="c" hint-placeholder-count="4">
+              <div style="display: flex; gap: 10px; align-items: baseline; font-size: 20px; line-height: 1.45;"><span style="flex: none; width: 7px; height: 7px; background: {{ b.dot }}; transform: translateY(-4px);"></span><span>{{ c }}</span></div>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 18px;">
+      <sc-for list="{{ branchesR }}" as="b" hint-placeholder-count="5">
+        <div style="position: relative; background: #E8DFCB;">
+          <div style="position: absolute; top: 26px; left: -56px; width: 56px; height: 2px; background: #111111;"></div>
+          <div style="display: flex; align-items: baseline; gap: 12px; padding: 11px 18px; background: {{ b.bg }}; color: {{ b.fg }};"><span style="font-family: 'Noto Serif SC', serif; font-size: 20px;">{{ b.ord }}</span><span style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 23px; line-height: 1.3;">{{ b.name }}</span></div>
+          <div style="padding: 12px 18px 15px; display: flex; flex-direction: column; gap: 3px;">
+            <sc-for list="{{ b.children }}" as="c" hint-placeholder-count="4">
+              <div style="display: flex; gap: 10px; align-items: baseline; font-size: 20px; line-height: 1.45;"><span style="flex: none; width: 7px; height: 7px; background: {{ b.dot }}; transform: translateY(-4px);"></span><span>{{ c }}</span></div>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+  <div style="margin-top: auto; padding-top: 36px; display: flex; justify-content: space-between; font-size: 17px; color: #5C564B;"><span>电影巨辩 · 第 25 期《〈双峰〉是我俩心中最伟大的剧集》</span><span style="font-family: 'Space Mono', monospace;">03</span></div>
+</section>
+
+
+<section id="m4" data-screen-label="M04 两小时都聊了什么" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F2EBDD; color: #111111; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
+  <div style="height: 14px; margin: -56px -64px 42px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2228%22 height=%2214%22%3E%3Crect width=%2228%22 height=%2214%22 fill=%22%23F2EBDD%22/%3E%3Cpath d=%22M0 3.5L14 -3.5L28 3.5V10.5L14 3.5L0 10.5ZM0 17.5L14 10.5L28 17.5V24.5L14 17.5L0 24.5Z%22 fill=%22%23111111%22/%3E%3C/svg%3E');"></div>
+  <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'Space Mono', monospace; font-size: 17px; letter-spacing: 0.12em; color: #5C564B;"><span>M04 · 时间分配</span><span>电影巨辩 EP25 · 双峰</span></div>
+  <h2 style="margin: 36px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 64px; line-height: 1.2;">两小时都聊了什么</h2>
+  <p style="margin: 18px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 32px; line-height: 1.5;">林奇视角占 <span style="color: #8E1B1B;">43.6%</span>，弗罗斯特视角 <span style="color: #1F3D36;">10.5%</span>。</p>
+  <div style="margin-top: 36px; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 0; border-top: 2px solid #111111;">
+    <sc-for list="{{ groups }}" as="g" hint-placeholder-count="6">
+      <div style="padding: 16px 12px 0 0; display: flex; flex-direction: column; gap: 6px;">
+        <span style="width: 28px; height: 10px; background: {{ g.bg }};"></span>
+        <span style="font-family: 'Space Mono', monospace; font-weight: 700; font-size: 30px; line-height: 1.1;">{{ g.share }}</span>
+        <span style="font-size: 18px; line-height: 1.35;">{{ g.group }}</span>
+        <span style="font-family: 'Space Mono', monospace; font-size: 16px; color: #5C564B;">{{ g.minutes }} 分</span>
+      </div>
+    </sc-for>
+  </div>
+  <div style="margin-top: 48px; display: flex; height: 96px;">
+    <sc-for list="{{ segs }}" as="s" hint-placeholder-count="11">
+      <div style="box-sizing: border-box; width: {{ s.w }}; flex: none; background: {{ s.bg }}; color: {{ s.fg }}; border-right: 2px solid #F2EBDD; display: flex; align-items: center; justify-content: center; font-family: 'Space Mono', monospace; font-weight: 700; font-size: 20px;">{{ s.code }}</div>
+    </sc-for>
+  </div>
+  <div style="position: relative; height: 34px; border-top: 2px solid #111111;">
+    <sc-for list="{{ ticks }}" as="k" hint-placeholder-count="5">
+      <div style="position: absolute; left: {{ k.x }}; top: 0; display: flex; flex-direction: column; align-items: flex-start;"><span style="width: 2px; height: 10px; background: #111111;"></span><span style="margin-top: 2px; font-family: 'Space Mono', monospace; font-size: 15px; color: #5C564B;">{{ k.label }}</span></div>
+    </sc-for>
+    <div style="position: absolute; right: 0; top: 0; display: flex; flex-direction: column; align-items: flex-end;"><span style="width: 2px; height: 10px; background: #111111;"></span><span style="margin-top: 2px; font-family: 'Space Mono', monospace; font-size: 15px; color: #5C564B;">2:09:28</span></div>
+  </div>
+  <div style="margin-top: 18px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px 24px;">
+    <sc-for list="{{ segs }}" as="s" hint-placeholder-count="11">
+      <div style="display: flex; align-items: baseline; gap: 10px; font-size: 18px; line-height: 1.4;"><span style="flex: none; width: 22px; font-family: 'Space Mono', monospace; font-weight: 700;">{{ s.id }}</span><span style="flex: 1; min-width: 0;">{{ s.label }}</span><span style="flex: none; font-family: 'Space Mono', monospace; font-size: 16px; color: #5C564B;">{{ s.minutes }}′</span></div>
+    </sc-for>
+  </div>
+  <div style="margin-top: 30px; font-size: 18px; color: #5C564B;"><span style="font-family: 'Space Mono', monospace; font-weight: 700; color: #8E1B1B;">H</span> 段放大 · 林奇视角：吠陀哲学 · 56.5 分钟</div>
+  <svg width="952" height="64" viewBox="0 0 952 64" style="display: block; margin-top: 10px; overflow: visible;" aria-hidden="true">
+    <path d="{{ zoom }}" fill="#8E1B1B" fill-opacity="0.1"></path>
+    <path d="{{ zoomL }}" stroke="#8E1B1B" stroke-width="1.5" fill="none"></path>
+    <path d="{{ zoomR }}" stroke="#8E1B1B" stroke-width="1.5" fill="none"></path>
+  </svg>
+  <div style="display: flex; height: 80px;">
+    <sc-for list="{{ hSubs }}" as="h" hint-placeholder-count="6">
+      <div style="box-sizing: border-box; width: {{ h.w }}; flex: none; background: {{ h.bg }}; color: #F2EBDD; border-right: 2px solid #F2EBDD; padding: 10px 10px; display: flex; flex-direction: column; justify-content: space-between;"><span style="font-family: 'Space Mono', monospace; font-weight: 700; font-size: 18px;">{{ h.id }}</span><span style="font-family: 'Space Mono', monospace; font-size: 15px;">{{ h.minutes }}′</span></div>
+    </sc-for>
+  </div>
+  <div style="margin-top: 16px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px 24px;">
+    <sc-for list="{{ hSubs }}" as="h" hint-placeholder-count="6">
+      <div style="display: flex; align-items: baseline; gap: 10px; font-size: 18px; line-height: 1.4;"><span style="flex: none; width: 30px; font-family: 'Space Mono', monospace; font-weight: 700; color: #8E1B1B;">{{ h.id }}</span><span>{{ h.label }}</span></div>
+    </sc-for>
+  </div>
+  <div style="margin-top: auto; padding-top: 36px; display: flex; justify-content: space-between; gap: 24px; font-size: 17px; color: #5C564B;"><span>神话体系主要是弗罗斯特搭的，花的时间却只有林奇部分的四分之一。</span><span style="font-family: 'Space Mono', monospace;">04</span></div>
+</section>
+
+<section id="m5" data-screen-label="M05 为什么是 1990 年" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F2EBDD; color: #111111; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
+  <div style="height: 14px; margin: -56px -64px 42px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2228%22 height=%2214%22%3E%3Crect width=%2228%22 height=%2214%22 fill=%22%23F2EBDD%22/%3E%3Cpath d=%22M0 3.5L14 -3.5L28 3.5V10.5L14 3.5L0 10.5ZM0 17.5L14 10.5L28 17.5V24.5L14 17.5L0 24.5Z%22 fill=%22%23111111%22/%3E%3C/svg%3E');"></div>
+  <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'Space Mono', monospace; font-size: 17px; letter-spacing: 0.12em; color: #5C564B;"><span>M05 · 产业背景</span><span>电影巨辩 EP25 · 双峰</span></div>
+  <h2 style="margin: 36px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 64px; line-height: 1.2;">为什么是 1990 年</h2>
+  <div style="margin-top: 40px; font-size: 20px; color: #2E2A25;">三大电视网合计份额（节目口述，约数）</div>
+  <div style="margin-top: 20px; display: flex; align-items: flex-end; height: 360px; border-bottom: 2px solid #111111;">
+    <sc-for list="{{ steps }}" as="s" hint-placeholder-count="3">
+      <div style="flex: 1; height: {{ s.h }}; background: #8A8F93; border-right: 2px solid #F2EBDD; padding: 22px 24px; box-sizing: border-box;"><span style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 52px; line-height: 1;">{{ s.share_label }}</span></div>
+    </sc-for>
+  </div>
+  <div style="display: flex;">
+    <sc-for list="{{ steps }}" as="s" hint-placeholder-count="3">
+      <div style="flex: 1; padding: 12px 24px 0; font-size: 20px; color: #2E2A25;">{{ s.period }}</div>
+    </sc-for>
+  </div>
+  <div style="margin-top: 52px; display: flex; align-items: baseline; gap: 20px; flex-wrap: wrap;">
+    <span style="font-family: 'Space Mono', monospace; font-weight: 700; font-size: 32px;">ABC / CBS / NBC</span>
+    <span style="font-size: 20px; color: #2E2A25;">靠广告，大众属性；当时 CBS 第一、NBC 第二、ABC 第三</span>
+  </div>
+  <div style="margin-top: 20px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px;">
+    <sc-for list="{{ forces }}" as="f" hint-placeholder-count="3">
+      <div style="background: #E8DFCB; padding: 22px 22px 26px; display: flex; flex-direction: column; gap: 12px;">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;"><span style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 27px;">{{ f.name }}</span><span style="font-family: 'Space Mono', monospace; font-size: 22px; color: #5C564B;">←</span></div>
+        <div style="font-size: 19px; line-height: 1.65; color: #2E2A25; text-wrap: pretty;">{{ f.detail }}</div>
+      </div>
+    </sc-for>
+  </div>
+  <p style="margin: 44px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 34px; line-height: 1.5; text-wrap: pretty;">排名靠后的电视网，才愿意让一个先锋电影导演来拍剧。</p>
+  <div style="margin-top: auto; padding-top: 36px; display: flex; justify-content: space-between; font-size: 17px; color: #5C564B;"><span>份额为节目口述的约数，仅显示文字标签</span><span style="font-family: 'Space Mono', monospace;">05</span></div>
+</section>
+
+<section id="m6" data-screen-label="M06 谜底之争" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F2EBDD; color: #111111; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
+  <div style="height: 14px; margin: -56px -64px 42px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2228%22 height=%2214%22%3E%3Crect width=%2228%22 height=%2214%22 fill=%22%23F2EBDD%22/%3E%3Cpath d=%22M0 3.5L14 -3.5L28 3.5V10.5L14 3.5L0 10.5ZM0 17.5L14 10.5L28 17.5V24.5L14 17.5L0 24.5Z%22 fill=%22%23111111%22/%3E%3C/svg%3E');"></div>
+  <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'Space Mono', monospace; font-size: 17px; letter-spacing: 0.12em; color: #5C564B;"><span>M06 · 谜底之争</span><span>电影巨辩 EP25 · 双峰</span></div>
+  <h2 style="margin: 36px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 64px; line-height: 1.2;">谜底之争</h2>
+  <div style="margin-top: 36px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px;">
+    <sc-for list="{{ stances }}" as="s" hint-placeholder-count="3">
+      <div style="display: flex; flex-direction: column; background: #E8DFCB;">
+        <div style="background: {{ s.color }}; color: {{ s.fg }}; padding: 16px 20px; display: flex; justify-content: space-between; align-items: baseline; gap: 10px;"><span style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 32px;">{{ s.who }}</span><span style="font-size: 17px; letter-spacing: 0.06em;">{{ s.tag }}</span></div>
+        <div style="padding: 18px 20px 22px; display: flex; flex-direction: column; gap: 14px; flex: 1;">
+          <div style="font-weight: 700; font-size: 21px; line-height: 1.55;">{{ s.stance }}</div>
+          <div style="margin-top: auto; border-top: 1px solid #B9B0A0; padding-top: 12px; font-family: 'Noto Serif SC', serif; font-size: 20px; line-height: 1.6; color: #2E2A25;">{{ s.quote }}</div>
+          <div style="font-size: 16px; color: #5C564B;">节目转述</div>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+  <div style="margin-top: 40px; display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 44px;">
+    <div style="position: relative; display: flex; flex-direction: column; gap: 14px;">
+      <div style="position: absolute; left: 15px; top: 16px; bottom: 16px; width: 2px; background: #111111;"></div>
+      <sc-for list="{{ flow }}" as="f" hint-placeholder-count="8">
+        <div style="position: relative; display: flex; gap: 18px; align-items: flex-start;">
+          <span style="flex: none; width: 32px; height: 32px; border-radius: 50%; background: #111111; color: #F2EBDD; display: flex; align-items: center; justify-content: center; font-family: 'Space Mono', monospace; font-weight: 700; font-size: 16px;">{{ f.n }}</span>
+          <span style="font-size: 20px; line-height: 1.55; padding-top: 2px; text-wrap: pretty;">{{ f.text }}</span>
+        </div>
+      </sc-for>
+    </div>
+    <div style="display: flex; flex-direction: column;">
+      <div style="font-size: 18px; color: #5C564B;">收视人数</div>
+      <div style="position: relative; margin-top: 16px; height: 330px; border-bottom: 2px solid #111111; display: flex; align-items: flex-end; gap: 40px; padding: 0 20px;">
+        <div style="position: absolute; left: 0; right: 0; bottom: 200px; border-top: 2px dashed #8E1B1B;"></div>
+        <div style="position: absolute; right: 0; bottom: 206px; text-align: right;"><div style="font-family: 'Space Mono', monospace; font-weight: 700; font-size: 22px; color: #8E1B1B;">2000 万</div></div>
+        <div style="width: 110px; height: 300px; background: #8A8F93;"></div>
+        <div style="width: 110px; height: 92px; background: #111111;"></div>
+      </div>
+      <div style="display: flex; gap: 40px; padding: 12px 20px 0;">
+        <div style="width: 110px;"><div style="font-family: 'Space Mono', monospace; font-weight: 700; font-size: 24px;">3000 万+</div><div style="margin-top: 4px; font-size: 17px; color: #2E2A25;">最好的时候</div></div>
+        <div style="width: 110px;"><div style="font-family: 'Space Mono', monospace; font-weight: 700; font-size: 24px;">&lt;1000 万</div><div style="margin-top: 4px; font-size: 17px; color: #2E2A25;">第二季破案之后</div></div>
+      </div>
+      <div style="margin-top: 14px; font-size: 17px; color: #8E1B1B;">虚线：当时热门剧的及格线</div>
+      <div style="margin-top: auto; border-top: 2px solid #111111; padding-top: 16px; display: flex; align-items: baseline; gap: 14px;">
+        <span style="font-family: 'Space Mono', monospace; font-weight: 700; font-size: 44px; line-height: 1;">6<span style="font-size: 24px; color: #5C564B;">/30</span></span>
+        <span style="font-size: 18px; line-height: 1.5;">前两季共 30 集，林奇亲自执导 6 集</span>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: auto; padding-top: 36px; display: flex; justify-content: space-between; font-size: 17px; color: #5C564B;"><span>三方立场为主播转述，不是当事人原话</span><span style="font-family: 'Space Mono', monospace;">06</span></div>
+</section>
+
+<section id="m7" data-screen-label="M07 三十年时间线" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F2EBDD; color: #111111; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
+  <div style="height: 14px; margin: -56px -64px 42px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2228%22 height=%2214%22%3E%3Crect width=%2228%22 height=%2214%22 fill=%22%23F2EBDD%22/%3E%3Cpath d=%22M0 3.5L14 -3.5L28 3.5V10.5L14 3.5L0 10.5ZM0 17.5L14 10.5L28 17.5V24.5L14 17.5L0 24.5Z%22 fill=%22%23111111%22/%3E%3C/svg%3E');"></div>
+  <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'Space Mono', monospace; font-size: 17px; letter-spacing: 0.12em; color: #5C564B;"><span>M07 · 时间线</span><span>电影巨辩 EP25 · 双峰</span></div>
+  <h2 style="margin: 36px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 64px; line-height: 1.2;">三十年时间线</h2>
+  <div style="margin-top: 22px; display: flex; flex-wrap: wrap; gap: 10px 28px; font-size: 19px; color: #2E2A25;">
+    <span style="display: flex; align-items: center; gap: 8px;"><span style="width: 16px; height: 16px; border-radius: 50%; background: #111111;"></span>双峰</span>
+    <span style="display: flex; align-items: center; gap: 8px;"><span style="box-sizing: border-box; width: 16px; height: 16px; border: 3px solid #8A8F93; background: #F2EBDD;"></span>产业</span>
+    <span style="display: flex; align-items: center; gap: 8px;"><span style="font-family: 'Space Mono', monospace; font-weight: 700;">*</span>年份为补注</span>
+  </div>
+  <div style="position: relative; margin-top: 52px; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 0 16px;">
+    <div style="position: absolute; left: 0; right: 0; top: 52px; height: 2px; background: #111111;"></div>
+    <sc-for list="{{ tlA }}" as="t" hint-placeholder-count="6">
+      <div style="position: relative; display: flex; flex-direction: column;">
+        <div style="height: 40px; font-family: 'Space Mono', monospace; font-weight: 700; font-size: 30px; line-height: 40px;">{{ t.year }}<span style="color: #8E1B1B;">{{ t.star }}</span></div>
+        <span style="box-sizing: border-box; margin-top: 4px; width: 18px; height: 18px; border-radius: {{ t.radius }}; background: {{ t.dotBg }}; border: 3px solid {{ t.dotBorder }};"></span>
+        <div style="margin-top: 16px; font-size: 15px; letter-spacing: 0.1em; color: {{ t.trackColor }};">{{ t.track }}</div>
+        <div style="margin-top: 6px; font-size: 19px; line-height: 1.55; text-wrap: pretty;">{{ t.event }}</div>
+      </div>
+    </sc-for>
+  </div>
+  <div style="position: relative; margin: 44px 0; flex: 1; min-height: 300px; display: flex; flex-direction: column; align-items: center; justify-content: center; background: repeating-linear-gradient(135deg, rgba(138,143,147,0.16) 0 2px, transparent 2px 14px); border-top: 2px dashed #111111; border-bottom: 2px dashed #111111;">
+    <div style="position: absolute; left: 24px; top: 50%; transform: translateY(-50%); width: 130px;"><div style="position: relative; width: 130px; height: 186px; background: #111111;"><image-slot id="tp-m7-fwwm" src="{{ img.fwwm }}" shape="rect" fit="contain" placeholder="《与火同行》海报" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot></div><div style="margin-top: 6px; font-size: 16px;">1992《与火同行》</div></div>
+    <div style="position: absolute; right: 24px; top: 50%; transform: translateY(-50%); width: 130px; text-align: right;"><div style="position: relative; width: 130px; height: 186px; background: #111111;"><image-slot id="tp-m7-s3" src="{{ img.s3 }}" shape="rect" fit="contain" placeholder="第三季海报" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot></div><div style="margin-top: 6px; font-size: 16px;">2017 第三季</div></div>
+    <div style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 170px; line-height: 1; color: transparent; -webkit-text-stroke: 3px #111111;">25 年</div>
+    <div style="margin-top: 14px; font-family: 'Space Mono', monospace; font-size: 22px; letter-spacing: 0.2em;">1991 ——— 2017</div>
+  </div>
+  <div style="position: relative; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0 24px;">
+    <div style="position: absolute; left: 0; right: 0; top: 52px; height: 2px; background: #111111;"></div>
+    <sc-for list="{{ tlB }}" as="t" hint-placeholder-count="4">
+      <div style="position: relative; display: flex; flex-direction: column;">
+        <div style="height: 40px; font-family: 'Space Mono', monospace; font-weight: 700; font-size: 30px; line-height: 40px;">{{ t.year }}<span style="color: #8E1B1B;">{{ t.star }}</span></div>
+        <span style="box-sizing: border-box; margin-top: 4px; width: 18px; height: 18px; border-radius: {{ t.radius }}; background: {{ t.dotBg }}; border: 3px solid {{ t.dotBorder }};"></span>
+        <div style="margin-top: 16px; font-size: 15px; letter-spacing: 0.1em; color: {{ t.trackColor }};">{{ t.track }}</div>
+        <div style="margin-top: 6px; font-size: 19px; line-height: 1.55; text-wrap: pretty;">{{ t.event }}</div>
+      </div>
+    </sc-for>
+  </div>
+  <div style="margin-top: auto; padding-top: 36px; display: flex; justify-content: space-between; font-size: 17px; color: #5C564B;"><span>* 年份为补注，非节目口述</span><span style="font-family: 'Space Mono', monospace;">07</span></div>
+</section>
+
+<section id="m8" data-screen-label="M08 双重作者" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F2EBDD; color: #111111; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
+  <div style="height: 14px; margin: -56px -64px 42px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2228%22 height=%2214%22%3E%3Crect width=%2228%22 height=%2214%22 fill=%22%23F2EBDD%22/%3E%3Cpath d=%22M0 3.5L14 -3.5L28 3.5V10.5L14 3.5L0 10.5ZM0 17.5L14 10.5L28 17.5V24.5L14 17.5L0 24.5Z%22 fill=%22%23111111%22/%3E%3C/svg%3E');"></div>
+  <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'Space Mono', monospace; font-size: 17px; letter-spacing: 0.12em; color: #5C564B;"><span>M08 · 双重作者</span><span>电影巨辩 EP25 · 双峰</span></div>
+  <h2 style="margin: 36px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 64px; line-height: 1.2;">双重作者</h2>
+  <div style="position: relative; margin-top: 36px; display: grid; grid-template-columns: 1fr 1fr; color: #F2EBDD;">
+    <div style="background: repeating-linear-gradient(90deg, #861818 0 20px, #8E1B1B 20px 40px, #972320 40px 46px, #8E1B1B 46px 60px); padding: 30px 30px 150px; display: flex; flex-direction: column; gap: 18px;">
+      <div style="display: flex; gap: 18px; align-items: flex-end;"><div style="position: relative; flex: none; width: 120px; height: 150px; background: #5E1010;"><image-slot id="tp-m8-lynch" src="{{ img.lynch }}" shape="rect" placeholder="大卫·林奇" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot></div><div><div style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 44px; line-height: 1.2;">大卫·林奇</div><div style="margin-top: 8px; font-size: 19px; line-height: 1.55; color: #EBD3CD;">依赖直觉，按突如其来的灵感创作</div></div></div>
+      <div style="border-top: 1px solid rgba(242,235,221,0.4); padding-top: 14px;"><div style="font-size: 16px; letter-spacing: 0.14em; color: #EBD3CD;">负责</div>
+        <div style="margin-top: 8px; display: flex; flex-direction: column; gap: 6px; font-size: 19px; line-height: 1.5;"><div>基调：情绪、节奏、视觉质感</div><div>角色样貌、服装、布景，细到裙子拉链</div><div>试播集，以及前两季最关键的 6 集</div><div>第三季全部 18 集</div></div></div>
+      <div style="border-top: 1px solid rgba(242,235,221,0.4); padding-top: 14px;"><div style="font-size: 16px; letter-spacing: 0.14em; color: #EBD3CD;">他的点子</div>
+        <div style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 8px;"><span style="border: 1.5px solid #F2EBDD; padding: 4px 12px; font-size: 18px;">鲍勃</span><span style="border: 1.5px solid #F2EBDD; padding: 4px 12px; font-size: 18px;">红房间</span><span style="border: 1.5px solid #F2EBDD; padding: 4px 12px; font-size: 18px;">巨人</span><span style="border: 1.5px solid #F2EBDD; padding: 4px 12px; font-size: 18px;">木头女士</span></div></div>
+      <div style="border-top: 1px solid rgba(242,235,221,0.4); padding-top: 14px; display: flex; flex-direction: column; gap: 6px; font-size: 19px; line-height: 1.5;"><div><span style="color: #EBD3CD;">世界观　</span>印度教吠陀哲学、超觉冥想</div><div><span style="color: #EBD3CD;">态度　　</span>从不解释自己的作品</div></div>
+    </div>
+    <div style="background: #1F3D36; padding: 30px 30px 150px; display: flex; flex-direction: column; gap: 18px;">
+      <div style="display: flex; gap: 18px; align-items: flex-end;"><div style="position: relative; flex: none; width: 120px; height: 150px; background: #122721;"><image-slot id="tp-m8-frost" src="{{ img.frost }}" shape="rect" placeholder="马克·弗罗斯特" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot></div><div><div style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 44px; line-height: 1.2;">马克·弗罗斯特</div><div style="margin-top: 8px; font-size: 19px; line-height: 1.55; color: #C9D6D0;">计划有变动必须讨论</div></div></div>
+      <div style="border-top: 1px solid rgba(242,235,221,0.4); padding-top: 14px;"><div style="font-size: 16px; letter-spacing: 0.14em; color: #C9D6D0;">负责</div>
+        <div style="margin-top: 8px; display: flex; flex-direction: column; gap: 6px; font-size: 19px; line-height: 1.5;"><div>编剧、制片、整体架构</div><div>管理编剧室，每集剧本的最终定稿人</div><div>和电视网打交道</div><div>把林奇的灵感落地成有逻辑的神话体系</div></div></div>
+      <div style="border-top: 1px solid rgba(242,235,221,0.4); padding-top: 14px;"><div style="font-size: 16px; letter-spacing: 0.14em; color: #C9D6D0;">他的点子</div>
+        <div style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 8px;"><span style="border: 1.5px solid #F2EBDD; padding: 4px 12px; font-size: 18px;">温德姆·厄尔</span><span style="border: 1.5px solid #F2EBDD; padding: 4px 12px; font-size: 18px;">蓝皮书计划与 UFO 传说</span><span style="border: 1.5px solid #F2EBDD; padding: 4px 12px; font-size: 18px;">黑白小屋的体系</span><span style="border: 1.5px solid #F2EBDD; padding: 4px 12px; font-size: 18px;">邪恶二重身的概念来源</span></div></div>
+      <div style="border-top: 1px solid rgba(242,235,221,0.4); padding-top: 14px; display: flex; flex-direction: column; gap: 6px; font-size: 19px; line-height: 1.5;"><div><span style="color: #C9D6D0;">世界观　</span>神智学、阴谋论、美国历史、古典推理小说</div><div><span style="color: #C9D6D0;">态度　　</span>写了两本书扩充世界观</div></div>
+    </div>
+    <svg viewBox="0 0 952 150" width="952" height="150" style="position: absolute; left: 0; bottom: 0; display: block;" aria-hidden="true">
+      <path d="M0 150L0 120L120 70L180 90L300 20L476 150Z" fill="#6E1414"></path>
+      <path d="M476 150L640 30L720 80L820 10L952 100L952 150Z" fill="#163029"></path>
+    </svg>
+  </div>
+  <div style="position: relative; z-index: 2; margin: -96px auto 0; width: 720px; box-sizing: border-box; background: #F2EBDD; border: 2px solid #111111; padding: 26px 34px 28px; text-align: center;">
+    <div style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 38px; line-height: 1.2;">第三个实体</div>
+    <div style="margin-top: 12px; font-family: 'Noto Serif SC', serif; font-size: 22px; line-height: 1.65; text-wrap: pretty;">《双峰》不是林奇的作品，也不是弗罗斯特的作品，是两个人合作时诞生的第三个东西。</div>
+    <div style="margin-top: 16px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; font-size: 17px; line-height: 1.5; text-align: left;">
+      <div style="border-top: 2px solid #111111; padding-top: 8px;">着迷于荒谬有趣的事</div>
+      <div style="border-top: 2px solid #111111; padding-top: 8px;">着迷于被隐藏又被揭示的秘密</div>
+      <div style="border-top: 2px solid #111111; padding-top: 8px;">对小镇生活幽冷黑暗的一面有深刻感受</div>
+    </div>
+  </div>
+  <div style="margin-top: 40px; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 28px;">灵感怎么变成设定</div>
+  <div style="margin-top: 16px; display: flex; flex-direction: column; border-top: 2px solid #111111;">
+    <sc-for list="{{ inspire }}" as="r" hint-placeholder-count="4">
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) 40px 150px; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid #C9BFAC;">
+        <div style="font-size: 19px; line-height: 1.5;">{{ r.from }}<sc-if value="{{ r.hasVia }}" hint-placeholder-val="{{ false }}"><span style="color: #1F3D36;">　→　{{ r.via }}</span></sc-if></div>
+        <div style="font-family: 'Space Mono', monospace; font-size: 22px; text-align: center;">→</div>
+        <div style="background: #8E1B1B; color: #F2EBDD; padding: 6px 12px; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 21px; text-align: center;">{{ r.to }}</div>
+      </div>
+    </sc-for>
+  </div>
+  <div style="margin-top: auto; padding-top: 32px; display: flex; justify-content: space-between; gap: 24px; font-size: 17px; color: #5C564B;"><span>主播的类比：弗罗斯特有点像韦家辉。世界观部分为节目中的解读</span><span style="font-family: 'Space Mono', monospace;">08</span></div>
+</section>
+
+<section id="m9" data-screen-label="M09 宇宙结构" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F2EBDD; color: #111111; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
+  <div style="height: 14px; margin: -56px -64px 42px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2228%22 height=%2214%22%3E%3Crect width=%2228%22 height=%2214%22 fill=%22%23F2EBDD%22/%3E%3Cpath d=%22M0 3.5L14 -3.5L28 3.5V10.5L14 3.5L0 10.5ZM0 17.5L14 10.5L28 17.5V24.5L14 17.5L0 24.5Z%22 fill=%22%23111111%22/%3E%3C/svg%3E');"></div>
+  <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'Space Mono', monospace; font-size: 17px; letter-spacing: 0.12em; color: #5C564B;"><span>M09 · 宇宙结构</span><span>电影巨辩 EP25 · 双峰</span></div>
+  <h2 style="margin: 36px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 60px; line-height: 1.2;">一套设定，两种读法</h2>
+  <div style="margin-top: 12px; font-size: 19px; color: #5C564B;">以下为节目中的解读</div>
+  <div style="margin-top: 30px; display: grid; grid-template-columns: 290px minmax(0, 1fr) 290px; column-gap: 12px;">
+    <div style="padding-bottom: 12px; border-bottom: 3px solid #8E1B1B;"><div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 24px; color: #8E1B1B;">林奇的读法</div><div style="font-size: 17px; color: #5C564B;">吠陀哲学</div></div>
+    <div style="padding-bottom: 12px; border-bottom: 3px solid #111111; text-align: center;"><div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 24px;">剧中的地点</div><div style="font-size: 17px; color: #5C564B;">从上到下</div></div>
+    <div style="padding-bottom: 12px; border-bottom: 3px solid #1F3D36; text-align: right;"><div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 24px; color: #1F3D36;">弗罗斯特的读法</div><div style="font-size: 17px; color: #5C564B;">神智学</div></div>
+
+    <div style="margin-top: 16px; background: #EBDAD3; padding: 16px 18px; font-size: 18px; line-height: 1.6;">统一场 / 梵的意识状态：纯粹潜能、宇宙秩序、最高的善。不是天堂</div>
+    <div style="position: relative; margin-top: 16px; padding-left: 40px;">
+      <div style="position: absolute; left: 16px; top: 50%; bottom: 0; width: 3px; background: #D9A441;"></div>
+      <div style="position: absolute; left: 6px; top: 50%; width: 23px; height: 23px; margin-top: -11px; border-radius: 50%; background: #D9A441;"></div>
+      <div style="height: 100%; box-sizing: border-box; background: #D9A441; color: #111111; padding: 16px 18px;"><div style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 32px;">白色小屋</div><div style="margin-top: 4px; font-size: 17px; line-height: 1.5;">非物质、没有时间；巨人（消防员）在这里</div></div>
+    </div>
+    <div style="margin-top: 16px; background: #DCE1D9; padding: 16px 18px; font-size: 18px; line-height: 1.6;">神智学“大白兄弟会”的神格化：一群开悟的大师，引导人的灵性进化</div>
+
+    <div></div>
+    <div style="position: relative; height: 54px; padding-left: 40px; display: flex; align-items: center; justify-content: space-between;">
+      <div style="position: absolute; left: 16px; top: 0; bottom: 0; width: 3px; background: #D9A441;"></div>
+      <span style="font-size: 16px; color: #8A6A1F;">金色光球 = 劳拉 ↓</span><span style="font-family: 'Space Mono', monospace; font-size: 24px; padding-right: 20px;">⇅</span>
+    </div>
+    <div></div>
+
+    <div style="background: #EBDAD3; padding: 16px 18px; font-size: 18px; line-height: 1.6;">连接不同意识状态的阈限空间，一个等候室</div>
+    <div style="position: relative; padding-left: 40px;">
+      <div style="position: absolute; left: 16px; top: 0; bottom: 0; width: 3px; background: #D9A441;"></div>
+      <div style="height: 100%; box-sizing: border-box; background: #8E1B1B; color: #F2EBDD; display: flex; flex-direction: column;">
+        <div style="padding: 16px 18px 14px;"><div style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 32px;">红房间</div><div style="margin-top: 4px; font-size: 17px; line-height: 1.5;">逻辑和物理法则被悬置，时间失去方向，人倒着说话</div></div>
+        <div style="margin-top: auto; height: 18px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2216%22%3E%3Crect width=%2232%22 height=%2216%22 fill=%22%23F2EBDD%22/%3E%3Cpath d=%22M0 4L16 -4L32 4V12L16 4L0 12ZM0 20L16 12L32 20V28L16 20L0 28Z%22 fill=%22%23111111%22/%3E%3C/svg%3E');"></div>
+      </div>
+    </div>
+    <div style="background: #DCE1D9; padding: 16px 18px; font-size: 18px; line-height: 1.6;">神智学的“星光界”：欲望、情感和幻想的领域，可通过梦境和创伤进入</div>
+
+    <div></div>
+    <div style="position: relative; height: 54px; padding-left: 40px; display: flex; align-items: center; justify-content: flex-end;">
+      <div style="position: absolute; left: 16px; top: 0; bottom: 0; width: 3px; background: #D9A441;"></div>
+      <span style="font-family: 'Space Mono', monospace; font-size: 24px; padding-right: 20px;">⇅</span>
+    </div>
+    <div></div>
+
+    <div style="background: #EBDAD3; padding: 16px 18px; font-size: 18px; line-height: 1.6;">被困在摩耶最深层的意识状态，由恐惧、欲望和小我构成</div>
+    <div style="position: relative; padding-left: 40px;">
+      <div style="position: absolute; left: 16px; top: 0; bottom: 0; width: 3px; background: #D9A441;"></div>
+      <div style="height: 100%; box-sizing: border-box; background: #111111; color: #F2EBDD; padding: 16px 18px;"><div style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 32px;">黑色小屋</div><div style="margin-top: 4px; font-size: 17px; line-height: 1.5;">要带着“完美的勇气”才能通过</div></div>
+    </div>
+    <div style="background: #DCE1D9; padding: 16px 18px; font-size: 18px; line-height: 1.6;">神秘学文献里追求世俗权力的黑魔法结社，被提升到神话层面</div>
+
+    <div></div>
+    <div style="position: relative; height: 54px; padding-left: 40px; display: flex; align-items: center; justify-content: flex-end;">
+      <div style="position: absolute; left: 16px; top: 0; bottom: 0; width: 3px; background: #D9A441;"></div>
+      <span style="font-size: 16px; padding-right: 14px;">鲍勃、二重身 ↓</span>
+    </div>
+    <div></div>
+
+    <div style="background: #EBDAD3; padding: 16px 18px; font-size: 18px; line-height: 1.6;">“市场”：世俗生活的层面，本身就是幻象。拉斯维加斯是它的极端</div>
+    <div style="position: relative; padding-left: 40px;">
+      <div style="position: absolute; left: 16px; top: 0; height: 50%; width: 3px; background: #D9A441;"></div>
+      <div style="position: absolute; left: 0; top: 50%; width: 35px; height: 35px; margin-top: -17px; border-radius: 50%; background: #D9A441; box-shadow: 0 0 0 6px rgba(217,164,65,0.25);"></div>
+      <div style="height: 100%; box-sizing: border-box; border: 2px solid #111111; padding: 16px 18px;"><div style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 32px;">现实世界</div><div style="margin-top: 4px; font-size: 17px; line-height: 1.5;">← 朱迪，来自外部</div></div>
+    </div>
+    <div style="background: #DCE1D9; padding: 16px 18px; font-size: 18px; line-height: 1.6;">美国：一片被超自然战争暗中塑造的土地</div>
+  </div>
+  <div style="margin-top: 34px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px;">
+    <sc-for list="{{ entities }}" as="e" hint-placeholder-count="4">
+      <div style="border-top: 6px solid {{ e.color }}; background: #E8DFCB; padding: 14px 16px 18px; display: flex; flex-direction: column; gap: 6px;">
+        <sc-if value="{{ e.hasImg }}" hint-placeholder-val="{{ false }}"><div style="position: relative; margin: -14px -16px 6px; aspect-ratio: 16 / 10; background: #D8CFBC;"><image-slot id="{{ e.slot }}" src="{{ e.src }}" shape="rect" placeholder="{{ e.name }}" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot></div></sc-if>
+        <div style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 26px;">{{ e.name }}</div>
+        <div style="font-size: 15px; color: #5C564B;">{{ e.route }}</div>
+        <div style="font-size: 18px; line-height: 1.5;">{{ e.label }}</div>
+        <sc-if value="{{ e.hasReadings }}" hint-placeholder-val="{{ true }}">
+          <div style="margin-top: 4px; border-top: 1px solid #C9BFAC; padding-top: 8px; display: flex; flex-direction: column; gap: 4px; font-size: 17px; line-height: 1.5;"><div style="color: #8E1B1B;">林奇：{{ e.lynch }}</div><div style="color: #1F3D36;">弗罗斯特：{{ e.frost }}</div></div>
+        </sc-if>
+      </div>
+    </sc-for>
+  </div>
+  <div style="margin-top: 26px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px 24px;">
+    <sc-for list="{{ glossary }}" as="g" hint-placeholder-count="6">
+      <div style="display: flex; gap: 12px; align-items: baseline; font-size: 17px; line-height: 1.5;"><span style="flex: none; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 20px;">{{ g.term }}</span><span style="color: #2E2A25;">{{ g.gloss }}</span></div>
+    </sc-for>
+  </div>
+  <div style="margin-top: auto; padding-top: 32px; display: flex; justify-content: space-between; gap: 24px; font-size: 17px; color: #5C564B;"><span>两个人的底层逻辑不同，结果自洽。以上为节目中的解读。</span><span style="font-family: 'Space Mono', monospace;">09</span></div>
+</section>
+
+<section id="m10" data-screen-label="M10 库珀的分裂与图帕" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F2EBDD; color: #111111; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
+  <div style="height: 14px; margin: -56px -64px 42px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2228%22 height=%2214%22%3E%3Crect width=%2228%22 height=%2214%22 fill=%22%23F2EBDD%22/%3E%3Cpath d=%22M0 3.5L14 -3.5L28 3.5V10.5L14 3.5L0 10.5ZM0 17.5L14 10.5L28 17.5V24.5L14 17.5L0 24.5Z%22 fill=%22%23111111%22/%3E%3C/svg%3E');"></div>
+  <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'Space Mono', monospace; font-size: 17px; letter-spacing: 0.12em; color: #5C564B;"><span>M10 · 分裂与图帕</span><span>电影巨辩 EP25 · 双峰</span></div>
+  <h2 style="margin: 36px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 64px; line-height: 1.2;">库珀的分裂与图帕</h2>
+  <div style="margin-top: 22px; display: flex; flex-wrap: wrap; gap: 10px 24px; font-size: 18px; color: #2E2A25;">
+    <sc-for list="{{ legend }}" as="l" hint-placeholder-count="5">
+      <span style="display: flex; align-items: center; gap: 8px;"><span style="box-sizing: border-box; width: 30px; height: 20px; background: {{ l.bg }}; border: {{ l.border }};"></span>{{ l.meaning }}</span>
+    </sc-for>
+  </div>
+  <div style="position: relative; margin-top: 40px; width: 952px; height: 940px;">
+    <svg width="952" height="940" viewBox="0 0 952 940" style="position: absolute; left: 0; top: 0; overflow: visible;" aria-hidden="true">
+      <defs><marker id="m10a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#111111"></path></marker></defs>
+      <g fill="none" stroke="#111111" stroke-width="2">
+        <path d="M361 60H150V194" marker-end="url(#m10a)"></path>
+        <path d="M591 60H802V194" marker-end="url(#m10a)"></path>
+        <path d="M802 300V414" marker-end="url(#m10a)"></path>
+        <path d="M917 250H946V690H923" marker-end="url(#m10a)"></path>
+        <path d="M476 740V834" marker-end="url(#m10a)"></path>
+        <path d="M476 640V520" stroke-dasharray="7 6"></path>
+        <path d="M687 470H591"></path>
+        <path d="M130 300V414" marker-end="url(#m10a)"></path>
+        <path d="M265 455C340 455 340 265 271 265" marker-end="url(#m10a)"></path>
+        <path d="M35 250H8V690H29" marker-end="url(#m10a)"></path>
+        <path d="M8 690V890H29" marker-end="url(#m10a)"></path>
+      </g>
+    </svg>
+    <sc-for list="{{ nodes }}" as="n" hint-placeholder-count="11">
+      <div style="position: absolute; left: {{ n.left }}; top: {{ n.top }}; width: 230px; height: 100px; box-sizing: border-box; background: {{ n.bg }}; color: {{ n.fg }}; border: {{ n.border }}; padding: 8px 14px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 2px;">
+        <div style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 24px; line-height: 1.25;">{{ n.label }}</div>
+        <div style="font-size: 17px; line-height: 1.4;">{{ n.sub }}</div>
+      </div>
+    </sc-for>
+    <sc-for list="{{ edgeLabels }}" as="l" hint-placeholder-count="11">
+      <div style="position: absolute; left: {{ l.left }}; top: {{ l.top }}; transform: translate(-50%, -50%); background: #F2EBDD; padding: 2px 8px; font-size: 17px; line-height: 1.4; white-space: nowrap;">{{ l.text }}</div>
+    </sc-for>
+  </div>
+  <div style="margin-top: 48px; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 28px;">两种附体</div>
+  <div style="margin-top: 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 18px;">
+    <div style="background: #E8DFCB; padding: 20px 22px;">
+      <div style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 28px;">利兰</div>
+      <div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 21px; line-height: 1.6;">鲍勃打开了我，我邀请他进来。</div>
+      <div style="margin-top: 14px; display: grid; grid-template-columns: 56px 1fr; gap: 6px 10px; font-size: 18px; line-height: 1.5;"><span style="color: #5C564B;">机制</span><span>直接附身</span><span style="color: #5C564B;">数量</span><span>始终只有一个利兰</span><span style="color: #5C564B;">表现</span><span>混乱，两种意志交替</span></div>
+    </div>
+    <div style="background: #E8DFCB; padding: 20px 22px;">
+      <div style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 28px;">库珀</div>
+      <div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 21px; line-height: 1.6;">面对影子自我时，他害怕了。</div>
+      <div style="margin-top: 14px; display: grid; grid-template-columns: 56px 1fr; gap: 6px 10px; font-size: 18px; line-height: 1.5;"><span style="color: #5C564B;">机制</span><span>先分裂出阴影，阴影再被附身</span><span style="color: #5C564B;">数量</span><span>两个库珀</span><span style="color: #5C564B;">表现</span><span>C 先生目标清晰，有条不紊</span></div>
+    </div>
+  </div>
+  <p style="margin: 20px 0 0; font-size: 20px; line-height: 1.65; text-wrap: pretty;">都缺少“完美的勇气”。在《双峰》里，人在恐惧的时候最容易被邪恶攻破。</p>
+  <div style="margin-top: auto; padding-top: 32px; display: flex; justify-content: space-between; font-size: 17px; color: #5C564B;"><span>以上为节目中的解读</span><span style="font-family: 'Space Mono', monospace;">10</span></div>
+</section>
+
+<section id="m11" data-screen-label="M11 劳拉：从尸体到光球" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #0E0E0E; color: #F2EBDD; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
+  <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'Space Mono', monospace; font-size: 17px; letter-spacing: 0.12em; color: #B9B1A2;"><span>M11 · 劳拉</span><span>电影巨辩 EP25 · 双峰</span></div>
+  <h2 style="margin: 36px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 64px; line-height: 1.2;">劳拉：从尸体到光球</h2>
+  <div style="margin-top: 12px; font-size: 19px; color: #B9B1A2;">以下为节目中的解读</div>
+  <div style="position: absolute; right: 64px; top: 132px; width: 260px; height: 330px; background: #1E1E1C; box-shadow: 0 0 0 1px rgba(217,164,65,0.5);"><image-slot id="tp-m11-laura" src="{{ img.laura }}" shape="rect" placeholder="劳拉·帕尔默" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot></div>
+  <div style="margin-top: auto; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0 16px; align-items: end;">
+    <div style="height: 240px; display: flex; align-items: flex-end; justify-content: center;"><svg width="120" height="40" viewBox="0 0 120 40" aria-hidden="true"><rect x="10" y="18" width="100" height="12" fill="#8A8F93"></rect></svg></div>
+    <div style="height: 240px; display: flex; align-items: flex-end; justify-content: center;"><svg width="120" height="70" viewBox="0 0 120 70" aria-hidden="true"><rect x="10" y="18" width="100" height="12" fill="#A0978A"></rect><rect x="10" y="48" width="100" height="12" fill="#A0978A"></rect></svg></div>
+    <div style="height: 240px; display: flex; align-items: flex-end; justify-content: center;"><svg width="120" height="120" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="64" r="40" fill="none" stroke="#B79D6C" stroke-width="10"></circle></svg></div>
+    <div style="height: 240px; display: flex; align-items: flex-end; justify-content: center;"><svg width="190" height="200" viewBox="0 0 190 200" aria-hidden="true"><defs><radialGradient id="m11g"><stop offset="0" stop-color="#D9A441" stop-opacity="0.5"></stop><stop offset="1" stop-color="#D9A441" stop-opacity="0"></stop></radialGradient></defs><circle cx="95" cy="110" r="92" fill="url(#m11g)"></circle><circle cx="95" cy="110" r="54" fill="#D9A441"></circle></svg></div>
+    <div style="height: 240px; display: flex; align-items: flex-end; justify-content: center;"><svg width="190" height="200" viewBox="0 0 190 200" aria-hidden="true"><path d="M140 72A62 62 0 1 0 140 148" fill="none" stroke="#D9A441" stroke-width="8" stroke-linecap="round"></path><path d="M158 92Q166 110 158 128" fill="none" stroke="#D9A441" stroke-width="5" stroke-linecap="round"></path><path d="M172 80Q186 110 172 140" fill="none" stroke="#D9A441" stroke-width="4" stroke-linecap="round" stroke-opacity="0.7"></path><path d="M184 70Q202 110 184 150" fill="none" stroke="#D9A441" stroke-width="3" stroke-linecap="round" stroke-opacity="0.4"></path></svg></div>
+  </div>
+  <div style="margin-top: 30px; display: flex; align-items: center; height: 10px;">
+    <div style="flex: 1; height: 8px; background: linear-gradient(90deg, #8A8F93, #D9A441 78%);"></div>
+    <div style="width: 150px; height: 8px; background: repeating-linear-gradient(90deg, #D9A441 0 14px, transparent 14px 26px);"></div>
+  </div>
+  <div style="margin-top: 26px; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0 16px;">
+    <sc-for list="{{ laura }}" as="l" hint-placeholder-count="5">
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <div style="font-family: 'Space Mono', monospace; font-size: 17px; color: {{ l.tone }};">{{ l.n }} · {{ l.stage }}</div>
+        <div style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 30px; line-height: 1.3;">{{ l.state }}</div>
+        <div style="font-size: 18px; line-height: 1.6; color: #CFC6B4; text-wrap: pretty;">{{ l.gloss }}</div>
+      </div>
+    </sc-for>
+  </div>
+  <p style="margin: 80px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 44px; line-height: 1.5; text-wrap: pretty;">劳拉的地位不是一开始就这么高，<br>是<span style="color: #D9A441;">慢慢长出来的</span>。</p>
+  <div style="margin-top: 60px; display: flex; justify-content: space-between; font-size: 17px; color: #B9B1A2;"><span>剧照来自英文维基百科，版权归原权利人</span><span style="font-family: 'Space Mono', monospace;">11</span></div>
+</section>
+
+<section id="m12" data-screen-label="M12 谁变好了，谁沉下去了" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F2EBDD; color: #111111; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
+  <div style="height: 14px; margin: -56px -64px 42px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2228%22 height=%2214%22%3E%3Crect width=%2228%22 height=%2214%22 fill=%22%23F2EBDD%22/%3E%3Cpath d=%22M0 3.5L14 -3.5L28 3.5V10.5L14 3.5L0 10.5ZM0 17.5L14 10.5L28 17.5V24.5L14 17.5L0 24.5Z%22 fill=%22%23111111%22/%3E%3C/svg%3E');"></div>
+  <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'Space Mono', monospace; font-size: 17px; letter-spacing: 0.12em; color: #5C564B;"><span>M12 · 善恶转化</span><span>电影巨辩 EP25 · 双峰</span></div>
+  <h2 style="margin: 36px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 64px; line-height: 1.2;">谁变好了，谁沉下去了</h2>
+  <p style="margin: 16px 0 0; font-size: 21px; line-height: 1.6; color: #2E2A25;">前两季，镇上几乎人人都有见不得光的事。到了第三季，很多人变了。</p>
+  <div style="margin-top: 22px; display: flex; flex-wrap: wrap; gap: 10px 26px; font-size: 18px; color: #2E2A25;">
+    <span style="display: flex; align-items: center; gap: 8px;"><span style="color: #D9A441;">▲</span>向上</span>
+    <span style="display: flex; align-items: center; gap: 8px;"><span style="color: #8A8F93;">▶</span>持平</span>
+    <span style="display: flex; align-items: center; gap: 8px;"><span style="color: #111111;">▼</span>向下</span>
+    <span style="color: #5C564B;">线条只示意方向，不代表幅度</span>
+  </div>
+  <div style="margin-top: 26px; display: grid; grid-template-columns: 300px 200px minmax(0, 1fr); border-bottom: 2px solid #111111; padding-bottom: 10px; font-family: 'Space Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #5C564B;"><span>前两季</span><span></span><span>第三季</span></div>
+  <div style="display: flex; flex-direction: column;">
+    <sc-for list="{{ slope }}" as="r" hint-placeholder-count="11">
+      <div style="display: grid; grid-template-columns: 300px 200px minmax(0, 1fr); align-items: center; min-height: 88px; border-bottom: 1px solid #CFC5B2;">
+        <div style="padding: 8px 0; display: flex; align-items: center;"><div style="flex: none; display: flex; padding-right: 22px;"><sc-for list="{{ r.pics }}" as="p" hint-placeholder-count="1"><div style="position: relative; width: 56px; height: 56px; margin-right: -12px; border-radius: 50%; background: #D8CFBC; box-shadow: 0 0 0 3px #F2EBDD;"><image-slot id="{{ p.id }}" src="{{ p.src }}" shape="circle" placeholder="{{ p.ph }}" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot></div></sc-for></div><div style="min-width: 0;"><div style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 23px; line-height: 1.3;">{{ r.name }}</div><div style="margin-top: 2px; font-size: 18px; line-height: 1.45; color: #2E2A25;">{{ r.before }}</div></div></div>
+        <svg width="200" height="88" viewBox="0 0 200 96" aria-hidden="true"><circle cx="14" cy="48" r="6" fill="#111111"></circle><path d="{{ r.path }}" stroke="{{ r.color }}" stroke-width="4" fill="none"></path><circle cx="178" cy="{{ r.y2 }}" r="8" fill="{{ r.color }}"></circle></svg>
+        <div style="padding: 8px 0 8px 12px;"><div style="display: flex; gap: 10px; align-items: baseline; font-size: 20px; font-weight: 700; line-height: 1.4;"><span style="flex: none; color: {{ r.color }};">{{ r.glyph }}</span><span>{{ r.after }}</span></div><sc-if value="{{ r.hasNote }}" hint-placeholder-val="{{ true }}"><div style="margin-top: 2px; padding-left: 26px; font-size: 17px; line-height: 1.45; color: #5C564B;">{{ r.note }}</div></sc-if></div>
+      </div>
+    </sc-for>
+  </div>
+  <p style="margin: 36px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 34px; line-height: 1.5; text-wrap: pretty;">面对创伤的办法是放手，不是回到过去删掉它。</p>
+  <div style="margin-top: auto; padding-top: 32px; display: flex; justify-content: space-between; font-size: 17px; color: #5C564B;"><span>以上为节目中的解读</span><span style="font-family: 'Space Mono', monospace;">12</span></div>
+</section>
+
+<section id="m13" data-screen-label="M13 缺席的人，林奇的解法" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F2EBDD; color: #111111; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
+  <div style="height: 14px; margin: -56px -64px 42px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2228%22 height=%2214%22%3E%3Crect width=%2228%22 height=%2214%22 fill=%22%23F2EBDD%22/%3E%3Cpath d=%22M0 3.5L14 -3.5L28 3.5V10.5L14 3.5L0 10.5ZM0 17.5L14 10.5L28 17.5V24.5L14 17.5L0 24.5Z%22 fill=%22%23111111%22/%3E%3C/svg%3E');"></div>
+  <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'Space Mono', monospace; font-size: 17px; letter-spacing: 0.12em; color: #5C564B;"><span>M13 · 缺席的人</span><span>电影巨辩 EP25 · 双峰</span></div>
+  <h2 style="margin: 36px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 64px; line-height: 1.2;">缺席的人，林奇的解法</h2>
+  <div style="margin-top: 40px; display: grid; grid-template-columns: 230px minmax(0, 1fr) 48px 300px; border-bottom: 2px solid #111111; padding-bottom: 10px; font-family: 'Space Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #5C564B;"><span>角色</span><span>现实里发生了什么</span><span></span><span>第三季里变成了什么</span></div>
+  <div style="display: flex; flex-direction: column;">
+    <sc-for list="{{ absent }}" as="a" hint-placeholder-count="5">
+      <div style="display: grid; grid-template-columns: 230px minmax(0, 1fr) 48px 300px; align-items: center; min-height: 150px; border-bottom: 1px solid #CFC5B2;">
+        <div style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 25px; line-height: 1.35; padding-right: 16px;">{{ a.role }}</div>
+        <div style="font-size: 20px; line-height: 1.55; color: #2E2A25; padding-right: 16px;">{{ a.reality }}</div>
+        <div style="font-family: 'Space Mono', monospace; font-size: 24px;">→</div>
+        <div style="display: flex; align-items: center; gap: 18px;">
+          <div style="flex: none; width: 96px; height: 110px; display: flex; align-items: center; justify-content: center;">
+            <sc-if value="{{ a.isPot }}" hint-placeholder-val="{{ false }}"><svg width="96" height="110" viewBox="0 0 96 110" aria-hidden="true"><path d="M30 18Q24 10 30 2M48 20Q42 12 48 4M66 18Q60 10 66 2" fill="none" stroke="#8A8F93" stroke-width="3" stroke-linecap="round"></path><rect x="40" y="28" width="16" height="8" fill="#111111"></rect><path d="M22 40H74L80 96Q48 106 16 96Z" fill="#111111"></path><path d="M74 54L92 46L90 54L78 64Z" fill="#111111"></path></svg></sc-if>
+            <sc-if value="{{ a.isTree }}" hint-placeholder-val="{{ false }}"><svg width="96" height="110" viewBox="0 0 96 110" aria-hidden="true"><path d="M48 108V40M48 64L26 42M48 56L70 32M48 80L74 64M48 76L22 64" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round"></path><path d="M30 6L22 22H32L24 38" fill="none" stroke="#D9A441" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"></path><path d="M70 2L62 16H72L64 30" fill="none" stroke="#D9A441" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"></path></svg></sc-if>
+            <sc-if value="{{ a.isOrb }}" hint-placeholder-val="{{ false }}"><svg width="96" height="110" viewBox="0 0 96 110" aria-hidden="true"><circle cx="48" cy="42" r="30" fill="#111111"></circle><ellipse cx="48" cy="100" rx="26" ry="5" fill="#8A8F93" fill-opacity="0.5"></ellipse></svg></sc-if>
+            <sc-if value="{{ a.isNone }}" hint-placeholder-val="{{ false }}"><svg width="96" height="110" viewBox="0 0 96 110" aria-hidden="true"><rect x="18" y="25" width="60" height="60" fill="none" stroke="#8A8F93" stroke-width="3" stroke-dasharray="6 6"></rect></svg></sc-if>
+          </div>
+          <div style="font-size: 20px; font-weight: 700; line-height: 1.5;">{{ a.solution }}</div>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+  <p style="margin: 48px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 34px; line-height: 1.6; text-wrap: pretty;">没有什么事能难住他，他一定可以用创作上的办法，来解决现实中的问题。</p>
+  <div style="margin-top: auto; padding-top: 32px; display: flex; justify-content: space-between; font-size: 17px; color: #5C564B;"><span>只写角色名，不涉及演员姓名与肖像</span><span style="font-family: 'Space Mono', monospace;">13</span></div>
+</section>
+
+<section id="m14" data-screen-label="M14 前两季 vs 第三季" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F2EBDD; color: #111111; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
+  <div style="height: 14px; margin: -56px -64px 42px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2228%22 height=%2214%22%3E%3Crect width=%2228%22 height=%2214%22 fill=%22%23F2EBDD%22/%3E%3Cpath d=%22M0 3.5L14 -3.5L28 3.5V10.5L14 3.5L0 10.5ZM0 17.5L14 10.5L28 17.5V24.5L14 17.5L0 24.5Z%22 fill=%22%23111111%22/%3E%3C/svg%3E');"></div>
+  <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'Space Mono', monospace; font-size: 17px; letter-spacing: 0.12em; color: #5C564B;"><span>M14 · 两个版本</span><span>电影巨辩 EP25 · 双峰</span></div>
+  <h2 style="margin: 36px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 64px; line-height: 1.2;">前两季 vs 第三季</h2>
+  <div style="margin-top: 40px; display: grid; grid-template-columns: 120px minmax(0, 1fr) minmax(0, 1fr); gap: 0 4px;">
+    <div></div>
+    <div style="background: #8A8F93; color: #111111;"><div style="position: relative; aspect-ratio: 16 / 9; background: #111111;"><image-slot id="tp-m14-s12" src="{{ img.s12 }}" shape="rect" placeholder="试播集剧照" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot></div><div style="padding: 16px 20px; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 26px;">前两季（1990–1991）</div></div>
+    <div style="background: #8E1B1B; color: #F2EBDD;"><div style="position: relative; aspect-ratio: 16 / 9; background: #111111;"><image-slot id="tp-m14-s3" src="{{ img.s3 }}" shape="rect" fit="contain" placeholder="第三季海报" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot></div><div style="padding: 16px 20px; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 26px;">第三季（2017）</div></div>
+  </div>
+  <div style="display: flex; flex-direction: column;">
+    <sc-for list="{{ compare }}" as="r" hint-placeholder-count="7">
+      <div style="display: grid; grid-template-columns: 120px minmax(0, 1fr) minmax(0, 1fr); gap: 0 4px; border-bottom: 1px solid #CFC5B2;">
+        <div style="padding: 18px 0; font-family: 'Space Mono', monospace; font-weight: 700; font-size: 19px; letter-spacing: 0.1em;">{{ r.dim }}</div>
+        <div style="padding: 18px 20px; background: #E6E2DA; font-size: 20px; line-height: 1.55;">{{ r.a }}</div>
+        <div style="padding: 18px 20px; background: #EBDAD3; font-size: 20px; line-height: 1.55;">{{ r.b }}</div>
+      </div>
+    </sc-for>
+  </div>
+  <div style="margin-top: 44px; font-size: 18px; letter-spacing: 0.1em; color: #8E1B1B;">第三季</div>
+  <div style="margin-top: 12px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; border-top: 2px solid #8E1B1B;">
+    <sc-for list="{{ s3num }}" as="s" hint-placeholder-count="4">
+      <div style="padding: 16px 14px 0 0;"><div style="font-family: 'Space Mono', monospace; font-weight: 700; font-size: 38px; line-height: 1.15; color: #8E1B1B;">{{ s.value }}</div><div style="margin-top: 6px; font-size: 18px; line-height: 1.45;">{{ s.label }}</div></div>
+    </sc-for>
+  </div>
+  <p style="margin: 48px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 34px; line-height: 1.5; text-wrap: pretty;">第三季延续的是《与火同行》的拍法，不是前两季的拍法。</p>
+  <div style="margin-top: auto; padding-top: 32px; display: flex; justify-content: space-between; font-size: 17px; color: #5C564B;"><span>剧照与海报来自英文维基百科，版权归原权利人</span><span style="font-family: 'Space Mono', monospace;">14</span></div>
+</section>
+
+<section id="m15" data-screen-label="M15 被重写的美国史" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F2EBDD; color: #111111; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
+  <div style="height: 14px; margin: -56px -64px 42px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2228%22 height=%2214%22%3E%3Crect width=%2228%22 height=%2214%22 fill=%22%23F2EBDD%22/%3E%3Cpath d=%22M0 3.5L14 -3.5L28 3.5V10.5L14 3.5L0 10.5ZM0 17.5L14 10.5L28 17.5V24.5L14 17.5L0 24.5Z%22 fill=%22%23111111%22/%3E%3C/svg%3E');"></div>
+  <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'Space Mono', monospace; font-size: 17px; letter-spacing: 0.12em; color: #5C564B;"><span>M15 · 美国史</span><span>电影巨辩 EP25 · 双峰</span></div>
+  <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 24px;">
+    <h2 style="margin: 36px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 64px; line-height: 1.2;">被重写的美国史</h2>
+    <svg width="96" height="120" viewBox="0 0 96 120" style="flex: none;" aria-hidden="true"><g fill="none" stroke="#3A5BA0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M48 34c5 0 7 5 3 8s-10 0-9-6 8-10 15-8 11 9 8 16-12 12-20 10-14-10-12-19 10-15 20-15 17 7 18 16"></path><path d="M22 36C16 52 24 70 48 72S82 56 76 36"></path><path d="M26 30C30 18 40 14 48 16M70 30C66 18 58 14 50 16"></path><path d="M48 72V116"></path><path d="M48 92C38 84 28 86 24 92 32 98 42 98 48 92Z"></path><path d="M48 102C58 94 68 96 72 102 64 108 54 108 48 102Z"></path></g></svg>
+  </div>
+  <p style="margin: 20px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 34px; line-height: 1.5; text-wrap: pretty;">邪恶进入人类世界的那扇门，是人类自己打开的。</p>
+  <div style="margin-top: 36px; display: grid; grid-template-columns: 150px 36px minmax(0, 1fr) minmax(0, 1fr); gap: 0 16px; border-bottom: 2px solid #111111; padding-bottom: 10px; font-family: 'Space Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #5C564B;"><span></span><span></span><span>历史上的事</span><span style="color: #3A5BA0;">在《双峰》里变成了什么</span></div>
+  <div style="position: relative; display: flex; flex-direction: column;">
+    <div style="position: absolute; left: 183px; top: 0; bottom: 0; width: 3px; background: #3A5BA0;"></div>
+    <sc-for list="{{ history }}" as="h" hint-placeholder-count="6">
+      <div style="display: grid; grid-template-columns: 150px 36px minmax(0, 1fr) minmax(0, 1fr); gap: 0 16px; align-items: stretch; padding: 14px 0;">
+        <div style="padding-top: 14px; font-family: 'Space Mono', monospace; font-weight: 700; font-size: 22px; line-height: 1.3;">{{ h.when }}<sc-if value="{{ h.hasNote }}" hint-placeholder-val="{{ false }}"><span style="color: #8E1B1B;">*</span></sc-if></div>
+        <div style="position: relative;"><span style="position: absolute; left: 10px; top: 20px; box-sizing: border-box; width: 19px; height: 19px; border-radius: 50%; background: #F2EBDD; border: 4px solid #3A5BA0;"></span></div>
+        <div style="background: #E8DFCB; padding: 14px 18px; font-size: 20px; line-height: 1.55;">{{ h.history }}</div>
+        <div style="background: #3A5BA0; color: #F2EBDD; padding: 14px 18px; font-size: 20px; line-height: 1.55;">{{ h.in_show }}</div>
+      </div>
+    </sc-for>
+  </div>
+  <div style="margin-top: auto; padding-top: 32px; display: flex; justify-content: space-between; gap: 24px; font-size: 17px; color: #5C564B;"><span><span style="display: inline-block; width: 12px; height: 12px; background: #1F3D36; margin-right: 8px;"></span>这条线索不在故事前台，是弗罗斯特埋进去的。　* 年份为补注</span><span style="font-family: 'Space Mono', monospace;">15</span></div>
+</section>
+
+<section id="m16" data-screen-label="M16 提及频次" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F2EBDD; color: #111111; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
+  <div style="height: 14px; margin: -56px -64px 42px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2228%22 height=%2214%22%3E%3Crect width=%2228%22 height=%2214%22 fill=%22%23F2EBDD%22/%3E%3Cpath d=%22M0 3.5L14 -3.5L28 3.5V10.5L14 3.5L0 10.5ZM0 17.5L14 10.5L28 17.5V24.5L14 17.5L0 24.5Z%22 fill=%22%23111111%22/%3E%3C/svg%3E');"></div>
+  <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'Space Mono', monospace; font-size: 17px; letter-spacing: 0.12em; color: #5C564B;"><span>M16 · 提及频次</span><span>电影巨辩 EP25 · 双峰</span></div>
+  <h2 style="margin: 36px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 64px; line-height: 1.2;">他们提到了谁，提到了什么</h2>
+  <div style="margin-top: 32px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px;">
+    <div style="border-top: 3px solid #111111; padding-top: 12px; font-size: 19px; line-height: 1.55;"><span style="font-family: 'Space Mono', monospace; font-weight: 700;">01</span>　林奇被提到的次数是弗罗斯特的 <b>2.2 倍</b>。</div>
+    <div style="border-top: 3px solid #111111; padding-top: 12px; font-size: 19px; line-height: 1.55;"><span style="font-family: 'Space Mono', monospace; font-weight: 700;">02</span>　第三季被提到 <b>68 次</b>，第一季只有 <b>8 次</b>。</div>
+    <div style="border-top: 3px solid #111111; padding-top: 12px; font-size: 19px; line-height: 1.55;"><span style="font-family: 'Space Mono', monospace; font-weight: 700;">03</span>　黑色小屋（26）被提到的次数是白色小屋（12）的两倍多。</div>
+  </div>
+  <div style="margin-top: 40px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px;">
+    <div>
+      <div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 26px;">人物</div>
+      <div style="margin-top: 12px; display: flex; flex-direction: column; gap: 7px;">
+        <sc-for list="{{ fChars }}" as="b" hint-placeholder-count="14">
+          <div style="display: grid; grid-template-columns: 120px minmax(0, 1fr) 40px; align-items: center; gap: 10px; font-size: 18px;"><span>{{ b.name }}</span><span style="height: 18px; background: #E3DACA;"><span style="display: block; height: 100%; width: {{ b.w }}; background: {{ b.bg }};"></span></span><span style="font-family: 'Space Mono', monospace; font-size: 16px; text-align: right;">{{ b.count }}</span></div>
+        </sc-for>
+      </div>
+    </div>
+    <div>
+      <div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 26px;">概念</div>
+      <div style="margin-top: 12px; display: flex; flex-direction: column; gap: 7px;">
+        <sc-for list="{{ fConcepts }}" as="b" hint-placeholder-count="12">
+          <div style="display: grid; grid-template-columns: 120px minmax(0, 1fr) 40px; align-items: center; gap: 10px; font-size: 18px;"><span>{{ b.name }}</span><span style="height: 18px; background: #E3DACA;"><span style="display: block; height: 100%; width: {{ b.w }}; background: {{ b.bg }};"></span></span><span style="font-family: 'Space Mono', monospace; font-size: 16px; text-align: right;">{{ b.count }}</span></div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: 40px;">
+    <div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 26px;">创作者与作品</div>
+    <div style="margin-top: 12px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 7px 48px;">
+      <div style="display: flex; flex-direction: column; gap: 7px;">
+        <sc-for list="{{ fCreators }}" as="b" hint-placeholder-count="2">
+          <div style="display: grid; grid-template-columns: 120px minmax(0, 1fr) 40px; align-items: center; gap: 10px; font-size: 18px;"><span>{{ b.name }}</span><span style="height: 18px; background: #E3DACA;"><span style="display: block; height: 100%; width: {{ b.w }}; background: {{ b.bg }};"></span></span><span style="font-family: 'Space Mono', monospace; font-size: 16px; text-align: right;">{{ b.count }}</span></div>
+        </sc-for>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 7px;">
+        <sc-for list="{{ fWorks }}" as="b" hint-placeholder-count="4">
+          <div style="display: grid; grid-template-columns: 120px minmax(0, 1fr) 40px; align-items: center; gap: 10px; font-size: 18px;"><span>{{ b.name }}</span><span style="height: 18px; background: #E3DACA;"><span style="display: block; height: 100%; width: {{ b.w }}; background: {{ b.bg }};"></span></span><span style="font-family: 'Space Mono', monospace; font-size: 16px; text-align: right;">{{ b.count }}</span></div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: auto; padding-top: 32px; display: flex; justify-content: space-between; font-size: 17px; color: #5C564B;"><span>转录文本统计，约数</span><span style="font-family: 'Space Mono', monospace;">16</span></div>
+</section>
+
+<section id="m18" data-screen-label="M18 主播的分歧" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F2EBDD; color: #111111; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
+  <div style="height: 14px; margin: -56px -64px 42px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2228%22 height=%2214%22%3E%3Crect width=%2228%22 height=%2214%22 fill=%22%23F2EBDD%22/%3E%3Cpath d=%22M0 3.5L14 -3.5L28 3.5V10.5L14 3.5L0 10.5ZM0 17.5L14 10.5L28 17.5V24.5L14 17.5L0 24.5Z%22 fill=%22%23111111%22/%3E%3C/svg%3E');"></div>
+  <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'Space Mono', monospace; font-size: 17px; letter-spacing: 0.12em; color: #5C564B;"><span>M18 · 分歧</span><span>电影巨辩 EP25 · 双峰</span></div>
+  <h2 style="margin: 36px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 64px; line-height: 1.2;">主播的分歧</h2>
+  <div style="margin-top: 36px; display: flex; flex-direction: column; gap: 34px;">
+    <sc-for list="{{ debates }}" as="d" hint-placeholder-count="4">
+      <div>
+        <div style="display: flex; gap: 14px; align-items: baseline;"><span style="font-family: 'Space Mono', monospace; font-weight: 700; font-size: 22px;">0{{ d.n }}</span><span style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 27px; line-height: 1.35;">{{ d.topic }}</span></div>
+        <div style="margin-top: 12px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px;">
+          <div style="background: #E8DFCB; padding: 14px 18px 16px;"><div style="font-size: 16px; letter-spacing: 0.12em; color: #5C564B;">一方</div><div style="margin-top: 6px; font-size: 18px; line-height: 1.6; text-wrap: pretty;">{{ d.side_a }}</div></div>
+          <div style="background: #E8DFCB; padding: 14px 18px 16px;"><div style="font-size: 16px; letter-spacing: 0.12em; color: #5C564B;">另一方</div><div style="margin-top: 6px; font-size: 18px; line-height: 1.6; text-wrap: pretty;">{{ d.side_b }}</div></div>
+        </div>
+        <div style="margin: -1px auto 0; width: 82%; box-sizing: border-box; border: 2px solid #111111; border-top: 0; padding: 10px 18px 12px; text-align: center; font-size: 18px; font-weight: 700; line-height: 1.55; text-wrap: pretty;">{{ d.result }}</div>
+      </div>
+    </sc-for>
+  </div>
+  <div style="margin-top: auto; padding-top: 32px; display: flex; justify-content: space-between; font-size: 17px; color: #5C564B;"><span>说话人归属为推断，不署主播名；以上为节目中的解读</span><span style="font-family: 'Space Mono', monospace;">18</span></div>
+</section>
+
+<section id="m17" data-screen-label="M17 金句卡" style="box-sizing: border-box; width: 1080px; margin: 0 auto 64px;">
+  <div style="display: flex; justify-content: space-between; align-items: baseline; padding: 0 4px 20px; font-family: 'Space Mono', monospace; font-size: 17px; letter-spacing: 0.12em; color: #B9B1A2;"><span>M17 · 金句卡</span><span>10 张 · 每张 4:5</span></div>
+  <div style="display: grid; grid-template-columns: {{ quoteCols }}; gap: 24px;">
+    <sc-for list="{{ quotes }}" as="q" hint-placeholder-count="10">
+      <div style="box-sizing: border-box; aspect-ratio: 4 / 5; background: {{ q.bg }}; color: {{ q.fg }}; padding: {{ q.pad }}; display: flex; flex-direction: column; font-family: 'Noto Sans SC', sans-serif;">
+        <div style="display: flex; justify-content: space-between; font-family: 'Space Mono', monospace; font-size: 16px; letter-spacing: 0.1em; color: {{ q.sub }};"><span>电影巨辩 EP25 · 双峰</span><span>{{ q.n }}</span></div>
+        <div style="margin-top: auto; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 96px; line-height: 0.6; color: {{ q.mark }};">“</div>
+        <div style="margin-top: 18px; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: {{ q.size }}; line-height: 1.45; text-wrap: pretty;">{{ q.text }}</div>
+        <div style="margin-top: 28px; margin-bottom: auto; font-size: {{ q.subSize }}; color: {{ q.sub }};">—— {{ q.source }}</div>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section id="m19" data-screen-label="M19 收尾：林奇钓到的最大的鱼" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 0; background: #0E0E0E; color: #F2EBDD; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
+  <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'Space Mono', monospace; font-size: 17px; letter-spacing: 0.12em; color: #B9B1A2;"><span>收尾</span><span>电影巨辩 EP25 · 双峰</span></div>
+  <h2 style="margin: 36px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 64px; line-height: 1.2;">林奇钓到的最大的鱼</h2>
+  <div style="margin-top: 36px; display: flex; flex-direction: column; gap: 18px;">
+    <div style="display: flex; gap: 20px; align-items: baseline;"><span style="flex: none; font-family: 'Space Mono', monospace; font-size: 20px; color: #D9A441;">1</span><span style="font-family: 'Noto Serif SC', serif; font-size: 27px; line-height: 1.6;">第一季的世界观并不复杂，神话体系是后来从剧情里慢慢长出来的。</span></div>
+    <div style="display: flex; gap: 20px; align-items: baseline;"><span style="flex: none; font-family: 'Space Mono', monospace; font-size: 20px; color: #D9A441;">2</span><span style="font-family: 'Noto Serif SC', serif; font-size: 27px; line-height: 1.6;"><span style="font-weight: 900; color: transparent; -webkit-text-stroke: 1.5px #F2EBDD;">25 年</span>之后，同一批演员带着真实老去的脸回到同一个角色。</span></div>
+    <div style="display: flex; gap: 20px; align-items: baseline;"><span style="flex: none; font-family: 'Space Mono', monospace; font-size: 20px; color: #D9A441;">3</span><span style="font-family: 'Noto Serif SC', serif; font-size: 27px; line-height: 1.6;">电视剧、电影、美术馆影像的边界消失了，“我”的边界也消失了。</span></div>
+  </div>
+  <div style="margin-top: 52px; font-size: 18px; letter-spacing: 0.14em; color: #B9B1A2;">边界感的消失</div>
+  <div style="margin-top: 20px; display: grid; grid-template-columns: 440px minmax(0, 1fr); gap: 40px; align-items: center;">
+    <svg width="440" height="440" viewBox="0 0 440 440" aria-hidden="true">
+      <circle cx="220" cy="220" r="214" fill="none" stroke="#F2EBDD" stroke-width="3"></circle>
+      <circle cx="220" cy="220" r="172" fill="none" stroke="#F2EBDD" stroke-opacity="0.8" stroke-width="2.5" stroke-dasharray="18 6"></circle>
+      <circle cx="220" cy="220" r="130" fill="none" stroke="#F2EBDD" stroke-opacity="0.6" stroke-width="2" stroke-dasharray="9 9"></circle>
+      <circle cx="220" cy="220" r="88" fill="none" stroke="#F2EBDD" stroke-opacity="0.4" stroke-width="2" stroke-dasharray="3 10"></circle>
+      <circle cx="220" cy="220" r="46" fill="none" stroke="#F2EBDD" stroke-opacity="0.22" stroke-width="2" stroke-dasharray="1 12"></circle>
+      <g font-family="Space Mono, monospace" font-size="18" fill="#D9A441"><text x="214" y="22">1</text><text x="214" y="64">2</text><text x="214" y="106">3</text><text x="214" y="148">4</text><text x="214" y="190">5</text></g>
+    </svg>
+    <div style="display: flex; flex-direction: column; gap: 18px;">
+      <sc-for list="{{ boundaries }}" as="b" hint-placeholder-count="5">
+        <div style="display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 10px;"><span style="font-family: 'Space Mono', monospace; font-size: 18px; color: #D9A441;">{{ b.n }}</span><div><div style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 24px;">{{ b.boundary }}</div><div style="margin-top: 2px; font-size: 18px; line-height: 1.55; color: #CFC6B4;">{{ b.text }}</div></div></div>
+      </sc-for>
+    </div>
+  </div>
+  <svg viewBox="0 0 1080 162" width="1080" height="162" style="display: block; margin: auto -64px 0; flex: none;" aria-hidden="true"><path d="{{ pinesEnd }}" fill="#1E1E1C"></path></svg>
+  <div style="height: 40px; margin: 0 -64px; flex: none; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2224%22%3E%3Crect width=%2248%22 height=%2224%22 fill=%22%23F2EBDD%22/%3E%3Cpath d=%22M0 6L24 -6L48 6V18L24 6L0 18ZM0 30L24 18L48 30V42L24 30L0 42Z%22 fill=%22%23111111%22/%3E%3C/svg%3E');"></div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;fixedRatio&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;卡片&quot;,&quot;label&quot;:&quot;统一 4:5 卡片高度&quot;},&quot;quoteLayout&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;两列网格&quot;,&quot;单列大卡&quot;],&quot;default&quot;:&quot;两列网格&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;金句卡&quot;}}">
+const C = { red: '#8E1B1B', green: '#1F3D36', gold: '#D9A441', ink: '#111111', blue: '#3A5BA0', grey: '#8A8F93', ivory: '#F2EBDD' };
+const SPLIT = 'linear-gradient(90deg, #8E1B1B 50%, #1F3D36 50%)';
+
+const POINTS = [
+  { title: '产业转折的产物', text: '三大电视网份额从 90% 多跌到约 50%，长期排第三的 ABC 才敢赌一把。' },
+  { title: '真正的冲突在幕后', text: '林奇想让谜底永远悬着，电视网和观众要答案，弗罗斯特夹在中间。' },
+  { title: '不能没有第三季', text: '没有第三季，这部剧算不上善始善终。第三季延续的是《与火同行》的拍法。' },
+  { title: '双重作者', text: '林奇定基调和意象，弗罗斯特搭结构和神话。两人称之为“第三个实体”。' },
+  { title: '一套设定，两种读法', text: '林奇是吠陀哲学，弗罗斯特是神智学。底层逻辑不同，结果自洽。' },
+  { title: '劳拉是谁', text: '她从一具尸体、一个麦高芬，被一步步加码成宇宙级善恶对抗的中心。' },
+  { title: '善恶转化', text: '破案之后的主题是怎么从恶变到善。面对创伤的办法是放手。' },
+  { title: '没有答案的结局', text: '时间不是线性的，创伤是宇宙结构的一部分，善意也可能通向新的循环。' },
+  { title: '被重写的美国史', text: '刘易斯与克拉克、原子弹、蓝皮书计划，都被缝进一场隐秘的超自然战争。' },
+  { title: '玄学是方法论', text: '林奇厉害的不是玄学本身，而是用它改造了叙事、人物和时空。' }
+];
+const POINT_BAR = [C.grey, SPLIT, C.red, SPLIT, SPLIT, C.gold, C.gold, C.ink, C.blue, C.red];
+
+const BRANCHES = [
+  { label: '一 产业背景', children: ['三大网份额 90% → 70% → 50%', '福克斯与有线电视分流', '品质电视剧：NBC 先行，ABC 跟进', 'ABC 长期第三，愿意冒险'] },
+  { label: '二 立项', children: ['经纪人克兰茨撮合', '梦露项目流产', '西北小镇 + 塑料布裹尸', '拿到最终剪辑权'] },
+  { label: '三 谜底之争', children: ['林奇：金蛋鹅，永不揭晓', 'ABC：悬念必须兑现', '弗罗斯特居中缓冲', '第二季第 7 集揭凶', '支线失控，挪到周六，被砍'] },
+  { label: '四 《与火同行》', children: ['续集还是前传', '劳拉的主体性', '神话设定在此确立', '通往第三季的桥'] },
+  { label: '五 第三季', children: ['订阅制带来自由', '18 小时的超长电影', '反电视剧的手法'] },
+  { label: '六 双重作者', children: ['林奇：基调、视觉、灵光', '弗罗斯特：结构、神话、落地', '第三个实体', '两本书，一双各表'] },
+  { label: '七 林奇视角：吠陀哲学', children: ['梵、摩耶、统一场、市场', '白屋 / 红房间 / 黑屋', '库珀的分裂与图帕', '劳拉：金色光球', '善恶转化的角色群像', '没有终点的结局'] },
+  { label: '八 弗罗斯特视角：神智学', children: ['二元对立与星光界', '阈限空间的居住者', '黑白小屋的文献来源', '一场灵修之旅'] },
+  { label: '九 美国史与现实', children: ['刘易斯与克拉克', '原子弹与鲍勃的起源', '蓝皮书与蓝玫瑰', '贾科比的金铲子'] },
+  { label: '十 结语', children: ['钓大鱼与养鱼', '边界感的消失'] }
+];
+const BRANCH_STYLE = [
+  { bg: C.grey, fg: C.ink, dot: C.grey }, { bg: C.grey, fg: C.ink, dot: C.grey }, { bg: C.grey, fg: C.ink, dot: C.grey },
+  { bg: C.grey, fg: C.ink, dot: C.grey }, { bg: C.grey, fg: C.ink, dot: C.grey },
+  { bg: SPLIT, fg: C.ivory, dot: SPLIT }, { bg: C.red, fg: C.ivory, dot: C.red }, { bg: C.green, fg: C.ivory, dot: C.green },
+  { bg: C.blue, fg: C.ivory, dot: C.blue }, { bg: C.gold, fg: C.ink, dot: C.gold }
+];
+
+const TOTAL = 7768;
+const SEGMENTS = [
+  { id: 'A', label: '开场', start: 0, end: 72, minutes: 1.2, group: '开场与结语' },
+  { id: 'B', label: '产业背景', start: 72, end: 435, minutes: 6.0, group: '产业与制作史' },
+  { id: 'C', label: '立项与动机', start: 435, end: 770, minutes: 5.6, group: '产业与制作史' },
+  { id: 'D', label: '谜底之争与第二季崩盘', start: 770, end: 1327, minutes: 9.3, group: '产业与制作史' },
+  { id: 'E', label: '《与火同行》', start: 1327, end: 1652, minutes: 5.4, group: '产业与制作史' },
+  { id: 'F', label: '第三季的条件与制作', start: 1652, end: 1957, minutes: 5.1, group: '产业与制作史' },
+  { id: 'G', label: '双重作者', start: 1957, end: 2799, minutes: 14.0, group: '双重作者' },
+  { id: 'H', label: '林奇视角：吠陀哲学', start: 2799, end: 6188, minutes: 56.5, group: '林奇视角' },
+  { id: 'I', label: '弗罗斯特视角：神智学', start: 6188, end: 7002, minutes: 13.6, group: '弗罗斯特视角' },
+  { id: 'J', label: '美国史与现实政治', start: 7002, end: 7411, minutes: 6.8, group: '美国史与现实' },
+  { id: 'K', label: '主观感受与结语', start: 7411, end: 7768, minutes: 6.0, group: '开场与结语' }
+];
+const H_SUBS = [
+  { id: 'H1', label: '基础概念与小屋体系', start: 2799, end: 3374, minutes: 9.6 },
+  { id: 'H2', label: '库珀与利兰的附体', start: 3374, end: 3689, minutes: 5.3 },
+  { id: 'H3', label: '图帕、道吉、珍妮-E 之辩', start: 3689, end: 4589, minutes: 15.0 },
+  { id: 'H4', label: '劳拉、叙事结构与结局', start: 4589, end: 4967, minutes: 6.3 },
+  { id: 'H5', label: '善恶转化：角色群像', start: 4967, end: 5755, minutes: 13.1 },
+  { id: 'H6', label: '林奇方法论小结', start: 5755, end: 6188, minutes: 7.2 }
+];
+const H_TONES = ['#5E1010', '#8E1B1B', '#6F1414', '#A0332B', '#7E1818', '#A84A40'];
+const GROUPS = [
+  { group: '林奇视角', minutes: 56.5, share: '43.6%' },
+  { group: '产业与制作史', minutes: 31.4, share: '24.2%' },
+  { group: '双重作者', minutes: 14.0, share: '10.8%' },
+  { group: '弗罗斯特视角', minutes: 13.6, share: '10.5%' },
+  { group: '开场与结语', minutes: 7.2, share: '5.6%' },
+  { group: '美国史与现实', minutes: 6.8, share: '5.3%' }
+];
+const GROUP_COLOR = { '开场与结语': C.gold, '产业与制作史': C.grey, '双重作者': SPLIT, '林奇视角': C.red, '弗罗斯特视角': C.green, '美国史与现实': C.blue };
+const GROUP_FG = { '开场与结语': C.ink, '产业与制作史': C.ink, '双重作者': C.ivory, '林奇视角': C.ivory, '弗罗斯特视角': C.ivory, '美国史与现实': C.ivory };
+
+const STEPS = [
+  { period: '1970 年代', share_label: '90% 多', plot_value: 90 },
+  { period: '1980 年代中期', share_label: '70% 多', plot_value: 70 },
+  { period: '进入 1990 年代', share_label: '约 50%', plot_value: 50 }
+];
+const FORCES = [
+  { name: '福克斯电视网', detail: '1986 年成立，打年轻人牌，节目大胆。代表：《拖家带口》《辛普森一家》' },
+  { name: '有线电视', detail: 'ESPN、CNN、HBO、TNT、MTV。广告加订阅，内容可以更先锋' },
+  { name: '品质电视剧', detail: '排名垫底的那家最有动力改革：先是 NBC（《山街蓝调》《波城杏话》《洛城法网》），再是 ABC（《蓝色月光》《三十而立》→《双峰》）' }
+];
+
+const STANCES = [
+  { who: '林奇', color: C.red, fg: C.ivory, tag: '理想主义者', stance: '永远不公布凶手', quote: '悬念是一只会下金蛋的鹅，公布凶手就是亲手杀了它。' },
+  { who: '弗罗斯特', color: C.green, fg: C.ivory, tag: '居中缓冲', stance: '可以推迟，不能无止境推迟；与其被砍，不如主动揭晓', quote: '电视是和观众许下的承诺，承诺必须兑现。' },
+  { who: 'ABC', color: C.grey, fg: C.ink, tag: '电视网逻辑', stance: '第一季结束就要求揭晓', quote: '悬念的存在，就是为了被解决。' }
+];
+const FLOW = [
+  '第一季：周四晚 9 点黄金档，最高收视破 3000 万',
+  'ABC 施压：公布凶手',
+  '第二季被挪到周六晚 10 点，“坟场时段”',
+  '第二季第 7 集《孤独的灵魂》：林奇亲自执导，揭晓凶手',
+  '主创意兴阑珊，林奇暂离，弗罗斯特分心',
+  '编剧室引入新反派和一堆狗血支线',
+  '收视跌破 1000 万',
+  '林奇回归拍最后一集，留下更大的悬念；剧集被砍'
+];
+const BIG = [
+  { value: '3000 万+', label: '最好的时候', h: 300, bg: C.grey },
+  { value: '2000 万', label: '当时热门剧的及格线', h: 200, bg: 'transparent' },
+  { value: '<1000 万', label: '第二季破案之后', h: 92, bg: C.ink }
+];
+
+const TIMELINE = [
+  { year: '1986', event: '福克斯电视网成立', track: '产业' },
+  { year: '1988', event: '林奇与弗罗斯特向 ABC 推销', track: '双峰', note: '年份为补注' },
+  { year: '1990', event: '第一季开播，周四晚 9 点', track: '双峰' },
+  { year: '1990', event: '第二季挪到周六晚 10 点；第 7 集揭凶', track: '双峰' },
+  { year: '1991', event: '第二季播完，剧集被砍', track: '双峰', note: '年份为补注' },
+  { year: '1992', event: '《与火同行》上映，票房失败', track: '双峰', note: '年份为补注' },
+  { year: '2010', event: '大牌电影导演开始下场拍剧', track: '产业' },
+  { year: '2012', event: '开始讨论第三季', track: '双峰' },
+  { year: '2015', event: '预算冲突，林奇一度退出；Showtime 转型流媒体', track: '双峰' },
+  { year: '2017', event: '第三季 18 集播出', track: '双峰', note: '年份为补注' }
+];
+
+const INSPIRE = [
+  { from: '一次意外入镜', via: '', to: '鲍勃' },
+  { from: '为试播集欧洲版结局想出的一个房间', via: '弗罗斯特把它编进黑白小屋体系', to: '红房间' },
+  { from: '觉得库珀房间里该有个奇怪的人', via: '', to: '巨人' },
+  { from: '和老朋友的一通电话', via: '', to: '木头女士' }
+];
+
+const ENTITIES = [
+  { name: '劳拉', color: C.gold, from: '白色小屋', to: '现实世界', label: '一枚金色光球，被送来制衡邪恶', lynch: '', frost: '' },
+  { name: '鲍勃', color: C.ink, from: '黑色小屋', to: '现实世界', label: '附身、寄生', lynch: '罗刹', frost: '原子弹释放出的恶灵' },
+  { name: '朱迪', color: C.ink, from: '外部', to: '现实世界', label: '以人的痛苦为食', lynch: '无明', frost: '名字取自苏美尔神话的恶灵' },
+  { name: '邪恶二重身', color: C.ink, from: '黑色小屋', to: '现实世界', label: '顶替本人外出', lynch: '真我与小我的割裂', frost: '“阈限空间的居住者”；荣格的阴影自我' }
+];
+const GLOSSARY = [
+  { term: '梵', gloss: '宇宙本体，纯粹的意识' },
+  { term: '摩耶', gloss: '幻象。我们感知到的现实不是终极真实' },
+  { term: '统一场', gloss: '一切爱和创造的源泉' },
+  { term: '市场', gloss: '林奇的说法，指世俗生活的层面' },
+  { term: '图帕', gloss: '用意念造出来的实体化替身' },
+  { term: '神智学', gloss: '19 世纪兴起的神秘主义学说，主张所有宗教背后有共同的古老智慧' }
+];
+
+const NODE_TYPES = {
+  origin: { bg: C.ivory, fg: C.ink, border: '2px solid #111111' },
+  true_self: { bg: C.ivory, fg: C.ink, border: '4px solid #D9A441' },
+  evil: { bg: C.ink, fg: C.ivory, border: '2px solid #111111' },
+  tulpa: { bg: '#E1E3EA', fg: C.ink, border: '3px dashed #3A5BA0' },
+  exiled: { bg: '#D9D8D3', fg: C.ink, border: '3px dotted #6E7378' },
+  human: { bg: C.ivory, fg: C.ink, border: '1.5px solid #5C564B' }
+};
+const NODES = [
+  { id: 'cooper', label: '戴尔·库珀', sub: '第二季结尾进入黑屋', type: 'origin', x: 476, y: 60 },
+  { id: 'good', label: '好库珀', sub: '被困 25 年', type: 'true_self', x: 150, y: 250 },
+  { id: 'mrc', label: 'C 先生', sub: '阴影自我 + 鲍勃附身', type: 'evil', x: 802, y: 250 },
+  { id: 'dougie', label: '道吉·琼斯', sub: '约 1997 年被造出来的替死鬼', type: 'tulpa', x: 802, y: 470 },
+  { id: 'dougie_cooper', label: '道吉状态的库珀', sub: '没有小我的纯粹真我', type: 'true_self', x: 150, y: 470 },
+  { id: 'real_diane', label: '真戴安', sub: '库珀的助理', type: 'true_self', x: 476, y: 690 },
+  { id: 'tulpa_diane', label: '图帕戴安', sub: '继承了真戴安的记忆和创伤', type: 'tulpa', x: 802, y: 690 },
+  { id: 'naido', label: '无眼女人', sub: '真戴安被放逐后的形态', type: 'exiled', x: 476, y: 890 },
+  { id: 'janey', label: '珍妮-E', sub: '道吉的妻子', type: 'human', x: 476, y: 470 },
+  { id: 'new_dougie', label: '新道吉', sub: '库珀还给珍妮的丈夫', type: 'tulpa', x: 150, y: 690 },
+  { id: 'richard', label: '理查德', sub: '最后一集的库珀', type: 'true_self', x: 150, y: 890 }
+];
+const EDGE_LABELS = [
+  { x: 255, y: 60, text: '勇气不完美，被困' }, { x: 697, y: 60, text: '分裂，外逃' },
+  { x: 802, y: 357, text: '制造' }, { x: 946, y: 580, text: '制造' },
+  { x: 476, y: 787, text: '被放逐' }, { x: 476, y: 580, text: '同父异母的姐妹' },
+  { x: 639, y: 470, text: '夫妻' }, { x: 130, y: 360, text: '回到人间，顶替道吉' },
+  { x: 318, y: 360, text: '觉醒' }, { x: 8, y: 580, text: '再造一个' }, { x: 8, y: 800, text: '穿越后' }
+];
+const LEGEND = [
+  { type: 'true_self', meaning: '真身' }, { type: 'evil', meaning: '被鲍勃附身' },
+  { type: 'tulpa', meaning: '图帕（人造替身）' }, { type: 'exiled', meaning: '被放逐的形态' },
+  { type: 'human', meaning: '普通人（主播有分歧，见 M18）' }
+];
+
+const LAURA = [
+  { stage: '第一季', state: '一具尸体', gloss: '破案对象，一个麦高芬' },
+  { stage: '加戏', state: '一模一样的表妹', gloss: '林奇觉得演员只演尸体太浪费' },
+  { stage: '《与火同行》', state: '一个做出选择的人', gloss: '戴上戒指，宁愿死也不被附身' },
+  { stage: '第三季第 8 集', state: '一枚金色光球', gloss: '白色小屋造出来对抗邪恶的' },
+  { stage: '第三季第 18 集', state: '一声尖叫', gloss: '她的死是这个宇宙的起点，改不掉' }
+];
+const LAURA_TONE = ['#8A8F93', '#A0978A', '#B79D6C', '#D9A441', '#D9A441'];
+
+const SLOPE = [
+  { name: '本杰明·霍恩', before: '背信弃义的商人', after: '心甘情愿替孙子赔钱', dir: 'up', note: '变化最大。主播对“是否脱胎换骨”有分歧' },
+  { name: '鲍比', before: '叛逆，贩毒', after: '正直的警官', dir: 'up', note: '救赎与父亲有关' },
+  { name: '“小蛇”麦克', before: '吊儿郎当的跟班', after: '严肃的公司主管', dir: 'up', note: '' },
+  { name: '纳丁', before: '偏执地造无声窗帘', after: '放手，成全别人', dir: 'up', note: '主动打破痛苦的循环' },
+  { name: '艾德与诺玛', before: '有情人不得眷属', after: '终成眷属', dir: 'up', note: '全剧最乐观的一处' },
+  { name: '赌场老板兄弟', before: '要对道吉下手', after: '被感化', dir: 'up', note: '因为一个梦' },
+  { name: '辛克莱', before: '下毒', after: '忏悔', dir: 'up', note: '像被圣人点化' },
+  { name: '露西与安迪', before: '幸福', after: '依然幸福', dir: 'flat', note: '安迪成了传递真相的管道' },
+  { name: '杰瑞·霍恩', before: '—', after: '一直在找出路，一直迷失', dir: 'flat', note: '' },
+  { name: '詹姆斯', before: '关键人物', after: '中年保安，没走出情伤', dir: 'down', note: '' },
+  { name: '奥黛丽', before: '最有魅力的少女', after: '被困在旧时光里', dir: 'down', note: '全剧最大的悲剧，不亚于劳拉' }
+];
+const DIR = {
+  up: { color: C.gold, glyph: '▲', dy: -24, word: '向上' },
+  flat: { color: C.grey, glyph: '▶', dy: 0, word: '持平' },
+  down: { color: C.ink, glyph: '▼', dy: 24, word: '向下' }
+};
+
+const ABSENT = [
+  { role: '菲利普·杰弗里斯', reality: '演员重病，后去世', solution: '一个冒着气的壶状存在', shape: 'pot' },
+  { role: '红房间里的角色', reality: '演员不回来了', solution: '一棵带电的树', shape: 'tree' },
+  { role: '鲍勃', reality: '演员 90 年代去世', solution: '一个漂浮的球体', shape: 'orb' },
+  { role: '唐娜', reality: '换过演员；戏份太重不好写', solution: '没有出现', shape: 'none' },
+  { role: '乔西', reality: '演员当年主动离开，事后后悔', solution: '没有出现', shape: 'none' }
+];
+
+const COMPARE = [
+  { dim: '平台', a: '电视网 ABC，靠广告', b: 'Showtime，靠订阅' },
+  { dim: '类型', a: '悬疑、青春偶像、肥皂剧、黑色电影、古怪喜剧的融合', b: '这些都拿掉了' },
+  { dim: '视角', a: '跟着库珀探索世界', b: '没有明确视角' },
+  { dim: '驱动', a: '破案主线', b: '没有核心谜团' },
+  { dim: '导演', a: '多位导演，30 集里林奇拍了 6 集', b: '18 集全部是林奇' },
+  { dim: '播出', a: '边拍边播', b: '拍完再播' },
+  { dim: '主角', a: '机敏的 FBI 探员', b: '第 3 到 16 集大多数时候是痴呆状态' }
+];
+const S3NUM = [
+  { value: '18', label: '集，原定 9 集' },
+  { value: '18 小时', label: '相当于 9 部电影' },
+  { value: '140 天', label: '拍摄周期' },
+  { value: '12–17 小时', label: '林奇每天的工作时间' }
+];
+
+const HISTORY = [
+  { when: '19 世纪初', history: '刘易斯与克拉克远征', in_show: '人类与异界的第一次接触', note: '' },
+  { when: '1945', history: '原子弹试验', in_show: '爆炸释放出恶灵鲍勃；白色小屋送出金色光球制衡', note: '年份为补注' },
+  { when: '冷战时期', history: '蓝皮书计划，空军的 UFO 研究项目', in_show: '官方终止后秘密延续，目光转向双峰镇周围的森林', note: '' },
+  { when: '1956', history: '新墨西哥州的一个夏夜', in_show: '蛋里爬出的怪物钻进一个女孩嘴里', note: '' },
+  { when: '1970 年代', history: '—', in_show: '蓝玫瑰小队成立，专查超自然案件', note: '' },
+  { when: '2010 年代', history: '资本的权力压过国家机器', in_show: '纽约的玻璃盒子、赌场老板、推销金铲子的电台主播', note: '' }
+];
+
+const FREQ = {
+  creators: [{ name: '大卫·林奇', count: 187 }, { name: '马克·弗罗斯特', count: 84 }],
+  characters: [
+    { name: '库珀', count: 69 }, { name: '劳拉', count: 61 }, { name: 'C 先生', count: 36 }, { name: '戴安', count: 36 },
+    { name: '道吉', count: 31 }, { name: '鲍勃', count: 30 }, { name: '本杰明·霍恩', count: 19 }, { name: '利兰', count: 15 },
+    { name: '珍妮-E', count: 14 }, { name: '鲍比', count: 14 }, { name: '温德姆·厄尔', count: 11 }, { name: '朱迪', count: 11 },
+    { name: '唐娜', count: 11 }, { name: '奥黛丽', count: 9 }
+  ],
+  concepts: [
+    { name: '图帕', count: 40 }, { name: '意识', count: 40 }, { name: '幻象 / 摩耶', count: 28 }, { name: '神话', count: 27 },
+    { name: '黑色小屋', count: 26 }, { name: '神智学', count: 20 }, { name: '统一场', count: 18 }, { name: '痛苦', count: 18 },
+    { name: '红房间', count: 17 }, { name: '循环 / 轮回', count: 17 }, { name: '创伤', count: 16 }, { name: '白色小屋', count: 12 }
+  ],
+  works: [{ name: '第三季', count: 68 }, { name: '第二季', count: 19 }, { name: '《与火同行》', count: 15 }, { name: '第一季', count: 8 }]
+};
+const FREQ_COLOR = {
+  '大卫·林奇': C.red, '马克·弗罗斯特': C.green, '劳拉': C.gold, 'C 先生': C.ink, '鲍勃': C.ink, '朱迪': C.ink,
+  '图帕': C.blue, '黑色小屋': C.ink, '白色小屋': C.gold, '红房间': C.red, '统一场': C.gold, '神智学': C.green,
+  '第三季': C.ink, '第一季': C.ink
+};
+
+const QUOTES = [
+  { text: '这个剧的核心，不是谁杀了劳拉，而是劳拉是谁。', source: '主播' },
+  { text: '悬念是一只会下金蛋的鹅，一旦公布凶手，就等于亲手杀死了它。', source: '节目转述林奇的比喻' },
+  { text: '如果不是这两个神棍碰到一起，也想不出这么奇葩的一个剧。', source: '主播' },
+  { text: '那是弗罗斯特的双峰世界，我有我的双峰世界。', source: '节目转述林奇的态度' },
+  { text: '劳拉的家庭，是一个生产痛苦最有效率的农场。', source: '主播' },
+  { text: '时间没有终点，那又怎么会有一个结局呢。', source: '主播' },
+  { text: '鲍比不是被具体的事情感动到了，而是被时间自身的力量撼动到了。', source: '主播' },
+  { text: '先养鱼，把鱼养大，再钓。', source: '主播' },
+  { text: '“我”这个概念，在第三季被粉碎了。', source: '主播' },
+  { text: '从来没有哪部华语玄学电影，是拿玄学当方法论去改造叙事的。大卫·林奇做到了。', source: '主播' }
+];
+const QUOTE_THEME = [
+  { bg: '#0E0E0E', fg: C.ivory, mark: C.gold, sub: '#B9B1A2' },
+  { bg: C.red, fg: C.ivory, mark: C.ivory, sub: '#E3C6BE' },
+  { bg: C.ivory, fg: C.ink, mark: C.ink, sub: '#5C564B' },
+  { bg: C.red, fg: C.ivory, mark: C.ivory, sub: '#E3C6BE' },
+  { bg: C.ivory, fg: C.ink, mark: C.gold, sub: '#5C564B' },
+  { bg: '#0E0E0E', fg: C.ivory, mark: C.ivory, sub: '#B9B1A2' },
+  { bg: C.ivory, fg: C.ink, mark: C.ink, sub: '#5C564B' },
+  { bg: '#0E0E0E', fg: C.ivory, mark: C.ivory, sub: '#B9B1A2' },
+  { bg: C.ivory, fg: C.ink, mark: C.ink, sub: '#5C564B' },
+  { bg: '#0E0E0E', fg: C.ivory, mark: C.ivory, sub: '#B9B1A2' }
+];
+
+const DEBATES = [
+  { topic: '珍妮-E 是不是图帕？', side_a: '是。图帕戴安说珍妮是她的妹妹；“我们所有的梦想都要实现了”像是在说世俗欲望被满足。也许这是一个“图帕之家”。', side_b: '不是。她没有任何图帕的特征；图帕戴安只是继承了真戴安的记忆；库珀答应还她一个丈夫，说明她是真人。', result: '提出的一方接受了反驳，但双方都同意：不能完全排除，只是缺少直接证据。' },
+  { topic: '本杰明在第二季发疯的那段，是狗血还是伏笔？', side_a: '和其他支线一样，是填空白的狗血剧情。', side_b: '很重要。他从一个按计划行事的公共角色，变成了遵从内心的人，和第三季的主题直接相关。', result: '折中：没到脱胎换骨的程度，但整体是往上走的。' },
+  { topic: '道吉这个角色该怎么读？', side_a: '没有小我的纯粹真我。英雄的成功不再来自主动作为，而来自绝对的被动。', side_b: '一个圣愚，像济公。表面痴傻，却能感化身边的人。', result: '两种读法互补。' },
+  { topic: '唐娜为什么没有回来？', side_a: '换过演员；弗罗斯特的书里她已经离开了双峰镇。', side_b: '书里的说法更像事后找补。', result: '都认同理由不充分。推测是她的戏份太重，不能随便写。' }
+];
+
+const BOUNDARIES = [
+  { boundary: '媒介', text: '电视剧、电影、美术馆影像，很难再分清' },
+  { boundary: '演员与角色', text: '25 年的老去是真的，不再有“扮演”的感觉' },
+  { boundary: '时间与空间', text: '过去、现在、未来相互渗透' },
+  { boundary: '因果与语言', text: '逻辑被悬置' },
+  { boundary: '自我', text: '个体只是暂时的幻象，可以被复制、修改、消解' }
+];
+
+const IMG = {
+  cooper: 'assets/tp/cooper.jpg', laura: 'assets/tp/laura.png', leland: 'assets/tp/leland.jpg', lynch: 'assets/tp/lynch.jpg',
+  s12: 'assets/tp/s12.jpg', s3: 'assets/tp/s3.jpg', fwwm: 'assets/tp/fwwm.png', part8: 'assets/tp/part8.jpg',
+  sign: 'assets/tp/sign.jpg', diner: 'assets/tp/diner.jpg', hotel: 'assets/tp/hotel.jpg', falls: 'assets/tp/falls.jpg',
+  roadhouse: 'assets/tp/roadhouse.jpg', bridge: 'assets/tp/bridge.jpg', kiana: 'assets/tp/kiana.jpg'
+};
+// Twin Peaks Wiki (Fandom) — its CDN refuses downloads, so these are hotlinked (page sets no-referrer).
+const fd = (p, w) => 'https://static.wikia.nocookie.net/twinpeaks/images/' + p + '/revision/latest/scale-to-width-down/' + (w || 400);
+Object.assign(IMG, {
+  frost: fd('9/9e/Mark_Frost.jpg', 600), mrc: fd('7/7f/BadCoop.jpg'), diane: fd('9/9b/Diane_Evans.jpg'),
+  dougie: fd('3/32/Dougie_Jones_II.png'), bob: fd('3/37/KillerBob.jpg'), ben: fd('5/52/Benjamin_Horne_%282010s%29.jpg'),
+  janey: fd('f/f2/Janey-E_Jones.jpg'), bobby: fd('f/ff/Bobby_Briggs_%282010s%29.jpg'), windom: fd('a/a2/Windom_Earle.jpg'),
+  donna: fd('8/85/Donna_LFB.jpg'), audrey: fd('7/79/AudreyHorne2014.jpg'), mike: fd('b/b3/Mike_Nelson_%282010s%29.jpg'),
+  nadine: fd('4/42/Nadine2017.jpg'), ed: fd('b/be/Ed_Hurley_%282010s%29.jpg'), norma: fd('1/19/Norma_Jennings_%282010s%29.jpg'),
+  bradley: fd('7/72/Bradley_Mitchum.jpg'), rodney: fd('7/79/Rodney_Mitchum.jpg'), sinclair: fd('8/85/Anthony_Sinclair.jpg'),
+  lucy: fd('1/10/Lucy_Brennan_%282010s%29.jpg'), andy: fd('9/9f/Andy_Brennan_%282010s%29.jpg'), jerry: fd('2/24/Jerry_Horne_%282010s%29.jpg'),
+  james: fd('9/90/JamesRoadhouse.png')
+});
+const CAST = [
+  ['cooper', '库珀', 69, C.gold], ['laura', '劳拉', 61, C.gold], ['mrc', 'C 先生', 36, C.ink, 'C'], ['diane', '戴安', 36, '#C9BFAC'],
+  ['dougie', '道吉', 31, C.blue], ['bob', '鲍勃', 30, C.ink, 'BOB'], ['ben', '本杰明·霍恩', 19, '#C9BFAC', '本'], ['leland', '利兰', 15, '#C9BFAC'],
+  ['janey', '珍妮-E', 14, '#C9BFAC'], ['bobby', '鲍比', 14, '#C9BFAC', '比'], ['windom', '温德姆·厄尔', 11, '#C9BFAC'], ['judy', '朱迪', 11, C.ink],
+  ['donna', '唐娜', 11, '#C9BFAC'], ['audrey', '奥黛丽', 9, '#C9BFAC']
+];
+const PLACES = [
+  ['diner', '双 R 餐馆', '北本德 Twede’s Cafe'], ['hotel', '大北方酒店', '斯诺夸尔米 Salish Lodge'], ['falls', '片头里的瀑布', '斯诺夸尔米瀑布'],
+  ['roadhouse', '路边酒吧', '福尔城'], ['bridge', '罗内特之桥', 'Reinig 桥'], ['kiana', '帕卡德家的木屋', 'Kiana Lodge']
+];
+const SLOPE_PICS = [['ben'], ['bobby'], ['mike'], ['nadine'], ['ed', 'norma'], ['bradley', 'rodney'], ['sinclair'], ['lucy', 'andy'], ['jerry'], ['james'], ['audrey']];
+const PIC_NAME = { ben: '本杰明', bobby: '鲍比', mike: '麦克', nadine: '纳丁', ed: '艾德', norma: '诺玛', bradley: '布拉德利', rodney: '罗德尼', sinclair: '辛克莱', lucy: '露西', andy: '安迪', jerry: '杰瑞', james: '詹姆斯', audrey: '奥黛丽' };
+const ENT_PICS = ['laura', 'bob', 'judy', 'mrc'];
+
+function pinePath(w, base, seed, minH, maxH) {
+  let s = seed;
+  const rnd = () => (s = (s * 9301 + 49297) % 233280) / 233280;
+  const f = v => v.toFixed(1);
+  let d = '';
+  for (let x = -12; x < w + 24; x += 20 + rnd() * 18) {
+    const h = minH + rnd() * (maxH - minH), hw = h * 0.24;
+    const pts = [[0.55, 0.38], [0.28, 0.38], [0.8, 0.68], [0.5, 0.68], [1, 1]];
+    d += 'M' + f(x) + ' ' + f(base - h);
+    pts.forEach(p => { d += 'L' + f(x + p[0] * hw) + ' ' + f(base - h + p[1] * h); });
+    pts.slice().reverse().forEach(p => { d += 'L' + f(x - p[0] * hw) + ' ' + f(base - h + p[1] * h); });
+    d += 'Z';
+  }
+  return d;
+}
+
+function fmtTime(sec) {
+  const h = Math.floor(sec / 3600), m = Math.floor((sec % 3600) / 60);
+  return h + ':' + String(m).padStart(2, '0');
+}
+
+class Component extends DCLogic {
+  renderVals() {
+    const fixed = this.props.fixedRatio !== false;
+    const single = this.props.quoteLayout === '单列大卡';
+    const W = 952;
+    const img = IMG;
+
+    const segs = SEGMENTS.map(s => {
+      const w = (s.end - s.start) / TOTAL * W;
+      return { w: w.toFixed(2) + 'px', bg: GROUP_COLOR[s.group], fg: GROUP_FG[s.group], code: w > 34 ? s.id : '', id: s.id, label: s.label, minutes: s.minutes.toFixed(1), range: fmtTime(s.start) + '–' + fmtTime(s.end) };
+    });
+    const ticks = [0, 1800, 3600, 5400].map(t => ({ x: (t / TOTAL * W).toFixed(1) + 'px', label: fmtTime(t) }));
+    const hLen = 6188 - 2799;
+    const hX = 2799 / TOTAL * W, hW = hLen / TOTAL * W;
+    const hSubs = H_SUBS.map((s, i) => ({ w: ((s.end - s.start) / hLen * W).toFixed(2) + 'px', bg: H_TONES[i], id: s.id, label: s.label, minutes: s.minutes.toFixed(1) }));
+
+    const bar = (list, max, key) => list.map(r => ({ name: r.name, count: r.count, w: (r.count / max * 100).toFixed(1) + '%', bg: FREQ_COLOR[r.name] || '#B9B4A8' }));
+
+    return {
+      ratio: fixed ? '4 / 5' : 'auto',
+      quoteCols: single ? '1fr' : '1fr 1fr',
+      quoteSize: single ? '68px' : '38px',
+      quoteSub: single ? '24px' : '18px',
+      quotePad: single ? '96px 88px' : '44px 44px',
+      pinesCover: pinePath(1080, 522, 7, 46, 104),
+      pinesM8: pinePath(1080, 300, 23, 34, 70),
+      pinesEnd: pinePath(1080, 162, 41, 40, 96),
+
+      points: POINTS.map((p, i) => ({ n: String(i + 1).padStart(2, '0'), title: p.title, text: p.text, bar: POINT_BAR[i] })),
+      branchesL: BRANCHES.slice(0, 5).map((b, i) => this.branch(b, i)),
+      branchesR: BRANCHES.slice(5).map((b, i) => this.branch(b, i + 5)),
+
+      segs: segs, ticks: ticks,
+      zoom: 'M' + hX.toFixed(1) + ' 0 L' + (hX + hW).toFixed(1) + ' 0 L952 64 L0 64 Z',
+      zoomL: 'M' + hX.toFixed(1) + ' 0 L0 64', zoomR: 'M' + (hX + hW).toFixed(1) + ' 0 L952 64',
+      hSubs: hSubs,
+      groups: GROUPS.map(g => ({ group: g.group, minutes: g.minutes.toFixed(1), share: g.share, bg: GROUP_COLOR[g.group] })),
+
+      steps: STEPS.map(s => ({ period: s.period, share_label: s.share_label, h: Math.round(s.plot_value / 90 * 330) + 'px' })),
+      forces: FORCES.map((f, i) => ({ n: String(i + 1), name: f.name, detail: f.detail })),
+
+      stances: STANCES, flow: FLOW.map((t, i) => ({ n: String(i + 1), text: t, last: i === FLOW.length - 1 })),
+      bigNums: BIG,
+
+      tlA: TIMELINE.slice(0, 6).map(t => this.tl(t)),
+      tlB: TIMELINE.slice(6).map(t => this.tl(t)),
+
+      inspire: INSPIRE.map(r => ({ from: r.from, via: r.via, hasVia: !!r.via, to: r.to })),
+
+      entities: ENTITIES.map((e, i) => ({ slot: 'tp-ent-' + ENT_PICS[i], src: img[ENT_PICS[i]] || '', hasImg: !!img[ENT_PICS[i]], name: e.name, color: e.color, route: e.from + ' → ' + e.to, label: e.label, lynch: e.lynch, frost: e.frost, hasReadings: !!(e.lynch || e.frost) })),
+      glossary: GLOSSARY,
+
+      nodes: NODES.map(n => { const t = NODE_TYPES[n.type]; return { label: n.label, sub: n.sub, left: (n.x - 115) + 'px', top: (n.y - 50) + 'px', bg: t.bg, fg: t.fg, border: t.border }; }),
+      edgeLabels: EDGE_LABELS.map(l => ({ text: l.text, left: l.x + 'px', top: l.y + 'px' })),
+      legend: LEGEND.map(l => { const t = NODE_TYPES[l.type]; return { meaning: l.meaning, bg: t.bg, border: t.border }; }),
+
+      laura: LAURA.map((l, i) => ({ stage: l.stage, state: l.state, gloss: l.gloss, tone: LAURA_TONE[i], n: String(i + 1) })),
+
+      slope: SLOPE.map((r, i) => { const d = DIR[r.dir]; return { pics: SLOPE_PICS[i].filter(k => img[k]).map(k => ({ id: 'tp-slope-' + k, src: img[k], ph: PIC_NAME[k] })), name: r.name, before: r.before, after: r.after, note: r.note, hasNote: !!r.note, color: d.color, glyph: d.glyph, word: d.word, y2: 48 + d.dy, path: 'M14 48 L178 ' + (48 + d.dy) }; }),
+
+      absent: ABSENT.map(a => ({ role: a.role, reality: a.reality, solution: a.solution, isPot: a.shape === 'pot', isTree: a.shape === 'tree', isOrb: a.shape === 'orb', isNone: a.shape === 'none' })),
+
+      compare: COMPARE, s3num: S3NUM,
+      history: HISTORY.map(h => ({ when: h.when, history: h.history, in_show: h.in_show, note: h.note, hasNote: !!h.note })),
+
+      fCreators: bar(FREQ.creators, 187), fWorks: bar(FREQ.works, 187),
+      fChars: bar(FREQ.characters, 69), fConcepts: bar(FREQ.concepts, 40),
+
+      quotes: QUOTES.map((q, i) => Object.assign({ text: q.text, source: q.source, n: String(i + 1).padStart(2, '0'), pad: single ? '80px 80px' : '40px 40px', size: single ? '64px' : '36px', subSize: single ? '24px' : '18px' }, QUOTE_THEME[i])),
+      debates: DEBATES.map((d, i) => Object.assign({ n: String(i + 1) }, d)),
+      img: img,
+      places: PLACES.map(p => ({ id: 'tp-place-' + p[0], src: img[p[0]], name: p[1], where: p[2] })),
+      creators: [{ id: 'tp-cast-lynch', src: img.lynch || '', has: !!img.lynch, noImg: !img.lynch, mono: '林', name: '大卫·林奇', count: 187, bg: C.red }, { id: 'tp-cast-frost', src: img.frost || '', has: !!img.frost, noImg: !img.frost, mono: '弗', name: '马克·弗罗斯特', count: 84, bg: C.green }],
+      cast: CAST.map(c => ({ id: 'tp-cast-' + c[0], src: img[c[0]] || '', has: !!img[c[0]], noImg: !img[c[0]], mono: c[4] || c[1].slice(0, 1), name: c[1], count: c[2], ring: c[3], monoBg: c[3] === '#C9BFAC' ? '#E3DACA' : c[3], monoFg: (c[3] === C.ink || c[3] === C.blue) ? C.ivory : C.ink })),
+      boundaries: BOUNDARIES.map((b, i) => ({ boundary: b.boundary, text: b.text, n: String(i + 1) }))
+    };
+  }
+
+  branch(b, i) {
+    const sp = b.label.indexOf(' ');
+    const st = BRANCH_STYLE[i];
+    return { ord: b.label.slice(0, sp), name: b.label.slice(sp + 1), children: b.children, bg: st.bg, fg: st.fg, dot: st.dot };
+  }
+
+  tl(t) {
+    const show = t.track === '双峰';
+    return { year: t.year, event: t.event, track: t.track, star: t.note ? '*' : '', dotBg: show ? '#111111' : '#F2EBDD', dotBorder: show ? '#111111' : '#8A8F93', radius: show ? '50%' : '0', trackColor: show ? '#111111' : '#6E7378' };
+  }
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700;900&family=Noto+Sans+SC:wght@400;500;700&family=JetBrains+Mono:wght@400;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  body { margin: 0; background: #080c0b; }
+  a { color: #e0714a; }
+  a:hover { color: #f0a080; }
+</style>
+</helmet>
+<div style="width: 1400px; margin: 0 auto; background: #0d1312; color: #ebe6d8; font-family: 'Noto Sans SC', sans-serif; font-variant-numeric: tabular-nums;">
+
+<div data-screen-label="00 凯里" style="position: relative; height: 540px; background: #16201e; overflow: hidden;">
+  <image-slot id="ep29-hero-kaili" src="assets/ep29/hero-kaili.jpg" shape="rect" style="position: absolute; inset: 0; width: 100%; height: 100%;" placeholder="凯里城景"></image-slot>
+  <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(13,19,18,0.55) 0%, rgba(13,19,18,0) 30%, rgba(13,19,18,0) 55%, #0d1312 100%); pointer-events: none;"></div>
+  <div style="position: absolute; left: 90px; right: 90px; top: 44px; display: flex; justify-content: space-between; font-family: 'JetBrains Mono', monospace; font-size: 15px; letter-spacing: 0.18em; color: #ebe6d8; pointer-events: none;">
+    <span style="white-space: nowrap;">电影巨辩 · EP29</span><span style="white-space: nowrap;">141 MIN · 无说话人标注</span>
+  </div>
+  <div style="position: absolute; left: 90px; right: 90px; bottom: 36px; display: flex; justify-content: space-between; align-items: flex-end; pointer-events: none;">
+    <div>
+      <div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 30px; letter-spacing: 0.3em;">贵州 · 凯里</div>
+      <div style="margin-top: 8px; font-size: 15px; color: #cfc9ba;">毕赣 1989 年生于此；《路边野餐》《地球最后的夜晚》在凯里一带拍摄</div>
+    </div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 15px; letter-spacing: 0.12em; color: #cfc9ba; text-align: right; line-height: 1.7;">KAILI, GUIZHOU<br>26.57°N 107.98°E</div>
+  </div>
+</div>
+<div style="height: 18px; background-color: #17213a; background-image: radial-gradient(circle, #e9e4d6 0 2px, transparent 2.5px), linear-gradient(45deg, transparent 44%, rgba(233,228,214,0.5) 44% 56%, transparent 56%), linear-gradient(-45deg, transparent 44%, rgba(233,228,214,0.5) 44% 56%, transparent 56%); background-size: 16px 16px; background-position: 8px 1px, 0 1px, 0 1px;"></div>
+
+<header data-screen-label="01 封面" style="padding: 64px 90px 64px;">
+  <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 40px;">
+    <h1 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 150px; line-height: 1; letter-spacing: 0.01em;">天才的短板</h1>
+    <div style="display: flex; align-items: flex-end; gap: 20px; flex-shrink: 0;">
+      <div style="font-family: 'Instrument Serif', serif; font-style: italic; font-size: 30px; color: #a39f92; text-align: right; line-height: 1.3; padding-bottom: 4px;">Bi Gan,<br>three films</div>
+      <div style="position: relative; width: 168px; height: 216px; background: #16201e; filter: grayscale(1) contrast(1.05);">
+        <image-slot id="ep29-bigan" src="assets/ep29/bigan.jpg" shape="rect" style="position: absolute; inset: 0; width: 100%; height: 100%;" placeholder="毕赣"></image-slot>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: 18px; font-family: 'Noto Serif SC', serif; font-weight: 500; font-size: 40px; color: #d8d2c2;">毕赣三部作品一起谈</div>
+  <p style="margin: 44px 0 0; max-width: 1060px; font-family: 'Noto Serif SC', serif; font-weight: 500; font-size: 27px; line-height: 1.75; text-wrap: pretty; border-left: 3px solid #e0714a; padding-left: 28px;">毕赣在长镜头、诗意影像、时间与记忆上有真天分，但领地极窄；他的梦境是“叙事麻醉剂”与愿望满足机制，既屏蔽社会，也屏蔽真正的自我认知。</p>
+
+  <div style="margin-top: 56px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+    <sc-for list="{{ heroFilms }}" as="f" hint-placeholder-count="3">
+      <div style="background: {{ f.bg }}; display: flex; flex-direction: column;">
+        <div style="position: relative; width: 100%; aspect-ratio: 3 / 4; background: #0d1312;">
+          <image-slot id="{{ f.slot }}" src="{{ f.img }}" shape="rect" style="position: absolute; inset: 0; width: 100%; height: 100%;" placeholder="{{ f.title }} 海报"></image-slot>
+        </div>
+        <div style="padding: 22px 26px 26px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline;">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 15px; letter-spacing: 0.16em; color: rgba(235,230,216,0.7);">{{ f.order }}</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 15px; color: rgba(235,230,216,0.7);">提及 {{ f.count }} 次</span>
+          </div>
+          <div style="margin-top: 16px; font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 56px; line-height: 1; color: {{ f.accent }};">{{ f.year }}</div>
+          <div style="margin-top: 12px; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 32px;">{{ f.title }}</div>
+          <div style="margin-top: 6px; font-size: 16px; color: rgba(235,230,216,0.72);">{{ f.sub }}</div>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+  <sc-if value="{{ showEditorNotes }}" hint-placeholder-val="{{ true }}">
+    <div style="margin-top: 16px; border: 1px dashed #6f7069; padding: 12px 18px; font-size: 15px; line-height: 1.7; color: #a9a49a; display: flex; gap: 14px;">
+      <span style="font-family: 'JetBrains Mono', monospace; flex-shrink: 0; letter-spacing: 0.1em;">整理者补充·核实</span>
+      <span>《狂野时代》2025 年戛纳主竞赛获特别奖，2025 年 11 月 22 日内地上映，片长 160 分钟；片中官方写作“大她者”。</span>
+    </div>
+  </sc-if>
+
+  <div style="margin-top: 48px; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid rgba(235,230,216,0.16); border-bottom: 1px solid rgba(235,230,216,0.16);">
+    <div style="padding: 20px 0;"><div style="font-size: 14px; letter-spacing: 0.16em; color: #a39f92;">主持</div><div style="margin-top: 6px; font-size: 22px; font-weight: 500;">老马 · 阿吴</div></div>
+    <div style="padding: 20px 24px; border-left: 1px solid rgba(235,230,216,0.16);"><div style="font-size: 14px; letter-spacing: 0.16em; color: #a39f92;">时长</div><div style="margin-top: 6px; font-family: 'JetBrains Mono', monospace; font-size: 24px;">2:21</div></div>
+    <div style="padding: 20px 24px; border-left: 1px solid rgba(235,230,216,0.16);"><div style="font-size: 14px; letter-spacing: 0.16em; color: #a39f92;">结构</div><div style="margin-top: 6px; font-size: 22px; font-weight: 500;">4 部分 · 20 个话题</div></div>
+    <div style="padding: 20px 24px; border-left: 1px solid rgba(235,230,216,0.16);"><div style="font-size: 14px; letter-spacing: 0.16em; color: #a39f92;">分歧</div><div style="margin-top: 6px; font-size: 22px; font-weight: 500;">13 处</div></div>
+  </div>
+
+  <div style="margin-top: 28px; display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: center; font-size: 15px; color: #a39f92;">
+    <span style="letter-spacing: 0.16em;">图例</span>
+    <span style="display: flex; align-items: center; gap: 8px;"><span style="color: #7cc08c; border: 1px solid #7cc08c; padding: 1px 8px; font-family: 'JetBrains Mono', monospace;">✔</span>肯定</span>
+    <span style="display: flex; align-items: center; gap: 8px;"><span style="color: #c9bf94; border: 1px solid #c9bf94; padding: 1px 8px; font-family: 'JetBrains Mono', monospace;">△</span>有保留</span>
+    <span style="display: flex; align-items: center; gap: 8px;"><span style="color: #e05a4c; border: 1px solid #e05a4c; padding: 1px 8px; font-family: 'JetBrains Mono', monospace;">✘</span>批评</span>
+    <span style="display: flex; align-items: center; gap: 8px;"><span style="color: #0d1312; background: #e05a4c; padding: 1px 8px; font-family: 'JetBrains Mono', monospace;">✘✘</span>强烈批评</span>
+    <span style="display: flex; align-items: center; gap: 8px;"><span style="width: 14px; height: 14px; border-radius: 50%; background: linear-gradient(90deg, #6fa6e0 50%, transparent 50%); border: 1px solid #6fa6e0;"></span>主持人分歧</span>
+    <span style="display: flex; align-items: center; gap: 8px;"><span style="border: 1px dashed #a9a49a; color: #a9a49a; padding: 1px 8px; font-family: 'JetBrains Mono', monospace; font-size: 13px;">整理者补充</span>非节目原话</span>
+  </div>
+</header>
+
+<section data-screen-label="02 全期时间轴" style="padding: 56px 90px 72px; background: #111a18; border-top: 1px solid rgba(235,230,216,0.12); border-bottom: 1px solid rgba(235,230,216,0.12);">
+  <div style="font-size: 14px; letter-spacing: 0.22em; color: #a39f92;">全期时间轴 · 点击色块跳转</div>
+  <h2 style="margin: 12px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 40px;">新片只是切口，影史坐标讲得最久</h2>
+  <div style="margin-top: 40px;">
+    <div style="display: flex; height: 72px; gap: 2px;">
+      <sc-for list="{{ navParts }}" as="p" hint-placeholder-count="5">
+        <div onClick="{{ p.go }}" title="{{ p.tip }}" style="width: {{ p.w }}; flex-shrink: 0; background: {{ p.color }}; color: #0d1312; display: flex; align-items: center; padding: 0 14px; box-sizing: border-box; overflow: hidden; white-space: nowrap; font-weight: 700; font-size: 18px; cursor: pointer;" style-hover="filter: brightness(1.15);">{{ p.label }}</div>
+      </sc-for>
+    </div>
+    <div style="position: relative; height: 40px; margin-top: 4px;">
+      <sc-for list="{{ navSubs }}" as="s" hint-placeholder-count="20">
+        <div title="{{ s.tip }}" style="position: absolute; top: 0; height: 40px; left: {{ s.left }}; width: {{ s.w }}; background: {{ s.color }}; opacity: {{ s.op }}; box-sizing: border-box; border-right: 2px solid #111a18; color: #0d1312; font-size: 13px; font-weight: 500; display: flex; align-items: center; padding: 0 6px; overflow: hidden; white-space: nowrap;" style-hover="opacity: 1;">{{ s.label }}</div>
+      </sc-for>
+    </div>
+    <div style="position: relative; height: 34px; border-top: 1px solid #6f7069; margin-top: 8px;">
+      <sc-for list="{{ ticks }}" as="k" hint-placeholder-count="6">
+        <div style="position: absolute; top: 0; left: {{ k.x }}; transform: translateX({{ k.tx }}); font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #a39f92; padding-top: 8px; border-left: 1px solid #6f7069; padding-left: 4px;">{{ k.label }}</div>
+      </sc-for>
+    </div>
+  </div>
+  <div style="margin-top: 36px; display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 28px;">
+    <sc-for list="{{ subLists }}" as="p" hint-placeholder-count="4">
+      <div style="border-top: 4px solid {{ p.color }}; padding-top: 14px;">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;"><span style="font-weight: 700; font-size: 18px;">{{ p.label }}</span><span style="font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #a39f92;">{{ p.range }}</span></div>
+        <div style="margin-top: 12px; display: flex; flex-direction: column; gap: 6px;">
+          <sc-for list="{{ p.subs }}" as="s" hint-placeholder-count="5">
+            <div style="display: flex; justify-content: space-between; gap: 10px; font-size: 15px; color: #cfc9ba;"><span>{{ s.name }}</span><span style="font-family: 'JetBrains Mono', monospace; color: #8a877c; flex-shrink: 0;">{{ s.mins }}′</span></div>
+          </sc-for>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+  <div style="margin-top: 44px; padding: 26px 30px; background: #0d1312; display: grid; grid-template-columns: 180px 1fr; gap: 14px 24px; align-items: center;">
+    <span style="font-size: 16px; color: #cfc9ba;">三、影史坐标</span>
+    <div style="display: flex; align-items: center; gap: 12px;"><div style="width: 60%; height: 22px; background: #5aa9a3;"></div><span style="font-family: 'JetBrains Mono', monospace; font-size: 18px;">60′</span></div>
+    <span style="font-size: 16px; color: #cfc9ba;">一、《狂野时代》</span>
+    <div style="display: flex; align-items: center; gap: 12px;"><div style="width: 52%; height: 22px; background: #e0714a;"></div><span style="font-family: 'JetBrains Mono', monospace; font-size: 18px;">52′</span></div>
+    <span></span>
+    <div style="font-size: 16px; line-height: 1.7; color: #a39f92;">谈影史坐标的时间比谈新片本身还长：这一期实质是对毕赣的一次生涯定位与批评。</div>
+  </div>
+</section>
+
+<!-- PART 1 -->
+<section data-part="p1" data-screen-label="03 狂野时代" style="padding: 88px 90px 40px;">
+  <div style="display: flex; align-items: baseline; gap: 20px; border-bottom: 2px solid #e0714a; padding-bottom: 18px;">
+    <span style="font-family: 'JetBrains Mono', monospace; font-size: 22px; color: #e0714a;">Ⅰ</span>
+    <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 56px;">《狂野时代》</h2>
+    <span style="margin-left: auto; font-family: 'JetBrains Mono', monospace; font-size: 16px; color: #a39f92;">00:01–00:53 · 52′</span>
+  </div>
+  <div style="margin-top: 40px; font-family: 'Noto Serif SC', serif; font-size: 30px; line-height: 1.6; max-width: 1100px; text-wrap: pretty;">“他是中国当代所有艺术电影导演里面很罕见的、几乎完全没有社会属性的一个创作者。”</div>
+  <div style="margin-top: 16px; display: flex; align-items: center; gap: 12px; font-size: 16px; color: #a39f92;"><span style="width: 14px; height: 14px; border-radius: 50%; background: linear-gradient(90deg, #6fa6e0 50%, transparent 50%); border: 1px solid #6fa6e0; flex-shrink: 0;"></span>为何回避现实：一方认为是主动回避（时代无力感），另一方认为是根本不感兴趣。</div>
+
+  <div style="margin-top: 80px; font-size: 14px; letter-spacing: 0.22em; color: #e0714a;">高概念结构</div>
+  <h3 style="margin: 10px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 34px;">设定很精准，但设定与梦境之间只有微弱相关</h3>
+  <p style="margin: 12px 0 0; font-size: 17px; line-height: 1.7; color: #a39f92;">左列是影片的设定链，右侧虚线气泡是主持人的批评。</p>
+  <div style="margin-top: 32px; display: flex; flex-direction: column;">
+    <sc-for list="{{ chain }}" as="c" hint-placeholder-count="8">
+      <div style="display: grid; grid-template-columns: 520px 1fr; gap: 0 0;">
+        <div style="display: flex; flex-direction: column; align-items: stretch;">
+          <div style="display: flex; gap: 16px; align-items: center; background: #16201e; border: 1px solid rgba(224,113,74,0.5); padding: 16px 20px;">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 15px; color: #e0714a; flex-shrink: 0;">{{ c.n }}</span>
+            <span style="font-size: 18px; line-height: 1.55;">{{ c.text }}</span>
+          </div>
+          <sc-if value="{{ c.arrow }}" hint-placeholder-val="{{ true }}">
+            <div style="height: 26px; display: flex; justify-content: center;"><div style="width: 2px; background: #e0714a;"></div></div>
+          </sc-if>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px; padding-bottom: 26px;">
+          <sc-for list="{{ c.crit }}" as="k" hint-placeholder-count="0">
+            <div style="display: flex; align-items: center;">
+              <div style="width: 56px; border-top: 1px dashed #8a877c; flex-shrink: 0;"></div>
+              <div style="flex: 1; border: 1px dashed {{ k.v.fg }}; border-radius: 18px; padding: 12px 18px; display: flex; gap: 12px; align-items: baseline;">
+                <span style="font-family: 'JetBrains Mono', monospace; color: {{ k.v.fg }}; flex-shrink: 0;">{{ k.v.sym }}</span>
+                <span style="font-size: 16px; line-height: 1.6; color: #d8d2c2;">{{ k.text }}</span>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+
+  <div style="margin-top: 88px; font-size: 14px; letter-spacing: 0.22em; color: #e0714a;">六段故事</div>
+  <h3 style="margin: 10px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 34px;">有影史致敬的段落最差，没有致敬的拍得最好</h3>
+  <div style="margin-top: 28px; display: grid; grid-template-columns: 160px repeat(6, 1fr); border-top: 1px solid rgba(235,230,216,0.16);">
+    <div style="padding: 12px 0; font-size: 14px; color: #a39f92; border-bottom: 1px solid rgba(235,230,216,0.1);">感官</div>
+    <sc-for list="{{ segs }}" as="s" hint-placeholder-count="6"><div style="padding: 12px 0; text-align: center; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 22px; border-bottom: 1px solid rgba(235,230,216,0.1);">{{ s.n }} · {{ s.glyph }}</div></sc-for>
+    <div style="padding: 12px 0; font-size: 14px; color: #a39f92; border-bottom: 1px solid rgba(235,230,216,0.1);">评价</div>
+    <sc-for list="{{ segs }}" as="s" hint-placeholder-count="6"><div style="padding: 8px; border-bottom: 1px solid rgba(235,230,216,0.1);"><div style="height: 34px; display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 16px; color: {{ s.v.fg }}; background: {{ s.v.bg }}; border: 1px solid {{ s.v.bd }};">{{ s.v.sym }}</div></div></sc-for>
+    <div style="padding: 12px 0; font-size: 14px; color: #a39f92; border-bottom: 1px solid rgba(235,230,216,0.1);">有影史致敬</div>
+    <sc-for list="{{ segs }}" as="s" hint-placeholder-count="6"><div style="padding: 12px 0; text-align: center; font-size: 15px; color: {{ s.homageC }}; border-bottom: 1px solid rgba(235,230,216,0.1);">{{ s.homageMark }}</div></sc-for>
+    <div style="padding: 12px 0; font-size: 14px; color: #a39f92;">发生在荡麦</div>
+    <sc-for list="{{ segs }}" as="s" hint-placeholder-count="6"><div style="padding: 12px 0; text-align: center; font-size: 15px; color: #d8b25a;">{{ s.dangmai }}</div></sc-for>
+  </div>
+  <div style="margin-top: 36px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;">
+    <sc-for list="{{ segs }}" as="s" hint-placeholder-count="6">
+      <div style="position: relative; background: {{ s.cardBg }}; border: {{ s.cardBd }}; padding: 24px 24px 26px; display: flex; flex-direction: column; gap: 12px;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+          <div style="display: flex; align-items: baseline; gap: 12px;">
+            <span style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 48px; line-height: 1; color: #e0714a;">{{ s.glyph }}</span>
+            <span style="font-size: 16px; color: #a39f92;">第 {{ s.n }} 段 · {{ s.sense }}</span>
+          </div>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 15px; padding: 2px 10px; color: {{ s.v.fg }}; background: {{ s.v.bg }}; border: 1px solid {{ s.v.bd }};">{{ s.v.sym }}</span>
+        </div>
+        <sc-if value="{{ s.best }}" hint-placeholder-val="{{ false }}"><div style="align-self: flex-start; background: #7cc08c; color: #0d1312; font-size: 14px; font-weight: 700; padding: 3px 10px;">全片最佳</div></sc-if>
+        <div style="font-size: 15px; color: #a39f92;">{{ s.era }} · {{ s.role }}</div>
+        <div style="font-size: 17px; line-height: 1.65;">{{ s.core }}</div>
+        <div style="font-size: 15px; line-height: 1.65; color: #cfc9ba; display: flex; gap: 8px;"><span style="color: #8a877c; flex-shrink: 0;">解读</span><span>{{ s.reading }}</span></div>
+        <sc-if value="{{ s.disagree }}" hint-placeholder-val="{{ false }}"><div style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: #6fa6e0;"><span style="width: 12px; height: 12px; border-radius: 50%; background: linear-gradient(90deg, #6fa6e0 50%, transparent 50%); border: 1px solid #6fa6e0;"></span>此解读存在分歧</div></sc-if>
+        <div style="font-size: 15px; line-height: 1.65; color: #cfc9ba; display: flex; gap: 8px;"><span style="color: #8a877c; flex-shrink: 0;">致敬</span><span>{{ s.homage }}</span></div>
+        <sc-if value="{{ s.note }}" hint-placeholder-val="{{ true }}"><div style="margin-top: auto; padding-top: 10px; border-top: 1px solid rgba(235,230,216,0.12); font-size: 15px; color: {{ s.v.fg }};">{{ s.note }}</div></sc-if>
+      </div>
+    </sc-for>
+  </div>
+  <div style="margin-top: 40px; font-family: 'Noto Serif SC', serif; font-size: 26px; line-height: 1.6; color: #d8d2c2;">“任何一个时代都没有拍出那个时代的感觉，就像贴了几个标签、几个路牌。”</div>
+
+  <div style="margin-top: 88px; font-size: 14px; letter-spacing: 0.22em; color: #e0714a;">电影本体论</div>
+  <h3 style="margin: 10px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 34px;">击中了两个本体论基础，但三组命题都没有展开</h3>
+  <div style="margin-top: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 18px;">
+    <sc-for list="{{ hits }}" as="h" hint-placeholder-count="2">
+      <div style="border: 1px solid #c9bf94; padding: 20px 24px; display: flex; gap: 16px;">
+        <span style="font-family: 'JetBrains Mono', monospace; color: #c9bf94; font-size: 18px;">△</span>
+        <div><div style="font-weight: 700; font-size: 19px;">{{ h.theory }}</div><div style="margin-top: 6px; font-size: 16px; line-height: 1.65; color: #cfc9ba;">{{ h.how }}</div></div>
+      </div>
+    </sc-for>
+  </div>
+  <div style="margin-top: 18px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;">
+    <sc-for list="{{ clusters }}" as="c" hint-placeholder-count="3">
+      <div style="background: #16201e; display: flex; flex-direction: column;">
+        <div style="padding: 20px 24px; border-bottom: 1px solid rgba(235,230,216,0.12); font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 24px;">{{ c.name }}</div>
+        <div style="padding: 18px 24px; display: flex; flex-direction: column; gap: 16px; flex: 1;">
+          <sc-for list="{{ c.items }}" as="i" hint-placeholder-count="3">
+            <div><div style="font-size: 16px; font-weight: 700; color: #e0714a;">{{ i.who }}</div><div style="margin-top: 4px; font-size: 15px; line-height: 1.65; color: #cfc9ba;">{{ i.idea }}</div></div>
+          </sc-for>
+        </div>
+        <div style="padding: 16px 24px 20px; border-top: 1px dashed #e05a4c; display: flex; gap: 12px;">
+          <span style="font-family: 'JetBrains Mono', monospace; color: #e05a4c;">✘</span>
+          <span style="font-size: 15px; line-height: 1.65;">{{ c.verdict }}</span>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+
+  <div style="margin-top: 88px; font-size: 14px; letter-spacing: 0.22em; color: #e0714a;">大她者的轨迹</div>
+  <h3 style="margin: 10px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 34px;">从拉康的大他者，退回一部通俗情感剧</h3>
+  <div style="margin-top: 20px; font-size: 17px; line-height: 1.7; color: #a39f92;">起点：拉康的大他者 · 象征秩序（语言、法律），用于诊断权力机制</div>
+  <div style="margin-top: 32px; display: flex; align-items: flex-end; gap: 14px; height: 280px;">
+    <sc-for list="{{ otherSteps }}" as="s" hint-placeholder-count="4">
+      <div style="flex: 1; display: flex; flex-direction: column; justify-content: flex-end; height: {{ s.h }};">
+        <div style="flex: 1; background: {{ s.bg }}; border: {{ s.bd }}; padding: 18px 20px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 15px; color: {{ s.fg }};">{{ s.n }}</span>
+          <div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 22px; line-height: 1.4; color: {{ s.fg }};">{{ s.name }}</div>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+  <div style="margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 18px;">
+    <div style="border-left: 3px solid #e05a4c; padding: 6px 0 6px 20px; font-size: 17px; line-height: 1.7;"><span style="color: #e05a4c; font-family: 'JetBrains Mono', monospace; margin-right: 8px;">✘</span>体制代理人被边缘人的人性感化、流了几滴眼泪 = 通俗情感剧</div>
+    <div style="border-left: 3px solid #6f7069; padding: 6px 0 6px 20px; font-size: 16px; line-height: 1.7; color: #cfc9ba;">为何是女性：母亲是婴儿的第一个大他者；但舒淇与迷魂者的母子关系没有建立起来</div>
+  </div>
+</section>
+
+<!-- PART 2 -->
+<section data-part="p2" data-screen-label="04 前作回顾" style="padding: 88px 90px 40px;">
+  <div style="display: flex; align-items: baseline; gap: 20px; border-bottom: 2px solid #d8b25a; padding-bottom: 18px;">
+    <span style="font-family: 'JetBrains Mono', monospace; font-size: 22px; color: #d8b25a;">Ⅱ</span>
+    <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 56px;">前作回顾</h2>
+    <span style="margin-left: auto; font-family: 'JetBrains Mono', monospace; font-size: 16px; color: #a39f92;">00:53–00:57 · 4′</span>
+  </div>
+  <h3 style="margin: 40px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 34px;">两部前作几乎一模一样</h3>
+  <p style="margin: 12px 0 0; font-size: 17px; line-height: 1.7; color: #a39f92;">这是第四部分“创意重复”批评的伏笔。中栏标 = 为同构，标 ≠ 为差异。</p>
+  <div style="margin-top: 32px; display: grid; grid-template-columns: 1fr 200px 1fr;">
+    <div style="padding: 18px 24px; background: #1f3a33; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 26px; text-align: right;">《路边野餐》2015</div>
+    <div></div>
+    <div style="padding: 18px 24px; background: #4a1c1e; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 26px;">《地球最后的夜晚》2018</div>
+  </div>
+  <sc-for list="{{ mirror }}" as="r" hint-placeholder-count="8">
+    <div style="display: grid; grid-template-columns: 1fr 200px 1fr; border-bottom: 1px solid rgba(235,230,216,0.1); background: {{ r.rowBg }};">
+      <div style="padding: 16px 24px; text-align: right; font-size: 17px; line-height: 1.6;">{{ r.a }}</div>
+      <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; padding: 10px 0;">
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 22px; color: {{ r.markC }};">{{ r.mark }}</span>
+        <span style="font-size: 14px; color: #a39f92;">{{ r.dim }}</span>
+      </div>
+      <div style="padding: 16px 24px; font-size: 17px; line-height: 1.6;">{{ r.b }}</div>
+    </div>
+  </sc-for>
+
+  <div style="margin-top: 88px; font-size: 14px; letter-spacing: 0.22em; color: #d8b25a;">角色三合一</div>
+  <h3 style="margin: 10px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 34px;">三个女人汇成梦中的红发女人</h3>
+  <div style="margin-top: 36px; position: relative; width: 1220px; height: 320px;">
+    <svg width="1220" height="320" viewBox="0 0 1220 320" style="position: absolute; left: 0; top: 0;">
+      <g fill="none" stroke="#d8b25a" stroke-width="3">
+        <path d="M400,50 C 560,50 560,160 720,160"></path>
+        <path d="M400,160 L 720,160"></path>
+        <path d="M400,270 C 560,270 560,160 720,160"></path>
+      </g>
+    </svg>
+    <sc-for list="{{ merge }}" as="m" hint-placeholder-count="3">
+      <div style="position: absolute; left: 0; top: {{ m.top }}; width: 400px; height: 84px; box-sizing: border-box; background: #16201e; border: 1px solid rgba(216,178,90,0.5); padding: 14px 20px;">
+        <div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 21px;">{{ m.name }}</div>
+        <div style="margin-top: 4px; font-size: 15px; color: #a39f92;">{{ m.link }}</div>
+      </div>
+    </sc-for>
+    <div style="position: absolute; left: 720px; top: 90px; width: 500px; height: 140px; box-sizing: border-box; background: #8e2b24; padding: 22px 28px; display: flex; flex-direction: column; justify-content: center;">
+      <div style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 30px;">梦中的红发女人</div>
+      <div style="margin-top: 6px; font-size: 17px; color: #f0d5cf;">张艾嘉饰</div>
+    </div>
+  </div>
+  <div style="margin-top: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 18px;">
+    <div style="border-left: 3px solid #d8b25a; padding: 4px 0 4px 20px; font-size: 16px; line-height: 1.7; color: #cfc9ba;"><span style="color: #d8b25a; font-weight: 700;">来源</span>　学自塔可夫斯基《镜子》：同一演员饰演现在的妻子与回忆中的母亲</div>
+    <div style="border-left: 3px solid #e0714a; padding: 4px 0 4px 20px; font-size: 16px; line-height: 1.7; color: #cfc9ba;"><span style="color: #e0714a; font-weight: 700;">延续</span>　《狂野时代》：小和尚亡父的长相投射到苦妖身上</div>
+  </div>
+</section>
+
+<!-- PART 3 -->
+<section data-part="p3" data-screen-label="05 影史坐标" style="padding: 88px 90px 40px;">
+  <div style="display: flex; align-items: baseline; gap: 20px; border-bottom: 2px solid #5aa9a3; padding-bottom: 18px;">
+    <span style="font-family: 'JetBrains Mono', monospace; font-size: 22px; color: #5aa9a3;">Ⅲ</span>
+    <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 56px;">影史坐标</h2>
+    <span style="margin-left: auto; font-family: 'JetBrains Mono', monospace; font-size: 16px; color: #a39f92;">00:57–01:57 · 60′</span>
+  </div>
+
+  <div style="margin-top: 48px; font-size: 14px; letter-spacing: 0.22em; color: #5aa9a3;">长镜头谱系</div>
+  <h3 style="margin: 10px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 34px;">五位导演，五种关系</h3>
+  <p style="margin: 12px 0 0; font-size: 17px; line-height: 1.7; color: #a39f92;">点击外圈导演，右侧显示相似与差异。</p>
+  <div style="margin-top: 28px; display: grid; grid-template-columns: 700px 1fr; gap: 40px; align-items: start;">
+    <div style="position: relative; width: 700px; height: 620px;">
+      <svg width="700" height="620" viewBox="0 0 700 620" style="position: absolute; left: 0; top: 0;">
+        <g fill="none" stroke="#5aa9a3">
+          <line x1="350" y1="310" x2="350" y2="70" stroke-width="5"></line>
+          <line x1="350" y1="310" x2="578" y2="236" stroke-width="2" stroke-dasharray="10 8" stroke="#e05a4c"></line>
+          <line x1="350" y1="310" x2="491" y2="504" stroke-width="3"></line>
+          <line x1="350" y1="310" x2="209" y2="504" stroke-width="2" stroke-dasharray="3 6"></line>
+          <line x1="350" y1="310" x2="122" y2="236" stroke-width="5"></line>
+        </g>
+      </svg>
+      <sc-for list="{{ lt }}" as="n" hint-placeholder-count="5">
+        <div style="position: absolute; left: {{ n.lx }}; top: {{ n.ly }}; transform: translate(-50%, -50%); background: #0d1312; color: {{ n.relC }}; font-size: 13px; padding: 2px 8px; white-space: nowrap; border: 1px solid {{ n.relC }};">{{ n.relation }}</div>
+        <div onClick="{{ n.pick }}" style="position: absolute; left: {{ n.x }}; top: {{ n.y }}; transform: translate(-50%, -50%); width: 180px; padding: 12px 10px 14px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; gap: 8px; background: {{ n.bg }}; color: {{ n.fg }}; border: 1px solid #5aa9a3; cursor: pointer; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 19px;" style-hover="border-color: #ebe6d8;">
+          <div style="position: relative; width: 64px; height: 64px; filter: grayscale(1); pointer-events: none;"><image-slot id="{{ n.slot }}" src="{{ n.img }}" shape="circle" style="position: absolute; inset: 0; width: 100%; height: 100%;" placeholder="{{ n.name }}"></image-slot></div>
+          <span>{{ n.name }}</span>
+        </div>
+      </sc-for>
+      <div style="position: absolute; left: 350px; top: 310px; transform: translate(-50%, -50%); width: 150px; height: 150px; border-radius: 50%; background: #5aa9a3; color: #0d1312; display: flex; align-items: center; justify-content: center; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 34px;">毕赣</div>
+    </div>
+    <div style="padding-top: 20px;">
+      <div style="font-size: 14px; color: #a39f92; letter-spacing: 0.14em;">{{ ltSel.relation }}</div>
+      <div style="margin-top: 6px; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 36px;">{{ ltSel.name }}</div>
+      <div style="margin-top: 22px; padding: 18px 20px; background: #16201e;">
+        <div style="font-size: 14px; letter-spacing: 0.14em; color: #5aa9a3; font-weight: 700;">相似</div>
+        <div style="margin-top: 8px; font-size: 17px; line-height: 1.7;">{{ ltSel.same }}</div>
+      </div>
+      <div style="margin-top: 12px; padding: 18px 20px; background: #16201e;">
+        <div style="font-size: 14px; letter-spacing: 0.14em; color: #e0714a; font-weight: 700;">差异</div>
+        <div style="margin-top: 8px; font-size: 17px; line-height: 1.7;">{{ ltSel.diff }}</div>
+      </div>
+      <div style="margin-top: 28px; font-size: 14px; letter-spacing: 0.14em; color: #a39f92;">三部片的长镜头时长（分钟）</div>
+      <div style="margin-top: 12px; display: flex; flex-direction: column; gap: 10px;">
+        <sc-for list="{{ ltMins }}" as="m" hint-placeholder-count="3">
+          <div style="display: grid; grid-template-columns: 140px 1fr; gap: 12px; align-items: center;">
+            <span style="font-size: 15px; text-align: right;">{{ m.name }}</span>
+            <div style="display: flex; align-items: center; gap: 10px;"><div style="height: 20px; width: {{ m.w }}; background: {{ m.color }};"></div><span style="font-family: 'JetBrains Mono', monospace; font-size: 14px; white-space: nowrap;">{{ m.label }}</span></div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+    <div>
+      <div style="font-size: 14px; letter-spacing: 0.14em; color: #5aa9a3; font-weight: 700;">毕赣长镜头的特征</div>
+      <div style="margin-top: 14px; display: flex; flex-wrap: wrap; gap: 10px;">
+        <sc-for list="{{ ltTraits }}" as="t" hint-placeholder-count="4"><span style="border: 1px solid rgba(90,169,163,0.6); padding: 6px 12px; font-size: 15px;">{{ t }}</span></sc-for>
+      </div>
+    </div>
+    <div>
+      <div style="font-size: 14px; letter-spacing: 0.14em; color: #5aa9a3; font-weight: 700;">美学</div>
+      <div style="margin-top: 14px; display: flex; flex-direction: column; gap: 8px;">
+        <sc-for list="{{ ltAes }}" as="t" hint-placeholder-count="4"><div style="font-size: 15px; line-height: 1.6; color: #cfc9ba; padding-left: 14px; border-left: 2px solid #5aa9a3;">{{ t }}</div></sc-for>
+      </div>
+    </div>
+  </div>
+
+  <sc-if value="{{ showQuadrant }}" hint-placeholder-val="{{ true }}">
+    <div style="margin-top: 88px; display: flex; align-items: center; gap: 14px;">
+      <span style="font-size: 14px; letter-spacing: 0.22em; color: #5aa9a3;">影史坐标示意</span>
+      <span style="border: 1px dashed #a9a49a; color: #a9a49a; padding: 1px 8px; font-family: 'JetBrains Mono', monospace; font-size: 13px;">整理者补充</span>
+    </div>
+    <h3 style="margin: 10px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 34px;">毕赣落在“最个人、最沉浸”的一角</h3>
+    <p style="margin: 12px 0 0; font-size: 16px; line-height: 1.7; color: #a9a49a;">坐标由整理者据节目论述推演，仅为示意，不是主持人给出的评分。</p>
+    <div style="margin-top: 28px; display: grid; grid-template-columns: 640px 1fr; gap: 44px; align-items: start;">
+      <div style="position: relative; width: 640px; height: 640px; border: 1px dashed #6f7069; box-sizing: border-box;">
+        <div style="position: absolute; left: 50%; top: 0; bottom: 0; border-left: 1px solid #3a4441;"></div>
+        <div style="position: absolute; top: 50%; left: 0; right: 0; border-top: 1px solid #3a4441;"></div>
+        <div style="position: absolute; left: 10px; top: 50%; transform: translateY(6px); font-size: 13px; color: #8a877c;">社会 / 历史 / 政治现实</div>
+        <div style="position: absolute; right: 10px; top: 50%; transform: translateY(6px); font-size: 13px; color: #8a877c;">纯个人内心</div>
+        <div style="position: absolute; left: 50%; top: 10px; transform: translateX(8px); font-size: 13px; color: #8a877c;">沉浸 / 催眠</div>
+        <div style="position: absolute; left: 50%; bottom: 10px; transform: translateX(8px); font-size: 13px; color: #8a877c;">间离 / 反思</div>
+        <sc-for list="{{ quad }}" as="q" hint-placeholder-count="10">
+          <div title="{{ q.basis }}" style="position: absolute; left: {{ q.x }}; top: {{ q.y }}; transform: translate(-50%, -50%); width: {{ q.d }}; height: {{ q.d }}; border-radius: 50%; background: {{ q.c }};"></div>
+          <div style="position: absolute; left: {{ q.x }}; top: {{ q.y }}; transform: {{ q.lt }}; font-size: 14px; white-space: nowrap; color: {{ q.tc }}; font-weight: {{ q.fw }};">{{ q.name }}</div>
+        </sc-for>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <sc-for list="{{ quad }}" as="q" hint-placeholder-count="10">
+          <div style="display: grid; grid-template-columns: 130px 1fr; gap: 12px; font-size: 15px; line-height: 1.55; padding-bottom: 10px; border-bottom: 1px solid rgba(235,230,216,0.08);">
+            <span style="color: {{ q.tc }}; font-weight: 700;">{{ q.name }}</span><span style="color: #cfc9ba;">{{ q.basis }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </sc-if>
+
+  <div style="margin-top: 88px; font-size: 14px; letter-spacing: 0.22em; color: #5aa9a3;">慢电影</div>
+  <h3 style="margin: 10px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 34px;">毕赣的“慢”是心理学的，而且程度很轻</h3>
+  <p style="margin: 12px 0 0; font-size: 17px; line-height: 1.7; color: #a39f92;">本世纪初提出，《正片》的米歇尔·西芒推广；极简叙事 + 延长镜头时长。</p>
+  <div style="margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px;">
+    <sc-for list="{{ slowDirs }}" as="d" hint-placeholder-count="6"><span style="background: #16201e; padding: 5px 12px; font-size: 15px;">{{ d }}</span></sc-for>
+  </div>
+  <div style="margin-top: 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+    <div>
+      <div style="font-size: 14px; letter-spacing: 0.14em; color: #5aa9a3; font-weight: 700;">成因</div>
+      <div style="margin-top: 14px; border-left: 2px solid #5aa9a3; display: flex; flex-direction: column; gap: 14px;">
+        <sc-for list="{{ slowCauses }}" as="c" hint-placeholder-count="5">
+          <div style="display: flex; align-items: flex-start;"><div style="width: 20px; margin-top: 12px; border-top: 2px solid #5aa9a3; flex-shrink: 0;"></div><div style="padding-left: 10px; font-size: 16px; line-height: 1.65; color: {{ c.c }};">{{ c.t }}</div></div>
+        </sc-for>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 14px;">
+      <div style="background: #16201e; padding: 20px 22px;"><div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 22px;">蔡明亮</div><div style="margin-top: 8px; font-size: 16px; line-height: 1.7; color: #cfc9ba;">城市 · 存在主义 · 原子化生存 · 李康生天生慢</div></div>
+      <div style="background: #16201e; padding: 20px 22px;"><div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 22px;">阿彼察邦</div><div style="margin-top: 8px; font-size: 16px; line-height: 1.7; color: #cfc9ba;">乡村 · 泛灵论 · 超自然日常化 · 按佛经结构拍片 · 对抗政治遗忘</div></div>
+      <div style="border: 1px solid #5aa9a3; padding: 20px 22px;">
+        <div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 22px; color: #5aa9a3;">毕赣</div>
+        <div style="margin-top: 8px; font-size: 16px; line-height: 1.7;">相似：漫长的交通工具移动，消解叙事目标</div>
+        <div style="margin-top: 4px; font-size: 16px; line-height: 1.7;">差异：侯孝贤是社会学的，毕赣是心理学的；男主从不握方向盘，处于被运输的被动状态</div>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: 32px; display: flex; flex-direction: column; gap: 16px;">
+    <sc-for list="{{ slowDebates }}" as="d" hint-placeholder-count="2">
+      <div>
+        <div style="display: flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 700;"><span style="width: 12px; height: 12px; border-radius: 50%; background: linear-gradient(90deg, #6fa6e0 50%, transparent 50%); border: 1px solid #6fa6e0;"></span>{{ d.topic }}</div>
+        <div style="margin-top: 10px; display: grid; grid-template-columns: 1fr 1fr; gap: 3px;">
+          <div style="background: #16201e; padding: 14px 18px; font-size: 15px; line-height: 1.65;"><span style="color: #6fa6e0; margin-right: 8px;">一方</span>{{ d.a }}</div>
+          <div style="background: #1a2530; padding: 14px 18px; font-size: 15px; line-height: 1.65;"><span style="color: #6fa6e0; margin-right: 8px;">另一方</span>{{ d.b }}</div>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+
+  <div style="margin-top: 88px; font-size: 14px; letter-spacing: 0.22em; color: #5aa9a3;">诗意电影</div>
+  <h3 style="margin: 10px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 34px;">三条路径，线越粗关系越近</h3>
+  <div style="margin-top: 32px; position: relative; width: 1220px; height: 390px;">
+    <svg width="1220" height="390" viewBox="0 0 1220 390" style="position: absolute; left: 0; top: 0;">
+      <g fill="none" stroke="#5aa9a3">
+        <path d="M620,60 C 760,60 780,195 940,195" stroke-width="10"></path>
+        <path d="M620,195 L 940,195" stroke-width="7"></path>
+        <path d="M620,330 C 760,330 780,195 940,195" stroke-width="2" stroke-dasharray="6 8"></path>
+      </g>
+    </svg>
+    <sc-for list="{{ poetry }}" as="p" hint-placeholder-count="3">
+      <div style="position: absolute; left: 0; top: {{ p.top }}; width: 620px; height: 110px; box-sizing: border-box; background: #16201e; padding: 14px 20px; display: flex; flex-direction: column; justify-content: center;">
+        <div style="display: flex; justify-content: space-between; gap: 12px;"><span style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 19px;">{{ p.source }}</span><span style="font-size: 14px; color: #5aa9a3; flex-shrink: 0;">{{ p.to }}</span></div>
+        <div style="margin-top: 6px; font-size: 15px; line-height: 1.6; color: #cfc9ba;">{{ p.idea }}</div>
+      </div>
+    </sc-for>
+    <div style="position: absolute; left: 940px; top: 125px; width: 280px; height: 140px; background: #5aa9a3; color: #0d1312; display: flex; align-items: center; justify-content: center; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 36px;">毕赣</div>
+  </div>
+  <div style="margin-top: 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+    <div>
+      <div style="font-size: 14px; letter-spacing: 0.14em; color: #5aa9a3; font-weight: 700;">毕赣的手法 <span style="color: #7cc08c; font-family: 'JetBrains Mono', monospace;">✔</span></div>
+      <div style="margin-top: 14px; display: flex; flex-direction: column; gap: 10px;">
+        <sc-for list="{{ devices }}" as="t" hint-placeholder-count="4"><div style="font-size: 16px; line-height: 1.65; color: #cfc9ba; padding-left: 14px; border-left: 2px solid #7cc08c;">{{ t }}</div></sc-for>
+      </div>
+    </div>
+    <div>
+      <div style="display: flex; align-items: center; gap: 10px; font-size: 14px; letter-spacing: 0.14em; color: #6fa6e0; font-weight: 700;"><span style="width: 12px; height: 12px; border-radius: 50%; background: linear-gradient(90deg, #6fa6e0 50%, transparent 50%); border: 1px solid #6fa6e0;"></span>毕赣的诗</div>
+      <div style="margin-top: 14px; display: flex; flex-direction: column; gap: 3px;">
+        <div style="background: #16201e; padding: 14px 18px; font-size: 15px; line-height: 1.65;"><span style="color: #6fa6e0; margin-right: 8px;">一方</span>像《红楼梦》的诗，只要贴合电影就行</div>
+        <div style="background: #1a2530; padding: 14px 18px; font-size: 15px; line-height: 1.65;"><span style="color: #6fa6e0; margin-right: 8px;">另一方</span>那是曹雪芹的上帝视角；毕赣是自我表达，更像《鹿鼎记》回目用查慎行诗</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top: 88px;">
+    <div style="height: 18px; background-color: #17213a; background-image: radial-gradient(circle, #e9e4d6 0 2px, transparent 2.5px), linear-gradient(45deg, transparent 44%, rgba(233,228,214,0.5) 44% 56%, transparent 56%), linear-gradient(-45deg, transparent 44%, rgba(233,228,214,0.5) 44% 56%, transparent 56%); background-size: 16px 16px; background-position: 8px 1px, 0 1px, 0 1px;"></div>
+    <div style="background: #17213a; padding: 40px 40px 44px;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 24px;">
+        <div>
+          <div style="font-size: 14px; letter-spacing: 0.22em; color: #9fb0d8;">贵州 · 01:55–01:57</div>
+          <div style="margin-top: 12px; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 34px;">为什么毕赣一出现就让人觉得新鲜？</div>
+        </div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 14px; letter-spacing: 0.12em; color: #9fb0d8; text-align: right; line-height: 1.7; white-space: nowrap;">黔东南 · 凯里<br>26.57°N 107.98°E</div>
+      </div>
+      <div style="margin-top: 28px; display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: 220px 220px; gap: 6px;">
+        <div style="position: relative; grid-row: span 2; background: #0d1312;">
+          <image-slot id="ep29-gz-road" src="assets/ep29/gz-road.jpg" shape="rect" style="position: absolute; inset: 0; width: 100%; height: 100%;" placeholder="凯里去镇远的路上"></image-slot>
+          <div style="position: absolute; right: 0; bottom: 0; background: rgba(13,19,18,0.82); padding: 8px 14px; font-size: 15px; pointer-events: none;">凯里 → 镇远的公路</div>
+        </div>
+        <div style="position: relative; background: #0d1312;">
+          <image-slot id="ep29-gz-zhenyuan" src="assets/ep29/gz-zhenyuan.jpg" shape="rect" style="position: absolute; inset: 0; width: 100%; height: 100%;" placeholder="镇远古城"></image-slot>
+          <div style="position: absolute; right: 0; bottom: 0; background: rgba(13,19,18,0.82); padding: 6px 12px; font-size: 14px; pointer-events: none;">镇远古城 · 舞阳河</div>
+        </div>
+        <div style="position: relative; background: #0d1312;">
+          <image-slot id="ep29-gz-xijiang" src="assets/ep29/gz-xijiang.jpg" shape="rect" style="position: absolute; inset: 0; width: 100%; height: 100%;" placeholder="西江千户苗寨"></image-slot>
+          <div style="position: absolute; right: 0; bottom: 0; background: rgba(13,19,18,0.82); padding: 6px 12px; font-size: 14px; pointer-events: none;">西江千户苗寨</div>
+        </div>
+        <div style="position: relative; background: #0d1312;">
+          <image-slot id="ep29-gz-bridge" src="assets/ep29/gz-bridge.jpg" shape="rect" style="position: absolute; inset: 0; width: 100%; height: 100%;" placeholder="凯里清水江铁路桥"></image-slot>
+          <div style="position: absolute; right: 0; bottom: 0; background: rgba(13,19,18,0.82); padding: 6px 12px; font-size: 14px; pointer-events: none;">凯里 · 清水江铁路桥</div>
+        </div>
+        <div style="position: relative; background: #0d1312;">
+          <image-slot id="ep29-gz-batik" src="assets/ep29/gz-batik.jpg" shape="rect" style="position: absolute; inset: 0; width: 100%; height: 100%;" placeholder="苗族蜡染"></image-slot>
+          <div style="position: absolute; right: 0; bottom: 0; background: rgba(13,19,18,0.82); padding: 6px 12px; font-size: 14px; pointer-events: none;">苗族蜡染</div>
+        </div>
+      </div>
+      <div style="margin-top: 10px; font-size: 13px; color: #9fb0d8;">图片为整理者补充（Wikimedia Commons），非节目内容</div>
+      <div style="margin-top: 28px; display: flex; flex-direction: column; gap: 12px;">
+        <sc-for list="{{ guizhou }}" as="g" hint-placeholder-count="5"><div style="display: flex; gap: 12px; font-size: 16px; line-height: 1.65;"><span style="font-family: 'JetBrains Mono', monospace; color: #9fb0d8; flex-shrink: 0;">{{ g.n }}</span><span>{{ g.t }}</span></div></sc-for>
+        <div style="margin-top: 6px; font-size: 15px; color: #b4bed6;">题外话：贵阳高科技创业在西部领先；贵阳、凯里精品咖啡属全国第一梯队</div>
+      </div>
+    </div>
+    <div style="height: 18px; background-color: #17213a; background-image: radial-gradient(circle, #e9e4d6 0 2px, transparent 2.5px), linear-gradient(45deg, transparent 44%, rgba(233,228,214,0.5) 44% 56%, transparent 56%), linear-gradient(-45deg, transparent 44%, rgba(233,228,214,0.5) 44% 56%, transparent 56%); background-size: 16px 16px; background-position: 8px 1px, 0 1px, 0 1px;"></div>
+  </div>
+</section>
+
+<!-- PART 4 -->
+<section data-part="p4" data-screen-label="06 天才的短板" style="padding: 88px 90px 40px;">
+  <div style="display: flex; align-items: baseline; gap: 20px; border-bottom: 2px solid #a08ad0; padding-bottom: 18px;">
+    <span style="font-family: 'JetBrains Mono', monospace; font-size: 22px; color: #a08ad0;">Ⅳ</span>
+    <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 56px;">天才的短板</h2>
+    <span style="margin-left: auto; font-family: 'JetBrains Mono', monospace; font-size: 16px; color: #a39f92;">01:57–02:21 · 24′</span>
+  </div>
+  <div style="margin-top: 48px; font-size: 14px; letter-spacing: 0.22em; color: #a08ad0;">批评逻辑链 · 本期核心</div>
+  <h3 style="margin: 10px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 34px;">从天分一路推到“美丽的谎言”</h3>
+  <div style="margin-top: 36px; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <sc-for list="{{ funnel }}" as="f" hint-placeholder-count="7">
+      <div style="width: {{ f.w }}; display: grid; grid-template-columns: 200px 1fr; background: {{ f.bg }}; color: {{ f.fg }}; border-left: 6px solid {{ f.bar }};">
+        <div style="padding: 20px 20px; display: flex; flex-direction: column; justify-content: center; gap: 4px; border-right: 1px solid rgba(235,230,216,0.1);">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: {{ f.bar }};">{{ f.n }}</span>
+          <span style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 20px; line-height: 1.35;">{{ f.level }}</span>
+        </div>
+        <div style="padding: 20px 24px; font-size: 17px; line-height: 1.7; display: flex; align-items: center; text-wrap: pretty;">{{ f.text }}</div>
+      </div>
+    </sc-for>
+    <div style="width: 2px; height: 44px; background: #a08ad0;"></div>
+    <div style="text-align: center;">
+      <div style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 64px; line-height: 1.3;">“搞不好就成为<br>下一个多兰。”</div>
+    </div>
+  </div>
+  <div style="margin-top: 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 18px;">
+    <div style="border-top: 1px solid rgba(235,230,216,0.2); padding-top: 18px;"><div style="font-size: 14px; letter-spacing: 0.14em; color: #a08ad0;">对照 · 费里尼</div><div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 19px; line-height: 1.7;">梦是唯一的现实——人最深层的欲望、恐惧、记忆、幻想比外在社会更能解释人</div></div>
+    <div style="border-top: 1px solid rgba(235,230,216,0.2); padding-top: 18px;"><div style="font-size: 14px; letter-spacing: 0.14em; color: #a08ad0;">对照 · 昆德拉论卡夫卡</div><div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-size: 19px; line-height: 1.7;">从私人经验中体验到公众世界的真相，只有第一流的艺术家才能做到</div></div>
+  </div>
+
+  <div style="margin-top: 88px; font-size: 14px; letter-spacing: 0.22em; color: #a08ad0;">《地球最后的夜晚》的梦境</div>
+  <h3 style="margin: 10px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 34px;">四关通关，不用付出任何代价</h3>
+  <div style="margin-top: 36px; display: grid; grid-template-columns: repeat(4, 1fr) 220px; gap: 0; align-items: stretch;">
+    <sc-for list="{{ stages }}" as="s" hint-placeholder-count="4">
+      <div style="display: flex; align-items: stretch;">
+        <div style="flex: 1; border: 2px solid #a08ad0; padding: 18px 18px 20px; display: flex; flex-direction: column; gap: 10px; background: #15151f;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 15px; letter-spacing: 0.12em; color: #a08ad0;">STAGE {{ s.n }}</span>
+          <div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 19px; line-height: 1.45;">{{ s.name }}</div>
+          <div style="margin-top: auto; font-size: 14px; line-height: 1.6; color: #a39f92;">心魔：{{ s.trauma }}</div>
+        </div>
+        <div style="width: 22px; display: flex; align-items: center;"><div style="flex: 1; border-top: 2px dashed #a08ad0;"></div></div>
+      </div>
+    </sc-for>
+    <div style="background: #a08ad0; color: #0d1312; padding: 18px 20px; display: flex; flex-direction: column; justify-content: center; gap: 8px;">
+      <span style="font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 15px; letter-spacing: 0.12em;">CLEAR</span>
+      <div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 19px; line-height: 1.45;">创伤“修复”，无需付出任何代价</div>
+    </div>
+  </div>
+  <div style="margin-top: 18px; display: flex; gap: 14px; align-items: center;">
+    <span style="font-family: 'JetBrains Mono', monospace; font-size: 14px; letter-spacing: 0.12em; color: #a39f92;">ITEMS</span>
+    <sc-for list="{{ items }}" as="i" hint-placeholder-count="2"><span style="border: 1px solid #6f7069; padding: 6px 14px; font-size: 15px;">{{ i }}</span></sc-for>
+  </div>
+  <div style="margin-top: 18px; font-size: 17px; line-height: 1.7;"><span style="color: #e05a4c; font-family: 'JetBrains Mono', monospace; margin-right: 8px;">✘</span>为主角胜利预设的心智游戏，像“面向小学生的游乐场”</div>
+
+  <div style="margin-top: 88px; font-size: 14px; letter-spacing: 0.22em; color: #a08ad0;">母亲线</div>
+  <h3 style="margin: 10px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 34px;">梦里的每个举动，都是一场报复</h3>
+  <div style="margin-top: 24px; background: #16201e; padding: 18px 22px; font-size: 17px; line-height: 1.7;"><span style="color: #a39f92; margin-right: 12px;">现实</span>母亲在他幼时跟养蜂人走了；他说母亲长得像美丽的万绮雯</div>
+  <div style="margin-top: 18px; display: grid; grid-template-columns: 1fr 60px 1fr; font-size: 14px; letter-spacing: 0.14em; color: #a39f92; padding-bottom: 10px; border-bottom: 1px solid rgba(235,230,216,0.16);">
+    <span>梦中的行为</span><span></span><span style="color: #a08ad0;">真实动机</span>
+  </div>
+  <sc-for list="{{ mother }}" as="m" hint-placeholder-count="6">
+    <div style="display: grid; grid-template-columns: 1fr 60px 1fr; align-items: center; padding: 14px 0; border-bottom: 1px solid rgba(235,230,216,0.08);">
+      <div style="font-size: 16px; line-height: 1.65; display: flex; gap: 12px;"><span style="font-family: 'JetBrains Mono', monospace; color: #6f7069;">{{ m.n }}</span><span>{{ m.act }}</span></div>
+      <div style="text-align: center; color: #a08ad0; font-size: 20px;">→</div>
+      <div style="font-size: 16px; line-height: 1.65; color: #d9d0ef;">{{ m.motive }}</div>
+    </div>
+  </sc-for>
+  <div style="margin-top: 20px; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 24px;">丑化 + 怨恨 = 酸葡萄心理、孩子气</div>
+
+  <div style="margin-top: 88px; font-size: 14px; letter-spacing: 0.22em; color: #a08ad0;">心智游戏电影 vs 毕赣</div>
+  <h3 style="margin: 10px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 34px;">一边是无力的主体，一边是梦境的主宰</h3>
+  <div style="margin-top: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 3px;">
+    <div style="background: #16201e; padding: 26px 28px; display: flex; flex-direction: column; gap: 16px;">
+      <div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 26px;">心智游戏电影</div>
+      <div style="font-size: 15px; color: #a39f92;">《盗梦空间》《记忆碎片》《穆赫兰道》</div>
+      <div><div style="font-size: 14px; color: #a08ad0; letter-spacing: 0.12em;">主体</div><div style="margin-top: 4px; font-size: 16px; line-height: 1.7;">分布式能动性：主体非单一、非万能，嵌在系统中必然无力；从行动者变为被操纵者</div></div>
+      <div><div style="font-size: 14px; color: #a08ad0; letter-spacing: 0.12em;">认识论</div><div style="margin-top: 4px; font-size: 16px; line-height: 1.7;">世界不可被真正认识；真相是建构的；认知可争辩</div></div>
+    </div>
+    <div style="background: #221c2c; padding: 26px 28px; display: flex; flex-direction: column; gap: 16px;">
+      <div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 26px;">毕赣</div>
+      <div style="font-size: 15px; color: #a39f92;">《地球最后的夜晚》</div>
+      <div><div style="font-size: 14px; color: #a08ad0; letter-spacing: 0.12em;">主体</div><div style="margin-top: 4px; font-size: 16px; line-height: 1.7;">男主是梦境的绝对主宰，世界围绕其欲望旋转</div></div>
+      <div><div style="font-size: 14px; color: #a08ad0; letter-spacing: 0.12em;">认识论</div><div style="margin-top: 4px; font-size: 16px; line-height: 1.7;">简单，反映不了当代主体的复杂困境</div></div>
+      <div style="font-size: 16px; line-height: 1.7;"><span style="color: #e05a4c; font-family: 'JetBrains Mono', monospace; margin-right: 8px;">✘</span>退回婴儿式超级自恋；梦境只为恢复受损的男性自我中心地位</div>
+    </div>
+  </div>
+  <sc-if value="{{ showEditorNotes }}" hint-placeholder-val="{{ true }}">
+    <div style="margin-top: 14px; border: 1px dashed #6f7069; padding: 10px 16px; font-size: 15px; color: #a9a49a; display: flex; gap: 14px;"><span style="font-family: 'JetBrains Mono', monospace; letter-spacing: 0.1em; flex-shrink: 0;">整理者补充</span><span>“心智游戏电影”概念由托马斯·埃尔塞瑟提出，节目未点名</span></div>
+  </sc-if>
+</section>
+
+<!-- 总览 -->
+<section data-screen-label="07 分歧与评价" style="margin-top: 60px; padding: 88px 90px 40px; background: #111a18; border-top: 1px solid rgba(235,230,216,0.12);">
+  <div style="font-size: 14px; letter-spacing: 0.22em; color: #6fa6e0;">主持人分歧 · 13 处</div>
+  <h2 style="margin: 10px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 48px;">13 处分歧，3 处没有收敛</h2>
+  <div style="margin-top: 20px; display: flex; gap: 28px; font-size: 15px; color: #cfc9ba;">
+    <span style="display: flex; align-items: center; gap: 8px;"><span style="font-size: 18px; color: #7cc08c;">●</span>基本收敛 6</span>
+    <span style="display: flex; align-items: center; gap: 8px;"><span style="font-size: 18px; color: #d8b25a;">◐</span>并存 / 互补 4</span>
+    <span style="display: flex; align-items: center; gap: 8px;"><span style="font-size: 18px; color: #6fa6e0;">○</span>未收敛 3</span>
+  </div>
+  <div style="margin-top: 28px; display: grid; grid-template-columns: 260px 1fr 1fr 220px; font-size: 14px; letter-spacing: 0.14em; color: #a39f92; padding-bottom: 12px; border-bottom: 1px solid rgba(235,230,216,0.2);">
+    <span>话题</span><span>一方</span><span>另一方</span><span>结果</span>
+  </div>
+  <sc-for list="{{ debates }}" as="d" hint-placeholder-count="13">
+    <div style="display: grid; grid-template-columns: 260px 1fr 1fr 220px; gap: 0 20px; padding: 14px 0; border-bottom: 1px solid rgba(235,230,216,0.08); font-size: 16px; line-height: 1.6; align-items: baseline;">
+      <span style="font-weight: 700;">{{ d.topic }}</span>
+      <span style="color: #cfc9ba;">{{ d.a }}</span>
+      <span style="color: #cfc9ba;">{{ d.b }}</span>
+      <span style="display: flex; gap: 8px; align-items: baseline; color: {{ d.c }};"><span style="font-size: 17px;">{{ d.icon }}</span><span style="font-size: 15px;">{{ d.result }}</span></span>
+    </div>
+  </sc-for>
+
+  <div style="margin-top: 96px; font-size: 14px; letter-spacing: 0.22em; color: #a39f92;">评价热力表</div>
+  <h2 style="margin: 10px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 48px;">16 个维度，肯定的只有 4 个</h2>
+  <div style="margin-top: 28px; display: grid; grid-template-columns: 420px repeat(4, 1fr); gap: 3px; font-size: 16px;">
+    <span></span>
+    <span style="text-align: center; padding: 8px 0; color: #7cc08c; font-family: 'JetBrains Mono', monospace;">✔ 肯定</span>
+    <span style="text-align: center; padding: 8px 0; color: #c9bf94; font-family: 'JetBrains Mono', monospace;">△ 有保留</span>
+    <span style="text-align: center; padding: 8px 0; color: #e05a4c; font-family: 'JetBrains Mono', monospace;">✘ 批评</span>
+    <span style="text-align: center; padding: 8px 0; color: #e05a4c; font-family: 'JetBrains Mono', monospace;">✘✘ 强烈</span>
+    <sc-for list="{{ heat }}" as="h" hint-placeholder-count="16">
+      <span style="padding: 10px 14px 10px 0; text-align: right; display: flex; justify-content: flex-end; align-items: center; gap: 8px;">{{ h.dim }}</span>
+      <sc-for list="{{ h.cells }}" as="c" hint-placeholder-count="4">
+        <div style="height: 40px; background: {{ c.bg }}; border: {{ c.bd }}; box-sizing: border-box;"></div>
+      </sc-for>
+    </sc-for>
+  </div>
+  <div style="margin-top: 12px; display: flex; align-items: center; gap: 8px; font-size: 14px; color: #a39f92;"><span style="width: 24px; height: 14px; border: 2px solid #6fa6e0; box-sizing: border-box;"></span>蓝框：主持人之间有分歧（易烊千玺：一方称当代男演员第一人，另一方认为本片“还好”）</div>
+</section>
+
+<section data-screen-label="08 数据" style="padding: 88px 90px 40px; background: #111a18;">
+  <div style="font-size: 14px; letter-spacing: 0.22em; color: #a39f92;">提及频次</div>
+  <div style="margin-top: 20px; display: grid; grid-template-columns: 360px 1fr; gap: 48px; align-items: start;">
+    <div>
+      <div style="font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 150px; line-height: 0.9; color: #e0714a;">171</div>
+      <div style="margin-top: 16px; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 30px;">“毕赣”被提到 171 次</div>
+      <div style="margin-top: 8px; font-size: 15px; line-height: 1.7; color: #a39f92;">共 11 种 ASR 写法，已归并；单独列出，以免压扁右侧条形。</div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 6px;">
+      <sc-for list="{{ peopleBars }}" as="r" hint-placeholder-count="20">
+        <div style="display: grid; grid-template-columns: 120px 1fr; gap: 14px; align-items: center;">
+          <span style="text-align: right; font-size: 15px; white-space: nowrap;">{{ r.name }}</span>
+          <div style="display: flex; align-items: center; gap: 10px;"><div style="height: 18px; width: {{ r.w }}; background: {{ r.c }};"></div><span style="font-family: 'JetBrains Mono', monospace; font-size: 14px;">{{ r.count }}</span></div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <div style="margin-top: 72px; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 30px;">塔可夫斯基是后半程的总参照系</div>
+  <p style="margin: 10px 0 0; font-size: 16px; line-height: 1.7; color: #a39f92;">33 次提及按板块分布；在《狂野时代》部分一次都没出现。</p>
+  <div style="margin-top: 24px; display: flex; height: 64px; gap: 2px;">
+    <div style="width: 70px; flex-shrink: 0; border: 1px dashed #e0714a; box-sizing: border-box; display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; color: #e0714a;">0</div>
+    <sc-for list="{{ tarko }}" as="t" hint-placeholder-count="5">
+      <div style="flex: {{ t.count }}; background: {{ t.c }}; color: #0d1312; display: flex; flex-direction: column; justify-content: center; padding: 0 12px; overflow: hidden;">
+        <span style="font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 18px;">{{ t.count }}</span>
+        <span style="font-size: 13px; white-space: nowrap;">{{ t.name }}</span>
+      </div>
+    </sc-for>
+  </div>
+  <div style="margin-top: 8px; font-size: 13px; color: #8a877c;">虚线格：狂野时代部分</div>
+
+  <div style="margin-top: 72px; display: grid; grid-template-columns: 1fr 1fr; gap: 56px;">
+    <div>
+      <div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 26px;">影片提及</div>
+      <div style="margin-top: 18px; display: flex; flex-direction: column; gap: 8px;">
+        <sc-for list="{{ filmBars }}" as="r" hint-placeholder-count="8">
+          <div style="display: grid; grid-template-columns: 170px 1fr; gap: 14px; align-items: center;">
+            <span style="text-align: right; font-size: 15px; white-space: nowrap;">{{ r.name }}</span>
+            <div style="display: flex; align-items: center; gap: 10px;"><div style="height: 18px; width: {{ r.w }}; background: {{ r.c }};"></div><span style="font-family: 'JetBrains Mono', monospace; font-size: 14px;">{{ r.count }}</span></div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    <div>
+      <div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 26px;">关键词</div>
+      <div style="margin-top: 18px; display: flex; flex-direction: column; gap: 8px;">
+        <sc-for list="{{ kwBars }}" as="r" hint-placeholder-count="10">
+          <div style="display: grid; grid-template-columns: 80px 1fr; gap: 14px; align-items: center;">
+            <span style="text-align: right; font-size: 15px;">{{ r.name }}</span>
+            <div style="display: flex; align-items: center; gap: 10px;"><div style="height: 18px; width: {{ r.w }}; background: {{ r.c }};"></div><span style="font-family: 'JetBrains Mono', monospace; font-size: 14px;">{{ r.count }}</span></div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top: 72px; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 30px;">“梦”与“长镜头”沿时间轴的分布</div>
+  <p style="margin: 10px 0 0; font-size: 16px; line-height: 1.7; color: #a39f92;">横轴与全期时间轴同比例。“长镜头”集中在一个板块，“梦”在梦境板块和最后的批评里各有一个高峰。</p>
+  <div style="margin-top: 16px; display: flex; gap: 24px; font-size: 14px;">
+    <span style="display: flex; align-items: center; gap: 8px;"><span style="width: 14px; height: 14px; background: #a08ad0;"></span>梦</span>
+    <span style="display: flex; align-items: center; gap: 8px;"><span style="width: 14px; height: 14px; background: #5aa9a3;"></span>长镜头</span>
+  </div>
+  <div style="margin-top: 20px; position: relative; height: 260px; border-bottom: 1px solid #6f7069;">
+    <sc-for list="{{ kwSections }}" as="s" hint-placeholder-count="9">
+      <div style="position: absolute; bottom: 0; left: {{ s.left }}; width: {{ s.w }}; height: 100%; background: {{ s.band }};"></div>
+      <div style="position: absolute; bottom: 0; left: {{ s.cx }}; transform: translateX(-50%); display: flex; align-items: flex-end; gap: 3px;">
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;"><span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #a08ad0;">{{ s.dream }}</span><div style="width: 16px; height: {{ s.dh }}; background: #a08ad0;"></div></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;"><span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #5aa9a3;">{{ s.lt }}</span><div style="width: 16px; height: {{ s.lh }}; background: #5aa9a3;"></div></div>
+      </div>
+    </sc-for>
+  </div>
+  <div style="position: relative; height: 30px;">
+    <sc-for list="{{ kwSections }}" as="s" hint-placeholder-count="9">
+      <span style="position: absolute; top: 8px; left: {{ s.cx }}; transform: translateX(-50%); font-size: 13px; color: #a39f92; white-space: nowrap;">{{ s.section }}</span>
+    </sc-for>
+  </div>
+  <div style="margin-top: 40px; font-size: 14px; color: #8a877c;">以上计数按 ASR 变体归并，误差约 ±2，仅反映讨论权重。</div>
+</section>
+
+<section data-screen-label="09 原话" style="padding: 88px 90px 72px;">
+  <div style="font-size: 14px; letter-spacing: 0.22em; color: #a39f92;">节目原话</div>
+  <div style="margin-top: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 3px;">
+    <sc-for list="{{ quotes }}" as="q" hint-placeholder-count="7">
+      <div style="background: #16201e; padding: 28px 30px; font-family: 'Noto Serif SC', serif; font-weight: 500; font-size: 23px; line-height: 1.6; border-top: 3px solid {{ q.c }};">“{{ q.t }}”</div>
+    </sc-for>
+  </div>
+</section>
+
+<section data-screen-label="10 全期脑图" style="padding: 72px 90px 96px; border-top: 1px solid rgba(235,230,216,0.12);">
+  <div style="display: flex; justify-content: space-between; align-items: baseline;">
+    <div style="font-size: 14px; letter-spacing: 0.22em; color: #a39f92;">附录 · 全期脑图（点击分支折叠）</div>
+    <div onClick="{{ toggleAll }}" style="border: 1px solid #6f7069; padding: 6px 14px; font-size: 14px; cursor: pointer;" style-hover="border-color: #ebe6d8;">{{ toggleAllLabel }}</div>
+  </div>
+  <div style="margin-top: 28px; display: flex;">
+    <div style="width: 90px; flex-shrink: 0; border-right: 2px solid #ebe6d8; display: flex; justify-content: center;">
+      <div style="writing-mode: vertical-rl; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 34px; letter-spacing: 0.1em;">天才的短板</div>
+    </div>
+    <div style="flex: 1; display: flex; flex-direction: column; gap: 20px;">
+      <sc-for list="{{ tree }}" as="b" hint-placeholder-count="4">
+        <div style="display: flex; align-items: flex-start;">
+          <div style="width: 30px; margin-top: 26px; border-top: 2px solid #ebe6d8; flex-shrink: 0;"></div>
+          <div style="flex: 1;">
+            <div onClick="{{ b.toggle }}" style="display: flex; align-items: center; gap: 14px; background: {{ b.color }}; color: #0d1312; padding: 12px 18px; cursor: pointer;">
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 16px;">{{ b.sign }}</span>
+              <span style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 22px;">{{ b.name }}</span>
+              <span style="margin-left: auto; font-family: 'JetBrains Mono', monospace; font-size: 14px;">{{ b.time }}</span>
+            </div>
+            <sc-if value="{{ b.open }}" hint-placeholder-val="{{ true }}">
+              <div style="border-left: 2px solid {{ b.color }}; margin-left: 18px; padding: 14px 0 4px 20px; display: flex; flex-direction: column; gap: 12px;">
+                <sc-for list="{{ b.kids }}" as="k" hint-placeholder-count="4">
+                  <div style="display: flex; gap: 16px; align-items: baseline;">
+                    <span style="font-weight: 700; font-size: 16px; min-width: 110px; color: {{ b.color }};">{{ k.name }}</span>
+                    <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                      <sc-for list="{{ k.leaves }}" as="l" hint-placeholder-count="2"><span style="background: #16201e; padding: 4px 10px; font-size: 14px; color: #cfc9ba;">{{ l }}</span></sc-for>
+                    </div>
+                  </div>
+                </sc-for>
+              </div>
+            </sc-if>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+  <div style="margin-top: 64px; padding-top: 20px; border-top: 1px solid rgba(235,230,216,0.12); display: flex; justify-content: space-between; font-size: 13px; color: #8a877c; letter-spacing: 0.08em;">
+    <span>转录稿未区分说话人，分歧以“一方 / 另一方”表示；图片来自 Wikipedia / Wikimedia Commons</span>
+    <span style="font-family: 'JetBrains Mono', monospace;">MAGASA / LOOK</span>
+  </div>
+</section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showEditorNotes&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;整理者补充&quot;},&quot;showQuadrant&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;整理者补充&quot;},&quot;treeOpen&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;附录脑图&quot;}}">
+const P = { 0: '#6f7069', 1: '#e0714a', 2: '#d8b25a', 3: '#5aa9a3', 4: '#a08ad0' };
+const TOT = 141;
+const pct = m => (m / TOT * 100) + '%';
+const SEM = {
+  '✔': { sym: '✔', fg: '#7cc08c', bg: 'transparent', bd: '#7cc08c' },
+  '△': { sym: '△', fg: '#c9bf94', bg: 'transparent', bd: '#c9bf94' },
+  '✘': { sym: '✘', fg: '#e05a4c', bg: 'transparent', bd: '#e05a4c' },
+  '✘✘': { sym: '✘✘', fg: '#0d1312', bg: '#e05a4c', bd: '#e05a4c' },
+  '—': { sym: '—', fg: '#6f7069', bg: 'transparent', bd: '#3a4441' },
+};
+const TL = [
+  { part: '开场', k: 0, start: 0, end: 1 },
+  { part: '一、狂野时代', k: 1, start: 1, end: 53, subs: [['定位：无社会属性的作者', 1, 9], ['佛法与六段故事', 9, 20], ['电影本体论', 20, 34], ['中国历史 + 影展策略', 34, 43], ['电影史引用', 43, 48], ['总评', 48, 50], ['易烊千玺', 50, 53]] },
+  { part: '二、前作回顾', k: 2, start: 53, end: 57, subs: [['两部前作对照', 53, 57]] },
+  { part: '三、影史坐标', k: 3, start: 57, end: 117, subs: [['长镜头', 57, 76], ['时间与共时性', 76, 81], ['梦境', 81, 90], ['慢电影', 90, 103], ['诗歌与诗意电影', 103, 115], ['贵州', 115, 117]] },
+  { part: '四、天才的短板', k: 4, start: 117, end: 141, subs: [['天分与领地', 117, 119], ['手艺短板', 119, 120], ['重复与停滞', 120, 124], ['精神贫瘠 / 梦境麻醉', 124, 131], ['女性与母亲', 131, 137], ['心智游戏对比', 137, 139], ['结论', 139, 141]] },
+];
+const hm = m => Math.floor(m / 60) + ':' + String(m % 60).padStart(2, '0');
+
+const CHAIN = ['未来世界：人类获得永生，不再做梦', '做梦成为病理甚至犯罪（幻想破坏理性 → 破坏永生）', '大她者（舒淇）追捕做梦的逃犯', '迷魂者（易烊千玺）= 电影的代称 / 做梦的权利', '六段梦境 = 六根执念：视 · 听 · 味 · 嗅 · 触 · 意', '每段结尾迷魂者死去', '蜡烛影院燃烧 = 电影之死', '执念重起 = Resurrection（重生，但未必以电影形式）'];
+const CRIT = [[0, '△', '精准击中巴赞“木乃伊情结”与“梦—电影同构”两个本体论基础，但没有展开'], [4, '✘', '科幻设定与历史梦境之间缺乏因果，只有微弱相关'], [2, '✘', '大她者的转变只停留在情感层面：“看了一场感人的电影”'], [4, '✘', '佛法只是表面借用，用来包装六个“散装”故事']];
+
+const SEGS = [
+  { n: 1, glyph: '眼', sense: '视觉', era: '电影诞生之初（约 20 分钟默片）', role: '怪物（烟馆）', core: '旋转的罂粟花造成幻觉；电影取代罂粟', reading: '刺激迷魂者生产更多电影娱乐；幻觉与理性的关系未展开', homage: '《水浇园丁》《月球旅行记》《卡里加利博士的小屋》《诺斯费拉图》、费纳奇镜', verdict: '✘', note: '符号拼贴，“拍得很差”', has: true },
+  { n: 2, glyph: '耳', sense: '听觉', era: '1940 年代，大概率重庆', role: '邱默云', core: '体内的声音令演奏家毁耳、令长官（赵又廷）割开他的背', reading: '极致听觉 = 隐秘的同性情感', disagree: true, homage: '黑色电影；镜子铺枪战挪用《上海小姐》；德莱叶《愤怒之日》片名', verdict: '✘✘', note: '视听语言“灾难”', has: true },
+  { n: 3, glyph: '舌', sense: '味觉', era: '1960 年代', role: '还俗小和尚（牙中寄居苦妖）', core: '苦妖寻世间最苦之物以成佛；小和尚讲出弑父故事，苦妖悟道', reading: '真正的苦是父子亲情的丧失；六月雪、搬佛像等只能猜测', homage: '无', verdict: '✔', note: '拍得最好的两段之一', best: true, dm: true },
+  { n: 4, glyph: '鼻', sense: '嗅觉', era: '1980 年代末', role: '骗子', core: '让小女孩冒充嗅觉特异功能，替老首长“读出”女儿的信', reading: '假的幻觉也能抚慰人心；福尔马林味 + 警卫员 = 对老人政治的批评（毕赣政治信息最强处）', homage: '无（写实感最强）', verdict: '✔', note: '全片最佳；易烊千玺表演最佳', best: true, dm: true },
+  { n: 5, glyph: '身', sense: '触觉', era: '1999 年最后一天', role: '阿波罗', core: '他想体验吻，吸血鬼少女邰肇玫（李庚希）想体验咬', reading: '寻找人生意义 vs 永生不问意义；千禧年虚无狂欢', homage: '致敬毕赣自己（一镜到底）；结尾又放《水浇园丁》', verdict: '✘', note: '表达浅、设定生硬、台词直说', self: true, dm: true },
+  { n: 6, glyph: '意', sense: '意', era: '—', role: '迷魂者', core: '大她者化为母亲为他举办葬礼', reading: '第六识消失；蜡烛影院燃烧 = 电影之死 → 重生', homage: '—', verdict: '—', note: '' },
+];
+
+const HITS = [{ theory: '巴赞 · 木乃伊情结', how: '生物学永生 → 作为时间防腐剂的电影失去意义' }, { theory: '梦—电影同构（麦茨、博德里）', how: '永生 = 绝对理性 → 幻想成为罪 → 需要大她者抓捕做梦者' }];
+const CLUSTERS = [
+  { name: '电影 = 梦 / 幻觉', items: [{ who: '好莱坞', idea: '白日梦、逃避主义' }, { who: '麦茨', idea: '银幕如拉康之镜；观众退行，身体瘫痪 + 感官活跃；自愿的幻觉' }, { who: '博德里', idea: '影院是梦境机器' }], verdict: '很老套的比喻；影片的“佛法解电影”停留在这一层，太简单' },
+  { name: '电影 = 观看的主体', items: [{ who: '索布恰克（经 Senses of Cinema 影评）', idea: '电影是技术主体；观众透过电影之眼分享视线' }, { who: '维尔托夫《持摄影机的人》/ 纪录片《利维坦》', idea: '去除人工操作属性，电影获得自身主体性' }], verdict: '片中感受不到这种思考，迷魂者只是拟人化形象' },
+  { name: '电影之死', items: [{ who: '保罗·切尔奇·乌塞', idea: '物质载体：胶片注定消亡，数字更脆弱' }, { who: '罗德维克、马诺维奇', idea: '数字影像离散可造假，失去巴赞式的保存世界功能' }, { who: '卡塞蒂、罗森鲍姆', idea: '观看方式改变，影院衰落' }, { who: '沙维罗、穆尔维', idea: '后电影：影像不死，只是被“调制”' }], verdict: '对照《神圣车行》，《狂野时代》对这一命题“没有真正的表达”' },
+];
+const OTHER = ['女性执法者', '同情者 / 同谋者', '送葬者', '继承者（自己也要做梦）· 未发生'];
+
+const MIRROR = [
+  ['男主', '陈升：中年，坐过九年牢', '罗纮武：中年，有违法经历', '≈'],
+  ['创伤来源', '母亲、妻子、侄子卫卫', '母亲、情人万绮雯、朋友白猫、未出生的儿子', '≈'],
+  ['前半', '现实 × 回忆交叉（夹杂短暂梦境片段）', '现实 × 回忆交叉', '='],
+  ['后半', '荡麦梦境长镜头，40 余分钟', '3D 梦境长镜头，约 1 小时', '≈'],
+  ['梦中重逢', '长大的卫卫、化身为理发师的亡妻', '另一版本的万绮雯（凯珍）与母亲', '≈'],
+  ['长镜头质感', '粗糙：据说约 2 万元、佳能 5D3，摄影机偶尔跟丢', '精致：运动复杂、会飞、轨迹精确', '≠'],
+  ['演员', '非职业演员 → 身份混淆有宿命感', '明星 → 像剧本游戏', '≠'],
+  ['目的', '疗愈创伤、与过去和解', '疗愈创伤、与过去和解', '='],
+];
+const MERGE = [['罗纮武的母亲', '梦中身份'], ['情人万绮雯', '罗纮武说她像母亲'], ['白猫的母亲', '同由张艾嘉饰演']];
+
+const LT = [
+  { name: '马克斯·奥菲尔斯', relation: '传承', same: '镜头移动跟随音乐与情绪，不跟随叙事', diff: '奥菲尔斯古典优雅；当代长镜头更飘移、去中心、失焦', x: 350, y: 70, slot: 'ep29-lt-ophuls', img: 'assets/ep29/lt-ophuls.jpg' },
+  { name: '米克洛什·扬索', relation: '相反', same: '长镜头调度', diff: '扬索：广阔平原、去个人化、间离、政治寓言；毕赣：幽闭空间、服务主角内心、催眠式沉浸', x: 578, y: 236, red: true, slot: 'ep29-lt-jancso', img: 'assets/ep29/lt-jancso.jpg' },
+  { name: '塔可夫斯基', relation: '局部借鉴', same: '诗意与异象（滴水房子←《镜子》，水中绿植←《飞向太空》）', diff: '老塔强迫凝视、时间有重量；毕赣游戏感强，“在地图上跑”', x: 491, y: 504, slot: 'ep29-lt-tarkovsky', img: 'assets/ep29/lt-tarkovsky.jpg' },
+  { name: '加斯帕·诺埃', relation: '部分相似', same: '漂浮、失重', diff: '诺埃离体、侵略性、制造生理不适（藏传佛教，《遁入虚无》）；毕赣注重陪伴感、催眠梦游', x: 209, y: 504, slot: 'ep29-lt-noe', img: 'assets/ep29/lt-noe.jpg' },
+  { name: '侯孝贤', relation: '明确承认学习', same: '火车进出、摩托骑行；《地球》火车戏“太侯孝贤了”', diff: '侯的特色是镜头内复杂调度与人—环境互动', x: 122, y: 236, slot: 'ep29-lt-hou', img: 'assets/ep29/lt-hou.jpg' },
+];
+const LT_MINS = [['路边野餐', 40, '40 余', '#1f6b5c'], ['地球最后的夜晚', 60, '约 60', '#8e2b24'], ['狂野时代', 30, '30 余（含实拍后加速）', '#e0714a']];
+const LT_TRAITS = ['跨段落（一个镜头含十几个段落）', '运动长镜头，多种交通工具连接', '局部加速', '基本不靠拼接作弊'];
+const LT_AES = ['摄影机的幽灵化（主客体辩证）', '镜头内碰撞模拟蒙太奇（矿井 → 滑索 → 台球厅）', '废墟 = 时间的容器（日常、怀旧、个人记忆）', '日常劳动中的闲散诗意（挖掘机 = 纯视听情境）'];
+
+const QUAD = [['扬索', -4.5, -4.5, '集体历史、政治寓言、要观众反思质询'], ['贾樟柯', -4, -1, '废墟有强烈的社会学视角'], ['侯孝贤（南国）', -2.5, 1, '内核是社会学的，承载转型期的社会躁动'], ['阿彼察邦', -1.5, 2, '慢与静用于对抗政治遗忘；泛灵论'], ['蔡明亮', 0.5, 0, '城市原子化生存，存在主义，挑战观众耐心'], ['塔可夫斯基', 1.5, 2.5, '宗教式精神求索；强迫凝视'], ['费里尼', 2, 3, '梦中有创作焦虑、宗教压迫等深度焦虑'], ['大卫·林奇', 2.5, 4, '以吠陀哲学、量子力学搭建宇宙'], ['加斯帕·诺埃', 3, 4, '离体体验、生理不适'], ['毕赣', 4.8, 4.8, '对各种现实都不感兴趣；催眠、梦游、沉浸']];
+const QLAB = { '大卫·林奇': 'translate(-100%, -50%) translateX(-12px)', '毕赣': 'translate(-100%, 0) translateX(-8px) translateY(10px)', '加斯帕·诺埃': 'translate(12px, -140%)' };
+
+const SLOW_DIRS = ['贝拉·塔尔', '阿巴斯', '侯孝贤', '蔡明亮', '阿彼察邦', '拉夫·迪亚兹'];
+const SLOW_CAUSES = ['反抗好莱坞节奏 → 反抗晚期资本主义的加速主义（睡觉、发呆、躺平）', '技术民主化：数字多拍十分钟零成本', '媒介环境：博物馆放映（王兵《原油》14 小时）', '压缩现代性：几世纪的工业化压缩到几十年 → 时间错位；慢 = 沉思 + 历史保存 + 创伤修复', '（另一方）佛教、道教文化提倡虚静无为'];
+const SLOW_DEB = [
+  { topic: '《南国再见，南国》摩托车戏', a: '现代性的悬置体验；高速移动 vs 人生停滞；广义的慢 = 长时间无情节推进', b: '不慢：林强配乐很来电，有嚣张的生命能量；典型的慢是《戏梦人生》《海上花》《咖啡时光》' },
+  { topic: '毕赣是否慢电影', a: '是，但内核是心理学的', b: '程度很轻——诗歌独白、流行歌都放在转场，“一点都不慢”' },
+];
+const POETRY = [
+  { source: '塔可夫斯基', idea: '联想逻辑而非线性因果；具体物质构建场域；记录时间流逝的质感', to: '更接近' },
+  { source: '帕索里尼', idea: '电影语言本身是诗；电影诗意来自现实的直接性（乌云响雷的例子）', to: '有意无意把握住了' },
+  { source: '费穆 → 第五代早期（陈凯歌）/ 第四代（《城南旧事》《青春祭》）', idea: '情景交融、一切景语皆情语', to: '关系不大' },
+];
+const DEVICES = ['自己的诗 + 贵州方言朗读（单看矫情，方言念显质朴）', '日常物品陌生化：水、手表、火车、苹果', '走调的流行歌：《小茉莉》（陈升）、《小李飞刀》（黄觉）', '《路边》物件：荷花形帘子、黑白电视、舞厅球灯、瀑布、蓝布绣花鞋、红桌子'];
+const GUIZHOU = ['贵州 1958 年建过电影厂，三年困难时期后停办、再未恢复——在各省中罕见（节目所述）', '没有本土制片厂 → 没有本土影像生产能力，观众对银幕上的贵州几乎没有印象', '黄健中《良家妇女》（80 年代）是贵州背景；陆川《寻枪》可能是第一部讲贵州方言的中国电影（节目亦不确定）', '近年贵州出身影人：齐溪、曾美慧孜、导演饶晓志（《无名之辈》）——一度有“贵州新浪潮”之说', '贵州话：同属西南官话，起调偏低、节奏短促、吞字明显，儿化音与尾音比四川话少'];
+
+const FUNNEL = [
+  ['天分', '长镜头 · 诗意画面 · 时间与记忆——但领地极窄，优点在《路边野餐》已全部呈现', 'ok'],
+  ['手艺短板', '调教演员不行（不及贾樟柯、张艺谋）· 台词拙劣模仿王家卫 · 过度精致的塑料感', 'bad'],
+  ['创意重复', '现实崩塌 → 进入梦境的二元结构；靠身份混淆生成意义 → 路径依赖', 'bad'],
+  ['主题停滞', '同一种男性主体：“文艺大哥”；女性只是投射：“消失的她”', 'bad'],
+  ['最大问题：精神的贫瘠', '梦境 = 叙事麻醉剂 / 愿望满足机制，在安全边界内重组现实', 'worst'],
+  ['对照', '塔可夫斯基的“牺牲”；雷乃把私人记忆与公共历史创伤纠结；心智游戏电影的“分布式能动性”', 'cmp'],
+  ['结论', '双向屏蔽（社会 + 自我认知）→ 美学麻醉；相信风格能解决实体问题——“美丽的谎言”', 'end'],
+];
+const FSTY = {
+  ok: { bg: '#16201e', fg: '#ebe6d8', bar: '#7cc08c' },
+  bad: { bg: '#16201e', fg: '#ebe6d8', bar: '#e05a4c' },
+  worst: { bg: '#3a1714', fg: '#ebe6d8', bar: '#e05a4c' },
+  cmp: { bg: '#16201e', fg: '#ebe6d8', bar: '#6f7069' },
+  end: { bg: '#a08ad0', fg: '#0d1312', bar: '#ebe6d8' },
+};
+const STAGES = [['与失去的、假想中的儿子相见', '失去儿子的心魔'], ['遇到凯珍', '万绮雯的危险 → 以简化、纯真的替身取代'], ['与母亲（红发女人）重逢', '幼年被母亲抛弃'], ['与凯珍接吻，房子旋转', '无法占有万绮雯的焦虑']];
+const MOTHER = [
+  ['帮母亲和情人逃跑，却让情人不想带她走、用枪逼情人带走她', '把“被抛弃”重构为“我主动放逐了母亲”；贬低母亲“廉价倒贴”'],
+  ['母亲说“我儿子还小，他会忘了我的”', '情人比儿子重要——对儿子自恋的最大打击'],
+  ['送母亲一个苹果', '他以为母亲最伤心时要吃完整个苹果连核——她本应为抛弃儿子而痛苦'],
+  ['把养蜂人变得懦弱、不负责；母亲也变得土气', '丑化，让母亲的选择显得糟糕'],
+  ['抢走母亲的手表（“手表象征天长地久”）', '没收母亲属于那个男人的时间；精神胜利法'],
+  ['把手表当战利品送给凯珍', '把母亲与情人缝合，象征性收复对母亲的所有权'],
+];
+
+const DEBATES = [
+  ['毕赣为何背离社会现实', '主动回避（时代无力感）', '根本不感兴趣', '未收敛'],
+  ['迷魂者每次死亡的含义', '一种感官经验的关闭', '只代表执念的虚幻', '部分接受'],
+  ['听觉段是否暗示同性情感', '是', '观影时未联想到', '未收敛'],
+  ['德莱叶《愤怒之日》片名的影射', '与猎巫、告密相呼应', '纯拼贴符号', '提出者不坚持'],
+  ['易烊千玺', '当代男演员第一人', '本片“还好”，受剧本限制', '都认为嗅觉段最佳'],
+  ['长镜头的游戏感', '《地球》像电子游戏', '《路边》也有，不落下风', '互补'],
+  ['废墟', '毕赣日常怀旧 vs 老塔宗教精神', '老塔也有个人记忆消失', '同意“怀旧”'],
+  ['梦境入口的提示', '刻意提示使梦反而写实', '不提示观众无法理解', '都认为需要更聪明的做法'],
+  ['《南国》摩托车戏', '现代性悬置，广义的慢', '不慢，有配乐与生命能量', '并存'],
+  ['毕赣是否慢电影', '是，但内核是心理学的', '程度很轻', '并存'],
+  ['毕赣的诗', '像《红楼梦》，贴合即可', '上帝视角之别，毕赣是自我表达', '未收敛'],
+  ['天才还是天分', '天才，但领地窄', '有天分', '措辞差异'],
+  ['最大的问题', '创意重复、主题停滞', '精神的贫瘠', '后者成为本期落点'],
+];
+const HEAT = [['野心与求变', '△'], ['高概念（永生 / 六根 / 电影之死）', '✘'], ['佛法', '✘'], ['大她者', '✘'], ['中国历史', '✘✘'], ['电影史引用', '✘✘'], ['第 3、4 段（味觉、嗅觉）', '✔'], ['第 5 段（触觉）', '✘'], ['易烊千玺', '✔/△'], ['长镜头', '✔'], ['诗意、方言、物品陌生化、流行歌', '✔'], ['调教演员、台词', '✘'], ['精致感', '✘'], ['结构重复', '✘'], ['男性主体 / 女性角色', '✘'], ['梦境的精神深度', '✘✘']];
+const HCOL = [['✔', '#7cc08c'], ['△', '#c9bf94'], ['✘', '#e05a4c'], ['✘✘', '#9e2c22']];
+
+const PEOPLE = [['塔可夫斯基', 33], ['费里尼', 15], ['侯孝贤', 13], ['扬索', 12], ['蔡明亮', 11], ['贾樟柯', 10], ['阿彼察邦', 8], ['德勒兹', 7], ['巴赞', 6], ['易烊千玺', 5], ['大卫·林奇', 5], ['加斯帕·诺埃', 5], ['舒淇', 5], ['麦茨', 4], ['拉康', 4], ['阿伦·雷乃', 4], ['王家卫', 4], ['张艾嘉', 4], ['帕索里尼', 4], ['奥菲尔斯', 4]];
+const TARKO = [['长镜头', 10], ['时间', 2], ['梦境', 7], ['诗意', 8], ['批评', 6]];
+const TARKO_C = { 长镜头: '#5aa9a3', 时间: '#4a8f8a', 梦境: '#7cbab5', 诗意: '#3d7a76', 批评: '#a08ad0' };
+const FILMS = [['狂野时代', 37, '#e0714a'], ['路边野餐', 36, '#1f8a72'], ['地球最后的夜晚', 33, '#b0392f'], ['南国再见，南国', 8], ['镜子', 6], ['神圣车行', 5], ['水浇园丁', 5], ['穆赫兰道', 4]];
+const KW = { 梦: 156, 现实: 82, 长镜头: 79, 时间: 64, 诗: 63, 历史: 57, 母亲: 54, 慢: 43, 佛: 24, 幻觉: 22 };
+const KW_SEC = [['狂野时代', 1, 53, 24, 0], ['前作回顾', 53, 57, 10, 0], ['长镜头', 57, 76, 27, 67], ['时间', 76, 81, 4, 3], ['梦境', 81, 90, 48, 3], ['慢电影', 90, 103, 2, 2], ['诗意', 103, 115, 4, 0], ['贵州', 115, 117, 0, 0], ['批评', 117, 141, 36, 4]];
+const QUOTES = [['任何一个时代都没有拍出那个时代的感觉，就像贴了几个标签、几个路牌。', 1], ['这部电影使用历史的方式，可以说是非道德的。', 1], ['拍电影不是生产一个杯子。', 4], ['毕赣拍的都是“消失的她”。', 4], ['他害怕伤口流血。', 4], ['相信风格可以解决实体问题……这是一个美丽的谎言，但归根结底还是一个谎言。', 4]];
+
+const TREE = [
+  { name: '一、狂野时代', time: '00:01–00:53', k: 1, kids: [['定位', ['当代中国艺术片中罕见的无社会属性作者', '回避现实：主动回避 vs 根本不感兴趣']], ['高概念', ['佛法六根 × 电影幻觉 × 百年中国史', '六段故事 = 六种感官执念', '永生设定 · 巴赞木乃伊情结 · 麦茨梦境论', '大她者 ≈ 拉康大他者']], ['理论参照', ['索布恰克电影现象学', '电影之死四角度', '对照《神圣车行》']], ['批评', ['设定与梦境缺乏因果', '历史只是标签与路牌', '电影史引用是拼贴且西方中心', '符号空转 · 去政治化的虚无']], ['表演', ['易烊千玺：第一人 vs 受剧本所限']]] },
+  { name: '二、前作回顾', time: '00:53–00:57', k: 2, kids: [['要点', ['路边野餐 ≈ 地球最后的夜晚', '中年男人 · 困于记忆 · 亲人创伤', '现实+回忆 → 梦境长镜头', '德勒兹晶体影像']]] },
+  { name: '三、影史坐标', time: '00:57–01:57', k: 3, kids: [['长镜头', ['奥菲尔斯 · 扬索 · 塔可夫斯基 · 加斯帕·诺埃 · 侯孝贤', '电子游戏感 · 幽灵化摄影机 · 废墟美学']], ['时间与共时性', ['雷乃 · 克里斯·马克 · 《镜子》 · 《乡愁》']], ['梦境', ['塔可夫斯基 · 费里尼 · 大卫·林奇']], ['慢电影', ['压缩现代性 · 蔡明亮 · 阿彼察邦', '《南国再见，南国》摩托车戏']], ['诗与诗意电影', ['塔可夫斯基 · 费穆 · 帕索里尼', '贵州方言 · 走调的流行歌']], ['贵州', ['贵州在电影史上的缺席']]] },
+  { name: '四、天才的短板', time: '01:57–02:21', k: 4, kids: [['要点', ['天分的领地太窄', '手艺：调教演员 · 台词 · 塑料感', '创意重复 · 主题停滞', '文艺大哥 · 消失的她', '精神贫瘠：梦是叙事麻醉剂', '地球：闯关 · 凯珍替代万绮雯 · 报复母亲', '对照：塔可夫斯基的牺牲 · 心智游戏电影', '结论：美学麻醉 · 下一个多兰？']]] },
+];
+
+const bar = (v, max, span) => Math.max(1, v / max * span) + '%';
+
+class Component extends DCLogic {
+  state = { sel: 0, tree: null };
+
+  go(k) {
+    const el = document.querySelector('[data-part="p' + k + '"]');
+    if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 10, behavior: 'smooth' });
+  }
+
+  treeOpen(i) {
+    const t = this.state.tree;
+    if (t && i in t) return t[i];
+    return this.props.treeOpen ?? true;
+  }
+
+  renderVals() {
+    const navParts = TL.map(p => ({
+      label: p.k && (p.end - p.start) / TOT * 1220 >= p.part.length * 18 + 28 ? p.part : '', color: P[p.k], w: 'calc(' + pct(p.end - p.start) + ' - 2px)',
+      tip: p.part + ' · ' + (p.end - p.start) + ' 分钟', go: () => p.k && this.go(p.k),
+    }));
+    const navSubs = [];
+    TL.forEach(p => (p.subs || []).forEach((s, i) => navSubs.push({
+      label: (s[2] - s[1]) / TOT * 1220 >= s[0].length * 13 + 14 ? s[0] : '', left: pct(s[1]), w: pct(s[2] - s[1]), color: P[p.k], op: i % 2 ? 0.55 : 0.8,
+      tip: s[0] + ' · ' + hm(s[1]) + '–' + hm(s[2]) + ' · ' + (s[2] - s[1]) + ' 分钟',
+    })));
+    const ticks = [0, 30, 60, 90, 120, 141].map((m, i) => ({ x: pct(m), tx: i === 5 ? '-100%' : '0', label: hm(m) }));
+    const subLists = TL.filter(p => p.k).map(p => ({ label: p.part, color: P[p.k], range: hm(p.start) + '–' + hm(p.end), subs: p.subs.map(s => ({ name: s[0], mins: s[2] - s[1] })) }));
+
+    const chain = CHAIN.map((t, i) => ({ n: String(i + 1).padStart(2, '0'), text: t, arrow: i < CHAIN.length - 1, crit: CRIT.filter(c => c[0] === i).map(c => ({ v: SEM[c[1]], text: c[2] })) }));
+    const segs = SEGS.map(s => ({
+      ...s, v: SEM[s.verdict], best: !!s.best, disagree: !!s.disagree,
+      homageMark: s.has ? '● 有' : s.self ? '◌ 致敬自己' : s.n === 6 ? '—' : '○ 无', homageC: s.has ? '#e05a4c' : '#a39f92',
+      dangmai: s.dm ? '■ 荡麦' : '',
+      cardBg: s.best ? '#172419' : '#16201e', cardBd: s.best ? '2px solid #7cc08c' : '1px solid rgba(235,230,216,0.08)',
+    }));
+    const otherSteps = OTHER.map((n, i) => {
+      const ghost = i === 3;
+      return { n: '0' + (i + 1), name: n, h: (130 + i * 50) + 'px', bg: ghost ? 'transparent' : 'rgba(224,113,74,' + (0.25 + i * 0.2) + ')', bd: ghost ? '2px dashed #6f7069' : 'none', fg: ghost ? '#8a877c' : '#ebe6d8' };
+    });
+    const mirror = MIRROR.map(r => ({ dim: r[0], a: r[1], b: r[2], mark: r[3], markC: r[3] === '≠' ? '#e0714a' : '#d8b25a', rowBg: r[3] === '≠' ? 'rgba(224,113,74,0.08)' : 'transparent' }));
+    const merge = MERGE.map((m, i) => ({ name: m[0], link: m[1], top: (8 + i * 110) + 'px' }));
+
+    const sel = this.state.sel;
+    const lt = LT.map((n, i) => {
+      const on = i === sel;
+      return { ...n, x: n.x + 'px', y: n.y + 'px', lx: ((n.x + 350) / 2) + 'px', ly: ((n.y + 310) / 2) + 'px', relC: n.red ? '#e05a4c' : '#5aa9a3', bg: on ? '#5aa9a3' : '#0d1312', fg: on ? '#0d1312' : '#ebe6d8', pick: () => this.setState({ sel: i }) };
+    });
+    const ltSel = LT[sel];
+    const ltMins = LT_MINS.map(m => ({ name: m[0], w: (m[1] / 60 * 70) + '%', label: m[2], color: m[3] }));
+
+    const quad = QUAD.map(q => {
+      const me = q[0] === '毕赣';
+      return { name: q[0], basis: q[3], x: ((q[1] + 5) / 10 * 100) + '%', y: ((5 - q[2]) / 10 * 100) + '%', d: me ? '22px' : '12px', c: me ? '#5aa9a3' : '#a9a49a', tc: me ? '#5aa9a3' : '#ebe6d8', fw: me ? 700 : 400, lt: QLAB[q[0]] || 'translate(12px, -50%)' };
+    });
+
+    const funnel = FUNNEL.map((f, i) => ({ n: String(i + 1).padStart(2, '0'), level: f[0], text: f[1], w: (100 - i * 5.5) + '%', ...FSTY[f[2]] }));
+    const stages = STAGES.map((s, i) => ({ n: i + 1, name: s[0], trauma: s[1] }));
+    const mother = MOTHER.map((m, i) => ({ n: String(i + 1).padStart(2, '0'), act: m[0], motive: m[1] }));
+
+    const debates = DEBATES.map(d => {
+      const r = d[3];
+      const open = r === '未收敛', co = ['并存', '互补', '措辞差异'].includes(r);
+      return { topic: d[0], a: d[1], b: d[2], result: r, icon: open ? '○' : co ? '◐' : '●', c: open ? '#6fa6e0' : co ? '#d8b25a' : '#7cc08c' };
+    });
+    const heat = HEAT.map(h => {
+      const split = h[1] === '✔/△';
+      return { dim: h[0], cells: HCOL.map(c => {
+        const on = split ? (c[0] === '✔' || c[0] === '△') : c[0] === h[1];
+        return { bg: on ? c[1] : 'rgba(235,230,216,0.04)', bd: on && split ? '3px solid #6fa6e0' : 'none' };
+      }) };
+    });
+
+    const peopleBars = PEOPLE.map(p => ({ name: p[0], count: p[1], w: bar(p[1], 33, 88), c: p[0] === '塔可夫斯基' ? '#5aa9a3' : '#6f7a76' }));
+    const tarko = TARKO.map(t => ({ name: t[0], count: t[1], c: TARKO_C[t[0]] }));
+    const filmBars = FILMS.map(f => ({ name: '《' + f[0] + '》', count: f[1], w: bar(f[1], 37, 80), c: f[2] || '#6f7a76' }));
+    const kwBars = Object.keys(KW).map(k => ({ name: k, count: KW[k], w: bar(KW[k], 156, 80), c: k === '梦' ? '#a08ad0' : k === '长镜头' ? '#5aa9a3' : '#6f7a76' }));
+    const kwSections = KW_SEC.map((s, i) => ({
+      section: s[0], left: pct(s[1]), w: pct(s[2] - s[1]), cx: pct((s[1] + s[2]) / 2), band: i % 2 ? 'rgba(235,230,216,0.03)' : 'rgba(235,230,216,0.06)',
+      dream: s[3], lt: s[4], dh: (s[3] / 67 * 210) + 'px', lh: (s[4] / 67 * 210) + 'px',
+    }));
+
+    const tree = TREE.map((b, i) => {
+      const open = this.treeOpen(i);
+      return { name: b.name, time: b.time, color: P[b.k], open, sign: open ? '−' : '+', kids: b.kids.map(k => ({ name: k[0], leaves: k[1] })), toggle: () => { const t = {}; TREE.forEach((_, j) => { t[j] = this.treeOpen(j); }); t[i] = !t[i]; this.setState({ tree: t }); } };
+    });
+    const allOpen = TREE.every((_, i) => this.treeOpen(i));
+
+    return {
+      showEditorNotes: this.props.showEditorNotes ?? true,
+      showQuadrant: this.props.showQuadrant ?? true,
+      heroFilms: [
+        { order: '讨论顺序 ②', year: '2015', title: '《路边野餐》', sub: '荡麦梦境长镜头 40 余分钟', count: 36, bg: '#1f3a33', accent: '#7cc0a8', slot: 'ep29-poster-kaili', img: 'assets/ep29/poster-kaili.jpg' },
+        { order: '讨论顺序 ③', year: '2018', title: '《地球最后的夜晚》', sub: '3D 梦境长镜头约 1 小时', count: 33, bg: '#4a1c1e', accent: '#e8826f', slot: 'ep29-poster-ldj', img: 'assets/ep29/poster-ldj.jpg' },
+        { order: '讨论顺序 ①', year: '2025', title: '《狂野时代》', sub: '六段梦境 · 六根执念', count: 37, bg: '#5a2a16', accent: '#f0a070', slot: 'ep29-poster-res', img: 'assets/ep29/poster-res.jpg' },
+      ],
+      navParts, navSubs, ticks, subLists, chain, segs, hits: HITS, clusters: CLUSTERS, otherSteps, mirror, merge,
+      lt, ltSel, ltMins, ltTraits: LT_TRAITS, ltAes: LT_AES, quad,
+      slowDirs: SLOW_DIRS, slowCauses: SLOW_CAUSES.map(t => ({ t, c: t.startsWith('（另一方）') ? '#6fa6e0' : '#cfc9ba' })), slowDebates: SLOW_DEB,
+      poetry: POETRY.map((p, i) => ({ ...p, top: (5 + i * 135) + 'px' })), devices: DEVICES,
+      guizhou: GUIZHOU.map((t, i) => ({ n: String(i + 1).padStart(2, '0'), t })),
+      funnel, stages, items: ['可飞行的乒乓球拍', '让房子旋转的咒语'], mother,
+      debates, heat, peopleBars, tarko, filmBars, kwBars, kwSections,
+      quotes: QUOTES.map(q => ({ t: q[0], c: P[q[1]] })),
+      tree, toggleAllLabel: allOpen ? '全部折叠' : '全部展开',
+      toggleAll: () => { const t = {}; TREE.forEach((_, j) => { t[j] = !allOpen; }); this.setState({ tree: t }); },
+    };
+  }
+}
+</script>
+</body>
+</html>

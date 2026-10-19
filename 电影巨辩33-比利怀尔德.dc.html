@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&family=Cinzel:wght@400;600;700&family=Bodoni+Moda:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  body { margin: 0; background: #ddd3bc; }
+  a { color: #8f2f22; }
+  a:hover { color: #b04b36; }
+</style>
+</helmet>
+<div style="width: 1400px; background: #eee6d4; color: #15120e; font-family: 'Noto Sans SC', sans-serif;">
+
+  <header style="padding: 0; background: #15120e; color: #eee6d4;">
+    <div style="padding: 26px 26px 30px;">
+      <div style="border: 2px solid #a8813c; padding: 6px;">
+        <div style="border: 1px solid #a8813c; padding: 52px 64px 46px; text-align: center;">
+          <div style="margin: 0 auto 34px; width: 214px; height: 270px; box-sizing: border-box; border: 2px solid #a8813c; border-radius: 50%; padding: 6px;">
+            <div style="position: relative; width: 100%; height: 100%; box-sizing: border-box; border: 1px solid #a8813c; border-radius: 50%; overflow: hidden; background: #2a251d;"><image-slot id="bw-portrait" src="{{ pic.wilder }}" shape="circle" placeholder="比利·怀尔德肖像"></image-slot></div>
+          </div>
+          <div style="display: flex; align-items: center; justify-content: center; gap: 18px; font-family: 'Cinzel', serif; font-size: 15px; letter-spacing: 0.34em; color: #c9a961;">
+            <span style="width: 54px; height: 1px; background: #a8813c;"></span>
+            <span>DIANYING JUBIAN · NO. 33</span>
+            <span style="width: 54px; height: 1px; background: #a8813c;"></span>
+          </div>
+          <h1 style="margin: 30px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 88px; line-height: 1.06; letter-spacing: 0.1em;">比利·怀尔德</h1>
+          <div style="margin-top: 14px; font-family: 'Cinzel', serif; font-size: 34px; letter-spacing: 0.22em; color: #c9a961;">BILLY WILDER</div>
+          <div style="margin: 30px auto 0; width: 300px; height: 1px; background: #a8813c;"></div>
+          <div style="margin-top: 26px; font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 40px; letter-spacing: 0.14em;">和喜剧的边界博弈</div>
+          <p style="margin: 26px auto 0; max-width: 860px; font-size: 19px; line-height: 1.95; color: #cdc3ae; text-wrap: pretty;">一个 28 岁才学英语的流亡者，如何用非母语写出好莱坞最顶级的喜剧，又如何在审查的边界上跳舞。</p>
+          <div style="margin-top: 36px; display: flex; justify-content: center; gap: 46px; font-size: 14px; letter-spacing: 0.18em; color: #9a917f;">
+            <span>主持　老马（magasa）／阿吴（LOOK）</span>
+            <span>4:08:32 · 首尾约 6 分钟为赞助口播</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="padding: 0 26px 30px;">
+      <div style="display: flex; justify-content: center; gap: 54px; padding: 18px 0; border-top: 1px solid rgba(168,129,60,0.5); border-bottom: 1px solid rgba(168,129,60,0.5); font-size: 15px; color: #cdc3ae;">
+        <span style="letter-spacing: 0.2em; color: #c9a961;">配色语义</span>
+        <span style="display: flex; align-items: center; gap: 10px;"><span style="width: 26px; height: 10px; background: #8d81a4;"></span>背景、人物与总论</span>
+        <span style="display: flex; align-items: center; gap: 10px;"><span style="width: 26px; height: 10px; background: #6a9092;"></span>作品逐部讨论</span>
+        <span style="display: flex; align-items: center; gap: 10px;"><span style="width: 26px; height: 0; border-top: 2px dashed #8a8173;"></span>未实现／落空的关系</span>
+      </div>
+    </div>
+  </header>
+
+  <sc-if value="{{ showMindmap }}" hint-placeholder-val="{{ true }}">
+  <section style="padding: 66px 90px 0;">
+    <div style="display: flex; align-items: baseline; gap: 18px;">
+      <span style="font-family: 'Cinzel', serif; font-weight: 600; font-size: 21px; letter-spacing: 0.14em; color: #a8813c;">I</span>
+      <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 38px; letter-spacing: 0.12em;">全集脑图</h2>
+      <span style="margin-left: auto; font-size: 14px; letter-spacing: 0.18em; color: #645c50;">八条主干 · 四小时的走向</span>
+    </div>
+    <div style="margin-top: 14px; height: 4px; border-top: 2px solid #15120e; border-bottom: 1px solid #15120e;"></div>
+
+    <div style="margin-top: 34px; display: grid; grid-template-columns: 250px 1fr; gap: 0;">
+      <div style="display: flex; align-items: center;">
+        <div style="background: #15120e; color: #eee6d4; padding: 26px 24px; width: 100%;">
+          <div style="font-family: 'Noto Serif SC', serif; font-size: 26px; line-height: 1.3;">比利·怀尔德</div>
+          <div style="margin-top: 8px; font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 17px; color: #c7bca3;">第 33 期</div>
+        </div>
+      </div>
+      <div style="border-left: 2px solid #15120e; display: grid; gap: 2px;">
+        <div style="display: grid; grid-template-columns: 250px 1fr; gap: 2px;">
+          <div style="background: rgba(75,58,99,0.16); padding: 14px 18px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 19px;">生平与流亡</div><div style="font-family: 'Bodoni Moda', serif; font-size: 14px; color: #4b3a63;">00:05–00:27</div></div>
+          <div style="background: rgba(75,58,99,0.07); padding: 14px 20px; display: flex; flex-wrap: wrap; gap: 10px 26px; align-items: center; font-size: 16px; color: #2a251d;"><span>加利西亚出身</span><span>四城流亡</span><span>签证官的善意</span><span>母亲遇难</span></div>
+        </div>
+        <div style="display: grid; grid-template-columns: 250px 1fr; gap: 2px;">
+          <div style="background: rgba(75,58,99,0.16); padding: 14px 18px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 19px;">产业三阶段</div><div style="font-family: 'Bodoni Moda', serif; font-size: 14px; color: #4b3a63;">00:27–00:47</div></div>
+          <div style="background: rgba(75,58,99,0.07); padding: 14px 20px; display: flex; flex-wrap: wrap; gap: 10px 26px; align-items: center; font-size: 16px; color: #2a251d;"><span>编剧马厩</span><span>派拉蒙上升</span><span>米里施模式</span><span>新好莱坞失势</span></div>
+        </div>
+        <div style="display: grid; grid-template-columns: 250px 1fr; gap: 2px;">
+          <div style="background: rgba(75,58,99,0.16); padding: 14px 18px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 19px;">批评界评价</div><div style="font-family: 'Bodoni Moda', serif; font-size: 14px; color: #4b3a63;">00:47–00:55</div></div>
+          <div style="background: rgba(75,58,99,0.07); padding: 14px 20px; display: flex; flex-wrap: wrap; gap: 10px 26px; align-items: center; font-size: 16px; color: #2a251d;"><span>萨里斯列为「过誉」</span><span>手册派贬低</span><span>萨里斯翻案</span><span>雅俗共赏</span></div>
+        </div>
+        <div style="display: grid; grid-template-columns: 250px 1fr; gap: 2px;">
+          <div style="background: rgba(28,90,94,0.16); padding: 14px 18px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 19px;">编剧期与早期喜剧</div><div style="font-family: 'Bodoni Moda', serif; font-size: 14px; color: #1c5a5e;">00:55–01:21</div></div>
+          <div style="background: rgba(28,90,94,0.07); padding: 14px 20px; display: flex; flex-wrap: wrap; gap: 10px 26px; align-items: center; font-size: 16px; color: #2a251d;"><span>刘别谦「二加二」</span><span>蟑螂事件</span><span>少校与少女</span><span>战后三部</span></div>
+        </div>
+        <div style="display: grid; grid-template-columns: 250px 1fr; gap: 2px;">
+          <div style="background: rgba(28,90,94,0.28); padding: 14px 18px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 19px;">五十年代巅峰</div><div style="font-family: 'Bodoni Moda', serif; font-size: 14px; color: #123f41;">01:21–02:22</div></div>
+          <div style="background: rgba(28,90,94,0.12); padding: 14px 20px; display: flex; flex-wrap: wrap; gap: 10px 26px; align-items: center; font-size: 16px; color: #2a251d;"><span>金龟婿两部（龙凤配、黄昏之恋）</span><span>七年之痒</span><span>热情似火</span><span>公寓春光</span></div>
+        </div>
+        <div style="display: grid; grid-template-columns: 250px 1fr; gap: 2px;">
+          <div style="background: rgba(28,90,94,0.16); padding: 14px 18px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 19px;">巅峰收尾与衰退</div><div style="font-family: 'Bodoni Moda', serif; font-size: 14px; color: #1c5a5e;">02:22–02:56</div></div>
+          <div style="background: rgba(28,90,94,0.07); padding: 14px 20px; display: flex; flex-wrap: wrap; gap: 10px 26px; align-items: center; font-size: 16px; color: #2a251d;"><span>玉女风流</span><span>爱玛姑娘</span><span>红唇相吻</span><span>晚期四部</span></div>
+        </div>
+        <div style="display: grid; grid-template-columns: 250px 1fr; gap: 2px;">
+          <div style="background: rgba(75,58,99,0.16); padding: 14px 18px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 19px;">关系网</div><div style="font-family: 'Bodoni Moda', serif; font-size: 14px; color: #4b3a63;">02:56–03:50</div></div>
+          <div style="background: rgba(75,58,99,0.07); padding: 14px 20px; display: flex; flex-wrap: wrap; gap: 10px 26px; align-items: center; font-size: 16px; color: #2a251d;"><span>刘别谦师承</span><span>两任编剧搭档</span><span>莱蒙与马修</span><span>明星合作</span></div>
+        </div>
+        <div style="display: grid; grid-template-columns: 250px 1fr; gap: 2px;">
+          <div style="background: rgba(75,58,99,0.16); padding: 14px 18px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 19px;">总论与结语</div><div style="font-family: 'Bodoni Moda', serif; font-size: 14px; color: #4b3a63;">03:50–04:08</div></div>
+          <div style="background: rgba(75,58,99,0.07); padding: 14px 20px; display: flex; flex-wrap: wrap; gap: 10px 26px; align-items: center; font-size: 16px; color: #2a251d;"><span>cynical</span><span>伪装即身份</span><span>欧美对照</span><span>审查博弈</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </sc-if>
+
+  <sc-if value="{{ showTimeCharts }}" hint-placeholder-val="{{ true }}">
+  <section style="padding: 70px 90px 0;">
+    <div style="display: flex; align-items: baseline; gap: 18px;">
+      <span style="font-family: 'Cinzel', serif; font-weight: 600; font-size: 21px; letter-spacing: 0.14em; color: #a8813c;">II</span>
+      <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 38px; letter-spacing: 0.12em;">时长分配</h2>
+      <span style="margin-left: auto; font-size: 14px; letter-spacing: 0.18em; color: #645c50;">按 5 分钟粒度估算</span>
+    </div>
+    <div style="margin-top: 14px; height: 4px; border-top: 2px solid #15120e; border-bottom: 1px solid #15120e;"></div>
+
+    <div style="margin-top: 34px; display: grid; grid-template-columns: 1fr 1fr; gap: 54px;">
+      <div>
+        <div style="font-family: 'Noto Serif SC', serif; font-size: 22px;">2-1　各板块时长</div>
+        <div style="margin-top: 20px; display: grid; gap: 9px;">
+          <div style="display: grid; grid-template-columns: 148px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; color: #463f34; text-align: right;">广告</div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 8.2%; height: 22px; background: #c6bca7;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #645c50;">5′</span></div></div>
+          <div style="display: grid; grid-template-columns: 148px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; color: #463f34; text-align: right;">生平与流亡</div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 36.1%; height: 22px; background: #4b3a63;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #645c50;">22′</span></div></div>
+          <div style="display: grid; grid-template-columns: 148px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; color: #463f34; text-align: right;">产业三阶段</div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 32.8%; height: 22px; background: #4b3a63;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #645c50;">20′</span></div></div>
+          <div style="display: grid; grid-template-columns: 148px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; color: #463f34; text-align: right;">批评界评价</div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 13.1%; height: 22px; background: #4b3a63;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #645c50;">8′</span></div></div>
+          <div style="display: grid; grid-template-columns: 148px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; color: #463f34; text-align: right;">编剧期与早期喜剧</div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 42.6%; height: 22px; background: #1c5a5e;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #645c50;">26′</span></div></div>
+          <div style="display: grid; grid-template-columns: 148px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; color: #15120e; text-align: right; font-weight: 500;">五十年代巅峰</div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 100%; height: 22px; background: #1c5a5e;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #1c5a5e; font-weight: 600;">61′</span></div></div>
+          <div style="display: grid; grid-template-columns: 148px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; color: #463f34; text-align: right;">巅峰收尾与衰退</div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 55.7%; height: 22px; background: #1c5a5e;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #645c50;">34′</span></div></div>
+          <div style="display: grid; grid-template-columns: 148px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; color: #463f34; text-align: right;">刘别谦</div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 24.6%; height: 22px; background: #4b3a63;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #645c50;">15′</span></div></div>
+          <div style="display: grid; grid-template-columns: 148px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; color: #463f34; text-align: right;">编剧搭档</div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 18%; height: 22px; background: #4b3a63;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #645c50;">11′</span></div></div>
+          <div style="display: grid; grid-template-columns: 148px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; color: #463f34; text-align: right;">演员</div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 45.9%; height: 22px; background: #4b3a63;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #645c50;">28′</span></div></div>
+          <div style="display: grid; grid-template-columns: 148px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; color: #463f34; text-align: right;">总论与结语</div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 29.5%; height: 22px; background: #4b3a63;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #645c50;">18′</span></div></div>
+        </div>
+        <p style="margin: 20px 0 0; font-size: 15px; line-height: 1.8; color: #645c50;">图注：节目重心在逐部拆作品，占了将近一半。</p>
+      </div>
+
+      <div>
+        <div style="font-family: 'Noto Serif SC', serif; font-size: 22px;">2-2　导演喜剧作品讨论时长</div>
+        <div style="margin-top: 20px; display: grid; gap: 7px;">
+          <div style="display: grid; grid-template-columns: 178px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; color: #463f34; text-align: right;">少校与少女 <span style="font-family: 'Bodoni Moda', serif; color: #8a8173;">1942</span></div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 31.8%; height: 18px; background: #1c5a5e;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 14px; color: #645c50;">7′</span></div></div>
+          <div style="display: grid; grid-template-columns: 178px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; color: #463f34; text-align: right;">皇帝圆舞曲 <span style="font-family: 'Bodoni Moda', serif; color: #8a8173;">1948</span></div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 22.7%; height: 18px; background: #1c5a5e;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 14px; color: #645c50;">5′</span></div></div>
+          <div style="display: grid; grid-template-columns: 178px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; color: #463f34; text-align: right;">柏林艳史 <span style="font-family: 'Bodoni Moda', serif; color: #8a8173;">1948</span></div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 18.2%; height: 18px; background: #1c5a5e;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 14px; color: #645c50;">4′</span></div></div>
+          <div style="display: grid; grid-template-columns: 178px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; color: #463f34; text-align: right;">战地军魂 <span style="font-family: 'Bodoni Moda', serif; color: #8a8173;">1953</span></div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 9.1%; height: 18px; background: #1c5a5e;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 14px; color: #645c50;">2′</span></div></div>
+          <div style="display: grid; grid-template-columns: 178px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; color: #463f34; text-align: right;">龙凤配 <span style="font-family: 'Bodoni Moda', serif; color: #8a8173;">1954</span></div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 27.3%; height: 18px; background: #1c5a5e;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 14px; color: #645c50;">6′</span></div></div>
+          <div style="display: grid; grid-template-columns: 178px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; color: #463f34; text-align: right;">七年之痒 <span style="font-family: 'Bodoni Moda', serif; color: #8a8173;">1955</span></div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 40.9%; height: 18px; background: #1c5a5e;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 14px; color: #645c50;">9′</span></div></div>
+          <div style="display: grid; grid-template-columns: 178px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; color: #463f34; text-align: right;">黄昏之恋 <span style="font-family: 'Bodoni Moda', serif; color: #8a8173;">1957</span></div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 40.9%; height: 18px; background: #1c5a5e;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 14px; color: #645c50;">9′</span></div></div>
+          <div style="display: grid; grid-template-columns: 178px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; color: #15120e; text-align: right; font-weight: 500;">热情似火 <span style="font-family: 'Bodoni Moda', serif; color: #8a8173;">1959</span></div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 100%; height: 18px; background: #8f2f22;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 14px; color: #8f2f22; font-weight: 600;">22′</span></div></div>
+          <div style="display: grid; grid-template-columns: 178px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; color: #15120e; text-align: right; font-weight: 500;">公寓春光 <span style="font-family: 'Bodoni Moda', serif; color: #8a8173;">1960</span></div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 68.2%; height: 18px; background: #8f2f22;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 14px; color: #8f2f22; font-weight: 600;">15′</span></div></div>
+          <div style="display: grid; grid-template-columns: 178px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; color: #463f34; text-align: right;">玉女风流 <span style="font-family: 'Bodoni Moda', serif; color: #8a8173;">1961</span></div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 45.5%; height: 18px; background: #1c5a5e;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 14px; color: #645c50;">10′</span></div></div>
+          <div style="display: grid; grid-template-columns: 178px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; color: #463f34; text-align: right;">爱玛姑娘 <span style="font-family: 'Bodoni Moda', serif; color: #8a8173;">1963</span></div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 36.4%; height: 18px; background: #1c5a5e;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 14px; color: #645c50;">8′</span></div></div>
+          <div style="display: grid; grid-template-columns: 178px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; color: #463f34; text-align: right;">红唇相吻 <span style="font-family: 'Bodoni Moda', serif; color: #8a8173;">1964</span></div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 22.7%; height: 18px; background: #1c5a5e;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 14px; color: #645c50;">5′</span></div></div>
+          <div style="display: grid; grid-template-columns: 178px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; color: #463f34; text-align: right;">飞来福 <span style="font-family: 'Bodoni Moda', serif; color: #8a8173;">1966</span></div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 13.6%; height: 18px; background: #6a9092;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 14px; color: #645c50;">3′</span></div></div>
+          <div style="display: grid; grid-template-columns: 178px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; color: #463f34; text-align: right;">福尔摩斯秘史 <span style="font-family: 'Bodoni Moda', serif; color: #8a8173;">1970</span></div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 9.1%; height: 18px; background: #6a9092;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 14px; color: #645c50;">2′</span></div></div>
+          <div style="display: grid; grid-template-columns: 178px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; color: #463f34; text-align: right;">两代情 <span style="font-family: 'Bodoni Moda', serif; color: #8a8173;">1972</span></div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 9.1%; height: 18px; background: #6a9092;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 14px; color: #645c50;">2′</span></div></div>
+          <div style="display: grid; grid-template-columns: 178px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; color: #463f34; text-align: right;">满城风雨 <span style="font-family: 'Bodoni Moda', serif; color: #8a8173;">1974</span></div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 18.2%; height: 18px; background: #6a9092;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 14px; color: #645c50;">4′</span></div></div>
+        </div>
+        <p style="margin: 20px 0 0; font-size: 15px; line-height: 1.8; color: #645c50;">图注：《热情似火》一部讲了二十多分钟；最后一部《患难之交》（1981）被直接跳过。</p>
+      </div>
+    </div>
+  </section>
+  </sc-if>
+
+  <section style="padding: 70px 90px 0;">
+    <div style="display: flex; align-items: baseline; gap: 18px;">
+      <span style="font-family: 'Cinzel', serif; font-weight: 600; font-size: 21px; letter-spacing: 0.14em; color: #a8813c;">III</span>
+      <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 38px; letter-spacing: 0.12em;">生平与产业阶段</h2>
+      <span style="margin-left: auto; font-size: 14px; letter-spacing: 0.18em; color: #645c50;">流亡者的底色</span>
+    </div>
+    <div style="margin-top: 14px; height: 4px; border-top: 2px solid #15120e; border-bottom: 1px solid #15120e;"></div>
+
+    <div style="margin-top: 34px; background: #f7f0e0; border: 1px solid rgba(21,18,14,0.14); padding: 30px 32px;">
+      <div style="font-size: 13px; letter-spacing: 0.2em; color: #4b3a63;">流亡路线</div>
+      <div style="margin-top: 18px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; align-items: stretch;">
+        <div style="border-top: 3px solid #4b3a63; padding-top: 14px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 21px;">加利西亚</div><div style="margin-top: 8px; font-size: 15px; line-height: 1.75; color: #463f34;">出生地，一战后划归波兰</div></div>
+        <div style="border-top: 3px solid #4b3a63; padding-top: 14px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 21px;">维也纳</div><div style="margin-top: 8px; font-size: 15px; line-height: 1.75; color: #463f34;">一战避难，当记者</div></div>
+        <div style="border-top: 3px solid #4b3a63; padding-top: 14px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 21px;">柏林</div><div style="margin-top: 8px; font-size: 15px; line-height: 1.75; color: #463f34;">乌法编剧，舞厅伴舞</div></div>
+        <div style="border-top: 3px solid #4b3a63; padding-top: 14px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 21px;">巴黎</div><div style="margin-top: 8px; font-size: 15px; line-height: 1.75; color: #463f34;">不到一年，执导法语片《坏种》</div></div>
+        <div style="border-top: 3px solid #8f2f22; padding-top: 14px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 21px; color: #8f2f22;">好莱坞</div><div style="margin-top: 8px; font-size: 15px; line-height: 1.75; color: #463f34;">28 岁开始学英语</div></div>
+      </div>
+      <div style="margin-top: 34px; font-size: 13px; letter-spacing: 0.2em; color: #4b3a63;">产业阶段</div>
+      <div style="margin-top: 18px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px;">
+        <div style="background: rgba(75,58,99,0.14); padding: 18px 20px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 20px;">大片场 · 派拉蒙</div><div style="margin-top: 8px; font-size: 15px; color: #463f34;">约 5 部一流作品</div></div>
+        <div style="background: rgba(75,58,99,0.14); padding: 18px 20px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 20px;">独立制片 · 米里施 + 联艺</div><div style="margin-top: 8px; font-size: 15px; color: #463f34;">约 5 部一流作品</div></div>
+        <div style="background: rgba(21,18,14,0.06); padding: 18px 20px; border: 1px dashed #a49a89;"><div style="font-family: 'Noto Serif SC', serif; font-size: 20px; color: #645c50;">新好莱坞</div><div style="margin-top: 8px; font-size: 15px; color: #645c50;">无公认杰作</div></div>
+      </div>
+      <p style="margin: 22px 0 0; font-size: 15px; line-height: 1.8; color: #645c50;">转折点——《林白征空记》惨败促使出走；《福尔摩斯秘史》被联艺删剪，合作模式走到尽头。</p>
+    </div>
+
+    <div style="margin-top: 40px; display: grid; grid-template-columns: 1fr 420px; gap: 46px; align-items: start;">
+      <div style="display: grid; gap: 22px;">
+        <p style="margin: 0; font-size: 17px; line-height: 1.95; color: #2a251d; text-wrap: pretty;">两位主持人认为怀尔德最核心的底色是「流亡者」：出生于奥匈帝国加利西亚，讲德语的犹太人，一直拿波兰护照却常被当成德国人。他对身份和阶级差异的敏感被归因于这段经历。在维也纳当记者时他闯进弗洛伊德诊所被赶了出来，此后他电影里的心理医生都是笑柄。国会纵火案后他连夜离开柏林去巴黎，再坐船去美国，在船上靠海明威、辛克莱·刘易斯的小说学英语。</p>
+        <p style="margin: 0; font-size: 17px; line-height: 1.95; color: #2a251d; text-wrap: pretty;">他的母亲拒绝随他去美国，死于普瓦舒夫集中营（即《辛德勒的名单》中的集中营），怀尔德到死都以为是奥斯维辛。主持人认为他 1945 年后的所有作品，都可以归到大屠杀与逃亡这个心结上。</p>
+        <div>
+          <div style="font-family: 'Noto Serif SC', serif; font-size: 20px;">编剧马厩</div>
+          <p style="margin: 10px 0 0; font-size: 17px; line-height: 1.95; color: #2a251d; text-wrap: pretty;">大片场时期编剧像白领坐格子间、按周交页数，没有署名保障，也不准去片场。怀尔德英语不行，被当作「结构医生」；1936 年派拉蒙把他和哈佛出身、《纽约客》撰稿人查尔斯·布拉克特配成搭档。他转导演的直接刺激，是导演米切尔·莱森屡次乱改剧本，尤其是《良宵苦短》的「蟑螂戏」被夏尔·博耶拒演。主持人认为他可能是好莱坞第一个「外国编剧转导演」。</p>
+        </div>
+        <div>
+          <div style="font-family: 'Noto Serif SC', serif; font-size: 20px;">新好莱坞失势</div>
+          <p style="margin: 10px 0 0; font-size: 17px; line-height: 1.95; color: #2a251d; text-wrap: pretty;">两人判断是时代原因，不是个人问题。他的方法绑定大片场体系，擅长在审查下暗示，审查一废就失去用武之地。怀尔德自己说新好莱坞只有两种片：斯皮尔伯格、卢卡斯的特效片，和科波拉、斯科塞斯的欧式作者片，他两种都不是。</p>
+        </div>
+        <div>
+          <div style="font-family: 'Noto Serif SC', serif; font-size: 20px;">评价史</div>
+          <p style="margin: 10px 0 0; font-size: 17px; line-height: 1.95; color: #2a251d; text-wrap: pretty;">萨里斯在《美国电影》里把怀尔德列入「过誉」一档，特吕弗说他是「穷人版刘别谦」、拍不了严肃电影。主持人认为这不公平：手册派捧霍克斯也并非因为场面调度，而是主题与人物互动的延续性，怀尔德在这方面同样统一。萨里斯晚年翻案，承认自己年轻时是怀尔德铁粉（《日落大道》看了 25 遍）。主持人的结论：评论要忠于自己的第一感受，「太容易让人喜欢」不该成为怀疑一个艺术家的理由。</p>
+        </div>
+      </div>
+
+      <div style="display: grid; gap: 22px;">
+        <div style="background: #15120e; color: #eee6d4; padding: 30px 30px;">
+          <div style="font-size: 13px; letter-spacing: 0.2em; color: #c9a961;">签证官的故事</div>
+          <p style="margin: 16px 0 0; font-family: 'Noto Serif SC', serif; font-size: 22px; line-height: 1.8;">「那就写点好东西出来。」</p>
+          <p style="margin: 14px 0 0; font-size: 15px; line-height: 1.9; color: #cdc3ae;">怀尔德在墨西哥边境领事馆没有无犯罪证明，领事问他职业，他说是编剧，领事盖了章，说了这句话。怀尔德说他奋斗几十年，就是不想让那个人失望。</p>
+        </div>
+        <div style="border: 1px solid #4b3a63; padding: 26px 28px;">
+          <div style="font-size: 13px; letter-spacing: 0.2em; color: #4b3a63;">米里施条款</div>
+          <div style="margin-top: 18px; display: grid; gap: 14px;">
+            <div style="display: flex; align-items: baseline; gap: 14px;"><span style="font-family: 'Bodoni Moda', serif; font-size: 28px; color: #15120e;">20 万</span><span style="font-size: 15px; color: #463f34;">美元 · 每片固定片酬</span></div>
+            <div style="display: flex; align-items: baseline; gap: 14px;"><span style="font-family: 'Bodoni Moda', serif; font-size: 28px; color: #15120e;">17.5%</span><span style="font-size: 15px; color: #463f34;">回本（约两倍成本）后分总票房</span></div>
+            <div style="display: flex; align-items: baseline; gap: 14px;"><span style="font-family: 'Bodoni Moda', serif; font-size: 28px; color: #15120e;">20%</span><span style="font-size: 15px; color: #463f34;">超出回本点 100 万美元后</span></div>
+            <div style="display: flex; align-items: baseline; gap: 14px;"><span style="font-family: 'Bodoni Moda', serif; font-size: 28px; color: #8f2f22;">120 万</span><span style="font-size: 15px; color: #463f34;">单靠《爱玛姑娘》个人所得</span></div>
+          </div>
+          <p style="margin: 18px 0 0; font-size: 15px; line-height: 1.85; color: #645c50;">彩蛋：他在办公室鸟笼上面（不是里面）放了一只鸟标本，意思是「自由了」。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 70px 90px 0;">
+    <div style="display: flex; align-items: baseline; gap: 18px;">
+      <span style="font-family: 'Cinzel', serif; font-weight: 600; font-size: 21px; letter-spacing: 0.14em; color: #a8813c;">IV</span>
+      <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 38px; letter-spacing: 0.12em;">逐部作品观点</h2>
+      <span style="margin-left: auto; font-size: 14px; letter-spacing: 0.18em; color: #645c50;">十六部导演喜剧</span>
+    </div>
+    <div style="margin-top: 14px; height: 4px; border-top: 2px solid #15120e; border-bottom: 1px solid #15120e;"></div>
+
+    <div style="margin-top: 32px; display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 26px 18px;">
+      <div><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #15120e;"><image-slot id="bw-f-major" src="{{ pic.major }}" fit="contain" shape="rect" placeholder="《少校与少女》海报"></image-slot></div><div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-size: 17px;">少校与少女</div><div style="font-family: 'Bodoni Moda', serif; font-size: 14px; color: #8a8173;">1942</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #15120e;"><image-slot id="bw-f-emperor" src="{{ pic.emperor }}" fit="contain" shape="rect" placeholder="《皇帝圆舞曲》海报"></image-slot></div><div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-size: 17px;">皇帝圆舞曲</div><div style="font-family: 'Bodoni Moda', serif; font-size: 14px; color: #8a8173;">1948</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #15120e;"><image-slot id="bw-f-foreign" src="{{ pic.foreign }}" fit="contain" shape="rect" placeholder="《柏林艳史》海报"></image-slot></div><div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-size: 17px;">柏林艳史</div><div style="font-family: 'Bodoni Moda', serif; font-size: 14px; color: #8a8173;">1948</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #15120e;"><image-slot id="bw-f-stalag" src="{{ pic.stalag }}" fit="contain" shape="rect" placeholder="《战地军魂》海报"></image-slot></div><div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-size: 17px;">战地军魂</div><div style="font-family: 'Bodoni Moda', serif; font-size: 14px; color: #8a8173;">1953</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #15120e;"><image-slot id="bw-f-sabrina" src="{{ pic.sabrina }}" fit="contain" shape="rect" placeholder="《龙凤配》海报"></image-slot></div><div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-size: 17px;">龙凤配</div><div style="font-family: 'Bodoni Moda', serif; font-size: 14px; color: #8a8173;">1954</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #15120e;"><image-slot id="bw-f-itch" src="{{ pic.itch }}" fit="contain" shape="rect" placeholder="《七年之痒》海报"></image-slot></div><div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-size: 17px;">七年之痒</div><div style="font-family: 'Bodoni Moda', serif; font-size: 14px; color: #8a8173;">1955</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #15120e;"><image-slot id="bw-f-afternoon" src="{{ pic.afternoon }}" fit="contain" shape="rect" placeholder="《黄昏之恋》海报"></image-slot></div><div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-size: 17px;">黄昏之恋</div><div style="font-family: 'Bodoni Moda', serif; font-size: 14px; color: #8a8173;">1957</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #15120e;"><image-slot id="bw-f-hot" src="{{ pic.hot }}" fit="contain" shape="rect" placeholder="《热情似火》海报"></image-slot></div><div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-size: 17px; color: #8f2f22;">热情似火</div><div style="font-family: 'Bodoni Moda', serif; font-size: 14px; color: #8f2f22;">1959</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #15120e;"><image-slot id="bw-f-apartment" src="{{ pic.apartment }}" fit="contain" shape="rect" placeholder="《公寓春光》海报"></image-slot></div><div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-size: 17px; color: #8f2f22;">公寓春光</div><div style="font-family: 'Bodoni Moda', serif; font-size: 14px; color: #8f2f22;">1960</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #15120e;"><image-slot id="bw-f-onetwothree" src="{{ pic.onetwothree }}" fit="contain" shape="rect" placeholder="《玉女风流》海报"></image-slot></div><div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-size: 17px;">玉女风流</div><div style="font-family: 'Bodoni Moda', serif; font-size: 14px; color: #8a8173;">1961</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #15120e;"><image-slot id="bw-f-irma" src="{{ pic.irma }}" fit="contain" shape="rect" placeholder="《爱玛姑娘》海报"></image-slot></div><div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-size: 17px;">爱玛姑娘</div><div style="font-family: 'Bodoni Moda', serif; font-size: 14px; color: #8a8173;">1963</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #15120e;"><image-slot id="bw-f-kiss" src="{{ pic.kiss }}" fit="contain" shape="rect" placeholder="《红唇相吻》海报"></image-slot></div><div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-size: 17px;">红唇相吻</div><div style="font-family: 'Bodoni Moda', serif; font-size: 14px; color: #8a8173;">1964</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #15120e;"><image-slot id="bw-f-cookie" src="{{ pic.cookie }}" fit="contain" shape="rect" placeholder="《飞来福》海报"></image-slot></div><div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-size: 17px;">飞来福</div><div style="font-family: 'Bodoni Moda', serif; font-size: 14px; color: #8a8173;">1966</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #15120e;"><image-slot id="bw-f-holmes" src="{{ pic.holmes }}" fit="contain" shape="rect" placeholder="《福尔摩斯秘史》海报"></image-slot></div><div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-size: 17px;">福尔摩斯秘史</div><div style="font-family: 'Bodoni Moda', serif; font-size: 14px; color: #8a8173;">1970</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #15120e;"><image-slot id="bw-f-avanti" src="{{ pic.avanti }}" fit="contain" shape="rect" placeholder="《两代情》海报"></image-slot></div><div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-size: 17px;">两代情</div><div style="font-family: 'Bodoni Moda', serif; font-size: 14px; color: #8a8173;">1972</div></div>
+      <div><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #15120e;"><image-slot id="bw-f-frontpage" src="{{ pic.frontpage }}" fit="contain" shape="rect" placeholder="《满城风雨》海报"></image-slot></div><div style="margin-top: 10px; font-family: 'Noto Serif SC', serif; font-size: 17px;">满城风雨</div><div style="font-family: 'Bodoni Moda', serif; font-size: 14px; color: #8a8173;">1974</div></div>
+    </div>
+    <p style="margin: 18px 0 0; font-size: 14px; line-height: 1.8; color: #645c50;">海报与头像自维基百科自动取图，取图失败的格位留空；拖入图片即可补齐或替换。</p>
+
+    <div style="margin-top: 44px; display: grid; gap: 1px; background: rgba(21,18,14,0.16);">
+      <div style="display: grid; grid-template-columns: 250px 1fr; gap: 1px;">
+        <div style="background: #1c5a5e; color: #eee6d4; padding: 12px 20px; font-size: 14px; letter-spacing: 0.16em;">作品（年份）</div>
+        <div style="background: #1c5a5e; color: #eee6d4; padding: 12px 22px; font-size: 14px; letter-spacing: 0.16em;">主持人的核心看法</div>
+      </div>
+      <div style="display: grid; grid-template-columns: 250px 1fr; gap: 1px;"><div style="background: #f7f0e0; padding: 15px 20px; font-family: 'Noto Serif SC', serif; font-size: 18px;">少校与少女<span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #8a8173;"> 1942</span></div><div style="background: #f7f0e0; padding: 15px 22px; font-size: 16px; line-height: 1.85; color: #2a251d;">成年女性扮 12 岁，是「向下伪装」，用退化逃离成人世界的骚扰；知情层级设计精妙；伪装的人反而比「真实」的人诚实</div></div>
+      <div style="display: grid; grid-template-columns: 250px 1fr; gap: 1px;"><div style="background: #e7dec9; padding: 15px 20px; font-family: 'Noto Serif SC', serif; font-size: 18px;">皇帝圆舞曲<span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #8a8173;"> 1948</span></div><div style="background: #e7dec9; padding: 15px 22px; font-size: 16px; line-height: 1.85; color: #2a251d;">留声机象征美式商业民主冲击欧洲贵族；贵族要淹死「杂种」小狗影射集中营；模仿刘别谦但不成功</div></div>
+      <div style="display: grid; grid-template-columns: 250px 1fr; gap: 1px;"><div style="background: #f7f0e0; padding: 15px 20px; font-family: 'Noto Serif SC', serif; font-size: 18px;">柏林艳史<span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #8a8173;"> 1948</span></div><div style="background: #f7f0e0; padding: 15px 22px; font-size: 16px; line-height: 1.85; color: #2a251d;">绝对道德（琼·亚瑟）对相对道德（黛德丽）；美国人想改造德国，反被教育</div></div>
+      <div style="display: grid; grid-template-columns: 250px 1fr; gap: 1px;"><div style="background: #e7dec9; padding: 15px 20px; font-family: 'Noto Serif SC', serif; font-size: 18px;">战地军魂<span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #8a8173;"> 1953</span></div><div style="background: #e7dec9; padding: 15px 22px; font-size: 16px; line-height: 1.85; color: #2a251d;">反英雄主义的战俘营片，讽刺群盲政治与平庸之恶，影射麦卡锡主义</div></div>
+      <div style="display: grid; grid-template-columns: 250px 1fr; gap: 1px;"><div style="background: #f7f0e0; padding: 15px 20px; font-family: 'Noto Serif SC', serif; font-size: 18px;">龙凤配<span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #8a8173;"> 1954</span></div><div style="background: #f7f0e0; padding: 15px 22px; font-size: 16px; line-height: 1.85; color: #2a251d;">两兄弟分别代表资本主义的消费者与生产者，赫本带回的「巴黎美学」唤醒了鲍嘉</div></div>
+      <div style="display: grid; grid-template-columns: 250px 1fr; gap: 1px;"><div style="background: #e7dec9; padding: 15px 20px; font-family: 'Noto Serif SC', serif; font-size: 18px;">七年之痒<span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #8a8173;"> 1955</span></div><div style="background: #e7dec9; padding: 15px 22px; font-size: 16px; line-height: 1.85; color: #2a251d;">审查拿掉出轨，留下「没犯罪却愧疚」的空缺，歪打正着成了心理电影</div></div>
+      <div style="display: grid; grid-template-columns: 250px 1fr; gap: 1px;"><div style="background: #f7f0e0; padding: 15px 20px; font-family: 'Noto Serif SC', serif; font-size: 18px;">黄昏之恋<span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #8a8173;"> 1957</span></div><div style="background: #f7f0e0; padding: 15px 22px; font-size: 16px; line-height: 1.85; color: #2a251d;">两人唯一正面争论的一部</div></div>
+      <div style="display: grid; grid-template-columns: 250px 1fr; gap: 1px;"><div style="background: rgba(143,47,34,0.1); padding: 15px 20px; font-family: 'Noto Serif SC', serif; font-size: 18px; color: #8f2f22;">热情似火<span style="font-family: 'Bodoni Moda', serif; font-size: 15px;"> 1959</span></div><div style="background: rgba(143,47,34,0.1); padding: 15px 22px; font-size: 16px; line-height: 1.85; color: #2a251d;">全集重点</div></div>
+      <div style="display: grid; grid-template-columns: 250px 1fr; gap: 1px;"><div style="background: rgba(143,47,34,0.1); padding: 15px 20px; font-family: 'Noto Serif SC', serif; font-size: 18px; color: #8f2f22;">公寓春光<span style="font-family: 'Bodoni Moda', serif; font-size: 15px;"> 1960</span></div><div style="background: rgba(143,47,34,0.1); padding: 15px 22px; font-size: 16px; line-height: 1.85; color: #2a251d;">怀尔德自认「犯错最少」的作品</div></div>
+      <div style="display: grid; grid-template-columns: 250px 1fr; gap: 1px;"><div style="background: #f7f0e0; padding: 15px 20px; font-family: 'Noto Serif SC', serif; font-size: 18px;">玉女风流<span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #8a8173;"> 1961</span></div><div style="background: #f7f0e0; padding: 15px 22px; font-size: 16px; line-height: 1.85; color: #2a251d;">节奏比《热情似火》还快；不站队，苏、美、前纳粹一起黑</div></div>
+      <div style="display: grid; grid-template-columns: 250px 1fr; gap: 1px;"><div style="background: #e7dec9; padding: 15px 20px; font-family: 'Noto Serif SC', serif; font-size: 18px;">爱玛姑娘<span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #8a8173;"> 1963</span></div><div style="background: #e7dec9; padding: 15px 22px; font-size: 16px; line-height: 1.85; color: #2a251d;">商业上最成功，但没建立男主为何深爱女主；删掉歌曲后没建立新的形式系统</div></div>
+      <div style="display: grid; grid-template-columns: 250px 1fr; gap: 1px;"><div style="background: #f7f0e0; padding: 15px 20px; font-family: 'Noto Serif SC', serif; font-size: 18px;">红唇相吻<span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #8a8173;"> 1964</span></div><div style="background: #f7f0e0; padding: 15px 22px; font-size: 16px; line-height: 1.85; color: #2a251d;">换妻命题在美国被当色情，欧洲人看出是道德讽刺；缺了原定的彼得·塞勒斯</div></div>
+      <div style="display: grid; grid-template-columns: 250px 1fr; gap: 1px;"><div style="background: #e7dec9; padding: 15px 20px; font-family: 'Noto Serif SC', serif; font-size: 18px;">飞来福<span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #8a8173;"> 1966</span></div><div style="background: #e7dec9; padding: 15px 22px; font-size: 16px; line-height: 1.85; color: #2a251d;">保险骗局宇宙，全员赌徒；黑人角色今天看是工具化</div></div>
+      <div style="display: grid; grid-template-columns: 250px 1fr; gap: 1px;"><div style="background: #f7f0e0; padding: 15px 20px; font-family: 'Noto Serif SC', serif; font-size: 18px;">福尔摩斯秘史<span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #8a8173;"> 1970</span></div><div style="background: #f7f0e0; padding: 15px 22px; font-size: 16px; line-height: 1.85; color: #2a251d;">罗森鲍姆认为被严重低估；原想把福尔摩斯处理成真正的同性恋</div></div>
+      <div style="display: grid; grid-template-columns: 250px 1fr; gap: 1px;"><div style="background: #e7dec9; padding: 15px 20px; font-family: 'Noto Serif SC', serif; font-size: 18px;">两代情<span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #8a8173;"> 1972</span></div><div style="background: #e7dec9; padding: 15px 22px; font-size: 16px; line-height: 1.85; color: #2a251d;">人物关系失真；原始设定是父亲与意大利男侍者的同性恋情，被联艺否决</div></div>
+      <div style="display: grid; grid-template-columns: 250px 1fr; gap: 1px;"><div style="background: #f7f0e0; padding: 15px 20px; font-family: 'Noto Serif SC', serif; font-size: 18px;">满城风雨<span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #8a8173;"> 1974</span></div><div style="background: #f7f0e0; padding: 15px 22px; font-size: 16px; line-height: 1.85; color: #2a251d;">晚期罕见盈利片，影射尼克松；台词不像霍克斯版那样重叠，能量减弱</div></div>
+    </div>
+
+    <div style="margin-top: 46px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
+      <div style="border-top: 4px solid #8f2f22; padding-top: 22px;">
+        <h3 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 30px;">热情似火 <span style="font-family: 'Bodoni Moda', serif; font-weight: 400; font-size: 22px; color: #8a8173;">1959</span></h3>
+        <div style="margin-top: 20px; display: grid; gap: 16px; font-size: 16px; line-height: 1.9; color: #2a251d;">
+          <div><span style="font-weight: 500; color: #8f2f22;">转折意义　</span>此前《毒药与老妇》《你逃我也逃》里的死亡威胁都不真实，这部第一次把喜剧和真实的死亡恐惧放在一起，之后才有《奇爱博士》《陆军野战医院》。</div>
+          <div><span style="font-weight: 500; color: #8f2f22;">Joe 与 Jerry　</span>Joe 扮女装始终是工具；Jerry 的性别认知一直在摇摆。</div>
+          <div><span style="font-weight: 500; color: #8f2f22;">关键证据　</span>Jerry 在还没与任何女孩互动前，就把假名从 Geraldine 改成 Daphne，理由只是「不喜欢」——这是审美偏好和身份表达，不再是生存策略。</div>
+          <div><span style="font-weight: 500; color: #8f2f22;">两种读法　</span>「掉进糖果店」可以是男性越界的偷窥快感，也可以是被同性群体接纳的归属感。Jerry 从想吃糖果的人，变成别人眼里的糖果；与巴特勒「性别是表演」相呼应。</div>
+          <div style="background: #15120e; color: #eee6d4; padding: 22px 24px; font-family: 'Noto Serif SC', serif; font-size: 20px; line-height: 1.75;">喜剧讽刺在做减法，爱欲在做加法——逃亡伪装的过程，就是把假的变成真的。</div>
+          <div><span style="font-weight: 500; color: #8f2f22;">幕后　</span>拍成黑白是为了让男扮女装可信，也贴合禁酒令时代的影像记忆；没拿到审查印章照样大卖，海斯法典从此名存实亡。</div>
+        </div>
+      </div>
+      <div style="border-top: 4px solid #8f2f22; padding-top: 22px;">
+        <h3 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 30px;">公寓春光 <span style="font-family: 'Bodoni Moda', serif; font-weight: 400; font-size: 22px; color: #8a8173;">1960</span></h3>
+        <div style="margin-top: 20px; display: grid; gap: 16px; font-size: 16px; line-height: 1.9; color: #2a251d;">
+          <div><span style="font-weight: 500; color: #8f2f22;">结构　</span>用克里斯汀·汤普森的四段式分析，中点是库贝里克小姐自杀。</div>
+          <div><span style="font-weight: 500; color: #8f2f22;">「驼背」　</span>怀尔德耿耿于怀的地方：第三幕前两场告密戏前后挨着。</div>
+          <div><span style="font-weight: 500; color: #8f2f22;">道具　</span>两把钥匙（自家公寓／经理洗手间）对称；破碎的化妆镜让巴克斯特在一句台词都没有的情况下得知真相，即刘别谦的「二加二」。</div>
+          <div><span style="font-weight: 500; color: #8f2f22;">空间　</span>强制透视的办公室布景，越往后人越小，最后是儿童和人偶，参考金·维多《群众》；电梯楼层＝等级。</div>
+          <div><span style="font-weight: 500; color: #8f2f22;">mensch　</span>邻居医生的这句意第绪语，被读作怀尔德少见的犹太元素与救赎象征。</div>
+          <div style="background: #15120e; color: #eee6d4; padding: 22px 24px; font-family: 'Noto Serif SC', serif; font-size: 20px; line-height: 1.75;">结尾香槟开瓶声被误以为枪响，先吓后团圆；「闭嘴发牌吧」是他爱情观的最佳注脚。</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 40px; background: #f7f0e0; border: 1px solid rgba(21,18,14,0.14); padding: 30px 32px;">
+      <div style="display: flex; align-items: baseline; gap: 16px;">
+        <h3 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 26px;">黄昏之恋（1957）· 两人唯一正面争论的一部</h3>
+      </div>
+      <div style="margin-top: 22px; display: grid; grid-template-columns: 1fr 1fr; gap: 28px;">
+        <div style="border-left: 3px solid #1c5a5e; padding-left: 20px;">
+          <div style="font-size: 13px; letter-spacing: 0.2em; color: #1c5a5e;">辩护方</div>
+          <p style="margin: 10px 0 0; font-size: 16px; line-height: 1.9; color: #2a251d;">这是 50 年代「金龟婿」浪漫喜剧的反向操作，赫本掌握信息、反向伪装成情场老手，暴露老男人内心的空洞。</p>
+        </div>
+        <div style="border-left: 3px solid #8f2f22; padding-left: 20px;">
+          <div style="font-size: 13px; letter-spacing: 0.2em; color: #8f2f22;">反对方</div>
+          <p style="margin: 10px 0 0; font-size: 16px; line-height: 1.9; color: #2a251d;">结尾「看吐了」，库珀是典型的有毒男性气质，结合只是施舍，28 岁年龄差也太大。</p>
+        </div>
+      </div>
+      <p style="margin: 22px 0 0; padding-top: 18px; border-top: 1px solid rgba(21,18,14,0.14); font-size: 16px; line-height: 1.9; color: #2a251d;"><span style="letter-spacing: 0.2em; color: #645c50;">共识　</span>换成原定的加里·格兰特会好很多，因为格兰特的表演自带自嘲。</p>
+    </div>
+  </section>
+
+  <section style="padding: 70px 90px 0;">
+    <div style="display: flex; align-items: baseline; gap: 18px;">
+      <span style="font-family: 'Cinzel', serif; font-weight: 600; font-size: 21px; letter-spacing: 0.14em; color: #a8813c;">V</span>
+      <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 38px; letter-spacing: 0.12em;">刘别谦与怀尔德</h2>
+      <span style="margin-left: auto; font-size: 14px; letter-spacing: 0.18em; color: #645c50;">墙上挂着「刘别谦会怎么做」</span>
+    </div>
+    <div style="margin-top: 14px; height: 4px; border-top: 2px solid #15120e; border-bottom: 1px solid #15120e;"></div>
+
+    <div style="margin-top: 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
+      <div style="display: grid; gap: 1px; background: rgba(21,18,14,0.16);">
+        <div style="display: grid; grid-template-columns: 110px 1fr 1fr; gap: 1px;">
+          <div style="background: #4b3a63; padding: 12px 16px;"></div>
+          <div style="background: #4b3a63; color: #eee6d4; padding: 12px 18px; font-family: 'Noto Serif SC', serif; font-size: 18px;">刘别谦</div>
+          <div style="background: #4b3a63; color: #eee6d4; padding: 12px 18px; font-family: 'Noto Serif SC', serif; font-size: 18px;">怀尔德</div>
+        </div>
+        <div style="display: grid; grid-template-columns: 110px 1fr 1fr; gap: 1px;"><div style="background: #e7dec9; padding: 14px 16px; font-size: 15px; color: #645c50;">讽刺底色</div><div style="background: #f7f0e0; padding: 14px 18px; font-size: 16px; line-height: 1.8;">宽容，「犯错没什么大不了」</div><div style="background: #f7f0e0; padding: 14px 18px; font-size: 16px; line-height: 1.8;">愤怒，豁出去的自嘲</div></div>
+        <div style="display: grid; grid-template-columns: 110px 1fr 1fr; gap: 1px;"><div style="background: #e7dec9; padding: 14px 16px; font-size: 15px; color: #645c50;">表达方式</div><div style="background: #f7f0e0; padding: 14px 18px; font-size: 16px; line-height: 1.8;">含蓄、省略、暗示</div><div style="background: #f7f0e0; padding: 14px 18px; font-size: 16px; line-height: 1.8;">高强度揭露，常常直白</div></div>
+        <div style="display: grid; grid-template-columns: 110px 1fr 1fr; gap: 1px;"><div style="background: #e7dec9; padding: 14px 16px; font-size: 15px; color: #645c50;">拍什么</div><div style="background: #f7f0e0; padding: 14px 18px; font-size: 16px; line-height: 1.8;">抽象化的欧洲，从不拍当代美国</div><div style="background: #f7f0e0; padding: 14px 18px; font-size: 16px; line-height: 1.8;">赤裸裸的美国，以及欧美对照</div></div>
+        <div style="display: grid; grid-template-columns: 110px 1fr 1fr; gap: 1px;"><div style="background: #e7dec9; padding: 14px 16px; font-size: 15px; color: #645c50;">视角</div><div style="background: #f7f0e0; padding: 14px 18px; font-size: 16px; line-height: 1.8;">彻底的局外人</div><div style="background: #f7f0e0; padding: 14px 18px; font-size: 16px; line-height: 1.8;">局外人与局内人兼有</div></div>
+      </div>
+      <div style="display: grid; gap: 20px;">
+        <div>
+          <div style="font-size: 13px; letter-spacing: 0.2em; color: #4b3a63;">怀尔德学到的</div>
+          <p style="margin: 10px 0 0; font-size: 17px; line-height: 1.9; color: #2a251d;">「二加二原则」、包袱叠加、道具传递心理、浪漫邂逅（meet cute）。</p>
+        </div>
+        <div style="display: grid; grid-template-columns: 96px 1fr; gap: 20px; align-items: start;">
+          <div><div style="position: relative; width: 100%; aspect-ratio: 2 / 3; background: #15120e;"><image-slot id="bw-f-ninotchka" src="{{ pic.ninotchka }}" fit="contain" shape="rect" placeholder="《尼诺契卡》海报"></image-slot></div><div style="margin-top: 6px; font-size: 13px; color: #645c50;">尼诺契卡 <span style="font-family: 'Bodoni Moda', serif;">1939</span></div></div>
+          <div>
+            <div style="font-size: 13px; letter-spacing: 0.2em; color: #4b3a63;">彩蛋</div>
+            <p style="margin: 10px 0 0; font-size: 17px; line-height: 1.9; color: #2a251d;">拍《尼诺契卡》时嘉宝不许编剧进场，怀尔德躲起来偷看；他办公室墙上挂着「刘别谦会怎么做」。</p>
+          </div>
+        </div>
+        <div style="background: rgba(75,58,99,0.12); padding: 24px 26px;">
+          <div style="font-size: 13px; letter-spacing: 0.2em; color: #4b3a63;">结论</div>
+          <p style="margin: 10px 0 0; font-size: 17px; line-height: 1.9; color: #2a251d;">怀尔德最好的作品（《双重赔偿》《日落大道》《热情似火》）几乎没有刘别谦的影子；最像刘别谦的（《龙凤配》《黄昏之恋》《两代情》《福尔摩斯秘史》）反而不是顶尖之作。学刘别谦技巧的人很多，学性情的很少，最像的是小津。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 70px 90px 0;">
+    <div style="display: flex; align-items: baseline; gap: 18px;">
+      <span style="font-family: 'Cinzel', serif; font-weight: 600; font-size: 21px; letter-spacing: 0.14em; color: #a8813c;">VI</span>
+      <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 38px; letter-spacing: 0.12em;">人物关系网</h2>
+      <span style="margin-left: auto; font-size: 14px; letter-spacing: 0.18em; color: #645c50;">灰色虚线＝从未合作成</span>
+    </div>
+    <div style="margin-top: 14px; height: 4px; border-top: 2px solid #15120e; border-bottom: 1px solid #15120e;"></div>
+
+    <div style="margin-top: 36px; display: grid; grid-template-columns: 1fr 260px 1fr; gap: 0; align-items: center;">
+      <div style="display: grid; gap: 14px;">
+        <div style="text-align: right; font-size: 13px; letter-spacing: 0.2em; color: #4b3a63;">创作伙伴</div>
+        <div style="display: flex; align-items: center; gap: 0;"><div style="flex: 1; display: flex; align-items: center; justify-content: flex-end; gap: 16px; background: rgba(75,58,99,0.14); padding: 12px 12px 12px 18px;"><div style="text-align: right;"><div style="font-family: 'Noto Serif SC', serif; font-size: 20px;">刘别谦</div><div style="margin-top: 4px; font-size: 14px; color: #463f34;">恩师，墙上挂字</div></div><div style="position: relative; width: 56px; height: 56px; flex: none; border-radius: 50%; background: #d9cfb8;"><image-slot id="bw-p-lubitsch" src="{{ pic.lubitsch }}" shape="circle" placeholder="刘别谦"></image-slot></div></div><div style="width: 56px; border-top: 2px solid #4b3a63;"></div></div>
+        <div style="display: flex; align-items: center; gap: 0;"><div style="flex: 1; display: flex; align-items: center; justify-content: flex-end; gap: 16px; background: rgba(75,58,99,0.14); padding: 12px 12px 12px 18px;"><div style="text-align: right;"><div style="font-family: 'Noto Serif SC', serif; font-size: 20px;">查尔斯·布拉克特</div><div style="margin-top: 4px; font-size: 14px; color: #463f34;">1936–1950，「过滤网」</div></div><div style="position: relative; width: 56px; height: 56px; flex: none; border-radius: 50%; background: #d9cfb8;"><image-slot id="bw-p-brackett" src="{{ pic.brackett }}" shape="circle" placeholder="查尔斯·布拉克特"></image-slot></div></div><div style="width: 56px; border-top: 2px solid #4b3a63;"></div></div>
+        <div style="display: flex; align-items: center; gap: 0;"><div style="flex: 1; display: flex; align-items: center; justify-content: flex-end; gap: 16px; background: rgba(75,58,99,0.14); padding: 12px 12px 12px 18px;"><div style="text-align: right;"><div style="font-family: 'Noto Serif SC', serif; font-size: 20px;">I.A.L. 戴蒙德</div><div style="margin-top: 4px; font-size: 14px; color: #463f34;">1957 起，「精密延伸」</div></div><div style="position: relative; width: 56px; height: 56px; flex: none; border-radius: 50%; background: #d9cfb8;"><image-slot id="bw-p-diamond" src="{{ pic.diamond }}" shape="circle" placeholder="I.A.L. 戴蒙德"></image-slot></div></div><div style="width: 56px; border-top: 2px solid #4b3a63;"></div></div>
+      </div>
+      <div style="background: #15120e; color: #eee6d4; padding: 30px 26px; text-align: center;">
+        <div style="margin: 0 auto 18px; width: 132px; height: 132px; box-sizing: border-box; border: 1px solid #a8813c; border-radius: 50%; padding: 5px;"><div style="position: relative; width: 100%; height: 100%; border-radius: 50%; background: #2a251d;"><image-slot id="bw-p-wilder-hub" src="{{ pic.wilder }}" shape="circle" placeholder="怀尔德"></image-slot></div></div>
+        <div style="font-family: 'Noto Serif SC', serif; font-size: 28px; line-height: 1.3;">比利·怀尔德</div>
+        <div style="margin-top: 10px; font-size: 14px; line-height: 1.7; color: #c7bca3;">自认「只是个编剧」</div>
+      </div>
+      <div style="display: grid; gap: 14px;">
+        <div style="font-size: 13px; letter-spacing: 0.2em; color: #1c5a5e;">演员</div>
+        <div style="display: flex; align-items: center;"><div style="width: 56px; border-top: 2px solid #1c5a5e;"></div><div style="flex: 1; display: flex; align-items: center; gap: 16px; background: rgba(28,90,94,0.14); padding: 12px 18px 12px 12px;"><div style="position: relative; width: 56px; height: 56px; flex: none; border-radius: 50%; background: #d9cfb8;"><image-slot id="bw-p-lemmon" src="{{ pic.lemmon }}" shape="circle" placeholder="杰克·莱蒙"></image-slot></div><div><div style="font-family: 'Noto Serif SC', serif; font-size: 20px;">杰克·莱蒙</div><div style="margin-top: 4px; font-size: 14px; color: #463f34;">合作最多，生活中是邻居</div></div></div></div>
+        <div style="display: flex; align-items: center;"><div style="width: 56px; border-top: 2px solid #1c5a5e;"></div><div style="flex: 1; display: flex; align-items: center; gap: 16px; background: rgba(28,90,94,0.14); padding: 12px 18px 12px 12px;"><div style="position: relative; width: 56px; height: 56px; flex: none; border-radius: 50%; background: #d9cfb8;"><image-slot id="bw-p-matthau" src="{{ pic.matthau }}" shape="circle" placeholder="沃尔特·马修"></image-slot></div><div><div style="font-family: 'Noto Serif SC', serif; font-size: 20px;">沃尔特·马修</div><div style="margin-top: 4px; font-size: 14px; color: #463f34;">怀尔德的银幕化身</div></div></div></div>
+        <div style="display: flex; align-items: center;"><div style="width: 56px; border-top: 2px solid #1c5a5e;"></div><div style="flex: 1; display: flex; align-items: center; gap: 16px; background: rgba(28,90,94,0.14); padding: 12px 18px 12px 12px;"><div style="position: relative; width: 56px; height: 56px; flex: none; border-radius: 50%; background: #d9cfb8;"><image-slot id="bw-p-monroe" src="{{ pic.monroe }}" shape="circle" placeholder="玛丽莲·梦露"></image-slot></div><div><div style="font-family: 'Noto Serif SC', serif; font-size: 20px;">玛丽莲·梦露</div><div style="margin-top: 4px; font-size: 14px; color: #463f34;">爱恨交织</div></div></div></div>
+        <div style="display: flex; align-items: center;"><div style="width: 56px; border-top: 2px solid #1c5a5e;"></div><div style="flex: 1; display: flex; align-items: center; gap: 16px; background: rgba(28,90,94,0.14); padding: 12px 18px 12px 12px;"><div style="position: relative; width: 56px; height: 56px; flex: none; border-radius: 50%; background: #d9cfb8;"><image-slot id="bw-p-hepburn" src="{{ pic.hepburn }}" shape="circle" placeholder="奥黛丽·赫本"></image-slot></div><div><div style="font-family: 'Noto Serif SC', serif; font-size: 20px;">奥黛丽·赫本</div><div style="margin-top: 4px; font-size: 14px; color: #463f34;">治愈者</div></div></div></div>
+        <div style="display: flex; align-items: center;"><div style="width: 56px; border-top: 2px solid #1c5a5e;"></div><div style="flex: 1; display: flex; align-items: center; gap: 16px; background: rgba(28,90,94,0.14); padding: 12px 18px 12px 12px;"><div style="position: relative; width: 56px; height: 56px; flex: none; border-radius: 50%; background: #d9cfb8;"><image-slot id="bw-p-bogart" src="{{ pic.bogart }}" shape="circle" placeholder="亨弗莱·鲍嘉"></image-slot></div><div><div style="font-family: 'Noto Serif SC', serif; font-size: 20px;">亨弗莱·鲍嘉</div><div style="margin-top: 4px; font-size: 14px; color: #463f34;">闹崩后临终和解</div></div></div></div>
+        <div style="display: flex; align-items: center;"><div style="width: 56px; border-top: 2px dashed #a49a89;"></div><div style="flex: 1; display: flex; align-items: center; gap: 16px; background: rgba(21,18,14,0.05); border: 1px dashed #a49a89; padding: 11px 18px 11px 11px;"><div style="position: relative; width: 56px; height: 56px; flex: none; border-radius: 50%; background: #d9cfb8; filter: grayscale(1); opacity: 0.7;"><image-slot id="bw-p-grant" src="{{ pic.grant }}" shape="circle" placeholder="加里·格兰特"></image-slot></div><div><div style="font-family: 'Noto Serif SC', serif; font-size: 20px; color: #645c50;">加里·格兰特</div><div style="margin-top: 4px; font-size: 14px; color: #645c50;">从未合作成</div></div></div></div>
+      </div>
+    </div>
+
+    <div style="margin-top: 46px; display: grid; grid-template-columns: 1.15fr 1fr; gap: 40px; align-items: start;">
+      <div>
+        <div style="font-family: 'Noto Serif SC', serif; font-size: 24px;">两任编剧搭档</div>
+        <div style="margin-top: 18px; display: grid; gap: 1px; background: rgba(21,18,14,0.16);">
+          <div style="display: grid; grid-template-columns: 96px 1fr 1fr; gap: 1px;">
+            <div style="background: #4b3a63; padding: 12px 14px;"></div>
+            <div style="background: #4b3a63; color: #eee6d4; padding: 12px 18px; font-family: 'Noto Serif SC', serif; font-size: 18px;">布拉克特</div>
+            <div style="background: #4b3a63; color: #eee6d4; padding: 12px 18px; font-family: 'Noto Serif SC', serif; font-size: 18px;">戴蒙德</div>
+          </div>
+          <div style="display: grid; grid-template-columns: 96px 1fr 1fr; gap: 1px;"><div style="background: #e7dec9; padding: 14px; font-size: 15px; color: #645c50;">背景</div><div style="background: #f7f0e0; padding: 14px 18px; font-size: 16px; line-height: 1.8;">哈佛出身、东海岸精英</div><div style="background: #f7f0e0; padding: 14px 18px; font-size: 16px; line-height: 1.8;">罗马尼亚移民、数学竞赛冠军</div></div>
+          <div style="display: grid; grid-template-columns: 96px 1fr 1fr; gap: 1px;"><div style="background: #e7dec9; padding: 14px; font-size: 15px; color: #645c50;">作用</div><div style="background: #f7f0e0; padding: 14px 18px; font-size: 16px; line-height: 1.8;">负责语言与判断，过滤低俗趣味</div><div style="background: #f7f0e0; padding: 14px 18px; font-size: 16px; line-height: 1.8;">延伸怀尔德，按秒计算笑点间隔</div></div>
+          <div style="display: grid; grid-template-columns: 96px 1fr 1fr; gap: 1px;"><div style="background: #e7dec9; padding: 14px; font-size: 15px; color: #645c50;">相处</div><div style="background: #f7f0e0; padding: 14px 18px; font-size: 16px; line-height: 1.8;">常吵架，会扔电话本</div><div style="background: #f7f0e0; padding: 14px 18px; font-size: 16px; line-height: 1.8;">从不吵架，像两个「银行柜员」</div></div>
+          <div style="display: grid; grid-template-columns: 96px 1fr 1fr; gap: 1px;"><div style="background: #e7dec9; padding: 14px; font-size: 15px; color: #645c50;">气质</div><div style="background: #f7f0e0; padding: 14px 18px; font-size: 16px; line-height: 1.8;">优雅、有文学悲剧感</div><div style="background: #f7f0e0; padding: 14px 18px; font-size: 16px; line-height: 1.8;">更极端灰暗，严丝合缝的喜剧机器</div></div>
+          <div style="display: grid; grid-template-columns: 96px 1fr 1fr; gap: 1px;"><div style="background: #e7dec9; padding: 14px; font-size: 15px; color: #645c50;">结局</div><div style="background: #f7f0e0; padding: 14px 18px; font-size: 16px; line-height: 1.8;">《日落大道》后分手，像离婚</div><div style="background: #f7f0e0; padding: 14px 18px; font-size: 16px; line-height: 1.8;">合作至晚年</div></div>
+        </div>
+        <p style="margin: 16px 0 0; font-size: 15px; line-height: 1.85; color: #645c50;">彩蛋：「人无完人」是怀尔德临时想起戴蒙德之前提过的一句台词。</p>
+      </div>
+
+      <div style="display: grid; gap: 16px;">
+        <div style="font-family: 'Noto Serif SC', serif; font-size: 24px;">片场的金句与数字</div>
+        <div style="background: #15120e; color: #eee6d4; padding: 24px 26px;">
+          <div style="font-size: 13px; letter-spacing: 0.2em; color: #c9a961;">对莱蒙</div>
+          <div style="margin-top: 14px; display: grid; gap: 6px; font-family: 'Noto Serif SC', serif; font-size: 20px; line-height: 1.7;">
+            <div>「演得少一点。」</div>
+            <div>「再少就没得演了。」</div>
+            <div>「没得演就对了。」</div>
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+          <div style="background: rgba(28,90,94,0.14); padding: 18px 20px;"><div style="font-family: 'Bodoni Moda', serif; font-size: 34px; color: #1c5a5e;">47</div><div style="margin-top: 4px; font-size: 15px; line-height: 1.7; color: #2a251d;">条——梦露一句「是我，Sugar」</div></div>
+          <div style="background: rgba(28,90,94,0.14); padding: 18px 20px;"><div style="font-family: 'Bodoni Moda', serif; font-size: 34px; color: #1c5a5e;">51</div><div style="margin-top: 4px; font-size: 15px; line-height: 1.7; color: #2a251d;">条——卡格尼《玉女风流》两页纸的一场戏</div></div>
+        </div>
+        <div style="font-size: 16px; line-height: 1.95; color: #2a251d; display: grid; gap: 12px;">
+          <div>雪莉·麦克雷恩漏一个词，重拍七八遍。</div>
+          <div>怀尔德谈梦露：「我有个老姨妈住在维也纳，每句台词都说得完美，但谁要看她？」他对梦露的定位是「优雅的俗气」。</div>
+          <div>赫本在《龙凤配》剧本没写完时，故意演错帮他拖了一天。</div>
+          <div>他讨厌「演瘸子、演弱智拿奖」的表演，最欣赏格兰特的举重若轻。</div>
+          <div>莱蒙被定位为「低于平均线的普通人」，区别于斯图尔特、汤姆·汉克斯式的英雄化普通人。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 70px 90px 0;">
+    <div style="display: flex; align-items: baseline; gap: 18px;">
+      <span style="font-family: 'Cinzel', serif; font-weight: 600; font-size: 21px; letter-spacing: 0.14em; color: #a8813c;">VII</span>
+      <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 38px; letter-spacing: 0.12em;">总论：四条主线</h2>
+      <span style="margin-left: auto; font-size: 14px; letter-spacing: 0.18em; color: #645c50;">欧美对照 · cynical · 伪装即身份 · 审查博弈</span>
+    </div>
+    <div style="margin-top: 14px; height: 4px; border-top: 2px solid #15120e; border-bottom: 1px solid #15120e;"></div>
+
+    <div style="margin-top: 34px; display: grid; grid-template-columns: 520px 1fr; gap: 46px; align-items: start;">
+      <div style="background: #f7f0e0; border: 1px solid rgba(21,18,14,0.14); padding: 28px 30px;">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <div style="font-size: 13px; letter-spacing: 0.2em; color: #4b3a63;">欧美对照立场的演变</div>
+          <div style="display: flex; gap: 16px; font-size: 13px; color: #645c50;"><span style="display: flex; align-items: center; gap: 7px;"><span style="width: 14px; height: 14px; background: #1c5a5e;"></span>肯定美国</span><span style="display: flex; align-items: center; gap: 7px;"><span style="width: 14px; height: 14px; background: #a8813c;"></span>批判与思乡</span></div>
+        </div>
+        <div style="margin-top: 22px; display: grid; gap: 0;">
+          <div style="display: grid; grid-template-columns: 20px 1fr; gap: 18px;">
+            <div style="display: flex; flex-direction: column; align-items: center;"><div style="width: 14px; height: 14px; background: #1c5a5e; margin-top: 6px;"></div><div style="flex: 1; width: 2px; background: #1c5a5e;"></div></div>
+            <div style="padding-bottom: 24px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 20px;">皇帝圆舞曲 <span style="font-family: 'Bodoni Moda', serif; font-size: 16px; color: #8a8173;">1948</span></div><div style="margin-top: 6px; font-size: 16px; line-height: 1.8; color: #2a251d;">感激美国：用美式民主瓦解欧洲等级</div></div>
+          </div>
+          <div style="display: grid; grid-template-columns: 20px 1fr; gap: 18px;">
+            <div style="display: flex; flex-direction: column; align-items: center;"><div style="width: 14px; height: 14px; background: #1c5a5e;"></div><div style="flex: 1; width: 2px; background: linear-gradient(#1c5a5e, #a8813c);"></div></div>
+            <div style="padding-bottom: 24px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 20px;">柏林艳史 <span style="font-family: 'Bodoni Moda', serif; font-size: 16px; color: #8a8173;">1948</span></div><div style="margin-top: 6px; font-size: 16px; line-height: 1.8; color: #2a251d;">美国式天真道德，反被废墟欧洲改变</div></div>
+          </div>
+          <div style="display: grid; grid-template-columns: 20px 1fr; gap: 18px;">
+            <div style="display: flex; flex-direction: column; align-items: center;"><div style="width: 14px; height: 14px; background: #a8813c;"></div><div style="flex: 1; width: 2px; background: #a8813c;"></div></div>
+            <div style="padding-bottom: 24px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 20px;">龙凤配 <span style="font-family: 'Bodoni Moda', serif; font-size: 16px; color: #8a8173;">1954</span> · 黄昏之恋 <span style="font-family: 'Bodoni Moda', serif; font-size: 16px; color: #8a8173;">1957</span></div><div style="margin-top: 6px; font-size: 16px; line-height: 1.8; color: #2a251d;">批判美国：巴黎美学唤醒资本主义机器</div></div>
+          </div>
+          <div style="display: grid; grid-template-columns: 20px 1fr; gap: 18px;">
+            <div style="display: flex; flex-direction: column; align-items: center;"><div style="width: 14px; height: 14px; background: #a8813c;"></div><div style="flex: 1; width: 2px; background: #a8813c;"></div></div>
+            <div style="padding-bottom: 24px;"><div style="font-family: 'Noto Serif SC', serif; font-size: 20px;">玉女风流 <span style="font-family: 'Bodoni Moda', serif; font-size: 16px; color: #8a8173;">1961</span></div><div style="margin-top: 6px; font-size: 16px; line-height: 1.8; color: #2a251d;">两边都荒谬：意识形态只是外套</div></div>
+          </div>
+          <div style="display: grid; grid-template-columns: 20px 1fr; gap: 18px;">
+            <div style="display: flex; flex-direction: column; align-items: center;"><div style="width: 14px; height: 14px; background: #a8813c;"></div></div>
+            <div><div style="font-family: 'Noto Serif SC', serif; font-size: 20px;">晚期：法、英、意、希腊轮流拍</div><div style="margin-top: 6px; font-size: 16px; line-height: 1.8; color: #2a251d;">思乡：《两代情》里父亲遗体留在意大利</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: grid; gap: 24px;">
+        <div>
+          <div style="font-family: 'Noto Serif SC', serif; font-size: 22px; color: #4b3a63;">欧美对照</div>
+          <p style="margin: 8px 0 0; font-size: 17px; line-height: 1.95; color: #2a251d; text-wrap: pretty;">与亨利·詹姆斯不同，詹姆斯是美国人去欧洲找更高级的文明，怀尔德是被旧世界驱逐的难民，知道「文明的老欧洲」能生产出极度的野蛮。他是坚定的自由派，认同美国的商业活力，但受不了清教徒式的伪善。</p>
+        </div>
+        <div>
+          <div style="font-family: 'Noto Serif SC', serif; font-size: 22px; color: #4b3a63;">cynical</div>
+          <p style="margin: 8px 0 0; font-size: 17px; line-height: 1.95; color: #2a251d; text-wrap: pretty;">批评家们评价他同样刻薄（德怀特·麦克唐纳说他是「用苦巧克力做糖霜，底下还是发霉的蛋糕」）。主持人认为他的参照是维也纳作家卡尔·克劳斯，是见证文明崩塌之后的愤世嫉俗。</p>
+        </div>
+        <div>
+          <div style="font-family: 'Noto Serif SC', serif; font-size: 22px; color: #4b3a63;">伪装即身份</div>
+          <p style="margin: 8px 0 0; font-size: 17px; line-height: 1.95; color: #2a251d; text-wrap: pretty;">流亡经验让他认定身份只是表演，真实情感往往要经过伪装的骗局才能抵达。规律：正剧里的伪装通向病态悲剧（《日落大道》《费多拉》），喜剧里的伪装通向解放（《热情似火》）。</p>
+        </div>
+        <div style="background: rgba(75,58,99,0.12); padding: 22px 24px;">
+          <div style="font-size: 15px; line-height: 1.9; color: #2a251d;"><span style="letter-spacing: 0.2em; color: #4b3a63;">最终判断　</span>极度坦诚加极度刻薄，而且刻薄从不指向小人物。</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 42px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
+      <div>
+        <div style="font-family: 'Noto Serif SC', serif; font-size: 22px; color: #4b3a63;">审查博弈</div>
+        <p style="margin: 8px 0 0; font-size: 16px; line-height: 1.9; color: #2a251d;">与刘别谦、希区柯克并列为和海斯法典周旋最聪明的前三名。</p>
+        <div style="margin-top: 18px; display: grid; gap: 1px; background: rgba(21,18,14,0.16);">
+          <div style="display: grid; grid-template-columns: 170px 1fr; gap: 1px;">
+            <div style="background: #1c5a5e; color: #eee6d4; padding: 11px 16px; font-size: 14px; letter-spacing: 0.16em;">作品</div>
+            <div style="background: #1c5a5e; color: #eee6d4; padding: 11px 18px; font-size: 14px; letter-spacing: 0.16em;">绕过审查的手法</div>
+          </div>
+          <div style="display: grid; grid-template-columns: 170px 1fr; gap: 1px;"><div style="background: #e7dec9; padding: 13px 16px; font-family: 'Noto Serif SC', serif; font-size: 17px;">少校与少女</div><div style="background: #f7f0e0; padding: 13px 18px; font-size: 16px; line-height: 1.8;">「他以为她是怕打雷的孩子」，让同床合法</div></div>
+          <div style="display: grid; grid-template-columns: 170px 1fr; gap: 1px;"><div style="background: #e7dec9; padding: 13px 16px; font-family: 'Noto Serif SC', serif; font-size: 17px;">柏林艳史</div><div style="background: #f7f0e0; padding: 13px 18px; font-size: 16px; line-height: 1.8;">用家乡寄来的蛋糕在黑市换床垫送情人；危险内容放进歌词</div></div>
+          <div style="display: grid; grid-template-columns: 170px 1fr; gap: 1px;"><div style="background: #e7dec9; padding: 13px 16px; font-family: 'Noto Serif SC', serif; font-size: 17px;">失去的周末</div><div style="background: #f7f0e0; padding: 13px 18px; font-size: 16px; line-height: 1.8;">原作的同性恋压抑转移到男护士身上</div></div>
+          <div style="display: grid; grid-template-columns: 170px 1fr; gap: 1px;"><div style="background: #e7dec9; padding: 13px 16px; font-family: 'Noto Serif SC', serif; font-size: 17px;">龙凤配</div><div style="background: #f7f0e0; padding: 13px 18px; font-size: 16px; line-height: 1.8;">把自杀拍成闹剧</div></div>
+          <div style="display: grid; grid-template-columns: 170px 1fr; gap: 1px;"><div style="background: #e7dec9; padding: 13px 16px; font-family: 'Noto Serif SC', serif; font-size: 17px;">七年之痒</div><div style="background: #f7f0e0; padding: 13px 18px; font-size: 16px; line-height: 1.8;">拿掉出轨，只留幻想</div></div>
+          <div style="display: grid; grid-template-columns: 170px 1fr; gap: 1px;"><div style="background: #e7dec9; padding: 13px 16px; font-family: 'Noto Serif SC', serif; font-size: 17px;">黄昏之恋</div><div style="background: #f7f0e0; padding: 13px 18px; font-size: 16px; line-height: 1.8;">乐队悄悄出门，暗示过夜</div></div>
+          <div style="display: grid; grid-template-columns: 170px 1fr; gap: 1px;"><div style="background: rgba(143,47,34,0.1); padding: 13px 16px; font-family: 'Noto Serif SC', serif; font-size: 17px; color: #8f2f22;">热情似火</div><div style="background: rgba(143,47,34,0.1); padding: 13px 18px; font-size: 16px; line-height: 1.8;">没拿到审查印章照样大卖</div></div>
+        </div>
+      </div>
+      <div style="display: grid; gap: 22px;">
+        <div style="border: 1px solid #8f2f22; padding: 26px 28px;">
+          <div style="font-size: 13px; letter-spacing: 0.2em; color: #8f2f22;">反驳一个流行说法</div>
+          <p style="margin: 12px 0 0; font-family: 'Noto Serif SC', serif; font-size: 20px; line-height: 1.75;">「老导演后来不行，是因为审查取消、没了限制就没了创意」——不成立。</p>
+          <p style="margin: 14px 0 0; font-size: 16px; line-height: 1.9; color: #2a251d;">理由：衰落有产业和观众代际等多重原因；台湾解严后才有《悲情城市》《牯岭街少年杀人事件》，韩国取消审查后电影工业爆发；希区柯克、怀尔德、普雷明格最好的作品恰恰出在审查放松的 50 年代末 60 年代初。</p>
+        </div>
+        <div>
+          <div style="font-family: 'Noto Serif SC', serif; font-size: 22px; color: #4b3a63;">落到当下</div>
+          <p style="margin: 8px 0 0; font-size: 17px; line-height: 1.95; color: #2a251d; text-wrap: pretty;">海斯法典有具体执行部门可以谈判，今天的政治正确审查没有明确条文、靠事后舆论，所以喜剧更难。建议创作者像怀尔德挂「刘别谦会怎么做」一样，问自己「怀尔德会怎么做」。他冒犯的对象从来不是身份标签，而是人类共同的虚伪。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 70px 90px 0;">
+    <div style="display: flex; align-items: baseline; gap: 18px;">
+      <span style="font-family: 'Cinzel', serif; font-weight: 600; font-size: 21px; letter-spacing: 0.14em; color: #a8813c;">VIII</span>
+      <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 38px; letter-spacing: 0.12em;">结尾片单</h2>
+      <span style="margin-left: auto; font-size: 14px; letter-spacing: 0.18em; color: #645c50;">1955–1965 古典好莱坞最后的荣光</span>
+    </div>
+    <div style="margin-top: 14px; height: 4px; border-top: 2px solid #15120e; border-bottom: 1px solid #15120e;"></div>
+
+    <p style="margin: 26px 0 0; max-width: 940px; font-size: 17px; line-height: 1.95; color: #2a251d; text-wrap: pretty;">推荐理由：老导演五六十岁、技艺纯熟，审查放松，又要和电视竞争，于是出现了一批「和大众直接对话之后的高级感」作品。</p>
+
+    <div style="margin-top: 28px; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 20px;">
+      <div style="border-top: 3px solid #15120e; padding-top: 16px;">
+        <div style="display: flex; align-items: center; gap: 12px;"><div style="position: relative; width: 52px; height: 52px; flex: none; border-radius: 50%; background: #d9cfb8;"><image-slot id="bw-p-wilder-list" src="{{ pic.wilder }}" shape="circle" placeholder="比利·怀尔德"></image-slot></div><div style="font-family: 'Noto Serif SC', serif; font-size: 20px;">比利·怀尔德</div></div>
+        <div style="margin-top: 16px; display: grid; gap: 12px; font-size: 16px; line-height: 1.6; color: #2a251d;">
+          <div style="display: flex; align-items: center; gap: 14px;"><div style="position: relative; width: 60px; aspect-ratio: 2 / 3; flex: none; background: #15120e;"><image-slot id="bw-l-hot" src="{{ pic.hot }}" fit="contain" shape="rect" placeholder="海报"></image-slot></div><span>热情似火</span></div>
+          <div style="display: flex; align-items: center; gap: 14px;"><div style="position: relative; width: 60px; aspect-ratio: 2 / 3; flex: none; background: #15120e;"><image-slot id="bw-l-apartment" src="{{ pic.apartment }}" fit="contain" shape="rect" placeholder="海报"></image-slot></div><span>公寓春光</span></div>
+        </div>
+      </div>
+      <div style="border-top: 3px solid #15120e; padding-top: 16px;">
+        <div style="display: flex; align-items: center; gap: 12px;"><div style="position: relative; width: 52px; height: 52px; flex: none; border-radius: 50%; background: #d9cfb8;"><image-slot id="bw-p-hitchcock" src="{{ pic.hitchcock }}" shape="circle" placeholder="希区柯克"></image-slot></div><div style="font-family: 'Noto Serif SC', serif; font-size: 20px;">希区柯克</div></div>
+        <div style="margin-top: 16px; display: grid; gap: 12px; font-size: 16px; line-height: 1.6; color: #2a251d;">
+          <div style="display: flex; align-items: center; gap: 14px;"><div style="position: relative; width: 60px; aspect-ratio: 2 / 3; flex: none; background: #15120e;"><image-slot id="bw-l-vertigo" src="{{ pic.vertigo }}" fit="contain" shape="rect" placeholder="海报"></image-slot></div><span>迷魂记</span></div>
+          <div style="display: flex; align-items: center; gap: 14px;"><div style="position: relative; width: 60px; aspect-ratio: 2 / 3; flex: none; background: #15120e;"><image-slot id="bw-l-psycho" src="{{ pic.psycho }}" fit="contain" shape="rect" placeholder="海报"></image-slot></div><span>惊魂记</span></div>
+          <div style="display: flex; align-items: center; gap: 14px;"><div style="position: relative; width: 60px; aspect-ratio: 2 / 3; flex: none; background: #15120e;"><image-slot id="bw-l-nxnw" src="{{ pic.nxnw }}" fit="contain" shape="rect" placeholder="海报"></image-slot></div><span>西北偏北</span></div>
+        </div>
+      </div>
+      <div style="border-top: 3px solid #15120e; padding-top: 16px;">
+        <div style="display: flex; align-items: center; gap: 12px;"><div style="position: relative; width: 52px; height: 52px; flex: none; border-radius: 50%; background: #d9cfb8;"><image-slot id="bw-p-hawks" src="{{ pic.hawks }}" shape="circle" placeholder="霍华德·霍克斯"></image-slot></div><div style="font-family: 'Noto Serif SC', serif; font-size: 20px;">霍华德·霍克斯</div></div>
+        <div style="margin-top: 16px; display: grid; gap: 12px; font-size: 16px; line-height: 1.6; color: #2a251d;">
+          <div style="display: flex; align-items: center; gap: 14px;"><div style="position: relative; width: 60px; aspect-ratio: 2 / 3; flex: none; background: #15120e;"><image-slot id="bw-l-riobravo" src="{{ pic.riobravo }}" fit="contain" shape="rect" placeholder="海报"></image-slot></div><span>赤胆屠龙</span></div>
+        </div>
+      </div>
+      <div style="border-top: 3px solid #15120e; padding-top: 16px;">
+        <div style="display: flex; align-items: center; gap: 12px;"><div style="position: relative; width: 52px; height: 52px; flex: none; border-radius: 50%; background: #d9cfb8;"><image-slot id="bw-p-preminger" src="{{ pic.preminger }}" shape="circle" placeholder="奥托·普雷明格"></image-slot></div><div style="font-family: 'Noto Serif SC', serif; font-size: 20px;">奥托·普雷明格</div></div>
+        <div style="margin-top: 16px; display: grid; gap: 12px; font-size: 16px; line-height: 1.6; color: #2a251d;">
+          <div style="display: flex; align-items: center; gap: 14px;"><div style="position: relative; width: 60px; aspect-ratio: 2 / 3; flex: none; background: #15120e;"><image-slot id="bw-l-anatomy" src="{{ pic.anatomy }}" fit="contain" shape="rect" placeholder="海报"></image-slot></div><span>桃色血案</span></div>
+          <div style="display: flex; align-items: center; gap: 14px;"><div style="position: relative; width: 60px; aspect-ratio: 2 / 3; flex: none; background: #15120e;"><image-slot id="bw-l-advise" src="{{ pic.advise }}" fit="contain" shape="rect" placeholder="海报"></image-slot></div><span>华府千秋</span></div>
+          <div style="display: flex; align-items: center; gap: 14px;"><div style="position: relative; width: 60px; aspect-ratio: 2 / 3; flex: none; background: #15120e;"><image-slot id="bw-l-bunny" src="{{ pic.bunny }}" fit="contain" shape="rect" placeholder="海报"></image-slot></div><span style="color: #8f2f22;">失踪的邦尼（特别推荐）</span></div>
+        </div>
+      </div>
+      <div style="border-top: 3px solid #15120e; padding-top: 16px;">
+        <div style="display: flex; align-items: center; gap: 12px;"><div style="position: relative; width: 52px; height: 52px; flex: none; border-radius: 50%; background: #d9cfb8;"><image-slot id="bw-p-wise" src="{{ pic.wise }}" shape="circle" placeholder="罗伯特·怀斯"></image-slot></div><div style="font-family: 'Noto Serif SC', serif; font-size: 20px;">罗伯特·怀斯</div></div>
+        <div style="margin-top: 16px; display: grid; gap: 12px; font-size: 16px; line-height: 1.6; color: #2a251d;">
+          <div style="display: flex; align-items: center; gap: 14px;"><div style="position: relative; width: 60px; aspect-ratio: 2 / 3; flex: none; background: #15120e;"><image-slot id="bw-l-sand" src="{{ pic.sand }}" fit="contain" shape="rect" placeholder="海报"></image-slot></div><span>圣保罗炮艇</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 36px; background: #15120e; color: #eee6d4; padding: 44px 48px;">
+      <p style="margin: 0; font-family: 'Noto Serif SC', serif; font-size: 32px; line-height: 1.6;">再也不会有怀尔德那样的人了，更糟糕的是，再也不会有怀尔德那样的电影了。</p>
+    </div>
+  </section>
+
+  <sc-if value="{{ showFrequency }}" hint-placeholder-val="{{ true }}">
+  <section style="padding: 70px 90px 0;">
+    <div style="display: flex; align-items: baseline; gap: 18px;">
+      <span style="font-family: 'Cinzel', serif; font-weight: 600; font-size: 21px; letter-spacing: 0.14em; color: #a8813c;">IX</span>
+      <h2 style="margin: 0; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 38px; letter-spacing: 0.12em;">提及频次统计</h2>
+      <span style="margin-left: auto; font-size: 14px; letter-spacing: 0.18em; color: #645c50;">「怀尔德」本人 555 次，未入图</span>
+    </div>
+    <div style="margin-top: 14px; height: 4px; border-top: 2px solid #15120e; border-bottom: 1px solid #15120e;"></div>
+    <p style="margin: 22px 0 0; font-size: 15px; line-height: 1.8; color: #645c50;">说明：基于转录文本的关键词计数，已合并 ASR 变体，仅作相对参考。</p>
+
+    <div style="margin-top: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 54px;">
+      <div>
+        <div style="font-family: 'Noto Serif SC', serif; font-size: 22px;">9-1　人物提及次数</div>
+        <div style="margin-top: 20px; display: grid; gap: 8px;">
+          <div style="display: grid; grid-template-columns: 130px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; text-align: right; font-weight: 500;">刘别谦</div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 100%; height: 20px; background: #4b3a63;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #4b3a63; font-weight: 600;">100</span></div></div>
+          <div style="display: grid; grid-template-columns: 130px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; text-align: right; font-weight: 500;">梦露</div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 97%; height: 20px; background: #4b3a63;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #4b3a63; font-weight: 600;">97</span></div></div>
+          <div style="display: grid; grid-template-columns: 130px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; text-align: right; color: #463f34;">赫本</div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 47%; height: 20px; background: #4b3a63;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #645c50;">47</span></div></div>
+          <div style="display: grid; grid-template-columns: 130px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; text-align: right; color: #463f34;">莱蒙</div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 47%; height: 20px; background: #4b3a63;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #645c50;">47</span></div></div>
+          <div style="display: grid; grid-template-columns: 130px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; text-align: right; color: #463f34;">鲍嘉</div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 35%; height: 20px; background: #4b3a63;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #645c50;">35</span></div></div>
+          <div style="display: grid; grid-template-columns: 130px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; text-align: right; color: #463f34;">布拉克特</div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 31%; height: 20px; background: #4b3a63;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #645c50;">31</span></div></div>
+          <div style="display: grid; grid-template-columns: 130px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; text-align: right; color: #463f34;">格兰特</div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 29%; height: 20px; background: #8d81a4;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #645c50;">29</span></div></div>
+          <div style="display: grid; grid-template-columns: 130px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; text-align: right; color: #463f34;">霍克斯</div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 19%; height: 20px; background: #8d81a4;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #645c50;">19</span></div></div>
+          <div style="display: grid; grid-template-columns: 130px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; text-align: right; color: #463f34;">戴蒙德</div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 17%; height: 20px; background: #8d81a4;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #645c50;">17</span></div></div>
+          <div style="display: grid; grid-template-columns: 130px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; text-align: right; color: #463f34;">希区柯克</div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 16%; height: 20px; background: #8d81a4;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #645c50;">16</span></div></div>
+          <div style="display: grid; grid-template-columns: 130px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; text-align: right; color: #463f34;">托尼·柯蒂斯</div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 13%; height: 20px; background: #8d81a4;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #645c50;">13</span></div></div>
+          <div style="display: grid; grid-template-columns: 130px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; text-align: right; color: #463f34;">库珀</div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 13%; height: 20px; background: #8d81a4;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #645c50;">13</span></div></div>
+          <div style="display: grid; grid-template-columns: 130px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; text-align: right; color: #463f34;">马修</div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 12%; height: 20px; background: #8d81a4;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #645c50;">12</span></div></div>
+          <div style="display: grid; grid-template-columns: 130px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; text-align: right; color: #463f34;">卡格尼</div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 11%; height: 20px; background: #8d81a4;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #645c50;">11</span></div></div>
+          <div style="display: grid; grid-template-columns: 130px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; text-align: right; color: #463f34;">萨里斯</div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 10%; height: 20px; background: #8d81a4;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #645c50;">10</span></div></div>
+        </div>
+        <p style="margin: 20px 0 0; font-size: 15px; line-height: 1.8; color: #645c50;">图注：刘别谦的提及次数与梦露几乎持平，是本期的「第二主角」。</p>
+      </div>
+      <div>
+        <div style="font-family: 'Noto Serif SC', serif; font-size: 22px;">9-2　片名提及次数</div>
+        <div style="margin-top: 20px; display: grid; gap: 8px;">
+          <div style="display: grid; grid-template-columns: 160px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; text-align: right; font-weight: 500;">热情似火</div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 100%; height: 20px; background: #1c5a5e;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #1c5a5e; font-weight: 600;">32</span></div></div>
+          <div style="display: grid; grid-template-columns: 160px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; text-align: right; font-weight: 500;">公寓春光</div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 87.5%; height: 20px; background: #1c5a5e;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #1c5a5e; font-weight: 600;">28</span></div></div>
+          <div style="display: grid; grid-template-columns: 160px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; text-align: right; color: #463f34;">龙凤配</div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 62.5%; height: 20px; background: #1c5a5e;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #645c50;">20</span></div></div>
+          <div style="display: grid; grid-template-columns: 160px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; text-align: right; color: #463f34;">黄昏之恋</div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 59.4%; height: 20px; background: #1c5a5e;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #645c50;">19</span></div></div>
+          <div style="display: grid; grid-template-columns: 160px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; text-align: right; color: #463f34;">玉女风流</div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 59.4%; height: 20px; background: #1c5a5e;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #645c50;">19</span></div></div>
+          <div style="display: grid; grid-template-columns: 160px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; text-align: right; color: #463f34;">日落大道</div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 43.8%; height: 20px; background: #6a9092;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #645c50;">14</span></div></div>
+          <div style="display: grid; grid-template-columns: 160px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; text-align: right; color: #463f34;">福尔摩斯秘史</div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 40.6%; height: 20px; background: #6a9092;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #645c50;">13</span></div></div>
+          <div style="display: grid; grid-template-columns: 160px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; text-align: right; color: #463f34;">七年之痒</div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 34.4%; height: 20px; background: #6a9092;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #645c50;">11</span></div></div>
+          <div style="display: grid; grid-template-columns: 160px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; text-align: right; color: #463f34;">爱玛姑娘</div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 31.3%; height: 20px; background: #6a9092;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #645c50;">10</span></div></div>
+          <div style="display: grid; grid-template-columns: 160px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; text-align: right; color: #463f34;">蓝胡子的第八任妻子</div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 28.1%; height: 20px; background: #6a9092;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #645c50;">9</span></div></div>
+          <div style="display: grid; grid-template-columns: 160px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; text-align: right; color: #463f34;">林白征空记</div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 25%; height: 20px; background: #6a9092;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #645c50;">8</span></div></div>
+          <div style="display: grid; grid-template-columns: 160px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; text-align: right; color: #463f34;">少校与少女</div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 25%; height: 20px; background: #6a9092;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #645c50;">8</span></div></div>
+          <div style="display: grid; grid-template-columns: 160px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; text-align: right; color: #463f34;">双重赔偿</div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 25%; height: 20px; background: #6a9092;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #645c50;">8</span></div></div>
+          <div style="display: grid; grid-template-columns: 160px 1fr; gap: 14px; align-items: center;"><div style="font-size: 15px; text-align: right; color: #463f34;">尼诺契卡</div><div style="display: flex; align-items: center; gap: 10px;"><div style="width: 21.9%; height: 20px; background: #6a9092;"></div><span style="font-family: 'Bodoni Moda', serif; font-size: 15px; color: #645c50;">7</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </sc-if>
+
+  <sc-if value="{{ showAppendix }}" hint-placeholder-val="{{ true }}">
+  <section style="margin-top: 70px; padding: 40px 90px 54px; background: #e3dac4;">
+    <div style="display: flex; align-items: baseline; gap: 18px;">
+      <span style="font-family: 'Bodoni Moda', serif; font-size: 18px; color: #8a8173;">X</span>
+      <div style="font-family: 'Noto Serif SC', serif; font-size: 22px;">附录：ASR 勘误说明</div>
+    </div>
+    <div style="margin-top: 16px; display: grid; grid-template-columns: 1fr 1.4fr; gap: 46px;">
+      <p style="margin: 0; font-size: 14px; line-height: 1.9; color: #5b564e;">本期转录中，怀尔德有「华尔德／怀尔德／胡尔德／霍尔德」四种写法，刘别谦六种以上，希区柯克七种。以下几处结合上下文仍无法确定，页面中未采用：</p>
+      <div style="display: grid; gap: 6px; font-size: 14px; line-height: 1.8; color: #5b564e;">
+        <div>「银石心电」（出现在《星期天的人们》旁）</div>
+        <div>「兜里揣着十亿美元」（数额明显有误）</div>
+        <div>「美矿玉下」（联艺合作片序列中的某部作品）</div>
+        <div>「圈内见花红」（格兰特与多丽丝·黛合演的某部片）</div>
+        <div>「走向幸福」（据称影响刘别谦的斯蒂勒作品，译名待核）</div>
+        <div>「深渊记」（希区柯克）、「湖畔春晓」（霍克斯）（结尾片单中，未采用）</div>
+      </div>
+    </div>
+    <div style="margin-top: 30px; height: 14px; background: repeating-linear-gradient(90deg, #15120e 0 40px, #e3dac4 40px 80px);"></div>
+  </section>
+  </sc-if>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showMindmap&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;章节开关&quot;},&quot;showTimeCharts&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;章节开关&quot;},&quot;showFrequency&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;章节开关&quot;},&quot;showAppendix&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;章节开关&quot;}}">
+const PEOPLE = {
+  wilder: 'Billy Wilder', lubitsch: 'Ernst Lubitsch', brackett: 'Charles Brackett', diamond: 'I. A. L. Diamond',
+  lemmon: 'Jack Lemmon', matthau: 'Walter Matthau', monroe: 'Marilyn Monroe', hepburn: 'Audrey Hepburn',
+  bogart: 'Humphrey Bogart', grant: 'Cary Grant', hitchcock: 'Alfred Hitchcock', hawks: 'Howard Hawks',
+  preminger: 'Otto Preminger', wise: 'Robert Wise'
+};
+// candidate English Wikipedia titles, first hit wins
+const FILMS = {
+  major: ['The Major and the Minor'], emperor: ['The Emperor Waltz'], foreign: ['A Foreign Affair'],
+  stalag: ['Stalag 17'], sabrina: ['Sabrina (1954 film)'], itch: ['The Seven Year Itch'],
+  afternoon: ['Love in the Afternoon (1957 film)'], hot: ['Some Like It Hot'], apartment: ['The Apartment'],
+  onetwothree: ['One, Two, Three'], irma: ['Irma la Douce', 'Irma la Douce (film)'], kiss: ['Kiss Me, Stupid'],
+  cookie: ['The Fortune Cookie'], holmes: ['The Private Life of Sherlock Holmes'], avanti: ['Avanti!'],
+  frontpage: ['The Front Page (1974 film)'], ninotchka: ['Ninotchka'],
+  vertigo: ['Vertigo (film)'], psycho: ['Psycho (1960 film)'], nxnw: ['North by Northwest'],
+  riobravo: ['Rio Bravo (film)'], anatomy: ['Anatomy of a Murder'],
+  advise: ['Advise & Consent (film)', 'Advise & Consent'], bunny: ['Bunny Lake Is Missing'],
+  sand: ['The Sand Pebbles (film)']
+};
+const API = 'https://en.wikipedia.org/w/api.php';
+
+class Component extends DCLogic {
+  state = { img: {} };
+
+  componentDidMount() { this.loadImages(); }
+
+  // pilicense=any lets non-free infobox posters through
+  async lead(titles, size) {
+    const url = API + '?action=query&format=json&origin=*&redirects=1&prop=pageimages&pilicense=any&pilimit=50'
+      + '&piprop=thumbnail&pithumbsize=' + size + '&titles=' + encodeURIComponent(titles.join('|'));
+    const q = (await (await fetch(url)).json()).query || {};
+    const byTitle = {};
+    Object.values(q.pages || {}).forEach(p => { if (p.thumbnail && p.thumbnail.source) byTitle[p.title] = p.thumbnail.source; });
+    const alias = {};
+    (q.normalized || []).concat(q.redirects || []).forEach(n => { alias[n.from] = n.to; });
+    return t => { let k = t, i = 0; while (alias[k] && i++ < 4) k = alias[k]; return byTitle[k] || ''; };
+  }
+
+  async loadImages() {
+    const none = () => '';
+    const pk = Object.keys(PEOPLE), fk = Object.keys(FILMS);
+    const [people, films] = await Promise.all([
+      this.lead(pk.map(k => PEOPLE[k]), 500).catch(() => none),
+      this.lead([].concat(...fk.map(k => FILMS[k])), 600).catch(() => none)
+    ]);
+    const out = {};
+    pk.forEach(k => { out[k] = people(PEOPLE[k]); });
+    fk.forEach(k => { out[k] = FILMS[k].map(films).find(Boolean) || ''; });
+    const miss = Object.keys(out).filter(k => !out[k]);
+    if (miss.length) console.warn('未取到图片：' + miss.join(', '));
+    this.setState({ img: out });
+  }
+
+  renderVals() {
+    const img = this.state.img;
+    const pic = {};
+    Object.keys(PEOPLE).concat(Object.keys(FILMS)).forEach(k => { pic[k] = img[k] || ''; });
+    return {
+      pic: pic,
+      showMindmap: this.props.showMindmap ?? true,
+      showTimeCharts: this.props.showTimeCharts ?? true,
+      showFrequency: this.props.showFrequency ?? true,
+      showAppendix: this.props.showAppendix ?? true,
+    };
+  }
+}
+</script>
+</body>
+</html>
