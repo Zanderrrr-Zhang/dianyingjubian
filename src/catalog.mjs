@@ -25,6 +25,7 @@ export const HANDWRITTEN = [
   EP26_PAGE,
   '电影巨辩27-意大利1945.dc.html',
   '电影巨辩29-毕赣天才的短板.dc.html',
+  '电影巨辩30-2025世界电影总结.dc.html',
   '电影巨辩33-比利怀尔德.dc.html',
   '电影巨辩37-诺兰奥德赛.dc.html',
   '电影巨辩-侯孝贤.dc.html',

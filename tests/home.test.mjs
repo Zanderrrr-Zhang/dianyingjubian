@@ -36,10 +36,10 @@ test('homepage embeds its data and preserves every existing episode destination'
   assert.equal(await buildHome(), html);
   assert.doesNotMatch(source, /\bfetch\s*\(|\bimport\s*\(/);
   assert.doesNotMatch(html, /<dc-import\b/);
-  assert.equal(episodes.length, 20);
+  assert.equal(episodes.length, 21);
   assert.deepEqual(episodes.map(e => e.href.slice(2)).sort(), PAGE_FILES.filter(p => p !== HOME).sort());
   for (const e of episodes) if (e.img) await access(projectPath(e.img));
-  assert.equal(setup().page.renderVals().entries.length, 20);
+  assert.equal(setup().page.renderVals().entries.length, 21);
 });
 
 test('every quote has an attribution, destination and traceable source', async () => {
@@ -102,5 +102,5 @@ test('category and keyword search work together, including empty-result recovery
   assert.match(page.renderVals().entries[0].title, /张曼玉/);
   page.search({ target: { value: '没有这期xyz' } });
   assert.equal(page.renderVals().empty, true);
-  page.clearSearch(); assert.equal(page.renderVals().entries.length, 20);
+  page.clearSearch(); assert.equal(page.renderVals().entries.length, 21);
 });
