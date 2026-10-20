@@ -19,8 +19,8 @@
   a:hover { color: #9E3B2E; }
 </style>
 </helmet>
-<div style="width: 100%; color: #1C1A17; font-family: 'Noto Sans SC', 'PingFang SC', sans-serif; font-size: 16px; line-height: 1.8; font-variant-numeric: tabular-nums; -webkit-text-size-adjust: 100%;">
-<main style="max-width: 1336px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px) 80px; overflow-x: clip;">
+<div style="width: 100%; overflow-x: clip; color: #1C1A17; font-family: 'Noto Sans SC', 'PingFang SC', sans-serif; font-size: 16px; line-height: 1.8; font-variant-numeric: tabular-nums; -webkit-text-size-adjust: 100%;">
+<main style="max-width: 1336px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px) 80px;">
 <div ref="{{ measureRef }}" style="width: 100%; height: 0;"></div>
 
 <!-- A 封面 -->
@@ -88,11 +88,11 @@
       <div style="padding: 10px 0 6px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; color: #5B554B;">目录</div>
       <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 0 18px; font-size: 14.5px; line-height: 2.1;">
         <a href="#map" style="text-decoration: none;" style-hover="text-decoration: underline;"><span style="font-family: 'IBM Plex Mono', monospace; color: #8A8375;">01 </span>五个小时</a>
-        <a href="#ants" style="text-decoration: none;" style-hover="text-decoration: underline;"><span style="font-family: 'IBM Plex Mono', monospace; color: #8A8375;">02 </span>蚂蚁的姿态</a>
-        <a href="#women" style="text-decoration: none;" style-hover="text-decoration: underline;"><span style="font-family: 'IBM Plex Mono', monospace; color: #8A8375;">03 </span>三代人的伤</a>
-        <a href="#sv" style="text-decoration: none;" style-hover="text-decoration: underline;"><span style="font-family: 'IBM Plex Mono', monospace; color: #8A8375;">04 </span>关于和解的争论</a>
-        <a href="#truth" style="text-decoration: none;" style-hover="text-decoration: underline;"><span style="font-family: 'IBM Plex Mono', monospace; color: #8A8375;">05 </span>真实还剩下什么</a>
-        <a href="#agent" style="text-decoration: none;" style-hover="text-decoration: underline;"><span style="font-family: 'IBM Plex Mono', monospace; color: #8A8375;">06 </span>两条时间线</a>
+        <a href="#ants" style="text-decoration: none;" style-hover="text-decoration: underline;"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #8A3226;">02 </span>蚂蚁的姿态</a>
+        <a href="#women" style="text-decoration: none;" style-hover="text-decoration: underline;"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #255A55;">03 </span>三代人的伤</a>
+        <a href="#sv" style="text-decoration: none;" style-hover="text-decoration: underline;"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #255A55;">04 </span>关于和解的争论</a>
+        <a href="#truth" style="text-decoration: none;" style-hover="text-decoration: underline;"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #7F5416;">05 </span>真实还剩下什么</a>
+        <a href="#agent" style="text-decoration: none;" style-hover="text-decoration: underline;"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #7F5416;">06 </span>两条时间线</a>
         <a href="#blockbuster" style="text-decoration: none;" style-hover="text-decoration: underline;"><span style="font-family: 'IBM Plex Mono', monospace; color: #8A8375;">07 </span>大片怎么了</a>
         <a href="#films" style="text-decoration: none;" style-hover="text-decoration: underline;"><span style="font-family: 'IBM Plex Mono', monospace; color: #8A8375;">08 </span>片单</a>
         <a href="#time" style="text-decoration: none;" style-hover="text-decoration: underline;"><span style="font-family: 'IBM Plex Mono', monospace; color: #8A8375;">09 </span>时间都给了谁</a>
@@ -247,16 +247,19 @@
   <p style="margin: 12px 0 0; font-size: 12.5px; line-height: 1.7; color: #5B554B; max-width: 62em;">口径：时间戳按节目里的过渡句切分，误差约一分钟；路段宽度与时长成正比。热度带每 10 分钟一格，按每千字出现次数着色（最后一格只有 4 分钟，所以不用次数）；深浅到 12 次封顶，更高的格子同色，峰值数字见上。关键词分组为整理者所加，各组包含的词见页尾。</p>
 </section>
 
-<!-- 主线一 -->
-<div style="margin-top: clamp(72px, 10vw, 128px); display: flex; align-items: center; gap: 14px; color: #8A3226;">
-  <svg width="54" height="30" viewBox="0 0 54 30" aria-hidden="true" style="flex: none;"><circle cx="15" cy="15" r="14" fill="#9E3B2E"></circle><circle cx="49" cy="26" r="2.5" fill="#9E3B2E"></circle></svg>
-  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.14em;">主线一</div>
-  <div style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: clamp(22px, 3vw, 30px);">大象与蚂蚁</div>
-  <div style="flex: 1; height: 2px; background: #9E3B2E;"></div>
+<!-- 主线一：整条插页铺浅砖红，开头是一大一小两个圆 -->
+<div style="margin: clamp(72px, 10vw, 128px) calc(50% - 50vw) 0; padding: 0 calc(50vw - 50%) clamp(64px, 9vw, 104px); background: rgba(158, 59, 46, 0.06); border-top: 2px solid #9E3B2E;">
+<div style="position: relative; height: 0;"><div style="position: absolute; left: 0; bottom: 0; padding: 7px 16px 6px; background: #9E3B2E; color: #FBF8F1; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; line-height: 1.6; letter-spacing: 0.14em; white-space: nowrap; border-radius: 6px 6px 0 0;">主线一</div></div>
+<div style="padding-top: clamp(28px, 4vw, 48px); display: flex; align-items: flex-end; gap: clamp(16px, 4vw, 56px); border-bottom: 1.5px solid #9E3B2E;">
+  <div aria-hidden="true" style="flex: none; width: clamp(108px, 21vw, 270px); aspect-ratio: 1; border-radius: 50%; background: #9E3B2E; display: flex; align-items: center; justify-content: center; color: #FBF8F1; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: clamp(17px, 2.2vw, 26px);">大象</div>
+  <div style="flex: 1; min-width: 0; align-self: stretch; display: flex; flex-direction: column; justify-content: space-between; gap: 12px;">
+    <div style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: clamp(34px, 6.4vw, 80px); line-height: 1.05; color: #8A3226;">大象与蚂蚁</div>
+    <div aria-hidden="true" style="align-self: flex-end; display: flex; flex-direction: column; align-items: center; gap: 7px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; line-height: 1; color: #8A3226;"><span>蚂蚁</span><span style="width: 5px; height: 5px; border-radius: 50%; background: #9E3B2E;"></span></div>
+  </div>
 </div>
 
 <!-- D 蚂蚁的姿态谱 -->
-<section id="ants" data-screen-label="D 蚂蚁的姿态" style="margin-top: 28px;">
+<section id="ants" data-screen-label="D 蚂蚁的姿态" style="margin-top: clamp(36px, 5vw, 56px);">
   <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; border-top: 2px solid #1C1A17; padding-top: 12px; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; letter-spacing: 0.06em; color: #5B554B;">
     <span>No.02</span>
     <span style="display: inline-flex; align-items: center; gap: 6px; padding: 2px 10px 2px 8px; background: #9E3B2E; color: #FBF8F1; font-family: 'Noto Sans SC', sans-serif; font-weight: 700;"><svg width="13" height="13" viewBox="0 0 16 16" aria-hidden="true"><path d="{{ ic.power }}" fill="currentColor" fill-rule="evenodd"></path></svg>个体与权力</span>
@@ -317,17 +320,21 @@
   </div>
   <p style="margin: 18px 0 0; font-size: 12.5px; line-height: 1.7; color: #5B554B;">参照系：《一战再战》被提及约 16 次、专门讨论只有约 3 分钟（节目做过专题）。五组姿态的划分为整理者所加。</p>
 </section>
+</div>
 
-<!-- 主线二 -->
-<div style="margin-top: clamp(72px, 10vw, 128px); display: flex; align-items: center; gap: 14px; color: #255A55;">
-  <svg width="54" height="30" viewBox="0 0 54 30" aria-hidden="true" style="flex: none;"><path d="M4,29 V12 L18,2 L32,12 V29 M36,29 V18 L44,12 L52,18 V29" fill="none" stroke="#2E6E68" stroke-width="2.2" stroke-linejoin="round"></path></svg>
-  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.14em;">主线二</div>
-  <div style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: clamp(22px, 3vw, 30px);">女性与重建</div>
-  <div style="flex: 1; height: 2px; background: #2E6E68;"></div>
+<!-- 主线二：整条插页是青绿制图纸，开头一排房屋立面，最后一座是虚线（重建中） -->
+<div style="margin: clamp(72px, 10vw, 128px) calc(50% - 50vw) 0; padding: 0 calc(50vw - 50%) clamp(64px, 9vw, 104px); background: linear-gradient(rgba(46, 110, 104, 0.12) 1px, transparent 1px) 0 0 / 120px 120px, linear-gradient(90deg, rgba(46, 110, 104, 0.12) 1px, transparent 1px) 0 0 / 120px 120px, linear-gradient(rgba(46, 110, 104, 0.055) 1px, transparent 1px) 0 0 / 24px 24px, linear-gradient(90deg, rgba(46, 110, 104, 0.055) 1px, transparent 1px) 0 0 / 24px 24px, rgba(46, 110, 104, 0.035); border-top: 2px solid #2E6E68;">
+<div style="position: relative; height: 0;"><div style="position: absolute; left: 0; bottom: 0; padding: 7px 16px 6px; background: #2E6E68; color: #FBF8F1; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; line-height: 1.6; letter-spacing: 0.14em; white-space: nowrap; border-radius: 6px 6px 0 0;">主线二</div></div>
+<div style="padding-top: clamp(28px, 4vw, 48px); display: flex; flex-wrap: wrap; align-items: flex-end; gap: 16px clamp(16px, 4vw, 56px); border-bottom: 3px solid #2E6E68;">
+  <div style="flex: 1 1 240px; padding-bottom: 14px; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: clamp(34px, 6.4vw, 80px); line-height: 1.05; color: #255A55;">女性与重建</div>
+  <svg viewBox="0 0 600 132" preserveAspectRatio="xMaxYMax meet" aria-hidden="true" style="flex: 1 1 300px; display: block; max-width: 600px; height: auto; margin-bottom: -1px;">
+    <path d="M10,132 V58 L80,10 L150,58 V132 M64,132 V94 H96 V132 M170,132 V78 L214,48 H330 L374,78 V132 M298,132 V102 H322 V132 M394,132 V92 L428,66 L462,92 V132" fill="none" stroke="#2E6E68" stroke-width="2.5" stroke-linejoin="round"></path>
+    <path d="M482,132 V60 L536,22 L590,60 V132" fill="none" stroke="#2E6E68" stroke-width="2.5" stroke-linejoin="round" stroke-dasharray="7 6"></path>
+  </svg>
 </div>
 
 <!-- E 代际创伤网 -->
-<section id="women" data-screen-label="E 三代人的伤" style="margin-top: 28px;">
+<section id="women" data-screen-label="E 三代人的伤" style="margin-top: clamp(36px, 5vw, 56px);">
   <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; border-top: 2px solid #1C1A17; padding-top: 12px; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; letter-spacing: 0.06em; color: #5B554B;">
     <span>No.03</span>
     <span style="display: inline-flex; align-items: center; gap: 6px; padding: 2px 10px 2px 8px; background: #2E6E68; color: #FBF8F1; font-family: 'Noto Sans SC', sans-serif; font-weight: 700;"><svg width="13" height="13" viewBox="0 0 16 16" aria-hidden="true"><path d="{{ ic.women }}" fill="currentColor" fill-rule="evenodd"></path></svg>女性电影</span>
@@ -445,24 +452,30 @@
   </div>
   <p style="margin: 14px 0 0; text-align: center; font-size: 12.5px; color: #5B554B;">两张卡片等大并列，不代表裁决。</p>
 </section>
+</div>
 
-<!-- 主线三 -->
-<div style="margin-top: clamp(72px, 10vw, 128px); display: flex; align-items: center; gap: 14px; color: #7F5416;">
-  <svg width="54" height="30" viewBox="0 0 54 30" aria-hidden="true" style="flex: none;"><rect x="0" y="3" width="54" height="24" fill="#C98A2B"></rect><rect x="4" y="6" width="5" height="4" fill="#F5F1E8"></rect><rect x="16" y="6" width="5" height="4" fill="#F5F1E8"></rect><rect x="28" y="6" width="5" height="4" fill="#F5F1E8"></rect><rect x="40" y="6" width="5" height="4" fill="#F5F1E8"></rect><rect x="4" y="20" width="5" height="4" fill="#F5F1E8"></rect><rect x="16" y="20" width="5" height="4" fill="#F5F1E8"></rect><rect x="28" y="20" width="5" height="4" fill="#F5F1E8"></rect><rect x="40" y="20" width="5" height="4" fill="#F5F1E8"></rect></svg>
-  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.14em;">主线三</div>
-  <div style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: clamp(22px, 3vw, 30px);">创伤与真相</div>
-  <div style="flex: 1; height: 2px; background: #C98A2B;"></div>
+<!-- 主线三：整条插页是一段胶片，上下两排齿孔，底上一层琥珀扫描线；开头四格画面由粗到细 -->
+<div style="margin: clamp(72px, 10vw, 128px) calc(50% - 50vw) 0; padding: 0 calc(50vw - 50%) clamp(72px, 10vw, 112px); background: repeating-linear-gradient(90deg, transparent 0 8px, #F5F1E8 8px 18px, transparent 18px 26px) 0 12px / 100% 7px no-repeat, repeating-linear-gradient(90deg, transparent 0 8px, #F5F1E8 8px 18px, transparent 18px 26px) 0 calc(100% - 12px) / 100% 7px no-repeat, repeating-linear-gradient(0deg, rgba(201, 138, 43, 0.07) 0 1px, transparent 1px 4px), #1C1A17;">
+<div style="position: relative; height: 0;"><div style="position: absolute; left: 0; bottom: 0; padding: 7px 16px 6px; background: #1C1A17; color: #C98A2B; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; line-height: 1.6; letter-spacing: 0.14em; white-space: nowrap; border-radius: 6px 6px 0 0;">主线三</div></div>
+<div style="padding-top: clamp(48px, 6vw, 72px); display: flex; flex-wrap: wrap; align-items: flex-end; gap: 16px clamp(16px, 4vw, 56px); border-bottom: 1.5px solid #C98A2B;">
+  <div style="flex: 1 1 240px; padding-bottom: 14px; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: clamp(34px, 6.4vw, 80px); line-height: 1.05; color: #C98A2B;">创伤与真相</div>
+  <div aria-hidden="true" style="flex: 1 1 300px; max-width: 600px; margin-bottom: 14px; padding: 15px 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; background: repeating-linear-gradient(90deg, transparent 0 6px, #F5F1E8 6px 13px, transparent 13px 20px) 0 3px / 100% 6px no-repeat, repeating-linear-gradient(90deg, transparent 0 6px, #F5F1E8 6px 13px, transparent 13px 20px) 0 calc(100% - 3px) / 100% 6px no-repeat;">
+    <div style="aspect-ratio: 4 / 3; background: radial-gradient(circle, #7F5416 1.7px, transparent 2.2px) 0 0 / 8px 8px, radial-gradient(circle, #7F5416 1.2px, transparent 1.7px) 4px 4px / 8px 8px, #EAD3A6;"></div>
+    <div style="aspect-ratio: 4 / 3; background: radial-gradient(circle, #7F5416 0.9px, transparent 1.3px) 0 0 / 4px 4px, radial-gradient(circle, #7F5416 0.7px, transparent 1.1px) 2px 2px / 4px 4px, #EAD3A6;"></div>
+    <div style="aspect-ratio: 4 / 3; background: repeating-linear-gradient(0deg, #C98A2B 0 1px, #EAD3A6 1px 3px);"></div>
+    <div style="aspect-ratio: 4 / 3; background: linear-gradient(160deg, #EAD3A6, #E3BD7A);"></div>
+  </div>
 </div>
 
 <!-- F 真实的危机与八种策略 -->
-<section id="truth" data-screen-label="F 真实还剩下什么" style="margin-top: 28px;">
-  <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; border-top: 2px solid #1C1A17; padding-top: 12px; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; letter-spacing: 0.06em; color: #5B554B;">
+<section id="truth" data-screen-label="F 真实还剩下什么" style="margin-top: clamp(36px, 5vw, 56px);">
+  <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; border-top: 2px solid #F5F1E8; padding-top: 12px; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; letter-spacing: 0.06em; color: #CFC6B3;">
     <span>No.05</span>
     <span style="display: inline-flex; align-items: center; gap: 6px; padding: 2px 10px 2px 8px; background: #C98A2B; color: #1C1A17; font-family: 'Noto Sans SC', sans-serif; font-weight: 700;"><svg width="13" height="13" viewBox="0 0 16 16" aria-hidden="true"><path d="{{ ic.truth }}" fill="currentColor" fill-rule="evenodd"></path></svg>真实与记录</span>
     <span style="margin-left: auto;">2:58:28 – 3:54:05 · 约 56 分钟</span>
   </div>
-  <h2 style="margin: 14px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: clamp(30px, 4.6vw, 50px); line-height: 1.15;">真实还剩下什么</h2>
-  <p style="margin: 12px 0 0; max-width: 44em; font-size: 16px; line-height: 1.85; color: #3C3832;">两个来源汇成一个问题，再分出八条路。每张卡片顶部的纹理暗示一种“清晰度”。</p>
+  <h2 style="margin: 14px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: clamp(30px, 4.6vw, 50px); line-height: 1.15; color: #F5F1E8;">真实还剩下什么</h2>
+  <p style="margin: 12px 0 0; max-width: 44em; font-size: 16px; line-height: 1.85; color: #E6DCC6;">两个来源汇成一个问题，再分出八条路。每张卡片顶部的纹理暗示一种“清晰度”。</p>
 
   <sc-if value="{{ fWide }}" hint-placeholder-val="{{ true }}">
     <div style="position: relative; margin-top: 26px; height: {{ fig.h }}px;">
@@ -476,7 +489,7 @@
           <div style="margin-top: 5px; font-size: 14px; line-height: 1.6; color: #3C3832;">{{ s.text }}</div>
         </div>
       </sc-for>
-      <div style="position: absolute; left: {{ fig.q.x }}px; top: {{ fig.q.y }}px; width: {{ fig.q.w }}px; height: {{ fig.q.h }}px; background: #1C1A17; color: #F5F1E8; display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 18px; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 22px; line-height: 1.35;">电影记录真实的合法性在哪里？</div>
+      <div style="position: absolute; left: {{ fig.q.x }}px; top: {{ fig.q.y }}px; width: {{ fig.q.w }}px; height: {{ fig.q.h }}px; background: #C98A2B; color: #1C1A17; display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 18px; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 22px; line-height: 1.35;">电影记录真实的合法性在哪里？</div>
     </div>
   </sc-if>
   <sc-if value="{{ fNarrow }}" hint-placeholder-val="{{ false }}">
@@ -486,7 +499,7 @@
       </sc-for>
     </div>
     <div style="display: flex; justify-content: center; padding: 6px 0;"><svg width="14" height="26" viewBox="0 0 14 26" aria-hidden="true"><path d="M7,0V23M2,17L7,24L12,17" fill="none" stroke="#C98A2B" stroke-width="2"></path></svg></div>
-    <div style="background: #1C1A17; color: #F5F1E8; padding: 14px 18px; text-align: center; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 20px; line-height: 1.4;">电影记录真实的合法性在哪里？</div>
+    <div style="background: #C98A2B; color: #1C1A17; padding: 14px 18px; text-align: center; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 20px; line-height: 1.4;">电影记录真实的合法性在哪里？</div>
     <div style="display: flex; justify-content: center; padding: 6px 0;"><svg width="14" height="26" viewBox="0 0 14 26" aria-hidden="true"><path d="M7,0V23M2,17L7,24L12,17" fill="none" stroke="#C98A2B" stroke-width="2"></path></svg></div>
   </sc-if>
   <div style="display: grid; grid-template-columns: {{ fCols }}; gap: 12px;">
@@ -505,29 +518,29 @@
   <div style="margin-top: 20px; display: flex; align-items: center; gap: 14px; padding-left: 14px; border-left: 4px solid #C98A2B;">
     <sc-if value="{{ serra.poster.has }}" hint-placeholder-val="{{ true }}"><img src="{{ serra.poster.src }}" alt="{{ serra.poster.alt }}" loading="lazy" style="flex: none; width: 56px; height: 84px; object-fit: cover;"></sc-if>
     <sc-if value="{{ serra.face.has }}" hint-placeholder-val="{{ true }}"><img src="{{ serra.face.src }}" alt="{{ serra.face.alt }}" title="{{ serra.face.alt }}" loading="lazy" style="flex: none; width: 56px; height: 56px; border-radius: 50%; object-fit: cover;"></sc-if>
-    <p style="margin: 0; font-weight: 700; font-size: 17px; line-height: 1.7; text-wrap: pretty;">《孤寂午后》：两人一致认为能进影史，也是《电影手册》2025 年度第一。<span style="display: block; font-weight: 400; font-size: 13px; color: #5B554B;">导演 阿尔伯特·塞拉</span></p>
+    <p style="margin: 0; font-weight: 700; font-size: 17px; line-height: 1.7; color: #F5F1E8; text-wrap: pretty;">《孤寂午后》：两人一致认为能进影史，也是《电影手册》2025 年度第一。<span style="display: block; font-weight: 400; font-size: 13px; color: #CFC6B3;">导演 阿尔伯特·塞拉</span></p>
   </div>
-  <p style="margin: 10px 0 0; font-size: 12.5px; line-height: 1.7; color: #5B554B;">八条路的归纳为整理者所加；纹理只是示意，不代表各片的实际画面。《密探》《朝圣》《梦》《普通事故》《辛德·拉杰布之声》先在内容板块讲过一遍，这里从媒介角度又讲一遍。</p>
+  <p style="margin: 10px 0 0; font-size: 12.5px; line-height: 1.7; color: #CFC6B3;">八条路的归纳为整理者所加；纹理只是示意，不代表各片的实际画面。《密探》《朝圣》《梦》《普通事故》《辛德·拉杰布之声》先在内容板块讲过一遍，这里从媒介角度又讲一遍。</p>
 </section>
 
 <!-- M 密探的两条时间线 -->
 <section id="agent" data-screen-label="M 两条时间线" style="margin-top: clamp(64px, 9vw, 104px);">
-  <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; border-top: 2px solid #1C1A17; padding-top: 12px; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; letter-spacing: 0.06em; color: #5B554B;">
+  <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; border-top: 2px solid #F5F1E8; padding-top: 12px; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; letter-spacing: 0.06em; color: #CFC6B3;">
     <span>No.06</span>
     <span style="display: inline-flex; align-items: center; gap: 6px; padding: 2px 10px 2px 8px; background: #9E3B2E; color: #FBF8F1; font-family: 'Noto Sans SC', sans-serif; font-weight: 700;"><svg width="13" height="13" viewBox="0 0 16 16" aria-hidden="true"><path d="{{ ic.power }}" fill="currentColor" fill-rule="evenodd"></path></svg>个体与权力</span>
     <span style="display: inline-flex; align-items: center; gap: 6px; padding: 2px 10px 2px 8px; background: #C98A2B; color: #1C1A17; font-family: 'Noto Sans SC', sans-serif; font-weight: 700;"><svg width="13" height="13" viewBox="0 0 16 16" aria-hidden="true"><path d="{{ ic.truth }}" fill="currentColor" fill-rule="evenodd"></path></svg>真实与记录</span>
     <span style="margin-left: auto;">0:20:48 · 0:33:34 · 3:29:47 · 合计约 19.1 分钟</span>
   </div>
-  <h2 style="margin: 14px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: clamp(30px, 4.6vw, 50px); line-height: 1.15;">《密探》的两条时间线</h2>
+  <h2 style="margin: 14px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: clamp(30px, 4.6vw, 50px); line-height: 1.15; color: #F5F1E8;">《密探》的两条时间线</h2>
   <div style="margin-top: 14px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px;">
-    <sc-if value="{{ agentPics.poster.has }}" hint-placeholder-val="{{ true }}"><img src="{{ agentPics.poster.src }}" alt="{{ agentPics.poster.alt }}" loading="lazy" style="flex: none; width: 64px; height: 96px; object-fit: cover; box-shadow: 4px 4px 0 #E3DBC9;"></sc-if>
+    <sc-if value="{{ agentPics.poster.has }}" hint-placeholder-val="{{ true }}"><img src="{{ agentPics.poster.src }}" alt="{{ agentPics.poster.alt }}" loading="lazy" style="flex: none; width: 64px; height: 96px; object-fit: cover;"></sc-if>
     <sc-if value="{{ agentPics.face.has }}" hint-placeholder-val="{{ true }}"><img src="{{ agentPics.face.src }}" alt="{{ agentPics.face.alt }}" loading="lazy" style="flex: none; width: 64px; height: 64px; border-radius: 50%; object-fit: cover;"></sc-if>
-    <p style="margin: 0; flex: 1 1 280px; max-width: 40em; font-size: 16px; line-height: 1.85; color: #3C3832;">讲得最长的一部，也是唯一一部政治和媒介两头都讲得很长的片子。<span style="display: block; font-size: 13px; color: #5B554B;">导演 克莱伯·门多萨·菲略</span></p>
+    <p style="margin: 0; flex: 1 1 280px; max-width: 40em; font-size: 16px; line-height: 1.85; color: #E6DCC6;">讲得最长的一部，也是唯一一部政治和媒介两头都讲得很长的片子。<span style="display: block; font-size: 13px; color: #CFC6B3;">导演 克莱伯·门多萨·菲略</span></p>
   </div>
 
   <div style="margin-top: 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 28px 40px; align-items: start;">
     <div style="grid-column: span 2; min-width: 0;">
-      <div style="display: flex; align-items: baseline; gap: 10px;"><span style="font: 600 22px/1 'IBM Plex Mono', monospace; color: #8A3226;">1977</span><span style="font-size: 14px; color: #5B554B;">军政府后期</span></div>
+      <div style="display: flex; align-items: baseline; gap: 10px;"><span style="font: 600 22px/1 'IBM Plex Mono', monospace; color: #F5F1E8;">1977</span><span style="font-size: 14px; color: #CFC6B3;">军政府后期</span></div>
       <div style="position: relative; margin-top: 10px; padding-top: 14px; border-top: 3px solid #9E3B2E; display: grid; grid-template-columns: {{ agCols }}; gap: 8px;">
         <sc-for list="{{ ag77 }}" as="a" hint-placeholder-count="6"><div style="position: relative; background: #FBF8F1; border: 1px solid #CFC6B3; padding: 8px 10px; font-size: 13.5px; line-height: 1.6;"><sc-if value="{{ agDots }}" hint-placeholder-val="{{ true }}"><span style="position: absolute; top: -21px; left: 10px; width: 11px; height: 11px; border-radius: 50%; background: #9E3B2E; border: 2px solid #F5F1E8;"></span></sc-if>{{ a.t }}</div></sc-for>
       </div>
@@ -538,13 +551,13 @@
           <span>{{ ag.bridge }}：连接两个年代</span>
         </div>
       </div>
-      <div style="display: flex; align-items: baseline; gap: 10px;"><span style="font: 600 22px/1 'IBM Plex Mono', monospace; color: #8A3226;">2020 年代</span><span style="font-size: 14px; color: #5B554B;">历史系研究者</span></div>
+      <div style="display: flex; align-items: baseline; gap: 10px;"><span style="font: 600 22px/1 'IBM Plex Mono', monospace; color: #F5F1E8;">2020 年代</span><span style="font-size: 14px; color: #CFC6B3;">历史系研究者</span></div>
       <div style="position: relative; margin-top: 10px; padding-top: 14px; border-top: 3px solid #9E3B2E; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 8px;">
         <sc-for list="{{ ag20 }}" as="a" hint-placeholder-count="3"><div style="position: relative; background: #FBF8F1; border: 1px solid #CFC6B3; padding: 8px 10px; font-size: 13.5px; line-height: 1.6;"><sc-if value="{{ agDots }}" hint-placeholder-val="{{ true }}"><span style="position: absolute; top: -21px; left: 10px; width: 11px; height: 11px; border-radius: 50%; background: #9E3B2E; border: 2px solid #F5F1E8;"></span></sc-if>{{ a.t }}</div></sc-for>
       </div>
     </div>
     <div style="min-width: 0;">
-      <div style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 19px;">“毛腿”三重套娃</div>
+      <div style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 19px; color: #F5F1E8;">“毛腿”三重套娃</div>
       <div style="margin-top: 10px; border: 2px solid #C98A2B; padding: 10px 10px 10px; background: #FBF4E6;">
         <div style="font-weight: 700; font-size: 14.5px; color: #7F5416;">① {{ mat.0.head }}</div><div style="font-size: 13px; line-height: 1.55; color: #3C3832;">{{ mat.0.body }}</div>
         <div style="margin-top: 10px; border: 2px dashed #9E3B2E; padding: 10px; background: #FBF8F1;">
@@ -554,17 +567,16 @@
           </div>
         </div>
       </div>
-      <p style="margin: 12px 0 0; font-size: 13.5px; line-height: 1.7; color: #3C3832;">{{ ag.aside }}</p>
+      <p style="margin: 12px 0 0; font-size: 13.5px; line-height: 1.7; color: #E6DCC6;">{{ ag.aside }}</p>
     </div>
   </div>
 </section>
+</div>
 
-<!-- 另外几条线 -->
-<div style="margin-top: clamp(72px, 10vw, 128px); display: flex; align-items: center; gap: 14px; color: #2B4C7E;">
-  <svg width="54" height="30" viewBox="0 0 54 30" aria-hidden="true" style="flex: none;"><rect x="2" y="16" width="10" height="13" fill="#8C8579"></rect><rect x="16" y="8" width="10" height="21" fill="#8C8579"></rect><path d="M40,4 L50,15 L40,26 L30,15Z" fill="#2B4C7E"></path></svg>
-  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.14em;">另外几条线</div>
-  <div style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: clamp(22px, 3vw, 30px);">大片、片单与两人</div>
-  <div style="flex: 1; height: 2px; background: #2B4C7E;"></div>
+<!-- 另外几条线：回到普通纸面，只留一张索引签 -->
+<div style="margin-top: clamp(80px, 11vw, 136px); border-top: 2px solid #2B4C7E;">
+<div style="position: relative; height: 0;"><div style="position: absolute; left: 0; bottom: 0; padding: 7px 16px 6px; background: #2B4C7E; color: #FBF8F1; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; line-height: 1.6; letter-spacing: 0.14em; white-space: nowrap; border-radius: 6px 6px 0 0;">另外几条线</div></div>
+<div style="padding-top: clamp(20px, 3vw, 32px); font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: clamp(26px, 4vw, 44px); line-height: 1.15; color: #2B4C7E;">大片、片单与两人</div>
 </div>
 
 <!-- L 商业大片四条路 -->
