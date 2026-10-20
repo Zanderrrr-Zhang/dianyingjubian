@@ -121,10 +121,10 @@ const ROW3 = ledge([['花样年华', 2000], ['英雄', 2002], ['清洁', 2004]].
 const KIDS = [
   [PFX + '1', [sectionB()], '100%,5600px', 'showAllStations'],
   [PFX + '2', [strip('09 · D'), sectionD(), strip('09 · E'), sectionE()], '100%,7600px', ''],
-  [PFX + '3', [chapter('PART 1 · 0:03–2:06', '她身后的香港', '香港娱乐工业、女星生态、表演风格，合计约 126 分钟。前两个小时还没正式讲她，先讲她身后的那台机器。', ['industry', 'women', 'acting'], true, ROW1), sectionG(), strip('09 · H'), sectionH(), strip('09 · I'), sectionI()], '100%,11000px', ''],
-  [PFX + '4', [chapter('PART 2 · 2:06–6:31', '她自己的路', '早年与开窍、演技派之路、喜剧与动作、《迷离劫》、《甜蜜蜜》与后期，合计约 265 分钟。', ['early', 'prime', 'genre', 'intl', 'late'], false, ROW2), sectionJ(), strip('09 · K'), sectionK()], '100%,11000px', ''],
+  [PFX + '3', [chapter('PART 1 · 0:03–2:06', '她身后的香港', '香港娱乐工业、女星生态、表演风格，合计约 126 分钟。前两个小时还没正式讲她，先讲她身后的那台机器。', ['industry', 'women', 'acting'], true, ROW1), strip('09 · G'), sectionG(), strip('09 · H'), sectionH(), strip('09 · I'), sectionI()], '100%,11000px', ''],
+  [PFX + '4', [chapter('PART 2 · 2:06–6:31', '她自己的路', '早年与开窍、演技派之路、喜剧与动作、《迷离劫》、《甜蜜蜜》与后期，合计约 265 分钟。', ['early', 'prime', 'genre', 'intl', 'late'], false, ROW2), strip('09 · J'), sectionJ(), strip('09 · K'), sectionK()], '100%,11000px', ''],
   [PFX + '5', [strip('09 · L'), sectionL(), strip('09 · M'), sectionM(), strip('09 · N'), sectionN()], '100%,13000px', ''],
-  [PFX + '6', [chapter('PART 3 · 6:31–7:22', '息影与明星的终结', '巅峰息影，以及明星从哪里来、往哪里去，约 51 分钟。', ['coda'], true, ROW3), sectionO(), strip('09 · F'), sectionF()], '100%,9000px', ''],
+  [PFX + '6', [chapter('PART 3 · 6:31–7:22', '息影与明星的终结', '巅峰息影，以及明星从哪里来、往哪里去，约 51 分钟。', ['coda'], true, ROW3), strip('09 · O'), sectionO(), strip('09 · F'), sectionF()], '100%,9000px', ''],
   [PFX + '7', [strip('09 · P'), sectionP(), strip('09 · Q'), sectionQ(), footer()], '100%,8000px', '']
 ];
 const sections = KIDS.map(([name, parts]) => `<div id="${name}" data-episode-part="${name}" style="background: ${C.paper}; color: ${C.ink}; font-family: ${F.sans}; font-variant-numeric: tabular-nums;">${parts.join('\n')}</div>`).join('\n');

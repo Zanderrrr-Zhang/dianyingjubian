@@ -100,7 +100,25 @@ function plate(full) {
 function head(L, title, q) {
   return `<div style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px 22px; padding-bottom: 16px; border-bottom: 3px double ${C.ink};">${letterBox(L)}<h2 style="${S.h2}">${title}</h2>${PLATE[L] ? plate(PLATE[L]) : ''}<span style="margin-left: auto; padding-bottom: 6px; font-size: 15px; color: ${C.muted};">${q}</span></div>`;
 }
-const secOpen = (id, L, title) => `<section id="${id}" data-screen-label="${L} ${title}" style="padding: clamp(64px, 8vw, 104px) ${PAD} 0;">`;
+// 全页是一张测绘图：底上一层淡网格（同封面）
+const GRID = `linear-gradient(90deg, rgba(27,28,30,0.045) 1px, transparent 1px) 0 0 / 56px 56px, linear-gradient(180deg, rgba(27,28,30,0.045) 1px, transparent 1px) 0 0 / 56px 56px, ${C.paper}`;
+// 素材带：有颜色归属的模块开头放一段胶片。砖红 = 拍当下，灰蓝 = 回望；讲具体作品的模块用该片的载体纹理（D13）。
+// 回望的模块整块铺一层灰蓝，对应封面图例“下半灰蓝是回望”。
+const REEL = { F: { col: C.coal, label: '崛起、独立与妥协' }, G: { col: C.coal, label: '崛起、独立与妥协' }, H: { col: C.loess, label: '科长宇宙' }, I: { col: C.loess, label: '科长宇宙' },
+  J: { col: C.now, film: '《小武》', w: 'w02' }, K: { col: C.now, film: '《三峡好人》', w: 'w08' }, L: { col: C.now, film: '《天注定》', w: 'w13' }, M: { col: 'split', label: '拍当下 ｜ 回望' },
+  O: { col: C.past, label: '回望过去的作品' }, P: { col: C.past, film: '《江湖儿女》', w: 'w15' }, Q: { col: C.end, label: '小结与结局' } };
+const PAST = new Set(['O', 'P']);
+function reel(L) {
+  const r = REEL[L], tex = r.w ? FMT[r.w] : '';
+  const label = r.film ? `${r.film} · ${D[13][0].find(x => x.film === r.film).format}` : r.label;
+  const bg = r.col === 'split' ? `linear-gradient(90deg, ${C.now} 0 50%, ${C.past} 50%)`
+    : tex === 'dgf' ? `linear-gradient(90deg, ${r.col} 0 62%, transparent 62% 80%, ${r.col} 80%), ${TEX['16']}, ${r.col}`
+    : `${TEX[tex] ? TEX[tex] + ', ' : ''}${r.col}`;
+  return `<div aria-hidden="true" style="position: relative; margin: 0 calc(-1 * ${PAD}); display: flex; flex-direction: column; background: ${C.ink};">${holes(9)}<div style="height: 18px; margin: 0 4px; background: repeating-linear-gradient(90deg, transparent 0 84px, ${C.ink} 84px 88px), ${bg};"></div>${holes(9)}<span style="position: absolute; right: ${PAD}; top: 50%; transform: translateY(-50%); max-width: calc(100% - 2 * ${PAD}); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: 1px 9px; background: ${C.paper}; border: 1px solid ${C.ink}; font-size: 12px; line-height: 18px; color: ${C.ink};"><span style="font-family: ${F.mono}; font-weight: 600;">${L}</span>　${esc(label)}</span></div>`;
+}
+const secOpen = (id, L, title) => REEL[L]
+  ? `<section id="${id}" data-screen-label="${L} ${title}" style="margin-top: clamp(64px, 8vw, 104px); padding: 0 ${PAD} ${PAST.has(L) ? 'clamp(56px, 7vw, 88px)' : '0'}; ${PAST.has(L) ? `background: ${rgba(C.past, 0.09)};` : ''}">${reel(L)}<div style="height: clamp(44px, 5.5vw, 72px);"></div>`
+  : `<section id="${id}" data-screen-label="${L} ${title}" style="padding: clamp(64px, 8vw, 104px) ${PAD} 0;">`;
 function sub(title, note) { return `<div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; padding-bottom: 10px; border-bottom: 1px solid ${C.ink};"><h3 style="${S.h3}">${title}</h3>${note ? `<span style="font-size: 13px; color: ${C.cap};">${note}</span>` : ''}</div>`; }
 function quote(text, whoS, size = 21) {
   return `<figure style="margin: 0; padding: 16px 0 0; border-top: 1px solid ${C.ink};"><blockquote style="margin: 0; font-family: ${F.serif}; font-size: ${size}px; font-weight: 600; line-height: 1.6; text-wrap: pretty;">“${esc(text)}”</blockquote><figcaption style="margin-top: 8px; font-size: 13px; color: ${C.cap};">—— ${esc(whoS)}</figcaption></figure>`;

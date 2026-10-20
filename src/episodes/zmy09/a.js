@@ -85,7 +85,21 @@ const bulbs = (z = '9px', fill = Z.card, edge = Z.ink) => BULB.map(([p, s]) => {
 const mirror = (inner, ex = '') => `<div style="position: relative; box-sizing: border-box; border: 1.5px solid ${Z.ink}; background: ${Z.card}; padding: 22px 26px 24px; ${ex}">${bulbs('9px', Z.card, Z.ink)}${inner}</div>`;
 const mirrorIcon = (col = C.ink, bg = C.card) => `<svg width="22" height="16" viewBox="0 0 22 16" style="flex: none; display: block; overflow: visible;"><rect x="2" y="2" width="18" height="12" fill="${bg}" stroke="${col}" strokeWidth="1.2"></rect>${[[5, 2], [11, 2], [17, 2], [5, 14], [11, 14], [17, 14], [2, 6], [2, 10], [20, 6], [20, 10]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="1.7" fill="${col}"></circle>`).join('')}</svg>`;
 const holes = col => `repeating-linear-gradient(90deg, transparent 0 9px, ${col} 9px 19px, transparent 19px 28px)`;
-const strip = (code = '') => `<div aria-hidden="true" style="position: relative; height: 26px; background: ${holes(C.paper)} 0 4px / 100% 5px no-repeat, ${holes(C.paper)} 0 17px / 100% 5px no-repeat, ${C.ink};">${code ? `<span style="position: absolute; right: ${PAD}; top: 8px; padding: 0 8px; background: ${C.ink}; font-family: ${F.type}; font-size: 10px; line-height: 10px; letter-spacing: 0.18em; color: #B9B4AA;">${code}</span>` : ''}</div>`;
+// 阶段色的名字和来由，原样取自交接文档第 3 节的颜色表
+const PHL = Object.fromEntries(Object.keys(PH).map(k => {
+  const c = md.split('\n').find(l => l.startsWith('|') && l.includes(`（${k}）`)).split('|').map(s => s.trim());
+  return [k, { name: c[2].replace(/\s*#[0-9A-Fa-f]{6}/g, '').replace(/（[^）]*）/g, ''), why: c[3] === '—' ? '' : c[3] }];
+}));
+// 片头带：模块之间的胶片，画格里填下一个模块的阶段色，旁边写颜色名和来由；没有阶段的模块仍是黑色齿孔条
+const frames = p => p === 'coda' ? `repeating-linear-gradient(90deg, ${C.ink} 0 1px, ${PH.coda} 1px 63px, ${C.ink} 63px 68px)`
+  : p === 'intl' ? `repeating-linear-gradient(90deg, ${C.silver} 0 1px, ${PH.intl} 1px 63px, ${C.silver} 63px 64px, ${C.ink} 64px 68px)`
+  : `repeating-linear-gradient(90deg, ${PH[p]} 0 64px, ${C.ink} 64px 68px)`;
+const strip = (code = '') => {
+  const p = MODP[code.slice(-1)];
+  if (!p) return `<div aria-hidden="true" style="position: relative; height: 26px; background: ${holes(C.paper)} 0 4px / 100% 5px no-repeat, ${holes(C.paper)} 0 17px / 100% 5px no-repeat, ${C.ink};">${code ? `<span style="position: absolute; right: ${PAD}; top: 8px; padding: 0 8px; background: ${C.ink}; font-family: ${F.type}; font-size: 10px; line-height: 10px; letter-spacing: 0.18em; color: #B9B4AA;">${code}</span>` : ''}</div>`;
+  const l = PHL[p];
+  return `<div aria-hidden="true" style="position: relative; height: 48px; background: ${holes(C.paper)} 0 5px / 100% 5px no-repeat, ${holes(C.paper)} 0 38px / 100% 5px no-repeat, ${C.ink};"><div style="position: absolute; left: 0; right: 0; top: 14px; height: 20px; background: ${frames(p)}; ${p === 'intl' ? `box-shadow: inset 0 1px 0 ${C.silver}, inset 0 -1px 0 ${C.silver};` : ''}"></div><span style="position: absolute; right: ${PAD}; top: 14px; max-width: calc(100% - 2 * ${PAD}); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: 0 10px; background: ${C.ink}; font-size: 12px; line-height: 20px; color: #E2DED6;"><span style="font-family: ${F.type}; font-size: 10.5px; letter-spacing: 0.16em; color: #B9B4AA;">${code}</span>　${l.name}${l.why ? `<span style="color: #B9B4AA;">　${esc(l.why)}</span>` : ''}</span></div>`;
+};
 const outlines = (w = 30, h = 22, col = Z.ink, n = 3, fill = 'transparent') => `<span aria-hidden="true" style="flex: none; position: relative; display: block; width: ${w + (n - 1) * 7}px; height: ${h + (n - 1) * 5}px;">${Array.from({ length: n }, (_, i) => `<span style="position: absolute; left: ${i * 7}px; top: ${i * 5}px; width: ${w}px; height: ${h}px; box-sizing: border-box; border: 1.5px solid ${col}; border-radius: 5px; background: ${fill};"></span>`).join('')}</span>`;
 
 const IMG = {}; { const rem = JSON.parse(await readFile('src/episodes/zmy09/img.json')); Object.keys(rem).forEach(k => IMG[k] = rem[k].src); (await ls('assets/zmy09')).forEach(f => { const n = f.split('/').pop(); IMG[n.replace(/\.\w+$/, '')] = 'assets/zmy09/' + n; }); }

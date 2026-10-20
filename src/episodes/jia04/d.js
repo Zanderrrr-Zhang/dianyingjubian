@@ -146,7 +146,7 @@ const helmet = `<helmet>
 </helmet>`;
 const bodyParts = [cover(), sectionB(), sectionD(), sectionE(), divider('搭框架', '崛起、身份与科长宇宙 · 约 71 分钟'), sectionF(), sectionG(), sectionH(), sectionI(), divider('逐部讲作品', '从《小武》到短片 · 约 159 分钟'), sectionJ(), sectionK(), sectionO(), sectionL(), sectionP(), divider('结论与结局', '小结、分歧与结局'), sectionM(), sectionN(), sectionQ(), sectionR(), sectionS(), footer()];
 const template = `${helmet}
-<div style="width: 100%; max-width: {{ frameW }}; margin: 0 auto; background: ${C.paper}; color: ${C.ink}; font-family: ${F.sans}; font-variant-numeric: tabular-nums; overflow: hidden; box-shadow: 0 0 0 1px rgba(27,28,30,0.08);">
+<div style="width: 100%; max-width: {{ frameW }}; margin: 0 auto; background: ${GRID}; color: ${C.ink}; font-family: ${F.sans}; font-variant-numeric: tabular-nums; overflow: hidden; box-shadow: 0 0 0 1px rgba(27,28,30,0.08);">
 ${bodyParts.join('\n')}
 </div>`;
 const JS = `
