@@ -310,6 +310,8 @@ const PORTRAITS = {
   brando: ['马龙·白兰度', 'Marlon Brando']
 };
 const API = { zh: 'https://zh.wikipedia.org/w/api.php', en: 'https://en.wikipedia.org/w/api.php' };
+// 维基页面没有可用题图的几位，用仓库里已有的图（与第 27 期共用）
+const LOCAL = { aumont: 'assets/ep27/aumont.jpg' };
 
 class Component extends DCLogic {
   state = { img: {} };
@@ -353,7 +355,7 @@ class Component extends DCLogic {
   renderVals() {
     const img = this.state.img;
     const pic = {};
-    Object.keys(PORTRAITS).forEach(k => { pic[k] = img[k] || ''; });
+    Object.keys(PORTRAITS).forEach(k => { pic[k] = LOCAL[k] || img[k] || ''; });
     return {
       pic: pic,
       chains: CHAINS,

@@ -50,7 +50,7 @@ const f1 = n => (+n).toFixed(1), f2 = n => (+n).toFixed(2);
 const fmtHM = m => Math.floor(m / 60) + ':' + String(m % 60).padStart(2, '0');
 const rgba = (hex, a) => { const n = parseInt(hex.slice(1), 16); return `rgba(${n >> 16}, ${(n >> 8) & 255}, ${n & 255}, ${(+a).toFixed(3)})`; };
 const mono = s => `<span style="font-family: ${F.mono};">${s}</span>`;
-const HAVE = new Set('f-bb f-bq f-dl f-ez f-ft f-fy f-gl f-gy f-ht f-kb f-ls f-mg f-mh f-mj f-qf f-qm f-tq f-xc f-yg f-yy p-angelo p-anton p-cai p-changchen p-chenkg p-doyle p-fass p-herzog p-hou p-huangjx p-jiazk p-kies p-kubrick p-lee p-liye p-louye p-lynch p-naruse p-ozu p-resnais p-song p-sylvia p-wangbing p-wkw p-wunj p-yang p-zhangym'.split(' '));
+const HAVE = new Set('f-bb f-bq f-dl f-ez f-ft f-fy f-gl f-gy f-ht f-kb f-ls f-mg f-mh f-mj f-qf f-qm f-tq f-xc f-yg f-yy p-angelo p-anton p-cai p-changchen p-chenkg p-doyle p-fass p-herzog p-hou p-huangjx p-jiazk p-kies p-kubrick p-lee p-liye p-louye p-lynch p-naruse p-ozu p-resnais p-song p-sylvia p-wangbing p-wkw p-wunj p-yang p-zhangym f-jq f-xb p-pialat p-mingji p-xiaoye'.split(' '));
 const slotUse = {};
 function slot(k, label, shape) { const id = 'yang03-' + k; slotUse[id] = (slotUse[id] || 0) + 1; const sid = slotUse[id] > 1 ? id + '-' + slotUse[id] : id; return `<image-slot id="${sid}" ${HAVE.has(k) ? `src="assets/yang03/${k}.jpg"` : ''} shape="${shape}" placeholder="${esc(label)}"></image-slot>`; }
 const poster = (k, title, w, extra = '') => `<div style="flex: none; position: relative; width: ${w}; aspect-ratio: 2 / 3; background: ${C.deep}; box-shadow: 0 0 0 1px ${C.ink}; ${extra}">${slot('f-' + k, title, 'rect')}</div>`;

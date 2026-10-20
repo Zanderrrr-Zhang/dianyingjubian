@@ -915,6 +915,8 @@ const FILMS = {
   twinpeaks: ['双峰 (电视剧)', 'Twin Peaks']
 };
 const API = { zh: 'https://zh.wikipedia.org/w/api.php', en: 'https://en.wikipedia.org/w/api.php' };
+// 维基页面没有可用题图的几位：弗罗斯特沿用第 25 期《双峰》页的同一张图
+const LOCAL = { frost: 'https://static.wikia.nocookie.net/twinpeaks/images/9/9e/Mark_Frost.jpg/revision/latest/scale-to-width-down/600' };
 
 class Component extends DCLogic {
   state = { img: {} };
@@ -994,7 +996,7 @@ class Component extends DCLogic {
   renderVals() {
     const img = this.state.img;
     const pic = {};
-    Object.keys(PEOPLE).forEach(k => { pic[k] = img[k] || ''; });
+    Object.keys(PEOPLE).forEach(k => { pic[k] = LOCAL[k] || img[k] || ''; });
     Object.keys(FILMS).forEach(k => { pic[k] = img[k] || ''; });
     return {
       pic: pic,

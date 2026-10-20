@@ -722,6 +722,8 @@ const CAST = [
   { key: 'zavattini', name: '扎瓦蒂尼', role: '提及 44 次 · 编剧与理论' },
 ];
 const BRIDGE_KEYS = ['deleuze', 'aumont', 'pasolini', 'casetti'];
+// 维基页面没有可用题图的几位，用仓库里已有或补下载的图
+const LOCAL = { deleuze: 'assets/hy06/p-deleuze.webp', aumont: 'assets/ep27/aumont.jpg' };
 
 class Component extends DCLogic {
   state = { open: {}, flip: null, img: {} };
@@ -802,7 +804,7 @@ class Component extends DCLogic {
     }));
     const allFlipped = MYTHS.every((_, i) => this.flipped(i));
     const bridge = BRIDGE.map((b, i) => ({
-      slot: 'ep27-' + BRIDGE_KEYS[i], img: this.state.img[BRIDGE_KEYS[i]] || '', who: b[0], axis: b[1], c1t: b[2], c1: b[3], c2t: b[4], c2: b[5], c3t: b[6], c3: b[7],
+      slot: 'ep27-' + BRIDGE_KEYS[i], img: LOCAL[BRIDGE_KEYS[i]] || this.state.img[BRIDGE_KEYS[i]] || '', who: b[0], axis: b[1], c1t: b[2], c1: b[3], c2t: b[4], c2: b[5], c3t: b[6], c3: b[7],
       c1bg: b[2] ? '#f6f5f0' : 'transparent', c1border: b[2] ? '1px solid #b9b6aa' : '1px dashed #b9b6aa', arr1: b[2] ? '→' : '',
     }));
     const charts = [

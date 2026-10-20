@@ -787,6 +787,8 @@ const PORTRAITS = [
 ];
 
 const API = { zh: 'https://zh.wikipedia.org/w/api.php', en: 'https://en.wikipedia.org/w/api.php' };
+// 维基页面没有可用题图的几位，用补下载到仓库的图
+const LOCAL = { 'rk-p-langlois': 'assets/ep13/langlois.jpg', 'rk-p-feimu': 'assets/ep13/feimu.jpg' };
 const FILMS = {
   kane: ['大國民', 'Citizen Kane'],
   bicycle: ['單車失竊記', 'Bicycle Thieves'],
@@ -884,7 +886,7 @@ class Component extends DCLogic {
     const trendInk = { u: '#e0b063', d: '#d98a78', n: '#a9a49a' };
     return {
       pic: pic,
-      portraits: PORTRAITS.map(p => ({ id: p[0], name: p[1], note: p[2], src: img[p[0]] || '' })),
+      portraits: PORTRAITS.map(p => ({ id: p[0], name: p[1], note: p[2], src: LOCAL[p[0]] || img[p[0]] || '' })),
       factors: FACTORS.map(f => ({ name: f[0], dir: f[1], bg: f[2], dirInk: f[3], note: f[4] })),
       sightsound: SIGHTSOUND.map((r, i) => ({
         year: r[0], first: r[1], key: r[2], note: r[3],
