@@ -98,7 +98,7 @@ function door(L) {
 }
 function plate(full) {
   const t = hms(full), c = clipOf(t), ct = t - c.s;
-  return `<span title="从这里开始听" style="flex: none; display: inline-flex; flex-direction: column; align-items: center; padding: 5px 12px 6px; margin-bottom: 4px; background: ${C.card}; border: 1.5px solid ${C.ink}; line-height: 1.1;"><span style="font-family: ${F.serif}; font-size: 14.5px; font-weight: 700;">第 ${c.n} 段 ${Math.floor(ct / 60)}:${String(ct % 60).padStart(2, '0')}</span><span style="margin-top: 3px; font-family: ${F.mono}; font-size: 11px; color: ${C.cap};">全片 ${full}</span></span>`;
+  return `<span title="从这里开始听" style="flex: none; display: inline-flex; flex-direction: column; align-items: center; padding: 5px 12px 6px; margin-bottom: 4px; background: ${C.card}; border: 1.5px solid ${C.ink}; color: ${C.ink}; line-height: 1.1;"><span style="font-family: ${F.serif}; font-size: 14.5px; font-weight: 700;">第 ${c.n} 段 ${Math.floor(ct / 60)}:${String(ct % 60).padStart(2, '0')}</span><span style="margin-top: 3px; font-family: ${F.mono}; font-size: 11px; color: ${C.cap};">全片 ${full}</span></span>`;
 }
 function headOld(L, title, q) {
   return `<div style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px 20px; padding-bottom: 16px; border-bottom: 2px solid ${C.ink};">${door(L)}<h2 style="${S.h2}">${title}</h2>${PLATE[L] ? plate(PLATE[L]) : ''}<span style="margin-left: auto; padding-bottom: 6px; font-size: 14.5px; color: ${C.muted};">${q}</span></div>`;
