@@ -21,7 +21,7 @@
 </helmet>
 
 <section id="m1" data-screen-label="M01 封面" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: 4 / 5; margin: 0 auto 64px; padding: 56px 64px 0; background: #141311; color: #F4EFE4; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column; overflow: hidden;">
-  <div style="height: 16px; margin: -56px -64px 44px; flex: none; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%23C9A227%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23141311%22/%3E%3C/svg%3E');"></div>
+  <div style="height: 16px; margin: -56px -64px 44px; flex: none; background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%23C9A227%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23141311%22/%3E%3C/svg%3E');"></div>
   <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 24px;">
     <span style="font-size: 24px; font-weight: 500; letter-spacing: 0.28em; color: #C9A227;">电影巨辩 · 第 11 期</span>
     <span style="font-size: 22px; letter-spacing: 0.06em; color: #B9B2A3;">老马 × 阿吴｜3 小时 02 分</span>
@@ -51,7 +51,7 @@
         </svg>
       </sc-for>
     </div>
-    <div style="height: 30px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2222%22 height=%2230%22%3E%3Crect width=%2222%22 height=%2230%22 fill=%22%23C9A227%22/%3E%3Crect x=%227%22 y=%223.5%22 width=%228%22 height=%225%22 rx=%221%22 fill=%22%23141311%22/%3E%3Crect x=%227%22 y=%2221.5%22 width=%228%22 height=%225%22 rx=%221%22 fill=%22%23141311%22/%3E%3C/svg%3E');"></div>
+    <div style="height: 30px; background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2222%22 height=%2230%22%3E%3Crect width=%2222%22 height=%2230%22 fill=%22%23C9A227%22/%3E%3Crect x=%227%22 y=%223.5%22 width=%228%22 height=%225%22 rx=%221%22 fill=%22%23141311%22/%3E%3Crect x=%227%22 y=%2221.5%22 width=%228%22 height=%225%22 rx=%221%22 fill=%22%23141311%22/%3E%3C/svg%3E');"></div>
     <div style="position: relative; height: 30px;">
       <sc-for list="{{ coverYears }}" as="y" hint-placeholder-count="7">
         <div style="position: absolute; left: {{ y.left }}; top: 0; height: 30px; border-left: 2px solid #C9A227; padding-left: 6px; font-family: 'IBM Plex Mono', monospace; font-size: 16px; line-height: 34px; color: #E6DFD0;">{{ y.year }}</div>
@@ -62,11 +62,11 @@
       <span style="display: flex; align-items: baseline; gap: 12px;"><span style="font-size: 16px; color: #B9B2A3;">第 60 届</span><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 60px; line-height: 1; background: linear-gradient(160deg, #F3DC8A 0%, #C9A227 48%, #8E6F12 100%); -webkit-background-clip: text; background-clip: text; color: transparent;">2023</span></span>
     </div>
   </div>
-  <div style="height: 16px; margin: 36px -64px 0; flex: none; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%23C9A227%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23141311%22/%3E%3C/svg%3E');"></div>
+  <div style="height: 16px; margin: 36px -64px 0; flex: none; background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%23C9A227%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23141311%22/%3E%3C/svg%3E');"></div>
 </section>
 
 <section id="m1b" data-screen-label="M01b 这期反复出现的人" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #1C1C1C; color: #F4EFE4; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
-  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%23C9A227%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%231C1C1C%22/%3E%3C/svg%3E');"></div>
+  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%23C9A227%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%231C1C1C%22/%3E%3C/svg%3E');"></div>
   <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #B9B2A3;"><span>人物</span><span style="display: flex; align-items: center; gap: 10px;"><span style="flex: none; width: 28px; height: 28px; border-radius: 50%; background-image: url('assets/gh/trophyB.jpg'); background-size: 230% auto; background-position: 52% 20%; box-shadow: 0 0 0 1.5px #C9A227;"></span>电影巨辩 EP11 · 金马六十年</span></div>
   <h2 style="margin: 32px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 62px; line-height: 1.2;">这期反复出现的人</h2>
   <div style="margin-top: 12px; font-size: 19px; color: #B9B2A3;">数字为转录文本中的提及次数，约数</div>
@@ -101,7 +101,7 @@
 </section>
 
 <section id="m1c" data-screen-label="M01c 这期提到的电影" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F4EFE4; color: #1C1C1C; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
-  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
+  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
   <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #57534C;"><span>片单</span><span style="display: flex; align-items: center; gap: 10px;"><span style="flex: none; width: 28px; height: 28px; border-radius: 50%; background-image: url('assets/gh/trophyB.jpg'); background-size: 230% auto; background-position: 52% 20%; box-shadow: 0 0 0 1.5px #C9A227;"></span>电影巨辩 EP11 · 金马六十年</span></div>
   <h2 style="margin: 32px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 62px; line-height: 1.2;">这期提到的电影</h2>
   <div style="margin-top: 12px; font-size: 19px; color: #57534C;">按年份排列；海报下的色条是出品地区</div>
@@ -128,7 +128,7 @@
 </section>
 
 <section id="m2" data-screen-label="M02 十个要点" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F4EFE4; color: #1C1C1C; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
-  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
+  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
   <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #57534C;"><span>M02 · 要点</span><span style="display: flex; align-items: center; gap: 10px;"><span style="flex: none; width: 28px; height: 28px; border-radius: 50%; background-image: url('assets/gh/trophyB.jpg'); background-size: 230% auto; background-position: 52% 20%; box-shadow: 0 0 0 1.5px #C9A227;"></span>电影巨辩 EP11 · 金马六十年</span></div>
   <h2 style="margin: 32px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 62px; line-height: 1.2;">十个要点</h2>
   <div style="margin-top: 40px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 44px;">
@@ -146,7 +146,7 @@
 </section>
 
 <section id="m3" data-screen-label="M03 全期脑图" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F4EFE4; color: #1C1C1C; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
-  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
+  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
   <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #57534C;"><span>M03 · 脑图</span><span style="display: flex; align-items: center; gap: 10px;"><span style="flex: none; width: 28px; height: 28px; border-radius: 50%; background-image: url('assets/gh/trophyB.jpg'); background-size: 230% auto; background-position: 52% 20%; box-shadow: 0 0 0 1.5px #C9A227;"></span>电影巨辩 EP11 · 金马六十年</span></div>
   <h2 style="margin: 32px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 62px; line-height: 1.2;">全期脑图</h2>
   <div style="margin-top: 36px; align-self: flex-start; background: #1C1C1C; color: #F4EFE4; padding: 14px 26px; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 30px; letter-spacing: 0.08em;">金马六十年</div>
@@ -177,7 +177,7 @@
 </section>
 
 <section id="m4" data-screen-label="M04 三小时都聊了什么" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F4EFE4; color: #1C1C1C; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
-  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
+  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
   <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #57534C;"><span>M04 · 时间分配</span><span style="display: flex; align-items: center; gap: 10px;"><span style="flex: none; width: 28px; height: 28px; border-radius: 50%; background-image: url('assets/gh/trophyB.jpg'); background-size: 230% auto; background-position: 52% 20%; box-shadow: 0 0 0 1.5px #C9A227;"></span>电影巨辩 EP11 · 金马六十年</span></div>
   <h2 style="margin: 32px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 62px; line-height: 1.2;">三小时都聊了什么</h2>
   <div style="margin-top: 12px; font-size: 19px; color: #57534C;">横条全长 = 182.2 分钟，按每段起止时间切分</div>
@@ -229,7 +229,7 @@
 </section>
 
 <section id="m5" data-screen-label="M05 金马在哪：两种模式之间" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F4EFE4; color: #1C1C1C; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
-  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
+  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
   <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #57534C;"><span>M05 · 定位</span><span style="display: flex; align-items: center; gap: 10px;"><span style="flex: none; width: 28px; height: 28px; border-radius: 50%; background-image: url('assets/gh/trophyB.jpg'); background-size: 230% auto; background-position: 52% 20%; box-shadow: 0 0 0 1.5px #C9A227;"></span>电影巨辩 EP11 · 金马六十年</span></div>
   <h2 style="margin: 32px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 62px; line-height: 1.2;">金马在哪：两种模式之间</h2>
   <div style="margin-top: 12px; font-size: 19px; color: #57534C;">左右两端是两种成熟的模式，金马在中间，从两边各拿了一半。</div>
@@ -292,7 +292,7 @@
 </section>
 
 <section id="m6" data-screen-label="M06 为什么只能是金马" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F4EFE4; color: #1C1C1C; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
-  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
+  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
   <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #57534C;"><span>M06 · 三地</span><span style="display: flex; align-items: center; gap: 10px;"><span style="flex: none; width: 28px; height: 28px; border-radius: 50%; background-image: url('assets/gh/trophyB.jpg'); background-size: 230% auto; background-position: 52% 20%; box-shadow: 0 0 0 1.5px #C9A227;"></span>电影巨辩 EP11 · 金马六十年</span></div>
   <h2 style="margin: 32px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 62px; line-height: 1.2;">为什么只能是金马</h2>
   <div style="margin-top: 12px; font-size: 19px; color: #57534C;">要办一个覆盖整个华语圈的奖，三地各自的条件</div>
@@ -344,7 +344,7 @@
 </section>
 
 <section id="m7" data-screen-label="M07 八个阶段" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F4EFE4; color: #1C1C1C; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
-  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
+  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
   <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #57534C;"><span>M07 · 主时间线</span><span style="display: flex; align-items: center; gap: 10px;"><span style="flex: none; width: 28px; height: 28px; border-radius: 50%; background-image: url('assets/gh/trophyB.jpg'); background-size: 230% auto; background-position: 52% 20%; box-shadow: 0 0 0 1.5px #C9A227;"></span>电影巨辩 EP11 · 金马六十年</span></div>
   <h2 style="margin: 32px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 62px; line-height: 1.2;">六十年，八个阶段</h2>
   <div style="margin-top: 12px; font-size: 19px; color: #57534C;">横轴按真实年份比例绘制，1962–2023</div>
@@ -355,7 +355,7 @@
         <div style="margin-top: 8px; font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 17px; line-height: 1.3;">{{ p.name }}</div>
       </div>
     </sc-for>
-    <div style="position: absolute; left: 0; right: 0; top: 140px; height: 30px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2222%22 height=%2230%22%3E%3Crect width=%2222%22 height=%2230%22 fill=%22%23C9A227%22/%3E%3Crect x=%227%22 y=%223.5%22 width=%228%22 height=%225%22 rx=%221%22 fill=%22%23F4EFE4%22/%3E%3Crect x=%227%22 y=%2221.5%22 width=%228%22 height=%225%22 rx=%221%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
+    <div style="position: absolute; left: 0; right: 0; top: 140px; height: 30px; background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2222%22 height=%2230%22%3E%3Crect width=%2222%22 height=%2230%22 fill=%22%23C9A227%22/%3E%3Crect x=%227%22 y=%223.5%22 width=%228%22 height=%225%22 rx=%221%22 fill=%22%23F4EFE4%22/%3E%3Crect x=%227%22 y=%2221.5%22 width=%228%22 height=%225%22 rx=%221%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
     <sc-for list="{{ gaps }}" as="g" hint-placeholder-count="2">
       <div style="position: absolute; left: {{ g.left }}; width: {{ g.w }}; top: 136px; height: 38px; box-sizing: border-box; background: #F4EFE4; border: 1.5px dashed #1C1C1C;"></div>
       <div style="position: absolute; left: {{ g.left }}; top: 240px; font-size: 14px; color: #57534C; white-space: nowrap;"><span style="font-family: 'IBM Plex Mono', monospace;">{{ g.year }}</span> 停办</div>
@@ -380,7 +380,7 @@
 </section>
 
 <section id="m8" data-screen-label="M08 四条纵线" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F4EFE4; color: #1C1C1C; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
-  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
+  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
   <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #57534C;"><span>M08 · 泳道</span><span style="display: flex; align-items: center; gap: 10px;"><span style="flex: none; width: 28px; height: 28px; border-radius: 50%; background-image: url('assets/gh/trophyB.jpg'); background-size: 230% auto; background-position: 52% 20%; box-shadow: 0 0 0 1.5px #C9A227;"></span>电影巨辩 EP11 · 金马六十年</span></div>
   <h2 style="margin: 32px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 62px; line-height: 1.2;">四条纵线</h2>
   <div style="position: relative; margin-top: 30px;">
@@ -391,7 +391,7 @@
       <sc-for list="{{ phases }}" as="p" hint-placeholder-count="8">
         <div style="position: absolute; left: {{ p.left }}; width: {{ p.width }}; top: 0; height: 10px; background: {{ p.bg }}; box-shadow: inset -2px 0 0 #F4EFE4;"></div>
       </sc-for>
-      <div style="position: absolute; left: 0; right: 0; top: 12px; height: 22px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2218%22 height=%2222%22%3E%3Crect width=%2218%22 height=%2222%22 fill=%22%23C9A227%22/%3E%3Crect x=%226%22 y=%223%22 width=%226%22 height=%224%22 rx=%221%22 fill=%22%23F4EFE4%22/%3E%3Crect x=%226%22 y=%2215%22 width=%226%22 height=%224%22 rx=%221%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
+      <div style="position: absolute; left: 0; right: 0; top: 12px; height: 22px; background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2218%22 height=%2222%22%3E%3Crect width=%2218%22 height=%2222%22 fill=%22%23C9A227%22/%3E%3Crect x=%226%22 y=%223%22 width=%226%22 height=%224%22 rx=%221%22 fill=%22%23F4EFE4%22/%3E%3Crect x=%226%22 y=%2215%22 width=%226%22 height=%224%22 rx=%221%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
       <sc-for list="{{ bounds }}" as="b" hint-placeholder-count="8">
         <div style="position: absolute; left: {{ b.left }}; top: 38px; padding-left: 5px; font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 15px;">{{ b.year }}</div>
       </sc-for>
@@ -417,7 +417,7 @@
 </section>
 
 <section id="m9" data-screen-label="M09 评审制度折腾史" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F4EFE4; color: #1C1C1C; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
-  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
+  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
   <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #57534C;"><span>M09 · 评审</span><span style="display: flex; align-items: center; gap: 10px;"><span style="flex: none; width: 28px; height: 28px; border-radius: 50%; background-image: url('assets/gh/trophyB.jpg'); background-size: 230% auto; background-position: 52% 20%; box-shadow: 0 0 0 1.5px #C9A227;"></span>电影巨辩 EP11 · 金马六十年</span></div>
   <h2 style="margin: 32px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 62px; line-height: 1.2;">评审制度折腾史</h2>
   <p style="margin: 14px 0 0; font-size: 19px; line-height: 1.65; color: #3A3732;"><span style="font-family: 'Noto Serif SC', serif; font-weight: 700; color: #1C1C1C;">“为了减少外界对评审制度的争议，今年做了哪些改革。”</span>到了下一年，这句话又出现了。</p>
@@ -450,7 +450,7 @@
 </section>
 
 <section id="m10" data-screen-label="M10 大陆电影的八道门" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F4EFE4; color: #1C1C1C; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
-  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
+  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
   <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #57534C;"><span>M10 · 门</span><span style="display: flex; align-items: center; gap: 10px;"><span style="flex: none; width: 28px; height: 28px; border-radius: 50%; background-image: url('assets/gh/trophyB.jpg'); background-size: 230% auto; background-position: 52% 20%; box-shadow: 0 0 0 1.5px #C9A227;"></span>电影巨辩 EP11 · 金马六十年</span></div>
   <h2 style="margin: 32px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 62px; line-height: 1.2;">大陆电影的八道门</h2>
   <p style="margin: 14px 0 0; font-size: 19px; line-height: 1.65; color: #3A3732;"><span style="font-family: 'Noto Serif SC', serif; font-weight: 700; color: #1C1C1C;">“大陆对金马的放开，是一小步一小步的，没有一步到位。”</span>从第一次邀请到全面放开，用了二十年。</p>
@@ -498,7 +498,7 @@
 </section>
 
 <section id="m11" data-screen-label="M11 1996 阳光灿烂的日子事件" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #1C1C1C; color: #F4EFE4; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
-  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%23C9A227%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%231C1C1C%22/%3E%3C/svg%3E');"></div>
+  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%23C9A227%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%231C1C1C%22/%3E%3C/svg%3E');"></div>
   <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #B9B2A3;"><span>M11 · 1996</span><span style="display: flex; align-items: center; gap: 10px;"><span style="flex: none; width: 28px; height: 28px; border-radius: 50%; background-image: url('assets/gh/trophyB.jpg'); background-size: 230% auto; background-position: 52% 20%; box-shadow: 0 0 0 1.5px #C9A227;"></span>电影巨辩 EP11 · 金马六十年</span></div>
   <h2 style="margin: 32px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 62px; line-height: 1.2;"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600;">1996</span>：《阳光灿烂的日子》事件</h2>
   <div style="margin-top: 40px; display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 44px;">
@@ -536,7 +536,7 @@
 </section>
 
 <section id="m12" data-screen-label="M12 金马亏待过谁" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F4EFE4; color: #1C1C1C; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
-  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
+  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
   <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #57534C;"><span>M12 · 导演</span><span style="display: flex; align-items: center; gap: 10px;"><span style="flex: none; width: 28px; height: 28px; border-radius: 50%; background-image: url('assets/gh/trophyB.jpg'); background-size: 230% auto; background-position: 52% 20%; box-shadow: 0 0 0 1.5px #C9A227;"></span>电影巨辩 EP11 · 金马六十年</span></div>
   <h2 style="margin: 32px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 62px; line-height: 1.2;">金马亏待过谁</h2>
   <div style="margin-top: 12px; font-size: 19px; color: #57534C;">小评审团每年换人，美学取向就完全不一样。</div>
@@ -582,7 +582,7 @@
 </section>
 
 <section id="m13" data-screen-label="M13 最佳剧情片去了哪里" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F4EFE4; color: #1C1C1C; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
-  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
+  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
   <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #57534C;"><span>M13 · 最佳剧情片</span><span style="display: flex; align-items: center; gap: 10px;"><span style="flex: none; width: 28px; height: 28px; border-radius: 50%; background-image: url('assets/gh/trophyB.jpg'); background-size: 230% auto; background-position: 52% 20%; box-shadow: 0 0 0 1.5px #C9A227;"></span>电影巨辩 EP11 · 金马六十年</span></div>
   <h2 style="margin: 32px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 62px; line-height: 1.2;">最佳剧情片去了哪里</h2>
   <div style="margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: 16px;">
@@ -636,7 +636,7 @@
 </section>
 
 <section id="m14" data-screen-label="M14 2002 钱从哪里来" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F4EFE4; color: #1C1C1C; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
-  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
+  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
   <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #57534C;"><span>M14 · 预算</span><span style="display: flex; align-items: center; gap: 10px;"><span style="flex: none; width: 28px; height: 28px; border-radius: 50%; background-image: url('assets/gh/trophyB.jpg'); background-size: 230% auto; background-position: 52% 20%; box-shadow: 0 0 0 1.5px #C9A227;"></span>电影巨辩 EP11 · 金马六十年</span></div>
   <h2 style="margin: 32px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 62px; line-height: 1.2;"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600;">2002</span>：钱从哪里来</h2>
   <div style="margin-top: 40px; display: grid; grid-template-columns: 400px minmax(0, 1fr); gap: 48px;">
@@ -680,7 +680,7 @@
 </section>
 
 <section id="m15" data-screen-label="M15 每任主席留下了什么" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F4EFE4; color: #1C1C1C; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
-  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
+  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
   <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #57534C;"><span>M15 · 主席</span><span style="display: flex; align-items: center; gap: 10px;"><span style="flex: none; width: 28px; height: 28px; border-radius: 50%; background-image: url('assets/gh/trophyB.jpg'); background-size: 230% auto; background-position: 52% 20%; box-shadow: 0 0 0 1.5px #C9A227;"></span>电影巨辩 EP11 · 金马六十年</span></div>
   <h2 style="margin: 32px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 62px; line-height: 1.2;">每任主席留下了什么</h2>
   <div style="margin-top: 12px; font-size: 19px; color: #57534C;">从下往上读：每一任在前任的基础上加一层</div>
@@ -715,7 +715,7 @@
 </section>
 
 <section id="m16" data-screen-label="M16 两次整合机遇" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F4EFE4; color: #1C1C1C; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
-  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
+  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
   <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #57534C;"><span>M16 · 机遇</span><span style="display: flex; align-items: center; gap: 10px;"><span style="flex: none; width: 28px; height: 28px; border-radius: 50%; background-image: url('assets/gh/trophyB.jpg'); background-size: 230% auto; background-position: 52% 20%; box-shadow: 0 0 0 1.5px #C9A227;"></span>电影巨辩 EP11 · 金马六十年</span></div>
   <h2 style="margin: 32px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 62px; line-height: 1.2;">两次整合机遇</h2>
   <div style="margin-top: 40px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px;">
@@ -744,7 +744,7 @@
 </section>
 
 <section id="m17" data-screen-label="M17 三个时代的华语电影系统" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F4EFE4; color: #1C1C1C; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
-  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
+  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
   <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #57534C;"><span>M17 · 系统</span><span style="display: flex; align-items: center; gap: 10px;"><span style="flex: none; width: 28px; height: 28px; border-radius: 50%; background-image: url('assets/gh/trophyB.jpg'); background-size: 230% auto; background-position: 52% 20%; box-shadow: 0 0 0 1.5px #C9A227;"></span>电影巨辩 EP11 · 金马六十年</span></div>
   <h2 style="margin: 32px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 62px; line-height: 1.2;">三个时代的华语电影系统</h2>
   <div style="margin-top: 36px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px;">
@@ -830,7 +830,7 @@
 </section>
 
 <section id="m18" data-screen-label="M18 提及频次" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F4EFE4; color: #1C1C1C; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
-  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
+  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
   <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #57534C;"><span>M18 · 数据</span><span style="display: flex; align-items: center; gap: 10px;"><span style="flex: none; width: 28px; height: 28px; border-radius: 50%; background-image: url('assets/gh/trophyB.jpg'); background-size: 230% auto; background-position: 52% 20%; box-shadow: 0 0 0 1.5px #C9A227;"></span>电影巨辩 EP11 · 金马六十年</span></div>
   <h2 style="margin: 32px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 62px; line-height: 1.2;">提及频次</h2>
   <div style="margin-top: 30px; display: grid; grid-template-columns: 330px minmax(0, 1fr); gap: 36px; align-items: center; background: #1C1C1C; color: #F4EFE4; padding: 22px 28px;">
@@ -882,7 +882,7 @@
 </section>
 
 <section id="m20" data-screen-label="M20 主播的分歧" style="position: relative; box-sizing: border-box; width: 1080px; aspect-ratio: {{ ratio }}; margin: 0 auto 64px; padding: 56px 64px 48px; background: #F4EFE4; color: #1C1C1C; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column;">
-  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
+  <div style="height: 16px; margin: -56px -64px 40px; background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2216%22%3E%3Crect width=%2224%22 height=%2216%22 fill=%22%231C1C1C%22/%3E%3Crect x=%228%22 y=%224.5%22 width=%228%22 height=%227%22 rx=%221.5%22 fill=%22%23F4EFE4%22/%3E%3C/svg%3E');"></div>
   <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 0.1em; color: #57534C;"><span>M20 · 分歧</span><span style="display: flex; align-items: center; gap: 10px;"><span style="flex: none; width: 28px; height: 28px; border-radius: 50%; background-image: url('assets/gh/trophyB.jpg'); background-size: 230% auto; background-position: 52% 20%; box-shadow: 0 0 0 1.5px #C9A227;"></span>电影巨辩 EP11 · 金马六十年</span></div>
   <h2 style="margin: 32px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 62px; line-height: 1.2;">主播的分歧</h2>
   <div style="margin-top: 30px; display: flex; flex-direction: column; gap: 20px;">
@@ -940,7 +940,7 @@
   </div>
   <div style="position: relative; margin-top: auto;">
     <div style="display: flex; align-items: center; gap: 0;">
-      <div style="flex: 1; height: 30px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2222%22 height=%2230%22%3E%3Crect width=%2222%22 height=%2230%22 fill=%22%23C9A227%22/%3E%3Crect x=%227%22 y=%223.5%22 width=%228%22 height=%225%22 rx=%221%22 fill=%22%231C1C1C%22/%3E%3Crect x=%227%22 y=%2221.5%22 width=%228%22 height=%225%22 rx=%221%22 fill=%22%231C1C1C%22/%3E%3C/svg%3E');"></div>
+      <div style="flex: 1; height: 30px; background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2222%22 height=%2230%22%3E%3Crect width=%2222%22 height=%2230%22 fill=%22%23C9A227%22/%3E%3Crect x=%227%22 y=%223.5%22 width=%228%22 height=%225%22 rx=%221%22 fill=%22%231C1C1C%22/%3E%3Crect x=%227%22 y=%2221.5%22 width=%228%22 height=%225%22 rx=%221%22 fill=%22%231C1C1C%22/%3E%3C/svg%3E');"></div>
       <div style="flex: none; width: 180px; height: 0; border-top: 3px dashed #C9A227; margin-right: -64px;"></div>
     </div>
     <div style="margin-top: 14px; display: flex; justify-content: space-between; align-items: baseline;">
