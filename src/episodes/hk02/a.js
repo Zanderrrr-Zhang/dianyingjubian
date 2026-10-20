@@ -101,8 +101,11 @@ const S = {
   chip: `display: inline-flex; align-items: center; gap: 5px; padding: 1px 7px; border: 1px solid ${C.rule2}; font-size: 11.5px; line-height: 1.6; letter-spacing: 0.04em; color: ${C.cap}; white-space: nowrap;`
 };
 const G2 = 'display: grid; grid-template-columns: 128px minmax(0, 1fr); column-gap: 16px;';
+// 模块字母牌按交接文档的颜色表着色：过渡期靛紫，合拍与北上朱红，本土两阶段浅青、深青，社会背景褐灰，演员梅紫
+const ACC = { G: C.tr, H: C.co, I: C.co, L: C.l1, N: C.l1, J: C.l2, K: C.l2, M: C.ctx, O: C.act };
 function head(letter, title, q) {
-  return `<div style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px 22px; padding-bottom: 16px; border-bottom: 3px double ${C.ink};"><span style="flex: none; width: 46px; height: 46px; box-sizing: border-box; border: 1.5px solid ${C.ink}; display: flex; align-items: center; justify-content: center; font-family: ${F.mono}; font-size: 22px; font-weight: 600;">${letter}</span><h2 style="${S.h2}">${title}</h2>${PLATE[letter] ? plate(PLATE[letter]) : ''}<span style="margin-left: auto; padding-bottom: 6px; font-size: 15px; color: ${C.muted};">${q}</span></div>`;
+  const a = ACC[letter];
+  return `<div style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px 22px; padding-bottom: 16px; border-bottom: 3px double ${C.ink};"><span style="flex: none; width: 46px; height: 46px; box-sizing: border-box; border: 1.5px solid ${C.ink}; ${a ? `background: ${a}; color: ${a === C.l1 ? C.ink : '#fff'};` : ''} display: flex; align-items: center; justify-content: center; font-family: ${F.mono}; font-size: 22px; font-weight: 600;">${letter}</span><h2 style="${S.h2}">${title}</h2>${PLATE[letter] ? plate(PLATE[letter]) : ''}<span style="margin-left: auto; padding-bottom: 6px; font-size: 15px; color: ${C.muted};">${q}</span></div>`;
 }
 const secOpen = (id, letter, title) => `<section id="${id}" data-screen-label="${letter} ${title}" style="padding: clamp(64px, 8vw, 104px) ${PAD} 0;">`;
 function sub(title, note) { return `<div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; padding-bottom: 10px; border-bottom: 1px solid ${C.ink};"><h3 style="${S.h3}">${title}</h3>${note ? `<span style="font-size: 13px; color: ${C.cap};">${note}</span>` : ''}</div>`; }
