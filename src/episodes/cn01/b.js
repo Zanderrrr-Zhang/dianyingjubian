@@ -269,7 +269,7 @@ const helmet = `<helmet>
 </helmet>`;
 const bodyParts = [cover(), sectionB(), sectionD(), sectionE(), sectionF(), sectionG(), sectionH(), sectionI(), sectionJ(), sectionN(), sectionK(), sectionL(), sectionM(), footer()];
 const template = `${helmet}
-<div style="width: 100%; max-width: {{ frameW }}; margin: 0 auto; background: ${C.paper}; color: ${C.ink}; font-family: ${F.sans}; font-variant-numeric: tabular-nums; overflow: hidden; box-shadow: 0 0 0 1px rgba(29,27,24,0.08);">
+<div style="width: 100%; max-width: {{ frameW }}; margin: 0 auto; background: ${LEDGER}; color: ${C.ink}; font-family: ${F.sans}; font-variant-numeric: tabular-nums; overflow: hidden; box-shadow: 0 0 0 1px rgba(29,27,24,0.08);">
 ${bodyParts.join('\n')}
 </div>`;
 
