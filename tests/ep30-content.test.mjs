@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { readFile } from 'node:fs/promises';
+import { readFile, access } from 'node:fs/promises';
 import { runInNewContext } from 'node:vm';
 import { projectPath } from '../tools/lib/project.mjs';
 
@@ -15,7 +15,7 @@ class DCLogic {
   constructor(props = {}) { this.props = props; }
   setState(update) { Object.assign(this.state, typeof update === 'function' ? update(this.state) : update); }
 }
-const sandbox = runInNewContext(source + '\n({ Component, DATA });', { DCLogic, window: {} });
+const sandbox = runInNewContext(source + '\n({ Component, DATA, POSTER, PORTRAIT });', { DCLogic, window: {} });
 const { Component } = sandbox;
 // 换回本上下文的对象，deepStrictEqual 才会比较内容而非原型
 const DATA = JSON.parse(JSON.stringify(sandbox.DATA));
@@ -121,4 +121,21 @@ test('EP30 headline numbers are derived from the appendix', () => {
   assert.deepEqual([top[0], top[6]], ['密探', 19.1]);
   const truth = DATA.heat.map((r) => r[11]);
   assert.equal(Math.max(...truth), 24.06);
+});
+
+test('EP30 images exist, are credited, and the excluded posters stay out', async () => {
+  const files = [...Object.values(sandbox.POSTER), ...Object.values(sandbox.PORTRAIT)].map((f) => 'assets/ep30/' + f);
+  const recorded = new Set(JSON.parse(await readFile(projectPath('src/shared/image-sources.json'), 'utf8')).map((s) => s.path));
+  for (const f of files) {
+    await access(projectPath(f));
+    assert.ok(recorded.has(f), `${f} has no source record`);
+  }
+  // 海报含枪械或涉及真实事件的影片不配海报
+  for (const t of ['一战再战', '爱丁顿', '罪人', '美国队长4', '辛德·拉杰布之声']) assert.equal(sandbox.POSTER[t], undefined, t);
+  for (const cw of [1240, 358]) {
+    const page = new Component();
+    page.state.cw = cw;
+    const text = JSON.stringify(page.renderVals(), (k, v) => (typeof v === 'function' ? undefined : v));
+    for (const src of new Set(text.match(/assets\/[^"]+?\.jpg/g))) await access(projectPath(src));
+  }
 });

@@ -154,5 +154,301 @@
  {
   "url": "https://upload.wikimedia.org/wikipedia/en/1/17/Bullitt_poster.jpg",
   "path": "assets/ep26/bullitt.jpg"
+ },
+ {
+  "url": "https://upload.wikimedia.org/wikipedia/en/d/de/Afternoons_of_Solitude_poster.jpg",
+  "path": "assets/ep30/f-afternoons-of-solitude.jpg"
+ },
+ {
+  "url": "https://upload.wikimedia.org/wikipedia/en/6/69/Mirrors_No._3_poster.jpg",
+  "path": "assets/ep30/f-miroirs-no-3.jpg"
+ },
+ {
+  "url": "https://upload.wikimedia.org/wikipedia/en/c/c2/That_Summer_in_Paris_film_poster.jpg",
+  "path": "assets/ep30/f-that-summer-in-paris.jpg"
+ },
+ {
+  "url": "https://upload.wikimedia.org/wikipedia/en/5/57/The_Secret_Agent.png",
+  "path": "assets/ep30/f-the-secret-agent.jpg"
+ },
+ {
+  "url": "https://upload.wikimedia.org/wikipedia/en/8/8b/I_Only_Rest_in_the_Storm.jpg",
+  "path": "assets/ep30/f-i-only-rest-in-the-storm.jpg"
+ },
+ {
+  "url": "https://upload.wikimedia.org/wikipedia/en/c/cf/Dreams_2024_film_poster.jpg",
+  "path": "assets/ep30/f-dreams-sex-love.jpg"
+ },
+ {
+  "url": "https://upload.wikimedia.org/wikipedia/en/0/05/Romer%C3%ADa_Teaser.jpeg",
+  "path": "assets/ep30/f-romeria.jpg"
+ },
+ {
+  "url": "https://upload.wikimedia.org/wikipedia/en/4/41/Jeunes_M%C3%A8res_2025.jpeg",
+  "path": "assets/ep30/f-young-mothers.jpg"
+ },
+ {
+  "url": "https://upload.wikimedia.org/wikipedia/en/5/5a/Renoir_2025.jpeg",
+  "path": "assets/ep30/f-renoir.jpg"
+ },
+ {
+  "url": "https://upload.wikimedia.org/wikipedia/en/3/38/F1_%282025_film%29.png",
+  "path": "assets/ep30/f-f1.jpg"
+ },
+ {
+  "url": "https://upload.wikimedia.org/wikipedia/en/5/54/Yes-2025-film-poster.jpg",
+  "path": "assets/ep30/f-yes.jpg"
+ },
+ {
+  "url": "https://upload.wikimedia.org/wikipedia/en/4/49/The_Blue_Trail_film_poster.jpg",
+  "path": "assets/ep30/f-the-blue-trail.jpg"
+ },
+ {
+  "url": "https://upload.wikimedia.org/wikipedia/en/5/58/Train_Dreams_poster.jpeg",
+  "path": "assets/ep30/f-train-dreams.jpg"
+ },
+ {
+  "url": "https://upload.wikimedia.org/wikipedia/en/d/d6/The_Mastermind_film_poster.jpg",
+  "path": "assets/ep30/f-the-mastermind.jpg"
+ },
+ {
+  "url": "https://upload.wikimedia.org/wikipedia/en/9/91/Sirat_2025.jpeg",
+  "path": "assets/ep30/f-sirat.jpg"
+ },
+ {
+  "url": "https://upload.wikimedia.org/wikipedia/en/5/5c/Sorry%2C_Baby_poster.jpg",
+  "path": "assets/ep30/f-sorry-baby.jpg"
+ },
+ {
+  "url": "https://upload.wikimedia.org/wikipedia/en/a/a1/Blue_Moon_poster.jpg",
+  "path": "assets/ep30/f-blue-moon.jpg"
+ },
+ {
+  "url": "https://upload.wikimedia.org/wikipedia/en/1/12/No_Other_Choice_film_poster.jpeg",
+  "path": "assets/ep30/f-no-other-choice.jpg"
+ },
+ {
+  "url": "https://upload.wikimedia.org/wikipedia/en/b/b4/Hedda_film_poster.jpg",
+  "path": "assets/ep30/f-hedda.jpg"
+ },
+ {
+  "url": "https://upload.wikimedia.org/wikipedia/en/1/16/Dry_Leaf_2025.jpeg",
+  "path": "assets/ep30/f-dry-leaf.jpg"
+ },
+ {
+  "url": "https://upload.wikimedia.org/wikipedia/en/2/2e/Kokuho_poster.jpg",
+  "path": "assets/ep30/f-kokuho.jpg"
+ },
+ {
+  "url": "https://upload.wikimedia.org/wikipedia/en/a/a1/Nouvelle-Vague_teaser.jpeg",
+  "path": "assets/ep30/f-nouvelle-vague.jpg"
+ },
+ {
+  "url": "https://upload.wikimedia.org/wikipedia/en/2/27/Bugonia_film_poster.jpg",
+  "path": "assets/ep30/f-bugonia.jpg"
+ },
+ {
+  "url": "https://upload.wikimedia.org/wikipedia/en/6/6d/L%27Histoire_de_Souleymane_2024_film_poster.jpg",
+  "path": "assets/ep30/f-souleymane-s-story.jpg"
+ },
+ {
+  "url": "https://upload.wikimedia.org/wikipedia/en/9/90/The_Ice_Tower_%282025%29_film_poster.jpg",
+  "path": "assets/ep30/f-the-ice-tower.jpg"
+ },
+ {
+  "url": "https://upload.wikimedia.org/wikipedia/en/1/18/Die_My_Love_2025.jpeg",
+  "path": "assets/ep30/f-die-my-love.jpg"
+ },
+ {
+  "url": "https://upload.wikimedia.org/wikipedia/en/4/47/The_Smashing_Machine_%282025_film%29.jpg",
+  "path": "assets/ep30/f-the-smashing-machine.jpg"
+ },
+ {
+  "url": "https://upload.wikimedia.org/wikipedia/en/1/1f/Mission_Impossible_%E2%80%93_The_Final_Reckoning_Poster.jpg",
+  "path": "assets/ep30/f-mission-impossible-the-final-reckoning.jpg"
+ },
+ {
+  "url": "https://upload.wikimedia.org/wikipedia/en/6/6a/Zootopia_2_%282025_film%29.jpg",
+  "path": "assets/ep30/f-zootopia-2.jpg"
+ },
+ {
+  "url": "https://upload.wikimedia.org/wikipedia/en/3/32/Superman_%282025_film%29_poster.jpg",
+  "path": "assets/ep30/f-superman.jpg"
+ },
+ {
+  "url": "https://upload.wikimedia.org/wikipedia/en/1/13/The_Fantastic_Four_First_Steps_poster.jpg",
+  "path": "assets/ep30/f-the-fantastic-four-first-steps.jpg"
+ },
+ {
+  "url": "https://upload.wikimedia.org/wikipedia/en/8/84/Un_Simple_Accident_2025.jpeg",
+  "path": "assets/ep30/f-it-was-just-an-accident.jpg"
+ },
+ {
+  "url": "https://upload.wikimedia.org/wikipedia/en/e/e9/A_House_of_Dynamite.jpg",
+  "path": "assets/ep30/f-a-house-of-dynamite.jpg"
+ },
+ {
+  "url": "https://upload.wikimedia.org/wikipedia/en/2/23/In_die_Sonne_schauen_poster.webp",
+  "path": "assets/ep30/f-sound-of-falling.jpg"
+ },
+ {
+  "url": "https://upload.wikimedia.org/wikipedia/en/5/5c/Sentimental_Value_2025.jpeg",
+  "path": "assets/ep30/f-sentimental-value.jpg"
+ },
+ {
+  "url": "https://upload.wikimedia.org/wikipedia/en/9/95/Avatar_Fire_and_Ash_poster.jpeg",
+  "path": "assets/ep30/f-avatar-fire-and-ash.jpg"
+ },
+ {
+  "url": "https://upload.wikimedia.org/wikipedia/en/3/34/Autumnsonataposter.jpg",
+  "path": "assets/ep30/f-autumn-sonata.jpg"
+ },
+ {
+  "url": "https://upload.wikimedia.org/wikipedia/en/1/1f/Hamnet_film_poster.jpeg",
+  "path": "assets/ep30/f-hamnet.jpg"
+ },
+ {
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/MKr348252_Albert_Serra_%28Berlinale_2024%29.jpg/500px-MKr348252_Albert_Serra_%28Berlinale_2024%29.jpg",
+  "path": "assets/ep30/p-albert-serra.jpg"
+ },
+ {
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Christian_Petzold_at_Berlinale_2024_%28cropped%29.jpg/500px-Christian_Petzold_at_Berlinale_2024_%28cropped%29.jpg",
+  "path": "assets/ep30/p-christian-petzold.jpg"
+ },
+ {
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Kleber_Mendon%C3%A7a_Filho-6484.jpg/500px-Kleber_Mendon%C3%A7a_Filho-6484.jpg",
+  "path": "assets/ep30/p-kleber-mendonca-filho.jpg"
+ },
+ {
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Dag_Johan_Haugerud_with_Golden_Bear-4.jpg/500px-Dag_Johan_Haugerud_with_Golden_Bear-4.jpg",
+  "path": "assets/ep30/p-dag-johan-haugerud.jpg"
+ },
+ {
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Carla_Sim%C3%B3n_at_2025_Cannes_Red_Carpet_for_Romer%C3%ADa_1.jpg/500px-Carla_Sim%C3%B3n_at_2025_Cannes_Red_Carpet_for_Romer%C3%ADa_1.jpg",
+  "path": "assets/ep30/p-carla-simon.jpg"
+ },
+ {
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Dardenne_Lumi%C3%A8res_2015.jpg/500px-Dardenne_Lumi%C3%A8res_2015.jpg",
+  "path": "assets/ep30/p-dardenne-brothers.jpg"
+ },
+ {
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Chie_Hayakawa_at_2025_Cannes_Photocall_2.jpg/500px-Chie_Hayakawa_at_2025_Cannes_Photocall_2.jpg",
+  "path": "assets/ep30/p-chie-hayakawa.jpg"
+ },
+ {
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Pierre_Creton.jpg/500px-Pierre_Creton.jpg",
+  "path": "assets/ep30/p-pierre-creton.jpg"
+ },
+ {
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Joseph_Kosinski_2022.jpg/500px-Joseph_Kosinski_2022.jpg",
+  "path": "assets/ep30/p-joseph-kosinski.jpg"
+ },
+ {
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Paul_Thomas_Anderson_in_2025.jpg/500px-Paul_Thomas_Anderson_in_2025.jpg",
+  "path": "assets/ep30/p-paul-thomas-anderson.jpg"
+ },
+ {
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/MJK_39434_Nadav_Lapid_with_the_Golden_Bear_for_Synonyms_%28crop%29.jpg/500px-MJK_39434_Nadav_Lapid_with_the_Golden_Bear_for_Synonyms_%28crop%29.jpg",
+  "path": "assets/ep30/p-nadav-lapid.jpg"
+ },
+ {
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Gabriel_Mascaro_at_Berlinale_2025.jpg/500px-Gabriel_Mascaro_at_Berlinale_2025.jpg",
+  "path": "assets/ep30/p-gabriel-mascaro.jpg"
+ },
+ {
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Clint_Bentley_-_Train_Dreams.jpg/500px-Clint_Bentley_-_Train_Dreams.jpg",
+  "path": "assets/ep30/p-clint-bentley.jpg"
+ },
+ {
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Kelly_Reichardt-4432.jpg/500px-Kelly_Reichardt-4432.jpg",
+  "path": "assets/ep30/p-kelly-reichardt.jpg"
+ },
+ {
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Oliver_Laxe_Portrait_at_TIFF_2025_02.jpg/500px-Oliver_Laxe_Portrait_at_TIFF_2025_02.jpg",
+  "path": "assets/ep30/p-oliver-laxe.jpg"
+ },
+ {
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Dan-Depew-Eva-Victor-2.jpg/500px-Dan-Depew-Eva-Victor-2.jpg",
+  "path": "assets/ep30/p-eva-victor.jpg"
+ },
+ {
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Richard_Linklater_at_the_2026_Sundance_Film_Festival_for_Nouvelle_Vague_%282%29_%28cropped%29.jpg/500px-Richard_Linklater_at_the_2026_Sundance_Film_Festival_for_Nouvelle_Vague_%282%29_%28cropped%29.jpg",
+  "path": "assets/ep30/p-richard-linklater.jpg"
+ },
+ {
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Park_Chan-wook%2C_2026_Cannes_Film_Festival.jpg/500px-Park_Chan-wook%2C_2026_Cannes_Film_Festival.jpg",
+  "path": "assets/ep30/p-park-chan-wook.jpg"
+ },
+ {
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Nia_DaCosta_on_the_Green_Carpet_at_the_2025_Zurich_Film_Festival_11.jpg/500px-Nia_DaCosta_on_the_Green_Carpet_at_the_2025_Zurich_Film_Festival_11.jpg",
+  "path": "assets/ep30/p-nia-dacosta.jpg"
+ },
+ {
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Alexandre-koberidze-underdox-2021.jpg/500px-Alexandre-koberidze-underdox-2021.jpg",
+  "path": "assets/ep30/p-alexandre-koberidze.jpg"
+ },
+ {
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Ryan_Coogler_-_Sinners_2025.jpg/500px-Ryan_Coogler_-_Sinners_2025.jpg",
+  "path": "assets/ep30/p-ryan-coogler.jpg"
+ },
+ {
+  "url": "https://upload.wikimedia.org/wikipedia/commons/4/41/Sang-il_Lee.jpg",
+  "path": "assets/ep30/p-sang-il-lee.jpg"
+ },
+ {
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Yorgos_Lanthimos_at_82nd_Venice_International_Film_Festival-1_%28cropped%29.jpg/500px-Yorgos_Lanthimos_at_82nd_Venice_International_Film_Festival-1_%28cropped%29.jpg",
+  "path": "assets/ep30/p-yorgos-lanthimos.jpg"
+ },
+ {
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Boris_Lojkine_%282024%29_B.png/500px-Boris_Lojkine_%282024%29_B.png",
+  "path": "assets/ep30/p-boris-lojkine.jpg"
+ },
+ {
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Kaouther_Ben_Hania_at_SXSW_London_2026.jpg/500px-Kaouther_Ben_Hania_at_SXSW_London_2026.jpg",
+  "path": "assets/ep30/p-kaouther-ben-hania.jpg"
+ },
+ {
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Lucile_Hadzihalilovic_with_Silver_Bear-2.jpg/500px-Lucile_Hadzihalilovic_with_Silver_Bear-2.jpg",
+  "path": "assets/ep30/p-lucile-hadzihalilovic.jpg"
+ },
+ {
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Ari_Aster_at_the_2025_Cannes_Film_Festival_02_%28cropped%29.jpg/500px-Ari_Aster_at_the_2025_Cannes_Film_Festival_02_%28cropped%29.jpg",
+  "path": "assets/ep30/p-ari-aster.jpg"
+ },
+ {
+  "url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Lynne_Ramsay_at_ADIFF_2018.jpg",
+  "path": "assets/ep30/p-lynne-ramsay.jpg"
+ },
+ {
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/BennySafdie-byPhilipRomano.jpg/500px-BennySafdie-byPhilipRomano.jpg",
+  "path": "assets/ep30/p-benny-safdie.jpg"
+ },
+ {
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Christopher_McQuarrie_at_the_2025_Cannes_Film_Festival_05.jpg/500px-Christopher_McQuarrie_at_the_2025_Cannes_Film_Festival_05.jpg",
+  "path": "assets/ep30/p-christopher-mcquarrie.jpg"
+ },
+ {
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Jafar_Panahi_at_2025_Cannes_Film_Festival_Photocall.jpg/500px-Jafar_Panahi_at_2025_Cannes_Film_Festival_Photocall.jpg",
+  "path": "assets/ep30/p-jafar-panahi.jpg"
+ },
+ {
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Kathryn_Bigelow_A_House_of_Dynamite-13_%28cropped%29.jpg/500px-Kathryn_Bigelow_A_House_of_Dynamite-13_%28cropped%29.jpg",
+  "path": "assets/ep30/p-kathryn-bigelow.jpg"
+ },
+ {
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/MKr377335_Mascha_Schilinski_%28In_die_Sonne_schauen%2C_Cannes_2025%29.jpg/500px-MKr377335_Mascha_Schilinski_%28In_die_Sonne_schauen%2C_Cannes_2025%29.jpg",
+  "path": "assets/ep30/p-mascha-schilinski.jpg"
+ },
+ {
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Joachim_Trier-9987_%28cropped%29.jpg/500px-Joachim_Trier-9987_%28cropped%29.jpg",
+  "path": "assets/ep30/p-joachim-trier.jpg"
+ },
+ {
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Sophie_Letourneur_-_IFFR_2020.jpg/500px-Sophie_Letourneur_-_IFFR_2020.jpg",
+  "path": "assets/ep30/p-sophie-letourneur.jpg"
+ },
+ {
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/James_Cameron_at_53rd_Saturn_Awards_2026-01_%28cropped%29.jpg/500px-James_Cameron_at_53rd_Saturn_Awards_2026-01_%28cropped%29.jpg",
+  "path": "assets/ep30/p-james-cameron.jpg"
  }
 ]

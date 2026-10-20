@@ -72,6 +72,13 @@
     </div>
   </div>
 
+  <div role="img" aria-label="本期讨论时长居前的影片海报" style="margin-top: 18px; padding: 17px 10px; background: repeating-linear-gradient(90deg, #F5F1E8 0 9px, transparent 9px 22px) 8px 5px / 100% 6px no-repeat, repeating-linear-gradient(90deg, #F5F1E8 0 9px, transparent 9px 22px) 8px calc(100% - 5px) / 100% 6px no-repeat, #1C1A17;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); grid-template-rows: auto; grid-auto-rows: 0; column-gap: 8px; row-gap: 0;">
+      <sc-for list="{{ strip }}" as="s" hint-placeholder-count="12"><div style="min-height: 0; overflow: hidden;"><img src="{{ s.src }}" alt="{{ s.alt }}" title="{{ s.title }}" loading="lazy" style="display: block; width: 100%; aspect-ratio: 2 / 3; object-fit: cover;"></div></sc-for>
+    </div>
+  </div>
+  <div style="margin-top: 6px; font-size: 12px; color: #8A8375;">本期讨论时长居前的影片。海报来自 Wikipedia，版权归原权利人。</div>
+
   <div style="margin-top: clamp(28px, 4vw, 44px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 20px 48px; align-items: start;">
     <div>
       <p style="margin: 0; font-size: 17px; line-height: 1.9; text-wrap: pretty;">节目不排十佳，用趋势视角回看 2025。三条主线对应原标题“大象与蚂蚁、创伤与真相、女性与重建”三组词；收尾落在：表达欲是这一年最大的财富，“用创作克服创伤”是许多电影不约而同给出的出路。</p>
@@ -337,7 +344,7 @@
     <div>
       <sc-if value="{{ eWide }}" hint-placeholder-val="{{ true }}">
         <div style="display: grid; grid-template-columns: 58px repeat(5, minmax(0, 1fr)); column-gap: 30px; row-gap: 0;">
-          <sc-for list="{{ eHeads }}" as="h" hint-placeholder-count="5"><div style="{{ h.pos }} padding-bottom: 10px; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 18px; line-height: 1.35; color: #255A55; border-bottom: 2px solid #2E6E68;">{{ h.text }}</div></sc-for>
+          <sc-for list="{{ eHeads }}" as="h" hint-placeholder-count="5"><div style="{{ h.pos }} align-self: end; padding-bottom: 10px; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 18px; line-height: 1.35; color: #255A55; border-bottom: 2px solid #2E6E68;"><sc-if value="{{ h.poster.has }}" hint-placeholder-val="{{ true }}"><img src="{{ h.poster.src }}" alt="{{ h.poster.alt }}" loading="lazy" style="display: block; width: 64px; height: 96px; object-fit: cover; margin-bottom: 10px; box-shadow: 4px 4px 0 #D8CFBD;"></sc-if><span>{{ h.text }}</span></div></sc-for>
           <sc-for list="{{ eTiers }}" as="t" hint-placeholder-count="4"><div style="{{ t.pos }} align-self: center; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #5B554B; writing-mode: horizontal-tb;">{{ t.text }}</div></sc-for>
           <sc-for list="{{ eCells }}" as="c" hint-placeholder-count="15"><div style="{{ c.pos }} margin-top: 0; border: {{ c.border }}; background: {{ c.bg }}; color: {{ c.color }}; text-align: {{ c.align }}; padding: 9px 11px; font-size: 13.5px; line-height: 1.6; text-wrap: pretty;">{{ c.text }}</div></sc-for>
           <sc-for list="{{ eArrows }}" as="a" hint-placeholder-count="15"><div style="{{ a.pos }} display: flex; justify-content: center; padding: 2px 0;"><svg width="12" height="20" viewBox="0 0 12 20" aria-hidden="true"><path d="M6,0V17" stroke="#2E6E68" stroke-width="1.5" stroke-dasharray="{{ a.dash }}"></path><path d="M1.5,12.5L6,18L10.5,12.5" fill="none" stroke="#2E6E68" stroke-width="1.5"></path></svg></div></sc-for>
@@ -355,7 +362,7 @@
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 14px;">
           <sc-for list="{{ eCards }}" as="c" hint-placeholder-count="5">
             <div style="border-top: 2px solid #2E6E68; padding-top: 10px;">
-              <div style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 19px; line-height: 1.35; color: #255A55;">{{ c.film }}</div>
+              <div style="display: flex; align-items: flex-end; gap: 12px; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 19px; line-height: 1.35; color: #255A55;"><sc-if value="{{ c.poster.has }}" hint-placeholder-val="{{ true }}"><img src="{{ c.poster.src }}" alt="{{ c.poster.alt }}" loading="lazy" style="flex: none; width: 48px; height: 72px; object-fit: cover;"></sc-if><span>{{ c.film }}</span></div>
               <sc-if value="{{ c.ally }}" hint-placeholder-val="{{ false }}"><div style="margin-top: 6px; display: inline-block; padding: 1px 8px; border: 1.5px solid #1C1A17; font-weight: 700; font-size: 12.5px;">⇅ {{ c.note }}</div></sc-if>
               <sc-for list="{{ c.steps }}" as="s" hint-placeholder-count="3">
                 <div style="margin-top: 8px; border: {{ s.border }}; color: {{ s.color }}; background: #FBF8F1; padding: 7px 10px; font-size: 13.5px; line-height: 1.6;"><span style="display: block; font: 500 11px/1.5 'IBM Plex Mono', monospace; color: #5B554B;">{{ s.tier }}</span>{{ s.text }}</div>
@@ -404,7 +411,7 @@
 
   <div style="margin-top: 22px; display: grid; gap: 0;">
     <div style="display: grid; grid-template-columns: {{ svCols }}; gap: 8px;">
-      <div style="grid-column: 1 / -1; display: flex; align-items: baseline; gap: 10px;"><span style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 19px;">《秋日奏鸣曲》</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8A8375;">母亲 → 女儿</span></div>
+      <div style="grid-column: 1 / -1; display: flex; align-items: flex-end; gap: 10px;"><sc-if value="{{ svPosterA.has }}" hint-placeholder-val="{{ true }}"><img src="{{ svPosterA.src }}" alt="{{ svPosterA.alt }}" loading="lazy" style="flex: none; width: 40px; height: 60px; object-fit: cover;"></sc-if><span style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 19px;">《秋日奏鸣曲》</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8A8375;">母亲 → 女儿</span></div>
       <sc-for list="{{ svA }}" as="s" hint-placeholder-count="5"><div style="border: 1.5px solid #1C1A17; background: #FBF8F1; padding: 9px 12px; font-size: 14px; line-height: 1.6;"><span style="display: block; font: 500 11px/1.4 'IBM Plex Mono', monospace; color: #8A8375;">0{{ s.n }}</span>{{ s.t }}</div></sc-for>
     </div>
     <div style="margin: 12px 0; display: flex; align-items: center; gap: 12px;">
@@ -414,7 +421,7 @@
     </div>
     <div style="display: grid; grid-template-columns: {{ svCols }}; gap: 8px;">
       <sc-for list="{{ svB }}" as="s" hint-placeholder-count="5"><div style="border: 1.5px solid #2E6E68; background: #FBF8F1; padding: 9px 12px; font-size: 14px; line-height: 1.6;"><span style="display: block; font: 500 11px/1.4 'IBM Plex Mono', monospace; color: #2E6E68;">0{{ s.n }}</span>{{ s.t }}</div></sc-for>
-      <div style="grid-column: 1 / -1; display: flex; align-items: baseline; gap: 10px;"><span style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 19px; color: #255A55;">《情感价值》</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8A8375;">父亲 → 女儿们</span></div>
+      <div style="grid-column: 1 / -1; display: flex; align-items: flex-start; gap: 10px;"><sc-if value="{{ svPosterB.has }}" hint-placeholder-val="{{ true }}"><img src="{{ svPosterB.src }}" alt="{{ svPosterB.alt }}" loading="lazy" style="flex: none; width: 40px; height: 60px; object-fit: cover;"></sc-if><span style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 19px; color: #255A55;">《情感价值》</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8A8375;">父亲 → 女儿们</span></div>
     </div>
   </div>
 
@@ -495,7 +502,11 @@
       </div>
     </sc-for>
   </div>
-  <p style="margin: 20px 0 0; padding-left: 14px; border-left: 4px solid #C98A2B; font-weight: 700; font-size: 17px; line-height: 1.7; text-wrap: pretty;">《孤寂午后》：两人一致认为能进影史，也是《电影手册》2025 年度第一。</p>
+  <div style="margin-top: 20px; display: flex; align-items: center; gap: 14px; padding-left: 14px; border-left: 4px solid #C98A2B;">
+    <sc-if value="{{ serra.poster.has }}" hint-placeholder-val="{{ true }}"><img src="{{ serra.poster.src }}" alt="{{ serra.poster.alt }}" loading="lazy" style="flex: none; width: 56px; height: 84px; object-fit: cover;"></sc-if>
+    <sc-if value="{{ serra.face.has }}" hint-placeholder-val="{{ true }}"><img src="{{ serra.face.src }}" alt="{{ serra.face.alt }}" title="{{ serra.face.alt }}" loading="lazy" style="flex: none; width: 56px; height: 56px; border-radius: 50%; object-fit: cover;"></sc-if>
+    <p style="margin: 0; font-weight: 700; font-size: 17px; line-height: 1.7; text-wrap: pretty;">《孤寂午后》：两人一致认为能进影史，也是《电影手册》2025 年度第一。<span style="display: block; font-weight: 400; font-size: 13px; color: #5B554B;">导演 阿尔伯特·塞拉</span></p>
+  </div>
   <p style="margin: 10px 0 0; font-size: 12.5px; line-height: 1.7; color: #5B554B;">八条路的归纳为整理者所加；纹理只是示意，不代表各片的实际画面。《密探》《朝圣》《梦》《普通事故》《辛德·拉杰布之声》先在内容板块讲过一遍，这里从媒介角度又讲一遍。</p>
 </section>
 
@@ -508,7 +519,11 @@
     <span style="margin-left: auto;">0:20:48 · 0:33:34 · 3:29:47 · 合计约 19.1 分钟</span>
   </div>
   <h2 style="margin: 14px 0 0; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: clamp(30px, 4.6vw, 50px); line-height: 1.15;">《密探》的两条时间线</h2>
-  <p style="margin: 12px 0 0; max-width: 44em; font-size: 16px; line-height: 1.85; color: #3C3832;">讲得最长的一部，也是唯一一部政治和媒介两头都讲得很长的片子。</p>
+  <div style="margin-top: 14px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px;">
+    <sc-if value="{{ agentPics.poster.has }}" hint-placeholder-val="{{ true }}"><img src="{{ agentPics.poster.src }}" alt="{{ agentPics.poster.alt }}" loading="lazy" style="flex: none; width: 64px; height: 96px; object-fit: cover; box-shadow: 4px 4px 0 #E3DBC9;"></sc-if>
+    <sc-if value="{{ agentPics.face.has }}" hint-placeholder-val="{{ true }}"><img src="{{ agentPics.face.src }}" alt="{{ agentPics.face.alt }}" loading="lazy" style="flex: none; width: 64px; height: 64px; border-radius: 50%; object-fit: cover;"></sc-if>
+    <p style="margin: 0; flex: 1 1 280px; max-width: 40em; font-size: 16px; line-height: 1.85; color: #3C3832;">讲得最长的一部，也是唯一一部政治和媒介两头都讲得很长的片子。<span style="display: block; font-size: 13px; color: #5B554B;">导演 克莱伯·门多萨·菲略</span></p>
+  </div>
 
   <div style="margin-top: 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 28px 40px; align-items: start;">
     <div style="grid-column: span 2; min-width: 0;">
@@ -566,6 +581,7 @@
       <div style="display: flex; flex-direction: column; background: #FBF8F1; border: {{ r.border }}; padding: 16px 16px 18px;">
         <div style="display: flex; align-items: center; gap: 8px;"><svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><path d="{{ ic.commercial }}" fill="#8C8579" fill-rule="evenodd"></path></svg><span style="font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 20px; line-height: 1.3;">{{ r.route }}</span></div>
         <div style="margin-top: 8px; font-weight: 700; font-size: 14px; line-height: 1.6; color: #5F594F;">{{ r.films }}</div>
+        <div style="margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px;"><sc-for list="{{ r.posters }}" as="p" hint-placeholder-count="2"><img src="{{ p.src }}" alt="{{ p.alt }}" loading="lazy" style="width: 52px; height: 78px; object-fit: cover;"></sc-for></div>
         <p style="margin: 8px 0 0; font-size: 14.5px; line-height: 1.7;">{{ r.verdict }}</p>
         <sc-if value="{{ r.hl }}" hint-placeholder-val="{{ false }}">
           <div style="margin-top: 12px; padding: 10px 12px; background: #1C1A17; color: #F5F1E8;">
@@ -612,6 +628,10 @@
         <sc-for list="{{ g.cards }}" as="f" hint-placeholder-count="6">
           <div style="display: flex; background: #FBF8F1; border: 1px solid #D8CFBD;">
             <div style="flex: none; width: 6px; background: {{ f.color }};"></div>
+            <div style="flex: none; position: relative; width: 60px; height: 90px; margin: 10px 0 10px 10px; background: #ECE5D6;">
+              <sc-if value="{{ f.poster.has }}" hint-placeholder-val="{{ true }}"><img src="{{ f.poster.src }}" alt="{{ f.poster.alt }}" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;"></sc-if>
+              <sc-if value="{{ f.poster.none }}" hint-placeholder-val="{{ false }}"><svg width="60" height="90" viewBox="0 0 60 90" aria-hidden="true" style="position: absolute; inset: 0;"><rect x="0.5" y="0.5" width="59" height="89" fill="none" stroke="#CFC6B3" stroke-dasharray="3 3"></rect><path d="{{ f.icon }}" transform="translate(22 37)" fill="{{ f.color }}" fill-opacity="0.55" fill-rule="evenodd"></path></svg></sc-if>
+            </div>
             <div style="flex: 1; min-width: 0; padding: 10px 12px 11px; display: flex; flex-direction: column;">
               <div style="display: flex; align-items: flex-start; gap: 6px;">
                 <svg width="12" height="12" viewBox="0 0 16 16" aria-label="{{ f.cat }}" role="img" style="flex: none; margin-top: 6px;"><path d="{{ f.icon }}" fill="{{ f.color }}" fill-rule="evenodd"></path></svg>
@@ -619,7 +639,7 @@
                   <span style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 16.5px; line-height: 1.45;">{{ f.title }}</span><sc-if value="{{ f.guessed }}" hint-placeholder-val="{{ false }}"><span title="中文片名由转写读音推定" style="font-size: 12px; color: #8A8375;"> ＊</span></sc-if>
                   <sc-if value="{{ f.hasSub }}" hint-placeholder-val="{{ false }}"><div style="font-size: 12.5px; line-height: 1.5; color: #5B554B;">{{ f.sub }}</div></sc-if>
                   <sc-if value="{{ f.hasOriginal }}" hint-placeholder-val="{{ true }}"><div style="font-size: 12px; line-height: 1.45; font-style: italic; color: #8A8375; overflow-wrap: anywhere;">{{ f.original }}</div></sc-if>
-                  <sc-if value="{{ f.hasDirector }}" hint-placeholder-val="{{ true }}"><div style="font-size: 12.5px; line-height: 1.5; color: #5B554B;">{{ f.director }}</div></sc-if>
+                  <sc-if value="{{ f.hasDirector }}" hint-placeholder-val="{{ true }}"><div style="margin-top: 2px; display: flex; align-items: center; gap: 5px; font-size: 12.5px; line-height: 1.5; color: #5B554B;"><sc-if value="{{ f.face.has }}" hint-placeholder-val="{{ false }}"><img src="{{ f.face.src }}" alt="" loading="lazy" style="flex: none; width: 20px; height: 20px; border-radius: 50%; object-fit: cover;"></sc-if><span>{{ f.director }}</span></div></sc-if>
                 </div>
               </div>
               <sc-if value="{{ f.top3 }}" hint-placeholder-val="{{ false }}"><div style="margin-top: 6px; align-self: flex-start; padding: 1px 8px; background: #1C1A17; color: #F5F1E8; font-size: 12px; font-weight: 700;">阿吴年度前三</div></sc-if>
@@ -665,7 +685,7 @@
     </div>
     <sc-for list="{{ timeRows }}" as="r" hint-placeholder-count="20">
       <div style="display: grid; grid-template-columns: {{ tCols }}; column-gap: 14px; row-gap: 3px; align-items: center; padding: 5px 0; border-top: 1px solid #E3DBC9;" style-hover="background: #EFE8D9;">
-        <div style="grid-column: 1; grid-row: 1; min-width: 0; display: flex; align-items: baseline; gap: 6px; font-size: 14px; line-height: 1.4;"><span style="font: 400 11px/1 'IBM Plex Mono', monospace; color: #8A8375;">{{ r.rank }}</span><span style="font-family: 'Noto Serif SC', serif; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">{{ r.title }}</span><sc-if value="{{ r.hasMark }}" hint-placeholder-val="{{ false }}"><span style="font-size: 13px; color: #1C1A17;">{{ r.mark }}</span></sc-if></div>
+        <div style="grid-column: 1; grid-row: 1; min-width: 0; display: flex; align-items: center; gap: 7px; font-size: 14px; line-height: 1.4;"><span style="font: 400 11px/1 'IBM Plex Mono', monospace; color: #8A8375;">{{ r.rank }}</span><span style="flex: none; width: 20px; height: 30px; background: #ECE5D6;"><sc-if value="{{ r.poster.has }}" hint-placeholder-val="{{ true }}"><img src="{{ r.poster.src }}" alt="" loading="lazy" style="display: block; width: 20px; height: 30px; object-fit: cover;"></sc-if></span><span style="font-family: 'Noto Serif SC', serif; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">{{ r.title }}</span><sc-if value="{{ r.hasMark }}" hint-placeholder-val="{{ false }}"><span style="font-size: 13px; color: #1C1A17;">{{ r.mark }}</span></sc-if></div>
         <div style="{{ tBarPos }} display: flex; align-items: center; gap: 8px; min-width: 0;">
           <div style="flex: 1; min-width: 0; display: flex; height: 16px;">
             <sc-if value="{{ r.hasC }}" hint-placeholder-val="{{ true }}"><div style="width: {{ r.cW }}; height: 100%; background: {{ r.cColor }}; border-radius: 0 0 0 0;"></div></sc-if>
@@ -766,7 +786,7 @@
       </div>
       <div style="margin-top: 6px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px;">
         <sc-for list="{{ decades }}" as="d" hint-placeholder-count="4">
-          <div><div style="text-align: center; font-weight: 700; font-size: 14px;">{{ d.label }}</div><div style="margin-top: 4px; font-size: 11.5px; line-height: 1.55; color: #5B554B;">{{ d.who }}</div></div>
+          <div><div style="text-align: center; font-weight: 700; font-size: 14px;">{{ d.label }}</div><div style="margin-top: 6px; display: flex; flex-wrap: wrap; justify-content: center; gap: 3px;"><sc-for list="{{ d.faces }}" as="p" hint-placeholder-count="2"><img src="{{ p.src }}" alt="{{ p.name }}" title="{{ p.name }}" loading="lazy" style="width: 28px; height: 28px; border-radius: 50%; object-fit: cover;"></sc-for></div><div style="margin-top: 4px; font-size: 11.5px; line-height: 1.55; color: #5B554B;">{{ d.who }}</div></div>
         </sc-for>
       </div>
     </div>
@@ -785,7 +805,7 @@
         <div style="background: #F5F1E8; padding: 8px 10px; font: 500 11.5px/1.4 'IBM Plex Mono', monospace; color: #8A8375;">节目的印象</div>
         <div style="background: #F5F1E8; padding: 8px 10px; font: 500 11.5px/1.4 'IBM Plex Mono', monospace; color: #8A8375;">本期数据</div>
         <div style="background: #FBF8F1; padding: 8px 10px;">“60 后以上几乎没提”</div>
-        <div style="background: #FBF8F1; padding: 8px 10px;">本期深谈的佩措尔德、帕纳西、林克莱特、门多萨、朴赞郁、莱卡特都是 60 后</div>
+        <div style="background: #FBF8F1; padding: 8px 10px;">本期深谈的佩措尔德、帕纳西、林克莱特、门多萨、朴赞郁、莱卡特都是 60 后<div style="margin-top: 6px; display: flex; flex-wrap: wrap; gap: 3px;"><sc-for list="{{ genFaces }}" as="p" hint-placeholder-count="6"><img src="{{ p.src }}" alt="{{ p.name }}" title="{{ p.name }}" loading="lazy" style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover;"></sc-for></div></div>
         <div style="background: #FBF8F1; padding: 8px 10px;">“女导演接近一半”</div>
         <div style="background: #FBF8F1; padding: 8px 10px;">本期约 45 部影片里女性导演 12 部，约 27%</div>
       </div>
@@ -833,9 +853,10 @@
       <div style="position: absolute; left: 0; top: {{ oFig.linkY }}px; width: 230px; height: {{ oFig.linkH }}px; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 14px; line-height: 1.6; color: #3C3832;"><span><span style="display: block; font-size: 18px; color: #1C1A17;">⇅</span>{{ oLink }}</span></div>
       <div style="position: absolute; left: {{ oFig.hub.x }}px; top: {{ oFig.hub.y }}px; width: {{ oFig.hub.w }}px; height: {{ oFig.hub.h }}px; background: #2B4C7E; color: #FBF8F1; display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 18px; border-radius: 56px; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 22px; line-height: 1.4;"><span>{{ oHub }}<span style="display: block; font-family: 'Noto Sans SC', sans-serif; font-weight: 400; font-size: 13.5px;">{{ oHubSub }}</span></span></div>
       <sc-for list="{{ oFig.films }}" as="f" hint-placeholder-count="6">
-        <div style="position: absolute; left: {{ f.x }}px; top: {{ f.y }}px; width: {{ f.w }}px; height: {{ f.h }}px; background: #FBF8F1; border: {{ f.border }}; border-left: 5px solid {{ f.color }}; display: flex; flex-direction: column; justify-content: center; padding: 0 14px;">
-          <div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 15.5px; line-height: 1.35;">{{ f.film }}<span style="font-family: 'Noto Sans SC', sans-serif; font-weight: 400; font-size: 12px; color: #8A8375;">{{ f.extra }}</span></div>
-          <div style="font-size: 13px; line-height: 1.5; color: #3C3832;">{{ f.act }}</div>
+        <div style="position: absolute; left: {{ f.x }}px; top: {{ f.y }}px; width: {{ f.w }}px; height: {{ f.h }}px; background: #FBF8F1; border: {{ f.border }}; border-left: 5px solid {{ f.color }}; display: flex; align-items: center; gap: 12px; padding: 0 14px 0 3px;">
+          <span style="flex: none; width: 34px; height: 51px; background: #ECE5D6;"><sc-if value="{{ f.poster.has }}" hint-placeholder-val="{{ true }}"><img src="{{ f.poster.src }}" alt="{{ f.poster.alt }}" loading="lazy" style="display: block; width: 34px; height: 51px; object-fit: cover;"></sc-if></span>
+          <div style="min-width: 0;"><div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 15.5px; line-height: 1.35;">{{ f.film }}<span style="font-family: 'Noto Sans SC', sans-serif; font-weight: 400; font-size: 12px; color: #8A8375;">{{ f.extra }}</span></div>
+          <div style="font-size: 13px; line-height: 1.5; color: #3C3832;">{{ f.act }}</div></div>
         </div>
       </sc-for>
     </div>
@@ -848,7 +869,7 @@
       <div style="text-align: center; font-size: 14px; color: #3C3832;">⇅ {{ oLink }}</div>
       <div style="background: #2B4C7E; color: #FBF8F1; text-align: center; padding: 16px 18px; border-radius: 40px; font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 20px; line-height: 1.4;">{{ oHub }}<span style="display: block; font-family: 'Noto Sans SC', sans-serif; font-weight: 400; font-size: 13.5px;">{{ oHubSub }}</span></div>
       <sc-for list="{{ oFilms }}" as="f" hint-placeholder-count="6">
-        <div style="background: #FBF8F1; border: {{ f.border }}; border-left: 5px solid {{ f.color }}; padding: 9px 14px;"><div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 15.5px;">{{ f.film }}<span style="font-family: 'Noto Sans SC', sans-serif; font-weight: 400; font-size: 12px; color: #8A8375;">{{ f.extra }}</span></div><div style="font-size: 13px; color: #3C3832;">{{ f.act }}</div></div>
+        <div style="background: #FBF8F1; border: {{ f.border }}; border-left: 5px solid {{ f.color }}; padding: 6px 14px 6px 6px; display: flex; align-items: center; gap: 12px;"><span style="flex: none; width: 34px; height: 51px; background: #ECE5D6;"><sc-if value="{{ f.poster.has }}" hint-placeholder-val="{{ true }}"><img src="{{ f.poster.src }}" alt="{{ f.poster.alt }}" loading="lazy" style="display: block; width: 34px; height: 51px; object-fit: cover;"></sc-if></span><div><div style="font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 15.5px;">{{ f.film }}<span style="font-family: 'Noto Sans SC', sans-serif; font-weight: 400; font-size: 12px; color: #8A8375;">{{ f.extra }}</span></div><div style="font-size: 13px; color: #3C3832;">{{ f.act }}</div></div></div>
       </sc-for>
     </div>
   </sc-if>
@@ -869,7 +890,8 @@
     </div>
     <div>
       <div style="font-weight: 700; color: #1C1A17;">说明</div>
-      <div>依据《电影巨辩》第 30 期的整理资料。转写没有说话人标注：只有能确认身份的段落写老马或阿吴，其余写“节目”或“一位主持人”。时长按过渡句切分，误差约一分钟；提及次数含转写变体，均为约数。页面只用文字、抽象图形与图表，不使用剧照、海报或肖像。</div>
+      <div>依据《电影巨辩》第 30 期的整理资料。转写没有说话人标注：只有能确认身份的段落写老马或阿吴，其余写“节目”或“一位主持人”。时长按过渡句切分，误差约一分钟；提及次数含转写变体，均为约数。</div>
+      <div style="margin-top: 8px;">图片为整理者补充，非节目内容：海报来自 Wikipedia，导演照片来自 Wikimedia Commons，版权归原权利人。海报上有枪械的四部片（《一战再战》《爱丁顿》《罪人》《美国队长4》）和涉及真实事件的《辛德·拉杰布之声》不配海报，用虚线框代替；《与马克·布朗的七次漫步》《奇遇》等暂无可用海报。</div>
       <div style="margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px 24px;"><a href="./首页-播客总结索引.dc.html" style-focus="outline: 2px solid #1C1A17; outline-offset: 2px;">← 回到播客总结索引</a><a href="#top" style-focus="outline: 2px solid #1C1A17; outline-offset: 2px;">↑ 回到顶部</a></div>
     </div>
   </div>
@@ -1212,6 +1234,45 @@ const PEAKS = [
   { bin: 23, row: 4, text: '3:50–4:00 产业最密（11.8）' },
   { bin: 31, row: 1, text: '结尾 5:10 创伤再次升到 11.1，总结“用创作疗伤”' },
 ];
+// 海报来自英文维基百科，导演照片来自 Wikimedia Commons（来源见 src/shared/image-sources.json）。
+// 含枪械的海报（一战再战、爱丁顿、罪人、美国队长4）与《辛德·拉杰布之声》不使用。
+const POSTER = {
+  '孤寂午后': 'f-afternoons-of-solitude.jpg', '镜的第三乐章': 'f-miroirs-no-3.jpg', '巴黎夏日': 'f-that-summer-in-paris.jpg',
+  '密探': 'f-the-secret-agent.jpg', '笑刃荒途': 'f-i-only-rest-in-the-storm.jpg', '梦': 'f-dreams-sex-love.jpg',
+  '朝圣': 'f-romeria.jpg', '年轻母亲之家': 'f-young-mothers.jpg', '雷诺阿': 'f-renoir.jpg',
+  'F1': 'f-f1.jpg', 'Yes': 'f-yes.jpg', '天空的另一面': 'f-the-blue-trail.jpg',
+  '火车梦': 'f-train-dreams.jpg', '主谋': 'f-the-mastermind.jpg', '接近终点': 'f-sirat.jpg',
+  '对不起，宝贝': 'f-sorry-baby.jpg', '蓝月亮': 'f-blue-moon.jpg', '无可奈何': 'f-no-other-choice.jpg',
+  '海达': 'f-hedda.jpg', '落叶球': 'f-dry-leaf.jpg', '国宝': 'f-kokuho.jpg',
+  '新浪潮': 'f-nouvelle-vague.jpg', '拯救地球': 'f-bugonia.jpg', '苏莱曼的故事': 'f-souleymane-s-story.jpg',
+  '冰之塔': 'f-the-ice-tower.jpg', '去死吧，我的爱': 'f-die-my-love.jpg', '粉碎机': 'f-the-smashing-machine.jpg',
+  '碟中谍8': 'f-mission-impossible-the-final-reckoning.jpg', '疯狂动物城2': 'f-zootopia-2.jpg', '超人': 'f-superman.jpg',
+  '神奇四侠': 'f-the-fantastic-four-first-steps.jpg', '普通事故': 'f-it-was-just-an-accident.jpg', '炸药屋': 'f-a-house-of-dynamite.jpg',
+  '望向太阳': 'f-sound-of-falling.jpg', '情感价值': 'f-sentimental-value.jpg', '阿凡达：火与烬': 'f-avatar-fire-and-ash.jpg',
+  '秋日奏鸣曲': 'f-autumn-sonata.jpg', '哈姆奈特': 'f-hamnet.jpg',
+};
+const PORTRAIT = {
+  '阿尔伯特·塞拉': 'p-albert-serra.jpg', '克里斯蒂安·佩措尔德': 'p-christian-petzold.jpg', '克莱伯·门多萨·菲略': 'p-kleber-mendonca-filho.jpg',
+  '达格·约翰·豪格鲁德': 'p-dag-johan-haugerud.jpg', '卡拉·西蒙': 'p-carla-simon.jpg', '达内兄弟': 'p-dardenne-brothers.jpg',
+  '早川千绘': 'p-chie-hayakawa.jpg', '皮埃尔·克雷东': 'p-pierre-creton.jpg', '约瑟夫·科辛斯基': 'p-joseph-kosinski.jpg',
+  '保罗·托马斯·安德森': 'p-paul-thomas-anderson.jpg', '纳达夫·拉皮德': 'p-nadav-lapid.jpg', '加布里埃尔·马斯卡罗': 'p-gabriel-mascaro.jpg',
+  '克林特·本特利': 'p-clint-bentley.jpg', '凯莉·莱卡特': 'p-kelly-reichardt.jpg', '奥利弗·拉克斯': 'p-oliver-laxe.jpg',
+  '伊娃·维克多': 'p-eva-victor.jpg', '理查德·林克莱特': 'p-richard-linklater.jpg', '朴赞郁': 'p-park-chan-wook.jpg',
+  '妮娅·达科斯塔': 'p-nia-dacosta.jpg', '亚历山大·科贝里泽': 'p-alexandre-koberidze.jpg', '瑞恩·库格勒': 'p-ryan-coogler.jpg',
+  '李相日': 'p-sang-il-lee.jpg', '欧格斯·兰斯莫斯': 'p-yorgos-lanthimos.jpg', '鲍里斯·洛金': 'p-boris-lojkine.jpg',
+  '考塞尔·本·哈尼娅': 'p-kaouther-ben-hania.jpg', '露西尔·哈兹哈利洛维奇': 'p-lucile-hadzihalilovic.jpg', '阿里·艾斯特': 'p-ari-aster.jpg',
+  '林恩·拉姆塞': 'p-lynne-ramsay.jpg', '本尼·萨弗迪': 'p-benny-safdie.jpg', '克里斯托弗·麦奎里': 'p-christopher-mcquarrie.jpg',
+  '贾法·帕纳西': 'p-jafar-panahi.jpg', '凯瑟琳·毕格罗': 'p-kathryn-bigelow.jpg', '玛莎·席林斯基': 'p-mascha-schilinski.jpg',
+  '约阿希姆·提尔': 'p-joachim-trier.jpg', '苏菲·勒图尔纳': 'p-sophie-letourneur.jpg', '詹姆斯·卡梅隆': 'p-james-cameron.jpg',
+};
+const posterOf = (t) => (POSTER[t] ? 'assets/ep30/' + POSTER[t] : '');
+// 名单里常用简称（如“帕纳西”），按包含关系找全名；毕赣沿用第 29 期的照片
+const faceOf = (name) => {
+  if (name === '毕赣') return 'assets/ep29/bigan.jpg';
+  const k = Object.keys(PORTRAIT).find((n) => n === name || n.includes(name));
+  return k ? 'assets/ep30/' + PORTRAIT[k] : '';
+};
+const pic = (src, alt) => ({ src, alt, has: !!src, none: !src });
 const SPLIT_TOPIC = { '普通事故': '普通事故', '炸药屋': '炸药屋', '望向太阳': '望向太阳', '情感价值': '情感价值', '奇遇': '奇遇', '阿凡达：火与烬': '系列片的重复' };
 const GUESSED = ['笑刃荒途', '镜的第三乐章'];
 const TOTAL = 314; // 轴 0:00–5:14
@@ -1233,6 +1294,8 @@ class Component extends DCLogic {
 
   SEC = Object.fromEntries(DATA.sections.map(([id, name, a, b, min, share, cat]) => [id, { id, name, a, b, min, share, cat, t0: tm(a), t1: tm(b) }]));
   ST = DATA.stations.map(([time, label, block, level, minutes], i) => ({ i, time, label, block, level, minutes, t: tm(time), cat: this.SEC[block].cat }));
+  // 封面胶片带：按讨论时长取有海报的影片
+  strip = DATA.films.filter((f) => POSTER[f[0]]).sort((a, b) => b[6] - a[6]).slice(0, 18).map((f) => ({ src: posterOf(f[0]), alt: bt(f[0]) + ' 海报', title: bt(f[0]) }));
   HB = DATA.heat.map((r) => ({ a: tm(r[0]), b: r[1] === '5:14' ? TOTAL : tm(r[1]), label: r[0] + '–' + r[1], chars: r[2], count: r.slice(3, 8), per: r.slice(8, 13) }));
 
   componentDidMount() {
@@ -1442,7 +1505,7 @@ class Component extends DCLogic {
     const pos = (c, r) => `grid-column: ${c}; grid-row: ${r};`;
     const heads = [], cells = [], arrows = [], exits = [];
     D.chains.forEach((c, i) => {
-      heads.push({ text: bt(c.film), pos: pos(i + 2, 1) });
+      heads.push({ text: bt(c.film), pos: pos(i + 2, 1), poster: pic(posterOf(c.film), bt(c.film) + ' 海报') });
       tiers.forEach(([, k, r]) => {
         const empty = !c[k];
         cells.push({ text: empty ? '—' : c[k], pos: pos(i + 2, r), border: empty ? '1.5px dashed #9DBDB8' : '1.5px solid #2E6E68', color: empty ? INK3 : INK, bg: empty ? 'transparent' : CARD, align: empty ? 'center' : 'left' });
@@ -1453,7 +1516,7 @@ class Component extends DCLogic {
     const tierLabels = [['祖辈', 2], ['父母辈', 4], ['子女辈', 6], ['出路', 8]].map(([t, r]) => ({ text: t, pos: pos(1, r) }));
     const allyIdx = D.chains.findIndex((c) => c.note);
     const cards = D.chains.map((c) => ({
-      film: bt(c.film), exit: c.exit, ally: !!c.note, note: c.note || '',
+      film: bt(c.film), exit: c.exit, ally: !!c.note, note: c.note || '', poster: pic(posterOf(c.film), bt(c.film) + ' 海报'),
       steps: tiers.map(([t, k]) => ({ tier: t, text: c[k] || '—', empty: !c[k], border: c[k] ? '1.5px solid #2E6E68' : '1.5px dashed #9DBDB8', color: c[k] ? INK : INK3 })),
     }));
     const side = cw >= 1180;
@@ -1500,7 +1563,9 @@ class Component extends DCLogic {
       const main = paren > 0 ? title.slice(0, paren) : title;
       const sub = paren > 0 ? title.slice(paren + 1, -1).split(' / ').map(bt).join(' ') : '';
       const sp = split[SPLIT_TOPIC[title]];
+      const lead = director.split('、')[0];
       return {
+        poster: pic(posterOf(main), bt(main) + ' 海报'), face: pic(faceOf(lead), lead),
         title: paren > 0 ? main : bt(title), sub, hasSub: !!sub, original, hasOriginal: !!original && original !== title, director, hasDirector: !!director,
         color: C.color, icon: C.icon, cat: C.label, total: one(total), times: times(main).join(' · '), hasTimes: times(main).length > 0,
         top3, note: note.replace(/阿吴年度前三；?/, ''), hasNote: !!note.replace(/阿吴年度前三；?/, ''), guessed: GUESSED.includes(title),
@@ -1510,7 +1575,7 @@ class Component extends DCLogic {
     return {
       filmGroups: groups.map(([key, mark, name]) => {
         const list = DATA.films.filter((f) => f[8] === key);
-        return { mark, name, count: list.length, cards: list.map(card), color: key === 'x' ? '#7A4A3F' : key === 'split' ? '#2B4C7E' : INK, cols: key === 'split' ? 'repeat(auto-fill, minmax(min(100%, 380px), 1fr))' : 'repeat(auto-fill, minmax(min(100%, 228px), 1fr))' };
+        return { mark, name, count: list.length, cards: list.map(card), color: key === 'x' ? '#7A4A3F' : key === 'split' ? '#2B4C7E' : INK, cols: key === 'split' ? 'repeat(auto-fill, minmax(min(100%, 380px), 1fr))' : 'repeat(auto-fill, minmax(min(100%, 268px), 1fr))' };
       }),
     };
   }
@@ -1528,11 +1593,11 @@ class Component extends DCLogic {
     const top = rows.map((r, i) => Object.assign({ i }, r)).sort((p, q) => q.total - p.total || p.i - q.i).slice(0, 20);
     return {
       timeRows: top.map((r, i) => ({
-        rank: String(i + 1).padStart(2, '0'), title: r.title, mark: mark[r.key] || '', hasMark: !!mark[r.key],
+        rank: String(i + 1).padStart(2, '0'), title: r.title, poster: pic(posterOf(r.key.split(' / ')[0]), r.title + ' 海报'), mark: mark[r.key] || '', hasMark: !!mark[r.key],
         cW: (r.c / MAX) * 100 + '%', mW: (r.m / MAX) * 100 + '%', hasC: r.c > 0, hasM: r.m > 0, cColor: CAT[r.block].color,
         total: one(r.total), split: r.c > 0 && r.m > 0 ? `（${one(r.c)} + ${one(r.m)}）` : '', mentions: r.mentions,
       })),
-      tCols: narrow ? 'minmax(0, 1fr) auto' : 'minmax(0, 11.5em) minmax(0, 1fr) 5.5em',
+      tCols: narrow ? 'minmax(0, 1fr) auto' : 'minmax(0, 13.5em) minmax(0, 1fr) 5.5em',
       tBarPos: narrow ? 'grid-column: 1 / -1; grid-row: 2;' : 'grid-column: 2; grid-row: 1;',
       tMentPos: narrow ? 'grid-column: 2; grid-row: 1;' : 'grid-column: 3; grid-row: 1;',
       tAxisPos: narrow ? 'grid-column: 1 / -1;' : 'grid-column: 2;',
@@ -1550,9 +1615,13 @@ class Component extends DCLogic {
       byLeft: Object.assign({}, B.left, { picks: B.left.picks.map((p) => (p.startsWith('（') ? p.replace('巴黎夏日', '《巴黎夏日》') : bt(p))) }),
       byRight: B.right, byEnding: B.ending,
       svA: S.autumn.map((t, i) => ({ t, n: i + 1 })), svB: S.sentimental.map((t, i) => ({ t, n: i + 1 })), svCritic: S.critic, svDefender: S.defender, svEnd: S.ending,
-      decades: DATA.decades.map(([label, n, who]) => ({ label, n, who, h: Math.round((n / decMax) * 180) + 'px', fill: label === '80 后' ? '#2B4C7E' : '#9FB0CB', pat: label === '80 后' ? 'repeating-linear-gradient(135deg, rgba(251,248,241,0.22) 0 2px, transparent 2px 7px)' : 'none' })),
+      svPosterA: pic(posterOf('秋日奏鸣曲'), '《秋日奏鸣曲》海报'), svPosterB: pic(posterOf('情感价值'), '《情感价值》海报'),
+      serra: { poster: pic(posterOf('孤寂午后'), '《孤寂午后》海报'), face: pic(faceOf('阿尔伯特·塞拉'), '阿尔伯特·塞拉') },
+      agentPics: { poster: pic(posterOf('密探'), '《密探》海报'), face: pic(faceOf('克莱伯·门多萨·菲略'), '克莱伯·门多萨·菲略') },
+      genFaces: ['佩措尔德', '帕纳西', '林克莱特', '门多萨', '朴赞郁', '莱卡特'].map((n) => ({ name: n, src: faceOf(n) })),
+      decades: DATA.decades.map(([label, n, who]) => ({ label, n, who, faces: who.split('；').map((x) => ({ name: x, src: faceOf(x) })).filter((x) => x.src), h: Math.round((n / decMax) * 180) + 'px', fill: label === '80 后' ? '#2B4C7E' : '#9FB0CB', pat: label === '80 后' ? 'repeating-linear-gradient(135deg, rgba(251,248,241,0.22) 0 2px, transparent 2px 7px)' : 'none' })),
       post80: DATA.post80.map(([y, v, src]) => ({ y, v, src, verified: src.startsWith('已核对') })),
-      routes: DATA.routes.map((r) => ({ route: r.route, films: r.films.map(bt).join(' '), verdict: r.verdict, number: r.number, hl: !!r.highlight, plain: !r.highlight, border: r.highlight ? '2px solid #1C1A17' : '1px solid #CFC6B3', formula: (r.formula || []).map((f, i) => ({ f, plus: i > 0 })) })),
+      routes: DATA.routes.map((r) => ({ route: r.route, films: r.films.map(bt).join(' '), posters: r.films.map((f) => ({ src: posterOf(f), alt: bt(f) + ' 海报' })).filter((p) => p.src), verdict: r.verdict, number: r.number, hl: !!r.highlight, plain: !r.highlight, border: r.highlight ? '2px solid #1C1A17' : '1px solid #CFC6B3', formula: (r.formula || []).map((f, i) => ({ f, plus: i > 0 })) })),
       ag: DATA.agent,
       ag77: DATA.agent.line1977.map((t, i) => ({ t, n: i + 1 })), ag20: DATA.agent.line2020s.map((t, i) => ({ t, n: i + 1 })),
       mat: DATA.agent.matryoshka.map((t) => { const i = t.indexOf('：'); return { head: t.slice(0, i), body: t.slice(i + 1) }; }),
@@ -1566,7 +1635,7 @@ class Component extends DCLogic {
     const blockOf = (t) => { const f = DATA.films.find((x) => x[0] === t); return f ? f[3] : null; };
     const films = H.films.map(([film, act]) => {
       const paren = film.indexOf('（'), name = paren > 0 ? film.slice(0, paren) : film, block = blockOf(name);
-      return { film: bt(name), extra: paren > 0 ? film.slice(paren) : '', act, color: block ? CAT[block].color : INK3, dash: block ? 'none' : '4 3', border: block ? '1px solid #CFC6B3' : '1.5px dashed #A79F90' };
+      return { film: bt(name), extra: paren > 0 ? film.slice(paren) : '', act, poster: pic(posterOf(name), bt(name) + ' 海报'), color: block ? CAT[block].color : INK3, dash: block ? 'none' : '4 3', border: block ? '1px solid #CFC6B3' : '1.5px dashed #A79F90' };
     });
     const src = [{ text: H.sources[0], color: CAT.power.color, icon: CAT.power.icon }, { text: H.sources[1], color: CAT.women.color, icon: CAT.women.icon }];
     let fig = { h: 0, w: 0, curves: [], src: [], films: [], hub: {} };
@@ -1601,6 +1670,7 @@ class Component extends DCLogic {
       ic: ICON, cat: CAT, kw: KW, perfX: Array.from({ length: 13 }, (_, i) => 10 + i * 17),
       expandLabel: this.state.expand ? '只看主站' : `显示全部站点（另有 ${n2} 个次要站点）`, toggleExpand: this.toggleExpand, expanded: this.state.expand ? 'true' : 'false',
       peaks: PEAKS.map((p, i) => ({ n: String(i + 1), text: p.text, color: KW[p.row].color, icon: KW[p.row].icon })),
+      strip: this.strip,
       stance: DATA.stances,
     }, this._map, this.mapInfo(), this._static);
   }
